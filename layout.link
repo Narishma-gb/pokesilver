@@ -30,278 +30,281 @@ ROM0
 	org $0150
 	"Home"
 ROMX $01
-	"bank1"
+	; "bank1"
 ROMX $02
-	"bank2"
+	; "bank2"
 ROMX $03
-	"bank3"
+	; "bank3"
 ROMX $04
-	"bank4"
+	; "bank4"
 ROMX $05
-	"bank5"
+	; "bank5"
 ROMX $06
-	"Tileset Data 1"
+	; "Tileset Data 1"
 ROMX $07
-	"Roofs"
-	"Tileset Data 2"
-	"Extra Songs 1"
+	; "Roofs"
+	; "Tileset Data 2"
+	; "Extra Songs 1"
 ROMX $08
-	"Clock Reset"
-	"Tileset Data 3"
-	"Catch Tutorial"
-	"Egg Moves"
+	; "Clock Reset"
+	; "Tileset Data 3"
+	; "Catch Tutorial"
+	; "Egg Moves"
 ROMX $09
-	"bank9"
+	; "bank9"
 ROMX $0a
-	"bankA"
+	; "bankA"
 ROMX $0b
-	"bankB"
+	; "bankB"
 ROMX $0c
-	"Tileset Data 4"
+	; "Tileset Data 4"
 ROMX $0d
-	"Effect Commands"
+	; "Effect Commands"
 ROMX $0e
-	"Enemy Trainers"
+	; "Enemy Trainers"
 ROMX $0f
-	"Battle Core"
+	; "Battle Core"
 ROMX $10
-	"bank10"
-	"Evolutions and Attacks"
+	; "bank10"
+	; "Evolutions and Attacks"
 ROMX $11
-	"bank11"
+	; "bank11"
 ROMX $12
-	org $4000
-	"Pic Pointers"
-	"Pics 1"
+	; org $4000
+	; "Pic Pointers"
+	; "Pics 1"
 ROMX $14
-	"bank14"
-	"Egg Pic"
+	; "bank14"
+	; "Egg Pic"
 ROMX $15
-	"Pics 2"
+	; "Pics 2"
 ROMX $16
-	"Pics 3"
+	; "Pics 3"
 ROMX $17
-	"Pics 4"
+	; "Pics 4"
 ROMX $18
-	"Pics 5"
+	; "Pics 5"
 ROMX $19
-	"Pics 6"
+	; "Pics 6"
 ROMX $1a
-	"Pics 7"
+	; "Pics 7"
 ROMX $1b
-	"Pics 8"
+	; "Pics 8"
 ROMX $1c
-	"Pics 9"
+	; "Pics 9"
 ROMX $1d
-	"Pics 10"
+	; "Pics 10"
 ROMX $1e
-	"Pics 11"
+	; "Pics 11"
 ROMX $1f
-	org $4000
-	"Unown Pic Pointers"
-	"Pics 12"
+	; org $4000
+	; "Unown Pic Pointers"
+	; "Pics 12"
 ROMX $20
-	"Trainer Pic Pointers"
-	"Pics 13"
+	; "Trainer Pic Pointers"
+	; "Pics 13"
 ROMX $21
-	"bank21"
-	"Credits"
+	; "bank21"
+	; "Credits"
 ROMX $23
-	"bank23"
+	; "bank23"
 ROMX $24
-	"bank24"
+	; "bank24"
 ROMX $25
-	"Maps"
-	"Events"
+	; "Maps"
+	; "Events"
 ROMX $26
-	"Title Screen"
+	; "Title Screen"
 ROMX $2a
-	"Map Blocks 1"
+	; "Map Blocks 1"
 ROMX $2b
-	"Map Blocks 2"
+	; "Map Blocks 2"
 ROMX $2e
-	"Pics 14"
-	org $6300
-	"bank2E"
+	; "Pics 14"
+	; org $6300
+	; "bank2E"
 ROMX $30
-	"Sprites 1"
+	; "Sprites 1"
 ROMX $31
-	"Sprites 2"
-	org $7a40
-	"bank31"
+	; "Sprites 2"
+	; org $7a40
+	; "bank31"
 ROMX $32
-	"bank32"
-	"The End"
+	; "bank32"
+	; "The End"
 ROMX $33
-	"Move Animations"
-	"Extra Songs 2"
+	; "Move Animations"
+	; "Extra Songs 2"
 ROMX $36
-	"Font Inversed"
+	; "Font Inversed"
 ROMX $37
-	"Map Blocks 3"
-	"Tileset Data 5"
+	; "Map Blocks 3"
+	; "Tileset Data 5"
 ROMX $38
-	"bank38"
+	; "bank38"
 ROMX $39
-	"Copyright"
-	"Title Screen 2"
-	"bank39"
+	; "Copyright"
+	; "Title Screen 2"
+	; "bank39"
 ROMX $3a
-	"Audio"
-	"Songs 1"
+	; "Audio"
+	; "Songs 1"
 ROMX $3b
-	"Songs 2"
+	; "Songs 2"
 ROMX $3c
-	"Songs 3"
-	"Sound Effects"
-	"Cries"
+	; "Songs 3"
+	; "Sound Effects"
+	; "Cries"
 ROMX $3d
-	"Songs 4"
+	; "Songs 4"
 ROMX $3e
-	"bank3E"
-	"Shrink Pics"
-	"bank3E_2"
+	; "bank3E"
+	; "Shrink Pics"
+	; "bank3E_2"
 ROMX $3f
-	"bank3F"
+	; "bank3F"
 ROMX $40
-	"Standard Scripts"
+	; "Standard Scripts"
 ROMX $41
-	"Phone Scripts"
+	; "Phone Scripts"
 ROMX $42
-	"Map Scripts 1"
+	; "Map Scripts 1"
 ROMX $43
-	"Map Scripts 2"
+	; "Map Scripts 2"
 ROMX $44
-	"Map Scripts 3"
+	; "Map Scripts 3"
 ROMX $45
-	"Map Scripts 4"
+	; "Map Scripts 4"
 ROMX $46
-	"Map Scripts 5"
+	; "Map Scripts 5"
 ROMX $47
-	"Map Scripts 6"
+	; "Map Scripts 6"
 ROMX $48
-	"Map Scripts 7"
+	; "Map Scripts 7"
 ROMX $49
-	"Map Scripts 8"
+	; "Map Scripts 8"
 ROMX $4a
-	"Map Scripts 9"
+	; "Map Scripts 9"
 ROMX $4b
-	"Map Scripts 10"
+	; "Map Scripts 10"
 ROMX $4c
-	"Map Scripts 11"
+	; "Map Scripts 11"
 ROMX $4d
-	"Map Scripts 12"
+	; "Map Scripts 12"
 ROMX $4e
-	"Map Scripts 13"
+	; "Map Scripts 13"
 ROMX $4f
-	"Map Scripts 14"
+	; "Map Scripts 14"
 ROMX $50
-	"Map Scripts 15"
+	; "Map Scripts 15"
 ROMX $51
-	"Map Scripts 16"
+	; "Map Scripts 16"
 ROMX $52
-	"Map Scripts 17"
+	; "Map Scripts 17"
 ROMX $53
-	"Map Scripts 18"
+	; "Map Scripts 18"
 ROMX $54
-	"Map Scripts 19"
+	; "Map Scripts 19"
 ROMX $55
-	"Map Scripts 20"
+	; "Map Scripts 20"
 ROMX $56
-	"Map Scripts 21"
+	; "Map Scripts 21"
 ROMX $57
-	"Map Scripts 22"
+	; "Map Scripts 22"
 ROMX $59
-	"Map Scripts 23"
+	; "Map Scripts 23"
 ROMX $5a
-	"Map Scripts 24"
+	; "Map Scripts 24"
 ROMX $5b
-	"Map Scripts 25"
+	; "Map Scripts 25"
 ROMX $5c
-	"Map Scripts 26"
+	; "Map Scripts 26"
 ROMX $5d
-	"Map Scripts 27"
+	; "Map Scripts 27"
 ROMX $5e
-	"Map Scripts 28"
+	; "Map Scripts 28"
 ROMX $5f
-	"Map Scripts 29"
+	; "Map Scripts 29"
 ROMX $60
-	"Map Scripts 30"
+	; "Map Scripts 30"
 ROMX $61
-	"Map Scripts 31"
+	; "Map Scripts 31"
 ROMX $62
-	"Map Scripts 32"
-ROMX $64
-	"Text 1"
-ROMX $65
-	"Text 2"
-ROMX $66
-	"Text 3"
-ROMX $68
-	"Pokedex Entries 001-064"
-ROMX $69
-	"Pokedex Entries 065-128"
-ROMX $6a
-	"Pokedex Entries 129-192"
-ROMX $6b
-	"Pokedex Entries 193-251"
-ROMX $6c
-	"Names"
-ROMX $6d
-	"Move Descriptions"
-ROMX $6e
-	"Item Descriptions"
-ROMX $70
-	"bank70"
-	"Tileset Data 6"
-	"bank70_2"
-	"Pokégear GFX"
-	"Credits Strings"
-ROMX $7f
-	org $7df8
-	"Stadium 2 Checksums"
-WRAM0
-	"Audio RAM"
-	"WRAM"
-	align 8
-	"GBC Palettes"
-	align 8
-	"Sprites"
-	"Tilemap"
-	"Miscellaneous"
-	"Unused Map Buffer"
-	align 8
-	"Overworld Map"
-	align 4
-	"Video"
-WRAMX 1
-	"WRAM 1"
-	"Game Data"
-	"Party"
-	"Stack"
+	; "Map Scripts 32"
+ROMX $63
+
+; ROMX $64
+; 	"Text 1"
+; ROMX $65
+; 	"Text 2"
+; ROMX $66
+; 	"Text 3"
+; ROMX $68
+; 	"Pokedex Entries 001-064"
+; ROMX $69
+; 	"Pokedex Entries 065-128"
+; ROMX $6a
+; 	"Pokedex Entries 129-192"
+; ROMX $6b
+; 	"Pokedex Entries 193-251"
+; ROMX $6c
+; 	"Names"
+; ROMX $6d
+; 	"Move Descriptions"
+; ROMX $6e
+; 	"Item Descriptions"
+; ROMX $70
+; 	"bank70"
+; 	"Tileset Data 6"
+; 	"bank70_2"
+; 	"Pokégear GFX"
+; 	"Credits Strings"
+; ROMX $7f
+; 	org $7df8
+; 	"Stadium 2 Checksums"
+; WRAM0
+; 	"Audio RAM"
+; 	"WRAM"
+; 	align 8
+; 	"GBC Palettes"
+; 	align 8
+; 	"Sprites"
+; 	"Tilemap"
+; 	"Miscellaneous"
+; 	"Unused Map Buffer"
+; 	align 8
+; 	"Overworld Map"
+; 	align 4
+; 	"Video"
+; WRAMX 1
+; 	"WRAM 1"
+; 	"Game Data"
+; 	"Party"
+; 	"Stack"
 VRAM $00
 	"VRAM0"
 VRAM $01
 	"VRAM1"
-SRAM $00
-	"Scratch"
-	org $a600
-	"SRAM Bank 0"
-	"Backup Save 1"
-	"SRAM Stack"
-	org $b800
-	"SRAM Window Stack"
-SRAM $01
-	"Save"
-	"Active Box"
-	"Link Battle Data"
-	"SRAM Hall of Fame"
-	"Backup Save 2"
-SRAM $02
-	"Boxes 1-7"
-SRAM $03
-	"Boxes 8-14"
-	"Backup Save 3"
+; SRAM $00
+; 	"Scratch"
+; 	org $a600
+; 	"SRAM Bank 0"
+; 	"Backup Save 1"
+; 	"SRAM Stack"
+; 	org $b800
+; 	"SRAM Window Stack"
+; SRAM $01
+; 	"Save"
+; 	"Active Box"
+; 	"Link Battle Data"
+; 	"SRAM Hall of Fame"
+; 	"Backup Save 2"
+; SRAM $02
+; 	"Boxes 1-7"
+; SRAM $03
+; 	"Boxes 8-14"
+; 	"Backup Save 3"
 HRAM
-	"OAM DMA"
+	; "OAM DMA"
+	org $ff8a
 	"HRAM"

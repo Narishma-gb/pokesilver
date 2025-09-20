@@ -172,14 +172,6 @@ VBlank_Cutscene::
 	call hTransferShadowOAM
 
 .done
-	ldh a, [hLCDCPointer]
-	or a
-	jr z, .skip_lcd
-	ld c, a
-	ld a, [wLYOverrides]
-	ldh [c], a
-
-.skip_lcd
 	xor a
 	ld [wVBlankOccurred], a
 
@@ -205,9 +197,20 @@ VBlank_Cutscene::
 	call _UpdateSound
 	ld a, [wROMBankBackup]
 	rst Bankswitch
+
+	di
+	; get requested ints
+	ldh a, [rIF]
+	ld b, a
+	; discard requested ints
+	xor a
+	ldh [rIF], a
 	; enable ints
 	ld a, IE_DEFAULT
 	ldh [rIE], a
+	; restore requested ints
+	ld a, b
+	ldh [rIF], a
 	ret
 
 UpdatePals::
