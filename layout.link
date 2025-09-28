@@ -262,14 +262,14 @@ ROMX $63
 ; ROMX $7f
 ; 	org $7df8
 ; 	"Stadium 2 Checksums"
-; WRAM0
-; 	"Audio RAM"
-; 	"WRAM"
-; 	align 8
-; 	"GBC Palettes"
-; 	align 8
-; 	"Sprites"
-; 	"Tilemap"
+WRAM0
+	"Audio RAM"
+	"WRAM"
+	align 8
+	"GBC Palettes"
+	align 8
+	"Sprites"
+	"Tilemap"
 ; 	"Miscellaneous"
 ; 	"Unused Map Buffer"
 ; 	align 8
@@ -285,14 +285,15 @@ VRAM $00
 	"VRAM0"
 VRAM $01
 	"VRAM1"
-; SRAM $00
-; 	"Scratch"
+SRAM $00
+	"Scratch"
+	"sram0"
 ; 	org $a600
 ; 	"SRAM Bank 0"
 ; 	"Backup Save 1"
 ; 	"SRAM Stack"
-; 	org $b800
-; 	"SRAM Window Stack"
+	org $b800
+	"SRAM Window Stack"
 ; SRAM $01
 ; 	"Save"
 ; 	"Active Box"

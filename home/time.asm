@@ -115,7 +115,6 @@ FixDays::
 	ret
 
 .quit
-	ccf
 	xor a
 	ret
 

@@ -60,7 +60,7 @@ HideCursor::
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld [hl], " "
+	ld [hl], "　"
 	ret
 
 PushWindow::
@@ -343,7 +343,7 @@ VerticalMenu::
 	call InitVerticalMenuCursor
 	call StaticMenuJoypad
 	call MenuClickSound
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jr z, .okay
 .cancel
 	scf
@@ -435,8 +435,8 @@ YesNoMenuHeader::
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 2
-	db "YES@"
-	db "NO@"
+	db "はい@"
+	db "いいえ@"
 
 OffsetMenuHeader::
 	call _OffsetMenuHeader
@@ -603,9 +603,9 @@ GetStaticMenuJoypad::
 	call StaticMenuJoypad
 
 ContinueGettingMenuJoypad:
-	bit A_BUTTON_F, a
+	bit B_PAD_A, a
 	jr nz, .a_button
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jr nz, .b_start
 	bit B_PAD_START, a
 	jr nz, .b_start

@@ -100,39 +100,8 @@ UpdateBGMap::
 ; BG Map 0
 	dec a ; 1
 	jr z, .Tiles
-	dec a ; 2
-	jr z, .Attr
 
-; BG Map 1
-	dec a ; useless
-
-	ldh a, [hBGMapAddress]
-	ld l, a
-	ldh a, [hBGMapAddress + 1]
-	ld h, a
-	push hl
-
-	xor a ; LOW(vBGMap1)
-	ldh [hBGMapAddress], a
-	ld a, HIGH(vBGMap1)
-	ldh [hBGMapAddress + 1], a
-
-	ldh a, [hBGMapMode]
-	push af
-	cp 3
-	call z, .Tiles
-	pop af
-	cp 4
-	call z, .Attr
-
-	pop hl
-	ld a, l
-	ldh [hBGMapAddress], a
-	ld a, h
-	ldh [hBGMapAddress + 1], a
-	ret
-
-.Attr:
+; Attr
 	ld a, 1
 	ldh [rVBK], a
 

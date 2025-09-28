@@ -72,4 +72,4 @@ IF DEF(_SILVER_VC)
 INCLUDE "vc/pokesilver.constants.asm"
 ENDC
 
-INCLUDE "macros/legacy.asm"
+;INCLUDE "macros/legacy.asm"

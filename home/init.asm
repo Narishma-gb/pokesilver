@@ -160,7 +160,7 @@ ClearVRAM::
 	ret
 
 BlankBGMap::
-	ld a, " "
+	ld a, "　"
 	jr FillBGMap
 
 FillBGMap_l:: ; unreferenced

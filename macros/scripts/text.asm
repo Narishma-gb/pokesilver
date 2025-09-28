@@ -153,13 +153,6 @@ MACRO text_today
 	db TX_DAY
 ENDM
 
-	const TX_FAR ; $16
-MACRO text_far
-	db TX_FAR
-	dw \1
-	db BANK(\1)
-ENDM
-
 DEF NUM_TEXT_CMDS EQU const_value
 
 	const_next $50

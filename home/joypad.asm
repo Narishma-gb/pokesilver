@@ -197,19 +197,10 @@ GetJoypad::
 	jr z, .stopauto
 	ld b, a
 
-; A duration of $ff will end the stream indefinitely.
+; Store duration.
 	ld a, [hli]
 	ld [wAutoInputLength], a
-	cp -1
-	jr nz, .next
 
-; The current input is overwritten.
-	dec hl
-	dec hl
-	ld b, NO_INPUT
-	jr .finishauto
-
-.next
 ; On to the next input...
 	ld a, l
 	ld [wAutoInputAddress], a
@@ -403,10 +394,6 @@ PromptButton::
 	push af
 	ld a, $1
 	ldh [hOAMUpdate], a
-	ld a, [wInputType]
-	or a
-	jr z, .input_wait_loop
-	farcall _DudeAutoInput_A
 
 .input_wait_loop
 	call .blink_cursor

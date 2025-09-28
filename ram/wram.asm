@@ -157,7 +157,7 @@ wTilemap::
 	ds SCREEN_AREA
 wTilemapEnd::
 
-
+/*
 ; This union spans 480 bytes.
 SECTION UNION "Miscellaneous", WRAM0
 
@@ -2817,4 +2817,4 @@ wStackBottom::
 wStackTop::
 	ds 1
 
-ENDSECTION
+ENDSECTION */

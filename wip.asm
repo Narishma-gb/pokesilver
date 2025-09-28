@@ -4,17 +4,17 @@ MACRO dr
 	IF !DEF(cur_bank)
 		FAIL "Error: use set_bank_offset to set Bank # and offset"
 	ENDC
-	ASSERT rom_offset >= 0 && rom_offset < 1048576, "Out of bounds ROM offset"
+	ASSERT rom_offset >= 0 && rom_offset < 1048576, "Invalid ROM offset: {#x:rom_offset}"
 
 	IF cur_bank == 0
-		ASSERT FATAL, (\2) < $4000 && (\2) >= 0, "Wrong address format"
+		ASSERT FATAL, (\2) < $4000 && (\2) >= 0, "Wrong address format: \1"
 		DEF label_offset = \2
 	ELSE
-		ASSERT FATAL, (\2) < $8000 && (\2) > $3FFF, "Wrong address format"
+		ASSERT FATAL, (\2) < $8000 && (\2) > $3FFF, "Wrong address format: \1"
 		DEF label_offset = ((cur_bank) - 1) * $4000 + (\2)
 	ENDC
 
-	ASSERT label_offset - rom_offset >= 0, "Negative binary INCLUDE"
+	ASSERT FATAL, label_offset - rom_offset >= 0, "Negative binary INCLUDE: \1"
 	IF DEF(_GOLD)
 		INCBIN "baserom_g.bin", rom_offset, label_offset - rom_offset
 	ELIF DEF(_SILVER)
@@ -28,9 +28,9 @@ MACRO dr_end
 	IF !DEF(cur_bank)
 		FAIL "Error: use set_bank_offset to set Bank # and offset"
 	ENDC
-	ASSERT rom_offset >= 0 && rom_offset < 1048576, "Out of bounds ROM offset"
+	ASSERT rom_offset >= 0 && rom_offset < 1048576, "Invalid ROM offset: {#x:rom_offset}"
 
-	ASSERT ((cur_bank) + 1) * 16384 - rom_offset >= 0, "Negative binary INCLUDE"
+	ASSERT FATAL, ((cur_bank) + 1) * 16384 - rom_offset >= 0, "Negative binary INCLUDE"
 	IF DEF(_GOLD)
 		INCBIN "baserom_g.bin", rom_offset, ((cur_bank) + 1) * 16384 - rom_offset
 	ELIF DEF(_SILVER)
@@ -43,7 +43,7 @@ ENDM
 ; \2 offset into Bank (optional)
 MACRO set_bank_offset
 	DEF cur_bank = \1
-	ASSERT FATAL, cur_bank >= 0 && cur_bank < 64, "Invalid Bank number"
+	ASSERT FATAL, cur_bank >= 0 && cur_bank < 64, "Invalid Bank number: \1"
 
 	IF _NARG == 1
 		IF cur_bank == 0
@@ -68,24 +68,36 @@ ENDM
 
 SECTION "rom0", ROM0
 ; ROM $00 : $0000 - $3FFF
-	set_bank_offset 0, $32e
+	set_bank_offset 0, $1f0a
 
-	dr LCD, $41b
-	dr _Start, $5c5
-	dr Serial, $6a9
-	dr Joypad, $8de
-	dr UpdateJoypad, $8e5
-	dr UpdatePalsIfCGB, $bc8
-	dr UpdateCGBPals, $bcc
-	dr UpdateBGMapBuffer, $142d
-	dr UpdateBGMap, $1490
-	dr Serve1bppRequest, $1526
-	dr Serve2bppRequest, $157d
-	dr AnimateTileset, $15d8
-	dr FillBGMap0WithBlack, $15ef
-	dr AskSerial, $1e6c
-	dr GameTimer, $1ea7
+	dr MaskObject, $27f1
+	dr UnmaskObject, $27fd
 	dr FarCall_hl, $2de3
+	dr Predef, $2e05
+	dr SafeUpdateSprites, $2ead
+	dr OpenSRAM, $309d
+	dr CloseSRAM, $30ad
+	dr ClearSprites, $30bb
+	dr CopyBytes, $30d6
+	dr GetFarByte, $30e4
+	dr GetFarWord, $30f8
+	dr ByteFill, $3108
+	dr LoadTilemapToTempTilemap, $3114
+	dr SafeLoadTempTilemapToTilemap, $3120
+	dr CopyName1, $3137
+	dr AddNTimes, $315f
+	dr PrintLetterDelay, $319e
+	dr PrintNum, $31f9
+	dr WaitBGMap, $33ae
+	dr ApplyTilemap, $33d4
+	dr ClearPalettes, $34c6
+	dr GetWeekday, $351b
+	dr GetNthString, $35b6
+	dr PlayMonCry, $395d
+	dr PrintBCDNumber, $3a42
+	dr InitSound, $3c70
+	dr PlaySFX, $3d45
+	dr WaitSFX, $3d77
 
 	dr_end
 
@@ -93,11 +105,32 @@ SECTION "rom1", ROMX, BANK[1]
 ; ROM $01 : $4000 - $7FFF
 	set_bank_offset 1
 
+	dr PlaceWaitingText, $4000
+	dr WriteOAMDMACodeToHRAM, $4032
+	dr SpriteMovementData, $4274
+	dr DeleteMapObject, $4358
+	dr UpdateAllObjectsFrozen, $557f
+	dr StopFollow, $5795
+	dr _UpdateSprites, $5896
+IF DEF(_GOLD)
+	dr GameInit, $6747
+ELIF DEF(_SILVER)
+	dr GameInit, $670c
+ENDC
+
 	dr_end
 
 SECTION "rom2", ROMX, BANK[2]
 ; ROM $02 : $8000 - $BFFF
 	set_bank_offset 2
+
+	dr _LoadOverworldAttrmapPals, $4000
+	dr _ScrollBGMapPalettes, $404f
+	dr CopyObjectStruct, $46d7
+	dr _Sine, $4ac9
+	dr PredefPointers, $4b5b
+	dr InitSGBBorderPredef, $4beb
+	dr InitCGBPals, $5c93
 
 	dr_end
 
@@ -116,6 +149,13 @@ SECTION "rom4", ROMX, BANK[4]
 SECTION "rom5", ROMX, BANK[5]
 ; ROM $05 : $14000 - $17FFF
 	set_bank_offset 5
+
+	dr GetTimeOfDay, $4032
+	dr StartClock, $4089
+	dr _InitTime, $40d1
+	dr _UpdatePlayerSprite, $410e
+	dr _DoesSpriteHaveFacings, $42e9
+	dr _GetSpritePalette, $4306
 
 	dr_end
 
@@ -140,6 +180,14 @@ SECTION "rom8", ROMX, BANK[8]
 SECTION "rom9", ROMX, BANK[9]
 ; ROM $09 : $24000 - $27FFF
 	set_bank_offset 9
+
+	dr StringBufferPointers, $4000
+	dr _2DMenu_, $400e
+	dr _StaticMenuJoypad, $4136
+	dr _ScrollingMenuJoypad, $4139
+	dr _PushWindow, $42a0
+	dr _ExitMenu, $4307
+	dr _InitVerticalMenuCursor, $43a6
 
 	dr_end
 
@@ -170,6 +218,8 @@ SECTION "rom13", ROMX, BANK[13]
 SECTION "rom14", ROMX, BANK[14]
 ; ROM $0e : $38000 - $3BFFF
 	set_bank_offset 14
+
+	dr Battle_GetTrainerName, $5910
 
 	dr_end
 
@@ -285,6 +335,8 @@ SECTION "rom33", ROMX, BANK[33]
 ; ROM $21 : $84000 - $87FFF
 	set_bank_offset 33
 
+	dr _PrinterReceive, $42d5
+
 	dr_end
 
 SECTION "rom34", ROMX, BANK[34]
@@ -296,6 +348,9 @@ SECTION "rom34", ROMX, BANK[34]
 SECTION "rom35", ROMX, BANK[35]
 ; ROM $23 : $8C000 - $8FFFF
 	set_bank_offset 35
+
+	dr _TimeOfDayPals, $418b
+	dr _UpdateTimePals, $41bc
 
 	dr_end
 
@@ -461,10 +516,17 @@ SECTION "rom62", ROMX, BANK[62]
 ; ROM $3e : $F8000 - $FBFFF
 	set_bank_offset 62
 
+	dr _LoadStandardFont, $4000
+	dr _LoadFontsExtra, $400c
+	dr _LoadFontsBattleExtra, $4032
+	dr CollisionPermissionTable, $734a
+
 	dr_end
 
 SECTION "rom63", ROMX, BANK[63]
 ; ROM $3f : $FC000 - $FFFFF
 	set_bank_offset 63
+
+	dr _AnimateTileset, $4003
 
 	dr_end

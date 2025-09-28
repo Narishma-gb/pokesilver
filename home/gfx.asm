@@ -256,28 +256,3 @@ Get1bpp::
 
 	pop hl
 	jp FarCopyBytesDouble
-
-DuplicateGet2bpp:: ; unreferenced
-	ldh a, [rLCDC]
-	add a
-	jp c, Request2bpp
-
-	push de
-	push hl
-
-; bank
-	ld a, b
-
-; bc = c * TILE_SIZE
-	ld h, 0
-	ld l, c
-	add hl, hl
-	add hl, hl
-	add hl, hl
-	add hl, hl
-	ld b, h
-	ld c, l
-
-	pop de
-	pop hl
-	jp FarCopyBytes

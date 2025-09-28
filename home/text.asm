@@ -1,6 +1,6 @@
 ClearBox::
 ; Fill a c*b box at hl with blank tiles.
-	ld a, " "
+	ld a, "　"
 	ld de, SCREEN_WIDTH
 .row
 	push hl
@@ -20,7 +20,7 @@ ClearTilemap::
 ; Fill wTilemap with blank tiles.
 
 	hlcoord 0, 0
-	ld a, " "
+	ld a, "　"
 	ld bc, wTilemapEnd - wTilemap
 	call ByteFill
 
@@ -66,7 +66,7 @@ TextboxBorder::
 	push hl
 	ld a, "│"
 	ld [hli], a
-	ld a, " "
+	ld a, "　"
 	call .PlaceChars
 	ld [hl], "│"
 	pop hl
@@ -126,7 +126,7 @@ SpeechTextbox::
 	jp Textbox
 
 GameFreakText:: ; unreferenced
-	text "ゲームフりーク！" ; "GAMEFREAK!"
+	text "ゲームフリーク！" ; "GAMEFREAK!"
 	done
 
 RadioTerminator::
@@ -182,12 +182,7 @@ MACRO dict
 	else
 		cp \1
 	endc
-	if ISCONST(\2)
-		; Replace a character with another one
-		jr nz, .not\@
-		ld a, \2
-	.not\@:
-	elif STRFIND("\2", ".") == 0
+	if STRFIND("\2", ".") == 0
 		; Locals can use a short jump
 		jr z, \2
 	else
@@ -204,32 +199,34 @@ ENDM
 	dict "<MOM>",     PrintMomsName
 	dict "<PLAYER>",  PrintPlayerName
 	dict "<RIVAL>",   PrintRivalName
-	dict "<ROUTE>",   PlaceJPRoute
+	dict "<ROUTE>",   PlaceRoute
 	dict "<WATASHI>", PlaceWatashi
 	dict "<KOKO_WA>", PlaceKokoWa
 	dict "<RED>",     PrintRedsName
 	dict "<GREEN>",   PrintGreensName
-	dict "#",         PlacePOKe
-	dict "<PC>",      PCChar
-	dict "<ROCKET>",  RocketChar
-	dict "<TM>",      TMChar
-	dict "<TRAINER>", TrainerChar
+	dict "#",         PlacePokemon
+	dict "<PC>",      PlacePC
+	dict "<ROCKET>",  PlaceRocket
+	dict "<TM>",      PlaceTM
+	dict "<TRAINER>", PlaceTrainer
 	dict "<KOUGEKI>", PlaceKougeki
-	dict "<LF>",      LineFeedChar
+	dict "<TA!>",     PlaceTa
 	dict "<CONT>",    ContText
-	dict "<……>",      SixDotsChar
+	dict "<⋯>",      PlaceSixDots
 	dict "<DONE>",    DoneText
 	dict "<PROMPT>",  PromptText
-	dict "<PKMN>",    PlacePKMN
-	dict "<POKE>",    PlacePOKE
-	dict "<WBR>",     NextChar
-	dict "<BSP>",     " "
+	dict "<GA>",      PlaceGa
+	dict "<WA>",      PlaceWa
+	dict "<NO>",      PlaceNo
+	dict "<WO>",      PlaceWo
+	dict "<TTE>",     PlaceTte
+	dict "<NI>",      PlaceNi
 	dict "<DEXEND>",  PlaceDexEnd
 	dict "<TARGET>",  PlaceMoveTargetsName
 	dict "<USER>",    PlaceMoveUsersName
 	dict "<ENEMY>",   PlaceEnemysName
-	dict "ﾟ",         .diacritic
-	cp "ﾞ"
+	dict "゜",         .diacritic
+	cp "゛"
 	jr nz, .not_diacritic
 
 .diacritic
@@ -253,7 +250,7 @@ ENDM
 .hiragana_dakuten
 	add "か" - "が"
 .place_dakuten
-	ld b, "ﾞ" ; dakuten
+	ld b, "゛" ; dakuten
 	call Diacritic
 	jr .place
 
@@ -267,7 +264,7 @@ ENDM
 .hiragana_handakuten
 	add "は" - "ぱ"
 .place_handakuten
-	ld b, "ﾟ" ; handakuten
+	ld b, "゜" ; handakuten
 	call Diacritic
 
 .place
@@ -287,18 +284,23 @@ PrintRivalName:  print_name wRivalName
 PrintRedsName:   print_name wRedsName
 PrintGreensName: print_name wGreensName
 
-TrainerChar:  print_name TrainerCharText
-TMChar:       print_name TMCharText
-PCChar:       print_name PCCharText
-RocketChar:   print_name RocketCharText
-PlacePOKe:    print_name PlacePOKeText
-PlaceKougeki: print_name KougekiText
-SixDotsChar:  print_name SixDotsCharText
-PlacePKMN:    print_name PlacePKMNText
-PlacePOKE:    print_name PlacePOKEText
-PlaceJPRoute: print_name PlaceJPRouteText
-PlaceWatashi: print_name PlaceWatashiText
-PlaceKokoWa:  print_name PlaceKokoWaText
+PlaceTrainer: print_name TrainerCharText
+PlaceTM:      print_name TMCharText
+PlacePC:      print_name PCCharText
+PlaceRocket:  print_name RocketCharText
+PlacePokemon: print_name PokemonCharText
+PlaceKougeki: print_name KougekiCharText
+PlaceTa:      print_name TaCharText
+PlaceSixDots: print_name SixDotsCharText
+PlaceGa:      print_name GaCharText
+PlaceWa:      print_name WaCharText
+PlaceNo:      print_name NoCharText
+PlaceWo:      print_name WoCharText
+PlaceNi:      print_name NiCharText
+PlaceTte:     print_name TteCharText
+PlaceRoute:   print_name RouteCharText
+PlaceWatashi: print_name WatashiCharText
+PlaceKokoWa:  print_name KokoWaCharText
 
 PlaceMoveTargetsName::
 	ldh a, [hBattleTurn]
@@ -342,7 +344,7 @@ PlaceEnemysName::
 	call PlaceString
 	ld h, b
 	ld l, c
-	ld de, String_Space
+	ld de, NoCharText
 	call PlaceString
 	push bc
 	callfar Battle_GetTrainerName
@@ -365,32 +367,28 @@ PlaceCommandCharacter::
 	pop de
 	jp NextChar
 
-TMCharText::      db "TM@"
-TrainerCharText:: db "TRAINER@"
-PCCharText::      db "PC@"
-RocketCharText::  db "ROCKET@"
-PlacePOKeText::   db "POKé@"
-KougekiText::     db "こうげき@"
-SixDotsCharText:: db "……@"
-EnemyText::       db "Enemy @"
-PlacePKMNText::   db "<PK><MN>@"
-PlacePOKEText::   db "<PO><KE>@"
-String_Space::    db " @"
-; These strings have been dummied out.
-PlaceJPRouteText::
-PlaceWatashiText::
-PlaceKokoWaText:: db "@"
+TMCharText::      db "わざマシン@"
+TrainerCharText:: db "トレーナー@"
+PCCharText::      db "パソコン@"
+RocketCharText::  db "ロケットだん@"
+PokemonCharText:: db "ポケモン@"
+KougekiCharText:: db "こうげき@"
+TaCharText::      db "た！@"
+SixDotsCharText:: db "⋯⋯@"
+EnemyText::       db "てきの　@"
+GaCharText::      db "が　@"
+WaCharText::      db "は　@"
+NoCharText::      db "の　@"
+WoCharText::      db "を　@"
+NiCharText::      db "に　@"
+TteCharText::     db "って@"
+RouteCharText::   db "ばん　どうろ@"
+WatashiCharText:: db "わたし@"
+KokoWaCharText::  db "ここは　@"
 
 NextLineChar::
 	pop hl
 	ld bc, SCREEN_WIDTH * 2
-	add hl, bc
-	push hl
-	jp NextChar
-
-LineFeedChar::
-	pop hl
-	ld bc, SCREEN_WIDTH
 	add hl, bc
 	push hl
 	jp NextChar
@@ -412,8 +410,8 @@ Paragraph::
 .linkbattle
 	call Text_WaitBGMap
 	call PromptButton
-	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY
-	lb bc, TEXTBOX_INNERH - 1, TEXTBOX_INNERW
+	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY - 1
+	lb bc, TEXTBOX_INNERH, TEXTBOX_INNERW
 	call ClearBox
 	call UnloadBlinkingCursor
 	ld c, 20
@@ -424,8 +422,8 @@ Paragraph::
 
 _ContText::
 	ld a, [wLinkMode]
-	or a
-	jr nz, .communication
+	cp LINK_COLOSSEUM
+	jr z, .communication
 	call LoadBlinkingCursor
 
 .communication
@@ -435,10 +433,7 @@ _ContText::
 	call PromptButton
 	pop de
 
-	ld a, [wLinkMode]
-	or a
-	call z, UnloadBlinkingCursor
-	; fallthrough
+	call UnloadBlinkingCursor
 
 _ContTextNoPause::
 	push de
@@ -464,7 +459,7 @@ ContText::
 PlaceDexEnd::
 ; Ends a Pokédex entry in Gen 1.
 ; Dex entries are now regular strings.
-	ld [hl], "."
+	ld [hl], "。"
 	pop hl
 	ret
 
@@ -514,7 +509,7 @@ TextScroll::
 	ld bc, 3 * SCREEN_WIDTH
 	call CopyBytes
 	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY + 2
-	ld a, " "
+	ld a, "　"
 	ld bc, TEXTBOX_INNERW
 	call ByteFill
 	ld c, 5
@@ -554,19 +549,6 @@ LoadBlinkingCursor::
 UnloadBlinkingCursor::
 	ld a, "─"
 	ldcoord_a 18, 17
-	ret
-
-PlaceFarString::
-	ld b, a
-	ldh a, [hROMBank]
-	push af
-
-	ld a, b
-	rst Bankswitch
-	call PlaceString
-
-	pop af
-	rst Bankswitch
 	ret
 
 PokeFluteTerminator:: ; unreferenced
@@ -638,7 +620,6 @@ TextCommands::
 	dw TextCommand_SOUND         ; TX_SOUND_SLOT_MACHINE_START
 	dw TextCommand_STRINGBUFFER  ; TX_STRINGBUFFER
 	dw TextCommand_DAY           ; TX_DAY
-	dw TextCommand_FAR           ; TX_FAR
 	assert_table_length NUM_TEXT_CMDS
 
 TextCommand_START::
@@ -664,31 +645,6 @@ TextCommand_RAM::
 	ld l, c
 	call PlaceString
 	pop hl
-	ret
-
-TextCommand_FAR::
-; write text from a different bank (little endian)
-	ldh a, [hROMBank]
-	push af
-
-	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
-	ld a, [hli]
-
-	ldh [hROMBank], a
-	ld [rROMB], a
-
-	push hl
-	ld h, d
-	ld l, e
-	call DoTextUntilTerminator
-	pop hl
-
-	pop af
-	ldh [hROMBank], a
-	ld [rROMB], a
 	ret
 
 TextCommand_BCD::
@@ -864,7 +820,7 @@ TextSFX::
 	db -1
 
 TextCommand_DOTS::
-; wait for button press or 30 frames while printing "…"s
+; wait for button press or 30 frames while printing "⋯"s
 	ld a, [hli]
 	ld d, a
 	push hl
@@ -873,7 +829,7 @@ TextCommand_DOTS::
 
 .loop
 	push de
-	ld a, "…"
+	ld a, "⋯"
 	ld [hli], a
 	call GetJoypad
 	ldh a, [hJoyDown]
@@ -959,11 +915,11 @@ TextCommand_DAY::
 	dw .Fri
 	dw .Satur
 
-.Sun:    db "SUN@"
-.Mon:    db "MON@"
-.Tues:   db "TUES@"
-.Wednes: db "WEDNES@"
-.Thurs:  db "THURS@"
-.Fri:    db "FRI@"
-.Satur:  db "SATUR@"
-.Day:    db "DAY@"
+.Sun:    db "にち@"
+.Mon:    db "げつ@"
+.Tues:   db "か@"
+.Wednes: db "すい@"
+.Thurs:  db "もく@"
+.Fri:    db "きん@"
+.Satur:  db "ど@"
+.Day:    db "ようび@"
