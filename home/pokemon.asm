@@ -282,7 +282,7 @@ GetNickname::
 	ld de, wStringBuffer1
 
 	push de
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	pop de
 

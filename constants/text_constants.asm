@@ -1,12 +1,10 @@
 ; name lengths
-DEF NAME_LENGTH               EQU 11
+DEF NAME_LENGTH               EQU 6
 DEF PLAYER_NAME_LENGTH        EQU 8
 DEF BOX_NAME_LENGTH           EQU 9
-DEF MON_NAME_LENGTH           EQU 11
 DEF MOVE_NAME_LENGTH          EQU 13
-DEF ITEM_NAME_LENGTH          EQU 13
+DEF ITEM_NAME_LENGTH          EQU 11
 DEF TRAINER_CLASS_NAME_LENGTH EQU 13
-DEF NAME_LENGTH_JAPANESE      EQU 6
 
 ; GetName types (see home/names.asm)
 	const_def 1
@@ -35,8 +33,7 @@ DEF TEXTBOX_INNERY EQU TEXTBOX_Y + 2
 DEF TEXTBOX_FRAME_TILES EQU 6
 
 ; PrintNum bit flags (see engine/math/print_num.asm)
-	const_def 5
-	shift_const PRINTNUM_MONEY        ; 5
+	const_def 6
 	shift_const PRINTNUM_LEFTALIGN    ; 6
 	shift_const PRINTNUM_LEADINGZEROS ; 7
 

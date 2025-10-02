@@ -29,6 +29,7 @@ ROM0
 	"Header"
 	org $0150
 	"Home"
+	; "Garbage 0"
 ROMX $01
 	; "bank1"
 ROMX $02
@@ -270,16 +271,17 @@ WRAM0
 	align 8
 	"Sprites"
 	"Tilemap"
-; 	"Miscellaneous"
-; 	"Unused Map Buffer"
-; 	align 8
-; 	"Overworld Map"
+	"Miscellaneous"
+	"Unused Map Buffer"
+	align 8
+	"Overworld Map"
 ; 	align 4
 ; 	"Video"
-; WRAMX 1
+WRAMX 1
 ; 	"WRAM 1"
 ; 	"Game Data"
-; 	"Party"
+	org $d9e8
+	"Party"
 ; 	"Stack"
 VRAM $00
 	"VRAM0"

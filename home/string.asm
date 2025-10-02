@@ -15,7 +15,7 @@ _InitString::
 	ld a, [hli]
 	cp "@"
 	jr z, .blank
-	cp " "
+	cp "　"
 	jr nz, .notblank
 	dec c
 	jr nz, .loop

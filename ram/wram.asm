@@ -157,7 +157,7 @@ wTilemap::
 	ds SCREEN_AREA
 wTilemapEnd::
 
-/*
+
 ; This union spans 480 bytes.
 SECTION UNION "Miscellaneous", WRAM0
 
@@ -166,7 +166,7 @@ SECTION UNION "Miscellaneous", WRAM0
 ; it uses exactly 480 bytes.
 wSurroundingTiles:: ds SURROUNDING_WIDTH * SURROUNDING_HEIGHT
 
-
+/*
 SECTION UNION "Miscellaneous", WRAM0
 
 ; box save buffer
@@ -174,7 +174,7 @@ SECTION UNION "Miscellaneous", WRAM0
 ; needs more space than the buffer can hold.
 wBoxPartialData:: ds 480
 wBoxPartialDataEnd::
-
+*/
 
 SECTION UNION "Miscellaneous", WRAM0
 
@@ -182,7 +182,7 @@ SECTION UNION "Miscellaneous", WRAM0
 wTempTilemap::
 	ds SCREEN_AREA
 
-
+/*
 SECTION UNION "Miscellaneous", WRAM0
 
 ; link patch lists
@@ -388,7 +388,7 @@ NEXTU
 ; unown puzzle
 wPuzzlePieces:: ds 6 * 6
 ENDU
-
+*/
 
 SECTION "Unused Map Buffer", WRAM0
 
@@ -404,7 +404,7 @@ SECTION UNION "Overworld Map", WRAM0
 wOverworldMapBlocks:: ds 1300
 wOverworldMapBlocksEnd::
 
-
+/*
 SECTION UNION "Overworld Map", WRAM0
 
 ; decompress buffer in wram
@@ -622,7 +622,7 @@ wMysteryGiftPlayerBackupItem:: db
 	ds 1
 wMysteryGiftPlayerDataEnd::
 
-
+*/
 SECTION UNION "Overworld Map", WRAM0
 
 	align 8
@@ -641,7 +641,7 @@ NEXTU
 wLYOverridesBackup:: ds SCREEN_HEIGHT_PX
 wLYOverridesBackupEnd::
 ENDU
-
+/*
 	ds 112
 
 UNION
@@ -2663,7 +2663,7 @@ wScreenSave:: ds SCREEN_META_WIDTH * SCREEN_META_HEIGHT
 
 wCurMapDataEnd::
 
-
+*/
 SECTION "Party", WRAMX
 
 wPokemonData::
@@ -2686,18 +2686,18 @@ endr
 wPartyMonNicknames::
 ; wPartyMon1Nickname - wPartyMon6Nickname
 for n, 1, PARTY_LENGTH + 1
-wPartyMon{d:n}Nickname:: ds MON_NAME_LENGTH
+wPartyMon{d:n}Nickname:: ds NAME_LENGTH
 endr
 wPartyMonNicknamesEnd::
 
-	ds 22
+	ds 32
 
 wPokedexCaught:: flag_array NUM_POKEMON
 wEndPokedexCaught::
 
 wPokedexSeen:: flag_array NUM_POKEMON
 wEndPokedexSeen::
-
+/*
 wUnownDex:: ds NUM_UNOWN
 wUnlockedUnowns:: db
 wFirstUnownSeen:: db

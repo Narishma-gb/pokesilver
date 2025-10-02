@@ -27,7 +27,7 @@ GetName::
 	ld a, [wCurSpecies]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
-	ld hl, MON_NAME_LENGTH
+	ld hl, NAME_LENGTH
 	add hl, de
 	ld e, l
 	ld d, h
@@ -127,16 +127,16 @@ GetPokemonName::
 	ld e, a
 	ld d, 0
 
-rept MON_NAME_LENGTH - 1
+rept NAME_LENGTH - 1
 	add hl, de
 endr
 
 ; Terminator
 	ld de, wStringBuffer1
 	push de
-	ld bc, MON_NAME_LENGTH - 1
+	ld bc, NAME_LENGTH - 1
 	call CopyBytes
-	ld hl, wStringBuffer1 + MON_NAME_LENGTH - 1
+	ld hl, wStringBuffer1 + NAME_LENGTH - 1
 	ld [hl], "@"
 	pop de
 
@@ -209,7 +209,7 @@ GetTMHMName::
 .not_hm
 
 ; Divide and mod by 10 to get the top and bottom digits respectively
-	ld b, "0"
+	ld b, "０"
 .mod10
 	sub 10
 	jr c, .done_mod
@@ -224,7 +224,7 @@ GetTMHMName::
 	inc de
 	pop af
 
-	ld b, "0"
+	ld b, "０"
 	add b
 	ld [de], a
 
@@ -241,12 +241,12 @@ GetTMHMName::
 	ret
 
 .TMText:
-	db "TM"
+	db "わざマシン"
 .TMTextEnd:
 	db "@"
 
 .HMText:
-	db "HM"
+	db "ひでんマシン"
 .HMTextEnd:
 	db "@"
 

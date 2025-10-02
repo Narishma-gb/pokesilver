@@ -8,6 +8,7 @@ patches := \
 	pokesilver11.patch
 
 rom_obj := \
+	garbage.o \
 	home.o \
 	ram.o \
 	wip.o

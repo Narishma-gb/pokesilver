@@ -1513,22 +1513,22 @@ ObjectEvent::
 	jumptextfaceplayer ObjectEventText
 
 ObjectEventText::
-	text_far _ObjectEventText
-	text_end
+	text "オブジェイベント"
+	done
 
 BGEvent:: ; unreferenced
 	jumptext BGEventText
 
 BGEventText::
-	text_far _BGEventText
-	text_end
+	text "ビージーイベント"
+	done
 
 CoordinatesEvent:: ; unreferenced
 	jumptext CoordinatesEventText
 
 CoordinatesEventText::
-	text_far _CoordinatesEventText
-	text_end
+	text "ざひょうイベント"
+	done
 
 CheckObjectMask::
 	ldh a, [hMapObjectIndex]
