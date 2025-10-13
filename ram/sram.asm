@@ -104,9 +104,9 @@ sWindowStackTop::
 ;sCheckValue2:: db ; loaded with SAVE_CHECK_VALUE_2, used to check save corruption
 
 
-;SECTION "Active Box", SRAM
+SECTION "Active Box", SRAM
 
-;sBox:: curbox sBox
+sBox:: curbox sBox
 
 
 ;SECTION "Link Battle Data", SRAM
@@ -172,4 +172,4 @@ sWindowStackTop::
 ;sBackupChecksum:: dw
 ;sBackupCheckValue2:: db ; loaded with SAVE_CHECK_VALUE_2, used to check save corruption
 
-;ENDSECTION
+ENDSECTION

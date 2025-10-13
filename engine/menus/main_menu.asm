@@ -10,9 +10,6 @@
 	const MAINMENUITEM_NEW_GAME     ; 1
 	const MAINMENUITEM_OPTION       ; 2
 	const MAINMENUITEM_MYSTERY_GIFT ; 3
-IF DEF(_DEBUG)
-	const MAINMENUITEM_DEBUG_ROOM   ; 4
-ENDC
 
 MainMenu:
 	ld de, MUSIC_NONE
@@ -49,11 +46,7 @@ MainMenu:
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-IF DEF(_DEBUG)
-	menu_coords 0, 0, 14, 9
-ELSE
-	menu_coords 0, 0, 14, 7
-ENDC
+	menu_coords 0, 0, 13, 7
 	dw .MenuData
 	db 1 ; default option
 
@@ -66,13 +59,10 @@ ENDC
 
 .Strings:
 ; entries correspond to MAINMENUITEM_* constants
-	db "CONTINUE@"
-	db "NEW GAME@"
-	db "OPTION@"
-	db "MYSTERY GIFT@"
-IF DEF(_DEBUG)
-	db "DEBUG ROOM@"
-ENDC
+	db "つづきから　はじめる@"
+	db "さいしょから　はじめる@"
+	db "せっていを　かえる@"
+	db "ふしぎな　おくりもの@"
 
 .Jumptable:
 ; entries correspond to MAINMENUITEM_* constants
@@ -80,9 +70,6 @@ ENDC
 	dw NewGame
 	dw Option
 	dw MysteryGift
-IF DEF(_DEBUG)
-	dw DebugRoom
-ENDC
 
 MainMenuItems:
 ; entries correspond to MAINMENU_* constants
@@ -94,24 +81,18 @@ MainMenuItems:
 	db -1
 
 	; MAINMENU_CONTINUE
-	db 3 + DEF(_DEBUG)
+	db 3
 	db MAINMENUITEM_CONTINUE
 	db MAINMENUITEM_NEW_GAME
 	db MAINMENUITEM_OPTION
-IF DEF(_DEBUG)
-	db MAINMENUITEM_DEBUG_ROOM
-ENDC
 	db -1
 
 	; MAINMENU_MYSTERY
-	db 4 + DEF(_DEBUG)
+	db 4
 	db MAINMENUITEM_CONTINUE
 	db MAINMENUITEM_NEW_GAME
 	db MAINMENUITEM_OPTION
 	db MAINMENUITEM_MYSTERY_GIFT
-IF DEF(_DEBUG)
-	db MAINMENUITEM_DEBUG_ROOM
-ENDC
 	db -1
 
 MainMenu_GetWhichMenu:
@@ -200,26 +181,25 @@ MainMenu_PrintCurrentTimeAndDay:
 	and RTC_RESET
 	jp nz, .PrintTimeNotSet
 	call UpdateTime
-	hlcoord 1, 13
-	lb bc, 4, 13
-	call ClearBox
 	call GetWeekday
 	ld b, a
 	decoord 1, 14
 	call PrintDayOfWeek
-	decoord 4, 16
+	decoord 2, 16
 	ldh a, [hHours]
 	ld c, a
 	farcall PrintHour
-	ld [hl], ":"
-	inc hl
+	hlcoord 9, 16
 	ld de, hMinutes
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
 	call PrintNum
+	hlcoord 11, 16
+	ld de, .minString
+	call PlaceString
 	ret
 
-.minString: ; unreferenced
-	db "min.@"
+.minString:
+	db "ふん@"
 
 .PrintTimeNotSet:
 	hlcoord 1, 14
@@ -228,11 +208,11 @@ MainMenu_PrintCurrentTimeAndDay:
 	ret
 
 .TimeNotSetString:
-	db "TIME NOT SET@"
+	db "とけいのじこく　　ふめい@"
 
 .MainMenuTimeUnknownText: ; unreferenced
-	text_far _MainMenuTimeUnknownText
-	text_end
+	text "とけいのじこく　　ふめい"
+	done
 
 PrintDayOfWeek:
 	push de
@@ -250,15 +230,15 @@ PrintDayOfWeek:
 	ret
 
 .Days:
-	db "SUN@"
-	db "MON@"
-	db "TUES@"
-	db "WEDNES@"
-	db "THURS@"
-	db "FRI@"
-	db "SATUR@"
+	db "にち@"
+	db "げつ@"
+	db "か@"
+	db "すい@"
+	db "もく@"
+	db "きん@"
+	db "ど@"
 .Day:
-	db "DAY@"
+	db "ようび@"
 
 ClearTilemapEtc:
 	xor a

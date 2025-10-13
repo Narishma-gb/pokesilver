@@ -22,22 +22,16 @@ TitleScreen:
 	call ByteFill
 	farcall ClearSpriteAnims
 
-; Decompress lower part of title screen
+; Decompress title screen
 	ld hl, TitleScreenGFX1
 	ld de, vTiles2
 	ld a, BANK(TitleScreenGFX1)
 	call FarDecompress
 
-; Decompress upper part of title screen
-	ld hl, TitleScreenGFX2
-	ld de, vTiles1
-	ld a, BANK(TitleScreenGFX2)
-	call FarDecompress
-
 ; Decompress Ho-Oh/Lugia sprite
-	ld hl, TitleScreenGFX4
+	ld hl, TitleScreenGFX2
 	ld de, vTiles0
-	ld a, BANK(TitleScreenGFX4)
+	ld a, BANK(TitleScreenGFX2)
 	call FarDecompress
 
 ; Ho-Oh/Lugia title trail.
@@ -150,14 +144,18 @@ FillTitleScreenPals:
 	ld bc, 18 * TILEMAP_WIDTH
 	xor a
 	call ByteFill
-	hlbgcoord 0, 0, vBGMap2
-	lb bc, 7, SCREEN_WIDTH
+	hlbgcoord 1, 1, vBGMap2
+	lb bc, 4, 14
 	ld a, 1
 	call DrawTitleGraphic
-	hlbgcoord 5, 6, vBGMap2
-	lb bc, 1, 10
+	hlbgcoord 15, 1, vBGMap2
+	lb bc, 4, 4
 	ld a, 3
 	call DrawTitleGraphic
+	hlbgcoord 2, 5, vBGMap2
+	lb bc, 0, 15
+	ld a, 2
+	call ByteFill
 	hlbgcoord 0, 12, vBGMap2
 	ld bc, 5 * TILEMAP_WIDTH
 	ld a, 4
@@ -191,8 +189,33 @@ LoadTitleScreenTilemap:
 	cp -1
 	jr z, .done
 	inc hl
+	bit 7, a
+	jr nz, .inc_tile
+	ld c, a
+	ld a, BANK(TitleScreenTilemap)
+	call GetFarByte
+	inc hl
+
+.rept_tile
 	ld [de], a
 	inc de
+	dec c
+	jr nz, .rept_tile
+	jr .loop
+
+.inc_tile
+	and $7f
+	ld c, a
+	ld a, BANK(TitleScreenTilemap)
+	call GetFarByte
+	inc hl
+
+.inc_tile_loop
+	ld [de], a
+	inc de
+	inc a
+	dec c
+	jr nz, .inc_tile_loop
 	jr .loop
 
 .done
@@ -201,6 +224,6 @@ LoadTitleScreenTilemap:
 	ret nz
 	hlbgcoord 0, 11
 	ld bc, TILEMAP_WIDTH
-	ld a, "@"
+	ld a, $e
 	call ByteFill
 	ret

@@ -13,12 +13,6 @@ NewGame:
 	ldh [hMapEntryMethod], a
 	jp FinishContinueFunction
 
-IF DEF(_DEBUG)
-DebugRoom:
-	farcall _DebugRoom
-	ret
-ENDC
-
 ResetWRAM:
 	xor a
 	ldh [hBGMapMode], a
@@ -27,7 +21,7 @@ ResetWRAM:
 
 _ResetWRAM:
 	ld hl, wShadowOAM
-	ld bc, wOptions - wShadowOAM
+	ld bc, wNewGameResetWIP - wShadowOAM
 	xor a
 	call ByteFill
 
@@ -109,9 +103,6 @@ _ResetWRAM:
 	ld [wCoins], a
 	ld [wCoins + 1], a
 
-if START_MONEY >= $10000
-	ld a, HIGH(START_MONEY >> 8)
-endc
 	ld [wMoney], a
 	ld a, HIGH(START_MONEY) ; mid
 	ld [wMoney + 1], a
@@ -152,21 +143,13 @@ SetDefaultBoxNames:
 	push hl
 	ld de, .Box
 	call CopyName2
+	ld a, "１"
+	add c
 	dec hl
-	ld a, c
-	inc a
-	cp 10
-	jr c, .less
-	sub 10
-	ld [hl], "1"
-	inc hl
-
-.less
-	add "0"
 	ld [hli], a
 	ld [hl], "@"
 	pop hl
-	ld de, 9
+	ld de, BOX_NAME_LENGTH
 	add hl, de
 	inc c
 	ld a, c
@@ -175,20 +158,16 @@ SetDefaultBoxNames:
 	ret
 
 .Box:
-	db "BOX@"
+	db "ボックス@"
 
 InitializeMagikarpHouse:
-	ld hl, wBestMagikarpLengthFeet
-	ld a, $3
+	ld hl, wBestMagikarpLength
+	ld a, HIGH(START_MAGIKARP_SIZE)
 	ld [hli], a
-	ld a, $6
+	ld a, LOW(START_MAGIKARP_SIZE)
 	ld [hli], a
-	ld de, .Ralph
-	call CopyName2
+	str_ld_hl "ヤスアキ@"
 	ret
-
-.Ralph:
-	db "RALPH@"
 
 InitializeNPCNames:
 	ld hl, .Rival
@@ -211,10 +190,10 @@ InitializeNPCNames:
 	call CopyBytes
 	ret
 
-.Rival:  db "???@"
-.Red:    db "RED@"
-.Green:  db "GREEN@"
-.Mom:    db "MOM@"
+.Rival:  db "？？？@"
+.Red:    db "レッド@"
+.Green:  db "グリーン@"
+.Mom:    db "おかあさん@"
 
 InitializeWorld:
 	call ShrinkPlayer
@@ -315,9 +294,9 @@ ConfirmContinue:
 	call DelayFrame
 	call GetJoypad
 	ld hl, hJoyPressed
-	bit A_BUTTON_F, [hl]
+	bit B_PAD_A, [hl]
 	jr nz, .PressA
-	bit B_BUTTON_F, [hl]
+	bit B_PAD_B, [hl]
 	jr z, .loop
 	scf
 	ret
@@ -360,12 +339,12 @@ DisplaySaveInfoOnContinue:
 	call CheckRTCStatus
 	and RTC_RESET
 	jr z, .clock_ok
-	lb de, 4, 8
+	lb de, 5, 8
 	call DisplayContinueDataWithRTCError
 	ret
 
 .clock_ok
-	lb de, 4, 8
+	lb de, 5, 8
 	call DisplayNormalContinueData
 	ret
 
@@ -402,61 +381,61 @@ Continue_LoadMenuHeader:
 
 .MenuHeader_Dex:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, 9
+	menu_coords 0, 0, 14, 9
 	dw .MenuData_Dex
 	db 1 ; default option
 
 .MenuData_Dex:
 	db 0 ; flags
 	db 4 ; items
-	db "PLAYER <PLAYER>@"
-	db "BADGES@"
-	db "#DEX@"
-	db "TIME@"
+	db "しゅじんこう　<PLAYER>@"
+	db "もっているバッジ　　　　こ@"
+	db "#ずかん　　　　ひき@"
+	db "プレイじかん@"
 
 .MenuHeader_NoDex:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, 9
+	menu_coords 0, 0, 14, 9
 	dw .MenuData_NoDex
 	db 1 ; default option
 
 .MenuData_NoDex:
 	db 0 ; flags
 	db 4 ; items
-	db "PLAYER <PLAYER>@"
-	db "BADGES@"
-	db " @"
-	db "TIME@"
+	db "しゅじんこう　<PLAYER>@"
+	db "もっているバッジ　　　　こ@"
+	db "　@"
+	db "プレイじかん@"
 
 Continue_DisplayBadgesDex:
 	call MenuBoxCoord2Tile
 	push hl
-	decoord 13, 4, 0
+	decoord 10, 4, 0
 	add hl, de
 	call Continue_DisplayBadgeCount
 	pop hl
 	push hl
-	decoord 12, 6, 0
+	decoord 9, 6, 0
 	add hl, de
 	call Continue_DisplayPokedexNumCaught
 	pop hl
 	ret
 
 Continue_PrintGameTime:
-	decoord 9, 8, 0
+	decoord 8, 8, 0
 	add hl, de
 	call Continue_DisplayGameTime
 	ret
 
 Continue_UnknownGameTime:
-	decoord 9, 8, 0
+	decoord 8, 8, 0
 	add hl, de
 	ld de, .three_question_marks
 	call PlaceString
 	ret
 
 .three_question_marks
-	db " ???@"
+	db "　ふめい@"
 
 Continue_DisplayBadgeCount:
 	push hl
@@ -474,11 +453,7 @@ Continue_DisplayPokedexNumCaught:
 	ret z
 	push hl
 	ld hl, wPokedexCaught
-if NUM_POKEMON % 8
-	ld b, NUM_POKEMON / 8 + 1
-else
-	ld b, NUM_POKEMON / 8
-endc
+	ld b, (NUM_POKEMON + 7) / 8
 	call CountSetBits
 	pop hl
 	ld de, wNumSetBits
@@ -489,7 +464,7 @@ Continue_DisplayGameTime:
 	ld de, wGameTimeHours
 	lb bc, 2, 3
 	call PrintNum
-	ld [hl], "<COLON>"
+	ld [hl], ":"
 	inc hl
 	ld de, wGameTimeMinutes
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
@@ -577,11 +552,24 @@ OakSpeech:
 	ret
 
 OakText1:
-	text_far _OakText1
-	text_end
+	text "いやあ　またせた！"
+
+	para "ポケットモンスターの　せかいへ"
+	line "ようこそ！"
+
+	para "わしの　なまえは　オーキド"
+
+	para "みんなからは　#　はかせと"
+	line "したわれて　おるよ"
+	prompt
 
 OakText2:
-	text_far _OakText2
+	text "ポケットモンスター⋯⋯⋯#"
+
+	para "この　せかいには"
+	line "ポケットモンスターと　よばれる"
+	cont "いきもの　たちが"
+	cont "いたるところに　すんでいる！@"
 	text_asm
 	ld a, MARILL
 	call PlayMonCry
@@ -590,24 +578,51 @@ OakText2:
 	ret
 
 OakText3:
-	text_far _OakText3
+	text_promptbutton
 	text_end
 
 OakText4:
-	text_far _OakText4
-	text_end
+	text "ひとは　#たちと"
+	line "なかよく　あそんだり"
+	cont "いっしょに　たたかったり⋯⋯⋯⋯"
+	cont "たすけあい　ながら"
+	cont "くらして　いるのじゃ"
+	prompt
 
 OakText5:
-	text_far _OakText5
-	text_end
+	text "しかし　わしらは　#のすべてを"
+	line "しっている　わけでは　ない"
+
+	para "#の　ひみつは"
+	line "まだまだ　いっぱい　ある！"
+
+	para "わしは　それを　ときあかすために"
+	line "まいにち　#の　けんきゅうを"
+	cont "つづけている　という　わけじゃ！"
+	prompt
 
 OakText6:
-	text_far _OakText6
-	text_end
+	text "さて<⋯>"
+	line "そろそろ　きみの　なまえを"
+	cont "おしえて　もらおう！"
+	prompt
 
 OakText7:
-	text_far _OakText7
-	text_end
+	text "<PLAYER>！"
+	line "じゅんびは　いいかな？"
+
+	para "いよいよ　これから"
+	line "きみの　ものがたりが　はじまる！"
+
+	para "たのしいことも　くるしいことも"
+	line "いっぱい　きみを　まってるだろう！"
+
+	para "ゆめと　ぼうけんと！"
+	line "ポケット　モンスターの　せかいへ！"
+	cont "レッツ　ゴー！"
+
+	para "あとで　また　あおう！"
+	done
 
 NamePlayer:
 	call MovePlayerPicRight
@@ -845,8 +860,6 @@ Intro_PlaceChrisSprite:
 	const TITLESCREENOPTION_MAIN_MENU
 	const TITLESCREENOPTION_DELETE_SAVE_DATA
 	const TITLESCREENOPTION_RESTART
-	const TITLESCREENOPTION_UNUSED
-	const TITLESCREENOPTION_RESET_CLOCK
 DEF NUM_TITLESCREENOPTIONS EQU const_value
 
 IntroSequence:
@@ -875,10 +888,7 @@ StartTitleScreen:
 	call GetSGBLayout
 	call UpdateTimePals
 	ld a, [wTitleScreenSelectedOption]
-	cp NUM_TITLESCREENOPTIONS
-	jr c, .ok
-	xor a
-.ok
+	and $3
 	ld e, a
 	ld d, 0
 	ld hl, .dw
@@ -894,7 +904,6 @@ StartTitleScreen:
 	dw DeleteSaveData
 	dw IntroSequence
 	dw IntroSequence
-	dw ResetClock
 
 INCLUDE "engine/movie/title.asm"
 
@@ -992,12 +1001,6 @@ TitleScreenMain:
 	cp  PAD_UP + PAD_B + PAD_SELECT
 	jr z, .delete_save_data
 
-; Clock can be reset by pressing Down + B + Select.
-	ld a, [hl]
-	and PAD_DOWN + PAD_B + PAD_SELECT
-	cp  PAD_DOWN + PAD_B + PAD_SELECT
-	jr z, .reset_clock
-
 ; Press Start or A to start the game.
 	ld a, [hl]
 	and PAD_START | PAD_A
@@ -1035,15 +1038,6 @@ TitleScreenMain:
 	inc [hl]
 	ret
 
-.reset_clock
-	ld a, TITLESCREENOPTION_RESET_CLOCK
-	ld [wTitleScreenSelectedOption], a
-
-; Return to the intro sequence.
-	ld hl, wJumptableIndex
-	set JUMPTABLE_EXIT_F, [hl]
-	ret
-
 TitleScreenEnd:
 ; Wait until the music is done fading.
 
@@ -1063,12 +1057,40 @@ TitleScreenEnd:
 	ret
 
 DeleteSaveData:
-	farcall _DeleteSaveData
+	call ClearTilemap
+	call GetMemSGBLayout
+	call LoadStandardFont
+	call LoadFontsExtra
+	ld de, MUSIC_MAIN_MENU
+	call PlayMusic
+	ld hl, .ClearAllSaveDataText
+	call PrintText
+	ld hl, .NoYesMenuHeader
+	call CopyMenuHeader
+	call VerticalMenu
+	jp c, Init
+	ld a, [wMenuCursorY]
+	cp 1
+	jp z, Init
+	farcall EmptyAllSRAMBanks
 	jp Init
 
-ResetClock:
-	farcall _ResetClock
-	jp Init
+.ClearAllSaveDataText:
+	text "すべての　セーブデータエリアを"
+	line "クリア　しますか？"
+	done
+
+.NoYesMenuHeader:
+	db 0 ; flags
+	menu_coords 14, 7, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
+	db 2 ; items
+	db "いいえ@"
+	db "はい@"
 
 UpdateTitleTrailSprite:
 	; Only update every 4 seconds, when the low 2 bits of [wTitleScreenTimer] are 0.
@@ -1132,23 +1154,23 @@ Copyright:
 	call LoadFontsExtra
 	ld de, CopyrightGFX
 	ld hl, vTiles2 tile $60
-	lb bc, BANK(CopyrightGFX), 30
+	lb bc, BANK(CopyrightGFX), 26
 	call Request2bpp
 	hlcoord 2, 7
 	ld de, CopyrightString
 	jp PlaceString
 
 CopyrightString:
-	; ©1995-2000 Nintendo
-	db   $60, $61, $62, $63, $7a, $7b, $7c, $7d
+	; ©1995-1999 Nintendo
+	db   $60, $61, $62, $63, $61, $62, $64
 	db   $65, $66, $67, $68, $69, $6a
 
-	; ©1995-2000 Creatures inc.
-	next $60, $61, $62, $63, $7a, $7b, $7c, $7d
+	; ©1995-1999 Creatures inc.
+	next $60, $61, $62, $63, $61, $62, $64
 	db   $6b, $6c, $6d, $6e, $6f, $70, $71, $72
 
-	; ©1995-2000 GAME FREAK inc.
-	next $60, $61, $62, $63, $7a, $7b, $7c, $7d
+	; ©1995-1999 GAME FREAK inc.
+	next $60, $61, $62, $63, $61, $62, $64
 	db   $73, $74, $75, $76, $77, $78, $79, $71, $72
 
 	db "@"

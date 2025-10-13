@@ -1,10 +1,10 @@
 ; name lengths
 DEF NAME_LENGTH               EQU 6
+DEF MOVE_NAME_LENGTH          EQU 8
 DEF PLAYER_NAME_LENGTH        EQU 8
 DEF BOX_NAME_LENGTH           EQU 9
-DEF MOVE_NAME_LENGTH          EQU 13
 DEF ITEM_NAME_LENGTH          EQU 11
-DEF TRAINER_CLASS_NAME_LENGTH EQU 13
+DEF TRAINER_CLASS_NAME_LENGTH EQU 11
 
 ; GetName types (see home/names.asm)
 	const_def 1

@@ -2380,7 +2380,7 @@ CheckObjectCoveredByTextbox:
 	push bc
 	call Coord2Tile
 	pop bc
-; NPCs disappear if standing on tile $60-$7f (or $e0-$ff),
+; NPCs disappear if standing on tile $60-$ff,
 ; since those IDs are for text characters and textbox frames.
 	ld a, [hl]
 	cp FIRST_REGULAR_TEXT_CHAR

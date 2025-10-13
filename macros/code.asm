@@ -88,3 +88,31 @@ if _NARG == 0
 	sine_table 32
 endc
 ENDM
+
+MACRO ld_string_hl
+; for each char in \1, iterate the pattern:
+;	ld a, 'char'
+;	ld [hli], a
+; boolean argument \2:
+; use ld [hl], 'lastchar' instead of:
+;	ld a, 'lastchar'
+;	ld [hl], a
+for n, CHARLEN(\1) - 1
+	ld a, STRCHAR(\1, n)
+	ld [hli], a
+endr
+if \2
+	ld [hl], STRCHAR(\1, CHARLEN(\1) - 1)
+else
+	ld a, STRCHAR(\1, CHARLEN(\1) - 1)
+	ld [hl], a
+endc
+ENDM
+
+MACRO ld_str_hl
+	ld_string_hl \1, FALSE
+ENDM
+
+MACRO str_ld_hl
+	ld_string_hl \1, TRUE
+ENDM

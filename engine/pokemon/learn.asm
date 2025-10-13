@@ -5,7 +5,7 @@ LearnMove:
 	call GetNickname
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 
 .loop
@@ -136,18 +136,18 @@ ForgetMove:
 	push hl
 	ld hl, MoveAskForgetText
 	call PrintText
-	hlcoord 5, 2
+	hlcoord 10, 8
 	ld b, NUM_MOVES * 2
 	ld c, MOVE_NAME_LENGTH
 	call Textbox
-	hlcoord 5 + 2, 2 + 2
+	hlcoord 10 + 2, 8 + 2
 	ld a, SCREEN_WIDTH * 2
 	ld [wListMovesLineSpacing], a
 	predef ListMoves
 	; w2DMenuData
-	ld a, $4
+	ld a, $a
 	ld [w2DMenuCursorInitY], a
-	ld a, $6
+	ld a, $b
 	ld [w2DMenuCursorInitX], a
 	ld a, [wNumMoves]
 	inc a
@@ -169,7 +169,7 @@ ForgetMove:
 	call SafeLoadTempTilemapToTilemap
 	pop af
 	pop hl
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jr nz, .cancel
 	push hl
 	ld a, [wMenuCursorY]
@@ -201,27 +201,56 @@ ForgetMove:
 	ret
 
 LearnedMoveText:
-	text_far _LearnedMoveText
+	text_ram wMonOrItemNameBuffer
+	text "は　あたらしく"
+	line "@"
+	text_ram wStringBuffer2
+	text "を　おぼえた！@"
+	sound_dex_fanfare_50_79
+	text_promptbutton
 	text_end
 
 MoveAskForgetText:
-	text_far _MoveAskForgetText
-	text_end
+	text "どの　わざを"
+	next "わすれさせたい？"
+	done
 
 StopLearningMoveText:
-	text_far _StopLearningMoveText
-	text_end
+	text "それでは<⋯>　@"
+	text_ram wStringBuffer2
+	text "を"
+	line "おぼえるのを　あきらめますか？"
+	done
 
 DidNotLearnMoveText:
-	text_far _DidNotLearnMoveText
-	text_end
+	text_ram wMonOrItemNameBuffer
+	text "は　@"
+	text_ram wStringBuffer2
+	text "を"
+	line "おぼえずに　おわった！"
+	prompt
 
 AskForgetMoveText:
-	text_far _AskForgetMoveText
-	text_end
+	text_ram wMonOrItemNameBuffer
+	text "は　あたらしく"
+	line "@"
+	text_ram wStringBuffer2
+	text "を　おぼえたい<⋯>！"
+
+	para "しかし　@"
+	text_ram wMonOrItemNameBuffer
+	text "は　わざを　４つ"
+	line "おぼえるので　せいいっぱいだ！"
+
+	para "@"
+	text_ram wStringBuffer2
+	text "の　かわりに"
+	line "ほかの　わざを　わすれさせますか？"
+	done
 
 Text_1_2_and_Poof:
-	text_far Text_MoveForgetCount ; 1, 2 and…
+	text "１　２の　<⋯>@"
+	text_pause
 	text_asm
 	push de
 	ld de, SFX_SWITCH_POKEMON
@@ -231,9 +260,21 @@ Text_1_2_and_Poof:
 	ret
 
 .MoveForgotText:
-	text_far _MoveForgotText
-	text_end
+	text "　ポカン！@"
+	text_pause
+	text_start
+
+	para "@"
+	text_ram wMonOrItemNameBuffer
+	text "は　@"
+	text_ram wStringBuffer1
+	text "の"
+	line "つかいかたを　きれいに　わすれた！"
+
+	para "そして<⋯>！"
+	prompt
 
 MoveCantForgetHMText:
-	text_far _MoveCantForgetHMText
-	text_end
+	text "それは　たいせつなわざです"
+	line "わすれさせることは　できません！"
+	prompt

@@ -31,7 +31,8 @@ ROM0
 	"Home"
 	; "Garbage 0"
 ROMX $01
-	; "bank1"
+	"bank1"
+	; "Garbage 1"
 ROMX $02
 	; "bank2"
 ROMX $03
@@ -278,9 +279,9 @@ WRAM0
 ; 	align 4
 ; 	"Video"
 WRAMX 1
-; 	"WRAM 1"
-; 	"Game Data"
-	org $d9e8
+	"WRAM 1"
+	org $d1b3
+	"Game Data"
 	"Party"
 ; 	"Stack"
 VRAM $00
@@ -296,9 +297,10 @@ SRAM $00
 ; 	"SRAM Stack"
 	org $b800
 	"SRAM Window Stack"
-; SRAM $01
+SRAM $01
 ; 	"Save"
-; 	"Active Box"
+	org $ad10
+	"Active Box"
 ; 	"Link Battle Data"
 ; 	"SRAM Hall of Fame"
 ; 	"Backup Save 2"
@@ -308,6 +310,5 @@ SRAM $00
 ; 	"Boxes 8-14"
 ; 	"Backup Save 3"
 HRAM
-	; "OAM DMA"
-	org $ff8a
+	"OAM DMA"
 	"HRAM"

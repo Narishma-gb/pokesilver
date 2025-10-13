@@ -6,7 +6,7 @@ CorrectNickErrors::
 
 	push bc
 	push de
-	ld b, MON_NAME_LENGTH
+	ld b, NAME_LENGTH
 
 .checkchar
 ; end of nick?
@@ -34,8 +34,8 @@ CorrectNickErrors::
 	cp [hl]
 	jr nc, .loop
 
-; replace it with a "?"
-	ld a, "?"
+; replace it with a "？"
+	ld a, "？"
 	ld [de], a
 	jr .loop
 
@@ -46,10 +46,10 @@ CorrectNickErrors::
 	dec b
 	jr nz, .checkchar
 
-; change nick to "?@"
+; change nick to "？@"
 	pop de
 	push de
-	ld a, "?"
+	ld a, "？"
 	ld [de], a
 	inc de
 	ld a, "@"
@@ -61,14 +61,14 @@ CorrectNickErrors::
 	ret
 
 .textcommands
-; table defining which characters are actually text commands
+; table defining which characters are illegal in a nickname
 ; format:
-	;      ≥           <
-	db "<NULL>",   "ガ"
-	db "<JP_14>",  "<JP_18>" + 1
-	db "<NI>",     "<NO>"    + 1
-	db "<ROUTE>",  "<GREEN>" + 1
-	db "<ENEMY>",  "<ENEMY>" + 1
-	db "<MOM>",    "<TM>"    + 1
-	db "<ROCKET>", "┘"       + 1
+	;      ≥       <
+	db "<NULL>",  "ガ"
+	db "ド" + 1,   "バ"
+	db "ボ" + 1,   "が"
+	db "ど" + 1,   "ば"
+	db "ぼ" + 1,   "パ"
+	db "ぽ" + 1,   "<TRAINER>"
+	db "<ROCKET>", "　"
 	db -1 ; end

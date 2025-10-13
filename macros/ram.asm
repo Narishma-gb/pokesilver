@@ -100,19 +100,19 @@ MACRO curbox
 \1Count::   db
 \1Species:: ds MONS_PER_BOX + 1
 \1Mons::
-	; \1Mon1 - \1Mon20
+	; \1Mon1 - \1Mon30
 	for n, 1, MONS_PER_BOX + 1
 	\1Mon{d:n}:: box_struct \1Mon{d:n}
 	endr
 \1MonOTs::
-	; \1Mon1OT - \1Mon20OT
+	; \1Mon1OT - \1Mon30OT
 	for n, 1, MONS_PER_BOX + 1
 	\1Mon{d:n}OT:: ds NAME_LENGTH
 	endr
 \1MonNicknames::
-	; \1Mon1Nickname - \1Mon20Nickname
+	; \1Mon1Nickname - \1Mon30Nickname
 	for n, 1, MONS_PER_BOX + 1
-	\1Mon{d:n}Nickname:: ds MON_NAME_LENGTH
+	\1Mon{d:n}Nickname:: ds NAME_LENGTH
 	endr
 \1MonNicknamesEnd::
 \1End::

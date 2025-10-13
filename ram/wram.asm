@@ -189,7 +189,7 @@ SECTION UNION "Miscellaneous", WRAM0
 wPlayerPatchLists:: ds SERIAL_PATCH_LIST_LENGTH
 wOTPatchLists:: ds SERIAL_PATCH_LIST_LENGTH
 
-
+*/
 SECTION UNION "Miscellaneous", WRAM0
 
 ; This union spans 200 bytes.
@@ -232,7 +232,7 @@ wGlobalAnimYOffset:: db
 wGlobalAnimXOffset:: db
 
 wSpriteAnimDataEnd::
-
+/*
 	ds 7
 
 NEXTU
@@ -386,9 +386,9 @@ wMemoryGameNumCardsMatched:: db
 
 NEXTU
 ; unown puzzle
-wPuzzlePieces:: ds 6 * 6
+wPuzzlePieces:: ds 6 * 6 */
 ENDU
-*/
+
 
 SECTION "Unused Map Buffer", WRAM0
 
@@ -410,7 +410,7 @@ SECTION UNION "Overworld Map", WRAM0
 ; decompress buffer in wram
 wDecompressScratch:: ds 40 tiles
 
-
+*/
 SECTION UNION "Overworld Map", WRAM0
 
 ; GB Printer data
@@ -446,7 +446,7 @@ wPrinterExposureTime:: db
 	ds 16
 wGameboyPrinterRAMEnd::
 
-
+/*
 SECTION UNION "Overworld Map", WRAM0
 
 ; bill's pc data
@@ -641,7 +641,7 @@ NEXTU
 wLYOverridesBackup:: ds SCREEN_HEIGHT_PX
 wLYOverridesBackupEnd::
 ENDU
-/*
+
 	ds 112
 
 UNION
@@ -739,8 +739,8 @@ wBattle::
 wEnemyMoveStruct:: move_struct wEnemyMoveStruct
 wPlayerMoveStruct:: move_struct wPlayerMoveStruct
 
-wEnemyMonNickname::  ds MON_NAME_LENGTH
-wBattleMonNickname:: ds MON_NAME_LENGTH
+wEnemyMonNickname::  ds NAME_LENGTH
+wBattleMonNickname:: ds NAME_LENGTH
 
 UNION
 ; battle mon
@@ -1019,36 +1019,6 @@ wBattleEnd::
 ENDU
 
 
-IF DEF(_DEBUG)
-SECTION UNION "Overworld Map", WRAM0
-
-; debug room paged values
-UNION
-; debug room new item values
-wDebugRoomItemID::       db
-wDebugRoomItemQuantity:: db
-NEXTU
-; debug room new pokemon values
-wDebugRoomMon::    box_struct wDebugRoomMon
-wDebugRoomMonBox:: db
-NEXTU
-; debug room RTC values
-wDebugRoomRTCSec::  db
-wDebugRoomRTCMin::  db
-wDebugRoomRTCHour:: db
-wDebugRoomRTCDay::  dw
-wDebugRoomRTCCurSec::  db
-wDebugRoomRTCCurMin::  db
-wDebugRoomRTCCurHour:: db
-wDebugRoomRTCCurDay::  dw
-NEXTU
-; debug room GB ID values
-wDebugRoomGBID:: dw
-ENDU
-
-ENDC
-
-
 SECTION "Video", WRAM0
 
 ; bg map
@@ -1277,6 +1247,8 @@ wTileRight:: db
 
 wTilePermissions:: db
 
+	ds 64
+
 wMenuMetadata::
 wWindowStackPointer:: dw
 wMenuJoypad:: db
@@ -1368,7 +1340,7 @@ wBetaTitleSequenceOpeningType::
 	db
 
 wDefaultSpawnpoint:: db
-
+/*
 UNION
 ; mon buffer
 wBufferMonNickname:: ds MON_NAME_LENGTH
@@ -1816,9 +1788,6 @@ ENDU
 wListPointer:: dw
 wUnusedNamesPointer:: dw
 
-
-SECTION "WRAM 1", WRAMX
-
 wItemAttributesPointer:: dw
 
 wCurItem:: db
@@ -1831,6 +1800,9 @@ wCurPartySpecies:: db
 wCurPartyMon::
 ; index of mon's party location (0-5)
 	db
+
+*/
+SECTION "WRAM 1", WRAMX
 
 	ds 1
 
@@ -1878,7 +1850,7 @@ wPrevWarp:: db
 wPrevMapGroup:: db
 wPrevMapNumber:: db
 
-	ds 17
+	ds 9
 
 wUnusedAddOutdoorSpritesReturnValue:: db
 
@@ -2247,7 +2219,7 @@ wBattleScriptFlags:: db
 	ds 1
 wPlayerSpriteSetupFlags::
 	db
-
+/*
 wMapReentryScriptQueueFlag:: db
 wMapReentryScriptBank:: db
 wMapReentryScriptAddress:: dw
@@ -2303,7 +2275,7 @@ wOptions2::
 	ds 2
 
 wOptionsEnd::
-
+*/
 
 SECTION "Game Data", WRAMX
 
@@ -2328,17 +2300,6 @@ wStartMinute:: db
 wStartSecond:: db
 
 wRTC:: ds 4
-
-wDSTBackupDay::     db
-wDSTBackupHours::   db
-wDSTBackupMinutes:: db
-wDSTBackupSeconds:: db
-
-wDST::
-; bit 7: dst
-	db
-
-	ds 1
 
 wGameTimeCap::     db
 wGameTimeHours::   dw
@@ -2663,7 +2624,7 @@ wScreenSave:: ds SCREEN_META_WIDTH * SCREEN_META_HEIGHT
 
 wCurMapDataEnd::
 
-*/
+
 SECTION "Party", WRAMX
 
 wPokemonData::
@@ -2697,7 +2658,7 @@ wEndPokedexCaught::
 
 wPokedexSeen:: flag_array NUM_POKEMON
 wEndPokedexSeen::
-/*
+
 wUnownDex:: ds NUM_UNOWN
 wUnlockedUnowns:: db
 wFirstUnownSeen:: db
@@ -2709,7 +2670,7 @@ wDayCareMan::
 ; bit 0: monster 1 in day-care
 	db
 
-wBreedMon1Nickname:: ds MON_NAME_LENGTH
+wBreedMon1Nickname:: ds NAME_LENGTH
 wBreedMon1OT:: ds NAME_LENGTH
 wBreedMon1:: box_struct wBreedMon1
 
@@ -2725,11 +2686,11 @@ wBreedMotherOrNonDitto::
 ; nz: no
 	db
 
-wBreedMon2Nickname:: ds MON_NAME_LENGTH
+wBreedMon2Nickname:: ds NAME_LENGTH
 wBreedMon2OT:: ds NAME_LENGTH
 wBreedMon2:: box_struct wBreedMon2
 
-wEggMonNickname:: ds MON_NAME_LENGTH
+wEggMonNickname:: ds NAME_LENGTH
 wEggMonOT:: ds NAME_LENGTH
 wEggMon:: box_struct wEggMon
 
@@ -2749,8 +2710,7 @@ wRoamMons_CurMapGroup:: db
 wRoamMons_LastMapNumber:: db
 wRoamMons_LastMapGroup:: db
 
-wBestMagikarpLengthFeet:: db
-wBestMagikarpLengthInches:: db
+wBestMagikarpLength:: dw ; length in mm
 wMagikarpRecordHoldersName:: ds NAME_LENGTH
 
 UNION
@@ -2760,7 +2720,7 @@ wPokedexShowPointerBank:: db
 
 NEXTU
 wUnusedEggHatchFlag:: db
-
+/*
 NEXTU
 ; enemy party
 wOTPartyData::
@@ -2769,9 +2729,9 @@ wOTPlayerID:: dw
 	ds 8
 wOTPartyCount::   db
 wOTPartySpecies:: ds PARTY_LENGTH
-wOTPartyEnd::     db ; older code doesn't check PartyCount
+wOTPartyEnd::     db ; older code doesn't check PartyCount*/
 ENDU
-
+/*
 UNION
 ; ot party mons
 wOTPartyMons::
@@ -2789,7 +2749,7 @@ endr
 wOTPartyMonNicknames::
 ; wOTPartyMon1Nickname - wOTPartyMon6Nickname
 for n, 1, PARTY_LENGTH + 1
-wOTPartyMon{d:n}Nickname:: ds MON_NAME_LENGTH
+wOTPartyMon{d:n}Nickname:: ds NAME_LENGTH
 endr
 wOTPartyDataEnd::
 
@@ -2816,5 +2776,5 @@ wStackBottom::
 	ds $fc
 wStackTop::
 	ds 1
-
-ENDSECTION */
+*/
+ENDSECTION

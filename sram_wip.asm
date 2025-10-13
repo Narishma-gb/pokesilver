@@ -1,5 +1,17 @@
-SECTION "sram0", SRAM, BANK[0]
+SECTION "sram0", SRAM[$a600], BANK[0]
 
-	ds $a00
+	ds $550
+sMysteryGiftItem:: db
+sMysteryGiftUnlocked::
+	ds 2
 
-sRTCStatusFlags:: db
+sNumDailyMysteryGiftPartnerIDs::
+	ds $4ad
+
+sRTCStatusFlags::
+	ds $100
+
+sLuckyNumberDay:: db
+sLuckyIDNumber::
+
+ENDSECTION

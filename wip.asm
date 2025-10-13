@@ -25,7 +25,13 @@ MACRO dr
 ENDM
 
 ; G/S label offset, in places where the ROMs diverge
-DEF gs_diff = 0
+MACRO set_gs_diff
+	IF DEF(_GOLD)
+		DEF gs_diff = \1
+	ELIF DEF(_SILVER)
+		DEF gs_diff = 0
+	ENDC
+ENDM
 
 MACRO drd
 	dr \1, (\2) + gs_diff
@@ -75,34 +81,13 @@ MACRO set_bank_offset
 ENDM
 
 
+EXPORT DEF MoveDescriptions EQU $5CF7
+EXPORT DEF EggPic EQU $7F21
+
 ;INCLUDE "constants_wip.asm"
-;INCLUDE "main.asm"
+INCLUDE "main.asm"
+	set_gs_diff 0
 
-SECTION "rom1", ROMX, BANK[1]
-; ROM $01 : $4000 - $7FFF
-	set_bank_offset 1
-
-	dr PlaceWaitingText, $4000
-	dr WriteOAMDMACodeToHRAM, $4032
-	dr SpriteMovementData, $4274
-	dr DeleteMapObject, $4358
-	dr UpdateAllObjectsFrozen, $557f
-	dr RefreshPlayerSprite, $5730
-	dr StopFollow, $5795
-	dr _UpdateSprites, $5896
-	dr ApplyBGMapAnchorToObjects, $58c5
-IF DEF(_GOLD)
-	DEF gs_diff = $3b
-ENDC
-	drd GameInit, $670c
-	drd ReanchorBGMap_NoOAMUpdate, $6718
-	drd LoadFonts_NoOAMUpdate, $6792
-	drd CorrectNickErrors, $6a36
-	drd _Multiply, $6a75
-	drd _Divide, $6ad5
-	drd ItemNames, $7258
-
-	dr_end
 
 SECTION "rom2", ROMX, BANK[2]
 ; ROM $02 : $8000 - $BFFF
@@ -110,15 +95,24 @@ SECTION "rom2", ROMX, BANK[2]
 
 	dr _LoadOverworldAttrmapPals, $4000
 	dr _ScrollBGMapPalettes, $404f
+	dr SpawnPlayer, $461a
+	dr CopyDECoordsToMapObject, $4653
 	dr CopyObjectStruct, $46d7
+	dr CopyTempObjectToObjectStruct, $4876
+	dr QueueFollowerFirstStep, $4a7a
 	dr _Sine, $4ac9
 	dr GetPredefPointer, $4b3b
 	dr PredefPointers, $4b5b
 	drp SmallFarFlagAction, 3
+	drp TryAddMonToParty, 6
+	drp LinkTextboxAtHL, $10
 	drp PlaceGraphic, $13
+	drp ListMoves, $20
 	drp InitSGBBorder, $30
 	drp LoadSGBLayout, $31
 	drp GetMonFrontpic, $3c
+	drp DecompressGet2bpp, $3f
+	dr ApplyMonOrTrainerPals, $51d6
 	dr InitCGBPals, $5c93
 
 	dr_end
@@ -133,6 +127,8 @@ SECTION "rom3", ROMX, BANK[3]
 	dr _CheckItem, $551b
 	dr GetTMHMNumber, $56de
 	dr _CheckTossableItem, $56fe
+	dr RemoveMonFromPartyOrBox, $62e2
+	dr CheckCurPartyMonFainted, $6808
 	dr _DoItemEffect, $6aa9
 
 	dr_end
@@ -140,6 +136,10 @@ SECTION "rom3", ROMX, BANK[3]
 SECTION "rom4", ROMX, BANK[4]
 ; ROM $04 : $10000 - $13FFF
 	set_bank_offset 4
+
+	dr _InitializeStartDay, $578b
+	dr DoMysteryGiftIfDayHasPassed, $58ce
+	dr NamingScreen, $5a47
 
 	dr_end
 
@@ -149,6 +149,7 @@ SECTION "rom5", ROMX, BANK[5]
 
 	dr GetTimeOfDay, $4032
 	dr StartClock, $4089
+	dr ClockContinue, $40ae
 	dr _InitTime, $40d1
 	dr _UpdatePlayerSprite, $410e
 	dr LoadStandingSpritesGFX, $411d
@@ -158,10 +159,15 @@ SECTION "rom5", ROMX, BANK[5]
 	dr _GetSpritePalette, $4306
 	dr CheckWarpCollision, $49ea
 	dr CheckDirectionalWarp, $49ff
+	dr CheckWarpFacingDown, $4a16
+	dr EmptyAllSRAMBanks, $4a6a
+	dr TryLoadSaveFile, $4e21
+	dr TryLoadSaveData, $4e8c
 	dr _LoadOverworldTilemap, $52fa
 	dr RunMapSetupScript, $53f1
 	dr CheckUpdatePlayerSprite, $557f
 	dr Tilesets, $562b
+	dr CheckBreedmonCompatibility, $78e9
 
 	dr_end
 
@@ -183,6 +189,8 @@ SECTION "rom8", ROMX, BANK[8]
 ; ROM $08 : $20000 - $23FFF
 	set_bank_offset 8
 
+	dr RestartClock, $4021
+
 	dr_end
 
 SECTION "rom9", ROMX, BANK[9]
@@ -198,12 +206,17 @@ SECTION "rom9", ROMX, BANK[9]
 	dr _InitVerticalMenuCursor, $43a6
 	dr _InitScrollingMenu, $44e8
 	dr _ScrollingMenu, $4504
+	dr InitDecorations, $6c42
 
 	dr_end
 
 SECTION "rom10", ROMX, BANK[10]
 ; ROM $0a : $28000 - $2BFFF
 	set_bank_offset 10
+
+	dr DoMysteryGift, $5e66
+	dr CopyMysteryGiftReceivedDecorationsToPC, $6575
+	dr JumpRoamMons, $6993
 
 	dr_end
 
@@ -251,12 +264,15 @@ SECTION "rom16", ROMX, BANK[16]
 	set_bank_offset 16
 
 	dr MoveNames, $563e
+	dr Moves, $5c6c
 
 	dr_end
 
 SECTION "rom17", ROMX, BANK[17]
 ; ROM $11 : $44000 - $47FFF
 	set_bank_offset 17
+	set_gs_diff $3e
+	drd DeletePartyMonMail, $7cc8
 
 	dr_end
 
@@ -276,6 +292,8 @@ SECTION "rom20", ROMX, BANK[20]
 ; ROM $14 : $50000 - $53FFF
 	set_bank_offset 20
 
+	dr SelectMonFromParty, $4000
+	dr GetTrainerPic, $588a
 	dr BaseData, $5aa9
 	dr PokemonNames, $7a09
 
@@ -377,6 +395,8 @@ SECTION "rom35", ROMX, BANK[35]
 	dr FadeInFromWhite, $41c5
 	dr FadeOutToWhite, $41d0
 	dr ReplaceTimeOfDayPals, $420e
+	dr ClearSpriteAnims, $4f99
+	dr PlaySpriteAnimations, $4faf
 	dr _InitSpriteAnimStruct, $501c
 	dr _ReinitSpriteAnimFrame, $5152
 
@@ -386,6 +406,9 @@ SECTION "rom36", ROMX, BANK[36]
 ; ROM $24 : $90000 - $93FFF
 	set_bank_offset 36
 
+	dr InitClock, $4677
+	dr PrintHour, $4a86
+
 	dr_end
 
 SECTION "rom37", ROMX, BANK[37]
@@ -394,6 +417,7 @@ SECTION "rom37", ROMX, BANK[37]
 
 	dr MapScenes, $4000
 	dr MapGroupPointers, $40ed
+	dr OverworldLoop, $65f9
 	dr EnableScriptMode, $6b89
 	dr ScriptEvents, $6b91
 	dr CallCallback, $7389
@@ -465,6 +489,8 @@ SECTION "rom48", ROMX, BANK[48]
 ; ROM $30 : $C0000 - $C3FFF
 	set_bank_offset 48
 
+	dr ChrisSpriteGFX, $4000
+
 	dr_end
 
 SECTION "rom49", ROMX, BANK[49]
@@ -522,6 +548,19 @@ SECTION "rom57", ROMX, BANK[57]
 ; ROM $39 : $E4000 - $E7FFF
 	set_bank_offset 57
 
+	dr CopyrightGFX, $4000
+	dr TitleScreenGFX3, $41a0
+	set_gs_diff $40
+	drd TitleScreenGFX2, $41e0
+	set_gs_diff $1b8
+	drd TitleScreenGFX1, $4410
+	set_gs_diff $180
+	drd TitleScreenTilemap, $497c
+	set_gs_diff $17a
+	drd _Option, $4a35
+	drd SplashScreen, $5196
+	drd GoldSilverIntro, $549f
+
 	dr_end
 
 SECTION "rom58", ROMX, BANK[58]
@@ -565,6 +604,8 @@ SECTION "rom62", ROMX, BANK[62]
 	dr _LoadFontsExtra, $400c
 	dr _LoadFontsBattleExtra, $4032
 	dr CollisionPermissionTable, $734a
+	dr Shrink1Pic, $744a
+	dr Shrink2Pic, $74da
 
 	dr_end
 
