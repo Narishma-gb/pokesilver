@@ -13,9 +13,7 @@ rom_obj := \
 	ram.o \
 	wip.o
 # 	audio.o \
-# 	home.o \
 # 	main.o \
-# 	ram.o \
 # 	data/text/common.o \
 # 	data/maps/map_data.o \
 # 	data/pokemon/egg_moves.o \
@@ -335,8 +333,7 @@ gfx/battle/dude.2bpp: rgbgfx += --columns
 
 gfx/font/unused_bold_font.1bpp: tools/gfx += --trim-whitespace
 
-gfx/sgb/gold_border.2bpp: tools/gfx += --trim-whitespace
-gfx/sgb/silver_border.2bpp: tools/gfx += --trim-whitespace
+gfx/sgb/gs_border.2bpp: tools/gfx += --trim-whitespace
 gfx/sgb/gold_border.sgb.tilemap: gfx/sgb/gold_border.bin ; tr < $< -d '\000' > $@
 gfx/sgb/silver_border.sgb.tilemap: gfx/sgb/silver_border.bin ; tr < $< -d '\000' > $@
 

@@ -1,3 +1,7 @@
+EXPORT DEF wBetaPokerSGBPals EQU $C602
+EXPORT DEF wBetaPokerSGBAttr EQU $C605
+EXPORT DEF wBetaPokerSGBCol EQU $C606
+EXPORT DEF wBetaPokerSGBRow EQU $C607
 EXPORT DEF wMovementBufferCount EQU $CF21
 EXPORT DEF wMovementBufferObject EQU $CF22
 EXPORT DEF wUnusedMovementBufferBank EQU $CF23

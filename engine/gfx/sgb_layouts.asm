@@ -55,7 +55,6 @@ SGBLayoutJumptable:
 	dw .SGB_TrainerOrMonFrontpicPals
 	dw .SGB_MysteryGift
 	dw .SGB_Unused1E
-	dw .SGB_Pokedex_5x5
 	assert_table_length NUM_SCGB_LAYOUTS
 
 .SGB_BattleGrayscale:
@@ -225,11 +224,6 @@ SGBLayoutJumptable:
 	ld [wSGBPals + 12], a
 	ld hl, wSGBPals
 	ld de, BlkPacket_Pokedex_PC
-	ret
-
-.SGB_Pokedex_5x5:
-	call .SGB_Pokedex
-	ld de, BlkPacket_Pokedex_5x5
 	ret
 
 .SGB_BillsPC:

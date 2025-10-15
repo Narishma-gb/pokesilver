@@ -62,7 +62,6 @@ CGBLayoutJumptable:
 	dw _CGB_TrainerOrMonFrontpicPals
 	dw _CGB_MysteryGift
 	dw _CGB_Unused1E
-	dw _CGB_Pokedex_5x5
 	assert_table_length NUM_SCGB_LAYOUTS
 
 _CGB_BattleGrayscale:
@@ -187,26 +186,26 @@ _CGB_StatsScreenHPPals:
 	call WipeAttrmap
 
 	hlcoord 0, 0, wAttrmap
-	lb bc, 8, SCREEN_WIDTH
+	lb bc, SCREEN_HEIGHT, 7
 	ld a, $1 ; mon palette
 	call FillBoxCGB
 
-	hlcoord 10, 16, wAttrmap
+	hlcoord 9, 16, wAttrmap
 	ld bc, 10
 	ld a, $2 ; exp palette
 	call ByteFill
 
-	hlcoord 13, 5, wAttrmap
+	hlcoord 1, 14, wAttrmap
 	lb bc, 2, 2
 	ld a, $3 ; pink page palette
 	call FillBoxCGB
 
-	hlcoord 15, 5, wAttrmap
+	hlcoord 3, 14, wAttrmap
 	lb bc, 2, 2
 	ld a, $4 ; green page palette
 	call FillBoxCGB
 
-	hlcoord 17, 5, wAttrmap
+	hlcoord 5, 14, wAttrmap
 	lb bc, 2, 2
 	ld a, $5 ; blue page palette
 	call FillBoxCGB
@@ -224,22 +223,6 @@ StatsScreenPals:
 INCLUDE "gfx/stats/stats.pal"
 
 _CGB_Pokedex:
-	call _CGB_Pokedex_Init
-	hlcoord 1, 1, wAttrmap
-	lb bc, 7, 7
-	ld a, $1
-	call FillBoxCGB
-	jp _CGB_Pokedex_Resume
-
-_CGB_Pokedex_5x5:
-	call _CGB_Pokedex_Init
-	hlcoord 1, 1, wAttrmap
-	lb bc, 5, 5
-	ld a, $1
-	call FillBoxCGB
-	jp _CGB_Pokedex_Resume
-
-_CGB_Pokedex_Init:
 	ld de, wBGPals1
 	ld a, PREDEFPAL_POKEDEX
 	call GetPredefPal
@@ -256,22 +239,16 @@ _CGB_Pokedex_Init:
 	call LoadPalette_White_Col1_Col2_Black ; mon palette
 .got_palette
 	call WipeAttrmap
-	ret
-
-_CGB_Pokedex_Resume:
+	hlcoord 1, 1, wAttrmap
+	lb bc, 7, 7
+	ld a, $1
+	call FillBoxCGB
 	call InitPartyMenuOBPals
-	ld hl, PokedexCursorPalette
-	ld de, wOBPals1 palette 7 ; green cursor palette
-	ld bc, 1 palettes
-	call CopyBytes
 	call ApplyAttrmap
 	call ApplyPals
 	ld a, TRUE
 	ldh [hCGBPalUpdate], a
 	ret
-
-PokedexCursorPalette:
-INCLUDE "gfx/pokedex/cursor.pal"
 
 PokedexQuestionMarkPalette:
 INCLUDE "gfx/pokedex/question_mark.pal"
@@ -289,28 +266,6 @@ _CGB_BillsPC:
 	jr .GotPalette
 
 .GetMonPalette:
-	ld bc, wTempMonDVs
-	call GetPlayerOrMonPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
-.GotPalette:
-	call WipeAttrmap
-	hlcoord 1, 4, wAttrmap
-	lb bc, 7, 7
-	ld a, $1 ; mon palette
-	call FillBoxCGB
-	call InitPartyMenuOBPals
-	call ApplyAttrmap
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
-
-_CGB_Unknown: ; unreferenced
-	ld hl, BillsPCOrangePalette
-	call LoadHLPaletteIntoDE
-	jr .GotPalette
-
-.GetMonPalette: ; unreferenced
 	ld bc, wTempMonDVs
 	call GetPlayerOrMonPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
@@ -713,23 +668,23 @@ _CGB_PackPals:
 	call CopyBytes
 	call WipeAttrmap
 	hlcoord 0, 0, wAttrmap
-	lb bc, 1, 10
+	lb bc, 2, 10
 	ld a, $1
 	call FillBoxCGB
 	hlcoord 10, 0, wAttrmap
-	lb bc, 1, 10
+	lb bc, 2, 10
 	ld a, $2
 	call FillBoxCGB
-	hlcoord 7, 2, wAttrmap
+	hlcoord 8, 3, wAttrmap
 	lb bc, 9, 1
 	ld a, $3
 	call FillBoxCGB
 	hlcoord 0, 7, wAttrmap
-	lb bc, 3, 5
+	lb bc, 2, 6
 	ld a, $4
 	call FillBoxCGB
-	hlcoord 0, 3, wAttrmap
-	lb bc, 3, 5
+	hlcoord 1, 3, wAttrmap
+	lb bc, 3, 4
 	ld a, $5
 	call FillBoxCGB
 	call ApplyAttrmap

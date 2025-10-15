@@ -17,14 +17,14 @@ INCLUDE "engine/events/shuckle.asm"
 INCLUDE "engine/events/haircut.asm"
 
 
-;SECTION "bank2", ROMX
+SECTION "bank2", ROMX
 
-;INCLUDE "engine/tilesets/map_palettes.asm"
-;INCLUDE "gfx/tileset_palette_maps.asm"
-;INCLUDE "engine/overworld/player_object.asm"
-;INCLUDE "engine/math/sine.asm"
-;INCLUDE "engine/predef.asm"
-;INCLUDE "engine/gfx/color.asm"
+INCLUDE "engine/tilesets/map_palettes.asm"
+INCLUDE "gfx/tileset_palette_maps.asm"
+INCLUDE "engine/overworld/player_object.asm"
+INCLUDE "engine/math/sine.asm"
+INCLUDE "engine/predef.asm"
+INCLUDE "engine/gfx/color.asm"
 
 
 ;SECTION "bank3", ROMX

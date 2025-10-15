@@ -33,27 +33,18 @@ BlkPacket_Battle:
 
 BlkPacket_StatsScreen:
 	attr_blk 1
-	attr_blk_data %111, 1,1,0, 00,00, 06,06 ; mon: pal 1
+	attr_blk_data %111, 1,1,0, 00,01, 07,07 ; mon: pal 1
 	ds 8, 0
 
 BlkPacket_MoveList:
 	attr_blk 1
-	attr_blk_data %110, 1,1,0, 11,01, 19,02
+	attr_blk_data %111, 1,1,0, 11,01, 19,02
 	ds 8, 0
 
 BlkPacket_Pokedex_PC:
-	attr_blk 1
-	attr_blk_data %111, 1,1,0, 00,01, 07,07 ; mon: pal 1
-	ds 8, 0
-
 BlkPacket_Bills_PC:
 	attr_blk 1
-	attr_blk_data %111, 1,1,0, 01,04, 07,10
-	ds 8, 0
-
-BlkPacket_Pokedex_5x5:
-	attr_blk 1
-	attr_blk_data %111, 1,1,0, 01,01, 05,05
+	attr_blk_data %111, 1,1,0, 01,01, 08,08 ; mon: pal 1
 	ds 8, 0
 
 BlkPacket_PokedexUnownMode:
@@ -72,19 +63,20 @@ BlkPacket_SlotMachine:
 BlkPacket_PartyMenu:
 	attr_blk 7
 	attr_blk_data %111, 0,0,1, 00,00, 02,12
-	attr_blk_data %010, 0,0,0, 12,01, 18,02
-	attr_blk_data %010, 0,0,0, 12,03, 18,04
-	attr_blk_data %010, 0,0,0, 12,05, 18,06
-	attr_blk_data %010, 0,0,0, 12,07, 18,08
-	attr_blk_data %010, 0,0,0, 12,09, 18,10
-	attr_blk_data %010, 0,0,0, 12,11, 18,12
+	attr_blk_data %010, 0,0,0, 12,00, 18,01
+	attr_blk_data %010, 0,0,0, 12,02, 18,03
+	attr_blk_data %010, 0,0,0, 12,04, 18,05
+	attr_blk_data %010, 0,0,0, 12,06, 18,07
+	attr_blk_data %010, 0,0,0, 12,08, 18,09
+	attr_blk_data %010, 0,0,0, 12,10, 18,11
 	ds 4, 0
 
 BlkPacket_GSTitleScreen:
-	attr_blk 2
-	attr_blk_data %111, 0,0,3, 00,00, 19,06
-	attr_blk_data %010, 0,1,0, 05,06, 14,06
-	ds 2, 0
+	attr_blk 3
+	attr_blk_data %111, 0,0,2, 00,00, 19,04
+	attr_blk_data %011, 3,3,0, 00,06, 19,17
+	attr_blk_data %011, 1,1,0, 15,01, 18,04
+	ds 12, 0
 
 BlkPacket_BetaTitleScreen:
 	attr_blk 1

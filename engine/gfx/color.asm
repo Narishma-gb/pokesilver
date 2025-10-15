@@ -323,7 +323,7 @@ ApplyHPBarPals:
 .PartyMenu:
 	ld e, c
 	inc e
-	hlcoord 11, 1, wAttrmap
+	hlcoord 11, 0, wAttrmap
 	ld bc, 2 * SCREEN_WIDTH
 	ld a, [wCurPartyMon]
 .loop
@@ -575,7 +575,7 @@ CGB_ApplyPartyMenuHPPals:
 	ld a, [de]
 	inc a
 	ld e, a
-	hlcoord 11, 2, wAttrmap
+	hlcoord 11, 0, wAttrmap
 	ld bc, 2 * SCREEN_WIDTH
 	ld a, [wSGBPals]
 .loop
@@ -1107,11 +1107,7 @@ INCLUDE "gfx/sgb/silver_border.pal"
 ENDC
 
 SGBBorderGFX:
-IF DEF(_GOLD)
-INCBIN "gfx/sgb/gold_border.2bpp"
-ELIF DEF(_SILVER)
-INCBIN "gfx/sgb/silver_border.2bpp"
-ENDC
+INCBIN "gfx/sgb/gs_border.2bpp"
 
 HPBarPals:
 INCLUDE "gfx/battle/hp_bar.pal"
