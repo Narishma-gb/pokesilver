@@ -124,7 +124,4 @@ SpecialsPointers::
 	add_special FadeOutMusic
 	add_special Diploma
 	add_special PrintDiploma
-	add_special InitialSetDSTFlag
-	add_special InitialClearDSTFlag
-	add_special MrChrono
 	add_special UnusedDummySpecial ; unused

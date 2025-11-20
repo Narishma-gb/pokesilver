@@ -1,4 +1,6 @@
-;SECTION "Pokedex Entries 001-064", ROMX
+SECTION "Pokedex Entries", ROMX
+
+;INCLUDE "data/pokemon/dex_entry_pointers.asm"
 
 ;BulbasaurPokedexEntry::  INCLUDE "data/pokemon/dex_entries/gold/bulbasaur.asm"
 ;IvysaurPokedexEntry::    INCLUDE "data/pokemon/dex_entries/gold/ivysaur.asm"
@@ -64,10 +66,6 @@
 ;PoliwrathPokedexEntry::  INCLUDE "data/pokemon/dex_entries/gold/poliwrath.asm"
 ;AbraPokedexEntry::       INCLUDE "data/pokemon/dex_entries/gold/abra.asm"
 ;KadabraPokedexEntry::    INCLUDE "data/pokemon/dex_entries/gold/kadabra.asm"
-
-
-;SECTION "Pokedex Entries 065-128", ROMX
-
 ;AlakazamPokedexEntry::   INCLUDE "data/pokemon/dex_entries/gold/alakazam.asm"
 ;MachopPokedexEntry::     INCLUDE "data/pokemon/dex_entries/gold/machop.asm"
 ;MachokePokedexEntry::    INCLUDE "data/pokemon/dex_entries/gold/machoke.asm"
@@ -103,6 +101,9 @@
 ;HypnoPokedexEntry::      INCLUDE "data/pokemon/dex_entries/gold/hypno.asm"
 ;KrabbyPokedexEntry::     INCLUDE "data/pokemon/dex_entries/gold/krabby.asm"
 ;KinglerPokedexEntry::    INCLUDE "data/pokemon/dex_entries/gold/kingler.asm"
+
+;INCLUDE "data/pokemon/dex_entry_pointers_2.asm"
+
 ;VoltorbPokedexEntry::    INCLUDE "data/pokemon/dex_entries/gold/voltorb.asm"
 ;ElectrodePokedexEntry::  INCLUDE "data/pokemon/dex_entries/gold/electrode.asm"
 ;ExeggcutePokedexEntry::  INCLUDE "data/pokemon/dex_entries/gold/exeggcute.asm"
@@ -132,10 +133,6 @@
 ;MagmarPokedexEntry::     INCLUDE "data/pokemon/dex_entries/gold/magmar.asm"
 ;PinsirPokedexEntry::     INCLUDE "data/pokemon/dex_entries/gold/pinsir.asm"
 ;TaurosPokedexEntry::     INCLUDE "data/pokemon/dex_entries/gold/tauros.asm"
-
-
-;SECTION "Pokedex Entries 129-192", ROMX
-
 ;MagikarpPokedexEntry::   INCLUDE "data/pokemon/dex_entries/gold/magikarp.asm"
 ;GyaradosPokedexEntry::   INCLUDE "data/pokemon/dex_entries/gold/gyarados.asm"
 ;LaprasPokedexEntry::     INCLUDE "data/pokemon/dex_entries/gold/lapras.asm"
@@ -200,10 +197,6 @@
 ;AipomPokedexEntry::      INCLUDE "data/pokemon/dex_entries/gold/aipom.asm"
 ;SunkernPokedexEntry::    INCLUDE "data/pokemon/dex_entries/gold/sunkern.asm"
 ;SunfloraPokedexEntry::   INCLUDE "data/pokemon/dex_entries/gold/sunflora.asm"
-
-
-;SECTION "Pokedex Entries 193-251", ROMX
-
 ;YanmaPokedexEntry::      INCLUDE "data/pokemon/dex_entries/gold/yanma.asm"
 ;WooperPokedexEntry::     INCLUDE "data/pokemon/dex_entries/gold/wooper.asm"
 ;QuagsirePokedexEntry::   INCLUDE "data/pokemon/dex_entries/gold/quagsire.asm"

@@ -551,7 +551,7 @@ UnloadBlinkingCursor::
 	ldcoord_a 18, 17
 	ret
 
-PokeFluteTerminator:: ; unreferenced
+PokeFluteTerminator::
 	ld hl, .stop
 	ret
 

@@ -53,6 +53,8 @@ hObjectStructIndex:: db
 NEXTU
 hConnectionStripLength:: db
 hConnectedMapWidth:: db
+NEXTU
+hDexWeight:: dw
 ENDU
 
 hEnemyMonSpeed:: dw

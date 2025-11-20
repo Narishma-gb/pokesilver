@@ -58,8 +58,9 @@ CheckBadge:
 	ret
 
 .BadgeRequiredText:
-	text_far _BadgeRequiredText
-	text_end
+	text "あたらしい　バッジを　てにするまで"
+	line "まだ　つかえません！"
+	prompt
 
 CheckPartyMove:
 ; Check if a monster in your party has move d.
@@ -111,8 +112,8 @@ FieldMoveFailed:
 	ret
 
 .CantUseItemText:
-	text_far _CantUseItemText
-	text_end
+	text "ここでは　つかえません"
+	prompt
 
 CutFunction:
 	call FieldMoveJumptableReset
@@ -159,12 +160,15 @@ CutFunction:
 	ret
 
 UseCutText:
-	text_far _UseCutText
-	text_end
+	text_ram wStringBuffer2
+	text "　は　"
+	line "いあいぎりを　つかった！"
+	prompt
 
 CutNothingText:
-	text_far _CutNothingText
-	text_end
+	text "めのまえに　きれるものが"
+	line "ありません！"
+	prompt
 
 CheckMapForSomethingToCut:
 	; Does the collision data of the facing tile permit cutting?
@@ -307,7 +311,9 @@ Script_UseFlash:
 	end
 
 UseFlashTextScript:
-	text_far _BlindingFlashText
+	text "まばゆい　ひかりが"
+	line "あたりを　あかるく　てらす<⋯>@"
+	text_promptbutton
 	text_asm
 	call WaitSFX
 	ld de, SFX_FLASH
@@ -407,16 +413,20 @@ UsedSurfScript:
 	end
 
 UsedSurfText:
-	text_far _UsedSurfText
-	text_end
+	text_ram wStringBuffer2
+	text "は　"
+	line "なみのりを　つかった！"
+	done
 
 CantSurfText:
-	text_far _CantSurfText
-	text_end
+	text "ここでは　のることが"
+	next "できません"
+	prompt
 
 AlreadySurfingText:
-	text_far _AlreadySurfingText
-	text_end
+	text "すでに　なみのりを"
+	line "つかっています"
+	prompt
 
 GetSurfType:
 ; Surfing on Pikachu uses an alternate sprite.
@@ -523,8 +533,9 @@ AskSurfScript:
 	end
 
 AskSurfText:
-	text_far _AskSurfText
-	text_end
+	text "みなもは　しずかに　ゆれている"
+	line "<⋯>なみのりを　つかいますか？"
+	done
 
 FlyFunction:
 	call FieldMoveJumptableReset
@@ -677,8 +688,10 @@ Script_UsedWaterfall:
 	ret
 
 .UseWaterfallText:
-	text_far _UseWaterfallText
-	text_end
+	text_ram wStringBuffer2
+	text "は　"
+	line "たきのぼりを　つかった！"
+	done
 
 TryWaterfallOW::
 	ld d, WATERFALL
@@ -706,8 +719,9 @@ Script_CantDoWaterfall:
 	jumptext .HugeWaterfallText
 
 .HugeWaterfallText:
-	text_far _HugeWaterfallText
-	text_end
+	text "おおきな　おとを　たてて"
+	line "みずが　ながれおちている！"
+	done
 
 Script_AskWaterfall:
 	opentext
@@ -718,8 +732,9 @@ Script_AskWaterfall:
 	end
 
 .AskWaterfallText:
-	text_far _AskWaterfallText
-	text_end
+	text "おおきな　たきだ！"
+	line "<⋯>たきのぼりを　つかいますか？"
+	done
 
 EscapeRopeFunction:
 	call FieldMoveJumptableReset
@@ -803,16 +818,19 @@ EscapeRopeOrDig:
 	ret
 
 .UseDigText:
-	text_far _UseDigText
-	text_end
+	text_ram wStringBuffer2
+	text "は　"
+	line "あなをほるを　つかった！"
+	done
 
 .UseEscapeRopeText:
-	text_far _UseEscapeRopeText
-	text_end
+	text "<PLAYER>は　あなぬけのヒモを"
+	line "つかった！"
+	done
 
 .CantUseDigText:
-	text_far _CantUseDigText
-	text_end
+	text "ここでは　つかえません！"
+	done
 
 .UsedEscapeRopeScript:
 	refreshmap
@@ -899,12 +917,15 @@ TeleportFunction:
 	ret
 
 .TeleportReturnText:
-	text_far _TeleportReturnText
-	text_end
+	text "さいごに　たちよった"
+	line "#センターにもどります"
+	done
 
 .CantUseTeleportText:
-	text_far _CantUseTeleportText
-	text_end
+	text "ここでは　つかえません！"
+
+	para ""
+	done
 
 .TeleportScript:
 	refreshmap
@@ -950,8 +971,9 @@ StrengthFunction:
 	ret
 
 .AlreadyUsingStrengthText:
-	text_far _AlreadyUsingStrengthText
-	text_end
+	text "すでに　かいりきを"
+	line "はっきしています"
+	prompt
 
 .Failed:
 	ld a, JUMPTABLE_EXIT
@@ -991,12 +1013,16 @@ Script_UsedStrength:
 	end
 
 .UseStrengthText:
-	text_far _UseStrengthText
-	text_end
+	text_ram wStringBuffer2
+	text "は"
+	line "かいりきを　はっきした！"
+	done
 
 .MoveBoulderText:
-	text_far _MoveBoulderText
-	text_end
+	text_ram wStringBuffer1
+	text "の　かいりきの　おかげで"
+	line "いわを　おせるように　なった！"
+	prompt
 
 AskStrengthScript:
 	callasm TryStrengthOW
@@ -1019,16 +1045,21 @@ AskStrengthScript:
 	end
 
 AskStrengthText:
-	text_far _AskStrengthText
-	text_end
+	text "おおきな　いわ　だけど<⋯>"
+	line "#の　わざで　おせるかも？"
+
+	para "かいりきを　つかいますか？"
+	done
 
 BouldersMoveText:
-	text_far _BouldersMoveText
-	text_end
+	text "かいりきの　おかげで"
+	line "いわを　おして　うごかせる！"
+	done
 
 BouldersMayMoveText:
-	text_far _BouldersMayMoveText
-	text_end
+	text "おおきな　いわ　だけど<⋯>"
+	line "#の　わざで　おせるかも？"
+	done
 
 TryStrengthOW:
 	ld d, STRENGTH
@@ -1102,8 +1133,10 @@ WhirlpoolFunction:
 	ret
 
 UseWhirlpoolText:
-	text_far _UseWhirlpoolText
-	text_end
+	text_ram wStringBuffer2
+	text "　は　"
+	line "うずしおを　つかった！"
+	prompt
 
 TryWhirlpoolMenu:
 	call GetFacingTileCoord
@@ -1190,8 +1223,11 @@ Script_MightyWhirlpool:
 	jumptext .MayPassWhirlpoolText
 
 .MayPassWhirlpoolText:
-	text_far _MayPassWhirlpoolText
-	text_end
+	text "はげしく　うずまいている！"
+
+	para "<⋯>#のわざで"
+	line "どうにか　できるかも"
+	done
 
 Script_AskWhirlpoolOW:
 	opentext
@@ -1202,8 +1238,11 @@ Script_AskWhirlpoolOW:
 	end
 
 AskWhirlpoolText:
-	text_far _AskWhirlpoolText
-	text_end
+	text "ゆくてを　はげしいうずが"
+	line "ふさいでいる！"
+
+	para "うずしおを　つかいますか？"
+	done
 
 HeadbuttFunction:
 	call TryHeadbuttFromMenu
@@ -1227,12 +1266,14 @@ TryHeadbuttFromMenu:
 	ret
 
 UseHeadbuttText:
-	text_far _UseHeadbuttText
-	text_end
+	text_ram wStringBuffer2
+	text "　は　"
+	line "ずつきを　つかった！"
+	prompt
 
 HeadbuttNothingText:
-	text_far _HeadbuttNothingText
-	text_end
+	text "<⋯>いないなあ<⋯>"
+	done
 
 HeadbuttFromMenuScript:
 	refreshmap
@@ -1283,8 +1324,11 @@ AskHeadbuttScript:
 	end
 
 AskHeadbuttText:
-	text_far _AskHeadbuttText
-	text_end
+	text "こんなき　には　"
+	line "#がいるかも⋯"
+
+	para "ずつきを　つかいますか？"
+	done
 
 RockSmashFunction:
 	call TryRockSmashFromMenu
@@ -1359,8 +1403,10 @@ MovementData_RockSmash:
 	step_end
 
 UseRockSmashText:
-	text_far _UseRockSmashText
-	text_end
+	text_ram wStringBuffer2
+	text "　は　"
+	line "いわくだきを　つかった！"
+	prompt
 
 AskRockSmashScript:
 	callasm HasRockSmash
@@ -1376,12 +1422,14 @@ AskRockSmashScript:
 	jumptext MaySmashText
 
 MaySmashText:
-	text_far _MaySmashText
-	text_end
+	text "かたそうな　いわ　だけど<⋯>"
+	line "#の　わざで　こわせるかも？"
+	done
 
 AskRockSmashText:
-	text_far _AskRockSmashText
-	text_end
+	text "#のわざで　こわせそうだ！"
+	line "<⋯>いわくだきを　つかいますか？"
+	done
 
 HasRockSmash:
 	ld d, ROCK_SMASH
@@ -1573,10 +1621,6 @@ MovementData_CastRod:
 	step_end
 
 PutTheRodAway:
-	hlcoord 1, 14
-	lb bc, 3, 18
-	call ClearBox
-	call WaitBGMap
 	xor a
 	ldh [hBGMapMode], a
 	ld a, $1
@@ -1586,16 +1630,18 @@ PutTheRodAway:
 	ret
 
 RodBiteText:
-	text_far _RodBiteText
-	text_end
+	text "お！"
+	line "ひいてる！ひいてる！"
+	prompt
 
 RodNothingText:
-	text_far _RodNothingText
-	text_end
+	text "つれないなあ<⋯>"
+	prompt
 
 UnusedNothingHereText: ; unreferenced
-	text_far _UnusedNothingHereText
-	text_end
+	text "ここには　なにも"
+	line "いないようだ"
+	prompt
 
 BikeFunction:
 	call .TryBike
@@ -1727,16 +1773,22 @@ Script_CantGetOffBike:
 	end
 
 .CantGetOffBikeText:
-	text_far _CantGetOffBikeText
-	text_end
+	text "ここでは　おりられない！"
+	done
 
 GotOnBikeText:
-	text_far _GotOnBikeText
-	text_end
+	text "<PLAYER>は"
+	line "@"
+	text_ram wStringBuffer2
+	text "に　のった"
+	done
 
 GotOffBikeText:
-	text_far _GotOffBikeText
-	text_end
+	text "<PLAYER>は"
+	line "@"
+	text_ram wStringBuffer2
+	text "から　おりた"
+	done
 
 TryCutOW::
 	ld d, CUT
@@ -1781,12 +1833,16 @@ AskCutScript:
 	ret
 
 AskCutText:
-	text_far _AskCutText
-	text_end
+	text "<⋯>このきは　なんだか"
+	line "きれそうだ！"
+
+	para "いあいぎりで　きりますか？"
+	done
 
 CantCutScript:
 	jumptext CanCutText
 
 CanCutText:
-	text_far _CanCutText
-	text_end
+	text "このきは　なんだか"
+	line "きれそうだ！"
+	done

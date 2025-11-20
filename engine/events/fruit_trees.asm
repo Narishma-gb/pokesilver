@@ -96,21 +96,24 @@ GetFruitTreeItem:
 INCLUDE "data/items/fruit_trees.asm"
 
 FruitBearingTreeText:
-	text_far _FruitBearingTreeText
-	text_end
+	text "みのなるき<GA>ある！"
+	done
 
 HeyItsFruitText:
-	text_far _HeyItsFruitText
-	text_end
+	text "<⋯>@"
+	text_ram wStringBuffer3
+	text "だ！"
+	done
 
 ObtainedFruitText:
-	text_far _ObtainedFruitText
-	text_end
+	text_ram wStringBuffer3
+	text "<WO>てにいれ<TA!>"
+	done
 
 FruitPackIsFullText:
-	text_far _FruitPackIsFullText
-	text_end
+	text "<⋯>しかし　リュックがいっぱい！"
+	done
 
 NothingHereText:
-	text_far _NothingHereText
-	text_end
+	text "なにも　みつからなかった<⋯>"
+	done

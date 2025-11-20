@@ -69,9 +69,6 @@ DEF NUM_GROWTH_RATES EQU const_value
 	const EGG_DRAGON        ; e
 	const EGG_NONE          ; f (Undiscovered)
 
-; pokedex entries (see data/pokemon/dex_entries_*.asm)
-DEF NUM_DEX_ENTRY_BANKS EQU 4
-
 ; party_struct members (see macros/ram.asm)
 rsreset
 DEF MON_SPECIES            rb
@@ -117,7 +114,7 @@ DEF PARTY_LENGTH EQU 6
 ; boxes
 DEF MONS_PER_BOX EQU 30
 ; box: count, species, mons, OTs, nicknames, padding
-;DEF BOX_LENGTH EQU 1 + MONS_PER_BOX + 1 + (BOXMON_STRUCT_LENGTH + NAME_LENGTH + NAME_LENGTH) * MONS_PER_BOX + 2 ; $450
+DEF BOX_LENGTH EQU 1 + MONS_PER_BOX + 1 + (BOXMON_STRUCT_LENGTH + NAME_LENGTH + NAME_LENGTH) * MONS_PER_BOX + 2 ; $54A
 DEF NUM_BOXES EQU 9
 
 rsreset

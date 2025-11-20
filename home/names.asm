@@ -53,7 +53,7 @@ GetName::
 	call GetNthString
 
 	ld de, wStringBuffer1
-	ld bc, ITEM_NAME_LENGTH
+	ld bc, TRAINER_CLASS_NAME_LENGTH
 	call CopyBytes
 
 .done

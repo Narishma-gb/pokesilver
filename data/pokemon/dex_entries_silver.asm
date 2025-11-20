@@ -1,4 +1,6 @@
-;SECTION "Pokedex Entries 001-064", ROMX
+SECTION "Pokedex Entries", ROMX
+
+;INCLUDE "data/pokemon/dex_entry_pointers.asm"
 
 ;BulbasaurPokedexEntry::  INCLUDE "data/pokemon/dex_entries/silver/bulbasaur.asm"
 ;IvysaurPokedexEntry::    INCLUDE "data/pokemon/dex_entries/silver/ivysaur.asm"
@@ -64,10 +66,6 @@
 ;PoliwrathPokedexEntry::  INCLUDE "data/pokemon/dex_entries/silver/poliwrath.asm"
 ;AbraPokedexEntry::       INCLUDE "data/pokemon/dex_entries/silver/abra.asm"
 ;KadabraPokedexEntry::    INCLUDE "data/pokemon/dex_entries/silver/kadabra.asm"
-
-
-;SECTION "Pokedex Entries 065-128", ROMX
-
 ;AlakazamPokedexEntry::   INCLUDE "data/pokemon/dex_entries/silver/alakazam.asm"
 ;MachopPokedexEntry::     INCLUDE "data/pokemon/dex_entries/silver/machop.asm"
 ;MachokePokedexEntry::    INCLUDE "data/pokemon/dex_entries/silver/machoke.asm"
@@ -103,6 +101,9 @@
 ;HypnoPokedexEntry::      INCLUDE "data/pokemon/dex_entries/silver/hypno.asm"
 ;KrabbyPokedexEntry::     INCLUDE "data/pokemon/dex_entries/silver/krabby.asm"
 ;KinglerPokedexEntry::    INCLUDE "data/pokemon/dex_entries/silver/kingler.asm"
+
+;INCLUDE "data/pokemon/dex_entry_pointers_2.asm"
+
 ;VoltorbPokedexEntry::    INCLUDE "data/pokemon/dex_entries/silver/voltorb.asm"
 ;ElectrodePokedexEntry::  INCLUDE "data/pokemon/dex_entries/silver/electrode.asm"
 ;ExeggcutePokedexEntry::  INCLUDE "data/pokemon/dex_entries/silver/exeggcute.asm"
@@ -132,10 +133,6 @@
 ;MagmarPokedexEntry::     INCLUDE "data/pokemon/dex_entries/silver/magmar.asm"
 ;PinsirPokedexEntry::     INCLUDE "data/pokemon/dex_entries/silver/pinsir.asm"
 ;TaurosPokedexEntry::     INCLUDE "data/pokemon/dex_entries/silver/tauros.asm"
-
-
-;SECTION "Pokedex Entries 129-192", ROMX
-
 ;MagikarpPokedexEntry::   INCLUDE "data/pokemon/dex_entries/silver/magikarp.asm"
 ;GyaradosPokedexEntry::   INCLUDE "data/pokemon/dex_entries/silver/gyarados.asm"
 ;LaprasPokedexEntry::     INCLUDE "data/pokemon/dex_entries/silver/lapras.asm"
@@ -200,10 +197,6 @@
 ;AipomPokedexEntry::      INCLUDE "data/pokemon/dex_entries/silver/aipom.asm"
 ;SunkernPokedexEntry::    INCLUDE "data/pokemon/dex_entries/silver/sunkern.asm"
 ;SunfloraPokedexEntry::   INCLUDE "data/pokemon/dex_entries/silver/sunflora.asm"
-
-
-;SECTION "Pokedex Entries 193-251", ROMX
-
 ;YanmaPokedexEntry::      INCLUDE "data/pokemon/dex_entries/silver/yanma.asm"
 ;WooperPokedexEntry::     INCLUDE "data/pokemon/dex_entries/silver/wooper.asm"
 ;QuagsirePokedexEntry::   INCLUDE "data/pokemon/dex_entries/silver/quagsire.asm"

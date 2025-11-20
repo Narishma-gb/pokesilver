@@ -15,8 +15,9 @@ _BillsPC:
 	ret
 
 .PCGottaHavePokemonText:
-	text_far _PCGottaHavePokemonText
-	text_end
+	text "#もってへんやつは"
+	line "おことわりや！"
+	prompt
 
 .LogIn:
 	xor a
@@ -35,8 +36,8 @@ _BillsPC:
 	ret
 
 .PCWhatText:
-	text_far _PCWhatText
-	text_end
+	text "なんに　するん？"
+	done
 
 .LogOut:
 	call CloseSubmenu
@@ -80,11 +81,11 @@ _BillsPC:
 	dw .strings
 
 .strings
-	db "WITHDRAW <PK><MN>@"
-	db "DEPOSIT <PK><MN>@"
-	db "CHANGE BOX@"
-	db "MOVE <PK><MN> W/O MAIL@"
-	db "SEE YA!@"
+	db "#を　つれていく@"
+	db "#を　あずける@"
+	db "ボックスを　かえる@"
+	db "ボックスせいり／メール　はずしてね@"
+	db "さようなら@"
 
 .Jumptable:
 	dw BillsPC_WithdrawMenu
@@ -127,8 +128,10 @@ BillsPC_MovePKMNMenu:
 	ret
 
 .PCMonHoldingMailText:
-	text_far _PCMonHoldingMailText
-	text_end
+	text "メールを　もっている"
+	line "#がいます"
+	cont "メールを　はずしてください"
+	prompt
 
 BillsPC_DepositMenu:
 	call LoadStandardMenuHeader
@@ -161,12 +164,13 @@ BillsPC_Deposit_CheckPartySize: ; unreferenced
 	ret
 
 .PCNoSingleMonText:
-	text_far _PCNoSingleMonText
-	text_end
+	text "１ぴきも　もってへんやんか！"
+	prompt
 
 .PCCantDepositLastMonText:
-	text_far _PCCantDepositLastMonText
-	text_end
+	text "それ　あずけたら"
+	line "こまるんとちゃう？"
+	prompt
 
 CheckCurPartyMonFainted:
 	ld hl, wPartyMon1HP
@@ -220,8 +224,9 @@ BillsPC_Withdraw_CheckPartySize: ; unreferenced
 	ret
 
 PCCantTakeText:
-	text_far _PCCantTakeText
-	text_end
+	text "それいじょう　よくばったって"
+	line "#　もたれへんで！"
+	prompt
 
 BillsPC_ChangeBoxMenu:
 	farcall _ChangeBox
@@ -236,7 +241,7 @@ ClearPCItemScreen:
 	call ClearSprites
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, " "
+	ld a, "　"
 	call ByteFill
 	hlcoord 0, 0
 	lb bc, 10, 18

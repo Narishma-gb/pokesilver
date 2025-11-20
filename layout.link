@@ -36,7 +36,8 @@ ROMX $01
 ROMX $02
 	"bank2"
 ROMX $03
-	; "bank3"
+	"bank3"
+	; "Garbage 3"
 ROMX $04
 	; "bank4"
 ROMX $05
@@ -70,7 +71,8 @@ ROMX $10
 	; "bank10"
 	; "Evolutions and Attacks"
 ROMX $11
-	; "bank11"
+	"bank11"
+	"Pokedex Entries"
 ROMX $12
 	; org $4000
 	; "Pic Pointers"
@@ -241,14 +243,6 @@ ROMX $63
 ; 	"Text 2"
 ; ROMX $66
 ; 	"Text 3"
-; ROMX $68
-; 	"Pokedex Entries 001-064"
-; ROMX $69
-; 	"Pokedex Entries 065-128"
-; ROMX $6a
-; 	"Pokedex Entries 129-192"
-; ROMX $6b
-; 	"Pokedex Entries 193-251"
 ; ROMX $6c
 ; 	"Names"
 ; ROMX $6d
@@ -290,9 +284,8 @@ VRAM $01
 	"VRAM1"
 SRAM $00
 	"Scratch"
-	"sram0"
-; 	org $a600
-; 	"SRAM Bank 0"
+	org $a600
+	"SRAM Bank 0"
 ; 	"Backup Save 1"
 ; 	"SRAM Stack"
 	org $b800
@@ -304,10 +297,10 @@ SRAM $01
 ; 	"Link Battle Data"
 ; 	"SRAM Hall of Fame"
 ; 	"Backup Save 2"
-; SRAM $02
-; 	"Boxes 1-7"
-; SRAM $03
-; 	"Boxes 8-14"
+SRAM $02
+	"Boxes 1-6"
+SRAM $03
+	"Boxes 7-9"
 ; 	"Backup Save 3"
 HRAM
 	"OAM DMA"

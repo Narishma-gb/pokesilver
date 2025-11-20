@@ -63,7 +63,7 @@ TryAddMonToParty:
 	ld d, h
 	ld e, l
 	ld hl, wStringBuffer1
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 
 .skipnickname
@@ -440,7 +440,7 @@ AddTempmonToParty:
 	ld hl, wOTPartyMonNicknames
 	ld a, [wCurPartyMon]
 	call SkipNames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 
 	ld a, [wCurPartySpecies]
@@ -626,7 +626,7 @@ SendGetMonIntoFromBox:
 	call SkipNames
 
 .okay12
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	pop hl
 
@@ -978,7 +978,7 @@ SendMonIntoBox:
 
 	ld de, sBoxMonNicknames
 	ld hl, wStringBuffer1
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 
 	ld hl, wEnemyMon
@@ -1077,7 +1077,7 @@ ShiftBoxMon:
 	call .shift
 
 	ld hl, sBoxMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call .shift
 
 	ld hl, sBoxMons
@@ -1190,8 +1190,13 @@ GiveEgg::
 	dec a
 	ld hl, wPartyMonNicknames
 	call SkipNames
-	ld de, String_Egg
-	call CopyName2
+	ld a, "タ"
+	ld [hli], a
+	ld a, "マ"
+	ld [hli], a
+	ld a, "ゴ"
+	ld [hli], a
+	ld [hl], "@"
 	ld a, [wPartyCount]
 	dec a
 	ld hl, wPartyMon1Happiness
@@ -1215,9 +1220,6 @@ GiveEgg::
 	ld [hl], a
 	and a
 	ret
-
-String_Egg:
-	db "EGG@"
 
 RemoveMonFromPartyOrBox:
 	ld hl, wPartyCount
@@ -1270,7 +1272,7 @@ RemoveMonFromPartyOrBox:
 	; Shift the OT names
 	ld d, h
 	ld e, l
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	add hl, bc
 	ld bc, wPartyMonNicknames
 	ld a, [wPokemonWithdrawDepositParameter]
@@ -1313,12 +1315,12 @@ RemoveMonFromPartyOrBox:
 	jr z, .party6
 	ld hl, sBoxMonNicknames
 .party6
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	ld a, [wCurPartyMon]
 	call AddNTimes
 	ld d, h
 	ld e, l
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	add hl, bc
 	ld bc, wPartyMonNicknamesEnd
 	ld a, [wPokemonWithdrawDepositParameter]
@@ -1690,7 +1692,7 @@ GivePoke::
 	call GetPokemonName
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	pop af
 	and a
@@ -1702,7 +1704,7 @@ GivePoke::
 	push hl
 	ld a, [wScriptBank]
 	call GetFarWord
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	ld a, [wScriptBank]
 	call FarCopyBytes
 	pop hl
@@ -1739,7 +1741,7 @@ GivePoke::
 	ld a, BANK(sBoxMonOTs)
 	call OpenSRAM
 	ld de, sBoxMonOTs
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	ld a, [wScriptBank]
 	call FarCopyBytes
 	ld hl, sBoxMon1ID
@@ -1768,7 +1770,7 @@ GivePoke::
 	call OpenSRAM
 	ld hl, wMonOrItemNameBuffer
 	ld de, sBoxMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	call CloseSRAM
 	ld b, $1
@@ -1781,8 +1783,10 @@ GivePoke::
 	ret
 
 WasSentToBillsPCText:
-	text_far _WasSentToBillsPCText
-	text_end
+	text_ram wStringBuffer1
+	text "<WA>マサキ<NO>ところへ"
+	line "てんそうされた！"
+	prompt
 
 InitNickname:
 	push de

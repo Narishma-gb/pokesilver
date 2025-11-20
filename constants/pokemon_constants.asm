@@ -113,6 +113,7 @@
 	const HYPNO      ; 61
 	const KRABBY     ; 62
 	const KINGLER    ; 63
+DEF DEX_ENTRY_TABLE_SPLIT EQU const_value - 1
 	const VOLTORB    ; 64
 	const ELECTRODE  ; 65
 	const EXEGGCUTE  ; 66

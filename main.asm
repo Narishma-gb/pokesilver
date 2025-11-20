@@ -27,26 +27,26 @@ INCLUDE "engine/predef.asm"
 INCLUDE "engine/gfx/color.asm"
 
 
-;SECTION "bank3", ROMX
+SECTION "bank3", ROMX
 
-;INCLUDE "engine/events/checktime.asm"
-;INCLUDE "engine/events/engine_flags.asm"
-;INCLUDE "engine/overworld/variables.asm"
-;INCLUDE "engine/events/specials.asm"
-;INCLUDE "engine/smallflag.asm"
-;INCLUDE "engine/pokemon/health.asm"
-;INCLUDE "engine/events/overworld.asm"
-;INCLUDE "engine/items/items.asm"
-;INCLUDE "engine/overworld/player_step.asm"
-;INCLUDE "engine/battle/anim_hp_bar.asm"
-;INCLUDE "engine/pokemon/move_mon.asm"
-;INCLUDE "engine/pokemon/bills_pc_top.asm"
-;INCLUDE "engine/pokemon/breedmon_level_growth.asm"
-;INCLUDE "engine/pokemon/search_party.asm"
-;INCLUDE "engine/events/bug_contest/caught_mon.asm"
-;INCLUDE "engine/items/item_effects.asm"
-;INCLUDE "engine/battle_anims/pokeball_wobble.asm"
-;INCLUDE "engine/pokemon/knows_move.asm"
+INCLUDE "engine/events/checktime.asm"
+INCLUDE "engine/events/engine_flags.asm"
+INCLUDE "engine/overworld/variables.asm"
+INCLUDE "engine/events/specials.asm"
+INCLUDE "engine/smallflag.asm"
+INCLUDE "engine/pokemon/health.asm"
+INCLUDE "engine/events/overworld.asm"
+INCLUDE "engine/items/items.asm"
+INCLUDE "engine/overworld/player_step.asm"
+INCLUDE "engine/battle/anim_hp_bar.asm"
+INCLUDE "engine/pokemon/move_mon.asm"
+INCLUDE "engine/pokemon/bills_pc_top.asm"
+INCLUDE "engine/pokemon/breedmon_level_growth.asm"
+INCLUDE "engine/pokemon/search_party.asm"
+INCLUDE "engine/events/bug_contest/caught_mon.asm"
+INCLUDE "engine/items/item_effects.asm"
+INCLUDE "engine/battle_anims/pokeball_wobble.asm"
+INCLUDE "engine/pokemon/knows_move.asm"
 
 
 ;SECTION "bank4", ROMX
@@ -180,11 +180,11 @@ INCLUDE "engine/gfx/color.asm"
 ;INCLUDE "engine/pokemon/evolve.asm"
 
 
-;SECTION "bank11", ROMX
+SECTION "bank11", ROMX
 
-;INCLUDE "engine/events/fruit_trees.asm"
-;INCLUDE "engine/battle/ai/move.asm"
-;INCLUDE "engine/pokedex/pokedex_2.asm"
+INCLUDE "engine/events/fruit_trees.asm"
+INCLUDE "engine/battle/ai/move.asm"
+INCLUDE "engine/pokedex/pokedex_2.asm"
 ;INCLUDE "engine/battle/start_battle.asm"
 ;INCLUDE "engine/gfx/place_graphic.asm"
 ;INCLUDE "engine/pokemon/mail.asm"

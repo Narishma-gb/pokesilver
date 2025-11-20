@@ -582,7 +582,7 @@ PokeBallEffect:
 	dec a
 	ld [wCurPartyMon], a
 	ld hl, wPartyMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call AddNTimes
 
 	ld d, h
@@ -649,7 +649,7 @@ PokeBallEffect:
 
 	ld hl, wMonOrItemNameBuffer
 	ld de, sBoxMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 
 	ld hl, sBoxMonNicknames
@@ -664,7 +664,7 @@ PokeBallEffect:
 
 	ld hl, sBoxMonNicknames
 	ld de, wMonOrItemNameBuffer
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 
 	call CloseSRAM
@@ -755,67 +755,32 @@ HeavyBallMultiplier:
 ; else add 30 to catch rate if weight < 409.6 kg
 ; else add 40 to catch rate
 	ld a, [wEnemyMonSpecies]
+	ld hl, PokedexDataPointerFirstTable
+	cp DEX_ENTRY_TABLE_SPLIT + 1
+	jr c, .gotTable
+	sub DEX_ENTRY_TABLE_SPLIT
+	ld hl, PokedexDataPointerSecondTable
+.gotTable
 	dec a
-	ld hl, PokedexDataPointerTable
 	ld e, a
 	ld d, 0
 	add hl, de
 	add hl, de
-	rlca
-	rlca
-	maskbits NUM_DEX_ENTRY_BANKS
-	add BANK("Pokedex Entries 001-064")
-	ld d, a
-	ld a, BANK(PokedexDataPointerTable)
+	ld a, BANK("Pokedex Entries")
 	call GetFarWord
 
 .SkipText:
-	ld a, d
+	ld a, BANK("Pokedex Entries")
 	call GetFarByte
 	inc hl
 	cp "@"
 	jr nz, .SkipText
 
-	ld a, d
-	push bc
 	inc hl
 	inc hl
-	call GetFarWord
+	ld a, BANK("Pokedex Entries")
+	call GetFarByte ; a = HIGH(mon weight)
 
-	srl h
-	rr l
-	ld b, h
-	ld c, l
-
-rept 4
-	srl b
-	rr c
-endr
-	call .subbc
-
-	srl b
-	rr c
-	call .subbc
-
-	ld a, h
-	pop bc
-	jr .compare
-
-.subbc
-	; subtract bc from hl
-	push bc
-	ld a, b
-	cpl
-	ld b, a
-	ld a, c
-	cpl
-	ld c, a
-	inc bc
-	add hl, bc
-	pop bc
-	ret
-
-.compare
 	ld c, a
 	cp HIGH(1024) ; 102.4 kg
 	jr c, .lightmon
@@ -1048,32 +1013,41 @@ LevelBallMultiplier:
 ; BallDodgedText and BallMissedText were used in Gen 1.
 
 BallDodgedText: ; unreferenced
-	text_far _BallDodgedText
-	text_end
+	text "よけられた！"
+	line "こいつは　つかまりそうにないぞ！"
+	prompt
 
 BallMissedText: ; unreferenced
-	text_far _BallMissedText
-	text_end
+	text "#に"
+	line "うまく　あたらなかった！"
+	prompt
 
 BallBrokeFreeText:
-	text_far _BallBrokeFreeText
-	text_end
+	text "だめだ！　#が"
+	line "ボールから　でてしまった！"
+	prompt
 
 BallAppearedCaughtText:
-	text_far _BallAppearedCaughtText
-	text_end
+	text "ああ！"
+	line "つかまえたと　おもったのに！"
+	prompt
 
 BallAlmostHadItText:
-	text_far _BallAlmostHadItText
-	text_end
+	text "ざんねん！"
+	line "もうすこしで　つかまえられたのに！"
+	prompt
 
 BallSoCloseText:
-	text_far _BallSoCloseText
-	text_end
+	text "おしい！"
+	line "あと　ちょっとの　ところだったのに！"
+	prompt
 
 Text_GotchaMonWasCaught:
-	; Gotcha! @ was caught!@ @
-	text_far Text_BallCaught
+	text "やったー！"
+	line "@"
+	text_ram wEnemyMonNickname
+	text "を　つかまえたぞ！@"
+	sound_caught_mon
 	text_asm
 	call WaitSFX
 	push bc
@@ -1087,20 +1061,29 @@ Text_GotchaMonWasCaught:
 	ret
 
 WaitButtonText:
-	text_far _WaitButtonText
+	text_promptbutton
 	text_end
 
 BallSentToPCText:
-	text_far _BallSentToPCText
-	text_end
+	text_ram wMonOrItemNameBuffer
+	text "は　マサキの　ところへ"
+	line "てんそうされた！"
+	prompt
 
 NewDexDataText:
-	text_far _NewDexDataText
+	text_ram wEnemyMonNickname
+	text "の　データ<GA>あたらしく"
+	line "#ずかんに　セーブされます！@"
+	sound_slot_machine_start
+	text_promptbutton
 	text_end
 
 AskGiveNicknameText:
-	text_far _AskGiveNicknameText
-	text_end
+	text "つかまえた　@"
+	text_ram wStringBuffer1
+	text "に"
+	line "ニックネームを　つけますか？"
+	done
 
 ReturnToBattle_UseBall:
 	farcall _ReturnToBattle_UseBall
@@ -1209,8 +1192,12 @@ RareCandy_StatBooster_ExitMenu:
 	jp ClearPalettes
 
 ItemStatRoseText:
-	text_far _ItemStatRoseText
-	text_end
+	text_ram wStringBuffer1
+	text "の　@"
+	text_ram wStringBuffer2
+	text "の"
+	line "きそ　ポイント<GA>あがった！"
+	prompt
 
 StatStrings:
 	dw .health
@@ -1219,11 +1206,11 @@ StatStrings:
 	dw .speed
 	dw .special
 
-.health  db "HEALTH@"
-.attack  db "ATTACK@"
-.defense db "DEFENSE@"
-.speed   db "SPEED@"
-.special db "SPECIAL@"
+.health  db "たいりょく@"
+.attack  db "こうげきりょく@"
+.defense db "ぼうぎょりょく@"
+.speed   db "すばやさ@"
+.special db "とくしゅのうりょく@"
 
 GetStatExpRelativePointer:
 	ld a, [wCurItem]
@@ -1335,7 +1322,7 @@ RareCandyEffect:
 	ld c, 9
 	call Textbox
 
-	hlcoord 11, 1
+	hlcoord 11, 2
 	ld bc, 4
 	predef PrintTempMonStats
 
@@ -1749,7 +1736,7 @@ ItemActionTextWaitButton:
 	ldh [hBGMapMode], a
 	hlcoord 0, 0
 	ld bc, wTilemapEnd - wTilemap
-	ld a, " "
+	ld a, "　"
 	call ByteFill
 	ld a, [wPartyMenuActionText]
 	call ItemActionText
@@ -2037,8 +2024,9 @@ Softboiled_MilkDrinkFunction:
 	jr .loop
 
 .ItemCantUseOnMonText:
-	text_far _ItemCantUseOnMonText
-	text_end
+	text "その#には　"
+	line "つかえません"
+	prompt
 
 EscapeRopeEffect:
 	xor a
@@ -2072,8 +2060,9 @@ UseRepel:
 	jp UseItemText
 
 RepelUsedEarlierIsStillInEffectText:
-	text_far _RepelUsedEarlierIsStillInEffectText
-	text_end
+	text "まだ　まえに　つかった　スプレーの"
+	line "こうか<GA>のこってます！"
+	prompt
 
 XAccuracyEffect:
 	ld hl, wPlayerSubStatus4
@@ -2211,16 +2200,21 @@ PokeFluteEffect:
 	ret
 
 .PlayedFluteText:
-	text_far _PlayedFluteText
-	text_end
+	text "#のふえを　ふいた！"
+
+	para "うーん！"
+	line "すばらしい　ねいろだ！"
+	prompt
 
 .FluteWakeUpText:
-	text_far _FluteWakeUpText
-	text_end
+	text "すべての　#が"
+	line "めを　さました！"
+	prompt
 
 .PlayedTheFlute:
-	; played the # FLUTE.@ @
-	text_far Text_PlayedPokeFlute
+	text "<PLAYER>は"
+	line "#のふえを　ふいてみた！@"
+	text_promptbutton
 	text_asm
 	ld a, [wBattleMode]
 	and a
@@ -2233,19 +2227,18 @@ PokeFluteEffect:
 	pop de
 
 .battle
-	ld hl, .terminator
-	ret
-
-.terminator
-	db "@"
+	jp PokeFluteTerminator
 
 CoinCaseEffect:
 	ld hl, .CoinCaseCountText
 	jp MenuTextboxWaitButton
 
 .CoinCaseCountText:
-	text_far _CoinCaseCountText
-	text_end
+	text "あなたの　コイン"
+	line "@"
+	text_decimal wCoins, 2, 4
+	text "まい"
+	done
 
 OldRodEffect:
 	ld e, $0
@@ -2497,24 +2490,31 @@ RestorePP:
 	ret
 
 RaiseThePPOfWhichMoveText:
-	text_far _RaiseThePPOfWhichMoveText
-	text_end
+	text "どのわざの"
+	line "ポイントをふやす？"
+	done
 
 RestoreThePPOfWhichMoveText:
-	text_far _RestoreThePPOfWhichMoveText
-	text_end
+	text "どのわざを"
+	line "かいふくする？"
+	done
 
 PPIsMaxedOutText:
-	text_far _PPIsMaxedOutText
-	text_end
+	text_ram wStringBuffer2
+	text "は　これいじょう"
+	line "ふやすこと<GA>できません"
+	prompt
 
 PPsIncreasedText:
-	text_far _PPsIncreasedText
-	text_end
+	text_ram wStringBuffer2
+	text "の"
+	line "わざポイント<GA>ふえた！"
+	prompt
 
 PPRestoredText:
-	text_far _PPRestoredText
-	text_end
+	text "わざポイントが"
+	line "かいふくした！"
+	prompt
 
 SquirtbottleEffect:
 	farcall _Squirtbottle
@@ -2551,8 +2551,14 @@ OpenBox:
 	jp UseDisposableItem
 
 .SentTrophyHomeText:
-	text_far _SentTrophyHomeText
-	text_end
+	text "なかから　トロフィ<GA>でてきた！"
+	line "@"
+	sound_dex_fanfare_50_79
+	text_ram wPlayerName
+	text "は　トロフィを"
+
+	para "いえに　おくった"
+	prompt
 
 NoEffect:
 	jp IsntTheTimeMessage
@@ -2646,56 +2652,74 @@ CantUseItemMessage:
 	jp PrintText
 
 ItemLooksBitterText:
-	text_far _ItemLooksBitterText
-	text_end
+	text "⋯とても　にがそうだ<⋯>"
+	prompt
 
 ItemCantUseOnEggText:
-	text_far _ItemCantUseOnEggText
-	text_end
+	text "タマゴに　つかっても"
+	line "こうかがないよ"
+	prompt
 
 ItemOakWarningText:
-	text_far _ItemOakWarningText
-	text_end
+	text "オーキドの　ことば<⋯>"
+	line "<PLAYER>よ！　こういうものには"
+	cont "つかいどき<GA>あるのじゃ！"
+	prompt
 
 ItemBelongsToSomeoneElseText:
-	text_far _ItemBelongsToSomeoneElseText
-	text_end
+	text "たいせつな　あずかりものです！"
+	next "つかうことは　できません！"
+	prompt
 
 ItemWontHaveEffectText:
-	text_far _ItemWontHaveEffectText
-	text_end
+	text "つかっても　こうかがないよ"
+	prompt
 
 BallBlockedText:
-	text_far _BallBlockedText
-	text_end
+	text "<TRAINER>に　ボールを　はじかれた！"
+	prompt
 
 BallDontBeAThiefText:
-	text_far _BallDontBeAThiefText
-	text_end
+	text "ひとの　ものを　とったら　どろぼう！"
+	prompt
 
 NoCyclingText:
-	text_far _NoCyclingText
-	text_end
+	text "ここでは　じてんしゃに"
+	next "のることは　できません"
+	prompt
 
 ItemCantGetOnText:
-	text_far _ItemCantGetOnText
-	text_end
+	text "ここでは@"
+	text_ram wStringBuffer1
+	text "に"
+	line "のることは　できません"
+	prompt
 
 BallBoxFullText:
-	text_far _BallBoxFullText
-	text_end
+	text "ボックスに　あずけている　#が"
+	line "いっぱいなので　つかえません！"
+	prompt
 
 ItemUsedText:
-	text_far _ItemUsedText
-	text_end
+	text "<PLAYER>は@"
+	text_low
+	text_ram wStringBuffer2
+	text "を　つかった！"
+	done
 
 ItemGotOnText: ; unreferenced
-	text_far _ItemGotOnText
-	text_end
+	text "<PLAYER>は@"
+	text_low
+	text_ram wStringBuffer2
+	text "に　のった"
+	prompt
 
 ItemGotOffText: ; unreferenced
-	text_far _ItemGotOffText
-	text_end
+	text "<PLAYER>は@"
+	text_low
+	text_ram wStringBuffer2
+	text "から　おりた"
+	prompt
 
 ApplyPPUp:
 	ld a, MON_MOVES

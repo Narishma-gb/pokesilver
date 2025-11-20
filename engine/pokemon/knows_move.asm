@@ -20,5 +20,9 @@ KnowsMove:
 	ret
 
 .KnowsMoveText:
-	text_far _KnowsMoveText
-	text_end
+	text_ram wStringBuffer1
+	text "は　すでに"
+	line "@"
+	text_ram wStringBuffer2
+	text "を　おぼえています"
+	prompt

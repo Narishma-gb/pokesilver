@@ -5,7 +5,7 @@ BugContest_SetCaughtContestMon:
 	ld [wNamedObjectIndex], a
 	farcall DisplayAlreadyCaughtText
 	farcall DisplayCaughtContestMonStats
-	lb bc, 14, 7
+	lb bc, 14, 12
 	call PlaceYesNoBox
 	ret c
 
@@ -33,5 +33,6 @@ BugContest_SetCaughtContestMon:
 	jp GeneratePartyMonStats
 
 .ContestCaughtMonText:
-	text_far _ContestCaughtMonText
-	text_end
+	text_ram wStringBuffer1
+	text "を　つかまえた！"
+	prompt

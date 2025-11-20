@@ -2219,7 +2219,7 @@ wBattleScriptFlags:: db
 	ds 1
 wPlayerSpriteSetupFlags::
 	db
-/*
+
 wMapReentryScriptQueueFlag:: db
 wMapReentryScriptBank:: db
 wMapReentryScriptAddress:: dw
@@ -2234,7 +2234,7 @@ wReceiveCallDelay_StartTime:: ds 3
 
 wBugContestMinsRemaining:: db
 wBugContestSecsRemaining:: db
-
+/*
 	ds 2
 
 wMapStatusEnd::
