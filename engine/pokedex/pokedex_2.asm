@@ -132,12 +132,12 @@ DisplayDexEntry:
 	ld a, [de]
 	cp 10
 	jr nc, .skipZero
-	ld [hl], "０" ; if the height is less than 1m, print a 0 before the decimal point
+	ld [hl], '０' ; if the height is less than 1m, print a 0 before the decimal point
 .skipZero
 	inc hl
 	ld a, [hli] ; insert the decimal point
 	ld [hld], a
-	ld [hl], "．"
+	ld [hl], '．'
 
 .skip_height
 ; Print the weight stored in tenths of kg internally, 2-byte)
@@ -171,12 +171,12 @@ DisplayDexEntry:
 	ldh a, [hDexWeight]
 	sbc 0
 	jr nc, .skipZero2
-	ld [hl], "０" ; if the weight is less than 1kg, print a 0 before the decimal point
+	ld [hl], '０' ; if the weight is less than 1kg, print a 0 before the decimal point
 .skipZero2
 	inc hl
 	ld a, [hli] ; insert the decimal point
 	ld [hld], a
-	ld [hl], "．"
+	ld [hl], '．'
 
 	pop af
 	ldh [hDexWeight + 1], a ; restore previous values at [hDexWeight] and [hDexWeight + 1]

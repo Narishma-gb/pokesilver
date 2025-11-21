@@ -30,7 +30,7 @@ PrintBCDNumber::
 ; the string is left-aligned; it needs to be moved back one space
 	dec hl
 .skipLeftAlignmentAdjustment
-	ld [hl], "０"
+	ld [hl], '０'
 	call PrintLetterDelay
 	inc hl
 .done
@@ -43,7 +43,7 @@ PrintBCDDigit::
 ; nonzero digit
 	res PRINTNUM_LEADINGZEROS_F, b ; unset 7 to indicate that a nonzero digit has been reached
 .outputDigit
-	add "０"
+	add '０'
 	ld [hli], a
 	jp PrintLetterDelay
 
@@ -52,6 +52,6 @@ PrintBCDDigit::
 	jr z, .outputDigit ; if so, print a zero digit
 	bit PRINTNUM_LEFTALIGN_F, b
 	ret nz
-	ld a, "　"
+	ld a, '　'
 	ld [hli], a ; if right-aligned, "print" a space by advancing the pointer
 	ret

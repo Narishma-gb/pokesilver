@@ -58,14 +58,30 @@ RGBFIX  ?= $(RGBDS)rgbfix
 RGBGFX  ?= $(RGBDS)rgbgfx
 RGBLINK ?= $(RGBDS)rgblink
 
+RGBASMFLAGS  ?= -Weverything -Wtruncation=1
+RGBLINKFLAGS ?= -Weverything -Wtruncation=1
+RGBFIXFLAGS  ?= -Weverything
+RGBGFXFLAGS  ?= -Weverything
+
 
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all gold silver gold11 silver11 gold11_vc silver11_vc clean tidy compare tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
+.PHONY: \
+	all \
+	gold \
+	silver \
+	gold11 \
+	silver11 \
+	gold11_vc \
+	silver11_vc \
+	clean \
+	tidy \
+	compare \
+	tools
 
 all: $(roms)
 gold:        pokegold.gbc
@@ -109,7 +125,7 @@ tools:
 	$(MAKE) -C tools/
 
 
-RGBASMFLAGS = -Q8 -P includes.asm -Weverything -Wtruncation=1
+RGBASMFLAGS += -Q8 -P includes.asm
 # Create a sym/map for debug purposes if `make` run with `DEBUG=1`
 ifeq ($(DEBUG),1)
 RGBASMFLAGS += -E
@@ -123,7 +139,8 @@ $(pokegold11_vc_obj):   RGBASMFLAGS += -D _GOLD -D _REV1 -D _GOLD_VC
 $(pokesilver11_vc_obj): RGBASMFLAGS += -D _SILVER -D _REV1 -D _SILVER_VC
 
 %.patch: %_vc.gbc %.gbc vc/%.patch.template
-	tools/make_patch $*_vc.sym $^ $@
+# Ignore the checksums added by tools/stadium at the end of the ROM
+	tools/make_patch --ignore 0x1ffdf8:0x208 $*_vc.sym $^ $@
 
 rgbdscheck.o: rgbdscheck.asm
 	$(RGBASM) -o $@ $<
@@ -172,16 +189,17 @@ $(foreach obj, $(silver11_vc_excl_obj), \
 endif
 
 
-pokegold_opt        = -csv -n 0 -t POKEMON_GLD -i AAUJ -k 01 -l 0x33 -m MBC3+TIMER+RAM+BATTERY -r 3 -p 0
-pokesilver_opt      = -csv -n 0 -t POKEMON_SLV -i AAXJ -k 01 -l 0x33 -m MBC3+TIMER+RAM+BATTERY -r 3 -p 0
-pokegold11_opt      = -csv -n 1 -t POKEMON_GLD -i AAUJ -k 01 -l 0x33 -m MBC3+TIMER+RAM+BATTERY -r 3 -p 0
-pokesilver11_opt    = -csv -n 1 -t POKEMON_SLV -i AAXJ -k 01 -l 0x33 -m MBC3+TIMER+RAM+BATTERY -r 3 -p 0
-pokegold11_vc_opt   = -csv -n 1 -t POKEMON_GLD -i AAUJ -k 01 -l 0x33 -m MBC3+TIMER+RAM+BATTERY -r 3 -p 0
-pokesilver11_vc_opt = -csv -n 1 -t POKEMON_SLV -i AAXJ -k 01 -l 0x33 -m MBC3+TIMER+RAM+BATTERY -r 3 -p 0
+RGBFIXFLAGS += -csv -k 01 -l 0x33 -m MBC3+TIMER+RAM+BATTERY -r 3 -p 0
+pokegold.gbc:        RGBFIXFLAGS += -n 0 -t POKEMON_GLD -i AAUJ
+pokesilver.gbc:      RGBFIXFLAGS += -n 0 -t POKEMON_SLV -i AAXJ
+pokegold11.gbc:      RGBFIXFLAGS += -n 1 -t POKEMON_GLD -i AAUJ
+pokesilver11.gbc:    RGBFIXFLAGS += -n 1 -t POKEMON_SLV -i AAXJ
+pokegold11_vc.gbc:   RGBFIXFLAGS += -n 1 -t POKEMON_GLD -i AAUJ
+pokesilver11_vc.gbc: RGBFIXFLAGS += -n 1 -t POKEMON_SLV -i AAXJ
 
 %.gbc: $$(%_obj) layout.link
-	$(RGBLINK) -n $*.sym -m $*.map -l layout.link -o $@ $(filter %.o,$^)
-	$(RGBFIX) $($*_opt) $@
+	$(RGBLINK) $(RGBLINKFLAGS) -l layout.link -n $*.sym -m $*.map -o $@ $(filter %.o,$^)
+	$(RGBFIX) $(RGBFIXFLAGS) $@
 # 	tools/stadium $@
 
 
@@ -197,12 +215,12 @@ include gfx/lz.mk
 ### Pokemon and trainer sprite rules
 
 define PIC
-$1/back.2bpp: rgbgfx += --columns
+$1/back.2bpp: RGBGFXFLAGS += --columns
 $1/back.2bpp: $1/back.png $1/normal.gbcpal
-	$$(RGBGFX) $$(rgbgfx) --colors gbc:$$(word 2,$$^) -o $$@ $$<
-$1/front.2bpp: rgbgfx += --columns
+	$$(RGBGFX) $$(RGBGFXFLAGS) --colors gbc:$$(word 2,$$^) -o $$@ $$<
+$1/front.2bpp: RGBGFXFLAGS += --columns
 $1/front.2bpp: $1/front.png $1/normal.gbcpal
-	$$(RGBGFX) $$(rgbgfx) --colors gbc:$$(word 2,$$^) -o $$@ $$<
+	$$(RGBGFX) $$(RGBGFXFLAGS) --colors gbc:$$(word 2,$$^) -o $$@ $$<
 $1/normal.gbcpal: $1/front.gbcpal $1/back.gbcpal
 	tools/gbcpal $$(tools/gbcpal) $$@ $$^
 endef
@@ -210,24 +228,24 @@ $(foreach pic, $(wildcard gfx/pokemon/*/front.png),\
 	$(eval $(call PIC,$(pic:/front.png=))))
 
 define PIC_GS
-$1/back.2bpp: rgbgfx += --columns
+$1/back.2bpp: RGBGFXFLAGS += --columns
 $1/back.2bpp: $1/back.png $1/normal.gbcpal
-	$$(RGBGFX) $$(rgbgfx) --colors gbc:$$(word 2,$$^) -o $$@ $$<
-$1/front_gold.2bpp: rgbgfx += --columns
+	$$(RGBGFX) $$(RGBGFXFLAGS) --colors gbc:$$(word 2,$$^) -o $$@ $$<
+$1/front_gold.2bpp: RGBGFXFLAGS += --columns
 $1/front_gold.2bpp: $1/front_gold.png $1/normal.gbcpal
-	$$(RGBGFX) $$(rgbgfx) --colors gbc:$$(word 2,$$^) -o $$@ $$<
-$1/front_silver.2bpp: rgbgfx += --columns
+	$$(RGBGFX) $$(RGBGFXFLAGS) --colors gbc:$$(word 2,$$^) -o $$@ $$<
+$1/front_silver.2bpp: RGBGFXFLAGS += --columns
 $1/front_silver.2bpp: $1/front_silver.png $1/normal.gbcpal
-	$$(RGBGFX) $$(rgbgfx) --colors gbc:$$(word 2,$$^) -o $$@ $$<
+	$$(RGBGFX) $$(RGBGFXFLAGS) --colors gbc:$$(word 2,$$^) -o $$@ $$<
 $1/normal.gbcpal: $1/front_gold.gbcpal $1/front_silver.gbcpal $1/back.gbcpal
 	tools/gbcpal $$(tools/gbcpal) $$@ $$^
 endef
 $(foreach pic, $(wildcard gfx/pokemon/*/front_gold.png),\
 	$(eval $(call PIC_GS,$(pic:/front_gold.png=))))
 
-gfx/trainers/%.2bpp: rgbgfx += --columns
+gfx/trainers/%.2bpp: RGBGFXFLAGS += --columns
 gfx/trainers/%.2bpp: gfx/trainers/%.png gfx/trainers/%.gbcpal
-	$(RGBGFX) $(rgbgfx) --colors gbc:$(word 2,$^) -o $@ $<
+	$(RGBGFX) $(RGBGFXFLAGS) --colors gbc:$(word 2,$^) -o $@ $<
 
 # A few back sprites have different compression settings for Gold and Silver
 gfx/pokemon/%/back_gold.2bpp: gfx/pokemon/%/back.2bpp ; cp -f $^ $@
@@ -235,14 +253,14 @@ gfx/pokemon/%/back_silver.2bpp: gfx/pokemon/%/back.2bpp ; cp -f $^ $@
 
 # Egg does not have a back sprite, so it only uses egg.gbcpal
 gfx/pokemon/egg/egg.2bpp: gfx/pokemon/egg/egg.png gfx/pokemon/egg/egg.gbcpal
-gfx/pokemon/egg/egg.2bpp: rgbgfx += --columns --colors gbc:$(word 2,$^)
+gfx/pokemon/egg/egg.2bpp: RGBGFXFLAGS += --columns --colors gbc:$(word 2,$^)
 
 # Unown letters share one normal.gbcpal
 unown_pngs := $(wildcard gfx/pokemon/unown_*/front.png) $(wildcard gfx/pokemon/unown_*/back.png)
 $(foreach png, $(unown_pngs),\
 	$(eval $(png:.png=.2bpp): $(png) gfx/pokemon/unown/normal.gbcpal))
-gfx/pokemon/unown_%/back.2bpp: rgbgfx += --colors gbc:$(word 2,$^)
-gfx/pokemon/unown_%/front.2bpp: rgbgfx += --colors gbc:$(word 2,$^)
+gfx/pokemon/unown_%/back.2bpp: RGBGFXFLAGS += --colors gbc:$(word 2,$^)
+gfx/pokemon/unown_%/front.2bpp: RGBGFXFLAGS += --colors gbc:$(word 2,$^)
 gfx/pokemon/unown/normal.gbcpal: $(subst .png,.gbcpal,$(unown_pngs))
 	tools/gbcpal $(tools/gbcpal) $@ $^
 
@@ -265,8 +283,8 @@ gfx/intro/fire1.2bpp: gfx/intro/charizard1.2bpp gfx/intro/charizard2_top.2bpp gf
 gfx/intro/fire2.2bpp: gfx/intro/charizard2_bottom.2bpp gfx/intro/charizard3.2bpp ; cat $^ > $@
 gfx/intro/fire3.2bpp: gfx/intro/fire.2bpp gfx/intro/unused_blastoise_venusaur.2bpp ; cat $^ > $@
 
-gfx/new_game/shrink1.2bpp: rgbgfx += --columns
-gfx/new_game/shrink2.2bpp: rgbgfx += --columns
+gfx/new_game/shrink1.2bpp: RGBGFXFLAGS += --columns
+gfx/new_game/shrink2.2bpp: RGBGFXFLAGS += --columns
 
 gfx/mail/dragonite.1bpp: tools/gfx += --remove-whitespace
 gfx/mail/large_note.1bpp: tools/gfx += --remove-whitespace
@@ -276,10 +294,10 @@ gfx/mail/litebluemail_border.1bpp: tools/gfx += --remove-whitespace
 
 gfx/pokedex/pokedex.2bpp: tools/gfx += --trim-whitespace
 gfx/pokedex/pokedex_sgb.2bpp: tools/gfx += --trim-whitespace
-gfx/pokedex/question_mark.2bpp: rgbgfx += --columns
+gfx/pokedex/question_mark.2bpp: RGBGFXFLAGS += --columns
 gfx/pokedex/slowpoke.2bpp: tools/gfx += --trim-whitespace
 
-gfx/pokegear/pokegear.2bpp: rgbgfx += --trim-end 2
+gfx/pokegear/pokegear.2bpp: RGBGFXFLAGS += --trim-end 2
 gfx/pokegear/pokegear_sprites.2bpp: tools/gfx += --trim-whitespace
 
 gfx/mystery_gift/mystery_gift.2bpp: tools/gfx += --remove-whitespace
@@ -320,8 +338,8 @@ gfx/battle_anims/rocks.2bpp: tools/gfx += --remove-whitespace
 gfx/battle_anims/skyattack.2bpp: tools/gfx += --remove-whitespace
 gfx/battle_anims/status.2bpp: tools/gfx += --remove-whitespace
 
-gfx/player/chris.2bpp: rgbgfx += --columns
-gfx/player/chris_back.2bpp: rgbgfx += --columns
+gfx/player/chris.2bpp: RGBGFXFLAGS += --columns
+gfx/player/chris_back.2bpp: RGBGFXFLAGS += --columns
 
 gfx/trainer_card/leaders.2bpp: tools/gfx += --trim-whitespace
 
@@ -329,7 +347,7 @@ gfx/overworld/chris_fish.2bpp: tools/gfx += --trim-whitespace
 
 gfx/sprites/big_onix.2bpp: tools/gfx += --remove-whitespace --remove-xflip
 
-gfx/battle/dude.2bpp: rgbgfx += --columns
+gfx/battle/dude.2bpp: RGBGFXFLAGS += --columns
 
 gfx/font/unused_bold_font.1bpp: tools/gfx += --trim-whitespace
 
@@ -341,12 +359,12 @@ gfx/sgb/silver_border.sgb.tilemap: gfx/sgb/silver_border.bin ; tr < $< -d '\000'
 ### Catch-all graphics rules
 
 %.2bpp: %.png
-	$(RGBGFX) --colors dmg=e4 $(rgbgfx) -o $@ $<
+	$(RGBGFX) --colors dmg $(RGBGFXFLAGS) -o $@ $<
 	$(if $(tools/gfx),\
 		tools/gfx $(tools/gfx) -o $@ $@ || $$($(RM) $@ && false))
 
 %.1bpp: %.png
-	$(RGBGFX) --colors dmg=e4 $(rgbgfx) --depth 1 -o $@ $<
+	$(RGBGFX) --colors dmg $(RGBGFXFLAGS) --depth 1 -o $@ $<
 	$(if $(tools/gfx),\
 		tools/gfx $(tools/gfx) --depth 1 -o $@ $@ || $$($(RM) $@ && false))
 

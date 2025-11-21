@@ -773,7 +773,7 @@ HeavyBallMultiplier:
 	ld a, BANK("Pokedex Entries")
 	call GetFarByte
 	inc hl
-	cp "@"
+	cp '@'
 	jr nz, .SkipText
 
 	inc hl
@@ -1736,7 +1736,7 @@ ItemActionTextWaitButton:
 	ldh [hBGMapMode], a
 	hlcoord 0, 0
 	ld bc, wTilemapEnd - wTilemap
-	ld a, "　"
+	ld a, '　'
 	call ByteFill
 	ld a, [wPartyMenuActionText]
 	call ItemActionText

@@ -1,10 +1,10 @@
 ; Syntactic sugar macros
 
-MACRO lb ; r, hi, lo
+MACRO? lb ; r, hi, lo
 	ld \1, ((\2) & $ff) << 8 | ((\3) & $ff)
 ENDM
 
-MACRO ln ; r, hi, lo
+MACRO? ln ; r, hi, lo
 	ld \1, ((\2) & $f) << 4 | ((\3) & $f)
 ENDM
 
@@ -23,7 +23,7 @@ MACRO jumptable
 	jp hl
 ENDM
 
-MACRO maskbits
+MACRO? maskbits
 ; masks just enough bits to cover values 0 to \1 - 1
 ; \2 is an optional shift amount
 ; e.g. "maskbits 26" becomes "and %00011111" (since 26 - 1 = %00011001)
@@ -89,30 +89,27 @@ if _NARG == 0
 endc
 ENDM
 
-MACRO ld_string_hl
+MACRO ld_str_hl
 ; for each char in \1, iterate the pattern:
 ;	ld a, 'char'
 ;	ld [hli], a
-; boolean argument \2:
-; use ld [hl], 'lastchar' instead of:
-;	ld a, 'lastchar'
-;	ld [hl], a
+; last instruction is: ld [hl], a
 for n, CHARLEN(\1) - 1
-	ld a, STRCHAR(\1, n)
+	ld a, CHARVAL(STRCHAR(\1, n))
 	ld [hli], a
 endr
-if \2
-	ld [hl], STRCHAR(\1, CHARLEN(\1) - 1)
-else
-	ld a, STRCHAR(\1, CHARLEN(\1) - 1)
+	ld a, CHARVAL(STRCHAR(\1, CHARLEN(\1) - 1))
 	ld [hl], a
-endc
-ENDM
-
-MACRO ld_str_hl
-	ld_string_hl \1, FALSE
 ENDM
 
 MACRO str_ld_hl
-	ld_string_hl \1, TRUE
+; for each char in \1, iterate the pattern:
+;	ld a, 'char'
+;	ld [hli], a
+; last instruction is: ld [hl], 'lastchar'
+for n, CHARLEN(\1) - 1
+	ld a, CHARVAL(STRCHAR(\1, n))
+	ld [hli], a
+endr
+	ld [hl], CHARVAL(STRCHAR(\1, CHARLEN(\1) - 1))
 ENDM

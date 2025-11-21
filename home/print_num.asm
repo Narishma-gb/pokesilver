@@ -130,13 +130,13 @@ PrintNum::
 	jr .print_ones
 
 .print_tens
-	ld a, "０"
+	ld a, '０'
 	add c
 	ld [hl], a
 
 .print_ones
 	call .AdvancePointer
-	ld a, "０"
+	ld a, '０'
 	add b
 	ld [hli], a
 
@@ -204,7 +204,7 @@ PrintNum::
 	ldh a, [hPrintNumBuffer + 0]
 	or c
 	jr z, .PrintLeadingZero
-	ld a, "０"
+	ld a, '０'
 	add c
 	ld [hl], a
 	ldh [hPrintNumBuffer + 0], a
@@ -214,7 +214,7 @@ PrintNum::
 ; prints a leading zero unless they are turned off in the flags
 	bit PRINTNUM_LEADINGZEROS_F, d
 	ret z
-	ld [hl], "０"
+	ld [hl], '０'
 	ret
 
 .AdvancePointer:

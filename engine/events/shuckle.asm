@@ -85,16 +85,16 @@ ReturnShuckie:
 	ld hl, wPartyMonOTs
 	call SkipNames
 	ld a, [hli]
-	cp "マ"
+	cp 'マ'
 	jr nz, .DontReturn
 	ld a, [hli]
-	cp "ニ"
+	cp 'ニ'
 	jr nz, .DontReturn
 	ld a, [hli]
-	cp "ア"
+	cp 'ア'
 	jr nz, .DontReturn
 	ld a, [hli]
-	cp "@"
+	cp '@'
 	jr nz, .DontReturn
 
 	farcall CheckCurPartyMonFainted

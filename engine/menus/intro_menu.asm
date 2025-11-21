@@ -143,11 +143,11 @@ SetDefaultBoxNames:
 	push hl
 	ld de, .Box
 	call CopyName2
-	ld a, "１"
+	ld a, '１'
 	add c
 	dec hl
 	ld [hli], a
-	ld [hl], "@"
+	ld [hl], '@'
 	pop hl
 	ld de, BOX_NAME_LENGTH
 	add hl, de
@@ -464,7 +464,7 @@ Continue_DisplayGameTime:
 	ld de, wGameTimeHours
 	lb bc, 2, 3
 	call PrintNum
-	ld [hl], ":"
+	ld [hl], ':'
 	inc hl
 	ld de, wGameTimeMinutes
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
