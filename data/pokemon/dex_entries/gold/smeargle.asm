@@ -1,10 +1,8 @@
-	db "PAINTER@" ; species name
-	dw 311, 1280 ; height, weight
+	db "えかき@" ; species name
+	db 12 ; height
+	dw 580 ; weight
 
-	db   "A special fluid"
-	next "oozes from the tip"
-	next "of its tail. It"
-
-	page "paints the fluid"
-	next "everywhere to mark"
-	next "its territory.@"
+	db   "シッポ<NO>さきから　ぶんぴつする"
+	next "えきたい<WO>あちこち<NI>ぬりつけて"
+	next "じぶん<NO>なわばり<WO>アピールする"
+	dex

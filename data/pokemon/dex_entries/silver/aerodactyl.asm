@@ -1,10 +1,8 @@
-	db "FOSSIL@" ; species name
-	dw 511, 1300 ; height, weight
+	db "かせき@" ; species name
+	db 18 ; height
+	dw 590 ; weight
 
-	db   "This vicious #-"
-	next "MON is said to"
-	next "have flown in an-"
-
-	page "cient skies while"
-	next "shrieking high-"
-	next "pitched cries.@"
+	db   "かんだかい　こえで　さけびながら"
+	next "こだい<NO>おおぞら<WO>とんでいたと"
+	next "される　どうもうな　#"
+	dex

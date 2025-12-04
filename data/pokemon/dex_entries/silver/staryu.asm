@@ -1,10 +1,8 @@
-	db "STARSHAPE@" ; species name
-	dw 207, 760 ; height, weight
+	db "ほしがた@" ; species name
+	db 8 ; height
+	dw 345 ; weight
 
-	db   "Even if its body"
-	next "is torn, it can"
-	next "regenerate as long"
-
-	page "as the glowing"
-	next "central core re-"
-	next "mains intact.@"
+	db   "からだ<NO>ちゅうしんで　ひかる"
+	next "コア<GA>あるかぎり　からだが"
+	next "ちぎれても　さいせい　できる"
+	dex

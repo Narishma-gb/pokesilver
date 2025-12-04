@@ -1,10 +1,8 @@
-	db "POISON BEE@" ; species name
-	dw 303, 650 ; height, weight
+	db "どくばち@" ; species name
+	db 10 ; height
+	dw 295 ; weight
 
-	db   "It has three"
-	next "poison barbs."
-	next "The barb on its"
-
-	page "tail secretes the"
-	next "most powerful"
-	next "poison.@"
+	db   "３ぼん<NO>どくバリ<NO>なかでは"
+	next "おしり<NI>ついているの<GA>いちばん"
+	next "きょうりょくな　どくをだす"
+	dex

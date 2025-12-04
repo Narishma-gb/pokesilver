@@ -1,10 +1,8 @@
-	db "PSI@" ; species name
-	dw 403, 1250 ; height, weight
+	db "ねんりき@" ; species name
+	db 13 ; height
+	dw 565 ; weight
 
-	db   "It possesses"
-	next "strong spiritual"
-	next "power. The more"
-
-	page "danger it faces,"
-	next "the stronger its"
-	next "psychic power.@"
+	db   "つよい　せいしんりょく<NO>もちぬし。"
+	next "ピンチ<NI>なれば　なるほど"
+	next "のうりょく<GA>たかま<TTE>いく"
+	dex

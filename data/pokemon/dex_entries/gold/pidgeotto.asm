@@ -1,10 +1,8 @@
-	db "BIRD@" ; species name
-	dw 307, 660 ; height, weight
+	db "とり@" ; species name
+	db 11 ; height
+	dw 300 ; weight
 
-	db   "It has outstanding"
-	next "vision. However"
-	next "high it flies, it"
-
-	page "is able to distin-"
-	next "guish the move-"
-	next "ments of its prey.@"
+	db   "とても　しりょく<GA>いい。"
+	next "どんな<NI>たかい　ばしょ　からでも"
+	next "えもの<NO>うごくすがた<WO>みわける"
+	dex

@@ -1,10 +1,8 @@
-	db "TURTLE@" ; species name
-	dw 303, 500 ; height, weight
+	db "かめ@" ; species name
+	db 10 ; height
+	dw 225 ; weight
 
-	db   "It is recognized"
-	next "as a symbol of"
-	next "longevity. If its"
-
-	page "shell has algae on"
-	next "it, that WARTORTLE"
-	next "is very old.@"
+	db   "ながいき<NO>シンボルと　されている。"
+	next "こうら<NI>コケ<GA>ついているのは"
+	next "とく<NI>ながいき<NO>カメールだ"
+	dex

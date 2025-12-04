@@ -1,10 +1,8 @@
-	db "LONG NECK@" ; species name
-	dw 411, 910 ; height, weight
+	db "くびなが@" ; species name
+	db 15 ; height
+	dw 415 ; weight
 
-	db   "Its tail, which"
-	next "also contains a"
-	next "small brain, may"
-
-	page "bite on its own if"
-	next "it notices an"
-	next "alluring smell.@"
+	db   "シッポにも　ちいさな　のう　がある。"
+	next "におい<NI>つられて　か<TTE>に"
+	next "シッポ<GA>かみついてくることもある"
+	dex

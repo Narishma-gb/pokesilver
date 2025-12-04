@@ -1,10 +1,8 @@
-	db "SEED@" ; species name
-	dw 204, 150 ; height, weight
+	db "たね@" ; species name
+	db 7 ; height
+	dw 69 ; weight
 
-	db   "The seed on its"
-	next "back is filled"
-	next "with nutrients."
-
-	page "The seed grows"
-	next "steadily larger as"
-	next "its body grows.@"
+	db   "せなか<NO>たね<NO>なかには"
+	next "えいよう<GA>たっぷり。たねは"
+	next "からだと　いっしょ<NI>おおきくなる"
+	dex

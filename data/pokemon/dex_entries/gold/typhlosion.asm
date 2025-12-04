@@ -1,10 +1,8 @@
-	db "VOLCANO@" ; species name
-	dw 507, 1750 ; height, weight
+	db "かざん@" ; species name
+	db 17 ; height
+	dw 795 ; weight
 
-	db   "If its rage peaks,"
-	next "it becomes so hot"
-	next "that anything that"
-
-	page "touches it will"
-	next "instantly go"
-	next "up in flames.@"
+	db   "いかり<GA>さいこうちょうのとき"
+	next "さわったも<NO>すべて　いっしゅんで"
+	next "もえあがらせるほど<NI>あつい"
+	dex

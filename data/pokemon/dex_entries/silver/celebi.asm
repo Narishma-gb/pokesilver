@@ -1,10 +1,8 @@
-	db "TIMETRAVEL@" ; species name
-	dw 200, 110 ; height, weight
+	db "ときわたり@" ; species name
+	db 6 ; height
+	dw 50 ; weight
 
-	db   "When CELEBI disap-"
-	next "pears deep in a"
-	next "forest, it is said"
-
-	page "to leave behind an"
-	next "egg it brought"
-	next "from the future.@"
+	db   "セレビィ<GA>すがた<WO>けした"
+	next "もりのおく<NI>のこされた　タマゴは"
+	next "みらいから　も<TTE>きたも<NO>らしい"
+	dex

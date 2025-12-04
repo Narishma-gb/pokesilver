@@ -1,10 +1,8 @@
-	db "BIG JAW@" ; species name
-	dw 307, 550 ; height, weight
+	db "おおあご@" ; species name
+	db 11 ; height
+	dw 250 ; weight
 
-	db   "If it loses a"
-	next "fang, a new one"
-	next "grows back in its"
-
-	page "place. There are"
-	next "always 48 fangs"
-	next "lining its mouth.@"
+	db   "キバ<WA>ぬけても　つぎから　つぎに"
+	next "はえてくる。いつも　くちのなかには"
+	next "４８ぽん<NO>キバ<GA>そろ<TTE>いる"
+	dex

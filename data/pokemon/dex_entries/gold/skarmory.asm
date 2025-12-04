@@ -1,10 +1,8 @@
-	db "ARMOR BIRD@" ; species name
-	dw 507, 1110 ; height, weight
+	db "よろいどり@" ; species name
+	db 17 ; height
+	dw 505 ; weight
 
-	db   "Its sturdy wings"
-	next "look heavy, but"
-	next "they are actually"
-
-	page "hollow and light,"
-	next "allowing it to fly"
-	next "freely in the sky.@"
+	db   "じょうぶな　ハネ<WA>おもそうだが"
+	next "ホネのなか<WA>くうどうで　かるく"
+	next "じゆう<NI>おおぞら<WO>とびまわる"
+	dex

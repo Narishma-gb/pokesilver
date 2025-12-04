@@ -1,10 +1,8 @@
-	db "FIRE HORSE@" ; species name
-	dw 507, 2090 ; height, weight
+	db "ひのうま@" ; species name
+	db 17 ; height
+	dw 950 ; weight
 
-	db   "At full gallop,"
-	next "its four hooves"
-	next "barely touch the"
-
-	page "ground because it"
-	next "moves so incredi-"
-	next "bly fast.@"
+	db   "かけぬけるとき　４ほん<NO>あしは"
+	next "ほとんど　じめん<NI>ふれていない。"
+	next "それほど<NI>はやく　うごけるのだ"
+	dex

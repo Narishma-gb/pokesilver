@@ -1,10 +1,8 @@
-	db "WEED@" ; species name
-	dw 108, 120 ; height, weight
+	db "ざっそう@" ; species name
+	db 5 ; height
+	dw 54 ; weight
 
-	db   "Awakened by moon-"
-	next "light, it roams "
-	next "actively at night."
-
-	page "In the day, it"
-	next "stays quietly"
-	next "underground.@"
+	db   "つきのひかり<WO>あびて　めざめると"
+	next "あちこち　うごきまわる。ひるまは"
+	next "じめんのなかで　じっとしている"
+	dex

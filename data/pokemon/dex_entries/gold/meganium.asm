@@ -1,10 +1,8 @@
-	db "HERB@" ; species name
-	dw 511, 2220 ; height, weight
+	db "ハーブ@" ; species name
+	db 18 ; height
+	dw 1005 ; weight
 
-	db   "The aroma that"
-	next "rises from its"
-	next "petals contains a"
-
-	page "substance that"
-	next "calms aggressive"
-	next "feelings.@"
+	db   "はなびら　から　はっさんされる"
+	next "においに<WA>あらそう　きもちを"
+	next "しずめる　せいぶん<GA>ふくまれる"
+	dex

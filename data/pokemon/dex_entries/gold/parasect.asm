@@ -1,10 +1,8 @@
-	db "MUSHROOM@" ; species name
-	dw 303, 650 ; height, weight
+	db "きのこ@" ; species name
+	db 10 ; height
+	dw 295 ; weight
 
-	db   "It stays mostly in"
-	next "dark, damp places,"
-	next "the preference not"
-
-	page "of the bug, but"
-	next "of the big mush-"
-	next "rooms on its back.@"
+	db   "くらくて　しめった　ばしょをこのむ。"
+	next "それ<WA>ムシではなく　おおきくなった"
+	next "せなか<NO>キノコ<NO>このみなのだ"
+	dex

@@ -1,10 +1,8 @@
-	db "SEA LION@" ; species name
-	dw 507, 2650 ; height, weight
+	db "あしか@" ; species name
+	db 17 ; height
+	dw 1200 ; weight
 
-	db   "Its streamlined"
-	next "body has little"
-	next "drag in water."
-
-	page "The colder the"
-	next "temperature, the"
-	next "friskier it gets.@"
+	db   "からだ<WA>みず<NO>ていこうが"
+	next "すくない　りゅうせんけい。"
+	next "さむくなるほど　げんき<GA>でてくる"
+	dex

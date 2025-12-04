@@ -1,10 +1,8 @@
-	db "RAT@" ; species name
-	dw 204, 410 ; height, weight
+	db "ねずみ@" ; species name
+	db 7 ; height
+	dw 185 ; weight
 
-	db   "Its whiskers help"
-	next "it to maintain"
-	next "balance. Its fangs"
-
-	page "never stop grow-"
-	next "ing, so it gnaws"
-	next "to pare them down.@"
+	db   "ヒゲで　バランス<WO>と<TTE>いる。"
+	next "キバ<WA>どんどん　のびるので"
+	next "なんでも　かじ<TTE>　けず<TTE>いる"
+	dex

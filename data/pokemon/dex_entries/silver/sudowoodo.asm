@@ -1,10 +1,8 @@
-	db "IMITATION@" ; species name
-	dw 311, 840 ; height, weight
+	db "まね@" ; species name
+	db 12 ; height
+	dw 380 ; weight
 
-	db   "It disguises it-"
-	next "self as a tree to"
-	next "avoid attack. It"
-
-	page "hates water, so it"
-	next "will disappear if"
-	next "it starts raining.@"
+	db   "おそわれないよう<NI>きのまねをする。"
+	next "みずがにがてで　あめ<GA>ふりだすと"
+	next "いつのまにか　すがた<WO>けす"
+	dex

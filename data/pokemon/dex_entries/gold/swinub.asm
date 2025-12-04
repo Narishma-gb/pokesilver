@@ -1,10 +1,8 @@
-	db "PIG@" ; species name
-	dw 104, 140 ; height, weight
+	db "いのぶた@" ; species name
+	db 4 ; height
+	dw 65 ; weight
 
-	db   "It rubs its snout"
-	next "on the ground to"
-	next "find and dig up"
-
-	page "food. It sometimes"
-	next "discovers hot"
-	next "springs.@"
+	db   "エサ<WO>さがすため　はなを"
+	next "こすりあわせ　じめん<WO>ほ<TTE>いる。"
+	next "たま<NI>おんせん<WO>ほりあてる"
+	dex

@@ -1,10 +1,8 @@
-	db "EGG@" ; species name
-	dw 104, 60 ; height, weight
+	db "たまご@" ; species name
+	db 4 ; height
+	dw 25 ; weight
 
-	db   "The shell is very"
-	next "durable. Even if"
-	next "it cracks, it can"
-
-	page "survive without"
-	next "spilling the"
-	next "contents.@"
+	db   "ひょうめん<WA>けっこう　かたい。"
+	next "ひびわれても　なかみ<GA>こぼれたり"
+	next "することなく　いきていける"
+	dex

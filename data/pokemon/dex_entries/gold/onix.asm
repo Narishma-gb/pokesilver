@@ -1,10 +1,8 @@
-	db "ROCK SNAKE@" ; species name
-	dw 2810, 4630 ; height, weight
+	db "いわへび@" ; species name
+	db 88 ; height
+	dw 2100 ; weight
 
-	db   "It twists and"
-	next "squirms through"
-	next "the ground. The"
-
-	page "thunderous roar of"
-	next "its tunneling"
-	next "echoes a long way.@"
+	db   "からだ<WO>くねらせ　よじらせ"
+	next "ちちゅう<WO>ほりすすむ　おとは"
+	next "はるか　とおくまで　なりひびく"
+	dex

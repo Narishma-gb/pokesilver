@@ -1,10 +1,8 @@
-	db "INSECT@" ; species name
-	dw 303, 660 ; height, weight
+	db "こんちゅう@" ; species name
+	db 10 ; height
+	dw 300 ; weight
 
-	db   "Poison oozes from"
-	next "all over its body."
-	next "It catches and"
-
-	page "eats small bugs at"
-	next "night that are at-"
-	next "tracted by light.@"
+	db   "ぜんしんから　どく<GA>にじみでる。"
+	next "くらくなると　あかり<NI>むらがった"
+	next "ちいさなムシ<WO>とらえて　たべる"
+	dex

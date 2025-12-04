@@ -1,10 +1,8 @@
-	db "FLYCATCHER@" ; species name
-	dw 507, 340 ; height, weight
+	db "ハエとり@" ; species name
+	db 17 ; height
+	dw 155 ; weight
 
-	db   "ACID that has dis-"
-	next "solved many prey"
-	next "becomes sweeter,"
-
-	page "making it even"
-	next "more effective at"
-	next "attracting prey.@"
+	db   "たくさん<NO>エサ<WO>とかした"
+	next "ようかいえき<WA>あまさ<GA>まして"
+	next "もっと　エサ<WO>あつめやすくなる"
+	dex

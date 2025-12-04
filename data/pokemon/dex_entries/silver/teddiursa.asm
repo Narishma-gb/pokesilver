@@ -1,10 +1,8 @@
-	db "LITTLEBEAR@" ; species name
-	dw 200, 190 ; height, weight
+	db "こぐま@" ; species name
+	db 6 ; height
+	dw 88 ; weight
 
-	db   "Before food be-"
-	next "comes scarce in"
-	next "wintertime, its"
-
-	page "habit is to hoard"
-	next "food in many hid-"
-	next "den locations.@"
+	db   "たべもの<GA>へる　ふゆのまえに"
+	next "あちこち<NI>たべもの<WO>かくす"
+	next "しゅうせい<WO>も<TTE>いる"
+	dex

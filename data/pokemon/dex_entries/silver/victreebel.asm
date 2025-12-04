@@ -1,10 +1,8 @@
-	db "FLYCATCHER@" ; species name
-	dw 507, 340 ; height, weight
+	db "ハエとり@" ; species name
+	db 17 ; height
+	dw 155 ; weight
 
-	db   "This horrifying"
-	next "plant #MON at-"
-	next "tracts prey with"
-
-	page "aromatic honey,"
-	next "then melts them in"
-	next "its mouth.@"
+	db   "ミツのにおい<NI>むらがった　もの"
+	next "すべて　くちのなかで　とかしてしまう"
+	next "きょうぼうな　しょくぶつ#"
+	dex

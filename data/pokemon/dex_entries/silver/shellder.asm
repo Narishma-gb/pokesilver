@@ -1,10 +1,8 @@
-	db "BIVALVE@" ; species name
-	dw 100, 90 ; height, weight
+	db "２まいがい@" ; species name
+	db 3 ; height
+	dw 40 ; weight
 
-	db   "Grains of sand"
-	next "trapped in its"
-	next "shells mix with"
-
-	page "its body fluids to"
-	next "form beautiful"
-	next "pearls.@"
+	db   "カラのなか<NI>たまった　すなつぶが"
+	next "シェルダー<NO>たいえきと　まじりあい"
+	next "きれいな　しんじゅ<GA>うみだされる"
+	dex

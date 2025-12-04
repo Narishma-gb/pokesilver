@@ -1,10 +1,8 @@
-	db "STRINGSPIT@" ; species name
-	dw 108, 190 ; height, weight
+	db "いとはき@" ; species name
+	db 5 ; height
+	dw 85 ; weight
 
-	db   "It spins a web"
-	next "using fine--but"
-	next "durable--thread."
-
-	page "It then waits pa-"
-	next "tiently for prey"
-	next "to be trapped.@"
+	db   "ほそくて　じょうぶな　いとを"
+	next "はりめぐらして　わな<WO>しかけると"
+	next "えもの<GA>かかるの<WO>ひたすらまつ"
+	dex

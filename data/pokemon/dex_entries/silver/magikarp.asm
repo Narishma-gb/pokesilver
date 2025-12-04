@@ -1,10 +1,8 @@
-	db "FISH@" ; species name
-	dw 211, 220 ; height, weight
+	db "さかな@" ; species name
+	db 9 ; height
+	dw 100 ; weight
 
-	db   "For no reason, it"
-	next "jumps and splashes"
-	next "about, making it"
-
-	page "easy for predators"
-	next "like PIDGEOTTO to"
-	next "catch it mid-jump.@"
+	db   "とにかくはねる。いみもなく　はねる。"
+	next "はねているとき<NI>とんできた"
+	next "ピジョンなど<NI>つかま<TTE>しまう"
+	dex

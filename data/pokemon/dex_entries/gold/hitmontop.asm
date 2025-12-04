@@ -1,10 +1,8 @@
-	db "HANDSTAND@" ; species name
-	dw 407, 1060 ; height, weight
+	db "さかだち@" ; species name
+	db 14 ; height
+	dw 480 ; weight
 
-	db   "If you become"
-	next "enchanted by its"
-	next "smooth, elegant,"
-
-	page "dance-like kicks,"
-	next "you may get"
-	next "drilled hard.@"
+	db   "おどるよう<NI>かれいで　なめらかな"
+	next "キックわざ<NI>みとれていると"
+	next "きつい　いちげき<WO>おみまいされる"
+	dex

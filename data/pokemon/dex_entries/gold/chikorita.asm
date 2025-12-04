@@ -1,10 +1,8 @@
-	db "LEAF@" ; species name
-	dw 211, 140 ; height, weight
+	db "はっぱ@" ; species name
+	db 9 ; height
+	dw 64 ; weight
 
-	db   "A sweet aroma"
-	next "gently wafts from"
-	next "the leaf on its"
-
-	page "head. It is docile"
-	next "and loves to soak"
-	next "up the sun's rays.@"
+	db   "あたまのハッパから　ほのか<NI>あまい"
+	next "かおり<GA>ただよう。おとなしくて"
+	next "ひざし<WO>あびるの<GA>だいすき"
+	dex

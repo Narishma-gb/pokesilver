@@ -1,10 +1,8 @@
-	db "KICKING@" ; species name
-	dw 411, 1100 ; height, weight
+	db "キック@" ; species name
+	db 15 ; height
+	dw 498 ; weight
 
-	db   "This amazing #-"
-	next "MON has an awesome"
-	next "sense of balance."
-
-	page "It can kick in"
-	next "succession from"
-	next "any position.@"
+	db   "みごとな　バランスかんかく。"
+	next "どんな　しせいでも　れんぞくで"
+	next "キック<WO>はなてる　すごい　やつ"
+	dex

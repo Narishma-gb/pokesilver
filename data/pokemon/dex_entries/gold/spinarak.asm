@@ -1,10 +1,8 @@
-	db "STRINGSPIT@" ; species name
-	dw 108, 190 ; height, weight
+	db "いとはき@" ; species name
+	db 5 ; height
+	dw 85 ; weight
 
-	db   "It lies still in"
-	next "the same pose for"
-	next "days in its web,"
-
-	page "waiting for its"
-	next "unsuspecting prey"
-	next "to wander close.@"
+	db   "えもの<GA>ちかく<WO>とおりかかるまで"
+	next "じぶん<NO>すで　なんにちも　おなじ"
+	next "かっこうで　じっと　まちつづける"
+	dex

@@ -1,10 +1,8 @@
-	db "BIG HORN@" ; species name
-	dw 407, 1570 ; height, weight
+	db "おおツノ@" ; species name
+	db 14 ; height
+	dw 712 ; weight
 
-	db   "Those who stare at"
-	next "its antlers will"
-	next "gradually lose"
-
-	page "control of their"
-	next "senses and be"
-	next "unable to stand.@"
+	db   "ツノ<NO>かたち<WO>みていると"
+	next "かんかく<GA>だんだん　おかしくなり"
+	next "じぶん<NO>ちからで　たてなくなる"
+	dex

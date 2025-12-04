@@ -1,10 +1,8 @@
-	db "MEGATON@" ; species name
-	dw 407, 6620 ; height, weight
+	db "メガトン@" ; species name
+	db 14 ; height
+	dw 3000 ; weight
 
-	db   "It is capable of"
-	next "blowing itself up."
-	next "It uses this"
-
-	page "explosive force to"
-	next "jump from mountain"
-	next "to mountain.@"
+	db   "わざと　からだ<WO>ばくはつさせ"
+	next "そ<NO>いきおい<WO>りようして"
+	next "やまから　やまへと　とんでいく"
+	dex

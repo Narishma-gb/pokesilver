@@ -1,10 +1,8 @@
-	db "JET@" ; species name
-	dw 200, 260 ; height, weight
+	db "ふんしゃ@" ; species name
+	db 6 ; height
+	dw 120 ; weight
 
-	db   "Using its dorsal"
-	next "fin as a suction"
-	next "pad, it clings to"
-
-	page "a MANTINE's under-"
-	next "side to scavenge"
-	next "for leftovers.@"
+	db   "きゅうばん<NO>よう<NI>へんかした"
+	next "せびれで　マンタイン<NI>くっつき"
+	next "たべのこし<WO>わけてもら<TTE>いる"
+	dex

@@ -1,10 +1,8 @@
-	db "TRANSPORT@" ; species name
-	dw 802, 4850 ; height, weight
+	db "のりもの@" ; species name
+	db 25 ; height
+	dw 2200 ; weight
 
-	db   "They have gentle"
-	next "hearts. Because"
-	next "they rarely fight,"
-
-	page "many have been"
-	next "caught. Their num-"
-	next "ber has dwindled.@"
+	db   "やさしい　こころ<NO>もちぬし。"
+	next "めった<NI>あらそわないため　たくさん"
+	next "つかまえられ　かず<GA>へった"
+	dex

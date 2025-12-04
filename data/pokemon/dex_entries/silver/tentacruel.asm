@@ -1,10 +1,8 @@
-	db "JELLYFISH@" ; species name
-	dw 503, 1210 ; height, weight
+	db "くらげ@" ; species name
+	db 16 ; height
+	dw 550 ; weight
 
-	db   "In battle, it"
-	next "extends all 80 of"
-	next "its tentacles to"
-
-	page "entrap its oppo-"
-	next "nent inside a"
-	next "poisonous net.@"
+	db   "たたかいのとき　８０ぽんの"
+	next "しょくしゅ<WO>すべて　のばして"
+	next "どく<NO>ほういもう<WO>つくりあげる"
+	dex

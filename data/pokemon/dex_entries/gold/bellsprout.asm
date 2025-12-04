@@ -1,10 +1,8 @@
-	db "FLOWER@" ; species name
-	dw 204, 90 ; height, weight
+	db "フラワー@" ; species name
+	db 7 ; height
+	dw 40 ; weight
 
-	db   "Even though its"
-	next "body is extremely"
-	next "skinny, it is"
-
-	page "blindingly fast"
-	next "when catching its"
-	next "prey.@"
+	db   "ひょろっとした　からだつき　だが"
+	next "えもの<WO>とらえるとき<NO>うごきは"
+	next "めにも　とまらないほど　すばやい"
+	dex

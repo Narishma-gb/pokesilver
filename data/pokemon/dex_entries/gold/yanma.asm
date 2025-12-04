@@ -1,10 +1,8 @@
-	db "CLEAR WING@" ; species name
-	dw 311, 840 ; height, weight
+	db "うすばね@" ; species name
+	db 12 ; height
+	dw 380 ; weight
 
-	db   "If it flaps its"
-	next "wings really fast,"
-	next "it can generate"
-
-	page "shock waves that"
-	next "will shatter win-"
-	next "dows in the area.@"
+	db   "こうそくで　ハネ<WO>はばたかせると"
+	next "しょうげき<WA><GA>はっせいして"
+	next "まわり<NO>まどガラス<GA>われていく"
+	dex

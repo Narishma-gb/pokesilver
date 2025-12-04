@@ -1,10 +1,8 @@
-	db "SWINE@" ; species name
-	dw 307, 1230 ; height, weight
+	db "いのしし@" ; species name
+	db 11 ; height
+	dw 558 ; weight
 
-	db   "If it charges at"
-	next "an enemy, the"
-	next "hairs on its back"
-
-	page "stand up straight."
-	next "It is very sensi-"
-	next "tive to sound.@"
+	db   "あいて　めがけて　とっしんするとき"
+	next "せなか<NO>たいもう<GA>さかだつ。"
+	next "おと<NI>ものすごく　びんかん"
+	dex

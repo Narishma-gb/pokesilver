@@ -1,10 +1,8 @@
-	db "SINGLEHORN@" ; species name
-	dw 411, 1190 ; height, weight
+	db "１ぽんヅノ@" ; species name
+	db 15 ; height
+	dw 540 ; weight
 
-	db   "This powerful"
-	next "#MON thrusts"
-	next "its prized horn"
-
-	page "under its enemies'"
-	next "bellies then lifts"
-	next "and throws them.@"
+	db   "じまんのツノ<WO>あいて<NO>おなかの"
+	next "した<NI>ねじこみ　いっき<NI>もちあげ"
+	next "ぶんなげてしまう　ちからもち"
+	dex

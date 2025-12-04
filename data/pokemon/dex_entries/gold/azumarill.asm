@@ -1,10 +1,8 @@
-	db "AQUARABBIT@" ; species name
-	dw 207, 630 ; height, weight
+	db "みずうさぎ@" ; species name
+	db 8 ; height
+	dw 285 ; weight
 
-	db   "By keeping still"
-	next "and listening in-"
-	next "tently, it can"
-
-	page "tell what is in"
-	next "even wild, fast-"
-	next "moving rivers.@"
+	db   "じっと　みみ<WO>すますと"
+	next "はげしい　ながれ<NO>かわ<NO>なかに"
+	next "なに<GA>いるのか　ききわけられる"
+	dex

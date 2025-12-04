@@ -1,10 +1,8 @@
-	db "RIVER CRAB@" ; species name
-	dw 104, 140 ; height, weight
+	db "さわがに@" ; species name
+	db 4 ; height
+	dw 65 ; weight
 
-	db   "The pincers break"
-	next "off easily. If it"
-	next "loses a pincer,"
-
-	page "it somehow becomes"
-	next "incapable of walk-"
-	next "ing sideways.@"
+	db   "ハサミ<WA>かんたん<NI>もげる。"
+	next "ハサミ<GA>なくなると　どうしてだか"
+	next "よこあるき　できなくな<TTE>しまう"
+	dex

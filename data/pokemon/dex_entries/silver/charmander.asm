@@ -1,10 +1,8 @@
-	db "LIZARD@" ; species name
-	dw 200, 190 ; height, weight
+	db "とかげ@" ; species name
+	db 6 ; height
+	dw 85 ; weight
 
-	db   "The flame on its"
-	next "tail indicates"
-	next "CHARMANDER's life"
-
-	page "force. If it is"
-	next "healthy, the flame"
-	next "burns brightly.@"
+	db   "しっぽ<NO>ほのお<WA>ヒトカゲの"
+	next "せいめいりょく<NO>あかし。"
+	next "げんきだと　さかん<NI>もえさかる"
+	dex

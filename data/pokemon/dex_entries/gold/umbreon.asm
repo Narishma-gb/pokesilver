@@ -1,10 +1,8 @@
-	db "MOONLIGHT@" ; species name
-	dw 303, 600 ; height, weight
+	db "げっこう@" ; species name
+	db 10 ; height
+	dw 270 ; weight
 
-	db   "When agitated,"
-	next "this #MON pro-"
-	next "tects itself by"
-
-	page "spraying poisonous"
-	next "sweat from its"
-	next "pores.@"
+	db   "こうふんすると　からだじゅうの"
+	next "けあなから　どくそ<NO>まじった"
+	next "あせ<WO>ふきとばし　みをまもる"
+	dex

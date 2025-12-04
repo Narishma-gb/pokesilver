@@ -1,10 +1,8 @@
-	db "LEAF@" ; species name
-	dw 211, 140 ; height, weight
+	db "はっぱ@" ; species name
+	db 9 ; height
+	dw 64 ; weight
 
-	db   "Its pleasantly"
-	next "aromatic leaves"
-	next "have the ability"
-
-	page "to check the hu-"
-	next "midity and tem-"
-	next "perature.@"
+	db   "いい　かおり<NO>ハッパは"
+	next "まわり<NO>しつどや　おんどを"
+	next "さぐる　のうりょく<WO>も<TTE>いる"
+	dex

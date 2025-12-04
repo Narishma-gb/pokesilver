@@ -1,10 +1,8 @@
-	db "COTTONWEED@" ; species name
-	dw 104, 10 ; height, weight
+	db "わたくさ@" ; species name
+	db 4 ; height
+	dw 5 ; weight
 
-	db   "To keep from being"
-	next "blown away by the"
-	next "wind, they gather"
-
-	page "in clusters. They"
-	next "do enjoy gentle"
-	next "breezes, though.@"
+	db   "ハネッコどうし　あつま<TTE>　かぜに"
+	next "ふきとばされないよう<NI>している。"
+	next "でも　そよかぜ<NI>ふかれるのはすき"
+	dex

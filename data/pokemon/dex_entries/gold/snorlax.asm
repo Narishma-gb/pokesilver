@@ -1,10 +1,8 @@
-	db "SLEEPING@" ; species name
-	dw 611, 10140 ; height, weight
+	db "いねむり@" ; species name
+	db 21 ; height
+	dw 4600 ; weight
 
-	db   "What sounds like"
-	next "its cry may ac-"
-	next "tually be its"
-
-	page "snores or the"
-	next "rumblings of its"
-	next "hungry belly.@"
+	db   "なきごえ　とおも<TTE>も　じつは"
+	next "いびき　だったり　へった　おなかが"
+	next "なりひびく　おと　だったりする"
+	dex

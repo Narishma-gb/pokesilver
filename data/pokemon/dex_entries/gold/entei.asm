@@ -1,10 +1,8 @@
-	db "VOLCANO@" ; species name
-	dw 611, 4370 ; height, weight
+	db "かざん@" ; species name
+	db 21 ; height
+	dw 1980 ; weight
 
-	db   "Volcanoes erupt"
-	next "when it barks. Un-"
-	next "able to restrain"
-
-	page "its extreme power,"
-	next "it races headlong"
-	next "around the land.@"
+	db   "ほえると　かざん<GA>ふんかする。"
+	next "みなぎる　ちから<WO>おさえきれず"
+	next "みちという　みち<WO>かけめぐる"
+	dex

@@ -1,10 +1,8 @@
-	db "HAPPINESS@" ; species name
-	dw 411, 1030 ; height, weight
+	db "しあわせ@" ; species name
+	db 15 ; height
+	dw 468 ; weight
 
-	db   "Anyone who takes"
-	next "even one bite of"
-	next "BLISSEY's egg be-"
-
-	page "comes unfailingly"
-	next "caring and pleas-"
-	next "ant to everyone.@"
+	db   "ハピナス<GA>うんだ　タマゴを"
+	next "ひとくちでも　たべた　ひとは"
+	next "だれにでも　やさしく　なれる"
+	dex

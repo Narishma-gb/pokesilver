@@ -1,10 +1,8 @@
-	db "CLASSY CAT@" ; species name
-	dw 303, 710 ; height, weight
+	db "シャムネコ@" ; species name
+	db 10 ; height
+	dw 320 ; weight
 
-	db   "Many adore it for"
-	next "its sophisticated"
-	next "air. However, it"
-
-	page "will lash out and"
-	next "scratch for little"
-	next "reason.@"
+	db   "ぜんしんから　ただよう　きひんに"
+	next "あこがれる　ひとも　おおいが"
+	next "なにかあると　すぐ　ひっかいてくる"
+	dex

@@ -1,10 +1,8 @@
-	db "SUN@" ; species name
-	dw 211, 580 ; height, weight
+	db "たいよう@" ; species name
+	db 9 ; height
+	dw 265 ; weight
 
-	db   "It uses the fine"
-	next "hair that covers"
-	next "its body to sense"
-
-	page "air currents and"
-	next "predict its ene-"
-	next "my's actions.@"
+	db   "ぜんしん<NO>こまかな　たいもうで"
+	next "くうき<NO>ながれ<WO>かんじとり"
+	next "あいて<NO>こうどう<WO>よそくする"
+	dex

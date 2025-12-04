@@ -1,10 +1,8 @@
-	db "ARMOR@" ; species name
-	dw 607, 4450 ; height, weight
+	db "よろい@" ; species name
+	db 20 ; height
+	dw 2020 ; weight
 
-	db   "Its body can't be"
-	next "harmed by any sort"
-	next "of attack, so it"
-
-	page "is very eager to"
-	next "make challenges"
-	next "against enemies.@"
+	db   "どんな　<KOUGEKI>にも　びくともしない"
+	next "からだ<WO>も<TTE>いるため"
+	next "どんどん　しょうぶ<WO>しかけてくる"
+	dex

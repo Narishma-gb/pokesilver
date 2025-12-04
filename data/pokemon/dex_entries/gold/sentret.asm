@@ -1,10 +1,8 @@
-	db "SCOUT@" ; species name
-	dw 207, 130 ; height, weight
+	db "みはり@" ; species name
+	db 8 ; height
+	dw 60 ; weight
 
-	db   "A very cautious"
-	next "#MON, it raises"
-	next "itself up using"
-
-	page "its tail to get a"
-	next "better view of its"
-	next "surroundings.@"
+	db   "シッポ<WO>たてて　すこしでも"
+	next "とおく<NO>ようす<WO>しらべている"
+	next "けいかいしん<GA>つよい　#"
+	dex

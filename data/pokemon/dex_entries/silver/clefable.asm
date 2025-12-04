@@ -1,10 +1,8 @@
-	db "FAIRY@" ; species name
-	dw 403, 880 ; height, weight
+	db "ようせい@" ; species name
+	db 13 ; height
+	dw 400 ; weight
 
-	db   "Its very sensitive"
-	next "ears lets it dis-"
-	next "tinguish distant"
-
-	page "sounds. As a re-"
-	next "sult, it prefers"
-	next "quiet places.@"
+	db   "どんな<NI>とおく<NO>ものおとも"
+	next "ききわけられるほど　みみ<GA>いいので"
+	next "ふだん<WA>しずかなところ<WO>このむ"
+	dex

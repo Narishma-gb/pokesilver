@@ -1,10 +1,8 @@
-	db "ROCK@" ; species name
-	dw 104, 440 ; height, weight
+	db "がんせき@" ; species name
+	db 4 ; height
+	dw 200 ; weight
 
-	db   "It uses its arms"
-	next "to steadily climb"
-	next "steep mountain"
-
-	page "paths. It swings"
-	next "its fists around"
-	next "if angered.@"
+	db   "りょうて<WO>つかい　どんな　けわしい"
+	next "やまみちも　どんどん　のぼ<TTE>いく。"
+	next "おこると　げんこつ<WO>ふりまわす"
+	dex

@@ -1,10 +1,8 @@
-	db "FOX@" ; species name
-	dw 200, 220 ; height, weight
+	db "きつね@" ; species name
+	db 6 ; height
+	dw 99 ; weight
 
-	db   "If it is attacked"
-	next "by an enemy that"
-	next "is stronger than"
-
-	page "itself, it feigns"
-	next "injury to fool the"
-	next "enemy and escapes.@"
+	db   "じぶんより　つよい　あいてに"
+	next "おそわれると　キズついた　ふりをして"
+	next "まどわせ　そのすき<NI>にげてしまう"
+	dex

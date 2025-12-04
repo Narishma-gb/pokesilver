@@ -1,10 +1,8 @@
-	db "FIRE HORSE@" ; species name
-	dw 303, 660 ; height, weight
+	db "ひのうま@" ; species name
+	db 10 ; height
+	dw 300 ; weight
 
-	db   "It is a weak run-"
-	next "ner immediately"
-	next "after birth. It"
-
-	page "gradually becomes"
-	next "faster by chasing"
-	next "after its parents.@"
+	db   "うまれて　すぐ<WA>はしるのがへた。"
+	next "おや<WO>おいかけるうち<NI>どんどん"
+	next "はやく　はしれるようになるのだ"
+	dex

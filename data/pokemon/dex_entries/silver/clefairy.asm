@@ -1,10 +1,8 @@
-	db "FAIRY@" ; species name
-	dw 200, 170 ; height, weight
+	db "ようせい@" ; species name
+	db 6 ; height
+	dw 75 ; weight
 
-	db   "Its adorable be-"
-	next "havior and cry"
-	next "make it highly"
-
-	page "popular. However,"
-	next "this cute #MON"
-	next "is rarely found.@"
+	db   "あいくるしい　しぐさと　なきごえで"
+	next "かわいいと　だいにんき<NO>#。"
+	next "だ<GA>めった<NI>みつからない"
+	dex

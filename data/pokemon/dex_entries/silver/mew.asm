@@ -1,10 +1,8 @@
-	db "NEW SPECIE@" ; species name
-	dw 104, 90 ; height, weight
+	db "しんしゅ@" ; species name
+	db 4 ; height
+	dw 40 ; weight
 
-	db   "Its DNA is said to"
-	next "contain the genet-"
-	next "ic codes of all"
-
-	page "#MON, so it can"
-	next "use all kinds of"
-	next "techniques.@"
+	db   "いでんしに<WA>すべて<NO>#の"
+	next "じょうほう<GA>ふくまれているので"
+	next "あらゆる　わざ<GA>つかえるという"
+	dex

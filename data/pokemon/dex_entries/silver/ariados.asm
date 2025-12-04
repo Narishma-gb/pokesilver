@@ -1,10 +1,8 @@
-	db "LONG LEG@" ; species name
-	dw 307, 740 ; height, weight
+	db "あしなが@" ; species name
+	db 11 ; height
+	dw 335 ; weight
 
-	db   "A single strand of"
-	next "a special string"
-	next "is endlessly spun"
-
-	page "out of its rear."
-	next "The string leads"
-	next "back to its nest.@"
+	db   "つね<NI>おしりから　でている"
+	next "とくべつな　いっぽん<NO>いとを"
+	next "たど<TTE>いくと　すにつなが<TTE>いる"
+	dex

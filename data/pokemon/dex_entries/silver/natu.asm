@@ -1,10 +1,8 @@
-	db "LITTLEBIRD@" ; species name
-	dw 8, 40 ; height, weight
+	db "ことり@" ; species name
+	db 2 ; height
+	dw 20 ; weight
 
-	db   "It usually forages"
-	next "for food on the"
-	next "ground but may, on"
-
-	page "rare occasions,"
-	next "hop onto branches"
-	next "to peck at shoots.@"
+	db   "ふだん<WA>ちじょうで　エサをさがすが"
+	next "ごくたま<NI>きのえだ<NI>とびの<TTE>"
+	next "きのめ<WO>ついばんだりする"
+	dex

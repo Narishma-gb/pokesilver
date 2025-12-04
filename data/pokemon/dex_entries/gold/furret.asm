@@ -1,10 +1,8 @@
-	db "LONG BODY@" ; species name
-	dw 511, 720 ; height, weight
+	db "どうなが@" ; species name
+	db 18 ; height
+	dw 325 ; weight
 
-	db   "It makes a nest to"
-	next "suit its long and"
-	next "skinny body. The"
-
-	page "nest is impossible"
-	next "for other #MON"
-	next "to enter.@"
+	db   "ほそながい　からだ<NO>かたちに"
+	next "あわせた　す<WO>つくり　ほかの"
+	next "#<WA>はいれなくしている"
+	dex

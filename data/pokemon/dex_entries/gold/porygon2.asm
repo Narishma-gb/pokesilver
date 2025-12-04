@@ -1,10 +1,8 @@
-	db "VIRTUAL@" ; species name
-	dw 200, 720 ; height, weight
+	db "バーチャル@" ; species name
+	db 6 ; height
+	dw 325 ; weight
 
-	db   "This upgraded"
-	next "version of PORYGON"
-	next "is designed for"
-
-	page "space exploration."
-	next "It can't fly,"
-	next "though.@"
+	db   "わくせい　かいはつ<GA>できるよう"
+	next "ポリゴン<WO>バージョンアップしたが"
+	next "まだ　そらも　とべない"
+	dex

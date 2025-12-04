@@ -1,10 +1,8 @@
-	db "DRAGON@" ; species name
-	dw 311, 550 ; height, weight
+	db "ドラゴン@" ; species name
+	db 12 ; height
+	dw 250 ; weight
 
-	db   "Its fin-tips leak"
-	next "poison. Its fins"
-	next "and bones are"
-
-	page "highly valued as"
-	next "ingredients in"
-	next "herbal medicine.@"
+	db   "ひれ<NO>さきから　どく<WO>ぶんぴつ。"
+	next "ひれや　ほね<WA>かんぽうやくの"
+	next "ざいりょうとして　ちょうほうされる"
+	dex

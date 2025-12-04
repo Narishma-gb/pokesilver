@@ -1,10 +1,8 @@
-	db "BEAK@" ; species name
-	dw 311, 840 ; height, weight
+	db "くちばし@" ; species name
+	db 12 ; height
+	dw 380 ; weight
 
-	db   "It cleverly uses"
-	next "its thin, long"
-	next "beak to pluck and"
-
-	page "eat small insects"
-	next "that hide under"
-	next "the ground.@"
+	db   "ほそながい　くちばし<WO>じょうずに"
+	next "つか<TTE>　じめんのなか<NO>ちいさな"
+	next "ムシ<WO>つまみだし　たべてしまう"
+	dex

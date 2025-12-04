@@ -1,10 +1,8 @@
-	db "LEGENDARY@" ; species name
-	dw 603, 3420 ; height, weight
+	db "でんせつ@" ; species name
+	db 19 ; height
+	dw 1550 ; weight
 
-	db   "This legendary"
-	next "Chinese POKEMON is"
-	next "considered magnif-"
-
-	page "icent. Many people"
-	next "are enchanted by"
-	next "its grand mane.@"
+	db   "りっぱな　たてがみ<NI>みとれる"
+	next "ひとがいるほど　どうどうとしている"
+	next "ちゅうごく<NO>でんせつ#"
+	dex

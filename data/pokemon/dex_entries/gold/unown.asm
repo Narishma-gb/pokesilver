@@ -1,10 +1,8 @@
-	db "SYMBOL@" ; species name
-	dw 108, 110 ; height, weight
+	db "シンボル@" ; species name
+	db 5 ; height
+	dw 50 ; weight
 
-	db   "Their shapes look"
-	next "like hieroglyphs"
-	next "on ancient tab-"
-
-	page "lets. It is said"
-	next "that the two are"
-	next "somehow related.@"
+	db   "すがたかたち<GA>むかし<NO>せきばんに"
+	next "しるされた　もじ<NI>にており"
+	next "かんけいあるのではと　ウワサされる"
+	dex

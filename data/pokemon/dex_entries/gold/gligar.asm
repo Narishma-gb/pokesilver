@@ -1,10 +1,8 @@
-	db "FLYSCORPIO@" ; species name
-	dw 307, 1430 ; height, weight
+	db "とびさそり@" ; species name
+	db 11 ; height
+	dw 648 ; weight
 
-	db   "It flies straight"
-	next "at its target's"
-	next "face then clamps"
-
-	page "down on the star-"
-	next "tled victim to"
-	next "inject poison.@"
+	db   "がんめん　めがけて　とんでくる。"
+	next "はりつかれた　えもの<GA>おどろく"
+	next "あいだ<NI>どくバリ<WO>さしこむ"
+	dex

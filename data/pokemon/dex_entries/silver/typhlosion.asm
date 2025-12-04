@@ -1,11 +1,8 @@
-	db "VOLCANO@" ; species name
-	dw 507, 1750 ; height, weight
+	db "かざん@" ; species name
+	db 17 ; height
+	dw 795 ; weight
 
-	db   "It has a secret,"
-	next "devastating move."
-	next "It rubs its blaz-"
-	next ""
-
-	page "ing fur together"
-	next "to cause huge"
-	next "explosions.@"
+	db   "もえさかる　たいもう<WO>こすりあわせ"
+	next "ばくふう<WO>おこして　<KOUGEKI>する"
+	next "おおわざ<WO>かくしも<TTE>いる"
+	dex

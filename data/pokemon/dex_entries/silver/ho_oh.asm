@@ -1,10 +1,8 @@
-	db "RAINBOW@" ; species name
-	dw 1206, 4390 ; height, weight
+	db "にじいろ@" ; species name
+	db 38 ; height
+	dw 1990 ; weight
 
-	db   "A legend says that"
-	next "its body glows in"
-	next "seven colors. A"
-
-	page "rainbow is said to"
-	next "form behind it"
-	next "when it flies.@"
+	db   "からだ<WA>なないろ<NI>かがやき"
+	next "とんだあと<NI>にじ<GA>できると"
+	next "しんわ<NI>のこされている　#"
+	dex

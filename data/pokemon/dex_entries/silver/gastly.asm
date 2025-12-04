@@ -1,10 +1,8 @@
-	db "GAS@" ; species name
-	dw 403, 2 ; height, weight
+	db "ガスじょう@" ; species name
+	db 13 ; height
+	dw 1 ; weight
 
-	db   "Its thin body is"
-	next "made of gas. It"
-	next "can envelop an"
-
-	page "opponent of any"
-	next "size and cause"
-	next "suffocation.@"
+	db   "ガスでできた　うすい　からだは"
+	next "どんな　おおきさ<NO>あいても"
+	next "つつみこみ　いきのね<WO>とめる"
+	dex

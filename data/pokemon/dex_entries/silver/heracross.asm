@@ -1,10 +1,8 @@
-	db "SINGLEHORN@" ; species name
-	dw 411, 1190 ; height, weight
+	db "１ぽんヅノ@" ; species name
+	db 15 ; height
+	dw 540 ; weight
 
-	db   "Usually docile,"
-	next "but if disturbed"
-	next "while sipping"
-
-	page "honey, it chases"
-	next "off the intruder"
-	next "with its horn.@"
+	db   "ふだん<WA>とても　おとなしいが"
+	next "ミツをすうの<WO>じゃまする　やつは"
+	next "ツノ<WO>つか<TTE>　おいはらう"
+	dex

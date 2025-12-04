@@ -1,10 +1,8 @@
-	db "BIRD@" ; species name
-	dw 411, 870 ; height, weight
+	db "とり@" ; species name
+	db 15 ; height
+	dw 395 ; weight
 
-	db   "It spreads its"
-	next "beautiful wings"
-	next "wide to frighten"
-
-	page "its enemies. It"
-	next "can fly at Mach 2"
-	next "speed.@"
+	db   "うつくしい　ハネ<WA>ひろげて"
+	next "あいて<WO>いかく　するだけでなく"
+	next "マッハ２で　そらをとべる"
+	dex

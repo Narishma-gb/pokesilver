@@ -1,10 +1,8 @@
-	db "SCOUT@" ; species name
-	dw 207, 130 ; height, weight
+	db "みはり@" ; species name
+	db 8 ; height
+	dw 60 ; weight
 
-	db   "It stands on its"
-	next "tail so it can see"
-	next "a long way. If it"
-
-	page "spots an enemy, it"
-	next "cries loudly to"
-	next "warn its kind.@"
+	db   "とおくまで　みれるよう<NI>シッポを"
+	next "つか<TTE>たつ。てき<WO>みつけると"
+	next "おおごえで　なかま<NI>しらせる"
+	dex

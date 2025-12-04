@@ -1,10 +1,8 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+	db "ねずみ@" ; species name
+	db 4 ; height
+	dw 60 ; weight
 
-	db   "This intelligent"
-	next "#MON roasts"
-	next "hard BERRIES with"
-
-	page "electricity to"
-	next "make them tender"
-	next "enough to eat.@"
+	db   "かたい　きのみも　でんげきで"
+	next "やいて　やわらかくしてから"
+	next "たべる　ちえ<WO>もちあわせている"
+	dex

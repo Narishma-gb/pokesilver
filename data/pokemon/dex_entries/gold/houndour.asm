@@ -1,10 +1,8 @@
-	db "DARK@" ; species name
-	dw 200, 240 ; height, weight
+	db "ダーク@" ; species name
+	db 6 ; height
+	dw 108 ; weight
 
-	db   "It uses different"
-	next "kinds of cries for"
-	next "communicating with"
-
-	page "others of its kind"
-	next "and for pursuing"
-	next "its prey.@"
+	db   "なかま<NI>れんらく　するときと"
+	next "えもの<WO>おいつめるときでは"
+	next "なきごえ<NO>しゅるい<GA>ちがうのだ"
+	dex

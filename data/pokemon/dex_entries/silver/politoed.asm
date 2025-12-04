@@ -1,10 +1,8 @@
-	db "FROG@" ; species name
-	dw 307, 750 ; height, weight
+	db "かえる@" ; species name
+	db 11 ; height
+	dw 339 ; weight
 
-	db   "Whenever three or"
-	next "more of these get"
-	next "together, they"
-
-	page "sing in a loud"
-	next "voice that sounds"
-	next "like bellowing.@"
+	db   "３びき　いじょう　ニョロトノが"
+	next "あつまると　かならず　どなるような"
+	next "なきごえで　がっしょう<WO>はじめる"
+	dex

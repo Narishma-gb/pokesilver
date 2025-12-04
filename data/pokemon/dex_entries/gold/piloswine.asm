@@ -1,10 +1,8 @@
-	db "SWINE@" ; species name
-	dw 307, 1230 ; height, weight
+	db "いのしし@" ; species name
+	db 11 ; height
+	dw 558 ; weight
 
-	db   "Because the long"
-	next "hair all over its"
-	next "body obscures its"
-
-	page "sight, it just"
-	next "keeps charging"
-	next "repeatedly.@"
+	db   "ながい　たいもう<NI>おおわれて"
+	next "めのまえ<NO>ようす<GA>わからず"
+	next "ひたすら<NI>とっしん<WO>くりかえす"
+	dex

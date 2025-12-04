@@ -1,10 +1,8 @@
-	db "PUPPY@" ; species name
-	dw 204, 420 ; height, weight
+	db "こいぬ@" ; species name
+	db 7 ; height
+	dw 190 ; weight
 
-	db   "Extremely loyal,"
-	next "it will fearlessly"
-	next "bark at any oppo-"
-
-	page "nent to protect"
-	next "its own trainer"
-	next "from harm.@"
+	db   "ちゅうじつな　せいかくで"
+	next "おや<NO><TRAINER><WO>まもるため"
+	next "ひっし<NI>あいて<NI>ほえかかる"
+	dex

@@ -1,10 +1,8 @@
-	db "RIVER CRAB@" ; species name
-	dw 104, 140 ; height, weight
+	db "さわがに@" ; species name
+	db 4 ; height
+	dw 65 ; weight
 
-	db   "If it senses dan-"
-	next "ger approaching,"
-	next "it cloaks itself"
-
-	page "with bubbles from"
-	next "its mouth so it"
-	next "will look bigger.@"
+	db   "きけんがせまると　くちから　はきだす"
+	next "あわで　ぜんしん<WO>つつんで"
+	next "からだ<WO>おおきく　みせようとする"
+	dex

@@ -1,10 +1,8 @@
-	db "LONG BODY@" ; species name
-	dw 511, 720 ; height, weight
+	db "どうなが@" ; species name
+	db 18 ; height
+	dw 325 ; weight
 
-	db   "There is no tell-"
-	next "ing where the tail"
-	next "begins. Despite"
-
-	page "its short legs, it"
-	next "is quick at hunt-"
-	next "ing RATTATA.@"
+	db   "どこから　シッポか　よくわからない。"
+	next "てあし<WA>みじかい<GA>すばしっこく"
+	next "うごきまわ<TTE>　コラッタ<WO>おそう"
+	dex

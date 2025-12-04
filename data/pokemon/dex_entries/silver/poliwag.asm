@@ -1,10 +1,8 @@
-	db "TADPOLE@" ; species name
-	dw 200, 270 ; height, weight
+	db "おたま@" ; species name
+	db 6 ; height
+	dw 124 ; weight
 
-	db   "The direction of"
-	next "its belly spiral"
-	next "differs by area."
-
-	page "The equator is"
-	next "thought to have an"
-	next "effect on this.@"
+	db   "おなか<NO>うずまき<NO>むきは"
+	next "ちほうによ<TTE>　ことなる。どうやら"
+	next "せきどう<GA>かんけい　するらしい"
+	dex

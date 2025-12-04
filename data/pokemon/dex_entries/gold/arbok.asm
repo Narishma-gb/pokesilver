@@ -1,10 +1,8 @@
-	db "COBRA@" ; species name
-	dw 1106, 1430 ; height, weight
+	db "コブラ@" ; species name
+	db 35 ; height
+	dw 650 ; weight
 
-	db   "Transfixing prey"
-	next "with the face-like"
-	next "pattern on its"
-
-	page "belly, it binds"
-	next "and poisons the"
-	next "frightened victim.@"
+	db   "おなか<NO>おそろしい　かおのような"
+	next "もよう<WO>みせつけ　すくんだ"
+	next "えもの<WO>しめつけ　どくをあたえる"
+	dex

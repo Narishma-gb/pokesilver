@@ -1,10 +1,8 @@
-	db "PUNCHING@" ; species name
-	dw 407, 1110 ; height, weight
+	db "パンチ@" ; species name
+	db 14 ; height
+	dw 502 ; weight
 
-	db   "Its punches slice"
-	next "the air. However,"
-	next "it seems to need a"
-
-	page "short break after"
-	next "fighting for three"
-	next "minutes.@"
+	db   "くうきをも　きりさく　パンチ。"
+	next "だ<GA>３ぷんかん　<KOUGEKI>すると"
+	next "ひとやすみ　したくなるらしい"
+	dex

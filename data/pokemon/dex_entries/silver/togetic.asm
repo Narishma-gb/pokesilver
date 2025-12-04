@@ -1,10 +1,8 @@
-	db "HAPPINESS@" ; species name
-	dw 200, 70 ; height, weight
+	db "しあわせ@" ; species name
+	db 6 ; height
+	dw 32 ; weight
 
-	db   "It grows dispirit-"
-	next "ed if it is not"
-	next "with kind people."
-
-	page "It can float in"
-	next "midair without"
-	next "moving its wings.@"
+	db   "やさしいひと<NO>そば<NI>いないと"
+	next "げんき<GA>でなくな<TTE>しまう。"
+	next "はねをうごかさず<NI>そらにうかべる"
+	dex

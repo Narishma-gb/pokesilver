@@ -1,10 +1,8 @@
-	db "MOLD@" ; species name
-	dw 200, 450 ; height, weight
+	db "はっこう@" ; species name
+	db 6 ; height
+	dw 205 ; weight
 
-	db   "The BERRIES it"
-	next "stores in its"
-	next "vase-like shell"
-
-	page "decompose and"
-	next "become a gooey"
-	next "liquid.@"
+	db   "つぼのような　こうら<NO>なかに"
+	next "たくわえられた　きのみ<WA>とけて"
+	next "ドロドロ<NO>えきたい<NI>なるという"
+	dex

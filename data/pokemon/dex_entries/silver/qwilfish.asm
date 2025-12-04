@@ -1,10 +1,8 @@
-	db "BALLOON@" ; species name
-	dw 108, 90 ; height, weight
+	db "ふうせん@" ; species name
+	db 5 ; height
+	dw 39 ; weight
 
-	db   "The small spikes"
-	next "covering its body"
-	next "developed from"
-
-	page "scales. They in-"
-	next "ject a toxin that"
-	next "causes fainting.@"
+	db   "ぜんしん<NO>ちいさな　ハリは"
+	next "うろこ<GA>へんかしたもの。"
+	next "ささると　どくで　きをうしなう"
+	dex

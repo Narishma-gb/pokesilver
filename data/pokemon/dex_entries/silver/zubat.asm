@@ -1,10 +1,8 @@
-	db "BAT@" ; species name
-	dw 207, 170 ; height, weight
+	db "こうもり@" ; species name
+	db 8 ; height
+	dw 75 ; weight
 
-	db   "Capable of flying"
-	next "safely in dark"
-	next "places, it emits"
-
-	page "ultrasonic cries"
-	next "to check for any"
-	next "obstacles.@"
+	db   "くらいところも　とびまわれるのは"
+	next "ちょうおんぱ<WO>だして　まわりの"
+	next "じょうきょう<WO>しらべるからだ"
+	dex

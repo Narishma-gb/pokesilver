@@ -1,10 +1,8 @@
-	db "MOUSE@" ; species name
-	dw 207, 660 ; height, weight
+	db "ねずみ@" ; species name
+	db 8 ; height
+	dw 300 ; weight
 
-	db   "When its electric-"
-	next "ity builds, its"
-	next "muscles are stimu-"
-
-	page "lated, and it be-"
-	next "comes more aggres-"
-	next "sive than usual.@"
+	db   "でんき<GA>たま<TTE>くると"
+	next "きんにく<GA>しげきされ　いつもより"
+	next "<KOUGEKI>てき<NI>な<TTE>しまう"
+	dex

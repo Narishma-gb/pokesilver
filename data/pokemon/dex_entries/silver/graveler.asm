@@ -1,10 +1,8 @@
-	db "ROCK@" ; species name
-	dw 303, 2320 ; height, weight
+	db "がんせき@" ; species name
+	db 10 ; height
+	dw 1050 ; weight
 
-	db   "A slow walker, it"
-	next "rolls to move. It"
-	next "pays no attention"
-
-	page "to any object that"
-	next "happens to be in"
-	next "its path.@"
+	db   "あるいても　おそいので"
+	next "ころが<TTE>　いどう。とちゅうに"
+	next "なにがあ<TTE>も　きにしない"
+	dex

@@ -1,10 +1,8 @@
-	db "SYMBOL@" ; species name
-	dw 108, 110 ; height, weight
+	db "シンボル@" ; species name
+	db 5 ; height
+	dw 50 ; weight
 
-	db   "Its flat, thin"
-	next "body is always"
-	next "stuck on walls."
-
-	page "Its shape appears"
-	next "to have some mean-"
-	next "ing.@"
+	db   "からだじたい<WA>うすっぺらく"
+	next "いつも　かべ<NI>はりついている。"
+	next "かたち<NI>なにか　いみがあるらしい"
+	dex

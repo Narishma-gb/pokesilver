@@ -1,10 +1,8 @@
-	db "BIG JAW@" ; species name
-	dw 200, 210 ; height, weight
+	db "おおあご@" ; species name
+	db 6 ; height
+	dw 95 ; weight
 
-	db   "Its well-developed"
-	next "jaws are powerful"
-	next "and capable of"
-
-	page "crushing anything."
-	next "Even its trainer"
-	next "must be careful.@"
+	db   "はったつした　あご<WA>パワフルで"
+	next "なんでも　かみくだいて　しまうので"
+	next "おやの<TRAINER>でも　ようちゅうい"
+	dex

@@ -1,10 +1,8 @@
-	db "HARD SHELL@" ; species name
-	dw 311, 3350 ; height, weight
+	db "だんがん@" ; species name
+	db 12 ; height
+	dw 1520 ; weight
 
-	db   "Its shell is as"
-	next "hard as sheet"
-	next "rock, and it is"
-
-	page "also very strong."
-	next "Its THRASHING can"
-	next "topple a mountain.@"
+	db   "がんばんのような　かたい　カラに"
+	next "おおわれている<GA>ちから<WA>つよく"
+	next "あばれると　やまも　くずれてしまう"
+	dex

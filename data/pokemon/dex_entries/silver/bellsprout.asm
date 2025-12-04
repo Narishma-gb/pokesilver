@@ -1,10 +1,8 @@
-	db "FLOWER@" ; species name
-	dw 204, 90 ; height, weight
+	db "フラワー@" ; species name
+	db 7 ; height
+	dw 40 ; weight
 
-	db   "It plants its feet"
-	next "deep underground"
-	next "to replenish wa-"
-
-	page "ter. It can't es-"
-	next "cape its enemy"
-	next "while it's rooted.@"
+	db   "あし<WO>じめんふかくまで　のばして"
+	next "すいぶん<WO>ほきゅうする。そのとき"
+	next "おそわれると　にげだせない"
+	dex

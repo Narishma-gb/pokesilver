@@ -1,10 +1,8 @@
-	db "DRILL@" ; species name
-	dw 403, 1320 ; height, weight
+	db "ドリル@" ; species name
+	db 13 ; height
+	dw 600 ; weight
 
-	db   "Its body is cover-"
-	next "ed with needle-"
-	next "like scales. It"
-
-	page "never shows signs"
-	next "of shrinking from"
-	next "any attack.@"
+	db   "ぜんしん　はりのような　ウロコで"
+	next "おおわれている。どんな　<KOUGEKI>にも"
+	next "ひるんだ　ようす<WA>みせない"
+	dex

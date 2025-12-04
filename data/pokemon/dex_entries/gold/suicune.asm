@@ -1,10 +1,8 @@
-	db "AURORA@" ; species name
-	dw 607, 4120 ; height, weight
+	db "オーロラ@" ; species name
+	db 20 ; height
+	dw 1870 ; weight
 
-	db   "Said to be the"
-	next "reincarnation of"
-	next "north winds, it"
-
-	page "can instantly"
-	next "purify filthy,"
-	next "murky water.@"
+	db   "いっしゅんで　きたなく　にごった"
+	next "みずも　きよめる　ちからをもつ。"
+	next "きたかぜ<NO>うまれかわり　という"
+	dex

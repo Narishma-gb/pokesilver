@@ -1,10 +1,8 @@
-	db "ROYAL@" ; species name
-	dw 607, 1750 ; height, weight
+	db "おうじゃ@" ; species name
+	db 20 ; height
+	dw 795 ; weight
 
-	db   "When its head was"
-	next "bitten, toxins"
-	next "entered SLOWPOKE's"
-
-	page "head and unlocked"
-	next "an extraordinary"
-	next "power.@"
+	db   "かまれたとき　あたま<NI>しみこんだ"
+	next "どくそ<NI>よ<TTE>　ただならない"
+	next "のうりょく<NI>めざめた　ヤドン"
+	dex

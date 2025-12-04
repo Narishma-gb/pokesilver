@@ -1,10 +1,8 @@
-	db "ANGLER@" ; species name
-	dw 108, 260 ; height, weight
+	db "あんこう@" ; species name
+	db 5 ; height
+	dw 120 ; weight
 
-	db   "It shoots positive"
-	next "and negative elec-"
-	next "tricity between"
-
-	page "the tips of its"
-	next "two antennae and"
-	next "zaps its enemies.@"
+	db   "２つ<NO>しょくしゅ<NO>さきから"
+	next "プラスと　マイナス<NO>でんきを"
+	next "ながして　あいて<WO>しびれさせる"
+	dex

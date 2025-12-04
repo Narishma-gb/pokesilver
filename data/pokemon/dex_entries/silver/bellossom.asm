@@ -1,10 +1,8 @@
-	db "FLOWER@" ; species name
-	dw 104, 130 ; height, weight
+	db "フラワー@" ; species name
+	db 4 ; height
+	dw 58 ; weight
 
-	db   "Plentiful in the"
-	next "tropics. When it"
-	next "dances, its petals"
-
-	page "rub together and"
-	next "make a pleasant"
-	next "ringing sound.@"
+	db   "なんごく<NI>おおく　せいそくする。"
+	next "おどるとき　はなびら<GA>ふれあい"
+	next "ここちよい　おと<GA>なりひびく"
+	dex

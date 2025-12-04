@@ -1,10 +1,8 @@
-	db "WILD BULL@" ; species name
-	dw 407, 1950 ; height, weight
+	db "あばれうし@" ; species name
+	db 14 ; height
+	dw 884 ; weight
 
-	db   "They fight each"
-	next "other by locking"
-	next "horns. The herd's"
-
-	page "protector takes"
-	next "pride in its bat-"
-	next "tle-scarred horns.@"
+	db   "ツノ<WO>つきあわせて　たたかう。"
+	next "むれをまもる　つよい　ケンタロスは"
+	next "キズだらけ<NO>ツノ<WO>じまんする"
+	dex

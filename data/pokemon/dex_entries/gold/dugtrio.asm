@@ -1,10 +1,8 @@
-	db "MOLE@" ; species name
-	dw 204, 730 ; height, weight
+	db "もぐら@" ; species name
+	db 7 ; height
+	dw 333 ; weight
 
-	db   "Its three heads"
-	next "bob separately up"
-	next "and down to loosen"
-
-	page "the soil nearby,"
-	next "making it easier"
-	next "for it to burrow.@"
+	db   "３つ<NO>あたま<GA>たがいちがいに"
+	next "うごくの<WA>まわり<NO>つちを"
+	next "やわらかくして　ほりやすくするため"
+	dex

@@ -1,10 +1,8 @@
-	db "GOLDFISH@" ; species name
-	dw 200, 330 ; height, weight
+	db "きんぎょ@" ; species name
+	db 6 ; height
+	dw 150 ; weight
 
-	db   "A strong swimmer,"
-	next "it is capable of"
-	next "swimming nonstop"
-
-	page "up fast streams at"
-	next "a steady speed of"
-	next "five knots.@"
+	db   "きゅうな　ながれ<NO>かわも"
+	next "５ノット<NO>スピードで"
+	next "ぐんぐん　さかのぼ<TTE>いく"
+	dex

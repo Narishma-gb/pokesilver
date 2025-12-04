@@ -1,10 +1,8 @@
-	db "LONELY@" ; species name
-	dw 104, 140 ; height, weight
+	db "こどく@" ; species name
+	db 4 ; height
+	dw 65 ; weight
 
-	db   "If it is sad or"
-	next "lonely, the skull"
-	next "it wears shakes,"
-
-	page "and emits a plain-"
-	next "tive and mournful"
-	next "sound.@"
+	db   "かなしいとき　さみしいとき"
+	next "かぶ<TTE>いる　ホネ<GA>ゆれて"
+	next "はかなく　せつない　おとがする"
+	dex

@@ -1,10 +1,8 @@
-	db "VIRTUAL@" ; species name
-	dw 207, 800 ; height, weight
+	db "バーチャル@" ; species name
+	db 8 ; height
+	dw 365 ; weight
 
-	db   "It is a manmade"
-	next "#MON. Since it"
-	next "doesn't breathe,"
-
-	page "people are eager"
-	next "to try it in any"
-	next "environment.@"
+	db   "こきゅう<WO>していないので"
+	next "どんなところでも　かつやく　できると"
+	next "きたいされる　じんこう<NO>#"
+	dex

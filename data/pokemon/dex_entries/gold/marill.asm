@@ -1,10 +1,8 @@
-	db "AQUAMOUSE@" ; species name
-	dw 104, 190 ; height, weight
+	db "みずねずみ@" ; species name
+	db 4 ; height
+	dw 85 ; weight
 
-	db   "The tip of its"
-	next "tail, which con-"
-	next "tains oil that is"
-
-	page "lighter than wa-"
-	next "ter, lets it swim"
-	next "without drowning.@"
+	db   "しっぽ<NO>さきに<WA>みずよりも"
+	next "かるい　あぶら<GA>つま<TTE>いるから"
+	next "おぼれることなく　かわをすすめる"
+	dex

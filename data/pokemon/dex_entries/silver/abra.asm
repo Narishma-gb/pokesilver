@@ -1,10 +1,8 @@
-	db "PSI@" ; species name
-	dw 211, 430 ; height, weight
+	db "ねんりき@" ; species name
+	db 9 ; height
+	dw 195 ; weight
 
-	db   "If it decides to"
-	next "TELEPORT randomly,"
-	next "it creates the"
-
-	page "illusion that it"
-	next "has created copies"
-	next "of itself.@"
+	db   "きまぐれ<NI>テレポートを"
+	next "くりかえしていると　まるで"
+	next "ぶんしん　したかのよう<NI>みえる"
+	dex

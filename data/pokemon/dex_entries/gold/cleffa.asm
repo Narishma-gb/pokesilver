@@ -1,10 +1,8 @@
-	db "STARSHAPE@" ; species name
-	dw 100, 70 ; height, weight
+	db "ほしがた@" ; species name
+	db 3 ; height
+	dw 30 ; weight
 
-	db   "Because of its"
-	next "unusual, star-like"
-	next "silhouette, people"
-
-	page "believe that it"
-	next "came here on"
-	next "a meteor.@"
+	db   "おほしさまのような　シルエット。"
+	next "そのすがたから　ながれぼしにの<TTE>"
+	next "や<TTE>くると　しんじられている"
+	dex

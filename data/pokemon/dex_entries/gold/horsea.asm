@@ -1,10 +1,8 @@
-	db "DRAGON@" ; species name
-	dw 104, 180 ; height, weight
+	db "ドラゴン@" ; species name
+	db 4 ; height
+	dw 80 ; weight
 
-	db   "If attacked by a"
-	next "larger enemy, it"
-	next "quickly swims to"
-
-	page "safety by adeptly"
-	next "controlling its"
-	next "dorsal fin.@"
+	db   "おおきな　あいて<NI>おそわれても"
+	next "２まいのせびれ<WO>たくみにあやつり"
+	next "すいちゅう<WO>じゆう<NI>にげる"
+	dex

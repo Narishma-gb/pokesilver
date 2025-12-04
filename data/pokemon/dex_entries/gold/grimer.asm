@@ -1,10 +1,8 @@
-	db "SLUDGE@" ; species name
-	dw 211, 660 ; height, weight
+	db "ヘドロ@" ; species name
+	db 9 ; height
+	dw 300 ; weight
 
-	db   "As it moves, it"
-	next "loses bits of its"
-	next "body from which"
-
-	page "new GRIMER emerge."
-	next "This worsens the"
-	next "stench around it.@"
+	db   "とおったあと<NI>のこった　からだの"
+	next "いちぶから　また　ベトベターがうまれ"
+	next "あたり<WA>いっそう　くさくなる"
+	dex

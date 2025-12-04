@@ -1,10 +1,8 @@
-	db "MOLE@" ; species name
-	dw 8, 20 ; height, weight
+	db "もぐら@" ; species name
+	db 2 ; height
+	dw 8 ; weight
 
-	db   "Its skin is very"
-	next "thin. If it is"
-	next "exposed to light,"
-
-	page "its blood heats"
-	next "up, causing it to"
-	next "grow weak.@"
+	db   "ひふ<GA>とても　うすいので"
+	next "ひかり<NI>てらされると　けつえきが"
+	next "あたためられて　よわ<TTE>しまう"
+	dex

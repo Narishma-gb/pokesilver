@@ -1,10 +1,8 @@
-	db "SPITFIRE@" ; species name
-	dw 403, 980 ; height, weight
+	db "ひふき@" ; species name
+	db 13 ; height
+	dw 445 ; weight
 
-	db   "It dislikes cold"
-	next "places, so it"
-	next "blows scorching"
-
-	page "flames to make the"
-	next "environment suit-"
-	next "able for itself.@"
+	db   "さむいところ<WA>にがて。あつい"
+	next "ほのお<WO>ふきだし　すみやすいように"
+	next "まわり<NO>かんきょう<WO>かえるのだ"
+	dex

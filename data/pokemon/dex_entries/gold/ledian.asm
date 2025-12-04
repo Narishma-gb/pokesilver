@@ -1,10 +1,8 @@
-	db "FIVE STAR@" ; species name
-	dw 407, 780 ; height, weight
+	db "いつつぼし@" ; species name
+	db 14 ; height
+	dw 356 ; weight
 
-	db   "When the stars"
-	next "flicker in the"
-	next "night sky, it"
-
-	page "flutters about,"
-	next "scattering a"
-	next "glowing powder.@"
+	db   "よぞら<NI>ほし<GA>またたくとき"
+	next "かがやく　こな<WO>ふりまきながら"
+	next "ひらひらと　とんでいく"
+	dex

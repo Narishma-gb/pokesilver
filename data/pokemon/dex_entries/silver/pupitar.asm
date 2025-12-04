@@ -1,10 +1,8 @@
-	db "HARD SHELL@" ; species name
-	dw 311, 3350 ; height, weight
+	db "だんがん@" ; species name
+	db 12 ; height
+	dw 1520 ; weight
 
-	db   "Even sealed in its"
-	next "shell, it can move"
-	next "freely. Hard and"
-
-	page "fast, it has out-"
-	next "standing destruc-"
-	next "tive power.@"
+	db   "カラ<NI>おおわれている<GA>じゆうに"
+	next "とびまわれる。かたさと　はやさを"
+	next "もつので　はかいりょく　ばつぐんだ"
+	dex

@@ -1,10 +1,8 @@
-	db "HERB@" ; species name
-	dw 511, 2220 ; height, weight
+	db "ハーブ@" ; species name
+	db 18 ; height
+	dw 1005 ; weight
 
-	db   "MEGANIUM's breath"
-	next "has the power to"
-	next "revive dead grass"
-
-	page "and plants. It can"
-	next "make them healthy"
-	next "again.@"
+	db   "メガニウム<GA>はきだす　いきには"
+	next "かれた　くさき<WO>よみがえらせる"
+	next "ちから<GA>ひめられている"
+	dex

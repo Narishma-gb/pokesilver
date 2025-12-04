@@ -1,10 +1,8 @@
-	db "BAGWORM@" ; species name
-	dw 200, 160 ; height, weight
+	db "みのむし@" ; species name
+	db 6 ; height
+	dw 72 ; weight
 
-	db   "It likes to make"
-	next "its shell thicker"
-	next "by adding layers"
-
-	page "of tree bark. The"
-	next "additional weight"
-	next "doesn't bother it.@"
+	db   "き<NO>かわ<WO>かさねあわせて"
+	next "カラ<WO>ぶあつくするの<GA>だいすき。"
+	next "おもくな<TTE>も　きにしない"
+	dex

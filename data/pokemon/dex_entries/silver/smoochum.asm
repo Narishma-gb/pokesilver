@@ -1,10 +1,8 @@
-	db "KISS@" ; species name
-	dw 104, 130 ; height, weight
+	db "くちづけ@" ; species name
+	db 4 ; height
+	dw 60 ; weight
 
-	db   "It always rocks"
-	next "its head slowly"
-	next "backwards and for-"
-
-	page "wards as if it is"
-	next "trying to kiss"
-	next "someone.@"
+	db   "いつも　くちづけ　するかのように"
+	next "ゆったりとした　リズムで"
+	next "くび<WO>ぜんご<NI>ゆらしている"
+	dex

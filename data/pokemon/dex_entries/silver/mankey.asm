@@ -1,10 +1,8 @@
-	db "PIG MONKEY@" ; species name
-	dw 108, 620 ; height, weight
+	db "ぶたざる@" ; species name
+	db 5 ; height
+	dw 280 ; weight
 
-	db   "It's unsafe to ap-"
-	next "proach if it gets"
-	next "violently enraged"
-
-	page "for no reason and"
-	next "can't distinguish"
-	next "friends from foes.@"
+	db   "いみもなく　おこ<TTE>　あばれだすと"
+	next "なかま<NO>くべつも　つかなくなるので"
+	next "ちかよるの<WA>ひじょう<NI>きけんだ"
+	dex

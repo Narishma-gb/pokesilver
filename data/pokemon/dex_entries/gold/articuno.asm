@@ -1,10 +1,8 @@
-	db "FREEZE@" ; species name
-	dw 507, 1220 ; height, weight
+	db "れいとう@" ; species name
+	db 17 ; height
+	dw 554 ; weight
 
-	db   "The magnificent,"
-	next "seemingly translu-"
-	next "cent wings of this"
-
-	page "legendary bird"
-	next "#MON are said"
-	next "to be made of ice.@"
+	db   "すきとおるような　みごとな　ハネは"
+	next "こおりで　できていると　つたえられる"
+	next "でんせつ<NO>とり#"
+	dex

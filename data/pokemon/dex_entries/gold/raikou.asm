@@ -1,10 +1,8 @@
-	db "THUNDER@" ; species name
-	dw 603, 3920 ; height, weight
+	db "いかずち@" ; species name
+	db 19 ; height
+	dw 1780 ; weight
 
-	db   "The rain clouds it"
-	next "carries let it"
-	next "fire thunderbolts"
-
-	page "at will. They say"
-	next "that it descended"
-	next "with lightning.@"
+	db   "あまぐも<WO>せお<TTE>いるので"
+	next "どんなときでも　かみなり<WO>だせる。"
+	next "かみなりととも<NI>おちてきたという"
+	dex

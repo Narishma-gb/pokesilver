@@ -1,10 +1,8 @@
-	db "FROG@" ; species name
-	dw 307, 750 ; height, weight
+	db "かえる@" ; species name
+	db 11 ; height
+	dw 339 ; weight
 
-	db   "If POLIWAG and"
-	next "POLIWHIRL hear its"
-	next "echoing cry, they"
-
-	page "respond by gather-"
-	next "ing from far and"
-	next "wide.@"
+	db   "なきごえ<GA>ひびきわたると"
+	next "あちこちから　ニョロモや"
+	next "ニョロゾたち<GA>あつま<TTE>くる"
+	dex

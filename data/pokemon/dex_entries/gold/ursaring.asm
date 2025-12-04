@@ -1,10 +1,8 @@
-	db "HIBERNANT@" ; species name
-	dw 511, 2770 ; height, weight
+	db "とうみん@" ; species name
+	db 18 ; height
+	dw 1258 ; weight
 
-	db   "Although it is a"
-	next "good climber, it"
-	next "prefers to snap"
-
-	page "trees with its"
-	next "forelegs and eat"
-	next "fallen BERRIES.@"
+	db   "きのぼりも　とくいだが"
+	next "まえあしで　ふといみき<WO>へしお<TTE>"
+	next "おちてきた　きのみ<WO>たべる"
+	dex

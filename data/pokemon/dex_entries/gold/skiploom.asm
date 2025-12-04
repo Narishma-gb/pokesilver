@@ -1,10 +1,8 @@
-	db "COTTONWEED@" ; species name
-	dw 200, 20 ; height, weight
+	db "わたくさ@" ; species name
+	db 6 ; height
+	dw 10 ; weight
 
-	db   "The bloom on top"
-	next "of its head opens"
-	next "and closes as the"
-
-	page "temperature fluc-"
-	next "tuates up and"
-	next "down.@"
+	db   "あたまのうえ<NI>さいた　ハナは"
+	next "きおん<NI>よ<TTE>　ひらいたり"
+	next "とじたりする　せいしつ<WO>もつ"
+	dex

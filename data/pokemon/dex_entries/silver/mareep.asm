@@ -1,10 +1,8 @@
-	db "WOOL@" ; species name
-	dw 200, 170 ; height, weight
+	db "わたげ@" ; species name
+	db 6 ; height
+	dw 78 ; weight
 
-	db   "Its fleece grows"
-	next "continually. In"
-	next "the summer, the"
-
-	page "fleece is fully"
-	next "shed, but it grows"
-	next "back in a week.@"
+	db   "たいもう<WA>どんどん　のびる。"
+	next "なつになると　ぜんぶ　ぬけおちるが"
+	next "いっしゅうかんで　もとどおりになる"
+	dex

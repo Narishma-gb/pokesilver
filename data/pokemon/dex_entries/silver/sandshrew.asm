@@ -1,10 +1,8 @@
-	db "MOUSE@" ; species name
-	dw 200, 260 ; height, weight
+	db "ねずみ@" ; species name
+	db 6 ; height
+	dw 120 ; weight
 
-	db   "Disliking water,"
-	next "it lives in deep"
-	next "burrows in arid"
-
-	page "areas. It can roll"
-	next "itself instantly"
-	next "into a ball.@"
+	db   "みずけ<WO>きらい　かんそうちに"
+	next "ふかいあな<WO>ほ<TTE>　せいかつする。"
+	next "いっしゅんで　からだ<WO>まるめる"
+	dex

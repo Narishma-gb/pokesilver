@@ -1,10 +1,8 @@
-	db "COTTONWEED@" ; species name
-	dw 207, 70 ; height, weight
+	db "わたくさ@" ; species name
+	db 8 ; height
+	dw 30 ; weight
 
-	db   "Once it catches"
-	next "the wind, it deft-"
-	next "ly controls its"
-
-	page "cotton-puff spores"
-	next "to float, even"
-	next "around the world.@"
+	db   "いちど　かぜ<NI>の<TTE>しまうと"
+	next "わたほうし<WO>たくみ<NI>あやつ<TTE>"
+	next "せかいいっしゅう　だ<TTE>してしまう"
+	dex

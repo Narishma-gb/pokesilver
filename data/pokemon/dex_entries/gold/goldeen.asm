@@ -1,10 +1,8 @@
-	db "GOLDFISH@" ; species name
-	dw 200, 330 ; height, weight
+	db "きんぎょ@" ; species name
+	db 6 ; height
+	dw 150 ; weight
 
-	db   "Its dorsal, pecto-"
-	next "ral and tail fins"
-	next "wave elegantly in"
-
-	page "water. That is why"
-	next "it is known as the"
-	next "water dancer.@"
+	db   "せびれ　むなびれ　おひれが"
+	next "ゆうが<NI>たなびくので"
+	next "みずのおどりこ　とよばれる"
+	dex

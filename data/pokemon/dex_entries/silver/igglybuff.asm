@@ -1,10 +1,8 @@
-	db "BALLOON@" ; species name
-	dw 100, 20 ; height, weight
+	db "ふうせん@" ; species name
+	db 3 ; height
+	dw 10 ; weight
 
-	db   "Its extremely"
-	next "flexible and elas-"
-	next "tic body makes it"
-
-	page "bounce continuous-"
-	next "ly--anytime, any-"
-	next "where.@"
+	db   "だんりょくせい　あふれる"
+	next "からだ<NO>もちぬしで　どこでも"
+	next "どんなときでも　はずんでいる"
+	dex

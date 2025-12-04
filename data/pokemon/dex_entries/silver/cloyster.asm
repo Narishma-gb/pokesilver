@@ -1,10 +1,8 @@
-	db "BIVALVE@" ; species name
-	dw 411, 2920 ; height, weight
+	db "２まいがい@" ; species name
+	db 15 ; height
+	dw 1325 ; weight
 
-	db   "CLOYSTER that live"
-	next "in seas with harsh"
-	next "tidal currents"
-
-	page "grow large, sharp"
-	next "spikes on their"
-	next "shells.@"
+	db   "しおのながれ<GA>はげしい　うみに"
+	next "せいそくしている　パルシェンの"
+	next "からのトゲ<WA>おおきく　するどい"
+	dex

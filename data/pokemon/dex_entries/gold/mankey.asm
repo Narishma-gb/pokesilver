@@ -1,10 +1,8 @@
-	db "PIG MONKEY@" ; species name
-	dw 108, 620 ; height, weight
+	db "ぶたざる@" ; species name
+	db 5 ; height
+	dw 280 ; weight
 
-	db   "It is extremely"
-	next "ill-tempered."
-	next "Groups of them"
-
-	page "will attack any"
-	next "handy target for"
-	next "no reason.@"
+	db   "いつも　おこ<TTE>いる。"
+	next "てごろな　えもの<WO>みかけると"
+	next "むれ<WO>なして　おそいかかる"
+	dex

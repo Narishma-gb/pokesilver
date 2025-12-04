@@ -1,10 +1,8 @@
-	db "ARMOR@" ; species name
-	dw 307, 2650 ; height, weight
+	db "よろい@" ; species name
+	db 11 ; height
+	dw 1200 ; weight
 
-	db   "It has sharp, hard"
-	next "tusks and a rugged"
-	next "hide. Its TACKLE"
-
-	page "is strong enough"
-	next "to knock down a"
-	next "house.@"
+	db   "するどく　かたい　キバと"
+	next "さら<NI>がんじょうな　ひふでの"
+	next "たいあたり<WA>いえをも　こわすほど"
+	dex

@@ -1,10 +1,8 @@
-	db "FAIRY@" ; species name
-	dw 407, 1070 ; height, weight
+	db "ようせい@" ; species name
+	db 14 ; height
+	dw 487 ; weight
 
-	db   "Because its fangs"
-	next "are too heavy, it"
-	next "always keeps its"
-
-	page "head tilted down."
-	next "However, its BITE"
-	next "is powerful.@"
+	db   "おもすぎる　キバのため"
+	next "いつも　くび<WO>かしげている。"
+	next "ただし　かみつき<WA>きょうりょく"
+	dex

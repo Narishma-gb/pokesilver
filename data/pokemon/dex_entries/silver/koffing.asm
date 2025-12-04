@@ -1,10 +1,8 @@
-	db "POISON GAS@" ; species name
-	dw 200, 20 ; height, weight
+	db "どくガス@" ; species name
+	db 6 ; height
+	dw 10 ; weight
 
-	db   "The poisonous"
-	next "gases it contains"
-	next "are a little bit"
-
-	page "lighter than air,"
-	next "keeping it slight-"
-	next "ly airborne.@"
+	db   "たいない<NO>どくガス<WA>くうきより"
+	next "すこし　かるい　せいぶん。だから"
+	next "いつも　すこしだけ　うかんでいる"
+	dex

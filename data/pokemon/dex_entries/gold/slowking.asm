@@ -1,10 +1,8 @@
-	db "ROYAL@" ; species name
-	dw 607, 1750 ; height, weight
+	db "おうじゃ@" ; species name
+	db 20 ; height
+	dw 795 ; weight
 
-	db   "It has incredible"
-	next "intellect and in-"
-	next "tuition. Whatever"
-
-	page "the situation, it"
-	next "remains calm and"
-	next "collected.@"
+	db   "すごい　ちせいと　ひらめきを"
+	next "も<TTE>いる。どんなときでも　あわてず"
+	next "さわがず　のんびりとしている"
+	dex

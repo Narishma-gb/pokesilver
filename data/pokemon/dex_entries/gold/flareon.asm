@@ -1,10 +1,8 @@
-	db "FLAME@" ; species name
-	dw 211, 550 ; height, weight
+	db "ほのお@" ; species name
+	db 9 ; height
+	dw 250 ; weight
 
-	db   "It stores some of"
-	next "the air it inhales"
-	next "in its internal"
-
-	page "flame pouch, which"
-	next "heats it to over"
-	next "3,000 degrees.@"
+	db   "すいこんだ　くうき<NO>いちぶは"
+	next "たいない<NO>ほのおぶくろ<NI>おくられ"
+	next "１７００ど<NO>ほのお<NI>なる"
+	dex

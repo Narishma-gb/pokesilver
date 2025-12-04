@@ -1,10 +1,8 @@
-	db "PSI@" ; species name
-	dw 411, 1060 ; height, weight
+	db "ねんりき@" ; species name
+	db 15 ; height
+	dw 480 ; weight
 
-	db   "Its brain cells"
-	next "multiply continu-"
-	next "ally until it"
-
-	page "dies. As a result,"
-	next "it remembers"
-	next "everything.@"
+	db   "のうさいぼう<WA>いつも　ぶんれつして"
+	next "しぬまで　ふえつづけるので"
+	next "あらゆること<WO>おぼえておける"
+	dex

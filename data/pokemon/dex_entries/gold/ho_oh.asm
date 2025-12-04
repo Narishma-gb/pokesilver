@@ -1,10 +1,8 @@
-	db "RAINBOW@" ; species name
-	dw 1206, 4390 ; height, weight
+	db "にじいろ@" ; species name
+	db 38 ; height
+	dw 1990 ; weight
 
-	db   "Legends claim this"
-	next "#MON flies the"
-	next "world's skies con-"
-
-	page "tinuously on its"
-	next "magnificent seven-"
-	next "colored wings.@"
+	db   "なないろ<NO>みごとな　つばさで"
+	next "せかい<NO>そら<WO>とびつづけると"
+	next "しんわ<NI>つたえられる　#"
+	dex

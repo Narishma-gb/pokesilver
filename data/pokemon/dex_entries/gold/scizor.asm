@@ -1,10 +1,8 @@
-	db "SCISSORS@" ; species name
-	dw 511, 2600 ; height, weight
+	db "はさみ@" ; species name
+	db 18 ; height
+	dw 1180 ; weight
 
-	db   "It swings its eye-"
-	next "patterned pincers"
-	next "up to scare its"
-
-	page "foes. This makes"
-	next "it look like it"
-	next "has three heads.@"
+	db   "めだまもよう<NO>ついた　はさみを"
+	next "ふりあげて　あいて<WO>いかくすると"
+	next "あたま<GA>３つ　あるよう<NI>みえる"
+	dex

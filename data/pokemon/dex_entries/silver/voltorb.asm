@@ -1,10 +1,8 @@
-	db "BALL@" ; species name
-	dw 108, 230 ; height, weight
+	db "ボール@" ; species name
+	db 5 ; height
+	dw 104 ; weight
 
-	db   "It was discovered"
-	next "when # BALLS"
-	next "were introduced."
-
-	page "It is said that"
-	next "there is some"
-	next "connection.@"
+	db   "モンスターボール<GA>うりだされたのと"
+	next "おなじ　じき<NI>はっけんされた。"
+	next "なにか　かんけいがある　といわれる"
+	dex

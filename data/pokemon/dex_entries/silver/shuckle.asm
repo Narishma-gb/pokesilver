@@ -1,10 +1,8 @@
-	db "MOLD@" ; species name
-	dw 200, 450 ; height, weight
+	db "はっこう@" ; species name
+	db 6 ; height
+	dw 205 ; weight
 
-	db   "It stores BERRIES"
-	next "inside its shell."
-	next "To avoid attacks,"
-
-	page "it hides beneath"
-	next "rocks and remains"
-	next "completely still.@"
+	db   "こうら<NI>きのみ<WO>たくわえている。"
+	next "おそわれないよう<NI>いわ<NO>したに"
+	next "こも<TTE>　じっとしている"
+	dex

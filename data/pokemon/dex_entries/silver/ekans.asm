@@ -1,10 +1,8 @@
-	db "SNAKE@" ; species name
-	dw 607, 150 ; height, weight
+	db "へび@" ; species name
+	db 20 ; height
+	dw 69 ; weight
 
-	db   "It always hides in"
-	next "grass. When first"
-	next "born, it has no"
-
-	page "poison, so its"
-	next "bite is painful,"
-	next "but harmless.@"
+	db   "いつも<WA>くさむら<NI>かくれている。"
+	next "うまれたて<WA>どく<WO>もたないので"
+	next "かまれても　いたいだけだ"
+	dex

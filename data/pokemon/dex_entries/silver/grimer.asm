@@ -1,10 +1,8 @@
-	db "SLUDGE@" ; species name
-	dw 211, 660 ; height, weight
+	db "ヘドロ@" ; species name
+	db 9 ; height
+	dw 300 ; weight
 
-	db   "Wherever GRIMER"
-	next "has passed, so"
-	next "many germs are"
-
-	page "left behind that"
-	next "no plants will"
-	next "ever grow again.@"
+	db   "ベトベター<GA>とおったあとは"
+	next "バイきん　だらけ　なので"
+	next "どんな　くさも　はえなくなる"
+	dex

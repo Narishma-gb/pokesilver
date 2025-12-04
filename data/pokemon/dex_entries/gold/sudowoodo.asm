@@ -1,10 +1,8 @@
-	db "IMITATION@" ; species name
-	dw 311, 840 ; height, weight
+	db "まね@" ; species name
+	db 12 ; height
+	dw 380 ; weight
 
-	db   "Although it always"
-	next "pretends to be a"
-	next "tree, its composi-"
-
-	page "tion appears to be"
-	next "closer to a rock"
-	next "than a plant.@"
+	db   "いつも　きのふり<WO>している。"
+	next "からだ<NO>つくり<WA>しょくぶつより"
+	next "いしや　いわなど<NI>ちかいようだ"
+	dex

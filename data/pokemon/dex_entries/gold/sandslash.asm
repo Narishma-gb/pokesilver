@@ -1,10 +1,8 @@
-	db "MOUSE@" ; species name
-	dw 303, 650 ; height, weight
+	db "ねずみ@" ; species name
+	db 10 ; height
+	dw 295 ; weight
 
-	db   "In an attempt to"
-	next "hide itself, it"
-	next "will run around"
-
-	page "at top speed to"
-	next "kick up a blinding"
-	next "dust storm.@"
+	db   "ぜんそくりょくで　はしりまわ<TTE>"
+	next "すなけむり<WO>まきあげ"
+	next "じぶん<NO>すがた<WO>かくそうとする"
+	dex

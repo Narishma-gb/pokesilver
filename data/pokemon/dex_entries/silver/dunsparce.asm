@@ -1,10 +1,8 @@
-	db "LAND SNAKE@" ; species name
-	dw 411, 310 ; height, weight
+	db "つちへび@" ; species name
+	db 15 ; height
+	dw 140 ; weight
 
-	db   "If spotted, it es-"
-	next "capes by burrowing"
-	next "with its tail."
-
-	page "It can float just"
-	next "slightly using its"
-	next "wings.@"
+	db   "だれか<NI>すがた<WO>みられると"
+	next "しっぽで　あなをほ<TTE>　にげだす。"
+	next "ハネで　すこしだけ　うかべる"
+	dex

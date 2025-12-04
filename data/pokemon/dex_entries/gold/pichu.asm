@@ -1,10 +1,8 @@
-	db "TINY MOUSE@" ; species name
-	dw 100, 40 ; height, weight
+	db "こねずみ@" ; species name
+	db 3 ; height
+	dw 20 ; weight
 
-	db   "It is not yet"
-	next "skilled at storing"
-	next "electricity."
-
-	page "It may send out a"
-	next "jolt if amused"
-	next "or startled.@"
+	db   "まだまだ　でんき<WO>ためるのがへた。"
+	next "おどろいたり　わらったりすると"
+	next "すぐ<NI>ほうでん　してしまう"
+	dex

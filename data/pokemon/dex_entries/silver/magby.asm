@@ -1,10 +1,8 @@
-	db "LIVE COAL@" ; species name
-	dw 204, 470 ; height, weight
+	db "ひだね@" ; species name
+	db 7 ; height
+	dw 214 ; weight
 
-	db   "It is found in"
-	next "volcanic craters."
-	next "Its body temp. is"
-
-	page "over 1100 degrees,"
-	next "so don't under-"
-	next "estimate it.@"
+	db   "かざん<NO>ふんかこうで　みつかる。"
+	next "たいおん<WA>６００ども　あるので"
+	next "こがらだ<GA>あなどれない"
+	dex

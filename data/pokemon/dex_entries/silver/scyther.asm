@@ -1,10 +1,8 @@
-	db "MANTIS@" ; species name
-	dw 411, 1230 ; height, weight
+	db "かまきり@" ; species name
+	db 15 ; height
+	dw 560 ; weight
 
-	db   "When it moves, it"
-	next "leaves only a"
-	next "blur. If it hides"
-
-	page "in grass, its pro-"
-	next "tective colors"
-	next "make it invisible.@"
+	db   "うごいても　ざんぞうしか　みえない。"
+	next "とま<TTE>も　くさむら<NI>みをかくすと"
+	next "ほごしょくで　わからない"
+	dex

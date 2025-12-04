@@ -80,12 +80,12 @@ DisplayDexEntry:
 	call GetPokemonName
 	hlcoord 9, 2
 	call PlaceString ; mon species
-	ld hl, PokedexDataPointerFirstTable
+	ld hl, PokedexDataPointerTable1
 	ld a, [wTempSpecies]
-	cp DEX_ENTRY_TABLE_SPLIT + 1
+	cp KINGLER + 1
 	jr c, .gotTable
-	sub DEX_ENTRY_TABLE_SPLIT
-	ld hl, PokedexDataPointerSecondTable
+	sub KINGLER
+	ld hl, PokedexDataPointerTable2
 .gotTable
 	dec a
 	ld e, a

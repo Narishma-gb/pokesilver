@@ -1,10 +1,8 @@
-	db "PARENT@" ; species name
-	dw 703, 1760 ; height, weight
+	db "おやこ@" ; species name
+	db 22 ; height
+	dw 800 ; weight
 
-	db   "If it is safe, the"
-	next "young gets out of"
-	next "the belly pouch to"
-
-	page "play. The adult"
-	next "keeps a close eye"
-	next "on the youngster.@"
+	db   "あんぜんな　ばしょなら　こどもも"
+	next "おなか<NO>ふくろから　でて　あそぶ。"
+	next "おや<WA>それ<WO>じっと　みまもる"
+	dex

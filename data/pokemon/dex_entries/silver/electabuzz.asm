@@ -1,10 +1,8 @@
-	db "ELECTRIC@" ; species name
-	dw 307, 660 ; height, weight
+	db "でんげき@" ; species name
+	db 11 ; height
+	dw 300 ; weight
 
-	db   "Its body constant-"
-	next "ly discharges"
-	next "electricity. Get-"
-
-	page "ting close to it"
-	next "will make your"
-	next "hair stand on end.@"
+	db   "ぜんしんから　つね<NI>でんきが"
+	next "はなたれているため　ちかづくと"
+	next "かみのけ<GA>さかだ<TTE>しまう"
+	dex

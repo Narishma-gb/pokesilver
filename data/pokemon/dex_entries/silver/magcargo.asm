@@ -1,10 +1,8 @@
-	db "LAVA@" ; species name
-	dw 207, 1210 ; height, weight
+	db "ようがん@" ; species name
+	db 8 ; height
+	dw 550 ; weight
 
-	db   "Its brittle shell"
-	next "occasionally"
-	next "spouts intense"
-
-	page "flames that cir-"
-	next "culate throughout"
-	next "its body.@"
+	db   "せなか<NO>カラ<WA>くずれやすいが"
+	next "ときどき　たいない<WO>めぐ<TTE>いる"
+	next "こうねつ<NO>ほのお<GA>ふきだす"
+	dex

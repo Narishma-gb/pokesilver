@@ -1,10 +1,8 @@
-	db "LONG NOSE@" ; species name
-	dw 108, 740 ; height, weight
+	db "ながはな@" ; species name
+	db 5 ; height
+	dw 335 ; weight
 
-	db   "It swings its long"
-	next "snout around play-"
-	next "fully, but because"
-
-	page "it is so strong,"
-	next "that can be dan-"
-	next "gerous.@"
+	db   "じゃれている　つもりで"
+	next "はな<WO>ふりまわしてくるが"
+	next "かなり<NO>ちからなので　あぶない"
+	dex

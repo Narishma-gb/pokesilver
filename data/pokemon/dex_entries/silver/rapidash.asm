@@ -1,10 +1,8 @@
-	db "FIRE HORSE@" ; species name
-	dw 507, 2090 ; height, weight
+	db "ひのうま@" ; species name
+	db 17 ; height
+	dw 950 ; weight
 
-	db   "With incredible"
-	next "acceleration, it"
-	next "reaches its top"
-
-	page "speed of 150 mph"
-	next "after running just"
-	next "ten steps.@"
+	db   "ものすごい　かそくりょく。"
+	next "はしりだして　たった<NO>１０ぽで"
+	next "さいこうじそく　２４０キロになる"
+	dex

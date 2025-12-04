@@ -1,10 +1,8 @@
-	db "POISON GAS@" ; species name
-	dw 311, 210 ; height, weight
+	db "どくガス@" ; species name
+	db 12 ; height
+	dw 95 ; weight
 
-	db   "Top-grade perfume"
-	next "is made using its"
-	next "internal poison"
-
-	page "gases by diluting"
-	next "them to the high-"
-	next "est level.@"
+	db   "たいない<NI>ふくまれる　どくガスを"
+	next "ぎりぎりまで　うすめると"
+	next "さいこうきゅう<NO>こうすいができる"
+	dex

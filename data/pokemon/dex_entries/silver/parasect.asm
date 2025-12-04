@@ -1,10 +1,8 @@
-	db "MUSHROOM@" ; species name
-	dw 303, 650 ; height, weight
+	db "きのこ@" ; species name
+	db 10 ; height
+	dw 295 ; weight
 
-	db   "The larger the"
-	next "mushroom on its"
-	next "back grows, the"
-
-	page "stronger the mush-"
-	next "room spores it"
-	next "scatters.@"
+	db   "せなか<NO>キノコ<GA>そだつほど"
+	next "ばらまかれる　キノコのほうしの"
+	next "こうか<WA>きょうりょくになる"
+	dex

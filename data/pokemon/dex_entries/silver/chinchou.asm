@@ -1,10 +1,8 @@
-	db "ANGLER@" ; species name
-	dw 108, 260 ; height, weight
+	db "あんこう@" ; species name
+	db 5 ; height
+	dw 120 ; weight
 
-	db   "On the dark ocean"
-	next "floor, its only"
-	next "means of communi-"
-
-	page "cation is its"
-	next "constantly flash-"
-	next "ing lights.@"
+	db   "くらい　かいていで<WA>いつも"
+	next "てんめつ　している　しょくしゅの"
+	next "あかり　だけ<GA>つうしんしゅだん"
+	dex

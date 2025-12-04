@@ -1,10 +1,8 @@
-	db "SCREECH@" ; species name
-	dw 204, 20 ; height, weight
+	db "よなき@" ; species name
+	db 7 ; height
+	dw 10 ; weight
 
-	db   "It likes playing"
-	next "mischievous tricks"
-	next "such as screaming"
-
-	page "and wailing to"
-	next "startle people at"
-	next "night.@"
+	db   "よなか<NI>ひと<NO>なきさけぶような"
+	next "なきごえ<WO>だして　みんなを"
+	next "おどろかせる　いたずらずき"
+	dex

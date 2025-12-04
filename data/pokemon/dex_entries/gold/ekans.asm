@@ -1,10 +1,8 @@
-	db "SNAKE@" ; species name
-	dw 607, 150 ; height, weight
+	db "へび@" ; species name
+	db 20 ; height
+	dw 69 ; weight
 
-	db   "It can freely de-"
-	next "tach its jaw to"
-	next "swallow large prey"
-
-	page "whole. It can be-"
-	next "come too heavy to"
-	next "move, however.@"
+	db   "じゆう<NI>あご<WO>はずせるので"
+	next "おおきな　えものでも　のみこめるが"
+	next "おもくな<TTE>　うごけなくなる"
+	dex

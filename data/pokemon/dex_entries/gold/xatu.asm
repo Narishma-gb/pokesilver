@@ -1,10 +1,8 @@
-	db "MYSTIC@" ; species name
-	dw 411, 330 ; height, weight
+	db "せいれい@" ; species name
+	db 15 ; height
+	dw 150 ; weight
 
-	db   "They say that it"
-	next "stays still and"
-	next "quiet because it"
-
-	page "is seeing both the"
-	next "past and future at"
-	next "the same time.@"
+	db   "ほとんど　うごかず　なきもせず"
+	next "じっとするの<WA>かこと　みらいを"
+	next "みているからだと　しんじられている"
+	dex

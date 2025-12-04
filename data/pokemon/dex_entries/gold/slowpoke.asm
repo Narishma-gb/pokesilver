@@ -1,10 +1,8 @@
-	db "DOPEY@" ; species name
-	dw 311, 790 ; height, weight
+	db "まぬけ@" ; species name
+	db 12 ; height
+	dw 360 ; weight
 
-	db   "It lazes vacantly"
-	next "near water. If"
-	next "something bites"
-
-	page "its tail, it won't"
-	next "even notice for a"
-	next "whole day.@"
+	db   "みずべで　ボーッとしている。"
+	next "なにか<GA>シッポ<NI>かみついても"
+	next "まる１にち　きづかない"
+	dex

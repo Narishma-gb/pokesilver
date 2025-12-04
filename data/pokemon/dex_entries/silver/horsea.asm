@@ -1,10 +1,8 @@
-	db "DRAGON@" ; species name
-	dw 104, 180 ; height, weight
+	db "ドラゴン@" ; species name
+	db 4 ; height
+	dw 80 ; weight
 
-	db   "Its big, developed"
-	next "fins move rapidly,"
-	next "allowing it to"
-
-	page "swim backward"
-	next "while still facing"
-	next "forward.@"
+	db   "はったつした　おおきな　ヒレを"
+	next "すばやく　うごかすことで　まえを"
+	next "むいたまま　うしろ<NI>いどうできる"
+	dex

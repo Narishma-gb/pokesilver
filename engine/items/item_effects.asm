@@ -755,11 +755,11 @@ HeavyBallMultiplier:
 ; else add 30 to catch rate if weight < 409.6 kg
 ; else add 40 to catch rate
 	ld a, [wEnemyMonSpecies]
-	ld hl, PokedexDataPointerFirstTable
-	cp DEX_ENTRY_TABLE_SPLIT + 1
+	ld hl, PokedexDataPointerTable1
+	cp KINGLER + 1
 	jr c, .gotTable
-	sub DEX_ENTRY_TABLE_SPLIT
-	ld hl, PokedexDataPointerSecondTable
+	sub KINGLER
+	ld hl, PokedexDataPointerTable2
 .gotTable
 	dec a
 	ld e, a

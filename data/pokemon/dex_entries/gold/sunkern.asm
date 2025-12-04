@@ -1,10 +1,8 @@
-	db "SEED@" ; species name
-	dw 100, 40 ; height, weight
+	db "たね@" ; species name
+	db 3 ; height
+	dw 18 ; weight
 
-	db   "It may drop out of"
-	next "the sky suddenly."
-	next "If attacked by a"
-
-	page "SPEAROW, it will"
-	next "violently shake"
-	next "its leaves.@"
+	db   "あるあさ　とつぜん　ふ<TTE>くる。"
+	next "オニスズメ<NI>おそわれると　はっぱを"
+	next "はげしく　ふ<TTE>　おいはらう"
+	dex

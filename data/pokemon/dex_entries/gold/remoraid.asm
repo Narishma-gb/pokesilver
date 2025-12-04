@@ -1,10 +1,8 @@
-	db "JET@" ; species name
-	dw 200, 260 ; height, weight
+	db "ふんしゃ@" ; species name
+	db 6 ; height
+	dw 120 ; weight
 
-	db   "It has superb ac-"
-	next "curacy. The water"
-	next "it shoots out can"
-
-	page "strike even moving"
-	next "prey from more"
-	next "than 300 feet.@"
+	db   "ねらい<WA>せいかく。ふきだす　みずは"
+	next "１００メートルさきで　うごく"
+	next "えもの<NI>かならず　めいちゅうする"
+	dex

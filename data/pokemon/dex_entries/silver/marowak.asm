@@ -1,10 +1,8 @@
-	db "BONEKEEPER@" ; species name
-	dw 303, 990 ; height, weight
+	db "ほねずき@" ; species name
+	db 10 ; height
+	dw 450 ; weight
 
-	db   "It collects bones"
-	next "from an unknown"
-	next "place. A MAROWAK"
-
-	page "graveyard exists"
-	next "somewhere in the"
-	next "world, rumors say.@"
+	db   "どこからか　ホネ<WO>ひろ<TTE>くる。"
+	next "せかい<NO>どこか<NI>ガラガラだけの"
+	next "はかば<GA>あるという　ウワサだ"
+	dex

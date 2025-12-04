@@ -1,10 +1,8 @@
-	db "BALL@" ; species name
-	dw 311, 1470 ; height, weight
+	db "ボール@" ; species name
+	db 12 ; height
+	dw 666 ; weight
 
-	db   "It is dangerous."
-	next "If it has too much"
-	next "electricity and"
-
-	page "has nothing to do,"
-	next "it amuses itself"
-	next "by exploding.@"
+	db   "たいりょう<NO>でんきエネルギーを"
+	next "もてあまし　ひま<NI>なると"
+	next "ばくはつして　あそぶので　きけん"
+	dex

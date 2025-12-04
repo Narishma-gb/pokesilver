@@ -1,10 +1,8 @@
-	db "TADPOLE@" ; species name
-	dw 303, 440 ; height, weight
+	db "おたま@" ; species name
+	db 10 ; height
+	dw 200 ; weight
 
-	db   "The swirl on its"
-	next "belly subtly un-"
-	next "dulates. Staring"
-
-	page "at it may gradual-"
-	next "ly cause drowsi-"
-	next "ness.@"
+	db   "おなか<NO>うず<WA>びみょうに"
+	next "うね<TTE>いるので　じっと　みていると"
+	next "だんだん　ねむくな<TTE>しまう"
+	dex

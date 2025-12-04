@@ -1,10 +1,8 @@
-	db "OWL@" ; species name
-	dw 204, 470 ; height, weight
+	db "ふくろう@" ; species name
+	db 7 ; height
+	dw 212 ; weight
 
-	db   "It always stands"
-	next "on one foot. It"
-	next "changes feet so"
-
-	page "fast, the movement"
-	next "can rarely be"
-	next "seen.@"
+	db   "いつも　いっぽんあしで　た<TTE>いる。"
+	next "あし<WO>いれかえる　しゅんかんは"
+	next "すばやくて　なかなか　みられない"
+	dex

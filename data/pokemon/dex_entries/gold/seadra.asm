@@ -1,10 +1,8 @@
-	db "DRAGON@" ; species name
-	dw 311, 550 ; height, weight
+	db "ドラゴン@" ; species name
+	db 12 ; height
+	dw 250 ; weight
 
-	db   "An examination of"
-	next "its cells revealed"
-	next "the presence of a"
-
-	page "gene not found in"
-	next "HORSEA. It became"
-	next "a hot topic.@"
+	db   "さいぼう<WO>しらべると　タッツーには"
+	next "なかった　あらたな　いでんしが"
+	next "はっけんされ　わだいと　な<TTE>いる"
+	dex

@@ -1,10 +1,8 @@
-	db "ROCK SKIN@" ; species name
-	dw 200, 1590 ; height, weight
+	db "いわはだ@" ; species name
+	db 6 ; height
+	dw 720 ; weight
 
-	db   "It feeds on soil."
-	next "After it has eaten"
-	next "a large mountain,"
-
-	page "it will fall"
-	next "asleep so it can"
-	next "grow.@"
+	db   "つち<WO>たべて　いきている。"
+	next "おおきな　やまひとつ　たべおわると"
+	next "せいちょうのため　ねむりはじめる"
+	dex

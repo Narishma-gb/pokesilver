@@ -1,10 +1,8 @@
-	db "ELECTRIC@" ; species name
-	dw 200, 520 ; height, weight
+	db "でんき@" ; species name
+	db 6 ; height
+	dw 235 ; weight
 
-	db   "Even in the most"
-	next "vicious storm,"
-	next "this #MON plays"
-
-	page "happily if thunder"
-	next "rumbles in the"
-	next "sky.@"
+	db   "どんな<NI>はげしい　あらしでも"
+	next "かみなり<GA>な<TTE>いれば"
+	next "たのしそう<NI>あそびまわる"
+	dex

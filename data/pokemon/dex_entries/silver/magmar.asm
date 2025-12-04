@@ -1,10 +1,8 @@
-	db "SPITFIRE@" ; species name
-	dw 403, 980 ; height, weight
+	db "ひふき@" ; species name
+	db 13 ; height
+	dw 445 ; weight
 
-	db   "The fiery surface"
-	next "of its body gives"
-	next "off a wavering,"
-
-	page "rippling glare"
-	next "that is similar to"
-	next "the sun.@"
+	db   "からだ<NO>ひょうめんには"
+	next "たいようと　おなじような　ほのおの"
+	next "ゆらめき<GA>はっせい　している"
+	dex

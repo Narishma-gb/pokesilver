@@ -1,10 +1,8 @@
-	db "HYPNOSIS@" ; species name
-	dw 503, 1670 ; height, weight
+	db "さいみん@" ; species name
+	db 16 ; height
+	dw 756 ; weight
 
-	db   "When it is very"
-	next "hungry, it puts"
-	next "humans it meets to"
-
-	page "sleep, then it"
-	next "feasts on their"
-	next "dreams.@"
+	db   "とても　おなか<GA>すいてると"
+	next "であった　にんげん<WO>むりやり"
+	next "ねむらせ　ユメ<WO>たべてしまう"
+	dex

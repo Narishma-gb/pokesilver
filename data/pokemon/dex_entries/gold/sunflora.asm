@@ -1,10 +1,8 @@
-	db "SUN@" ; species name
-	dw 207, 190 ; height, weight
+	db "たいよう@" ; species name
+	db 8 ; height
+	dw 85 ; weight
 
-	db   "It converts sun-"
-	next "light into energy."
-	next "In the darkness"
-
-	page "after sunset, it"
-	next "closes its petals"
-	next "and becomes still.@"
+	db   "ひざし<WO>エネルギー<NI>かえる。"
+	next "たいよう<GA>しずみ　くらくなると"
+	next "はなびら<WO>とじて　たたずんでいる"
+	dex

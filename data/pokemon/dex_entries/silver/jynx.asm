@@ -1,10 +1,8 @@
-	db "HUMANSHAPE@" ; species name
-	dw 407, 900 ; height, weight
+	db "ひとがた@" ; species name
+	db 14 ; height
+	dw 406 ; weight
 
-	db   "It speaks a lan-"
-	next "guage similar to"
-	next "that of humans."
-
-	page "However, it seems"
-	next "to use dancing to"
-	next "communicate.@"
+	db   "にんげん<NO>ような　ことばも"
+	next "はなしている<GA>それよりも"
+	next "おどりで　きもち<WO>つたえるらしい"
+	dex

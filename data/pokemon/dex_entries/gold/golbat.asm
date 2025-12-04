@@ -1,10 +1,8 @@
-	db "BAT@" ; species name
-	dw 503, 1210 ; height, weight
+	db "こうもり@" ; species name
+	db 16 ; height
+	dw 550 ; weight
 
-	db   "However hard its"
-	next "victim's hide may"
-	next "be, it punctures"
-
-	page "with sharp fangs"
-	next "and gorges itself"
-	next "with blood.@"
+	db   "どんな<NI>かたい　ひふでも"
+	next "するどい　キバで　つらぬいて"
+	next "たっぷりと　ち<WO>すいまくる"
+	dex

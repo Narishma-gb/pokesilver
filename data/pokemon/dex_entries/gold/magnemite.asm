@@ -1,10 +1,8 @@
-	db "MAGNET@" ; species name
-	dw 100, 130 ; height, weight
+	db "じしゃく@" ; species name
+	db 3 ; height
+	dw 60 ; weight
 
-	db   "It is attracted by"
-	next "electromagnetic"
-	next "waves. It may"
-
-	page "approach trainers"
-	next "if they are using"
-	next "their #GEAR.@"
+	db   "でんぱ<NI>ひかれる　せいしつをもち"
+	next "#ギア<WO>つか<TTE>いると"
+	next "ちかよ<TTE>くる　こと<GA>あるらしい"
+	dex

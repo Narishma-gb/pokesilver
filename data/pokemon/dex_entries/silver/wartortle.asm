@@ -1,10 +1,8 @@
-	db "TURTLE@" ; species name
-	dw 303, 500 ; height, weight
+	db "かめ@" ; species name
+	db 10 ; height
+	dw 225 ; weight
 
-	db   "It cleverly con-"
-	next "trols its furry"
-	next "ears and tail to"
-
-	page "maintain its"
-	next "balance while"
-	next "swimming.@"
+	db   "ふさふさ<NO>みみと　しっぽを"
+	next "たくみ<NI>あやつ<TTE>　すいちゅうでの"
+	next "バランス<WO>たもつ"
+	dex

@@ -1,10 +1,8 @@
-	db "FOSSIL@" ; species name
-	dw 511, 1300 ; height, weight
+	db "かせき@" ; species name
+	db 18 ; height
+	dw 590 ; weight
 
-	db   "A vicious #MON"
-	next "from the distant"
-	next "past, it appears"
-
-	page "to have flown by"
-	next "spreading its"
-	next "wings and gliding.@"
+	db   "おおむかし<NO>どうもうな　#。"
+	next "つばさ<WO>ひろげ　そらを"
+	next "すべるよう<NI>とんでいたらしい"
+	dex

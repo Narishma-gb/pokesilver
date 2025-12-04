@@ -1,10 +1,8 @@
-	db "BALLOON@" ; species name
-	dw 108, 90 ; height, weight
+	db "ふうせん@" ; species name
+	db 5 ; height
+	dw 39 ; weight
 
-	db   "To fire its poison"
-	next "spikes, it must"
-	next "inflate its body"
-
-	page "by drinking over"
-	next "2.6 gallons of"
-	next "water all at once.@"
+	db   "ぜんしん<NO>どくばり<WO>とばすため"
+	next "１０リットル<NO>みず<WO>いっきに"
+	next "のみこみ　からだ<WO>ふくらませる"
+	dex

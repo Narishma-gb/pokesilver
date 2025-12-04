@@ -1,10 +1,8 @@
-	db "KITE@" ; species name
-	dw 611, 4850 ; height, weight
+	db "カイト@" ; species name
+	db 21 ; height
+	dw 2200 ; weight
 
-	db   "As it majestically"
-	next "swims, it doesn't"
-	next "care if REMORAID"
-
-	page "attach to it for"
-	next "scavenging its"
-	next "leftovers.@"
+	db   "ゆうぜんと　うみ<WO>およぐ。"
+	next "たべのこし<WO>ねらった　テッポウオが"
+	next "くっついていても　きにしていない"
+	dex

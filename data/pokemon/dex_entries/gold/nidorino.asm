@@ -1,10 +1,8 @@
-	db "POISON PIN@" ; species name
-	dw 211, 430 ; height, weight
+	db "どくばり@" ; species name
+	db 9 ; height
+	dw 195 ; weight
 
-	db   "It raises its big"
-	next "ears to check its"
-	next "surroundings. If"
-
-	page "it senses any-"
-	next "thing, it attacks"
-	next "immediately.@"
+	db   "はったつした　みみ<WO>たてて"
+	next "まわり<NO>けはい<WO>さぐる。"
+	next "なにかあると　すぐ<NI>とびかかる"
+	dex

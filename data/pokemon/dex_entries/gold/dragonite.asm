@@ -1,10 +1,8 @@
-	db "DRAGON@" ; species name
-	dw 703, 4630 ; height, weight
+	db "ドラゴン@" ; species name
+	db 22 ; height
+	dw 2100 ; weight
 
-	db   "It is said that"
-	next "this #MON con-"
-	next "stantly flies over"
-
-	page "the immense seas"
-	next "and rescues drown-"
-	next "ing people.@"
+	db   "うみで　おぼれている　ひとを"
+	next "たすけるため　ひろい　うみを"
+	next "いつも　とびまわ<TTE>いる　という"
+	dex

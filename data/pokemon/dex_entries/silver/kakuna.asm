@@ -1,10 +1,8 @@
-	db "COCOON@" ; species name
-	dw 200, 220 ; height, weight
+	db "さなぎ@" ; species name
+	db 6 ; height
+	dw 100 ; weight
 
-	db   "From this form,"
-	next "it will grow into"
-	next "an adult. As its"
-
-	page "body becomes soft-"
-	next "er, the external"
-	next "shell hardens.@"
+	db   "おとな<NO>からだ<WO>つく<TTE>いる。"
+	next "なかみ<GA>やわらかくなるほど"
+	next "そとのカラ<WA>かたくな<TTE>いく"
+	dex

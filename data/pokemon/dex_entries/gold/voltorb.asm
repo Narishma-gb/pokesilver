@@ -1,10 +1,8 @@
-	db "BALL@" ; species name
-	dw 108, 230 ; height, weight
+	db "ボール@" ; species name
+	db 5 ; height
+	dw 104 ; weight
 
-	db   "It rolls to move."
-	next "If the ground is"
-	next "uneven, a sudden"
-
-	page "jolt from hitting"
-	next "a bump can cause"
-	next "it to explode.@"
+	db   "ころが<TTE>　いどう　するので"
+	next "じめん<GA>でこぼこ　だと"
+	next "ショックで　ばくはつ　してしまう"
+	dex

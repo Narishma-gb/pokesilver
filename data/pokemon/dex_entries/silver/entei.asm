@@ -1,10 +1,8 @@
-	db "VOLCANO@" ; species name
-	dw 607, 4370 ; height, weight
+	db "かざん@" ; species name
+	db 21 ; height
+	dw 1980 ; weight
 
-	db   "A #MON that"
-	next "races across the"
-	next "land. It is said"
-
-	page "that one is born"
-	next "every time a new"
-	next "volcano appears.@"
+	db   "あたらしい　かざん<GA>できるたび"
+	next "うまれてくると　つたえられる"
+	next "だいち<WO>かけめぐる　#"
+	dex

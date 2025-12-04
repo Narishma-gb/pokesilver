@@ -1,10 +1,8 @@
-	db "WATER FISH@" ; species name
-	dw 104, 190 ; height, weight
+	db "みずうお@" ; species name
+	db 4 ; height
+	dw 85 ; weight
 
-	db   "When it walks a-"
-	next "round on the"
-	next "ground, it coats"
-
-	page "its body with a"
-	next "slimy, poisonous"
-	next "film.@"
+	db   "ちじょう<WO>あるきまわるときは"
+	next "ぬるぬるした　どく<NO>ねんまくで"
+	next "からだのひょうめん<WO>おお<TTE>いる"
+	dex

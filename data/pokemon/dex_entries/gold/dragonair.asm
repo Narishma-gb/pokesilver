@@ -1,10 +1,8 @@
-	db "DRAGON@" ; species name
-	dw 1301, 360 ; height, weight
+	db "ドラゴン@" ; species name
+	db 40 ; height
+	dw 165 ; weight
 
-	db   "They say that if"
-	next "it emits an aura"
-	next "from its whole"
-
-	page "body, the weather"
-	next "will begin to"
-	next "change instantly.@"
+	db   "ぜんしんから　オーラ<GA>だされると"
+	next "あたり<NO>てんこう<GA>みるみるうちに"
+	next "かわ<TTE>いく　という"
+	dex

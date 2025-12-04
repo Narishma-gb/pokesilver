@@ -1,10 +1,8 @@
-	db "MOUSE@" ; species name
-	dw 303, 650 ; height, weight
+	db "ねずみ@" ; species name
+	db 10 ; height
+	dw 295 ; weight
 
-	db   "If it digs at an"
-	next "incredible pace,"
-	next "it may snap off"
-
-	page "its spikes and"
-	next "claws. They grow"
-	next "back in a day.@"
+	db   "すごい　いきおいで　じめんをほると"
+	next "トゲや　ツメ<GA>おれてしまうが"
+	next "つぎのひに<WA>はえそろ<TTE>いる"
+	dex

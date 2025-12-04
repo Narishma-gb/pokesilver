@@ -1,10 +1,8 @@
-	db "JELLYFISH@" ; species name
-	dw 211, 1000 ; height, weight
+	db "くらげ@" ; species name
+	db 9 ; height
+	dw 455 ; weight
 
-	db   "It drifts aimless-"
-	next "ly in waves. Very"
-	next "difficult to see"
-
-	page "in water, it may"
-	next "not be noticed"
-	next "until it stings.@"
+	db   "みなも<WO>あてもなく　ただよう。"
+	next "みずのなかで<WA>すがた<GA>みえにくく"
+	next "さされるまで　きづかないこともある"
+	dex

@@ -1,10 +1,8 @@
-	db "SPIKES@" ; species name
-	dw 303, 2540 ; height, weight
+	db "とげとげ@" ; species name
+	db 10 ; height
+	dw 1150 ; weight
 
-	db   "It doesn't care if"
-	next "there is anything"
-	next "in its way. It"
-
-	page "just charges and"
-	next "destroys all ob-"
-	next "stacles.@"
+	db   "じぶん<NO>すすんでいる　ほうこうに"
+	next "なに<GA>あろうと　きにしていない。"
+	next "ぜんぶ　とっしんで　こわすだけだ"
+	dex

@@ -1,10 +1,8 @@
-	db "JELLYFISH@" ; species name
-	dw 211, 1000 ; height, weight
+	db "くらげ@" ; species name
+	db 9 ; height
+	dw 455 ; weight
 
-	db   "When the tide goes"
-	next "out, dehydrated"
-	next "TENTACOOL remains"
-
-	page "can be found"
-	next "washed up on the"
-	next "shore.@"
+	db   "しお<GA>ひくと　すなはまに"
+	next "のこされて　ひからびた"
+	next "メノクラゲ<WO>みること<GA>できる"
+	dex

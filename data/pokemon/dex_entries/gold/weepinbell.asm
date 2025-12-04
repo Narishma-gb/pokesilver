@@ -1,10 +1,8 @@
-	db "FLYCATCHER@" ; species name
-	dw 303, 140 ; height, weight
+	db "ハエとり@" ; species name
+	db 10 ; height
+	dw 64 ; weight
 
-	db   "Even though it is"
-	next "filled with ACID,"
-	next "it does not melt"
-
-	page "because it also"
-	next "oozes a neutral-"
-	next "izing fluid.@"
+	db   "ようかいえき<NO>ききめ<WO>なくす"
+	next "えきたいも　ぶんぴつ　しているので"
+	next "じぶん<WA>とけたり　しないのだ"
+	dex

@@ -1,4 +1,4 @@
-PokedexDataPointerFirstTable:
+PokedexDataPointerTable1::
 ; entries correspond to constants/pokemon_constants.asm
 	table_width 2
 	dw BulbasaurPokedexEntry
@@ -100,4 +100,4 @@ PokedexDataPointerFirstTable:
 	dw HypnoPokedexEntry
 	dw KrabbyPokedexEntry
 	dw KinglerPokedexEntry
-	assert_table_length DEX_ENTRY_TABLE_SPLIT
+	assert_table_length KINGLER

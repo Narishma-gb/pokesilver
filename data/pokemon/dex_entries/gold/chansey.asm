@@ -1,10 +1,8 @@
-	db "EGG@" ; species name
-	dw 307, 760 ; height, weight
+	db "たまご@" ; species name
+	db 11 ; height
+	dw 346 ; weight
 
-	db   "It walks carefully"
-	next "to prevent its"
-	next "egg from breaking."
-
-	page "However, it is"
-	next "extremely fast at"
-	next "running away.@"
+	db   "も<TTE>いる　タマゴを"
+	next "わらないよう<NI>きをつけて　あるく。"
+	next "でも　にげあし<WA>とても　はやい"
+	dex

@@ -1,10 +1,8 @@
-	db "INSECT@" ; species name
-	dw 303, 660 ; height, weight
+	db "こんちゅう@" ; species name
+	db 10 ; height
+	dw 300 ; weight
 
-	db   "Its eyes also"
-	next "function as radar"
-	next "units. It catches"
-
-	page "and eats small"
-	next "bugs that hide in"
-	next "darkness.@"
+	db   "りょうめ<WA>レーダーきのうを"
+	next "そなえている。くらやみ<NI>かくれた"
+	next "ちいさなムシも　つかまえてたべる"
+	dex

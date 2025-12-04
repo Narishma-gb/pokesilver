@@ -1,10 +1,8 @@
-	db "AQUARABBIT@" ; species name
-	dw 207, 630 ; height, weight
+	db "みずうさぎ@" ; species name
+	db 8 ; height
+	dw 285 ; weight
 
-	db   "When it plays in"
-	next "water, it rolls up"
-	next "its elongated ears"
-
-	page "to prevent their"
-	next "insides from get-"
-	next "ting wet.@"
+	db   "みずあそび<WO>するとき"
+	next "みず<GA>はい<TTE>こないように"
+	next "ながい　みみ<WO>まいている"
+	dex

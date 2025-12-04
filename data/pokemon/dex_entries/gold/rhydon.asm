@@ -1,10 +1,8 @@
-	db "DRILL@" ; species name
-	dw 603, 2650 ; height, weight
+	db "ドリル@" ; species name
+	db 19 ; height
+	dw 1200 ; weight
 
-	db   "Its rugged hide"
-	next "protects it from"
-	next "even the heat of"
-
-	page "lava. However, the"
-	next "hide also makes it"
-	next "insensitive.@"
+	db   "ようがん<NO>あつさすら　かんじない"
+	next "がんじょうな　ひふ<NO>もちぬし。"
+	next "そのぶん　にぶいところ<GA>ある"
+	dex

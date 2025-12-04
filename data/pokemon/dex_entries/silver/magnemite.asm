@@ -1,10 +1,8 @@
-	db "MAGNET@" ; species name
-	dw 100, 130 ; height, weight
+	db "じしゃく@" ; species name
+	db 3 ; height
+	dw 60 ; weight
 
-	db   "The units at the"
-	next "sides of its body"
-	next "generate anti-"
-
-	page "gravity energy to"
-	next "keep it aloft in"
-	next "the air.@"
+	db   "さゆう<NO>ユニットから"
+	next "じゅうりょく<WO>さえぎる　ちからを"
+	next "だすので　くうちゅう<NI>うかべる"
+	dex

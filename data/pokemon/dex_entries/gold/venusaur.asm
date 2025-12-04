@@ -1,10 +1,8 @@
-	db "SEED@" ; species name
-	dw 607, 2210 ; height, weight
+	db "たね@" ; species name
+	db 20 ; height
+	dw 1000 ; weight
 
-	db   "By spreading the"
-	next "broad petals of"
-	next "its flower and"
-
-	page "catching the sun's"
-	next "rays, it fills its"
-	next "body with power.@"
+	db   "おおきな　はなびら<WO>ひろげ"
+	next "たいよう<NO>ひかり<WO>あびていると"
+	next "からだ<NI>げんき<GA>みなぎ<TTE>いく"
+	dex

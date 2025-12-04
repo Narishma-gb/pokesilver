@@ -1,10 +1,8 @@
-	db "JET@" ; species name
-	dw 211, 630 ; height, weight
+	db "ふんしゃ@" ; species name
+	db 9 ; height
+	dw 285 ; weight
 
-	db   "It instinctively"
-	next "sneaks into rocky"
-	next "holes. If it gets"
-
-	page "sleepy, it steals"
-	next "the nest of a fel-"
-	next "low OCTILLERY.@"
+	db   "いわあな<NI>もぐりこむ　せいしつの"
+	next "もちぬしで　ねむくなると　ほかの"
+	next "オクタン<NO>すあな<WO>うばう"
+	dex

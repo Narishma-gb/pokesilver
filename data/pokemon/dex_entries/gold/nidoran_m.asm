@@ -1,10 +1,8 @@
-	db "POISON PIN@" ; species name
-	dw 108, 200 ; height, weight
+	db "どくばり@" ; species name
+	db 5 ; height
+	dw 90 ; weight
 
-	db   "It is small, but"
-	next "its horn is filled"
-	next "with poison. It"
-
-	page "charges then stabs"
-	next "with the horn to"
-	next "inject poison.@"
+	db   "こがらだ<GA>ツノのなかに<WA>どくが"
+	next "いっぱい。ぜんしんで　とびこんできて"
+	next "ツノをさし　どく<WO>ながしこむ"
+	dex

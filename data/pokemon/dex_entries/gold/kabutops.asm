@@ -1,10 +1,8 @@
-	db "SHELLFISH@" ; species name
-	dw 403, 890 ; height, weight
+	db "こうら@" ; species name
+	db 13 ; height
+	dw 405 ; weight
 
-	db   "In the water, it"
-	next "tucks in its limbs"
-	next "to become more"
-
-	page "compact, then it"
-	next "wiggles its shell"
-	next "to swim fast.@"
+	db   "すいちゅう<WO>いどうするとき"
+	next "てあし<WO>ちいさく　おりたたみ"
+	next "こうら<WO>くねらせ　はやく　およぐ"
+	dex

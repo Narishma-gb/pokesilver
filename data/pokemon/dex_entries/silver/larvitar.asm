@@ -1,10 +1,8 @@
-	db "ROCK SKIN@" ; species name
-	dw 200, 1590 ; height, weight
+	db "いわはだ@" ; species name
+	db 6 ; height
+	dw 720 ; weight
 
-	db   "It is born deep"
-	next "underground. It"
-	next "can't emerge until"
-
-	page "it has entirely"
-	next "consumed the soil"
-	next "around it.@"
+	db   "ちちゅう　ふかくで　うまれる。"
+	next "まわり<NO>つち<WO>たいらげないと"
+	next "ちじょう<NI>でてこれない"
+	dex

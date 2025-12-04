@@ -1,10 +1,8 @@
-	db "IRON SNAKE@" ; species name
-	dw 3002, 8820 ; height, weight
+	db "てつへび@" ; species name
+	db 92 ; height
+	dw 4000 ; weight
 
-	db   "Its body has been"
-	next "compressed deep"
-	next "under the ground."
-
-	page "As a result, it is"
-	next "even harder than a"
-	next "diamond.@"
+	db   "ふかい　じめん<NO>したで"
+	next "あっしゅく　された　からだは"
+	next "ダイヤモンドよりも　かたいのだ"
+	dex

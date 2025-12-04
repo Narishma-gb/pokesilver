@@ -1,10 +1,8 @@
-	db "BIG JAW@" ; species name
-	dw 707, 1960 ; height, weight
+	db "おおあご@" ; species name
+	db 23 ; height
+	dw 888 ; weight
 
-	db   "It is hard for it"
-	next "to support its own"
-	next "weight out of"
-
-	page "water, so it gets"
-	next "down on all fours."
-	next "But it moves fast.@"
+	db   "ちじょうで<WA>からだ<WO>ささえるのが"
+	next "つらいので　よつんばいだが"
+	next "とても　すばやく　いどうできる"
+	dex

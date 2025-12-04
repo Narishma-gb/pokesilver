@@ -1,10 +1,8 @@
-	db "DIVING@" ; species name
-	dw 1701, 4760 ; height, weight
+	db "せんすい@" ; species name
+	db 52 ; height
+	dw 2160 ; weight
 
-	db   "It is said to be"
-	next "the guardian of"
-	next "the seas. It is"
-
-	page "rumored to have"
-	next "been seen on the"
-	next "night of a storm.@"
+	db   "うみのかみさま　と　つたえられる"
+	next "#。あらしのよる　すがたを"
+	next "みたという　はなし<GA>つたえられる"
+	dex

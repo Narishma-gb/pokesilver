@@ -1,10 +1,8 @@
-	db "SLUDGE@" ; species name
-	dw 311, 660 ; height, weight
+	db "ヘドロ@" ; species name
+	db 12 ; height
+	dw 300 ; weight
 
-	db   "Its body is made"
-	next "of a powerful poi-"
-	next "son. Touching it"
-
-	page "accidentally will"
-	next "cause a fever that"
-	next "requires bed rest.@"
+	db   "からだ<NO>せいぶん<WA>もうどく。"
+	next "うっかり　ふれてしまうと"
+	next "ねつ<WO>だして　ねこんでしまう"
+	dex

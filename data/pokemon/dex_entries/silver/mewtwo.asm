@@ -1,10 +1,8 @@
-	db "GENETIC@" ; species name
-	dw 607, 2690 ; height, weight
+	db "いでんし@" ; species name
+	db 20 ; height
+	dw 1220 ; weight
 
-	db   "It usually remains"
-	next "motionless to con-"
-	next "serve energy, so"
-
-	page "that it may un-"
-	next "leash its full"
-	next "power in battle.@"
+	db   "たたかいで　ちから<WO>さいだいげんに"
+	next "だせるよう<NI>ふだん<WA>すこしも"
+	next "うごかず　エネルギーをためている"
+	dex

@@ -1,10 +1,8 @@
-	db "TWIN BIRD@" ; species name
-	dw 407, 860 ; height, weight
+	db "ふたごどり@" ; species name
+	db 14 ; height
+	dw 392 ; weight
 
-	db   "It races through"
-	next "grassy plains with"
-	next "powerful strides,"
-
-	page "leaving footprints"
-	next "up to four inches"
-	next "deep.@"
+	db   "あしあと<NO>ふかさ<GA>１０センチにも"
+	next "なるほど　じめん<WO>ちからづよく"
+	next "ふみしめ　そうげん<WO>かけぬける"
+	dex

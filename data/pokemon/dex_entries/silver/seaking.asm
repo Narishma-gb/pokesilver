@@ -1,10 +1,8 @@
-	db "GOLDFISH@" ; species name
-	dw 403, 860 ; height, weight
+	db "きんぎょ@" ; species name
+	db 13 ; height
+	dw 390 ; weight
 
-	db   "Using its horn, it"
-	next "bores holes in"
-	next "riverbed boulders,"
-
-	page "making nests to"
-	next "prevent its eggs"
-	next "from washing away.@"
+	db   "ツノで　かわぞこ<NO>いわ<WO>くりぬき"
+	next "すをつくるの<WA>うみつけた　タマゴが"
+	next "ながされないよう<NI>するためだ"
+	dex

@@ -1,10 +1,8 @@
-	db "DRILL@" ; species name
-	dw 603, 2650 ; height, weight
+	db "ドリル@" ; species name
+	db 19 ; height
+	dw 1200 ; weight
 
-	db   "Its brain devel-"
-	next "oped when it began"
-	next "walking on hind"
-
-	page "legs. Its thick"
-	next "hide protects it"
-	next "even in magma.@"
+	db   "うしろあしだけで　たつようになり"
+	next "のう<GA>はったつした。ぶあつい"
+	next "ひふ<WA>マグマのなかでも　へいきだ"
+	dex

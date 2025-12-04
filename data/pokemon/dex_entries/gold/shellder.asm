@@ -1,10 +1,8 @@
-	db "BIVALVE@" ; species name
-	dw 100, 90 ; height, weight
+	db "２まいがい@" ; species name
+	db 3 ; height
+	dw 40 ; weight
 
-	db   "It swims facing"
-	next "backward by open-"
-	next "ing and closing"
-
-	page "its two-piece"
-	next "shell. It is"
-	next "surprisingly fast.@"
+	db   "２まいのカラ<WO>あけたり　とじたり"
+	next "することで　うしろむき<NI>およぐ。"
+	next "そのスピード<WA>けっこう　はやい"
+	dex

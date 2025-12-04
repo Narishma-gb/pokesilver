@@ -1,10 +1,8 @@
-	db "SHELLFISH@" ; species name
-	dw 503, 1890 ; height, weight
+	db "こうら@" ; species name
+	db 16 ; height
+	dw 855 ; weight
 
-	db   "It deliberately"
-	next "makes itself heavy"
-	next "so it can with-"
-
-	page "stand the recoil"
-	next "of the water jets"
-	next "it fires.@"
+	db   "ふんしゃした　みず<NO>いきおいに"
+	next "まけないよう<NI>わざと"
+	next "たいじゅう<WO>おもくしているのだ"
+	dex

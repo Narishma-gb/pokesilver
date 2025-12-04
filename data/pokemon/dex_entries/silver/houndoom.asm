@@ -1,10 +1,8 @@
-	db "DARK@" ; species name
-	dw 407, 770 ; height, weight
+	db "ダーク@" ; species name
+	db 14 ; height
+	dw 350 ; weight
 
-	db   "Upon hearing its"
-	next "eerie howls, other"
-	next "#MON get the"
-
-	page "shivers and head"
-	next "straight back to"
-	next "their nests.@"
+	db   "ぶきみな　とおぼえ<WO>きいた"
+	next "#<WA>ふるえ　いちもくさんに"
+	next "じぶん<NO>す<NI>もどる"
+	dex

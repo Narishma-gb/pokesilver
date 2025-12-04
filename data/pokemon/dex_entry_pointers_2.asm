@@ -1,4 +1,4 @@
-PokedexDataPointerSecondTable:
+PokedexDataPointerTable2::
 ; entries correspond to constants/pokemon_constants.asm
 	table_width 2
 	dw VoltorbPokedexEntry
@@ -153,4 +153,4 @@ PokedexDataPointerSecondTable:
 	dw LugiaPokedexEntry
 	dw HoOhPokedexEntry
 	dw CelebiPokedexEntry
-	assert_table_length NUM_POKEMON - DEX_ENTRY_TABLE_SPLIT
+	assert_table_length NUM_POKEMON - KINGLER

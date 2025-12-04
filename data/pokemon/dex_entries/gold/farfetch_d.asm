@@ -1,10 +1,8 @@
-	db "WILD DUCK@" ; species name
-	dw 207, 330 ; height, weight
+	db "かるがも@" ; species name
+	db 8 ; height
+	dw 150 ; weight
 
-	db   "If anyone tries to"
-	next "disturb where the"
-	next "essential plant"
-
-	page "sticks grow, it"
-	next "uses its own stick"
-	next "to thwart them.@"
+	db   "だいじなクキ<GA>はえている　ばしょを"
+	next "あらそうとする　やつ<WA>も<TTE>いる"
+	next "クキ<WO>つかいこなして　やっつける"
+	dex

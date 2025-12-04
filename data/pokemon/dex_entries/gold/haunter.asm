@@ -1,10 +1,8 @@
-	db "GAS@" ; species name
-	dw 503, 2 ; height, weight
+	db "ガスじょう@" ; species name
+	db 16 ; height
+	dw 1 ; weight
 
-	db   "In total darkness,"
-	next "where nothing is"
-	next "visible, HAUNTER"
-
-	page "lurks, silently"
-	next "stalking its next"
-	next "victim.@"
+	db   "ほんとう<NI>なにも　みえない"
+	next "くらやみで　ゴースト<WA>しずかに"
+	next "えもの<WO>ねら<TTE>いるのだ"
+	dex

@@ -1,10 +1,8 @@
-	db "LICKING@" ; species name
-	dw 311, 1440 ; height, weight
+	db "なめまわし@" ; species name
+	db 12 ; height
+	dw 655 ; weight
 
-	db   "Its long tongue,"
-	next "slathered with a"
-	next "gooey saliva,"
-
-	page "sticks to any-"
-	next "thing, so it is"
-	next "very useful.@"
+	db   "ながい　した<WA>ねばねばした"
+	next "だえきで　べっとり。どんなものでも"
+	next "くっついて　とても　べんり"
+	dex

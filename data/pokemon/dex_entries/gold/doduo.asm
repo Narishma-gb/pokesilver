@@ -1,10 +1,8 @@
-	db "TWIN BIRD@" ; species name
-	dw 407, 860 ; height, weight
+	db "ふたごどり@" ; species name
+	db 14 ; height
+	dw 392 ; weight
 
-	db   "By alternately"
-	next "raising and lower-"
-	next "ing its two heads,"
-
-	page "it balances itself"
-	next "to be more stable"
-	next "while running.@"
+	db   "２つ<NO>あたま<WO>じゅんばんに"
+	next "じょうげ　させることで　はしるときの"
+	next "あんていかん<GA>アップする"
+	dex

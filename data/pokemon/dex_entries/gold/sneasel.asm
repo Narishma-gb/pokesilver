@@ -1,10 +1,8 @@
-	db "SHARP CLAW@" ; species name
-	dw 211, 620 ; height, weight
+	db "かぎづめ@" ; species name
+	db 9 ; height
+	dw 280 ; weight
 
-	db   "Its paws conceal"
-	next "sharp claws. If"
-	next "attacked, it sud-"
-
-	page "denly extends the"
-	next "claws and startles"
-	next "its enemy.@"
+	db   "するどいツメ<WO>ゆび<NO>なかに"
+	next "かくしている。いきなり　のばして"
+	next "おそ<TTE>きた　あいて<WO>ひるませる"
+	dex

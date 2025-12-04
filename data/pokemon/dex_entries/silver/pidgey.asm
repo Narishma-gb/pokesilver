@@ -1,10 +1,8 @@
-	db "TINY BIRD@" ; species name
-	dw 100, 40 ; height, weight
+	db "ことり@" ; species name
+	db 3 ; height
+	dw 18 ; weight
 
-	db   "Common in grassy"
-	next "areas and forests,"
-	next "it is very docile"
-
-	page "and will chase off"
-	next "enemies by flap-"
-	next "ping up sand.@"
+	db   "くさむらや　もり<NI>おおく　ぶんぷ。"
+	next "おとなしい　せいかくで　はばたいて"
+	next "すなをかけ　てき<WO>おいはらう"
+	dex

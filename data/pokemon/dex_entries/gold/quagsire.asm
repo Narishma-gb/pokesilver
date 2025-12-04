@@ -1,10 +1,8 @@
-	db "WATER FISH@" ; species name
-	dw 407, 1650 ; height, weight
+	db "みずうお@" ; species name
+	db 14 ; height
+	dw 750 ; weight
 
-	db   "This carefree"
-	next "#MON has an"
-	next "easy-going nature."
-
-	page "While swimming, it"
-	next "always bumps into"
-	next "boat hulls.@"
+	db   "のんびりとした　せいかくで"
+	next "きまま<NI>およいで<WA>いつも"
+	next "ふなぞこ<NI>あたま<WO>ぶつけている"
+	dex

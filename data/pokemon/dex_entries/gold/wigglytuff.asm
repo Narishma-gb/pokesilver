@@ -1,10 +1,8 @@
-	db "BALLOON@" ; species name
-	dw 303, 260 ; height, weight
+	db "ふうせん@" ; species name
+	db 10 ; height
+	dw 120 ; weight
 
-	db   "Their fur feels so"
-	next "good that if two"
-	next "of them snuggle"
-
-	page "together, they"
-	next "won't want to be"
-	next "separated.@"
+	db   "２ひき　よりそいあうと　おたがいの"
+	next "けがわ<GA>きもちよすぎて"
+	next "はなれられなく　な<TTE>しまう"
+	dex

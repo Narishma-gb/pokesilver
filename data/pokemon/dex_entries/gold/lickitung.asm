@@ -1,10 +1,8 @@
-	db "LICKING@" ; species name
-	dw 311, 1440 ; height, weight
+	db "なめまわし@" ; species name
+	db 12 ; height
+	dw 655 ; weight
 
-	db   "Its tongue has"
-	next "well-developed"
-	next "nerves that run"
-
-	page "to the very tip,"
-	next "so it can be deft-"
-	next "ly manipulated.@"
+	db   "ベロ<NO>さきまで　しんけいが"
+	next "はったつ　しているので"
+	next "びみょうな　うごき<GA>かのうだ"
+	dex

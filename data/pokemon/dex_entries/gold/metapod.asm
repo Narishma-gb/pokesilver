@@ -1,10 +1,8 @@
-	db "COCOON@" ; species name
-	dw 204, 220 ; height, weight
+	db "さなぎ@" ; species name
+	db 7 ; height
+	dw 99 ; weight
 
-	db   "Inside the shell,"
-	next "it is soft and"
-	next "weak as it pre-"
-
-	page "pares to evolve."
-	next "It stays motion-"
-	next "less in the shell.@"
+	db   "カラのなか<WA>しんか<NO>じゅんびで"
+	next "とても　やわらかく　くずれやすい。"
+	next "なるべく　うごかないようにしている"
+	dex

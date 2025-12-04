@@ -1,10 +1,8 @@
-	db "FIVE STAR@" ; species name
-	dw 303, 240 ; height, weight
+	db "いつつぼし@" ; species name
+	db 10 ; height
+	dw 108 ; weight
 
-	db   "When the weather"
-	next "turns cold, lots"
-	next "of LEDYBA gather"
-
-	page "from everywhere to"
-	next "cluster and keep"
-	next "each other warm.@"
+	db   "さむくなると　あちこちから"
+	next "レディバ<GA>たくさん　あつま<TTE>"
+	next "よりそいあい　あたためあう"
+	dex

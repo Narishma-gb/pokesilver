@@ -1,10 +1,8 @@
-	db "HYPNOSIS@" ; species name
-	dw 303, 710 ; height, weight
+	db "さいみん@" ; species name
+	db 10 ; height
+	dw 324 ; weight
 
-	db   "If you think that"
-	next "you had a good"
-	next "dream, but you"
-
-	page "can't remember it,"
-	next "a DROWZEE has"
-	next "probably eaten it.@"
+	db   "たのしいユメ<WO>みていたはずなのに"
+	next "どんなユメか　おもいだせないとき。"
+	next "きっと　スリープ<NI>たべられたのだ"
+	dex

@@ -1,10 +1,8 @@
-	db "SCISSORS@" ; species name
-	dw 511, 2600 ; height, weight
+	db "はさみ@" ; species name
+	db 18 ; height
+	dw 1180 ; weight
 
-	db   "Its wings are not"
-	next "used for flying."
-	next "They are flapped"
-
-	page "at high speed to"
-	next "adjust its body"
-	next "temperature.@"
+	db   "ハネ<WO>つか<TTE>も　とべないが"
+	next "こうそくで　はばたかせることで"
+	next "たいおん<WO>ちょうせい　できる"
+	dex

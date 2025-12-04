@@ -1,10 +1,8 @@
-	db "FAIRY@" ; species name
-	dw 403, 880 ; height, weight
+	db "ようせい@" ; species name
+	db 13 ; height
+	dw 400 ; weight
 
-	db   "With its acute"
-	next "hearing, it can"
-	next "pick up sounds"
-
-	page "from far away. It"
-	next "usually hides in"
-	next "quiet places.@"
+	db   "どんな<NI>とおく<NO>ものおとも"
+	next "ききわけられるので　ふだんは"
+	next "しずかな　ところ<NI>かくれている"
+	dex

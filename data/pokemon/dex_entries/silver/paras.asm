@@ -1,10 +1,8 @@
-	db "MUSHROOM@" ; species name
-	dw 100, 120 ; height, weight
+	db "きのこ@" ; species name
+	db 3 ; height
+	dw 54 ; weight
 
-	db   "As its body grows"
-	next "large, oriental"
-	next "mushrooms named"
-
-	page "tochukaso start"
-	next "sprouting out of"
-	next "its back.@"
+	db   "からだ<GA>おおきくなると"
+	next "せなかから　とうちゅうかそう"
+	next "という　キノコ<GA>はえてくる"
+	dex

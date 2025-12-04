@@ -1,10 +1,8 @@
-	db "FAIRY@" ; species name
-	dw 200, 170 ; height, weight
+	db "ようせい@" ; species name
+	db 6 ; height
+	dw 78 ; weight
 
-	db   "It has an active,"
-	next "playful nature."
-	next "Many women like"
-
-	page "to frolic with it"
-	next "because of its af-"
-	next "fectionate ways.@"
+	db   "かっぱつで　あそびずきな　せいかく。"
+	next "なついてくれるので　いっしょに"
+	next "あそびたがる　じょせいも　おおい"
+	dex

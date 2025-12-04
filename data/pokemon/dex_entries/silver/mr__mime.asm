@@ -1,10 +1,8 @@
-	db "BARRIER@" ; species name
-	dw 403, 1200 ; height, weight
+	db "バリアー@" ; species name
+	db 13 ; height
+	dw 545 ; weight
 
-	db   "Its fingertips"
-	next "emit a peculiar"
-	next "force field that"
-
-	page "hardens air to"
-	next "create an actual"
-	next "wall.@"
+	db   "ゆびさきから　はなたれる"
+	next "ふしぎな　はどう<GA>くうきをかためて"
+	next "ほんとう<NO>かべ<WO>つくりだす"
+	dex

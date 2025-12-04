@@ -1,10 +1,8 @@
-	db "BIG JAW@" ; species name
-	dw 707, 1960 ; height, weight
+	db "おおあご@" ; species name
+	db 23 ; height
+	dw 888 ; weight
 
-	db   "When it bites with"
-	next "its massive and"
-	next "powerful jaws, it"
-
-	page "shakes its head"
-	next "and savagely tears"
-	next "its victim up.@"
+	db   "おおきく　ちからづよい　あごで"
+	next "かみつくと　そのまま　くびをふ<TTE>"
+	next "あいて<WO>ずたずた<NI>ひきちぎる"
+	dex

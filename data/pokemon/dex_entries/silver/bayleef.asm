@@ -1,10 +1,8 @@
-	db "LEAF@" ; species name
-	dw 311, 350 ; height, weight
+	db "はっぱ@" ; species name
+	db 12 ; height
+	dw 158 ; weight
 
-	db   "A spicy aroma ema-"
-	next "nates from around"
-	next "its neck. The"
-
-	page "aroma acts as a"
-	next "stimulant to re-"
-	next "store health.@"
+	db   "くび<NO>まわりから　はっさんする"
+	next "スパイスのような　かおり　には"
+	next "げんき<WO>ださせる　こうかがある"
+	dex

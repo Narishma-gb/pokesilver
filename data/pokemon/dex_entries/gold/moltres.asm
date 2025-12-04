@@ -1,10 +1,8 @@
-	db "FLAME@" ; species name
-	dw 607, 1320 ; height, weight
+	db "かえん@" ; species name
+	db 20 ; height
+	dw 600 ; weight
 
-	db   "This legendary"
-	next "#MON scatters"
-	next "embers with every"
-
-	page "flap of its wings."
-	next "It is a thrilling"
-	next "sight to behold.@"
+	db   "はばたくたび<NI>ひのこ<GA>きらめく。"
+	next "みたもの<NO>こころ<WO>とろけさせる"
+	next "うつくしさ<NO>でんせつ#"
+	dex

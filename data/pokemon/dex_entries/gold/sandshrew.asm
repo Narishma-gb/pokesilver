@@ -1,10 +1,8 @@
-	db "MOUSE@" ; species name
-	dw 200, 260 ; height, weight
+	db "ねずみ@" ; species name
+	db 6 ; height
+	dw 120 ; weight
 
-	db   "If it fell from a"
-	next "great height, this"
-	next "#MON could save"
-
-	page "itself by rolling"
-	next "into a ball and"
-	next "bouncing.@"
+	db   "どんな<NI>たかい　ところから"
+	next "おちても　からだ<WO>まるめれば"
+	next "バウンドできて　たすかるのだ"
+	dex

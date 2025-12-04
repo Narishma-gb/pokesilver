@@ -1,10 +1,8 @@
-	db "DELIVERY@" ; species name
-	dw 211, 350 ; height, weight
+	db "はこびや@" ; species name
+	db 9 ; height
+	dw 160 ; weight
 
-	db   "It carries food"
-	next "all day long."
-	next "There are tales"
-
-	page "about lost people"
-	next "who were saved by"
-	next "the food it had.@"
+	db   "１にち　ずっと　えさをはこんでる。"
+	next "そうなんした　ひと<GA>デリバードの"
+	next "えさで　たすかった　はなしもある"
+	dex

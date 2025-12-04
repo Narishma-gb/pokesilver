@@ -1,10 +1,8 @@
-	db "PIG@" ; species name
-	dw 104, 140 ; height, weight
+	db "いのぶた@" ; species name
+	db 4 ; height
+	dw 65 ; weight
 
-	db   "If it smells some-"
-	next "thing enticing, it"
-	next "dashes headlong"
-
-	page "off to find the"
-	next "source of the"
-	next "aroma.@"
+	db   "いい　におい<WO>かぎつけると"
+	next "あとさき　かんがえず　においの"
+	next "ほうこうへ　ダッシュしてしまう"
+	dex

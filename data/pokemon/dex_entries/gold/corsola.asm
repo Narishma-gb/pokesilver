@@ -1,10 +1,8 @@
-	db "CORAL@" ; species name
-	dw 200, 110 ; height, weight
+	db "さんご@" ; species name
+	db 6 ; height
+	dw 50 ; weight
 
-	db   "It continuously"
-	next "sheds and grows."
-	next "The tip of its"
-
-	page "head is prized as"
-	next "a treasure for its"
-	next "beauty.@"
+	db   "どんどん　そだ<TTE><WA>はえかわる"
+	next "あたま<NO>さき<WA>きれいなので"
+	next "たからも<NO>として　にんきがたかい"
+	dex

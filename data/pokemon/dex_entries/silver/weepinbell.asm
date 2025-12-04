@@ -1,10 +1,8 @@
-	db "FLYCATCHER@" ; species name
-	dw 303, 140 ; height, weight
+	db "ハエとり@" ; species name
+	db 10 ; height
+	dw 64 ; weight
 
-	db   "If its prey is"
-	next "bigger than its"
-	next "mouth, it slices"
-
-	page "up the victim with"
-	next "sharp leaves, then"
-	next "eats every morsel.@"
+	db   "くちよりも　おおきな　えものは"
+	next "きれあじ　するどい　ハッパで"
+	next "きざんで　のこさず　たべるのだ"
+	dex

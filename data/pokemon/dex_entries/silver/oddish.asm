@@ -1,10 +1,8 @@
-	db "WEED@" ; species name
-	dw 108, 120 ; height, weight
+	db "ざっそう@" ; species name
+	db 5 ; height
+	dw 54 ; weight
 
-	db   "If exposed to"
-	next "moonlight, it"
-	next "starts to move."
-
-	page "It roams far and"
-	next "wide at night to"
-	next "scatter its seeds.@"
+	db   "つきのひかり<WO>あびて　うごきだす。"
+	next "よるのあいだ<NI>タネ<WO>あちこちに"
+	next "ばらまくため　あるきまわる"
+	dex

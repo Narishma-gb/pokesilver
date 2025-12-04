@@ -1,10 +1,8 @@
-	db "TRANSFORM@" ; species name
-	dw 100, 90 ; height, weight
+	db "へんしん@" ; species name
+	db 3 ; height
+	dw 40 ; weight
 
-	db   "It can transform"
-	next "into anything."
-	next "When it sleeps, it"
-
-	page "changes into a"
-	next "stone to avoid"
-	next "being attacked.@"
+	db   "どんなものにも　へんしんできる。"
+	next "ねるとき<WA>いし<NI>へんしんして"
+	next "おそわれないよう<NI>している"
+	dex

@@ -1,10 +1,8 @@
-	db "GAS@" ; species name
-	dw 403, 2 ; height, weight
+	db "ガスじょう@" ; species name
+	db 13 ; height
+	dw 1 ; weight
 
-	db   "With its gas-like"
-	next "body, it can sneak"
-	next "into any place it"
-
-	page "desires. However,"
-	next "it can be blown"
-	next "away by wind.@"
+	db   "うすい　ガスのような　からだで"
+	next "どこにでも　しのびこむが"
+	next "かぜ<GA>ふくと　ふきとばされる"
+	dex

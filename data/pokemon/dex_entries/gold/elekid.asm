@@ -1,10 +1,8 @@
-	db "ELECTRIC@" ; species name
-	dw 200, 520 ; height, weight
+	db "でんき@" ; species name
+	db 6 ; height
+	dw 235 ; weight
 
-	db   "It rotates its"
-	next "arms to generate"
-	next "electricity, but"
-
-	page "it tires easily,"
-	next "so it charges up"
-	next "only a little bit.@"
+	db   "うで<WO>ぐるぐるまわして　でんきを"
+	next "はっせいさせる<GA>すぐ　つかれるので"
+	next "すこししか　でんき<GA>ためられない"
+	dex

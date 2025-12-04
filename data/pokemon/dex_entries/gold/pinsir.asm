@@ -1,10 +1,8 @@
-	db "STAGBEETLE@" ; species name
-	dw 411, 1210 ; height, weight
+	db "くわがた@" ; species name
+	db 15 ; height
+	dw 550 ; weight
 
-	db   "With its horns, it"
-	next "digs burrows to"
-	next "sleep in at night."
-
-	page "In the morning,"
-	next "damp soil clings"
-	next "to its body.@"
+	db   "よる<WA>ツノで　じめんをほ<TTE>"
+	next "なかで　ねむる。あさはやくだと"
+	next "ひふ<NI>しめった　つちがついている"
+	dex

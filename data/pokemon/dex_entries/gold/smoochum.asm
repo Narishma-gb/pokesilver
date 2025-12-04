@@ -1,10 +1,8 @@
-	db "KISS@" ; species name
-	dw 104, 130 ; height, weight
+	db "くちづけ@" ; species name
+	db 4 ; height
+	dw 60 ; weight
 
-	db   "Its lips are the"
-	next "most sensitive"
-	next "parts on its body."
-
-	page "It always uses its"
-	next "lips first to"
-	next "examine things.@"
+	db   "くちびる<GA>いちばん　びんかん。"
+	next "なんでも　まず　くちびるで　ふれて"
+	next "どんなものか　かくにんする"
+	dex

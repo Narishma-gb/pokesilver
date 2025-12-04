@@ -1,10 +1,8 @@
-	db "LONG LEG@" ; species name
-	dw 307, 740 ; height, weight
+	db "あしなが@" ; species name
+	db 11 ; height
+	dw 335 ; weight
 
-	db   "It spins string"
-	next "not only from its"
-	next "rear but also from"
-
-	page "its mouth. It is"
-	next "hard to tell which"
-	next "end is which.@"
+	db   "おしりからだけでなく　くちからも"
+	next "いと<WO>だすので　みただけでは"
+	next "どっち<GA>あたまか　わからない"
+	dex

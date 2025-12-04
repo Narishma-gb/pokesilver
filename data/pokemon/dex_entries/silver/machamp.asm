@@ -1,10 +1,8 @@
-	db "SUPERPOWER@" ; species name
-	dw 503, 2870 ; height, weight
+	db "かいりき@" ; species name
+	db 16 ; height
+	dw 1300 ; weight
 
-	db   "It uses its four"
-	next "powerful arms to"
-	next "pin the limbs of"
-
-	page "its foe, then"
-	next "throws the victim"
-	next "over the horizon.@"
+	db   "４ほんのうでで　あいて<NO>てあしを"
+	next "おさえこみ　じゆう<WO>うばうと"
+	next "ちへいせんのむこうまで　なげとばす"
+	dex

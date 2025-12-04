@@ -1,10 +1,8 @@
-	db "FAIRY@" ; species name
-	dw 407, 1070 ; height, weight
+	db "ようせい@" ; species name
+	db 14 ; height
+	dw 487 ; weight
 
-	db   "It is actually"
-	next "timid and easily"
-	next "spooked. If at-"
-
-	page "tacked, it flails"
-	next "about to fend off"
-	next "its attacker.@"
+	db   "ほんとう<WA>おくびょうで　こわがり。"
+	next "おそわれると　ひっし<NI>てあしを"
+	next "ふ<TTE>　てき<WO>おいはらおうとする"
+	dex

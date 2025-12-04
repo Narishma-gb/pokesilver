@@ -1,10 +1,8 @@
-	db "ELECTRIC@" ; species name
-	dw 503, 1160 ; height, weight
+	db "でんげき@" ; species name
+	db 16 ; height
+	dw 526 ; weight
 
-	db   "This legendary"
-	next "bird #MON"
-	next "causes savage"
-
-	page "thunderstorms by"
-	next "flapping its glit-"
-	next "tering wings.@"
+	db   "きらめく　ハネで　はばたくと"
+	next "はげしい　かみなり<GA>はっせいする"
+	next "でんせつ<NO>とり#<NO>ひとつ"
+	dex

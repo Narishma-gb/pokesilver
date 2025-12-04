@@ -332,13 +332,9 @@ SECTION "rom16", ROMX, BANK[16]
 
 SECTION "rom17", ROMX, BANK[17]
 ; ROM $11 : $44000 - $47FFF
-	set_bank_offset 17, $431b
-PokedexDataPointerFirstTable::
-
-	set_gs_diff -34
-	drd PokedexDataPointerSecondTable, $58c2
-
 	set_gs_diff $3e
+	set_bank_offset 17, $79ae + gs_diff
+
 	drd PlaceGraphic, $7aa0
 	drd DeletePartyMonMail, $7cc8
 	drd IsAnyMonHoldingMail, $7ce4

@@ -1,10 +1,8 @@
-	db "DRAGON@" ; species name
-	dw 1301, 360 ; height, weight
+	db "ドラゴン@" ; species name
+	db 40 ; height
+	dw 165 ; weight
 
-	db   "Its crystalline"
-	next "orbs appear to"
-	next "give this #MON"
-
-	page "the power to"
-	next "freely control the"
-	next "weather.@"
+	db   "すいしょう<NO>ような　タマには"
+	next "てんこう<WO>じゆう<NI>あやつる"
+	next "のうりょく<GA>ひめられているらしい"
+	dex

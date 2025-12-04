@@ -1,10 +1,8 @@
-	db "FREEZE@" ; species name
-	dw 507, 1220 ; height, weight
+	db "れいとう@" ; species name
+	db 17 ; height
+	dw 554 ; weight
 
-	db   "One of the legen-"
-	next "dary bird #MON,"
-	next "it chills moisture"
-
-	page "in the atmosphere"
-	next "to create snow"
-	next "while flying.@"
+	db   "くうきちゅう<NO>すいぶん<WO>こおらせ"
+	next "ゆき<WO>ふらせながら　とんでいく"
+	next "でんせつ<NO>とり#<NO>ひとつ"
+	dex

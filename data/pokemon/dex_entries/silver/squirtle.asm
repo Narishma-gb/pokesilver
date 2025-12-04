@@ -1,10 +1,8 @@
-	db "TINYTURTLE@" ; species name
-	dw 108, 200 ; height, weight
+	db "かめのこ@" ; species name
+	db 5 ; height
+	dw 90 ; weight
 
-	db   "The shell, which"
-	next "hardens soon after"
-	next "it is born, is"
-
-	page "resilient. If you"
-	next "poke it, it will"
-	next "bounce back out.@"
+	db   "うまれて　しばらくすると　かたまる"
+	next "こうらに<WA>だんりょくせい<GA>あ<TTE>"
+	next "ゆびで　つつくと　はじきかえされる"
+	dex

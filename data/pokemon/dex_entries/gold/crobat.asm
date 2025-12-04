@@ -1,10 +1,8 @@
-	db "BAT@" ; species name
-	dw 511, 1650 ; height, weight
+	db "こうもり@" ; species name
+	db 18 ; height
+	dw 750 ; weight
 
-	db   "It flies so si-"
-	next "lently through the"
-	next "dark on its four"
-
-	page "wings that it may"
-	next "not be noticed"
-	next "even when nearby.@"
+	db   "４まい<NI>ふえた　つばさで"
+	next "くらやみ<WO>しずか<NI>とんでいく。"
+	next "となり<WO>とおられても　きづかない"
+	dex

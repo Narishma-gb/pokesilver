@@ -1,10 +1,8 @@
-	db "GOLDFISH@" ; species name
-	dw 403, 860 ; height, weight
+	db "きんぎょ@" ; species name
+	db 13 ; height
+	dw 390 ; weight
 
-	db   "During spawning"
-	next "season, SEAKING"
-	next "gather from all"
-
-	page "over, coloring"
-	next "the rivers a"
-	next "brilliant red.@"
+	db   "さんらん<NO>じき<NI>なると"
+	next "かくちから　アズマオウ<GA>あつまり"
+	next "かわのいろ<GA>まっか<NI>そまる"
+	dex

@@ -1,10 +1,8 @@
-	db "HUMANSHAPE@" ; species name
-	dw 407, 900 ; height, weight
+	db "ひとがた@" ; species name
+	db 14 ; height
+	dw 406 ; weight
 
-	db   "It rocks its body"
-	next "rhythmically. It"
-	next "appears to alter"
-
-	page "the rhythm depend-"
-	next "ing on how it is"
-	next "feeling.@"
+	db   "リズミカル<NI>からだ<WO>ゆらしてる。"
+	next "そのとき<NO>かんじょう<NI>よ<TTE>"
+	next "リズム<WA>ことなるらしい"
+	dex

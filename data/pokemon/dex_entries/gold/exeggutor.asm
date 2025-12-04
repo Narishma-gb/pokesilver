@@ -1,10 +1,8 @@
-	db "COCONUT@" ; species name
-	dw 607, 2650 ; height, weight
+	db "やしのみ@" ; species name
+	db 20 ; height
+	dw 1200 ; weight
 
-	db   "Its three heads"
-	next "think independent-"
-	next "ly. However, they"
-
-	page "are friendly and"
-	next "never appear to"
-	next "squabble.@"
+	db   "３つ<NO>あたま<WA>かんがえることは"
+	next "べつべつでも　なかよし　なので"
+	next "ケンカしたり　しないらしい"
+	dex

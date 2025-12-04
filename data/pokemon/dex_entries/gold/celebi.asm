@@ -1,10 +1,8 @@
-	db "TIMETRAVEL@" ; species name
-	dw 200, 110 ; height, weight
+	db "ときわたり@" ; species name
+	db 6 ; height
+	dw 50 ; weight
 
-	db   "This #MON wan-"
-	next "ders across time."
-	next "Grass and trees"
-
-	page "flourish in the"
-	next "forests in which"
-	next "it has appeared.@"
+	db   "じかんをこえて　あちこち　さまよう。"
+	next "セレビィ<GA>すがた<WO>あらわした"
+	next "もり<WA>くさき<GA>おいしげるという"
+	dex

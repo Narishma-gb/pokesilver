@@ -1,10 +1,8 @@
-	db "PAINTER@" ; species name
-	dw 311, 1280 ; height, weight
+	db "えかき@" ; species name
+	db 12 ; height
+	dw 580 ; weight
 
-	db   "Once it becomes an"
-	next "adult, it has a"
-	next "tendency to let"
-
-	page "its comrades plant"
-	next "footprints on its"
-	next "back.@"
+	db   "おとなになると　なかまから"
+	next "せなか<NI>あしあと<NO>マークを"
+	next "つけられる　しゅうせい<WO>もつ"
+	dex

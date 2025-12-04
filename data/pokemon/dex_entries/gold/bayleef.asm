@@ -1,10 +1,8 @@
-	db "LEAF@" ; species name
-	dw 311, 350 ; height, weight
+	db "はっぱ@" ; species name
+	db 12 ; height
+	dw 158 ; weight
 
-	db   "The scent of"
-	next "spices comes from"
-	next "around its neck."
-
-	page "Somehow, sniffing"
-	next "it makes you want"
-	next "to fight.@"
+	db   "くび<NO>まわりから　だされる"
+	next "スパイシーな　かおり<WO>かいでいると"
+	next "なぜだか　たたかいたくなる"
+	dex

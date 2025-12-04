@@ -1,10 +1,8 @@
-	db "LONG TAIL@" ; species name
-	dw 207, 250 ; height, weight
+	db "おなが@" ; species name
+	db 8 ; height
+	dw 115 ; weight
 
-	db   "It lives atop tall"
-	next "trees. When leap-"
-	next "ing from branch"
-
-	page "to branch, it"
-	next "deftly uses its"
-	next "tail for balance.@"
+	db   "たかい　き<NO>うえで　くらしている。"
+	next "えだから　えだへ　とびうつるとき"
+	next "シッポで　たくみ<NI>バランスをとる"
+	dex

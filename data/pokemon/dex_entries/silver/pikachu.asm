@@ -1,10 +1,8 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+	db "ねずみ@" ; species name
+	db 4 ; height
+	dw 60 ; weight
 
-	db   "It raises its tail"
-	next "to check its sur-"
-	next "roundings. The"
-
-	page "tail is sometimes"
-	next "struck by light-"
-	next "ning in this pose.@"
+	db   "しっぽ<WO>たてて　まわりの"
+	next "ようす<WO>さぐ<TTE>いると　ときどき"
+	next "かみなり<GA>しっぽ<NI>おちてくる"
+	dex

@@ -1,10 +1,8 @@
-	db "FOX@" ; species name
-	dw 307, 440 ; height, weight
+	db "きつね@" ; species name
+	db 11 ; height
+	dw 199 ; weight
 
-	db   "Its nine beautiful"
-	next "tails are filled"
-	next "with a wondrous"
-
-	page "energy that could"
-	next "keep it alive for"
-	next "1,000 years.@"
+	db   "９ほん<NO>うつくしい　しっぽには"
+	next "１０００ねん　いきるだけの"
+	next "ふしぎなエネルギー<GA>つま<TTE>いる"
+	dex

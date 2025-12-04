@@ -1,10 +1,8 @@
-	db "LONELY@" ; species name
-	dw 104, 140 ; height, weight
+	db "こどく@" ; species name
+	db 4 ; height
+	dw 65 ; weight
 
-	db   "It always wears"
-	next "the skull of its"
-	next "dead mother, so no"
-
-	page "one has any idea"
-	next "what its hidden"
-	next "face looks like.@"
+	db   "しにわかれた　ははおや<NO>ホネを"
+	next "いつも　かぶ<TTE>いるので"
+	next "すがお<GA>どんなふうか　わからない"
+	dex

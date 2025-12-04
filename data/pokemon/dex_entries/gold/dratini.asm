@@ -1,10 +1,8 @@
-	db "DRAGON@" ; species name
-	dw 511, 70 ; height, weight
+	db "ドラゴン@" ; species name
+	db 18 ; height
+	dw 33 ; weight
 
-	db   "It is born large"
-	next "to start with. It"
-	next "repeatedly sheds"
-
-	page "its skin as it"
-	next "steadily grows"
-	next "longer.@"
+	db   "うまれたときから　すで<NI>おおきい。"
+	next "だっぴ<WO>くりかえしては"
+	next "どんどん　そだ<TTE>　ながくなる"
+	dex

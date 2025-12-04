@@ -1,10 +1,8 @@
-	db "PINCER@" ; species name
-	dw 403, 1320 ; height, weight
+	db "はさみ@" ; species name
+	db 13 ; height
+	dw 600 ; weight
 
-	db   "Its pincers grow"
-	next "peculiarly large."
-	next "If it lifts the"
-
-	page "pincers too fast,"
-	next "it loses its bal-"
-	next "ance and staggers.@"
+	db   "ぶかっこう<NI>おおきくなった"
+	next "ハサミ<WO>いきおいよく　もちあげると"
+	next "バランスがくずれ　よたついてしまう"
+	dex

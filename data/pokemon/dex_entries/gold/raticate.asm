@@ -1,10 +1,8 @@
-	db "RAT@" ; species name
-	dw 204, 410 ; height, weight
+	db "ねずみ@" ; species name
+	db 7 ; height
+	dw 185 ; weight
 
-	db   "Gnaws on anything"
-	next "with its tough"
-	next "fangs. It can even"
-
-	page "topple concrete"
-	next "buildings by gnaw-"
-	next "ing on them.@"
+	db   "かたい　キバで　なんでも　かじる。"
+	next "コンクリートで　できた　ビルすら"
+	next "かじ<TTE>　たおしてしまう"
+	dex

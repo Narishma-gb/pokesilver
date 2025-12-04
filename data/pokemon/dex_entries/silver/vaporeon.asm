@@ -1,10 +1,8 @@
-	db "BUBBLE JET@" ; species name
-	dw 303, 640 ; height, weight
+	db "あわはき@" ; species name
+	db 10 ; height
+	dw 290 ; weight
 
-	db   "It prefers beauti-"
-	next "ful shores. With"
-	next "cells similar to"
-
-	page "water molecules,"
-	next "it could melt in"
-	next "water.@"
+	db   "きれいな　みずべ<WO>このんでいる。"
+	next "さいぼう<GA>みずのぶんし<NI>にており"
+	next "みず<NI>とけることもできる"
+	dex

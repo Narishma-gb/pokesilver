@@ -1,10 +1,8 @@
-	db "BAGWORM@" ; species name
-	dw 200, 160 ; height, weight
+	db "みのむし@" ; species name
+	db 6 ; height
+	dw 72 ; weight
 
-	db   "It hangs and waits"
-	next "for flying insect"
-	next "prey to come near."
-
-	page "It does not move"
-	next "about much on its"
-	next "own.@"
+	db   "ぶらさがったまま　エサとなる"
+	next "ムシ<GA>とんでくるの<WO>ま<TTE>いる。"
+	next "じぶんじしん<WA>あまり　うごかない"
+	dex

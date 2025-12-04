@@ -1,10 +1,8 @@
-	db "LAND SNAKE@" ; species name
-	dw 411, 310 ; height, weight
+	db "つちへび@" ; species name
+	db 15 ; height
+	dw 140 ; weight
 
-	db   "When spotted, this"
-	next "#MON escapes"
-	next "backward by furi-"
-
-	page "ously boring into"
-	next "the ground with"
-	next "its tail.@"
+	db   "だれか<NI>みられると"
+	next "シッポで　じめん<WO>ほ<TTE>"
+	next "うしろむき<NI>にげだすのだ"
+	dex

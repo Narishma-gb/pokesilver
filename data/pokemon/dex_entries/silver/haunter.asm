@@ -1,10 +1,8 @@
-	db "GAS@" ; species name
-	dw 503, 2 ; height, weight
+	db "ガスじょう@" ; species name
+	db 16 ; height
+	dw 1 ; weight
 
-	db   "Its tongue is made"
-	next "of gas. If licked,"
-	next "its victim starts"
-
-	page "shaking constantly"
-	next "until death even-"
-	next "tually comes.@"
+	db   "ガスじょう<NO>したで　なめられると"
+	next "からだ<NO>ふるえ<GA>とまらなくなり"
+	next "やがて<WA>し　<NI>いたるという"
+	dex

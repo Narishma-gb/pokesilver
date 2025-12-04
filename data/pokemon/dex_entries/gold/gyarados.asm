@@ -1,10 +1,8 @@
-	db "ATROCIOUS@" ; species name
-	dw 2104, 5180 ; height, weight
+	db "きょうあく@" ; species name
+	db 65 ; height
+	dw 2350 ; weight
 
-	db   "They say that"
-	next "during past wars,"
-	next "GYARADOS would"
-
-	page "appear and leave"
-	next "blazing ruins in"
-	next "its wake.@"
+	db   "むかし　いくさ<NI>なるたびに"
+	next "ギャラドス<GA>あらわれ　あちこちを"
+	next "ひのうみ<NI>していった　という"
+	dex

@@ -1,10 +1,8 @@
-	db "ROCK@" ; species name
-	dw 104, 440 ; height, weight
+	db "がんせき@" ; species name
+	db 4 ; height
+	dw 200 ; weight
 
-	db   "Most people may"
-	next "not notice, but"
-	next "a closer look"
-
-	page "should reveal that"
-	next "there are many"
-	next "GEODUDE around.@"
+	db   "おおく<NO>ひと<WA>きづかないだけ。"
+	next "あたり<WO>よく　みてみれば"
+	next "イシツブテ<WA>たくさん　いる"
+	dex

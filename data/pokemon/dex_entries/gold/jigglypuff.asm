@@ -1,10 +1,8 @@
-	db "BALLOON@" ; species name
-	dw 108, 120 ; height, weight
+	db "ふうせん@" ; species name
+	db 5 ; height
+	dw 55 ; weight
 
-	db   "If it inflates to"
-	next "SING a lullaby, it"
-	next "can perform longer"
-
-	page "and cause sure"
-	next "drowsiness in its"
-	next "audience.@"
+	db   "おおきく　からだ<WO>ふくらませてから"
+	next "うたう　こもりうた<WA>いつもより"
+	next "ながくて　ぜったい<NI>ねむくなる"
+	dex

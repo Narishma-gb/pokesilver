@@ -1,10 +1,8 @@
-	db "LIGHT@" ; species name
-	dw 407, 1360 ; height, weight
+	db "ライト@" ; species name
+	db 14 ; height
+	dw 615 ; weight
 
-	db   "The bright light"
-	next "on its tail can be"
-	next "seen far away. It"
-
-	page "has been treasured"
-	next "since ancient"
-	next "times as a beacon.@"
+	db   "シッポ<NO>あかり<WA>とおくまで"
+	next "とどくので　むかしより　かがりび"
+	next "として　だいじ<NI>されている"
+	dex

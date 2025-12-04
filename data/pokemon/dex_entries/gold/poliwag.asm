@@ -1,10 +1,8 @@
-	db "TADPOLE@" ; species name
-	dw 200, 270 ; height, weight
+	db "おたま@" ; species name
+	db 6 ; height
+	dw 124 ; weight
 
-	db   "Because it is in-"
-	next "ept at walking on"
-	next "its newly grown"
-
-	page "legs, it always "
-	next "swims around in"
-	next "water.@"
+	db   "はえたばかり<NO>あしで"
+	next "あるくの<WA>にがてなので　いつも"
+	next "みずのなか<WO>およぎまわ<TTE>る"
+	dex
