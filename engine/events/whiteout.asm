@@ -25,8 +25,12 @@ Script_Whiteout:
 	jumpstd BugContestResultsWarpScript
 
 .WhitedOutText:
-	text_far _WhitedOutText
-	text_end
+	text "<PLAYER>の　てもとには"
+	line "たたかえる　#が　もういない！"
+
+	para "<PLAYER>は"
+	line "めのまえが　まっしろに　なった！"
+	done
 
 OverworldBGMap:
 	call ClearPalettes

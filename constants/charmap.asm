@@ -136,6 +136,7 @@
 	charmap "<LV>", $6e
 
 	charmap "<do>", $70 ; single tile "ど", used in Status Ailment
+	charmap "◀",   $71
 
 	charmap "<ID>", $73
 	charmap "№",    $74

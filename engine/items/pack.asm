@@ -166,8 +166,8 @@ Pack:
 .MenuData_1:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 2 ; items
-	db "USE@"
-	db "QUIT@"
+	db "つかう@"
+	db "やめる@"
 
 .Jumptable1:
 	dw .UseItem
@@ -182,9 +182,9 @@ Pack:
 .MenuData_2:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 3 ; items
-	db "USE@"
-	db "GIVE@"
-	db "QUIT@"
+	db "つかう@"
+	db "もたせる@"
+	db "やめる@"
 
 .Jumptable2:
 	dw .UseItem
@@ -317,11 +317,11 @@ MenuHeader_UsableKeyItem:
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 5 ; items
-	db "USE@"
-	db "GIVE@"
-	db "TOSS@"
-	db "SEL@"
-	db "QUIT@"
+	db "つかう@"
+	db "もたせる@"
+	db "すてる@"
+	db "とうろく@"
+	db "やめる@"
 
 Jumptable_UseGiveTossRegisterQuit:
 	dw UseItem
@@ -339,10 +339,10 @@ MenuHeader_UsableItem:
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 4 ; items
-	db "USE@"
-	db "GIVE@"
-	db "TOSS@"
-	db "QUIT@"
+	db "つかう@"
+	db "もたせる@"
+	db "すてる@"
+	db "やめる@"
 
 Jumptable_UseGiveTossQuit:
 	dw UseItem
@@ -359,8 +359,8 @@ MenuHeader_UnusableItem:
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 2 ; items
-	db "USE@"
-	db "QUIT@"
+	db "つかう@"
+	db "やめる@"
 
 Jumptable_UseQuit:
 	dw UseItem
@@ -375,9 +375,9 @@ MenuHeader_UnusableKeyItem:
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 3 ; items
-	db "USE@"
-	db "SEL@"
-	db "QUIT@"
+	db "つかう@"
+	db "とうろく@"
+	db "やめる@"
 
 Jumptable_UseRegisterQuit:
 	dw UseItem
@@ -393,10 +393,10 @@ MenuHeader_HoldableKeyItem:
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 4 ; items
-	db "GIVE@"
-	db "TOSS@"
-	db "SEL@"
-	db "QUIT@"
+	db "もたせる@"
+	db "すてる@"
+	db "とうろく@"
+	db "やめる@"
 
 Jumptable_GiveTossRegisterQuit:
 	dw GiveItem
@@ -413,9 +413,9 @@ MenuHeader_HoldableItem:
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 3 ; items
-	db "GIVE@"
-	db "TOSS@"
-	db "QUIT@"
+	db "もたせる@"
+	db "すてる@"
+	db "やめる@"
 
 Jumptable_GiveTossQuit:
 	dw GiveItem
@@ -596,7 +596,7 @@ GiveItem:
 	call GetCurNickname
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	call TryGiveItemToPartymon
 	pop af
@@ -617,9 +617,11 @@ GiveItem:
 	ld hl, YouDontHaveAMonText
 	call Pack_PrintTextNoScroll
 	ret
+
 .AnEggCantHoldAnItemText:
-	text_far _AnEggCantHoldAnItemText
-	text_end
+	text "タマゴには"
+	line "もたせることが　できません！"
+	prompt
 
 QuitItemSubmenu:
 	ret
@@ -814,8 +816,8 @@ TMHMSubmenu:
 .UsableMenuData:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 2 ; items
-	db "USE@"
-	db "QUIT@"
+	db "つかう@"
+	db "やめる@"
 
 .UsableJumptable:
 	dw .Use
@@ -830,7 +832,7 @@ TMHMSubmenu:
 .UnusableMenuData:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 1 ; items
-	db "QUIT@"
+	db "やめる@"
 
 .UnusableJumptable:
 	dw .Quit
@@ -1067,10 +1069,6 @@ DepositSellTutorial_InterpretJoypad:
 
 TutorialPack:
 	call DepositSellInitPackBuffers
-	ld a, [wInputType]
-	or a
-	jr z, .loop
-	farcall _DudeAutoInput_RightA
 .loop
 	call .RunJumptable
 	call DepositSellTutorial_InterpretJoypad
@@ -1099,7 +1097,7 @@ TutorialPack:
 
 .ItemsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 8, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .ItemsMenuData
 	db 1 ; default option
 
@@ -1119,7 +1117,7 @@ TutorialPack:
 
 .KeyItemsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 8, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .KeyItemsMenuData
 	db 1 ; default option
 
@@ -1148,7 +1146,7 @@ TutorialPack:
 
 .BallsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 8, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .BallsMenuData
 	db 1 ; default option
 
@@ -1221,16 +1219,16 @@ DrawPackGFX:
 	ld a, [hli]
 	ld e, a
 	ld d, [hl]
-	ld hl, vTiles2 tile $50
-	lb bc, BANK(PackGFX), 15
+	ld hl, vTiles2 tile $52
+	lb bc, BANK(PackGFX), 12
 	call Request2bpp
 	ret
 
 PackGFXPointers:
-	dw PackGFX + (15 tiles) * 1 ; ITEM_POCKET
-	dw PackGFX + (15 tiles) * 3 ; BALL_POCKET
-	dw PackGFX + (15 tiles) * 0 ; KEY_ITEM_POCKET
-	dw PackGFX + (15 tiles) * 2 ; TM_HM_POCKET
+	dw PackGFX + (12 tiles) * 1 ; ITEM_POCKET
+	dw PackGFX + (12 tiles) * 3 ; BALL_POCKET
+	dw PackGFX + (12 tiles) * 0 ; KEY_ITEM_POCKET
+	dw PackGFX + (12 tiles) * 2 ; TM_HM_POCKET
 
 Pack_InterpretJoypad:
 	ld hl, wMenuJoypad
@@ -1327,18 +1325,18 @@ Pack_InitGFX:
 	ld a, BANK(PackMenuGFX)
 	call FarCopyBytes
 ; Background
-	hlcoord 0, 1
-	ld bc, 11 * SCREEN_WIDTH
+	hlcoord 0, 2
+	ld bc, 10 * SCREEN_WIDTH
 	ld a, $24
 	call ByteFill
 ; This is where the items themselves will be listed.
-	hlcoord 5, 1
-	lb bc, 11, 15
+	hlcoord 6, 2
+	lb bc, 10, 14
 	call ClearBox
-; ◀▶ POCKET       ▼▲ ITEMS
+; ◀▶ポケットをえらぶ  ▼▲ どうぐ をえらぶ
 	hlcoord 0, 0
 	ld a, $28
-	ld c, SCREEN_WIDTH
+	ld c, 2 * SCREEN_WIDTH
 .loop
 	ld [hli], a
 	inc a
@@ -1355,12 +1353,12 @@ Pack_InitGFX:
 	ret
 
 PlacePackGFX:
-	hlcoord 0, 3
-	ld a, $50
-	ld de, SCREEN_WIDTH - 5
+	hlcoord 1, 3
+	ld a, $52
+	ld de, SCREEN_WIDTH - 4
 	ld b, 3
 .row
-	ld c, 5
+	ld c, 4
 .column
 	ld [hli], a
 	inc a
@@ -1373,37 +1371,46 @@ PlacePackGFX:
 
 DrawPocketName:
 	ld a, [wCurPocket]
-	; * 15
-	ld d, a
-	swap a
-	sub d
-	ld d, 0
+	maskbits NUM_POCKETS
 	ld e, a
-	ld hl, .tilemap
+	ld d, 0
+	ld hl, .name_offsets
 	add hl, de
-	ld d, h
-	ld e, l
+	ld a, [hl]
+
+	hlcoord 1, 7
+	call .place_row
+	hlcoord 1, 8
+	call .place_row
+
+	xor a
 	hlcoord 0, 7
-	ld c, 3
-.row
-	ld b, 5
-.col
-	ld a, [de]
-	inc de
-	ld [hli], a
-	dec b
-	jr nz, .col
-	ld a, c
-	ld c, SCREEN_WIDTH - 5
-	add hl, bc
-	ld c, a
-	dec c
-	jr nz, .row
+	ld [hl], a
+	inc a
+	hlcoord 5, 7
+	ld [hl], a
+	inc a
+	hlcoord 0, 8
+	ld [hl], a
+	inc a
+	hlcoord 5, 8
+	ld [hl], a
 	ret
 
-.tilemap: ; 5x12
-; the 5x3 pieces correspond to *_POCKET constants
-INCBIN "gfx/pack/pack_menu.tilemap"
+.place_row
+	ld c, 4
+.loop
+	ld [hli], a
+	inc a
+	dec c
+	jr nz, .loop
+	ret
+
+.name_offsets:
+	db 4         ; ITEM_POCKET
+	db 4 + 8 * 3 ; BALL_POCKET
+	db 4 + 8 * 1 ; KEY_ITEM_POCKET
+	db 4 + 8 * 2 ; TM_HM_POCKET
 
 Pack_GetItemName:
 	ld a, [wCurItem]
@@ -1415,13 +1422,13 @@ Pack_GetItemName:
 Pack_ClearTilemap: ; unreferenced
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	ret
 
 ClearPocketList:
-	hlcoord 5, 2
-	lb bc, 10, SCREEN_WIDTH - 5
+	hlcoord 6, 2
+	lb bc, 10, SCREEN_WIDTH - 6
 	call ClearBox
 	ret
 
@@ -1435,7 +1442,7 @@ Pack_InitColors:
 
 ItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 8, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -1450,7 +1457,7 @@ ItemsPocketMenuHeader:
 
 PC_Mart_ItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 8, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -1465,7 +1472,7 @@ PC_Mart_ItemsPocketMenuHeader:
 
 KeyItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 8, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -1480,7 +1487,7 @@ KeyItemsPocketMenuHeader:
 
 PC_Mart_KeyItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 8, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -1495,7 +1502,7 @@ PC_Mart_KeyItemsPocketMenuHeader:
 
 BallsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 8, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -1510,7 +1517,7 @@ BallsPocketMenuHeader:
 
 PC_Mart_BallsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 8, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -1524,48 +1531,61 @@ PC_Mart_BallsPocketMenuHeader:
 	dba UpdateItemDescription
 
 PackNoItemText: ; unreferenced
-	text_far _PackNoItemText
-	text_end
+	text "もっていません"
+	done
 
 AskThrowAwayText:
-	text_far _AskThrowAwayText
-	text_end
+	text "いくつ　すてますか？"
+	done
 
 AskQuantityThrowAwayText:
-	text_far _AskQuantityThrowAwayText
-	text_end
+	text_ram wStringBuffer2
+	text "を　@"
+	text_decimal wItemQuantityChange, 1, 2
+	text "こ"
+	line "すててもよろしいですか？"
+	done
 
 ThrewAwayText:
-	text_far _ThrewAwayText
-	text_end
+	text_ram wStringBuffer2
+	text "を"
+	line "すてました！"
+	prompt
 
 OakThisIsntTheTimeText:
-	text_far _OakThisIsntTheTimeText
-	text_end
+	text "オーキドの　ことば<⋯>"
+	line "<PLAYER>よ！　こういうものには"
+	cont "つかいどきが　あるのじゃ！"
+	prompt
 
 YouDontHaveAMonText:
-	text_far _YouDontHaveAMonText
-	text_end
+	text "#を　もっていません！"
+	prompt
 
 RegisteredItemText:
-	text_far _RegisteredItemText
-	text_end
+	text_ram wStringBuffer2
+	text "を　"
+	line "べんりボタンに　とうろくした！"
+	prompt
 
 CantRegisterText:
-	text_far _CantRegisterText
-	text_end
+	text "そのどうぐは　"
+	line "とうろくできません！"
+	prompt
 
 AskItemMoveText:
-	text_far _AskItemMoveText
-	text_end
+	text "どこに"
+	line "いどう　しますか？"
+	done
 
 PackEmptyText:
-	text_far _PackEmptyText
-	text_end
+	text_start
+	done
 
 YouCantUseItInABattleText: ; unreferenced
-	text_far _YouCantUseItInABattleText
-	text_end
+	text "せんとう　ちゅうは"
+	line "できません！"
+	prompt
 
 PackMenuGFX:
 INCBIN "gfx/pack/pack_menu.2bpp"

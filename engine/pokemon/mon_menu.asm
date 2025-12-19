@@ -62,16 +62,24 @@ TossItemFromPC:
 	ret
 
 .ItemsTossOutHowManyText:
-	text_far _ItemsTossOutHowManyText
-	text_end
+	text_ram wStringBuffer2
+	text "を　"
+	line "いくつ　すてますか？"
+	done
 
 .ItemsThrowAwayText:
-	text_far _ItemsThrowAwayText
-	text_end
+	text_ram wStringBuffer2
+	text "を　@"
+	text_decimal wItemQuantityChange, 1, 2
+	text "こ"
+	line "すててもよろしいですか？"
+	done
 
 .ItemsDiscardedText:
-	text_far _ItemsDiscardedText
-	text_end
+	text_ram wStringBuffer1
+	text "を"
+	line "すてました！"
+	prompt
 
 .CantToss:
 	ld hl, .ItemsTooImportantText
@@ -79,8 +87,9 @@ TossItemFromPC:
 	ret
 
 .ItemsTooImportantText:
-	text_far _ItemsTooImportantText
-	text_end
+	text "それ<WA>とても　たいせつなモノです"
+	line "すてること<WA>できません！"
+	prompt
 
 CantUseItem:
 	ld hl, ItemsOakWarningText
@@ -88,8 +97,10 @@ CantUseItem:
 	ret
 
 ItemsOakWarningText:
-	text_far _ItemsOakWarningText
-	text_end
+	text "オーキド<NO>ことば<⋯>"
+	line "<PLAYER>よ！　こういうものには"
+	cont "つかいどき<GA>あるのじゃ！"
+	done
 
 PartyMonItemName:
 	ld a, [wCurItem]
@@ -177,7 +188,7 @@ SwitchPartyMons:
 	call DelayFrame
 
 	farcall PartyMenuSelect
-	bit B_BUTTON_F, b
+	bit B_PAD_B, b
 	jr c, .DontSwitch
 
 	farcall _SwitchPartyMons
@@ -213,7 +224,7 @@ GiveTakePartyMonItem:
 	call GetCurNickname
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	ld a, [wMenuCursorY]
 	cp 1
@@ -383,40 +394,68 @@ GiveTakeItemMenuData:
 .Items:
 	db STATICMENU_CURSOR ; flags
 	db 2 ; # items
-	db "GIVE@"
-	db "TAKE@"
+	db "もたせる@"
+	db "あずかる@"
 
 PokemonSwapItemText:
-	text_far _PokemonSwapItemText
-	text_end
+	text_ram wMonOrItemNameBuffer
+	text "<GA>もっていた"
+	line "@"
+	text_ram wStringBuffer1
+	text "を　あずかって"
+
+	para "@"
+	text_ram wStringBuffer2
+	text "を　もたせた！"
+	prompt
 
 PokemonHoldItemText:
-	text_far _PokemonHoldItemText
-	text_end
+	text_ram wMonOrItemNameBuffer
+	text "に　@"
+	text_ram wStringBuffer2
+	text "を"
+	line "もたせた！"
+	prompt
 
 PokemonRemoveMailText:
-	text_far _PokemonRemoveMailText
-	text_end
+	text "メールを　はずさないと"
+	line "どうぐ<WA>もてません！"
+	prompt
 
 PokemonNotHoldingText:
-	text_far _PokemonNotHoldingText
-	text_end
+	text_ram wMonOrItemNameBuffer
+	text "<WA>なにも"
+	line "もっていません！"
+	prompt
 
 ItemStorageFullText:
-	text_far _ItemStorageFullText
-	text_end
+	text "どうぐ<GA>いっぱいで"
+	line "もちものを　あずかれません！"
+	prompt
 
 PokemonTookItemText:
-	text_far _PokemonTookItemText
-	text_end
+	text_ram wMonOrItemNameBuffer
+	text "から　@"
+	text_ram wStringBuffer1
+	text "を"
+	line "あずかり　ました！"
+	prompt
 
 PokemonAskSwapItemText:
-	text_far _PokemonAskSwapItemText
-	text_end
+	text_ram wMonOrItemNameBuffer
+	text "<WA>@"
+	text_ram wStringBuffer1
+	text "を"
+	line "すでに　もっています"
+
+	para "もっている　どうぐを"
+	line "とりかえますか？"
+	done
 
 ItemCantHeldText:
-	text_far _ItemCantHeldText
-	text_end
+	text "こ<NO>どうぐは"
+	line "もつこと<GA>できません！"
+	prompt
 
 GetPartyItemLocation:
 	push af
@@ -552,33 +591,41 @@ MonMailAction:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 3 ; items
-	db "READ@"
-	db "TAKE@"
-	db "QUIT@"
+	db "メールを　よむ@"
+	db "メールを　とる@"
+	db "やめる@"
 
 .MailLoseMessageText:
-	text_far _MailLoseMessageText
-	text_end
+	text "メールを　とると　メッセージが"
+	line "きえてしまいます<GA>いいですか？"
+	done
 
 .MailDetachedText:
-	text_far _MailDetachedText
-	text_end
+	text_ram wStringBuffer1
+	text "から　@"
+	text "メールを"
+	line "とりました！"
+	prompt
 
 .MailNoSpaceText:
-	text_far _MailNoSpaceText
-	text_end
+	text "どうぐ<GA>いっぱいで"
+	line "メールを　とれません！"
+	prompt
 
 .MailAskSendToPCText:
-	text_far _MailAskSendToPCText
-	text_end
+	text "とった　メールを　<PC>に"
+	line "てんそうしますか？"
+	done
 
 .MailboxFullText:
-	text_far _MailboxFullText
-	text_end
+	text "<PC><NO>メールボックスが"
+	line "いっぱいです！"
+	prompt
 
 .MailSentToPCText:
-	text_far _MailSentToPCText
-	text_end
+	text "メールを　<PC>に"
+	line "てんそうしました"
+	prompt
 
 OpenPartyStats:
 	call LoadStandardMenuHeader
@@ -737,8 +784,8 @@ MonMenu_Softboiled_MilkDrink:
 	ret
 
 .PokemonNotEnoughHPText:
-	text_far _PokemonNotEnoughHPText
-	text_end
+	text "たいりょく<GA>たりません！"
+	prompt
 
 .CheckMonHasEnoughHP:
 ; Need to have at least (MaxHP / 5) HP left.
@@ -819,9 +866,9 @@ ChooseMoveToDelete:
 
 .loop
 	call ScrollingMenuJoypad
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jp nz, .b_button
-	bit A_BUTTON_F, a
+	bit B_PAD_A, a
 	jp nz, .a_button
 
 .enter_loop
@@ -888,9 +935,9 @@ MoveScreenLoop:
 
 .joy_loop
 	call ScrollingMenuJoypad
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jp nz, .b_button
-	bit A_BUTTON_F, a
+	bit B_PAD_A, a
 	jp nz, .a_button
 	bit B_PAD_RIGHT, a
 	jp nz, .d_right
@@ -906,12 +953,8 @@ MoveScreenLoop:
 	jp .joy_loop
 
 .moving_move
-	ld a, ' '
 	hlcoord 1, 11
-	ld bc, 5
-	call ByteFill
-	hlcoord 1, 12
-	lb bc, 5, SCREEN_WIDTH - 2
+	lb bc, 6, SCREEN_WIDTH - 2
 	call ClearBox
 	hlcoord 1, 12
 	ld de, String_MoveWhere
@@ -1042,9 +1085,6 @@ MoveScreenLoop:
 	hlcoord 1, 2
 	lb bc, 8, 18
 	call ClearBox
-	hlcoord 10, 10
-	lb bc, 1, 9
-	call ClearBox
 	jp .loop
 
 .copy_move
@@ -1086,7 +1126,7 @@ MoveScreen2DMenuData:
 	db PAD_CTRL_PAD | PAD_A | PAD_B ; accepted buttons
 
 String_MoveWhere:
-	db "Where?@"
+	db "どこに　いどうしますか？@"
 
 SetUpMoveScreenBG:
 	call ClearBGPalettes
@@ -1106,33 +1146,26 @@ SetUpMoveScreenBG:
 	ld e, MONICON_MOVES
 	farcall LoadMenuMonIcon
 	hlcoord 0, 1
-	ld b, 9
+	ld b, 8
 	ld c, 18
 	call Textbox
-	hlcoord 0, 11
-	ld b, 5
+	hlcoord 0, 10
+	ld b, 6
 	ld c, 18
 	call Textbox
-	hlcoord 2, 0
-	lb bc, 2, 3
+	hlcoord 1, 0
+	lb bc, 2, 18
 	call ClearBox
 	xor a
 	ld [wMonType], a
-	ld hl, wPartyMonNicknames
-	ld a, [wCurPartyMon]
-	call GetNickname
-	hlcoord 5, 1
-	call PlaceString
-	push bc
-	farcall CopyMonToTempMon
-	pop hl
-	call PrintLevel
+	hlcoord 3, 1
+	predef Unused_PlaceEnemyHPLevel
 	ld hl, wPlayerHPPal
 	call SetHPPal
 	ld b, SCGB_MOVE_LIST
 	call GetSGBLayout
-	hlcoord 16, 0
-	lb bc, 1, 3
+	hlcoord 11, 0
+	lb bc, 1, 9
 	jp ClearBox
 
 SetUpMoveList:
@@ -1149,15 +1182,15 @@ SetUpMoveList:
 	ld [wListMovesLineSpacing], a
 	hlcoord 2, 3
 	predef ListMoves
-	hlcoord 10, 4
+	hlcoord 11, 3
 	predef ListMovePP
 	call WaitBGMap
 	call SetDefaultBGPAndOBP
 	ld a, [wNumMoves]
 	inc a
 	ld [w2DMenuNumRows], a
-	hlcoord 0, 11
-	ld b, 5
+	hlcoord 0, 10
+	ld b, 6
 	ld c, 18
 	jp Textbox
 
@@ -1173,25 +1206,19 @@ PrepareToPlaceMoveData:
 	add hl, bc
 	ld a, [hl]
 	ld [wCurSpecies], a
-	hlcoord 1, 12
-	lb bc, 5, 18
+	hlcoord 1, 11
+	lb bc, 6, 18
 	jp ClearBox
 
 PlaceMoveData:
 	xor a
 	ldh [hBGMapMode], a
-	hlcoord 0, 10
-	ld de, String_MoveType_Top
-	call PlaceString
-	hlcoord 0, 11
-	ld de, String_MoveType_Bottom
-	call PlaceString
-	hlcoord 11, 12
-	ld de, String_MoveAtk
+	hlcoord 1, 12
+	ld de, String_MoveType_Atk
 	call PlaceString
 	ld a, [wCurSpecies]
 	ld b, a
-	hlcoord 2, 12
+	hlcoord 5, 12
 	predef PrintMoveType
 	ld a, [wCurSpecies]
 	dec a
@@ -1200,7 +1227,7 @@ PlaceMoveData:
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	hlcoord 16, 12
+	hlcoord 15, 12
 	cp 2
 	jr c, .no_power
 	ld [wTextDecimalByte], a
@@ -1220,14 +1247,10 @@ PlaceMoveData:
 	ldh [hBGMapMode], a
 	ret
 
-String_MoveType_Top:
-	db "┌─────┐@"
-String_MoveType_Bottom:
-	db "│TYPE/└@"
-String_MoveAtk:
-	db "ATTK/@"
+String_MoveType_Atk:
+	db "タイプ／　　　　　いりょく／@"
 String_MoveNoPower:
-	db "---@"
+	db "ーーー@"
 
 PlaceMoveScreenArrows:
 	call PlaceMoveScreenLeftArrow

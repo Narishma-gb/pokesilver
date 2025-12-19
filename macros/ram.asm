@@ -209,7 +209,7 @@ MACRO hof_mon
 \1ID::       dw
 \1DVs::      dw
 \1Level::    db
-\1Nickname:: ds MON_NAME_LENGTH - 1
+\1Nickname:: ds NAME_LENGTH - 1
 \1End::
 ENDM
 
@@ -233,8 +233,8 @@ ENDM
 
 MACRO trademon
 \1Species::     db
-\1SpeciesName:: ds MON_NAME_LENGTH
-\1Nickname::    ds MON_NAME_LENGTH
+\1SpeciesName:: ds NAME_LENGTH
+\1Nickname::    ds NAME_LENGTH
 \1SenderName::  ds NAME_LENGTH
 \1OTName::      ds NAME_LENGTH
 \1DVs::         dw

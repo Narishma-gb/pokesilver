@@ -89,31 +89,6 @@ INCLUDE "main.asm"
 	set_gs_diff 0
 
 
-SECTION "rom4", ROMX, BANK[4]
-; ROM $04 : $10000 - $13FFF
-	set_bank_offset 4
-
-	dr _InitializeStartDay, $578b
-	dr CheckUnusedTwoDayTimer, $5892
-	dr RestartLuckyNumberCountdown, $58b1
-	dr _CheckLuckyNumberShowFlag, $58c8
-	dr DoMysteryGiftIfDayHasPassed, $58ce
-	dr CanLearnTMHMMove, $59bf
-	dr GetTMHMMove, $59f0
-	dr _NamingScreen, $5a3d
-	dr NamingScreen, $5a47
-	dr Script_AbortBugContest, $64e8
-	dr HealMachineAnim, $656d
-	dr ItemFinder, $67e0
-	dr PartyMonItemName, $6d7a
-	dr GiveParkBalls, $7a0c
-	dr _BugContestJudging, $7b1d
-	dr SelectRandomBugContestContestants, $7eb5
-	dr ContestDropOffMons, $7f1f
-	dr ContestReturnMons, $7f3e
-
-	dr_end
-
 SECTION "rom5", ROMX, BANK[5]
 ; ROM $05 : $14000 - $17FFF
 	set_bank_offset 5
@@ -134,6 +109,7 @@ SECTION "rom5", ROMX, BANK[5]
 	dr CheckWarpFacingDown, $4a16
 	dr CheckCutCollision, $4a45
 	dr EmptyAllSRAMBanks, $4a6a
+	dr SaveMenu, $4a90
 	dr StartMoveMonWOMail_SaveGame, $4ba4
 	dr TryLoadSaveFile, $4e21
 	dr TryLoadSaveData, $4e8c
@@ -190,12 +166,21 @@ SECTION "rom9", ROMX, BANK[9]
 	dr _PushWindow, $42a0
 	dr _ExitMenu, $4307
 	dr _InitVerticalMenuCursor, $43a6
+	dr UpdateItemDescription, $43fc
 	dr _InitScrollingMenu, $44e8
 	dr _ScrollingMenu, $4504
+	dr SwitchItemsInBag, $4842
+	dr PlaceMenuItemName, $49ea
+	dr PlaceMenuItemQuantity, $49f9
 	dr PlaceMoneyTopRight, $4a1a
 	dr DisplayCoinCaseBalance, $4a5a
 	dr DisplayMoneyAndCoinBalance, $4a83
+	dr StartMenu_DrawBugContestStatusBox, $4b1e
+	dr StartMenu_PrintBugContestStatus, $4b29
 	dr Kurt_SelectApricorn, $4ba1
+	dr MonSubmenu, $4c96
+	dr SelectQuantityToToss, $4f26
+	dr TrainerCard, $5069
 	dr ProfOaksPCBoot, $67db
 	dr InitDecorations, $6c42
 	dr SetSpecificDecorationFlag, $73e8
@@ -232,6 +217,7 @@ SECTION "rom10", ROMX, BANK[10]
 	dr DoMysteryGift, $5e66
 	dr CopyMysteryGiftReceivedDecorationsToPC, $6575
 	dr UnlockMysteryGift, $659d
+	dr ResetDailyMysteryGiftLimitIfUnlocked, $65ac
 	dr InitRoamMons, $688a
 	dr JumpRoamMons, $6993
 	dr RandomUnseenWildMon, $6aaa
@@ -246,6 +232,10 @@ SECTION "rom11", ROMX, BANK[11]
 
 	dr TrainerClassNames, $52d6
 	dr MoveDeletion, $55e2
+	dr TMHMPocket, $589e
+	dr AskTeachTMHM, $58ee
+	dr ChooseMonToLearnTMHM, $592a
+	dr TeachTMHM, $5996
 	dr PrintMoveDescription, $5ce3
 
 	dr_end
@@ -286,8 +276,10 @@ AIScoring::
 	dr AI_Status, $5437
 	dr AI_Risky, $548d
 	dr AI_None, $54e6
+	dr GetTrainerClassName, $5511
 	dr TrainerClassAttributes, $5580
 	dr Battle_GetTrainerName, $5910
+	dr GetTrainerName, $5918
 	dr ConfusedNoMoreText, $7823
 
 	dr_end
@@ -319,6 +311,7 @@ SECTION "rom16", ROMX, BANK[16]
 ; ROM $10 : $40000 - $43FFF
 	set_bank_offset 16
 
+	dr Pokedex, $4000
 	dr MoveNames, $563e
 	dr Moves, $5c6c
 	dr EvolvePokemon, $6349
@@ -336,6 +329,7 @@ SECTION "rom17", ROMX, BANK[17]
 	set_bank_offset 17, $79ae + gs_diff
 
 	drd PlaceGraphic, $7aa0
+	drd SendMailToPC, $7ad1
 	drd DeletePartyMonMail, $7cc8
 	drd IsAnyMonHoldingMail, $7ce4
 
@@ -362,10 +356,12 @@ SECTION "rom20", ROMX, BANK[20]
 	dr WritePartyMenuTilemap, $405f
 	dr InitPartyMenuGFX, $4349
 	dr InitPartyMenuWithCancel, $436e
+	dr InitPartyMenuNoCancel, $4396
 	dr PartyMenuSelect, $43c0
 	dr PlacePartyMenuText, $4403
 	dr PrintPartyMenuActionText, $44c8
 	dr LoadFishingGFX, $45d1
+	dr SweetScentFromMenu, $47a4
 	dr _Squirtbottle, $4832
 	dr _CardKey, $488d
 	dr _BasementKey, $48c8
@@ -386,6 +382,7 @@ SECTION "rom20", ROMX, BANK[20]
 	dr ListMoves, $5477
 	dr CalcLevel, $5523
 	dr CalcExpAtLevel, $554f
+	dr _SwitchPartyMons, $561a
 	dr GetUnownLetter, $5748
 	dr GetMonFrontpic, $577f
 	dr GetMonBackpic, $57ed
@@ -506,9 +503,15 @@ DummyPredef36::
 	dr FlyToAnim, $4bd0
 	dr MagnetTrain, $4ca1
 	dr ClearSpriteAnims, $4f99
+	dr PlaySpriteAnimationsAndDelayFrame, $4fa8
 	dr PlaySpriteAnimations, $4faf
 	dr _InitSpriteAnimStruct, $501c
 	dr _ReinitSpriteAnimFrame, $5152
+	set_gs_diff $1a
+	drd ClearSpriteAnims2, $657a
+	drd LoadMenuMonIcon, $65a5
+	drd UnfreezeMonIcons, $6728
+	drd HoldSwitchmonIcon, $6743
 
 	dr_end
 
@@ -519,6 +522,7 @@ SECTION "rom36", ROMX, BANK[36]
 	dr InitClock, $4677
 	dr SetDayOfWeek, $494b
 	dr PrintHour, $4a86
+	dr PokeGear, $4ada
 	dr _TownMap, $59e1
 	dr PlayRadio, $5ae9
 	dr PokegearMap, $5b77
@@ -596,8 +600,11 @@ SECTION "rom46", ROMX, BANK[46]
 ; ROM $2e : $B8000 - $BBFFF
 	set_bank_offset 46
 
+	dr CheckForHiddenItems, $6300
 	dr TreeMonEncounter, $6378
 	dr RockMonEncounter, $63a1
+	dr ReadPartyMonMail, $7258
+	dr ItemIsMail, $7e63
 
 	dr_end
 
@@ -612,6 +619,8 @@ SECTION "rom48", ROMX, BANK[48]
 	set_bank_offset 48
 
 	dr ChrisSpriteGFX, $4000
+	dr RivalSpriteGFX, $43c0
+	dr MomSpriteGFX, $4fc0
 
 	dr_end
 
@@ -619,6 +628,7 @@ SECTION "rom49", ROMX, BANK[49]
 ; ROM $31 : $C4000 - $C7FFF
 	set_bank_offset 49
 
+	dr PokeBallSpriteGFX, $7380
 	dr _CheckPokerus, $7a40
 	dr CheckForLuckyNumberWinners, $7a5a
 	dr PrintTodaysLuckyNumber, $7c03
@@ -667,6 +677,15 @@ SECTION "rom54", ROMX, BANK[54]
 ; ROM $36 : $D8000 - $DBFFF
 	set_bank_offset 54
 StdScripts::
+	drs MagazineBookshelfScript, $3
+	drs IncenseBurnerScript, $5
+	drs MerchandiseShelfScript, $6
+	drs TownMapScript, $7
+	drs WindowScript, $8
+	drs TVScript, $9
+	drs Radio1Script, $b
+	drs BugContestResultsWarpScript, $16
+	drs PCScript, $2b
 
 	dr_end
 
@@ -750,6 +769,7 @@ SECTION "rom62", ROMX, BANK[62]
 	dr _LoadStandardFont, $4000
 	dr _LoadFontsExtra, $400c
 	dr _LoadFontsBattleExtra, $4032
+	dr LoadStatsScreenPageTilesGFX, $40d9
 	dr CollisionPermissionTable, $734a
 	dr Shrink1Pic, $744a
 	dr Shrink2Pic, $74da

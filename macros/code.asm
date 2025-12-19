@@ -89,7 +89,7 @@ if _NARG == 0
 endc
 ENDM
 
-MACRO ld_str_hl
+MACRO string_ld_hli_a
 ; for each char in \1, iterate the pattern:
 ;	ld a, 'char'
 ;	ld [hli], a
@@ -102,7 +102,7 @@ endr
 	ld [hl], a
 ENDM
 
-MACRO str_ld_hl
+MACRO ld_hli_a_string
 ; for each char in \1, iterate the pattern:
 ;	ld a, 'char'
 ;	ld [hli], a

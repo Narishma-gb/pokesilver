@@ -5,7 +5,9 @@ sMysteryGiftUnlocked::
 	ds 2
 
 sNumDailyMysteryGiftPartnerIDs::
-	ds 24
+	ds 21
+sMysteryGiftTimer:: dw
+	ds 1
 sMysteryGiftTrainerHouseFlag::
 	ds $495
 

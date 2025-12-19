@@ -232,7 +232,7 @@ wGlobalAnimYOffset:: db
 wGlobalAnimXOffset:: db
 
 wSpriteAnimDataEnd::
-/*
+
 	ds 7
 
 NEXTU
@@ -386,7 +386,7 @@ wMemoryGameNumCardsMatched:: db
 
 NEXTU
 ; unown puzzle
-wPuzzlePieces:: ds 6 * 6 */
+wPuzzlePieces:: ds 6 * 6
 ENDU
 
 
@@ -1174,7 +1174,7 @@ NEXTU
 ; miscellaneous
 wFrameCounter::
 wMomBankDigitCursorPosition::
-wNamingScreenLetterCase::
+wNamingScreenKanaType::
 wHallOfFameMonCounter::
 wTradeDialog::
 	db
@@ -1340,14 +1340,14 @@ wBetaTitleSequenceOpeningType::
 	db
 
 wDefaultSpawnpoint:: db
-/*
-UNION
+
+UNION/*
 ; mon buffer
 wBufferMonNickname:: ds MON_NAME_LENGTH
 wBufferMonOT:: ds NAME_LENGTH
 wBufferMon:: party_struct wBufferMon
 
-NEXTU
+NEXTU*/
 ; magnet train
 wMagnetTrainDirection:: db
 wMagnetTrainInitPosition:: db
@@ -1457,7 +1457,7 @@ wEarthquakeMovementDataBuffer:: ds 5
 NEXTU
 ; switching items in pack
 wSwitchItemBuffer:: ds 2 ; may store 1 or 2 bytes
-
+/*
 NEXTU
 ; switching pokemon in party
 ; may store a name, partymon, or mail
@@ -1511,7 +1511,7 @@ wLinkBattleRecordName::   ds NAME_LENGTH
 wLinkBattleRecordWins::   dw
 wLinkBattleRecordLosses:: dw
 wLinkBattleRecordDraws::  dw
-
+*/
 NEXTU
 ; miscellaneous
 wTempDayOfWeek::
@@ -1522,7 +1522,7 @@ wKeepSevenBiasChance::
 wPokeFluteCuredSleep::
 wTempRestorePPItem::
 	db
-
+/*
 NEXTU
 ; debug color picker
 wDebugColorIsTrainer:: db
@@ -1541,11 +1541,11 @@ wDebugRoomAutoFunction::   dw
 wDebugRoomPageCount::      db
 wDebugRoomPagesPointer::   dw
 ENDC
-
+*/
 NEXTU
 ; Every previous NEXTU takes up 60 or fewer bytes,
 ; except the initial "mon buffer" UNION.
-	ds 60
+	ds 50
 
 UNION
 ; trainer data
@@ -1685,17 +1685,17 @@ wOBP1:: db
 
 wBattleAfterAnim:: db
 
-	ds 1
-
+	ds 22
+/*
 wMonOrItemNameBuffer:: ds NAME_LENGTH
 	ds NAME_LENGTH
 wTMHMMoveNameBackup:: ds MOVE_NAME_LENGTH
-
+*/
 wStringBuffer1:: ds STRING_BUFFER_LENGTH
 wStringBuffer2:: ds STRING_BUFFER_LENGTH
 wStringBuffer3:: ds STRING_BUFFER_LENGTH
 wStringBuffer4:: ds STRING_BUFFER_LENGTH
-wStringBuffer5:: ds MOVE_NAME_LENGTH
+wStringBuffer5:: ds STRING_BUFFER_LENGTH
 
 wBattleMenuCursorPosition:: db
 
@@ -1801,7 +1801,7 @@ wCurPartyMon::
 ; index of mon's party location (0-5)
 	db
 
-*/
+
 SECTION "WRAM 1", WRAMX
 
 	ds 1

@@ -25,7 +25,18 @@ _BugContestJudging:
 	jp BugContest_GetPlayersResult
 
 ContestJudging_FirstPlaceText:
-	text_far _ContestJudging_FirstPlaceText
+	text "そして！　こんかい<NO>たいかい"
+	line "１ばん<NO>ゆうしょうしゃは@"
+	text_pause
+	text_dots 3
+	text_start
+
+	para "@"
+	text_ram wStringBuffer1
+	text "を　つかまえた"
+	line "@"
+	text_ram wBugContestWinnerName
+	text "さん！@"
 	text_asm
 	ld de, SFX_1ST_PLACE
 	call PlaySFX
@@ -34,12 +45,20 @@ ContestJudging_FirstPlaceText:
 	ret
 
 ContestJudging_FirstPlaceScoreText:
-	text_far _ContestJudging_FirstPlaceScoreText
-	text_end
+	text_start
+
+	para "とくてん<WA>@"
+	text_decimal wBugContestFirstPlaceScore, 2, 3
+	text "てん　でした！"
+	prompt
 
 ContestJudging_SecondPlaceText:
-	; Placing second was @ , who caught a @ !@ @
-	text_far _ContestJudging_SecondPlaceText
+	text "２ばん<WA>@"
+	text_ram wStringBuffer1
+	text "を　つかまえた"
+	line "@"
+	text_ram wBugContestWinnerName
+	text "さん@"
 	text_asm
 	ld de, SFX_2ND_PLACE
 	call PlaySFX
@@ -48,12 +67,20 @@ ContestJudging_SecondPlaceText:
 	ret
 
 ContestJudging_SecondPlaceScoreText:
-	text_far _ContestJudging_SecondPlaceScoreText
-	text_end
+	text_start
+
+	para "とくてん<WA>@"
+	text_decimal wBugContestSecondPlaceScore, 2, 3
+	text "てん　でした！"
+	prompt
 
 ContestJudging_ThirdPlaceText:
-	; Placing third was @ , who caught a @ !@ @
-	text_far _ContestJudging_ThirdPlaceText
+	text "３ばん<WA>@"
+	text_ram wStringBuffer1
+	text "を　つかまえた"
+	line "@"
+	text_ram wBugContestWinnerName
+	text "さん@"
 	text_asm
 	ld de, SFX_3RD_PLACE
 	call PlaySFX
@@ -62,8 +89,12 @@ ContestJudging_ThirdPlaceText:
 	ret
 
 ContestJudging_ThirdPlaceScoreText:
-	text_far _ContestJudging_ThirdPlaceScoreText
-	text_end
+	text_start
+
+	para "とくてん<WA>@"
+	text_decimal wBugContestThirdPlaceScore, 2, 3
+	text "てん　でした！"
+	prompt
 
 LoadContestantName:
 ; If a = 1, get your name.
@@ -98,7 +129,9 @@ LoadContestantName:
 	cp '@'
 	jr nz, .next
 	dec hl
-	ld [hl], ' '
+	ld [hl], 'の'
+	inc hl
+	ld [hl], '　'
 	inc hl
 	ld d, h
 	ld e, l
@@ -113,7 +146,7 @@ LoadContestantName:
 ; Append the name to wBugContestWinnerName.
 	ld hl, wStringBuffer1
 	pop de
-	ld bc, NAME_LENGTH - 1
+	ld bc, 10
 	jp CopyBytes
 
 .player

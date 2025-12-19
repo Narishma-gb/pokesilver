@@ -166,7 +166,7 @@ InitializeMagikarpHouse:
 	ld [hli], a
 	ld a, LOW(START_MAGIKARP_SIZE)
 	ld [hli], a
-	str_ld_hl "ヤスアキ@"
+	ld_hli_a_string "ヤスアキ@"
 	ret
 
 InitializeNPCNames:

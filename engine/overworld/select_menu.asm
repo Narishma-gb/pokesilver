@@ -12,8 +12,9 @@ SelectMenu::
 	jp CloseText
 
 MayRegisterItemText:
-	text_far _MayRegisterItemText
-	text_end
+	text "リュックに　いれている　どうぐを"
+	line "べんりボタンに　とうろくできます"
+	done
 
 CheckRegisteredItem:
 	ld a, [wWhichRegisteredItem]

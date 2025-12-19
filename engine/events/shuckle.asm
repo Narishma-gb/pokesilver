@@ -38,14 +38,14 @@ GiveShuckle:
 	dec a
 	ld hl, wPartyMonNicknames
 	call SkipNames
-	ld_str_hl "ネッシー@"
+	string_ld_hli_a "ネッシー@"
 
 ; OT.
 	ld a, [wPartyCount]
 	dec a
 	ld hl, wPartyMonOTs
 	call SkipNames
-	ld_str_hl "マニア@"
+	string_ld_hli_a "マニア@"
 
 ; Engine flag for this event.
 	ld hl, wDailyFlags1

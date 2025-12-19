@@ -42,9 +42,12 @@ ItemFinder:
 	end
 
 .ItemfinderItemNearbyText:
-	text_far _ItemfinderItemNearbyText
-	text_end
+	text "おッ！"
+	line "マシンが　はんのう　してるぞ！"
+	cont "ちかくに　どうぐが　うまってる！"
+	prompt
 
 .ItemfinderNopeText:
-	text_far _ItemfinderNopeText
-	text_end
+	text "<⋯>　<⋯>　ふう！"
+	line "<⋯>　なんにも　はんのう　しない"
+	prompt

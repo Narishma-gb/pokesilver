@@ -18,13 +18,7 @@ StartMenu::
 
 	farcall ReanchorBGMap_NoOAMUpdate
 
-	ld hl, wStatusFlags2
-	bit STATUSFLAGS2_BUG_CONTEST_TIMER_F, [hl]
 	ld hl, .MenuHeader
-	jr z, .GotMenuData
-	ld hl, .ContestMenuHeader
-
-.GotMenuData:
 	call LoadMenuHeader
 	call .SetUpMenuItems
 	ld a, [wBattleMenuCursorPosition]
@@ -157,13 +151,7 @@ StartMenu::
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 10, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
-	dw .MenuData
-	db 1 ; default selection
-
-.ContestMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 10, 2, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+	menu_coords 12, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
 	dw .MenuData
 	db 1 ; default selection
 
@@ -186,51 +174,50 @@ StartMenu::
 	dw StartMenu_Pokegear, .PokegearString, .PokegearDesc
 	dw StartMenu_Quit,     .QuitString,     .QuitDesc
 
-.PokedexString:  db "#DEX@"
-.PartyString:    db "#MON@"
-.PackString:     db "PACK@"
+.PokedexString:  db "ずかん@"
+.PartyString:    db "ポケモン@"
+.PackString:     db "リュック@"
 .StatusString:   db "<PLAYER>@"
-.SaveString:     db "SAVE@"
-.OptionString:   db "OPTION@"
-.ExitString:     db "EXIT@"
-.PokegearString: db "<POKE>GEAR@"
-.QuitString:     db "QUIT@"
+.SaveString:     db "レポート@"
+.OptionString:   db "せってい@"
+.ExitString:     db "とじる@"
+.PokegearString: db "ポケギア@"
+.QuitString:     db "やめる@"
 
 .PokedexDesc:
-	db   "#MON"
-	next "database@"
+	db   "#<NO>ひみつが"
+	next "きろく　されている@"
 
 .PartyDesc:
-	db   "Party <PKMN>"
-	next "status@"
+	db   "いっしょに　いる"
+	next "#のステータス@"
 
 .PackDesc:
-	db   "Contains"
-	next "items@"
+	db   "どうぐを　いれておく"
+	next "ポケットつきリュック@"
 
 .PokegearDesc:
-	db   "Trainer's"
-	next "key device@"
+	db   "<TRAINER><NO>たびに"
+	next "やくだつ　ツール@"
 
 .StatusDesc:
-	db   "Your own"
-	next "status@"
+	db   "げんざいの"
+	next "あなた<NO>ステータス@"
 
 .SaveDesc:
-	db   "Save your"
-	next "progress@"
+	db   "ひとやすみ　するとき"
+	next "じょうたいを　きろく@"
 
 .OptionDesc:
-	db   "Change"
-	next "settings@"
+	db   "しあいのルール　など"
+	next "いろいろ　へんこう@"
 
 .ExitDesc:
-	db   "Close this"
-	next "menu@"
+	db "このメニューをとじる@"
 
 .QuitDesc:
-	db   "Quit and"
-	next "be judged.@"
+	db   "いま<NO>じょうたいで"
+	next "ひょうしょう　される@"
 
 .OpenMenu:
 	ld a, [wMenuSelection]
@@ -361,24 +348,32 @@ endr
 	ret
 
 .DrawMenuAccount:
-	jp ._DrawMenuAccount
+	call .IsMenuAccountOn
+	ret z
+	hlcoord 0, 13
+	lb bc, 5, 20
+	call ClearBox
+	hlcoord 0, 13
+	ld b, 3
+	ld c, 18
+	jp TextboxPalette
 
 .PrintMenuAccount:
 	call .IsMenuAccountOn
 	ret z
 	call ._DrawMenuAccount
-	decoord 0, 14
+	decoord 1, 14
 	jp .MenuDesc
 
 ._DrawMenuAccount:
 	call .IsMenuAccountOn
 	ret z
 	hlcoord 0, 13
-	lb bc, 5, 10
+	lb bc, 5, 12
 	call ClearBox
 	hlcoord 0, 13
 	ld b, 3
-	ld c, 8
+	ld c, 11
 	jp TextboxPalette
 
 .IsMenuAccountOn:
@@ -425,8 +420,9 @@ StartMenu_Quit:
 	ret
 
 .StartMenuContestEndText:
-	text_far _StartMenuContestEndText
-	text_end
+	text "たいかいを"
+	line "おわりに　しますか？"
+	done
 
 StartMenu_Save:
 ; Save the game.

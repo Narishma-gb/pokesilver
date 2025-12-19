@@ -139,29 +139,29 @@ Elevator_AskWhichFloor:
 	ret
 
 AskFloorElevatorText:
-	text_far _AskFloorElevatorText
-	text_end
+	text "なんかいへ　いきますか？"
+	done
 
 Elevator_GetCurrentFloorText:
 	ld hl, wOptions
 	ld a, [hl]
 	push af
 	set NO_TEXT_SCROLL, [hl]
-	hlcoord 0, 0
+	hlcoord 10, 0
 	ld b, 4
 	ld c, 8
 	call Textbox
-	hlcoord 1, 2
+	hlcoord 11, 2
 	ld de, Elevator_CurrentFloorText
 	call PlaceString
-	hlcoord 4, 4
+	hlcoord 12, 4
 	call Elevator_GetCurrentFloorString
 	pop af
 	ld [wOptions], a
 	ret
 
 Elevator_CurrentFloorText:
-	db "Now on:@"
+	db "げんざいのフロア@"
 
 Elevator_GetCurrentFloorString:
 	push hl
@@ -177,7 +177,7 @@ Elevator_GetCurrentFloorString:
 
 Elevator_MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 12, 1, 18, 9
+	menu_coords 1, 1, 6, 9
 	dw Elevator_MenuData
 	db 1 ; default option
 

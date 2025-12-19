@@ -28,12 +28,16 @@ FindItemInBallScript::
 	end
 
 .FoundItemText:
-	text_far _FoundItemText
-	text_end
+	text "<PLAYER>は"
+	line "@"
+	text_ram wStringBuffer3
+	text "を　みつけた！"
+	done
 
 .CantCarryItemText:
-	text_far _CantCarryItemText
-	text_end
+	text "しかし　<PLAYER>は"
+	line "これ　いじょう　どうぐを　もてない！"
+	done
 
 .TryReceiveItem:
 	xor a

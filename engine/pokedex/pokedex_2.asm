@@ -151,7 +151,7 @@ DisplayDexEntry:
 	jr z, .skip_weight
 
 	ld hl, hDexWeight
-	ld a, [hl] ; back-up [hDexWeight] and [hDexWeight + 1] 
+	ld a, [hl] ; back-up [hDexWeight] and [hDexWeight + 1]
 	push af
 	ld a, [de]
 	ld [hli], a ; store weight in big-endian order

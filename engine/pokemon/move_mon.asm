@@ -1190,7 +1190,7 @@ GiveEgg::
 	dec a
 	ld hl, wPartyMonNicknames
 	call SkipNames
-	str_ld_hl "タマゴ@"
+	ld_hli_a_string "タマゴ@"
 	ld a, [wPartyCount]
 	dec a
 	ld hl, wPartyMon1Happiness

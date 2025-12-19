@@ -39,7 +39,8 @@ ROMX $03
 	"bank3"
 	; "Garbage 3"
 ROMX $04
-	; "bank4"
+	"bank4"
+	; "Garbage 4"
 ROMX $05
 	; "bank5"
 ROMX $06

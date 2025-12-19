@@ -20,12 +20,16 @@ HiddenItemScript::
 	end
 
 .PlayerFoundItemText:
-	text_far _PlayerFoundItemText
-	text_end
+	text "<PLAYER>は"
+	line "@"
+	text_ram wStringBuffer3
+	text "を　みつけた！"
+	done
 
 .ButNoSpaceText:
-	text_far _ButNoSpaceText
-	text_end
+	text "しかし　<PLAYER>は"
+	line "どうぐを　もう　もてない！"
+	done
 
 SetMemEvent:
 	ld hl, wHiddenItemEvent

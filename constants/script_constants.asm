@@ -9,7 +9,7 @@ DEF LAST_TALKED EQU -2
 	const STRING_BUFFER_5 ; use wStringBuffer5
 DEF NUM_STRING_BUFFERS EQU const_value
 
-DEF STRING_BUFFER_LENGTH EQU 19
+DEF STRING_BUFFER_LENGTH EQU 11
 
 ; checkmoney/takemoney accounts
 	const_def

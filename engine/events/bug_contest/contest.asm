@@ -33,9 +33,12 @@ BugCatchingContestReturnToGateScript:
 	jumpstd BugContestResultsWarpScript
 
 BugCatchingContestTimeUpText:
-	text_far _BugCatchingContestTimeUpText
-	text_end
+	text "アナウンス『ピンポーン！"
+
+	para "じかんが　きました！"
+	done
 
 BugCatchingContestIsOverText:
-	text_far _BugCatchingContestIsOverText
-	text_end
+	text "アナウンス『むしとりたいかい"
+	line "おわり　でーす！"
+	done
