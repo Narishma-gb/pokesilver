@@ -8,11 +8,13 @@ patches := \
 	pokesilver11.patch
 
 rom_obj := \
+	audio.o \
 	garbage.o \
 	home.o \
 	ram.o \
+	gfx/sprites.o \
+	gfx/tilesets.o \
 	wip.o
-# 	audio.o \
 # 	main.o \
 # 	data/text/common.o \
 # 	data/maps/map_data.o \
@@ -21,8 +23,6 @@ rom_obj := \
 # 	engine/movie/credits.o \
 # 	engine/overworld/events.o \
 # 	gfx/misc.o \
-# 	gfx/sprites.o \
-# 	gfx/tilesets.o
 
 # Distinguish asm files which are game-exclusive for building (*_[gold|silver].asm)
 gs_excl_asm := \

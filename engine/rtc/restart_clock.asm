@@ -31,8 +31,8 @@ MACRO wraparound_time
 	db \2 ; maximum value
 	db \3 ; up/down arrow x coord (pairs with wRestartClockUpArrowYCoord)
 ENDM
-	wraparound_time wRestartClockDay,   7,  4
-	wraparound_time wRestartClockHour, 24, 12
+	wraparound_time wRestartClockDay,   7,  3
+	wraparound_time wRestartClockHour, 24,  9
 	wraparound_time wRestartClockMin,  60, 15
 
 RestartClock:
@@ -56,12 +56,16 @@ RestartClock:
 	ret
 
 .ClockTimeMayBeWrongText:
-	text_far _ClockTimeMayBeWrongText
-	text_end
+	text "とけいの　じかんが　オーバー"
+	line "しているかもしれません"
+
+	para "じかんを　あわせてください"
+	prompt
 
 .ClockSetWithControlPadText:
-	text_far _ClockSetWithControlPadText
-	text_end
+	text "じゅうじキーで　せんたく"
+	line "エーで　けってい　ビーで　キャンセル"
+	done
 
 .SetClock:
 	ld a, RESTART_CLOCK_DAY
@@ -108,12 +112,12 @@ RestartClock:
 	ret
 
 .ClockIsThisOKText:
-	text_far _ClockIsThisOKText
-	text_end
+	text "これで　いいですか？"
+	done
 
 .ClockHasResetText:
-	text_far _ClockHasResetText
-	text_end
+	text "じかんを　さいせってい　しました！"
+	done
 
 .joy_loop
 	call JoyTextDelay_ForcehJoyDown
@@ -121,9 +125,9 @@ RestartClock:
 	push af
 	call .PrintTime
 	pop af
-	bit A_BUTTON_F, a
+	bit B_PAD_A, a
 	jr nz, .press_A
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jr nz, .press_B
 	bit B_PAD_UP, a
 	jr nz, .pressed_up
@@ -194,48 +198,61 @@ RestartClock:
 	ld b, 5
 	ld c, 18
 	call Textbox
-	decoord 1, 8
+	ld c, 1
+	call .GetCoords
+	ld d, h
+	ld e, l
 	ld a, [wRestartClockDay]
 	ld b, a
 	farcall PrintDayOfWeek
+	ld c, 7
+	call .GetCoords
+	ld d, h
+	ld e, l
 	ld a, [wRestartClockHour]
-	ld b, a
-	ld a, [wRestartClockMin]
 	ld c, a
-	decoord 11, 8
-	farcall PrintHoursMins
+	farcall PrintHour
+	ld c, 14
+	call .GetCoords
+	ld de, wRestartClockMin
+	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
+	call PrintNum
+	ld c, 16
+	call .GetCoords
+	ld de, MinuteString
+	call PlaceString
 	ld a, [wRestartClockPrevDivision]
-	lb de, ' ', ' '
-	call .PlaceChars
+	call RestartClock_GetWraparoundTime
+	ld a, [wRestartClockUpArrowYCoord]
+	sub 2
+	ld b, a
+	call Coord2Tile
+	ld [hl], '　'
+	ld bc, 4 * SCREEN_WIDTH
+	add hl, bc
+	ld [hl], '　'
 	ld a, [wRestartClockCurDivision]
-	lb de, '▲', '▼'
-	call .PlaceChars
+	call RestartClock_GetWraparoundTime
+	ld a, [wRestartClockUpArrowYCoord]
+	sub 2
+	ld b, a
+	call Coord2Tile
+	ld [hl], '▲'
+	ld bc, 4 * SCREEN_WIDTH
+	add hl, bc
+	ld [hl], '▼'
 	ld a, [wRestartClockCurDivision]
 	ld [wRestartClockPrevDivision], a
 	ret
 
-.UnusedPlaceCharsFragment: ; unreferenced
+.GetCoords:
 	ld a, [wRestartClockUpArrowYCoord]
 	ld b, a
 	call Coord2Tile
 	ret
 
-.PlaceChars:
-	push de
-	call RestartClock_GetWraparoundTime
-	ld a, [wRestartClockUpArrowYCoord]
-	dec a
-	ld b, a
-	call Coord2Tile
-	pop de
-	ld [hl], d
-	ld bc, 2 * SCREEN_WIDTH
-	add hl, bc
-	ld [hl], e
-	ret
+HourString: ; unreferenced
+	db "じ@"
 
-JPHourString: ; unreferenced
-	db "じ@" ; HR
-
-JPMinuteString: ; unreferenced
-	db "ふん@" ; MIN
+MinuteString:
+	db "ふん@"

@@ -30,21 +30,26 @@ PhotoStudio:
 	ret
 
 .WhichMonPhotoText:
-	text_far _WhichMonPhotoText
-	text_end
+	text "どの　#を"
+	line "さつえい　するんだい？"
+	prompt
 
 .HoldStillText:
-	text_far _HoldStillText
-	text_end
+	text "よしっ　わかった！"
+	line "しばらく　ジッと　しててくれよ"
+	prompt
 
 .PrestoAllDoneText:
-	text_far _PrestoAllDoneText
-	text_end
+	text "ほい！おわったよ"
+	line "また　きてくれよ"
+	done
 
 .NoPhotoText:
-	text_far _NoPhotoText
-	text_end
+	text "なんだ<⋯>やめるのか"
+	line "また　きてくれよ"
+	done
 
 .EggPhotoText:
-	text_far _EggPhotoText
-	text_end
+	text "タマゴを"
+	line "さつえい　してもなあ<⋯><⋯>"
+	done

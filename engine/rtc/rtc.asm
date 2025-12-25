@@ -89,7 +89,6 @@ SaveRTC:
 	ret
 
 StartClock::
-	call _GetClock
 	call GetClock
 	call _FixDays
 	call FixDays
@@ -112,28 +111,6 @@ _FixDays:
 .reset_rtc
 	ld a, RTC_RESET
 	call RecordRTCStatus
-	ret
-
-_GetClock:
-	ld a, RAMG_SRAM_ENABLE
-	ld [rRAMG], a
-	call LatchClock
-	ld a, RAMB_RTC_DH
-	ld [rRAMB], a
-	ld a, [rRTCREG]
-	push af
-	call CloseSRAM
-	pop af
-	bit B_RAMB_RTC_DH_HALT, a
-	ret z
-
-	ld a, BANK(sRTCHaltCheckValue)
-	call OpenSRAM
-	ld a, LOW(RTC_HALT_VALUE)
-	ld [sRTCHaltCheckValue + 0], a
-	ld a, HIGH(RTC_HALT_VALUE)
-	ld [sRTCHaltCheckValue + 1], a
-	call CloseSRAM
 	ret
 
 ClockContinue:

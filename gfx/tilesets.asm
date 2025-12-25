@@ -6,6 +6,9 @@ ENDM
 
 SECTION "Tileset Data 1", ROMX
 
+TilesetKantoGFX::
+INCBIN "gfx/tilesets/kanto.2bpp.lz"
+
 TilesetKantoMeta::
 INCBIN "data/tilesets/kanto_metatiles.bin"
 
@@ -271,9 +274,3 @@ INCLUDE "data/tilesets/players_room_collision.asm"
 
 TilesetForestColl::
 INCLUDE "data/tilesets/forest_collision.asm"
-
-
-SECTION "Tileset Data 6", ROMX
-
-TilesetKantoGFX::
-INCBIN "gfx/tilesets/kanto.2bpp.lz"

@@ -1,6 +1,6 @@
 SaveMenu:
 	call LoadStandardMenuHeader
-	lb de, 4, 0
+	lb de, 5, 0
 	farcall DisplayNormalContinueData
 	call SpeechTextbox
 	call UpdateSprites
@@ -286,61 +286,15 @@ _SaveGameData:
 	call SaveBackupPlayerData
 	call SaveBackupPokemonData
 	call SaveBackupChecksum
-	call UpdateStackTop
 	farcall BackupPartyMonMail
 	farcall SaveRTC
 	ret
-
-UpdateStackTop:
-; sStackTop appears to be unused.
-; It could have been used to debug stack overflow during saving.
-	call FindStackTop
-	ld a, BANK(sStackTop)
-	call OpenSRAM
-	ld a, [sStackTop + 0]
-	ld e, a
-	ld a, [sStackTop + 1]
-	ld d, a
-	or e
-	jr z, .update
-	ld a, e
-	sub l
-	ld a, d
-	sbc h
-	jr c, .done
-
-.update
-	ld a, l
-	ld [sStackTop + 0], a
-	ld a, h
-	ld [sStackTop + 1], a
-
-.done
-	call CloseSRAM
-	ret
-
-FindStackTop:
-; Find the furthest point that sp has traversed to.
-; This is distinct from the current value of sp.
-	ld hl, wStackBottom
-.loop
-	ld a, [hl]
-	or a
-	ret nz
-	inc hl
-	jr .loop
 
 ErasePreviousSave:
 	call EraseBoxes
 	call EraseHallOfFame
 	call EraseLinkBattleStats
 	call EraseMysteryGift
-	ld a, BANK(sStackTop)
-	call OpenSRAM
-	xor a
-	ld [sStackTop + 0], a
-	ld [sStackTop + 1], a
-	call CloseSRAM
 	ld a, $1
 	ld [wSavedAtLeastOnce], a
 	ret
@@ -367,7 +321,7 @@ EraseHallOfFame:
 	ld a, BANK(sHallOfFame)
 	call OpenSRAM
 	ld hl, sHallOfFame
-	ld bc, sHallOfFameEnd - sHallOfFame
+	ld bc, 3000
 	xor a
 	call ByteFill
 	jp CloseSRAM
@@ -455,26 +409,12 @@ SaveBackupOptions:
 	ret
 
 SaveBackupPlayerData:
-	ld a, BANK(sBackupPlayerData3)
+	ld a, BANK(sBackupPlayerData)
 	call OpenSRAM
-	ld hl, wPlayerData3
-	ld de, sBackupPlayerData3
-	ld bc, wPlayerData3End - wPlayerData3
+	ld hl, wPlayerData
+	ld de, sBackupPlayerData
+	ld bc, wPlayerDataEnd - wPlayerData
 	call CopyBytes
-	ld a, BANK(sBackupPlayerData1)
-	call OpenSRAM
-	ld hl, wPlayerData1
-	ld de, sBackupPlayerData1
-	ld bc, wPlayerData1End - wPlayerData1
-	call CopyBytes
-	ld a, BANK(sBackupPlayerData2)
-	call OpenSRAM
-	ld hl, wPlayerData2
-	ld de, sBackupPlayerData2
-	ld bc, wPlayerData2End - wPlayerData2
-	call CopyBytes
-	ld a, BANK(sBackupCurMapData)
-	call OpenSRAM
 	ld hl, wCurMapData
 	ld de, sBackupCurMapData
 	ld bc, wCurMapDataEnd - wCurMapData
@@ -493,44 +433,14 @@ SaveBackupPokemonData:
 	ret
 
 SaveBackupChecksum:
-	ld a, BANK(sBackupPlayerData3)
+	ld hl, sBackupGameData
+	ld bc, sBackupGameDataEnd - sBackupGameData
+	ld a, BANK(sBackupGameData)
 	call OpenSRAM
-	ld hl, sBackupPlayerData3
-	ld bc, wPlayerData3End - wPlayerData3
 	call Checksum
-	push de
-	ld hl, sBackupPokemonData
-	ld bc, wPokemonDataEnd - wPokemonData
-	call Checksum
-	pop hl
-	add hl, de
-	ld a, BANK(sBackupPlayerData1)
-	call OpenSRAM
-	push hl
-	ld hl, sBackupPlayerData1
-	ld bc, wPlayerData1End - wPlayerData1
-	call Checksum
-	pop hl
-	add hl, de
-	ld a, BANK(sBackupPlayerData2)
-	call OpenSRAM
-	push hl
-	ld hl, sBackupPlayerData2
-	ld bc, wPlayerData2End - wPlayerData2
-	call Checksum
-	pop hl
-	add hl, de
-	ld a, BANK(sBackupCurMapData)
-	call OpenSRAM
-	push hl
-	ld hl, sBackupCurMapData
-	ld bc, wCurMapDataEnd - wCurMapData
-	call Checksum
-	pop hl
-	add hl, de
-	ld a, l
+	ld a, e
 	ld [sBackupChecksum + 0], a
-	ld a, h
+	ld a, d
 	ld [sBackupChecksum + 1], a
 	call CloseSRAM
 	ret
@@ -591,7 +501,7 @@ TryLoadSaveData:
 	call OpenSRAM
 	ld hl, sPlayerData + wStartDay - wPlayerData
 	ld de, wStartDay
-	ld bc, 14
+	ld bc, 8
 	call CopyBytes
 	call CloseSRAM
 	ret
@@ -602,11 +512,11 @@ TryLoadSaveData:
 	and a
 	jr z, .corrupt
 
-	ld a, BANK(sBackupPlayerData1)
+	ld a, BANK(sBackupPlayerData)
 	call OpenSRAM
-	ld hl, sBackupPlayerData1 + wStartDay - wPlayerData
+	ld hl, sBackupPlayerData + wStartDay - wPlayerData
 	ld de, wStartDay
-	ld bc, 14
+	ld bc, 8
 	call CopyBytes
 	call CloseSRAM
 	ret
@@ -635,7 +545,6 @@ CheckPrimarySaveFile:
 	ld bc, wOptionsEnd - wOptions
 	call CopyBytes
 	call CloseSRAM
-	call CheckTextDelay
 	ld a, TRUE
 	ld [wSaveFileExists], a
 
@@ -656,30 +565,11 @@ CheckBackupSaveFile:
 	ld de, wOptions
 	ld bc, wOptionsEnd - wOptions
 	call CopyBytes
-	call CheckTextDelay
 	ld a, $2
 	ld [wSaveFileExists], a
 
 .nope
 	call CloseSRAM
-	ret
-
-CheckTextDelay:
-; Fix options if text delay is invalid
-	ld hl, wTextboxFlags
-	res TEXT_DELAY_F, [hl]
-	ld a, [wOptions]
-	and TEXT_DELAY_MASK
-	cp TEXT_DELAY_FAST
-	ret z
-	cp TEXT_DELAY_MED
-	ret z
-	cp TEXT_DELAY_SLOW
-	ret z
-	ld a, [wOptions]
-	and ~TEXT_DELAY_MASK
-	or (1 << FAST_TEXT_DELAY_F) | (1 << TEXT_DELAY_F)
-	ld [wOptions], a
 	ret
 
 LoadPlayerData:
@@ -729,29 +619,12 @@ VerifyChecksum:
 	ret
 
 LoadBackupPlayerData:
-	ld a, BANK(sBackupPlayerData3)
+	ld a, BANK(sBackupPlayerData)
 	call OpenSRAM
-	ld hl, sBackupPlayerData3
-	ld de, wPlayerData3
-	ld bc, wPlayerData3End - wPlayerData3
+	ld hl, sBackupPlayerData
+	ld de, wPlayerData
+	ld bc, wPlayerDataEnd - wPlayerData
 	call CopyBytes
-
-	ld a, BANK(sBackupPlayerData1)
-	call OpenSRAM
-	ld hl, sBackupPlayerData1
-	ld de, wPlayerData1
-	ld bc, wPlayerData1End - wPlayerData1
-	call CopyBytes
-
-	ld a, BANK(sBackupPlayerData2)
-	call OpenSRAM
-	ld hl, sBackupPlayerData2
-	ld de, wPlayerData2
-	ld bc, wPlayerData2End - wPlayerData2
-	call CopyBytes
-
-	ld a, BANK(sBackupCurMapData)
-	call OpenSRAM
 	ld hl, sBackupCurMapData
 	ld de, wCurMapData
 	ld bc, wCurMapDataEnd - wCurMapData
@@ -770,47 +643,11 @@ LoadBackupPokemonData:
 	ret
 
 VerifyBackupChecksum:
-	ld a, BANK(sBackupPokemonData)
+	ld hl, sBackupGameData
+	ld bc, sBackupGameDataEnd - sBackupGameData
+	ld a, BANK(sBackupGameData)
 	call OpenSRAM
-	ld hl, sBackupPokemonData
-	ld bc, wPokemonDataEnd - wPokemonData
 	call Checksum
-	push de
-
-	ld hl, sBackupPlayerData3
-	ld bc, wPlayerData3End - wPlayerData3
-	call Checksum
-	pop hl
-	add hl, de
-
-	ld a, BANK(sBackupPlayerData1)
-	call OpenSRAM
-	push hl
-	ld hl, sBackupPlayerData1
-	ld bc, wPlayerData1End - wPlayerData1
-	call Checksum
-	pop hl
-	add hl, de
-
-	ld a, BANK(sBackupPlayerData2)
-	call OpenSRAM
-	push hl
-	ld hl, sBackupPlayerData2
-	ld bc, wPlayerData2End - wPlayerData2
-	call Checksum
-	pop hl
-	add hl, de
-
-	ld a, BANK(sBackupCurMapData)
-	call OpenSRAM
-	push hl
-	ld hl, sBackupCurMapData
-	ld bc, wCurMapDataEnd - wCurMapData
-	call Checksum
-	pop hl
-	add hl, de
-	ld d, h
-	ld e, l
 	ld a, [sBackupChecksum + 0]
 	cp e
 	jr nz, .fail
@@ -903,7 +740,7 @@ SaveBoxAddress:
 	call OpenSRAM
 	ld hl, sBox + (wBoxPartialDataEnd - wBoxPartialData) * 2
 	ld de, wBoxPartialData
-	ld bc, sBoxEnd - (sBox + (wBoxPartialDataEnd - wBoxPartialData) * 2) ; $8e
+	ld bc, sBoxEnd - (sBox + (wBoxPartialDataEnd - wBoxPartialData) * 2) ; $188
 	call CopyBytes
 	call CloseSRAM
 	pop de
@@ -916,7 +753,7 @@ SaveBoxAddress:
 ; Save it to the final part of the target box.
 	call OpenSRAM
 	ld hl, wBoxPartialData
-	ld bc, sBoxEnd - (sBox + (wBoxPartialDataEnd - wBoxPartialData) * 2) ; $8e
+	ld bc, sBoxEnd - (sBox + (wBoxPartialDataEnd - wBoxPartialData) * 2) ; $188
 	call CopyBytes
 	call CloseSRAM
 
@@ -972,14 +809,14 @@ LoadBoxAddress:
 	add hl, de
 	call OpenSRAM
 	ld de, wBoxPartialData
-	ld bc, sBoxEnd - (sBox + (wBoxPartialDataEnd - wBoxPartialData) * 2) ; $8e
+	ld bc, sBoxEnd - (sBox + (wBoxPartialDataEnd - wBoxPartialData) * 2) ; $188
 	call CopyBytes
 	call CloseSRAM
 	ld a, BANK(sBox)
 	call OpenSRAM
 	ld hl, wBoxPartialData
 	ld de, sBox + (wBoxPartialDataEnd - wBoxPartialData) * 2
-	ld bc, sBoxEnd - (sBox + (wBoxPartialDataEnd - wBoxPartialData) * 2) ; $8e
+	ld bc, sBoxEnd - (sBox + (wBoxPartialDataEnd - wBoxPartialData) * 2) ; $188
 	call CopyBytes
 	call CloseSRAM
 
@@ -1051,33 +888,46 @@ Checksum:
 	ret
 
 WouldYouLikeToSaveTheGameText:
-	text_far _WouldYouLikeToSaveTheGameText
-	text_end
+	text "ここまでの　かつやくを"
+	line "#レポートに　かきこみますか？"
+	done
 
 SavingDontTurnOffThePowerText:
-	text_far _SavingDontTurnOffThePowerText
-	text_end
+	text "#レポートに　かきこんでいます"
+	line "でんげんを　きらないで　ください"
+	done
 
 SavedTheGameText:
-	text_far _SavedTheGameText
-	text_end
+	text "<PLAYER>は"
+	line "レポートに　しっかり　かきのこした！"
+	done
 
 AlreadyASaveFileText:
-	text_far _AlreadyASaveFileText
-	text_end
+	text "まえに　かかれた　レポートに"
+	line "うえから　かいても　いいですか？"
+	done
 
 AnotherSaveFileText:
-	text_far _AnotherSaveFileText
-	text_end
+	text "べつの　ぼうけんの　"
+	line "レポートが　かかれています！"
+	cont "うえから　かいても　いいですか？"
+	done
 
 SaveFileCorruptedText:
-	text_far _SaveFileCorruptedText
-	text_end
+	text "レポートの　ないようが"
+	line "こわれています！！"
+	prompt
 
 ChangeBoxSaveText:
-	text_far _ChangeBoxSaveText
-	text_end
+	text "ボックスを　かえると"
+	line "どうじに　レポートが　かかれます"
+	cont "いいですか？"
+	done
 
 MoveMonWOMailSaveText:
-	text_far _MoveMonWOMailSaveText
-	text_end
+	text "この　きのうを　つかうと"
+	line "#を　いどう　するたびに"
+	cont "レポートが　かかれます"
+
+	para "よろしいですか？"
+	done

@@ -161,7 +161,7 @@ endc
 	hlcoord 1, 6
 	lb bc, 7, 7
 	call ClearBox
-	hlcoord 1, 9
+	hlcoord 2, 9
 	ld de, UnownDexVacantString
 	call PlaceString
 	xor a ; sScratch
@@ -182,20 +182,20 @@ endc
 	ret
 
 AlphRuinsStampString:
-	db " ALPH RUINS STAMP@"
+	db "アルフの　いせき　　きねん　スタンプ@"
 
 UnownDexDoWhatString:
-	db "Do what?@"
+	db "どうしますか？@"
 
 UnownDexMenuString:
-	db   UNOWNSTAMP_BOLD_A, "▶PRINT"
-	next UNOWNSTAMP_BOLD_B, "▶CANCEL"
-	next "L▶BEFORE"
-	next "R▶NEXT"
+	db   UNOWNSTAMP_BOLD_A, "ボタン▶プリント"
+	next UNOWNSTAMP_BOLD_B, "ボタン▶やめる"
+	next "ひだり　▶まえ"
+	next "みぎ　　▶つぎ"
 	db   "@"
 
 UnownDexVacantString:
-	db "VACANT@"
+	db "くうはく@"
 
 UnownDexATile:
 INCBIN "gfx/printer/bold_a.1bpp"
@@ -205,7 +205,7 @@ INCBIN "gfx/printer/bold_b.1bpp"
 PlaceUnownPrinterFrontpic:
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	hlcoord 7, 11
 	ld a, $31

@@ -89,69 +89,12 @@ INCLUDE "main.asm"
 	set_gs_diff 0
 
 
-SECTION "rom5", ROMX, BANK[5]
-; ROM $05 : $14000 - $17FFF
-	set_bank_offset 5
-
-	dr GetTimeOfDay, $4032
-	dr StartClock, $4089
-	dr ClockContinue, $40ae
-	dr _InitTime, $40d1
-	dr _UpdatePlayerSprite, $410e
-	dr LoadStandingSpritesGFX, $411d
-	dr LoadWalkingSpritesGFX, $412e
-	dr RefreshSprites, $413f
-	dr LoadUsedSpritesGFX, $41f8
-	dr _DoesSpriteHaveFacings, $42e9
-	dr _GetSpritePalette, $4306
-	dr CheckWarpCollision, $49ea
-	dr CheckDirectionalWarp, $49ff
-	dr CheckWarpFacingDown, $4a16
-	dr CheckCutCollision, $4a45
-	dr EmptyAllSRAMBanks, $4a6a
-	dr SaveMenu, $4a90
-	dr StartMoveMonWOMail_SaveGame, $4ba4
-	dr TryLoadSaveFile, $4e21
-	dr TryLoadSaveData, $4e8c
-	dr _LoadOverworldTilemap, $52fa
-	dr IsSpawnPoint, $53d2
-	dr RunMapSetupScript, $53f1
-	dr SkipUpdateMapSprites, $5579
-	dr CheckUpdatePlayerSprite, $557f
-	dr Tilesets, $562b
-	dr PokemonCenterPC, $57de
-	dr _PlayersHousePC, $592c
-	dr BankOfMom, $6759
-	dr DayCareMan, $6cde
-	dr DayCareLady, $6d32
-	dr DayCareManOutside, $71b1
-	dr _UnownPrinter, $7503
-	dr PhotoStudio, $76c0
-	dr CheckBreedmonCompatibility, $78e9
-	dr DayCareMon1, $7ee9
-	dr DayCareMon2, $7f08
-
-	dr_end
-
-SECTION "rom6", ROMX, BANK[6]
-; ROM $06 : $18000 - $1BFFF
-	set_bank_offset 6
-
-	dr_end
-
-SECTION "rom7", ROMX, BANK[7]
-; ROM $07 : $1C000 - $1FFFF
-	set_bank_offset 7
-
-	dr LoadMapGroupRoof, $4000
-
-	dr_end
-
+SECTION "Egg Moves", ROMX, BANK[8]
 SECTION "rom8", ROMX, BANK[8]
 ; ROM $08 : $20000 - $23FFF
-	set_bank_offset 8
+	set_bank_offset 8, $79ec
 
-	dr RestartClock, $4021
+	dr EggMovePointers, $7b07
 
 	dr_end
 
@@ -167,12 +110,16 @@ SECTION "rom9", ROMX, BANK[9]
 	dr _ExitMenu, $4307
 	dr _InitVerticalMenuCursor, $43a6
 	dr UpdateItemDescription, $43fc
+	dr LoadObjectMasks, $4488
 	dr _InitScrollingMenu, $44e8
 	dr _ScrollingMenu, $4504
+	dr ScrollingMenu_ClearLeftColumn, $463f
 	dr SwitchItemsInBag, $4842
 	dr PlaceMenuItemName, $49ea
 	dr PlaceMenuItemQuantity, $49f9
 	dr PlaceMoneyTopRight, $4a1a
+	dr PlaceMoneyBottomLeft, $4a22
+	dr PlaceMoneyAtTopLeftOfTextbox, $4a2a
 	dr DisplayCoinCaseBalance, $4a5a
 	dr DisplayMoneyAndCoinBalance, $4a83
 	dr StartMenu_DrawBugContestStatusBox, $4b1e
@@ -180,9 +127,13 @@ SECTION "rom9", ROMX, BANK[9]
 	dr Kurt_SelectApricorn, $4ba1
 	dr MonSubmenu, $4c96
 	dr SelectQuantityToToss, $4f26
+	dr SelectQuantityToBuy, $4f30
+	dr SelectQuantityToSell, $4f48
 	dr TrainerCard, $5069
+	dr ProfOaksPC, $67c0
 	dr ProfOaksPCBoot, $67db
 	dr InitDecorations, $6c42
+	dr _PlayerDecorationMenu, $6c4d
 	dr SetSpecificDecorationFlag, $73e8
 	dr ToggleMaptileDecorations, $751c
 	dr ToggleDecorationsVisibility, $7574
@@ -218,7 +169,11 @@ SECTION "rom10", ROMX, BANK[10]
 	dr CopyMysteryGiftReceivedDecorationsToPC, $6575
 	dr UnlockMysteryGift, $659d
 	dr ResetDailyMysteryGiftLimitIfUnlocked, $65ac
+	dr BackupMysteryGift, $65bd
+	dr RestoreMysteryGift, $65ce
+	dr LoadWildMonData, $65ef
 	dr InitRoamMons, $688a
+	dr UpdateRoamMons, $690c
 	dr JumpRoamMons, $6993
 	dr RandomUnseenWildMon, $6aaa
 	dr RandomPhoneWildMon, $6b51
@@ -237,12 +192,6 @@ SECTION "rom11", ROMX, BANK[11]
 	dr ChooseMonToLearnTMHM, $592a
 	dr TeachTMHM, $5996
 	dr PrintMoveDescription, $5ce3
-
-	dr_end
-
-SECTION "rom12", ROMX, BANK[12]
-; ROM $0c : $30000 - $33FFF
-	set_bank_offset 12
 
 	dr_end
 
@@ -330,8 +279,11 @@ SECTION "rom17", ROMX, BANK[17]
 
 	drd PlaceGraphic, $7aa0
 	drd SendMailToPC, $7ad1
+	drd BackupPartyMonMail, $7c88
+	drd RestorePartyMonMail, $7ca8
 	drd DeletePartyMonMail, $7cc8
 	drd IsAnyMonHoldingMail, $7ce4
+	drd _PlayerMailBoxMenu, $7d03
 
 	dr_end
 
@@ -352,6 +304,7 @@ SECTION "rom20", ROMX, BANK[20]
 	set_bank_offset 20
 
 	dr SelectMonFromParty, $4000
+	dr SelectTradeOrDayCareMon, $401d
 	dr LoadPartyMenuGFX, $404f
 	dr WritePartyMenuTilemap, $405f
 	dr InitPartyMenuGFX, $4349
@@ -470,7 +423,10 @@ SECTION "rom33", ROMX, BANK[33]
 	set_bank_offset 33
 
 	dr _PrinterReceive, $42d5
+	dr PrintUnownStamp, $4528
+	dr PrintPartymon, $45c4
 	dr _PrintDiploma, $45fc
+	dr _HallOfFamePC, $67f3
 
 	dr_end
 
@@ -484,6 +440,7 @@ SECTION "rom35", ROMX, BANK[35]
 ; ROM $23 : $8C000 - $8FFFF
 	set_bank_offset 35
 
+	dr SaveMenu_CopyTilemapAtOnce, $4000
 	dr DummyPredef35, $417a
 DummyPredef36::
 	dr UpdateTimeOfDayPal, $417b
@@ -509,6 +466,7 @@ DummyPredef36::
 	dr _ReinitSpriteAnimFrame, $5152
 	set_gs_diff $1a
 	drd ClearSpriteAnims2, $657a
+	drd LoadOverworldMonIcon, $6591
 	drd LoadMenuMonIcon, $65a5
 	drd UnfreezeMonIcons, $6728
 	drd HoldSwitchmonIcon, $6743
@@ -614,21 +572,10 @@ SECTION "rom47", ROMX, BANK[47]
 
 	dr_end
 
-SECTION "rom48", ROMX, BANK[48]
-; ROM $30 : $C0000 - $C3FFF
-	set_bank_offset 48
-
-	dr ChrisSpriteGFX, $4000
-	dr RivalSpriteGFX, $43c0
-	dr MomSpriteGFX, $4fc0
-
-	dr_end
-
 SECTION "rom49", ROMX, BANK[49]
 ; ROM $31 : $C4000 - $C7FFF
-	set_bank_offset 49
+	set_bank_offset 49, $7a40
 
-	dr PokeBallSpriteGFX, $7380
 	dr _CheckPokerus, $7a40
 	dr CheckForLuckyNumberWinners, $7a5a
 	dr PrintTodaysLuckyNumber, $7c03
@@ -693,13 +640,14 @@ SECTION "rom55", ROMX, BANK[55]
 ; ROM $37 : $DC000 - $DFFFF
 	set_bank_offset 55
 
-	dr_end
+	dr rom55_end, $5773
 
 SECTION "rom56", ROMX, BANK[56]
 ; ROM $38 : $E0000 - $E3FFF
 	set_bank_offset 56
 
 	dr _Diploma, $4002
+	dr RotateUnownFrontpic, $47cf
 	dr _CardFlip, $48bd
 	dr _UnownPuzzle, $5995
 	dr _MemoryGame, $667a
@@ -789,5 +737,34 @@ SECTION "rom63", ROMX, BANK[63]
 
 	dr DummyPredef3A, $4001
 	dr _AnimateTileset, $4003
+	dr Tileset0Anim, $401e
+TilesetJohtoModernAnim::
+TilesetKantoAnim::
+TilesetParkAnim::
+TilesetForestAnim::
+	dr TilesetJohtoAnim, $404a
+	dr TilesetPortAnim, $40d6
+	dr TilesetEliteFourRoomAnim, $4106
+	dr TilesetCaveAnim, $418e
+TilesetDarkCaveAnim::
+	dr TilesetIcePathAnim, $41da
+	dr TilesetTowerAnim, $4226
+	dr TilesetHouseAnim, $428e
+TilesetPlayersHouseAnim::
+TilesetPokecenterAnim::
+TilesetGateAnim::
+TilesetLabAnim::
+TilesetFacilityAnim::
+TilesetMartAnim::
+TilesetMansionAnim::
+TilesetGameCornerAnim::
+TilesetTraditionalHouseAnim::
+TilesetTrainStationAnim::
+TilesetChampionsRoomAnim::
+TilesetLighthouseAnim::
+TilesetPlayersRoomAnim::
+TilesetRuinsOfAlphAnim::
+TilesetRadioTowerAnim::
+TilesetUndergroundAnim::
 
 	dr_end

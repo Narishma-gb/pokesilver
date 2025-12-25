@@ -74,38 +74,38 @@ INCLUDE "engine/events/pokerus/apply_pokerus_tick.asm"
 INCLUDE "engine/events/bug_contest/contest_2.asm"
 
 
-;SECTION "bank5", ROMX
+SECTION "bank5", ROMX
 
-;INCLUDE "engine/rtc/rtc.asm"
-;INCLUDE "engine/overworld/overworld.asm"
-;INCLUDE "engine/overworld/tile_events.asm"
-;INCLUDE "engine/menus/empty_sram.asm"
-;INCLUDE "engine/menus/save.asm"
-;INCLUDE "data/maps/spawn_points.asm"
-;INCLUDE "engine/overworld/load_map_part.asm"
-;INCLUDE "engine/overworld/spawn_points.asm"
-;INCLUDE "engine/overworld/map_setup.asm"
-;INCLUDE "data/tilesets.asm"
-;INCLUDE "engine/events/pokecenter_pc.asm"
-;INCLUDE "engine/items/mart.asm"
-;INCLUDE "engine/events/money.asm"
-;INCLUDE "data/items/marts.asm"
-;INCLUDE "engine/events/mom.asm"
-;INCLUDE "engine/events/daycare.asm"
-;INCLUDE "engine/events/print_unown.asm"
-;INCLUDE "engine/events/print_photo.asm"
-;INCLUDE "engine/link/mystery_gift_gfx.asm"
-;INCLUDE "engine/pokemon/breeding.asm"
-
-
-;SECTION "Roofs", ROMX
-
-;INCLUDE "engine/tilesets/mapgroup_roofs.asm"
+INCLUDE "engine/rtc/rtc.asm"
+INCLUDE "engine/overworld/overworld.asm"
+INCLUDE "engine/overworld/tile_events.asm"
+INCLUDE "engine/menus/empty_sram.asm"
+INCLUDE "engine/menus/save.asm"
+INCLUDE "data/maps/spawn_points.asm"
+INCLUDE "engine/overworld/load_map_part.asm"
+INCLUDE "engine/overworld/spawn_points.asm"
+INCLUDE "engine/overworld/map_setup.asm"
+INCLUDE "data/tilesets.asm"
+INCLUDE "engine/events/pokecenter_pc.asm"
+INCLUDE "engine/items/mart.asm"
+INCLUDE "engine/events/money.asm"
+INCLUDE "data/items/marts.asm"
+INCLUDE "engine/events/mom.asm"
+INCLUDE "engine/events/daycare.asm"
+INCLUDE "engine/events/print_unown.asm"
+INCLUDE "engine/events/print_photo.asm"
+INCLUDE "engine/link/mystery_gift_gfx.asm"
+INCLUDE "engine/pokemon/breeding.asm"
 
 
-;SECTION "Clock Reset", ROMX
+SECTION "Roofs", ROMX
 
-;INCLUDE "engine/rtc/restart_clock.asm"
+INCLUDE "engine/tilesets/mapgroup_roofs.asm"
+
+
+SECTION "Clock Reset", ROMX
+
+INCLUDE "engine/rtc/restart_clock.asm"
 
 
 ;SECTION "Catch Tutorial", ROMX

@@ -161,8 +161,8 @@ DayCareAskDepositPokemon:
 	ret
 
 .DaycareDummyText: ; unreferenced
-	text_far _DaycareDummyText
-	text_end
+	text_start
+	done
 
 DayCare_DepositPokemonText:
 	ld a, DAYCARETEXT_DEPOSIT
@@ -289,84 +289,144 @@ PrintDayCareText:
 	dw .ComeAgainText ; 13
 
 .DayCareManIntroText:
-	text_far _DayCareManIntroText
-	text_end
+	text "わしは　そだてや　じいさんじゃ"
+	line "なにか　そだてて　ほしいのかい？"
+	done
 
 .DayCareManIntroEggText:
-	text_far _DayCareManIntroEggText
-	text_end
+	text "わしは　そだてや　じいさんじゃ"
+	line "タマゴの　はなし　しっとるかい？"
+
+	para "ばあさんと　#　そだてていたら"
+	line "⋯⋯⋯びっくり！"
+
+	para "なんと！　タマゴ<GA>あったんじゃ！"
+	line "ふしぎな　ことも　あるのう"
+
+	para "どうじゃ？"
+	line "なにか　そだててみるかい？"
+	done
 
 .DayCareLadyIntroText:
-	text_far _DayCareLadyIntroText
-	text_end
+	text "わしは　そだてや　ばあさんじゃ"
+	line "なにか　そだてて　ほしいのかい？"
+	done
 
 .DayCareLadyIntroEggText:
-	text_far _DayCareLadyIntroEggText
-	text_end
+	text "わしは　そだてや　ばあさんじゃ"
+	line "タマゴの　はなし　しっとるかい？"
+
+	para "じいさんと　#　そだてていたら"
+	line "⋯⋯⋯びっくり！"
+
+	para "なんと！　タマゴ<GA>あったんじゃ！"
+	line "ふしぎな　ことも　あるのう"
+
+	para "どうじゃ？"
+	line "なにか　そだててみるかい？"
+	done
 
 .WhatShouldIRaiseText:
-	text_far _WhatShouldIRaiseText
-	text_end
+	text "それでは"
+	line "なにを　そだてて　みるかね？"
+	prompt
 
 .OnlyOneMonText:
-	text_far _OnlyOneMonText
-	text_end
+	text "おや？　#が"
+	line "１ぴきしか　いないようだな"
+	prompt
 
 .CantAcceptEggText:
-	text_far _CantAcceptEggText
-	text_end
+	text "わるいが"
+	line "タマゴは　あずかれないのお"
+	prompt
 
 .RemoveMailText:
-	text_far _RemoveMailText
-	text_end
+	text "そのまえに"
+	line "メールを　はずして　きなされ"
+	prompt
 
 .LastHealthyMonText:
-	text_far _LastHealthyMonText
-	text_end
+	text "それを　あずけたら"
+	line "たたかえなく　なるぞい"
+	prompt
 
 .IllRaiseYourMonText:
-	text_far _IllRaiseYourMonText
-	text_end
+	text "わかった"
+	line "しばらく　@"
+	text_ram wStringBuffer1
+	text "を　あずかろう"
+	prompt
 
 .ComeBackLaterText:
-	text_far _ComeBackLaterText
-	text_end
+	text "てきとうに　じかん<GA>たったら"
+	line "また　きなさい"
+	done
 
 .AreWeGeniusesText:
-	text_far _AreWeGeniusesText
-	text_end
+	text "やっぱり　わしらはてんさいじゃ！"
+	line "あんたの　@"
+	text_ram wStringBuffer1
+	text "　みてみるかね？"
+	done
 
 .YourMonHasGrownText:
-	text_far _YourMonHasGrownText
-	text_end
+	text "おまえの　@"
+	text_ram wStringBuffer1
+	text_start
+	line "ずいぶんと　せいちょうしたぞ"
+
+	para "そうだな　レベルで　いうと"
+	line "@"
+	text_decimal wStringBuffer2 + 1, 1, 3
+	text "くらい　そだってるな"
+
+	para "<⋯>で　#を　ひきとるなら"
+	line "りょうきんは　@"
+	text_decimal wStringBuffer2 + 2, 3, 4
+	text "円　だよ"
+	done
 
 .PerfectHeresYourMonText:
-	text_far _PerfectHeresYourMonText
-	text_end
+	text "ほい　たしかに！"
+	line "じゃあ　#　つれていきなさい"
+	prompt
 
 .GotBackMonText:
-	text_far _GotBackMonText
-	text_end
+	text "<PLAYER>は　そだてやさんから"
+	line "@"
+	text_ram wStringBuffer1
+	text "を　ひきとった！"
+	prompt
 
 .BackAlreadyText:
-	text_far _BackAlreadyText
-	text_end
+	text "なんだ　もう　きたのかい"
+	line "おまえの　@"
+	text_ram wStringBuffer1
+	text "は<⋯>"
+
+	para "まだ　しばらく"
+	line "じかん<GA>かかるぞい"
+
+	para "<⋯>で　#を　ひきとるなら"
+	line "りょうきんは　１００円　だよ"
+	done
 
 .HaveNoRoomText:
-	text_far _HaveNoRoomText
-	text_end
+	text "それいじょう　もてんぞい"
+	prompt
 
 .NotEnoughMoneyText:
-	text_far _NotEnoughMoneyText
-	text_end
+	text "かね<GA>たらんぞい"
+	prompt
 
 .OhFineThenText:
-	text_far _OhFineThenText
-	text_end
+	text "そうか　それじゃ"
+	prompt
 
 .ComeAgainText:
-	text_far _ComeAgainText
-	text_end
+	text "また　きなさいよ"
+	done
 
 DayCareManOutside:
 	ld hl, wDayCareMan
@@ -377,8 +437,8 @@ DayCareManOutside:
 	ret
 
 .NotYetText:
-	text_far _NotYetText
-	text_end
+	text "まだだよ"
+	done
 
 .AskGiveEgg:
 	ld hl, .FoundAnEggText
@@ -418,24 +478,37 @@ DayCareManOutside:
 	ret
 
 .FoundAnEggText:
-	text_far _FoundAnEggText
-	text_end
+	text "おお！　あんたか"
+
+	para "あずかっていた　#を"
+	line "そだてていたら<⋯>なんと！"
+
+	para "#が　タマゴを"
+	line "もっておったんじゃ！"
+
+	para "どこから　もってきたか　わからんが"
+	line "あんたの　#<GA>もってたんじゃ"
+	cont "やっぱり　ほしいじゃろ？"
+	done
 
 .ReceivedEggText:
-	text_far _ReceivedEggText
-	text_end
+	text "<PLAYER>は　そだてやさんから"
+	line "タマゴを　うけとった！"
+	done
 
 .TakeGoodCareOfEggText:
-	text_far _TakeGoodCareOfEggText
-	text_end
+	text "だいじに　そだてなさいよ"
+	done
 
 .IllKeepItThanksText:
-	text_far _IllKeepItThanksText
-	text_end
+	text "それじゃ　わし<GA>もらおう"
+	line "ありがとよ"
+	done
 
 .NoRoomForEggText:
-	text_far _NoRoomForEggText
-	text_end
+	text "それいじょう　もっていけんぞ"
+	line "また　こんどに　しなされ"
+	done
 
 DayCare_GiveEgg:
 	ld a, [wEggMonLevel]
@@ -459,7 +532,7 @@ DayCare_GiveEgg:
 	ld [hl], a
 
 	ld hl, wPartyMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call DayCare_GetCurrentPartyMember
 	ld hl, wEggMonNickname
 	call CopyBytes
@@ -545,7 +618,7 @@ DayCare_InitBreeding:
 	ld bc, BOXMON_STRUCT_LENGTH
 	call ByteFill
 	ld hl, wEggMonNickname
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call ByteFill
 	ld hl, wEggMonOT
 	ld bc, NAME_LENGTH
@@ -601,8 +674,7 @@ DayCare_InitBreeding:
 
 	call GetBaseData
 	ld hl, wEggMonNickname
-	ld de, .String_EGG
-	call CopyName2
+	ld_hli_a_string "タマゴ@"
 	ld hl, wPlayerName
 	ld de, wEggMonOT
 	ld bc, NAME_LENGTH
@@ -713,6 +785,3 @@ DayCare_InitBreeding:
 	ld a, [wCurPartyLevel]
 	ld [wEggMonLevel], a
 	ret
-
-.String_EGG:
-	db "EGG@"

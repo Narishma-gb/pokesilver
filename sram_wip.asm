@@ -1,15 +1,17 @@
 SECTION "sram0", SRAM[$ab50], BANK[0]
 
 sMysteryGiftItem:: db
-sMysteryGiftUnlocked::
-	ds 2
+sMysteryGiftUnlocked:: db
+sBackupMysteryGiftItem:: db
 
 sNumDailyMysteryGiftPartnerIDs::
 	ds 21
 sMysteryGiftTimer:: dw
 	ds 1
 sMysteryGiftTrainerHouseFlag::
-	ds $495
+	ds $33
+sBackupMysteryGiftItemEnd::
+	ds $462
 
 sRTCStatusFlags::
 	ds $100

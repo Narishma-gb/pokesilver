@@ -260,12 +260,12 @@ GetMartPrice:
 .CharToNybble:
 	ld a, [de]
 	inc de
-	cp ' '
+	cp '　'
 	jr nz, .not_space
-	ld a, '0'
+	ld a, '０'
 
 .not_space
-	sub '0'
+	sub '０'
 	ret
 
 ReadMart:
@@ -532,12 +532,18 @@ BargainShopAskPurchaseQuantity:
 	ret
 
 MartHowManyText:
-	text_far _MartHowManyText
-	text_end
+	text "いくつ　おかいあげになりますか"
+	done
 
 MartFinalPriceText:
-	text_far _MartFinalPriceText
-	text_end
+	text_ram wStringBuffer2
+	text "を　@"
+	text_decimal wItemQuantityChange, 1, 2
+	text "こで"
+	line "@"
+	text_decimal hMoneyTemp, 3, 6
+	text "円　おかいあげですか？"
+	done
 
 MenuHeader_Buy:
 	db MENU_BACKUP_TILES ; flags
@@ -566,95 +572,132 @@ MenuHeader_Buy:
 	ld d, h
 	ld e, l
 	pop hl
-	ld bc, SCREEN_WIDTH
-	add hl, bc
-	ld c, PRINTNUM_LEADINGZEROS | PRINTNUM_MONEY | 3
+	ld c, PRINTNUM_LEADINGZEROS | 3
 	call PrintBCDNumber
+	ld [hl], '円'
 	ret
 
 HerbShopLadyIntroText:
-	text_far _HerbShopLadyIntroText
-	text_end
+	text "<⋯>　いらっしゃい"
+
+	para "やすくて　よく　きく"
+	line "カンポーや　だよ"
+
+	para "うちの　カンポーは　にがい　からね"
+	line "ポケモンは　ちょっと　いやがるかも"
+	cont "ひっひっひっひ<⋯>"
+	done
 
 HerbalLadyHowManyText:
-	text_far _HerbalLadyHowManyText
-	text_end
+	text "いくつ　ほしいんだい？"
+	done
 
 HerbalLadyFinalPriceText:
-	text_far _HerbalLadyFinalPriceText
-	text_end
+	text "@"
+	text_ram wStringBuffer2
+	text "を　@"
+	text_decimal wItemQuantityChange, 1, 2
+	text "こで"
+	line "@"
+	text_decimal hMoneyTemp, 3, 6
+	text "円　いただくよ？"
+	done
 
 HerbalLadyThanksText:
-	text_far _HerbalLadyThanksText
-	text_end
+	text "まいど　どうも！"
+	line "ありがとうよ<⋯>　ひっひっひ"
+	done
 
 HerbalLadyPackFullText:
-	text_far _HerbalLadyPackFullText
-	text_end
+	text "おや？"
+	line "リュックが　いっぱい　みたいだねえ！"
+	done
 
 HerbalLadyNoMoneyText:
-	text_far _HerbalLadyNoMoneyText
-	text_end
+	text "ひっひっひっひ<⋯>！"
+	line "おかねが　たりないねえ！"
+	done
 
 HerbalLadyComeAgainText:
-	text_far _HerbalLadyComeAgainText
-	text_end
+	text "また　きなよ！"
+	line "ひっひっひ<⋯>"
+	done
 
 BargainShopIntroText:
-	text_far _BargainShopIntroText
-	text_end
+	text "いらっしゃい"
+	line "うちは　やすうり　どうぐや　だよ"
+
+	para "ほかの　みせじゃ　うっていない"
+	line "めずらしい　ものを　おいてるよ"
+	cont "ただし　１こ　ずつしか　ないからね"
+	done
 
 BargainShopFinalPriceText:
-	text_far _BargainShopFinalPriceText
-	text_end
+	text_ram wStringBuffer2
+	text "は　@"
+	text_decimal hMoneyTemp, 3, 6
+	text "円だよ"
+	line "ほしいのかい？"
+	done
 
 BargainShopThanksText:
-	text_far _BargainShopThanksText
-	text_end
+	text "ありがとうよ"
+	done
 
 BargainShopPackFullText:
-	text_far _BargainShopPackFullText
-	text_end
+	text "おや　おや"
+	line "リュックが　いっぱいだねえ"
+	done
 
 BargainShopSoldOutText:
-	text_far _BargainShopSoldOutText
-	text_end
+	text "それは　さっき　かったねえ"
+	line "もう　しなぎれ　だよ"
+	done
 
 BargainShopNoFundsText:
-	text_far _BargainShopNoFundsText
-	text_end
+	text "おやおや"
+	line "おかねが　たりない　みたいだ"
+	done
 
 BargainShopComeAgainText:
-	text_far _BargainShopComeAgainText
-	text_end
+	text "また　かいに　きてね"
+	done
 
 PharmacyIntroText:
-	text_far _PharmacyIntroText
-	text_end
+	text "ん？　なにか　ようかね？"
+	line "くすりを　かうのかね？"
+	done
 
 PharmacyHowManyText:
-	text_far _PharmacyHowManyText
-	text_end
+	text "どんだけ　かうの？"
+	done
 
 PharmacyFinalPriceText:
-	text_far _PharmacyFinalPriceText
-	text_end
+	text_ram wStringBuffer2
+	text "を　@"
+	text_decimal wItemQuantityChange, 1, 2
+	text "こで"
+	line "@"
+	text_decimal hMoneyTemp, 3, 6
+	text "円　になるよ"
+	done
 
 PharmacyThanksText:
-	text_far _PharmacyThanksText
-	text_end
+	text "まいど！"
+	done
 
 PharmacyPackFullText:
-	text_far _PharmacyPackFullText
-	text_end
+	text "にもつ　いっぱい　やで"
+	done
 
 PharmacyNoMoneyText:
-	text_far _PharmacyNoMoneyText
-	text_end
+	text "うん？　おかね　たらへんで"
+	done
 
 PharmacyComeAgainText:
-	text_far _PharmacyComeAgainText
-	text_end
+	text "そうかいな"
+	line "ほな　また　こんどな"
+	done
 
 SellMenu:
 	call DisableSpriteUpdates
@@ -679,8 +722,9 @@ SellMenu:
 	ret
 
 .NothingToSellText:
-	text_far _NothingToSellText
-	text_end
+	text "どうぐを　ひとつも"
+	next "もっていません！"
+	prompt
 
 .TryToSellItem:
 	farcall CheckItemMenu
@@ -718,11 +762,8 @@ SellMenu:
 	farcall SelectQuantityToSell
 	call ExitMenu
 	jr c, .declined
-	hlcoord 1, 14
-	lb bc, 3, 18
-	call ClearBox
 	ld hl, MartSellPriceText
-	call PrintTextboxText
+	call PrintText
 	call YesNoBox
 	jr c, .declined
 	ld de, wMoney
@@ -732,11 +773,8 @@ SellMenu:
 	ld hl, wNumItems
 	call TossItem
 	predef PartyMonItemName
-	hlcoord 1, 14
-	lb bc, 3, 18
-	call ClearBox
 	ld hl, MartBoughtText
-	call PrintTextboxText
+	call PrintText
 	call PlayTransactionSound
 	farcall PlaceMoneyBottomLeft
 	call JoyWaitAorB
@@ -747,19 +785,24 @@ SellMenu:
 	ret
 
 MartSellHowManyText:
-	text_far _MartSellHowManyText
-	text_end
+	text "いくつ　うりますか？"
+	done
 
 MartSellPriceText:
-	text_far _MartSellPriceText
-	text_end
+	text_decimal hMoneyTemp, 3, 6
+	text "円　で"
+	line "ひきとらせて　いただきます"
+
+	para "よろしいですか？"
+	done
 
 UnusedDummyString: ; unreferenced
 	db "！ダミー！@" ; "!Dummy!"
 
 MartWelcomeText:
-	text_far _MartWelcomeText
-	text_end
+	text "ようこそ！"
+	line "おかいもの　ですね！"
+	done
 
 MenuHeader_BuySell:
 	db MENU_BACKUP_TILES ; flags
@@ -770,37 +813,47 @@ MenuHeader_BuySell:
 .MenuData
 	db STATICMENU_CURSOR ; strings
 	db 3 ; items
-	db "BUY@"
-	db "SELL@"
-	db "QUIT@"
+	db "かいに　きた@"
+	db "うりに　きた@"
+	db "なんでも　ないです@"
 
 MartThanksText:
-	text_far _MartThanksText
-	text_end
+	text "はい　まいど！"
+	line "ありがとう　ございます"
+	done
 
 MartNoMoneyText:
-	text_far _MartNoMoneyText
-	text_end
+	text "おかねが　たりない　ですよ！"
+	done
 
 MartPackFullText:
-	text_far _MartPackFullText
-	text_end
+	text "それ　いじょう"
+	line "もちきれない　ですよ！"
+	done
 
 MartCantBuyText:
-	text_far _MartCantBuyText
-	text_end
+	text "その　どうぐを"
+	line "かいとる　わけには　いきません！"
+
+	para ""
+	done
 
 MartComeAgainText:
-	text_far _MartComeAgainText
-	text_end
+	text "また　どうぞ！"
+	done
 
 MartAskMoreText:
-	text_far _MartAskMoreText
-	text_end
+	text "その　ほかに　わたしどもで"
+	line "なにか　おちからに　なれることは？"
+	done
 
 MartBoughtText:
-	text_far _MartBoughtText
-	text_end
+	text_ram wStringBuffer2
+	text "を　わたして"
+	line "@"
+	text_decimal hMoneyTemp, 3, 6
+	text "円を　うけとった！"
+	done
 
 PlayTransactionSound:
 	call WaitSFX

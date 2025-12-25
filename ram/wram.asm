@@ -166,7 +166,7 @@ SECTION UNION "Miscellaneous", WRAM0
 ; it uses exactly 480 bytes.
 wSurroundingTiles:: ds SURROUNDING_WIDTH * SURROUNDING_HEIGHT
 
-/*
+
 SECTION UNION "Miscellaneous", WRAM0
 
 ; box save buffer
@@ -174,7 +174,7 @@ SECTION UNION "Miscellaneous", WRAM0
 ; needs more space than the buffer can hold.
 wBoxPartialData:: ds 480
 wBoxPartialDataEnd::
-*/
+
 
 SECTION UNION "Miscellaneous", WRAM0
 
@@ -464,14 +464,14 @@ wBillsPC_BackupLoadedBox:: db
 wBillsPC_MonHasMail:: db
 	ds 5
 wBillsPCDataEnd::
-
+*/
 
 SECTION UNION "Overworld Map", WRAM0
 
 ; Hall of Fame data
 wHallOfFamePokemonList:: hall_of_fame wHallOfFamePokemonList
 
-
+/*
 SECTION UNION "Overworld Map", WRAM0
 
 ; debug color picker
@@ -2281,7 +2281,6 @@ SECTION "Game Data", WRAMX
 
 wGameData::
 wPlayerData::
-wPlayerData1::
 wPlayerID:: dw
 
 wPlayerName:: ds NAME_LENGTH
@@ -2319,18 +2318,12 @@ wCenteredObject:: db
 wFollowerMovementQueueLength:: db
 wFollowMovementQueue:: ds 5
 
-UNION
 wObjectStructs::
 wPlayerStruct:: object_struct wPlayer ; player is object struct 0
 ; wObjectStruct1 - wObjectStruct12
 for n, 1, NUM_OBJECT_STRUCTS
 wObject{d:n}Struct:: object_struct wObject{d:n}
 endr
-NEXTU
-	ds 458
-wPlayerData1End::
-wPlayerData2::
-ENDU
 
 wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
 
@@ -2357,8 +2350,6 @@ wCurTimeOfDay:: db
 
 	ds 1
 
-wPlayerData2End::
-wPlayerData3::
 wStatusFlags::
 	db
 wStatusFlags2:: db
@@ -2591,7 +2582,6 @@ wLuckyIDNumber:: dw
 wRepelEffect:: db ; If a Repel is in use, it contains the nr of steps it's still active
 wBikeStep:: dw
 
-wPlayerData3End::
 wPlayerDataEnd::
 
 wCurMapData::
@@ -2626,8 +2616,8 @@ wCurMapDataEnd::
 
 
 SECTION "Party", WRAMX
-
-wPokemonData::
+/*
+wPokemonData::*/
 wPartyCount::   db
 wPartySpecies:: ds PARTY_LENGTH
 wPartyEnd::     db ; older code doesn't check wPartyCount

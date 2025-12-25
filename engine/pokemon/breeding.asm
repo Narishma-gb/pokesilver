@@ -312,7 +312,7 @@ HatchEggs:
 	call PrintText
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call AddNTimes
 	ld d, h
 	ld e, l
@@ -337,7 +337,7 @@ HatchEggs:
 
 .nonickname
 	ld hl, wStringBuffer1
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 
 .next
@@ -353,8 +353,9 @@ HatchEggs:
 	ret
 
 .Text_HatchEgg:
-	; Huh? @ @
-	text_far Text_BreedHuh
+	text "あれ<⋯><⋯>？"
+
+	para "@"
 	text_asm
 	ld hl, wStateFlags
 	res SPRITE_UPDATES_DISABLED_F, [hl]
@@ -375,16 +376,24 @@ HatchEggs:
 	ret
 
 .BreedClearboxText:
-	text_far _BreedClearboxText
-	text_end
+	text_start
+	done
 
 .BreedEggHatchText:
-	text_far _BreedEggHatchText
+	text "タマゴ<GA>かえって"
+	line "@"
+	text_ram wStringBuffer1
+	text "<GA>うまれた！@"
+	sound_caught_mon
+	text_promptbutton
 	text_end
 
 .BreedAskNicknameText:
-	text_far _BreedAskNicknameText
-	text_end
+	text "うまれた　@"
+	text_ram wStringBuffer1
+	text "に"
+	line "ニックネームを　つけますか？"
+	done
 
 InitEggMoves:
 	call GetHeritableMoves
@@ -635,7 +644,7 @@ Hatch_UpdateFrontpicBGMapCenter:
 	push bc
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	pop bc
 	pop hl
@@ -879,12 +888,18 @@ DayCareMonCursor:
 	jp WaitPressAorB_BlinkCursor
 
 LeftWithDayCareLadyText:
-	text_far _LeftWithDayCareLadyText
-	text_end
+	text "そだてや　ばあさんに　あずけた"
+	line "@"
+	text_ram wBreedMon2Nickname
+	text "だ"
+	done
 
 LeftWithDayCareManText:
-	text_far _LeftWithDayCareManText
-	text_end
+	text "そだてや　じいさんに　あずけた"
+	line "@"
+	text_ram wBreedMon1Nickname
+	text "だ"
+	done
 
 DayCareMonCompatibilityText:
 	push bc
@@ -912,24 +927,32 @@ DayCareMonCompatibilityText:
 	ret
 
 .BreedBrimmingWithEnergyText:
-	text_far _BreedBrimmingWithEnergyText
-	text_end
+	text "げんき　いっぱいだ！"
+	prompt
 
 .BreedNoInterestText:
-	text_far _BreedNoInterestText
-	text_end
+	text_ram wStringBuffer1
+	text "には　ぜんぜん"
+	line "きょうみ<GA>なさそう"
+	prompt
 
 .BreedAppearsToCareForText:
-	text_far _BreedAppearsToCareForText
-	text_end
+	text_ram wStringBuffer1
+	text "を　とっても"
+	line "きにいっている　ようだ！"
+	prompt
 
 .BreedFriendlyText:
-	text_far _BreedFriendlyText
-	text_end
+	text_ram wStringBuffer1
+	text "とは　なかなか"
+	line "なかがよい　ようだ"
+	prompt
 
 .BreedShowsInterestText:
-	text_far _BreedShowsInterestText
-	text_end
+	text_ram wStringBuffer1
+	text "を　すこし"
+	line "きにしている　ようだ"
+	prompt
 
 DayCareMonPrintEmptyString: ; unreferenced
 	ld hl, .string

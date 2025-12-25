@@ -63,13 +63,6 @@ endr
 ;sLuckyIDNumber::  dw
 
 
-;SECTION "Backup Save 1", SRAM
-
-;sBackupPlayerData3:: ds wPlayerDataEnd - wPlayerData3
-;sBackupPokemonData:: ds wPokemonDataEnd - wPokemonData
-;sBackupPlayerData1:: ds wPlayerData1End - wPlayerData
-
-
 ;SECTION "SRAM Stack", SRAM
 
 ;sStackTop:: dw
@@ -84,24 +77,22 @@ sWindowStackTop::
 	ds 1
 
 
-;SECTION "Save", SRAM
+SECTION "Save", SRAM
 
-;sOptions:: ds wOptionsEnd - wOptions
+sOptions:: ds wOptionsEnd - wOptions
 
-;sCheckValue1:: db ; loaded with SAVE_CHECK_VALUE_1, used to check save corruption
+sCheckValue1:: db ; loaded with SAVE_CHECK_VALUE_1, used to check save corruption
 
-;sGameData::
-;sPlayerData::
-;sPlayerData1::  ds wPlayerData1End - wPlayerData1
-;sPlayerData2::  ds wPlayerData2End - wPlayerData2
-;sPlayerData3::  ds wPlayerData3End - wPlayerData3
-;sCurMapData::   ds wCurMapDataEnd - wCurMapData
-;sPokemonData::  ds wPokemonDataEnd - wPokemonData
-;sGameDataEnd::
+sGameData::
+sPlayerData::  ds wPlayerDataEnd - wPlayerData
+sCurMapData::  ds wCurMapDataEnd - wCurMapData
+sPokemonData:: ds wPokemonDataEnd - wPokemonData
+sGameDataEnd::
 
-;sChecksum:: dw
+	ds $81
+sChecksum:: dw
 
-;sCheckValue2:: db ; loaded with SAVE_CHECK_VALUE_2, used to check save corruption
+sCheckValue2:: db ; loaded with SAVE_CHECK_VALUE_2, used to check save corruption
 
 
 SECTION "Active Box", SRAM
@@ -109,34 +100,29 @@ SECTION "Active Box", SRAM
 sBox:: curbox sBox
 
 
-;SECTION "Link Battle Data", SRAM
+SECTION "Link Battle Data", SRAM
 
-;sLinkBattleStats::
-;sLinkBattleWins::   dw
-;sLinkBattleLosses:: dw
-;sLinkBattleDraws::  dw
+sLinkBattleStats::
+sLinkBattleWins::   dw
+sLinkBattleLosses:: dw
+sLinkBattleDraws::  dw
 
-;sLinkBattleRecord::
-;; sLinkBattleRecord1 - sLinkBattleRecord5
-;for n, 1, NUM_LINK_BATTLE_RECORDS + 1
-;sLinkBattleRecord{d:n}:: link_battle_record sLinkBattleRecord{d:n}
-;endr
-;sLinkBattleStatsEnd::
-
-
-;SECTION "SRAM Hall of Fame", SRAM
-
-;sHallOfFame::
-;; sHallOfFame1 - sHallOfFame30
-;for n, 1, NUM_HOF_TEAMS + 1
-;sHallOfFame{d:n}:: hall_of_fame sHallOfFame{d:n}
-;endr
-;sHallOfFameEnd::
+sLinkBattleRecord::
+; sLinkBattleRecord1 - sLinkBattleRecord5
+for n, 1, NUM_LINK_BATTLE_RECORDS + 1
+sLinkBattleRecord{d:n}:: link_battle_record sLinkBattleRecord{d:n}
+endr
+sLinkBattleStatsEnd::
 
 
-;SECTION "Backup Save 2", SRAM
+SECTION "SRAM Hall of Fame", SRAM
 
-;sBackupPlayerData2:: ds wPlayerData2End - wPlayerData2
+sHallOfFame::
+; sHallOfFame1 - sHallOfFame50
+for n, 1, NUM_HOF_TEAMS + 1
+sHallOfFame{d:n}:: hall_of_fame sHallOfFame{d:n}
+endr
+sHallOfFameEnd::
 
 
 ; The PC boxes will not fit into one SRAM bank,
@@ -164,12 +150,19 @@ SECTION "Boxes 7-9", SRAM
 		"boxes: Expected {d:NUM_BOXES} total boxes, got {d:box_n}"
 
 
-;SECTION "Backup Save 3", SRAM
+SECTION "Backup Save", SRAM
 
-;sBackupOptions:: ds wOptionsEnd - wOptions
-;sBackupCheckValue1:: db ; loaded with SAVE_CHECK_VALUE_1, used to check save corruption
-;sBackupCurMapData:: ds wCurMapDataEnd - wCurMapData
-;sBackupChecksum:: dw
-;sBackupCheckValue2:: db ; loaded with SAVE_CHECK_VALUE_2, used to check save corruption
+sBackupOptions:: ds wOptionsEnd - wOptions
+sBackupCheckValue1:: db ; loaded with SAVE_CHECK_VALUE_1, used to check save corruption
+
+sBackupGameData::
+sBackupPlayerData::  ds wPlayerDataEnd - wPlayerData
+sBackupCurMapData::  ds wCurMapDataEnd - wCurMapData
+sBackupPokemonData:: ds wPokemonDataEnd - wPokemonData
+sBackupGameDataEnd::
+
+	ds $81
+sBackupChecksum:: dw
+sBackupCheckValue2:: db ; loaded with SAVE_CHECK_VALUE_2, used to check save corruption
 
 ENDSECTION

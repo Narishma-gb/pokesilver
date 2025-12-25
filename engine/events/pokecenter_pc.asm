@@ -42,7 +42,7 @@ PokemonCenterPC:
 
 .TopMenu:
 	db MENU_BACKUP_TILES | MENU_NO_CLICK_SFX ; flags
-	menu_coords 0, 0, 15, 12
+	menu_coords 0, 0, 14, 12
 	dw .MenuData
 	db 1 ; default option
 
@@ -61,11 +61,11 @@ PokemonCenterPC:
 	dw HallOfFamePC, .String_HallOfFame
 	dw TurnOffPC,    .String_TurnOff
 
-.String_PlayersPC:  db "<PLAYER>'s PC@"
-.String_BillsPC:    db "BILL's PC@"
-.String_OaksPC:     db "PROF.OAK's PC@"
-.String_HallOfFame: db "HALL OF FAME@"
-.String_TurnOff:    db "TURN OFF@"
+.String_PlayersPC:  db "<PLAYER>の　<PC>@"
+.String_BillsPC:    db "マサキの　<PC>@"
+.String_OaksPC:     db "オーキドの　<PC>@"
+.String_HallOfFame: db "でんどういり@"
+.String_TurnOff:    db "スイッチを　きる@"
 
 .WhichPC:
 ; entries correspond to PCPC_* constants
@@ -120,8 +120,10 @@ PC_CheckPartyForPokemon:
 	ret
 
 .PokecenterPCCantUseText:
-	text_far _PokecenterPCCantUseText
-	text_end
+	text "ピーッ！"
+	line "#を　もっていない"
+	cont "ひとは　つかうことが　できません！"
+	prompt
 
 
 	; PlayersPCMenuData.WhichPC indexes
@@ -225,8 +227,9 @@ _PlayersHousePC:
 	ret
 
 PlayersPCTurnOnText:
-	text_far _PlayersPCTurnOnText
-	text_end
+	text "<PLAYER>は"
+	line "<PC>の　スイッチを　いれた！"
+	prompt
 
 _PlayersPC:
 	ld a, b
@@ -260,7 +263,7 @@ _PlayersPC:
 
 PlayersPCMenuData:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, 12
+	menu_coords 0, 0, 11, 12
 	dw .PlayersPCMenuData
 	db 1 ; default selected option
 
@@ -281,13 +284,13 @@ PlayersPCMenuData:
 	dw PlayerLogOffMenu,       .LogOff
 	dw PlayerLogOffMenu,       .TurnOff
 
-.WithdrawItem: db "WITHDRAW ITEM@"
-.DepositItem:  db "DEPOSIT ITEM@"
-.TossItem:     db "TOSS ITEM@"
-.MailBox:      db "MAIL BOX@"
-.Decoration:   db "DECORATION@"
-.TurnOff:      db "TURN OFF@"
-.LogOff:       db "LOG OFF@"
+.WithdrawItem: db "どうぐを　ひきだす@"
+.DepositItem:  db "どうぐを　あずける@"
+.TossItem:     db "どうぐを　すてる@"
+.MailBox:      db "メールボックス@"
+.Decoration:   db "もようがえ@"
+.TurnOff:      db "スイッチを　きる@"
+.LogOff:       db "せつぞくをきる@"
 
 .WhichPC:
 ; entries correspond to PLAYERSPC_* constants
@@ -322,8 +325,8 @@ PC_DisplayTextWaitMenu:
 	ret
 
 PlayersPCAskWhatDoText:
-	text_far _PlayersPCAskWhatDoText
-	text_end
+	text "なにを　しますか？"
+	done
 
 PlayerWithdrawItemMenu:
 	call LoadStandardMenuHeader
@@ -390,16 +393,21 @@ PlayerWithdrawItemMenu:
 	ret
 
 .PlayersPCHowManyWithdrawText:
-	text_far _PlayersPCHowManyWithdrawText
-	text_end
+	text "いくつ　ひきだしますか？"
+	done
 
 .PlayersPCWithdrewItemsText:
-	text_far _PlayersPCWithdrewItemsText
-	text_end
+	text_ram wStringBuffer2
+	text "を　@"
+	text_decimal wItemQuantityChange, 1, 2
+	text "こ　"
+	line "ひきだしました"
+	prompt
 
 .PlayersPCNoRoomWithdrawText:
-	text_far _PlayersPCNoRoomWithdrawText
-	text_end
+	text "もちものが　いっぱいなので"
+	line "ひきだせません！"
+	prompt
 
 PlayerTossItemMenu:
 	call LoadStandardMenuHeader
@@ -460,8 +468,9 @@ PlayerDepositItemMenu:
 	ret
 
 .PlayersPCNoItemsText:
-	text_far _PlayersPCNoItemsText
-	text_end
+	text "どうぐを　ひとつも"
+	line "もっていない！"
+	prompt
 
 .TryDepositItem:
 	ld a, [wSpriteUpdatesEnabled]
@@ -549,16 +558,21 @@ PlayerDepositItemMenu:
 	ret
 
 .PlayersPCHowManyDepositText:
-	text_far _PlayersPCHowManyDepositText
-	text_end
+	text "いくつ　あずけますか？"
+	done
 
 .PlayersPCDepositItemsText:
-	text_far _PlayersPCDepositItemsText
-	text_end
+	text_ram wStringBuffer2
+	text "を　@"
+	text_decimal wItemQuantityChange, 1, 2
+	text "こ　"
+	line "あずけました"
+	prompt
 
 .PlayersPCNoRoomDepositText:
-	text_far _PlayersPCNoRoomDepositText
-	text_end
+	text "どうぐが　いっぱいです"
+	line "もう　あずけられません！"
+	prompt
 
 PlayerMailBoxMenu:
 	farcall _PlayerMailBoxMenu
@@ -655,25 +669,37 @@ PC_DisplayText:
 	ret
 
 PokecenterPCTurnOnText:
-	text_far _PokecenterPCTurnOnText
-	text_end
+	text "<PLAYER>は"
+	line "<PC>の　スイッチを　いれた！"
+	prompt
 
 PokecenterPCWhoseText:
-	text_far _PokecenterPCWhoseText
-	text_end
+	text "どこの　<PC>と　つないで"
+	line "つうしん　しますか？"
+	done
 
 PokecenterBillsPCText:
-	text_far _PokecenterBillsPCText
-	text_end
+	text "マサキの　<PC>と　つないだ！"
+
+	para "#の　あずかり　システムを　"
+	line "よびだした！"
+	prompt
 
 PokecenterPlayersPCText:
-	text_far _PokecenterPlayersPCText
-	text_end
+	text "じぶんの　<PC>と　つないだ！"
+
+	para "どうぐの　あずかり　システムを"
+	line "よびだした！"
+	prompt
 
 PokecenterOaksPCText:
-	text_far _PokecenterOaksPCText
-	text_end
+	text "オーキドの　<PC>と　つないだ！"
+
+	para "#　ずかん"
+	line "ひょうか　システムを　よびだした！"
+	prompt
 
 PokecenterPCOaksClosedText:
-	text_far _PokecenterPCOaksClosedText
-	text_end
+	text "<⋯>　<⋯>　<⋯>"
+	line "<⋯>　<⋯>　つうしん　しゅうりょう！"
+	done
