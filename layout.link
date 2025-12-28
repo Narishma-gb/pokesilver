@@ -53,10 +53,11 @@ ROMX $07
 ROMX $08
 	"Clock Reset"
 	"Tileset Data 3"
-	; "Catch Tutorial"
-	; "Egg Moves"
+	"Catch Tutorial"
+	"Egg Moves"
 ROMX $09
-	; "bank9"
+	"bank9"
+	; "Garbage 9"
 ROMX $0a
 	; "bankA"
 ROMX $0b
@@ -272,8 +273,7 @@ WRAM0
 	"Unused Map Buffer"
 	align 8
 	"Overworld Map"
-; 	align 4
-; 	"Video"
+	"Video"
 WRAMX 1
 	"WRAM 1"
 	org $d1b3

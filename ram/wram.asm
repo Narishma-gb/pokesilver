@@ -1483,7 +1483,7 @@ NEXTU
 wBillsPCTempListIndex:: db
 wBillsPCTempBoxCount:: db
 ENDU
-
+*/
 NEXTU
 ; prof. oak's pc
 wTempPokedexSeenCount:: db
@@ -1492,12 +1492,12 @@ wTempPokedexCaughtCount:: db
 NEXTU
 ; player's room pc
 UNION
-wDecoNameBuffer:: ds ITEM_NAME_LENGTH
+wDecoNameBuffer:: ds STRING_BUFFER_LENGTH
 NEXTU
 wNumOwnedDecoCategories:: db
 wOwnedDecoCategories:: ds 16
 ENDU
-
+/*
 NEXTU
 ; trade
 wCurTradePartyMon:: db

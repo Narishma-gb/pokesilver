@@ -232,7 +232,7 @@ TrainerCard_PrintTopHalfOfCard:
 	hlcoord 2, 4
 	ld de, .ID_No
 	call TrainerCardSetup_PlaceTilemapString
-	hlcoord 7, 2
+	hlcoord 6, 2
 	ld de, wPlayerName
 	call PlaceString
 	hlcoord 5, 4
@@ -241,8 +241,9 @@ TrainerCard_PrintTopHalfOfCard:
 	call PrintNum
 	hlcoord 7, 6
 	ld de, wMoney
-	lb bc, PRINTNUM_MONEY | 3, 6
+	lb bc, 3, 6
 	call PrintNum
+	ld [hl], '円'
 	hlcoord 1, 3
 	ld de, .HorizontalDivider
 	call TrainerCardSetup_PlaceTilemapString
@@ -267,9 +268,9 @@ TrainerCard_PrintTopHalfOfCard:
 	ret
 
 .Name_Money:
-	db   "NAME/"
+	db   "なまえ／"
 	next ""
-	next "MONEY@"
+	next "おこづかい@"
 
 .ID_No:
 	db $27, $28, -1 ; ID NO
@@ -281,6 +282,9 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 	hlcoord 2, 10
 	ld de, .Dex_PlayTime
 	call PlaceString
+	hlcoord 16, 10
+	ld de, .MonCounter
+	call PlaceString
 	hlcoord 12, 15
 	ld de, .Badges
 	call PlaceString
@@ -288,7 +292,7 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 	ld b, wEndPokedexCaught - wPokedexCaught
 	call CountSetBits
 	ld de, wNumSetBits
-	hlcoord 15, 10
+	hlcoord 13, 10
 	lb bc, 1, 3
 	call PrintNum
 	call TrainerCard_Page1_PrintGameTime
@@ -304,17 +308,17 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 	ret
 
 .Dex_PlayTime:
-	db   "#DEX"
-	next "PLAY TIME@"
+	db   "#ずかん"
+	next "プレイじかん@"
 
-.Unused: ; unreferenced
-	db "@"
+.MonCounter:
+	db "ひき@"
 
 .Badges:
-	db "BADGES▶@"
+	db "バッジがめん▶@"
 
 .StatusTilemap:
-	db $29, $2a, $2b, $2c, $2d, -1
+	db $29, $2a, $2b, $2c, $2d, -1 ; "ステータス"
 
 TrainerCard_Page2_3_InitObjectsAndStrings:
 	hlcoord 2, 8
@@ -347,7 +351,7 @@ endr
 	ret
 
 .BadgesTilemap:
-	db $79, $7a, $7b, $7c, $7d, -1 ; "BADGES"
+	db $79, $7a, $7b, $7c, $7d, -1 ; "リーグバッジ"
 
 TrainerCardSetup_PlaceTilemapString:
 .loop
@@ -370,7 +374,7 @@ TrainerCard_InitBorder:
 	ld [hli], a
 
 	ld e, SCREEN_WIDTH - 3
-	ld a, ' '
+	ld a, '　'
 .loop2
 	ld [hli], a
 	dec e
@@ -386,7 +390,7 @@ TrainerCard_InitBorder:
 	ld [hli], a
 
 	ld e, SCREEN_WIDTH - 2
-	ld a, ' '
+	ld a, '　'
 .loop4
 	ld [hli], a
 	dec e
@@ -404,7 +408,7 @@ TrainerCard_InitBorder:
 	ld [hli], a
 
 	ld e, SCREEN_WIDTH - 3
-	ld a, ' '
+	ld a, '　'
 .loop5
 	ld [hli], a
 	dec e
@@ -466,7 +470,7 @@ TrainerCard_Page1_PrintGameTime:
 	ret nz
 	hlcoord 15, 12
 	ld a, [hl]
-	xor ' ' ^ $2e ; alternate between space and small colon ($2e) tiles
+	xor '　' ^ $2e ; alternate between space and small colon ($2e) tiles
 	ld [hl], a
 	ret
 

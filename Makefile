@@ -12,13 +12,13 @@ rom_obj := \
 	garbage.o \
 	home.o \
 	ram.o \
+	data/pokemon/egg_moves.o \
 	gfx/sprites.o \
 	gfx/tilesets.o \
 	wip.o
 # 	main.o \
 # 	data/text/common.o \
 # 	data/maps/map_data.o \
-# 	data/pokemon/egg_moves.o \
 # 	data/pokemon/evos_attacks.o \
 # 	engine/movie/credits.o \
 # 	engine/overworld/events.o \

@@ -60,9 +60,9 @@ ScrollingMenuJoyAction:
 	ldh a, [hJoyPressed]
 	and PAD_BUTTONS
 	or b
-	bit A_BUTTON_F, a
+	bit B_PAD_A, a
 	jp nz, .a_button
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jp nz, .b_button
 	bit B_PAD_SELECT, a
 	jp nz, .select
@@ -201,7 +201,7 @@ ScrollingMenu_ClearLeftColumn:
 	ld de, 2 * SCREEN_WIDTH
 	ld a, [wMenuData_ScrollingMenuHeight]
 .loop
-	ld [hl], ' '
+	ld [hl], '　'
 	add hl, de
 	dec a
 	jr nz, .loop
@@ -406,7 +406,7 @@ ScrollingMenu_UpdateDisplay:
 	ret
 
 .CancelString
-	db "CANCEL@"
+	db "やめる@"
 
 .call_function
 	ld d, h

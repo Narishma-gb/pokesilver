@@ -67,7 +67,7 @@ Rate:
 .UpdateRatingBuffer:
 	push hl
 	ld a, '@'
-	ld bc, ITEM_NAME_LENGTH
+	ld bc, STRING_BUFFER_LENGTH
 	call ByteFill
 	pop hl
 	lb bc, PRINTNUM_LEFTALIGN | 1, 3
@@ -101,93 +101,134 @@ endr
 INCLUDE "data/events/pokedex_ratings.asm"
 
 OakPCText1:
-	text_far _OakPCText1
-	text_end
+	text "げんざいの　#ずかんを"
+	line "ひょうか　して　もらいますか？"
+	done
 
 OakPCText2:
-	text_far _OakPCText2
-	text_end
+	text "#ずかんの"
+	line "げんざいの　かんせいど<⋯>"
+	prompt
 
 OakPCText3:
-	text_far _OakPCText3
-	text_end
+	text "みつけた　#　　@"
+	text_ram wStringBuffer3
+	text_start
+	line "つかまえた　#　@"
+	text_ram wStringBuffer4
+	text "！"
+
+	para "オーキドはかせの　ひょうか<⋯>"
+	line "<⋯>　<⋯>　<⋯>"
+	done
 
 OakRating01:
-	text_far _OakRating01
-	text_end
+	text "あちこちの　くさむらに　はいって"
+	line "#を　つかまえるのじゃ！"
+	done
 
 OakRating02:
-	text_far _OakRating02
-	text_end
+	text "うむ！　モンスターボールの"
+	line "つかいかたは　わかっとるようじゃな！"
+	done
 
 OakRating03:
-	text_far _OakRating03
-	text_end
+	text "どうやら　なれてきた　ようじゃな"
+	line "じゃが　さきは　まだまだ　ながいぞ！"
+	done
 
 OakRating04:
-	text_far _OakRating04
-	text_end
+	text "#ずかんに　しては　まだ"
+	line "ボリュームが　たりん！　いろいろな"
+	cont "しゅるいの　#を　とるのじゃ！"
+	done
 
 OakRating05:
-	text_far _OakRating05
-	text_end
+	text "ふむ　がんばっておるな"
+	line "それなりに　#ずかん"
+	cont "らしく　なってきておるよ！"
+	done
 
 OakRating06:
-	text_far _OakRating06
-	text_end
+	text "そだてて　しんかするもの"
+	line "いしの　えいきょうで　しんかするもの"
+	cont "いろんな　#が　いるぞ！"
+	done
 
 OakRating07:
-	text_far _OakRating07
-	text_end
+	text "つりざおは　てに　いれたか？"
+	line "あちこちで　つりを　すれば"
+	cont "もっと　たくさん　あつまるぞ！"
+	done
 
 OakRating08:
-	text_far _OakRating08
-	text_end
+	text "エクセレントじゃ！"
+	line "きみは　ものを　あつめるのが"
+	cont "すき　なんじゃろ？"
+	done
 
 OakRating09:
-	text_far _OakRating09
-	text_end
+	text "きまった　じかんたいにしか"
+	line "うごかない　#も　いるらしいぞ"
+	done
 
 OakRating10:
-	text_far _OakRating10
-	text_end
+	text "ページも　ふえてきた　ようじゃな！"
+	line "その　ちょうしで　がんばってくれい！"
+	done
 
 OakRating11:
-	text_far _OakRating11
-	text_end
+	text "ほうっ！　かんしん　じゃな！"
+	line "つかまえる　だけでなく"
+	cont "しんかも　させておるな！"
+	done
 
 OakRating12:
-	text_far _OakRating12
-	text_end
+	text "ガンテツさんには　あったか？"
+	line "ボールを　つくってもらうと"
+	cont "あつめるのも　はかどると　おもうぞ！"
+	done
 
 OakRating13:
-	text_far _OakRating13
-	text_end
+	text "おっ！　きがつけば　ぜんかい"
+	line "ちょうさ　したときよりも"
+	cont "たくさんの　#が　みつかったな"
+	done
 
 OakRating14:
-	text_far _OakRating14
-	text_end
+	text "ともだちと　こうかん　しているかな？"
+	line "ひとりでは　たいへん　だからな"
+	done
 
 OakRating15:
-	text_far _OakRating15
-	text_end
+	text "なんと！　２００しゅるいを　こえた！"
+	line "これは　できばえの　いい　ずかんに"
+	cont "なりそうじゃ！　きたい　しとるよ！"
+	done
 
 OakRating16:
-	text_far _OakRating16
-	text_end
+	text "こんなに　みつかるとは<⋯>"
+	line "こんかいの　#けんきゅうは"
+	cont "きみの　おかげじゃ！"
+	done
 
 OakRating17:
-	text_far _OakRating17
-	text_end
+	text "すばらしい！　いうことなしじゃ！"
+	line "きみ　#はかせに　なれるぞ！"
+	done
 
 OakRating18:
-	text_far _OakRating18
-	text_end
+	text "ここまで　ずかんが　できたら"
+	line "もはや　プロフェッショナル　じゃ！"
+	done
 
 OakRating19:
-	text_far _OakRating19
-	text_end
+	text "おおっ　ゆめにまで　みた"
+	line "パーフェクトな　ずかんの"
+	cont "かんせいじゃ！　<⋯>　おめでとう！"
+	done
 
 OakPCText4:
-	text_far _OakPCText4
-	text_end
+	text "<⋯>　オーキドの　<PC>との"
+	line "せつぞくを　おわった！"
+	done

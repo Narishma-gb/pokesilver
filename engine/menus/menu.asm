@@ -20,7 +20,7 @@ _2DMenu_::
 	bit STATICMENU_DISABLE_B_F, a
 	jr nz, .skip2
 	call GetMenuJoypad
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jr nz, .quit2
 
 .skip2
@@ -250,9 +250,9 @@ Menu_WasButtonPressed:
 
 _2DMenuInterpretJoypad:
 	call GetMenuJoypad
-	bit A_BUTTON_F, a
+	bit B_PAD_A, a
 	jp nz, .a_b_start_select
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jp nz, .a_b_start_select
 	bit B_PAD_SELECT, a
 	jp nz, .a_b_start_select
@@ -606,8 +606,9 @@ Error_Cant_ExitMenu:
 	jr .infinite_loop
 
 .WindowPoppingErrorText:
-	text_far _WindowPoppingErrorText
-	text_end
+	text "ポップできる　ウィンドウが"
+	next "ありません！"
+	done
 
 _InitVerticalMenuCursor::
 	ld a, [wMenuDataFlags]

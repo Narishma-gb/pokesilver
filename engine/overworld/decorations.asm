@@ -37,7 +37,7 @@ _PlayerDecorationMenu:
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 5, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+	menu_coords 8, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
 	dw .MenuData
 	db 1 ; default option
 
@@ -60,14 +60,14 @@ _PlayerDecorationMenu:
 	dw DecoExitMenu,     .exit
 	assert_table_length NUM_DECO_CATEGORIES + 1
 
-.bed:      db "BED@"
-.carpet:   db "CARPET@"
-.plant:    db "PLANT@"
-.poster:   db "POSTER@"
-.game:     db "GAME CONSOLE@"
-.ornament: db "ORNAMENT@"
-.big_doll: db "BIG DOLL@"
-.exit:     db "EXIT@"
+.bed:      db "ベッド@"
+.carpet:   db "じゅうたん@"
+.plant:    db "はちうえ@"
+.poster:   db "ポスター@"
+.game:     db "ゲームき@"
+.ornament: db "おきもの@"
+.big_doll: db "おっきなぬいぐるみ@"
+.exit:     db "おわる@"
 
 .FindCategoriesWithOwnedDecos:
 	xor a
@@ -78,7 +78,7 @@ _PlayerDecorationMenu:
 	call .AppendToStringBuffer2
 	ld hl, wStringBuffer2
 	ld de, wDecoNameBuffer
-	ld bc, ITEM_NAME_LENGTH
+	ld bc, STRING_BUFFER_LENGTH
 	call CopyBytes
 	ret
 
@@ -86,7 +86,7 @@ _PlayerDecorationMenu:
 	ld hl, wStringBuffer2
 	xor a
 	ld [hli], a
-	ld bc, ITEM_NAME_LENGTH - 1
+	ld bc, STRING_BUFFER_LENGTH - 1
 	ld a, -1
 	call ByteFill
 	ret
@@ -390,12 +390,12 @@ PopulateDecoCategoryMenu:
 	ret
 
 .NothingToChooseText:
-	text_far _NothingToChooseText
-	text_end
+	text "えらべるものが　ありません！"
+	prompt
 
 .NonscrollingMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+	menu_coords 0, 0, 16, SCREEN_HEIGHT - 1
 	dw .NonscrollingMenuData
 	db 1 ; default option
 
@@ -408,7 +408,7 @@ PopulateDecoCategoryMenu:
 
 .ScrollingMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 1, 1, SCREEN_WIDTH - 2, SCREEN_HEIGHT - 2
+	menu_coords 1, 1, 15, SCREEN_HEIGHT - 2
 	dw .ScrollingMenuData
 	db 1 ; default option
 
@@ -808,8 +808,8 @@ DecoAction_SetItUp_Ornament:
 	ret
 
 WhichSidePutOnText:
-	text_far _WhichSidePutOnText
-	text_end
+	text "どちらがわに　はいちしますか？"
+	done
 
 DecoAction_PutItAway_Ornament:
 	ld a, [wSelectedDecoration]
@@ -833,8 +833,8 @@ DecoAction_PutItAway_Ornament:
 	ret
 
 WhichSidePutAwayText:
-	text_far _WhichSidePutAwayText
-	text_end
+	text "どちらがわを　かたづけますか？"
+	done
 
 DecoAction_AskWhichSide:
 	call MenuTextbox
@@ -874,36 +874,42 @@ QueryWhichSide:
 
 DecoSideMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 12, 7
+	menu_coords 0, 0, 10, 7
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 3 ; items
-	db "RIGHT SIDE@"
-	db "LEFT SIDE@"
-	db "CANCEL@"
+	db "みぎがわ@"
+	db "ひだりがわ@"
+	db "やめる@"
 
 PutAwayTheDecoText:
-	text_far _PutAwayTheDecoText
-	text_end
+	text_ram wStringBuffer3
+	text "を　かたづけた"
+	prompt
 
 NothingToPutAwayText:
-	text_far _NothingToPutAwayText
-	text_end
+	text "かたづけるものが　ありません"
+	prompt
 
 SetUpTheDecoText:
-	text_far _SetUpTheDecoText
-	text_end
+	text_ram wStringBuffer3
+	text "を　おきました"
+	prompt
 
 PutAwayAndSetUpText:
-	text_far _PutAwayAndSetUpText
-	text_end
+	text_ram wStringBuffer3
+	text "を　かたづけて"
+	line "@"
+	text_ram wStringBuffer4
+	text "を　おきました"
+	prompt
 
 AlreadySetUpText:
-	text_far _AlreadySetUpText
-	text_end
+	text "すでに　おいてあります"
+	prompt
 
 GetDecorationName_c_de:
 	ld a, c
@@ -1011,29 +1017,29 @@ DecorationDesc_TownMapPoster:
 	end
 
 .LookTownMapText:
-	text_far _LookTownMapText
-	text_end
+	text "タウンマップが　ある！"
+	done
 
 DecorationDesc_PikachuPoster:
 	jumptext .LookPikachuPosterText
 
 .LookPikachuPosterText:
-	text_far _LookPikachuPosterText
-	text_end
+	text "かわいいピカチュウの　ポスターだ"
+	done
 
 DecorationDesc_ClefairyPoster:
 	jumptext .LookClefairyPosterText
 
 .LookClefairyPosterText:
-	text_far _LookClefairyPosterText
-	text_end
+	text "かわいいピッピの　ポスターだ"
+	done
 
 DecorationDesc_JigglypuffPoster:
 	jumptext .LookJigglypuffPosterText
 
 .LookJigglypuffPosterText:
-	text_far _LookJigglypuffPosterText
-	text_end
+	text "かわいいプリンの　ポスターだ"
+	done
 
 DecorationDesc_NullPoster:
 	end
@@ -1062,8 +1068,9 @@ DecorationDesc_OrnamentOrConsole:
 	jumptext .LookAdorableDecoText
 
 .LookAdorableDecoText:
-	text_far _LookAdorableDecoText
-	text_end
+	text_ram wStringBuffer3
+	text "が　ある！"
+	done
 
 DecorationDesc_GiantOrnament:
 	ld b, BANK(.BigDollScript)
@@ -1074,8 +1081,9 @@ DecorationDesc_GiantOrnament:
 	jumptext .LookGiantDecoText
 
 .LookGiantDecoText:
-	text_far _LookGiantDecoText
-	text_end
+	text "おっきな　ぬいぐるみが　ある！"
+	line "ふかふかで　きもちよさそう<⋯>"
+	done
 
 ToggleMaptileDecorations:
 	; tile coordinates work the same way as for changeblock

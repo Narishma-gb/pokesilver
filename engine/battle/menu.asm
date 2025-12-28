@@ -31,15 +31,15 @@ BattleMenuHeader:
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_DISABLE_B ; flags
 	dn 2, 2 ; rows, columns
-	db 6 ; spacing
+	db 5 ; spacing
 	dba .Text
 	dbw BANK(@), NULL
 
 .Text:
-	db "FIGHT@"
-	db "<PK><MN>@"
-	db "PACK@"
-	db "RUN@"
+	db "たたかう@"
+	db "リュック@"
+	db "#@"
+	db "にげる@"
 
 SafariBattleMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -55,10 +55,10 @@ SafariBattleMenuHeader:
 	dba .PrintSafariBallsRemaining
 
 .Text:
-	db "サファりボール×　　@" ; "SAFARI BALL×  @"
-	db "エサをなげる@" ; "THROW BAIT"
-	db "いしをなげる@" ; "THROW ROCK"
-	db "にげる@" ; "RUN"
+	db "サファリボール×　　@"
+	db "エサをなげる@"
+	db "いしをなげる@"
+	db "にげる@"
 
 .PrintSafariBallsRemaining:
 	hlcoord 17, 13
@@ -76,18 +76,18 @@ ContestBattleMenuHeader:
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_DISABLE_B ; flags
 	dn 2, 2 ; rows, columns
-	db 12 ; spacing
+	db 6 ; spacing
 	dba .Text
 	dba .PrintParkBallsRemaining
 
 .Text:
-	db "FIGHT@"
-	db "<PK><MN>@"
-	db "PARKBALL×  @"
-	db "RUN@"
+	db "たたかう@"
+	db "パークボール×　　@"
+	db "#@"
+	db "にげる@"
 
 .PrintParkBallsRemaining:
-	hlcoord 13, 16
+	hlcoord 17, 14
 	ld de, wParkBallsRemaining
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
 	call PrintNum

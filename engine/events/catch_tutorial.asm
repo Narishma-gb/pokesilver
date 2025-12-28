@@ -75,7 +75,78 @@ CatchTutorial::
 	ret
 
 .Dude:
-	db "DUDE@"
+	db "おにいさん@"
 
 .AutoInput:
-	db NO_INPUT, $ff ; end
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $c0
+	db PAD_A,     $00
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db PAD_RIGHT, $00
+	db NO_INPUT,  $ff
+	db PAD_A,     $00
+	db NO_INPUT,  $0a
+	db PAD_RIGHT, $00
+	db NO_INPUT,  $0a
+	db PAD_A,     $00
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $a0
+	db PAD_A,     $00
+	db -1 ; end

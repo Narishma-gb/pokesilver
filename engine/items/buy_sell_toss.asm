@@ -44,9 +44,9 @@ Toss_Sell_Loop:
 
 BuySellToss_InterpretJoypad:
 	call JoyTextDelay_ForcehJoyDown ; get joypad
-	bit B_BUTTON_F, c
+	bit B_PAD_B, c
 	jr nz, .b
-	bit A_BUTTON_F, c
+	bit B_PAD_A, c
 	jr nz, .a
 	bit B_PAD_DOWN, c
 	jr nz, .down
@@ -195,8 +195,9 @@ BuySell_DisplaySubtotal:
 	pop hl
 	inc hl
 	ld de, hMoneyTemp
-	lb bc, PRINTNUM_MONEY | 3, 6
+	lb bc, 4, 6
 	call PrintNum
+	ld [hl], '円'
 	call WaitBGMap
 	ret
 

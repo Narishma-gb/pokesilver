@@ -108,31 +108,31 @@ SECTION "Clock Reset", ROMX
 INCLUDE "engine/rtc/restart_clock.asm"
 
 
-;SECTION "Catch Tutorial", ROMX
+SECTION "Catch Tutorial", ROMX
 
-;INCLUDE "engine/events/catch_tutorial.asm"
+INCLUDE "engine/events/catch_tutorial.asm"
 
 
-;SECTION "bank9", ROMX
+SECTION "bank9", ROMX
 
-;INCLUDE "data/text_buffers.asm"
-;INCLUDE "engine/menus/menu.asm"
-;INCLUDE "engine/items/update_item_description.asm"
-;INCLUDE "engine/events/pokepic.asm"
-;INCLUDE "engine/overworld/map_objects_2.asm"
-;INCLUDE "engine/menus/scrolling_menu.asm"
-;INCLUDE "engine/items/switch_items.asm"
-;INCLUDE "engine/menus/menu_2.asm"
-;INCLUDE "engine/pokemon/mon_submenu.asm"
-;INCLUDE "engine/battle/menu.asm"
-;INCLUDE "engine/items/buy_sell_toss.asm"
-;INCLUDE "engine/menus/trainer_card.asm"
-;INCLUDE "engine/events/prof_oaks_pc.asm"
-;INCLUDE "engine/overworld/decorations.asm"
-;INCLUDE "engine/battle/read_trainer_dvs.asm"
-;INCLUDE "engine/battle/returntobattle_useball.asm"
-;INCLUDE "engine/battle/consume_held_item.asm"
-;INCLUDE "data/moves/effects.asm"
+INCLUDE "data/text_buffers.asm"
+INCLUDE "engine/menus/menu.asm"
+INCLUDE "engine/items/update_item_description.asm"
+INCLUDE "engine/events/pokepic.asm"
+INCLUDE "engine/overworld/map_objects_2.asm"
+INCLUDE "engine/menus/scrolling_menu.asm"
+INCLUDE "engine/items/switch_items.asm"
+INCLUDE "engine/menus/menu_2.asm"
+INCLUDE "engine/pokemon/mon_submenu.asm"
+INCLUDE "engine/battle/menu.asm"
+INCLUDE "engine/items/buy_sell_toss.asm"
+INCLUDE "engine/menus/trainer_card.asm"
+INCLUDE "engine/events/prof_oaks_pc.asm"
+INCLUDE "engine/overworld/decorations.asm"
+INCLUDE "engine/battle/read_trainer_dvs.asm"
+INCLUDE "engine/battle/returntobattle_useball.asm"
+INCLUDE "engine/battle/consume_held_item.asm"
+INCLUDE "data/moves/effects.asm"
 
 
 ;SECTION "bankA", ROMX

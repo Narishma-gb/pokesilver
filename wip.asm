@@ -89,59 +89,6 @@ INCLUDE "main.asm"
 	set_gs_diff 0
 
 
-SECTION "Egg Moves", ROMX, BANK[8]
-SECTION "rom8", ROMX, BANK[8]
-; ROM $08 : $20000 - $23FFF
-	set_bank_offset 8, $79ec
-
-	dr EggMovePointers, $7b07
-
-	dr_end
-
-SECTION "rom9", ROMX, BANK[9]
-; ROM $09 : $24000 - $27FFF
-	set_bank_offset 9
-
-	dr StringBufferPointers, $4000
-	dr _2DMenu_, $400e
-	dr _StaticMenuJoypad, $4136
-	dr _ScrollingMenuJoypad, $4139
-	dr _PushWindow, $42a0
-	dr _ExitMenu, $4307
-	dr _InitVerticalMenuCursor, $43a6
-	dr UpdateItemDescription, $43fc
-	dr LoadObjectMasks, $4488
-	dr _InitScrollingMenu, $44e8
-	dr _ScrollingMenu, $4504
-	dr ScrollingMenu_ClearLeftColumn, $463f
-	dr SwitchItemsInBag, $4842
-	dr PlaceMenuItemName, $49ea
-	dr PlaceMenuItemQuantity, $49f9
-	dr PlaceMoneyTopRight, $4a1a
-	dr PlaceMoneyBottomLeft, $4a22
-	dr PlaceMoneyAtTopLeftOfTextbox, $4a2a
-	dr DisplayCoinCaseBalance, $4a5a
-	dr DisplayMoneyAndCoinBalance, $4a83
-	dr StartMenu_DrawBugContestStatusBox, $4b1e
-	dr StartMenu_PrintBugContestStatus, $4b29
-	dr Kurt_SelectApricorn, $4ba1
-	dr MonSubmenu, $4c96
-	dr SelectQuantityToToss, $4f26
-	dr SelectQuantityToBuy, $4f30
-	dr SelectQuantityToSell, $4f48
-	dr TrainerCard, $5069
-	dr ProfOaksPC, $67c0
-	dr ProfOaksPCBoot, $67db
-	dr InitDecorations, $6c42
-	dr _PlayerDecorationMenu, $6c4d
-	dr SetSpecificDecorationFlag, $73e8
-	dr ToggleMaptileDecorations, $751c
-	dr ToggleDecorationsVisibility, $7574
-	dr GetTrainerDVs, $75cf
-	dr _ReturnToBattle_UseBall, $7665
-
-	dr_end
-
 SECTION "rom10", ROMX, BANK[10]
 ; ROM $0a : $28000 - $2BFFF
 	set_bank_offset 10
@@ -185,6 +132,7 @@ SECTION "rom11", ROMX, BANK[11]
 ; ROM $0b : $2C000 - $2FFFF
 	set_bank_offset 11
 
+	dr PrintItemDescription, $4000
 	dr TrainerClassNames, $52d6
 	dr MoveDeletion, $55e2
 	dr TMHMPocket, $589e
@@ -246,12 +194,14 @@ SECTION "rom15", ROMX, BANK[15]
 	dr MoveSelectionScreen, $6303
 	dr CheckEnemyLockedIn, $6708
 	dr LoadEnemyMon, $676b
+	dr _LoadBattleFontsHPBar, $6bf8
 	dr _BattleRandom, $6c31
 	dr FillInExpBar, $720e
 	dr GetBattleMonBackpic, $72bb
 	dr GetEnemyMonFrontpic, $72fa
 	dr StartBattle, $733f
 	dr _DisplayLinkRecord, $75de
+	dr GetTrainerBackpic, $79b8
 
 	dr_end
 
@@ -468,6 +418,7 @@ DummyPredef36::
 	drd ClearSpriteAnims2, $657a
 	drd LoadOverworldMonIcon, $6591
 	drd LoadMenuMonIcon, $65a5
+	drd FreezeMonIcons, $6701
 	drd UnfreezeMonIcons, $6728
 	drd HoldSwitchmonIcon, $6743
 
