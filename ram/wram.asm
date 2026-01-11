@@ -182,14 +182,14 @@ SECTION UNION "Miscellaneous", WRAM0
 wTempTilemap::
 	ds SCREEN_AREA
 
-/*
+
 SECTION UNION "Miscellaneous", WRAM0
 
 ; link patch lists
 wPlayerPatchLists:: ds SERIAL_PATCH_LIST_LENGTH
 wOTPatchLists:: ds SERIAL_PATCH_LIST_LENGTH
 
-*/
+
 SECTION UNION "Miscellaneous", WRAM0
 
 ; This union spans 200 bytes.
@@ -485,7 +485,7 @@ SECTION UNION "Overworld Map", WRAM0
 wUnusedPikachuFrameset:: db
 	ds 18
 wUnusedJigglypuffNoteXCoord:: db
-
+*/
 
 SECTION UNION "Overworld Map", WRAM0
 
@@ -519,7 +519,7 @@ endr
 wLinkPlayerPartyMonNicknames::
 ; wLinkPlayerPartyMon1Nickname - wLinkPlayerPartyMon6Nickname
 for n, 1, PARTY_LENGTH + 1
-wLinkPlayerPartyMon{d:n}Nickname:: ds MON_NAME_LENGTH
+wLinkPlayerPartyMon{d:n}Nickname:: ds NAME_LENGTH
 endr
 
 NEXTU
@@ -539,7 +539,7 @@ endr
 wTimeCapsulePartyMonNicknames::
 ; wTimeCapsulePartyMon1Nickname - wTimeCapsulePartyMon6Nickname
 for n, 1, PARTY_LENGTH + 1
-wTimeCapsulePartyMon{d:n}Nickname:: ds MON_NAME_LENGTH
+wTimeCapsulePartyMon{d:n}Nickname:: ds NAME_LENGTH
 endr
 
 ENDU
@@ -561,18 +561,16 @@ endr
 SECTION UNION "Overworld Map", WRAM0
 
 ; link mail data
-	ds 500
+	ds 700
 wLinkPlayerMail::
 wLinkPlayerMailPreamble:: ds SERIAL_MAIL_PREAMBLE_LENGTH
-wLinkPlayerMailMessages:: ds (MAIL_MSG_LENGTH + 1) * PARTY_LENGTH
-wLinkPlayerMailMetadata:: ds (MAIL_STRUCT_LENGTH - (MAIL_MSG_LENGTH + 1)) * PARTY_LENGTH
-wLinkPlayerMailPatchSet:: ds 100 + SERIAL_PATCH_PREAMBLE_LENGTH
+wLinkPlayerMailMessages:: ds MAIL_STRUCT_LENGTH * PARTY_LENGTH
+wLinkPlayerMailPatchSet:: ds 33
 wLinkPlayerMailEnd::
 	ds 10
 wLinkOTMail::
-wLinkOTMailMessages:: ds (MAIL_MSG_LENGTH + 1) * PARTY_LENGTH
-wLinkOTMailMetadata:: ds (MAIL_STRUCT_LENGTH - (MAIL_MSG_LENGTH + 1)) * PARTY_LENGTH
-wLinkOTMailPatchSet:: ds 100 + SERIAL_PATCH_PREAMBLE_LENGTH
+wLinkOTMailMessages:: ds MAIL_STRUCT_LENGTH * PARTY_LENGTH
+wLinkOTMailPatchSet:: ds 33
 wLinkOTMailPadding:: ds SERIAL_MAIL_PREAMBLE_LENGTH
 wLinkOTMailEnd::
 	ds 10
@@ -581,9 +579,10 @@ wLinkOTMailEnd::
 SECTION UNION "Overworld Map", WRAM0
 
 ; received link mail data
-	ds 500
+	ds 700
 wLinkReceivedMail:: ds MAIL_STRUCT_LENGTH * PARTY_LENGTH
 wLinkReceivedMailEnd:: db
+	ds 10
 
 
 SECTION UNION "Overworld Map", WRAM0
@@ -592,9 +591,10 @@ SECTION UNION "Overworld Map", WRAM0
 wMysteryGiftStaging:: ds 80
 
 wMysteryGiftTrainer:: ds 1 + (1 + 1 + NUM_MOVES) * PARTY_LENGTH + 1
+	ds 5
 wMysteryGiftTrainerEnd::
 
-	ds 138
+	ds 133
 
 wMysteryGiftPartnerData::
 wMysteryGiftPartnerGameVersion:: db
@@ -608,7 +608,7 @@ wMysteryGiftPartnerBackupItem:: db
 	ds 1
 wMysteryGiftPartnerDataEnd::
 
-	ds 60
+	ds 65
 
 wMysteryGiftPlayerData::
 wMysteryGiftPlayerGameVersion:: db
@@ -622,7 +622,7 @@ wMysteryGiftPlayerBackupItem:: db
 	ds 1
 wMysteryGiftPlayerDataEnd::
 
-*/
+
 SECTION UNION "Overworld Map", WRAM0
 
 	align 8
@@ -1497,13 +1497,13 @@ NEXTU
 wNumOwnedDecoCategories:: db
 wOwnedDecoCategories:: ds 16
 ENDU
-/*
+
 NEXTU
 ; trade
 wCurTradePartyMon:: db
 wCurOTTradePartyMon:: db
-wBufferTrademonNickname:: ds MON_NAME_LENGTH
-
+wBufferTrademonNickname:: ds NAME_LENGTH
+/*
 NEXTU
 ; link battle record data
 wLinkBattleRecordBuffer::
@@ -2616,8 +2616,8 @@ wCurMapDataEnd::
 
 
 SECTION "Party", WRAMX
-/*
-wPokemonData::*/
+
+wPokemonData::
 wPartyCount::   db
 wPartySpecies:: ds PARTY_LENGTH
 wPartyEnd::     db ; older code doesn't check wPartyCount
@@ -2710,18 +2710,18 @@ wPokedexShowPointerBank:: db
 
 NEXTU
 wUnusedEggHatchFlag:: db
-/*
+
 NEXTU
 ; enemy party
 wOTPartyData::
 wOTPlayerName:: ds NAME_LENGTH
 wOTPlayerID:: dw
-	ds 8
+	ds 13
 wOTPartyCount::   db
 wOTPartySpecies:: ds PARTY_LENGTH
-wOTPartyEnd::     db ; older code doesn't check PartyCount*/
+wOTPartyEnd::     db ; older code doesn't check PartyCount
 ENDU
-/*
+
 UNION
 ; ot party mons
 wOTPartyMons::
@@ -2758,7 +2758,7 @@ ENDU
 wPokemonDataEnd::
 wGameDataEnd::
 
-
+/*
 SECTION "Stack", WRAMX
 
 	ds 2

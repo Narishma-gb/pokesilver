@@ -204,7 +204,6 @@ TryWildEncounter::
 .no_battle
 	xor a ; BATTLETYPE_NORMAL
 	ld [wTempWildMonSpecies], a
-	ld [wBattleType], a
 	ld a, 1
 	and a
 	ret
@@ -841,8 +840,16 @@ RandomUnseenWildMon:
 	ret
 
 .JustSawSomeRareMonText:
-	text_far _JustSawSomeRareMonText
-	text_end
+	text "いま　@"
+	text_ram wStringBuffer2
+	text "で"
+	line "めずらしく　@"
+	text_ram wStringBuffer1
+	text "を　みたよ！"
+
+	para "また　めずらしい　#を"
+	line "みかけたら　でんわ　するよ！"
+	prompt
 
 RandomPhoneWildMon:
 	farcall GetCallerLocation
@@ -880,7 +887,7 @@ RandomPhoneWildMon:
 	call GetPokemonName
 	ld hl, wStringBuffer1
 	ld de, wStringBuffer4
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	jp CopyBytes
 
 RandomPhoneMon:
@@ -963,7 +970,7 @@ RandomPhoneMon:
 	call GetPokemonName
 	ld hl, wStringBuffer1
 	ld de, wStringBuffer4
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	jp CopyBytes
 
 INCLUDE "data/wild/johto_grass.asm"

@@ -165,7 +165,7 @@ RunTradeAnimScript:
 .NotCGB:
 	hlbgcoord 0, 0
 	ld bc, STARTOF(VRAM) + SIZEOF(VRAM) - vBGMap0
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	ld hl, TradeGameBoyLZ
 	ld de, vTiles2 tile $31
@@ -453,7 +453,7 @@ TradeAnim_TubeToPlayer8:
 	callfar ClearSpriteAnims
 	hlbgcoord 0, 0
 	ld bc, STARTOF(VRAM) + SIZEOF(VRAM) - vBGMap0
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	xor a
 	ldh [hSCX], a
@@ -579,21 +579,10 @@ TradeAnim_PlaceTrademonStatsOnTubeAnim:
 	ld bc, SCREEN_WIDTH
 	ld a, '─'
 	call ByteFill
-	hlcoord 0, 1
+	hlcoord 1, 2
 	ld de, wLinkPlayer1Name
 	call PlaceString
-	ld hl, wLinkPlayer2Name
-	ld de, 0
-.find_name_end_loop
-	ld a, [hli]
-	cp '@'
-	jr z, .done
-	dec de
-	jr .find_name_end_loop
-
-.done
-	hlcoord 0, 4
-	add hl, de
+	hlcoord 14, 2
 	ld de, wLinkPlayer2Name
 	call PlaceString
 	hlcoord 7, 2
@@ -659,9 +648,9 @@ TradeAnim_ExitLinkTube:
 	ret
 
 TradeAnim_SetupGivemonScroll:
-	ld a, $8f
+	ld a, $87
 	ldh [hWX], a
-	ld a, $88
+	ld a, $80
 	ldh [hSCX], a
 	ld a, $50
 	ldh [hWY], a
@@ -880,40 +869,40 @@ TrademonStats_MonTemplate:
 	call TradeAnim_BlankTilemap
 	ld a, HIGH(vBGMap1)
 	ldh [hBGMapAddress + 1], a
-	hlcoord 3, 0
-	ld b, $6
-	ld c, $d
+	hlcoord 5, 0
+	ld b, 6
+	ld c, 9
 	call Textbox
-	hlcoord 4, 0
+	hlcoord 6, 0
 	ld de, .OTMonData
 	call PlaceString
 	ret
 
 .OTMonData:
-	db   "─── №."
+	db   "─　№．"
 	next ""
-	next "OT/"
-	next "<ID>№.@"
+	next "おや／"
+	next "<ID>№．@"
 
 TrademonStats_Egg:
 	call WaitTop
 	call TradeAnim_BlankTilemap
 	ld a, HIGH(vBGMap1)
 	ldh [hBGMapAddress + 1], a
-	hlcoord 3, 0
+	hlcoord 5, 0
 	ld b, 6
-	ld c, 13
+	ld c, 9
 	call Textbox
-	hlcoord 4, 2
+	hlcoord 6, 2
 	ld de, .EggData
 	call PlaceString
 	call TrademonStats_WaitBGMap
 	ret
 
 .EggData:
-	db   "EGG"
-	next "OT/?????"
-	next "<ID>№.?????@"
+	db   "タマゴ"
+	next "おや／？？？？？"
+	next "<ID>№．？？？？？@"
 
 TrademonStats_WaitBGMap:
 	call WaitBGMap
@@ -929,17 +918,17 @@ TrademonStats_PrintSpeciesNumber:
 	ret
 
 TrademonStats_PrintSpeciesName:
-	hlcoord 4, 2
+	hlcoord 6, 2
 	call PlaceString
 	ret
 
 TrademonStats_PrintOTName:
-	hlcoord 7, 4
+	hlcoord 9, 4
 	call PlaceString
 	ret
 
 TrademonStats_PrintTrademonID:
-	hlcoord 7, 6
+	hlcoord 9, 6
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
 	call PrintNum
 	ret
@@ -1125,12 +1114,16 @@ TradeAnim_SentToOTText:
 	ret
 
 .MonWasSentToText:
-	text_far _MonWasSentToText
-	text_end
+	text_ram wPlayerTrademonSpeciesName
+	text "は　ぶじ"
+	line "@"
+	text_ram wOTTrademonSenderName
+	text "に　ひきとられました"
+	done
 
 .MonNameSentToText:
-	text_far _MonNameSentToText
-	text_end
+	text_start
+	done
 
 TradeAnim_OTBidsFarewell:
 	ld hl, .BidsFarewellToMonText
@@ -1143,18 +1136,22 @@ TradeAnim_OTBidsFarewell:
 	ret
 
 .BidsFarewellToMonText:
-	text_far _BidsFarewellToMonText
-	text_end
+	text_ram wOTTrademonSenderName
+	text "が"
+	line "なごりを　おしみながら"
+	done
 
 .MonNameBidsFarewellText:
-	text_far _MonNameBidsFarewellText
-	text_end
+	text_ram wOTTrademonSpeciesName
+	text "を"
+	line "おくってきます"
+	done
 
 TradeAnim_TakeCareOfText:
 	call WaitTop
 	hlcoord 0, 10
 	ld bc, 8 * SCREEN_WIDTH
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	call WaitBGMap
 	ld hl, .TakeGoodCareOfMonText
@@ -1164,8 +1161,10 @@ TradeAnim_TakeCareOfText:
 	ret
 
 .TakeGoodCareOfMonText:
-	text_far _TakeGoodCareOfMonText
-	text_end
+	text_ram wOTTrademonSpeciesName
+	text "を"
+	line "かわいがってやってください"
+	done
 
 TradeAnim_OTSendsText1:
 	ld hl, .ForYourMonSendsText
@@ -1180,12 +1179,20 @@ TradeAnim_OTSendsText1:
 	ret
 
 .ForYourMonSendsText:
-	text_far _ForYourMonSendsText
-	text_end
+	text_ram wPlayerTrademonSenderName
+	text "が"
+	line "@"
+	text_ram wPlayerTrademonSpeciesName
+	text "を　おくったかわりに"
+	done
 
 .OTSendsText:
-	text_far _OTSendsText
-	text_end
+	text_ram wOTTrademonSenderName
+	text "は"
+	line "@"
+	text_ram wOTTrademonSpeciesName
+	text "を　くれます"
+	done
 
 TradeAnim_OTSendsText2:
 	ld hl, .WillTradeText
@@ -1200,12 +1207,21 @@ TradeAnim_OTSendsText2:
 	ret
 
 .WillTradeText:
-	text_far _WillTradeText
-	text_end
+	text "これから"
+	line "@"
+	text_ram wOTTrademonSenderName
+	text "の@"
+	text_ram wOTTrademonSpeciesName
+	text "と"
+	done
 
 .ForYourMonWillTradeText:
-	text_far _ForYourMonWillTradeText
-	text_end
+	text_ram wPlayerTrademonSenderName
+	text "の@"
+	text_ram wPlayerTrademonSpeciesName
+	text "を"
+	line "こうかんします！"
+	done
 
 TradeAnim_Wait80Frames:
 	ld c, 80
@@ -1215,7 +1231,7 @@ TradeAnim_Wait80Frames:
 TradeAnim_BlankTilemap:
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	ret
 
@@ -1324,15 +1340,12 @@ TradeAnim_WaitAnim:
 	ret
 
 DebugTrade: ; unreferenced
-; This function was meant for use in Japanese versions, so the
-; constant used for copy length was changed by accident.
-
 	ld hl, .DebugTradeData
 
 	ld a, [hli]
 	ld [wPlayerTrademonSpecies], a
 	ld de, wPlayerTrademonSenderName
-	ld c, NAME_LENGTH + 2 ; JP: NAME_LENGTH_JAPANESE + 2
+	ld c, NAME_LENGTH + 2
 .loop1
 	ld a, [hli]
 	ld [de], a
@@ -1343,7 +1356,7 @@ DebugTrade: ; unreferenced
 	ld a, [hli]
 	ld [wOTTrademonSpecies], a
 	ld de, wOTTrademonSenderName
-	ld c, NAME_LENGTH + 2 ; JP: NAME_LENGTH_JAPANESE + 2
+	ld c, NAME_LENGTH + 2
 .loop2
 	ld a, [hli]
 	ld [de], a
@@ -1355,13 +1368,13 @@ DebugTrade: ; unreferenced
 MACRO debugtrade
 ; species, ot name, ot id
 	db \1
-	dname \2, NAME_LENGTH_JAPANESE
+	dname \2, NAME_LENGTH
 	dw \3
 ENDM
 
 .DebugTradeData:
-	debugtrade VENUSAUR,  "ゲーフり",  $0123 ; GAME FREAK
-	debugtrade CHARIZARD, "クりーチャ", $0456 ; Creatures Inc.
+	debugtrade VENUSAUR,  "ゲーフリ",  $0123 ; GAME FREAK
+	debugtrade CHARIZARD, "クリーチャ", $0456 ; Creatures Inc.
 
 TradeGameBoyTilemap:  INCBIN "gfx/trade/game_boy.tilemap" ; 6x8
 TradeLinkTubeTilemap: INCBIN "gfx/trade/link_cable.tilemap" ; 12x3

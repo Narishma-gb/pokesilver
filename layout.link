@@ -59,7 +59,7 @@ ROMX $09
 	"bank9"
 	; "Garbage 9"
 ROMX $0a
-	; "bankA"
+	"bankA"
 ROMX $0b
 	; "bankB"
 ROMX $0c

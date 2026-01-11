@@ -135,11 +135,11 @@ INCLUDE "engine/battle/consume_held_item.asm"
 INCLUDE "data/moves/effects.asm"
 
 
-;SECTION "bankA", ROMX
+SECTION "bankA", ROMX
 
-;INCLUDE "engine/link/link.asm"
-;INCLUDE "engine/link/mystery_gift.asm"
-;INCLUDE "engine/overworld/wildmons.asm"
+INCLUDE "engine/link/link.asm"
+INCLUDE "engine/link/mystery_gift.asm"
+INCLUDE "engine/overworld/wildmons.asm"
 
 
 ;SECTION "bankB", ROMX

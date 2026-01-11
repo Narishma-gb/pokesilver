@@ -17,8 +17,7 @@ DEF MG_NOT_OKAY       EQU MG_WRONG_CHECKSUM | MG_TIMED_OUT | MG_CANCELED | MG_WR
 DEF MG_OKAY           EQU ~MG_NOT_OKAY
 DEF MG_START_END      EQU %11111111
 
-DEF REGION_PREFIX EQU $96
-DEF REGION_CODE   EQU $90 ; USA
+DEF REGION_CODE EQU $ca
 
 DEF MESSAGE_PREFIX EQU $5a
 
@@ -115,7 +114,7 @@ endc
 	ld h, d
 	ld l, e
 	ld de, wStringBuffer1
-	ld bc, ITEM_NAME_LENGTH
+	ld bc, ITEM_NAME_LENGTH + 1
 	call CopyBytes
 	ld hl, .MysteryGiftSentHomeText ; sent decoration to home
 	jr .PrintTextAndExit
@@ -157,43 +156,56 @@ endc
 	ret
 
 .String_PressAToLink_BToCancel:
-	db   "Press A to"
-	next "link IR-Device"
-	next "Press B to"
-	next "cancel it."
+	db "エーボタン<WO>おすと"
+	next "つうしん<GA>おこなわれるよ！"
+	next "ビーボタン<WO>おすと"
+	next "つうしん<WO>ちゅうし　します"
 	db   "@"
 
 .MysteryGiftCanceledText:
-	text_far _MysteryGiftCanceledText
-	text_end
+	text "つうしん<WO>ちゅうし　しました"
+	prompt
 
 .MysteryGiftCommErrorText:
-	text_far _MysteryGiftCommErrorText
-	text_end
+	text "つうしん　エラー"
+	prompt
 
 .RetrieveMysteryGiftText:
-	text_far _RetrieveMysteryGiftText
-	text_end
+	text "じゅんび<GA>できていません"
+	line "#センターに　いってみよう！"
+	prompt
 
 .YourFriendIsNotReadyText:
-	text_far _YourFriendIsNotReadyText
-	text_end
+	text "あいての　じゅんび<GA>できていません"
+	prompt
 
 .MysteryGiftFiveADayText:
-	text_far _MysteryGiftFiveADayText
-	text_end
+	text "ふしぎなおくりものは"
+	line "１にち　５かいまでしか　できません！"
+	prompt
 
 .MysteryGiftOneADayText:
-	text_far _MysteryGiftOneADayText
-	text_end
+	text "ふしぎなおくりものは　おなじひとから"
+	line "１にち　１かいしか　うけとれません！"
+	prompt
 
 .MysteryGiftSentText:
-	text_far _MysteryGiftSentText
-	text_end
+	text_ram wMysteryGiftPartnerName
+	text "から"
+	line "@"
+	text_ram wStringBuffer1
+	text "<GA>おくられた！"
+	prompt
 
 .MysteryGiftSentHomeText:
-	text_far _MysteryGiftSentHomeText
-	text_end
+	text_ram wMysteryGiftPartnerName
+	text "から　@"
+	text_ram wMysteryGiftPlayerName
+	text "の　いえに"
+	line "@"
+	text_ram wStringBuffer1
+	text "<GA>おくられた！"
+	prompt
 
 .CheckAlreadyGotFiveGiftsToday:
 	call GetMysteryGiftBank
@@ -308,67 +320,10 @@ endc
 	cp IR_SENDER
 	jr z, SenderExchangeMysteryGiftDataPayloads
 
-	ld hl, hMGExchangedByte
-	ld b, 1
-	call TryReceivingIRDataBlock
-	jr nz, .failed
-	call ReceiveMysteryGiftDataPayload_GotRegionPrefix
-	jp nz, EndOrContinueMysteryGiftIRCommunication
-	jr ReceiverExchangeMysteryGiftDataPayloads_GotPayload
-
-.failed
-	; Delay frame
-.wait_frame
-	ldh a, [rLY]
-	cp LY_VBLANK
-	jr c, .wait_frame
-
-	ld c, LOW(rRP)
-	ld a, RP_ENABLE
-	ldh [c], a
-
-	ld b, 60 * 4 ; 4 seconds
-.continue
-	push bc
-	call MysteryGift_UpdateJoypad
-	ld b, RP_DATA_IN
-	ld c, LOW(rRP)
-.in_vblank
-	ldh a, [c]
-	and b
-	ld b, a
-	ldh a, [rLY]
-	cp LY_VBLANK
-	jr nc, .in_vblank
-.wait_vblank
-	ldh a, [c]
-	and b
-	ld b, a
-	ldh a, [rLY]
-	cp LY_VBLANK
-	jr c, .wait_vblank
-	ld a, b
-	pop bc
-	; Restart if the 4-second timeout has elapsed
-	dec b
-	jr z, .restart
-	; Restart if rRP is not receiving data
-	or a
-	jr nz, .restart
-	; Check if we've pressed the B button to cancel
-	ldh a, [hMGJoypadReleased]
-	bit B_BUTTON_F, a
-	jr z, .continue
-	ld a, MG_CANCELED
-	ldh [hMGStatusFlags], a
-	jp EndOrContinueMysteryGiftIRCommunication
-
 ReceiverExchangeMysteryGiftDataPayloads:
 	; Receive the data payload
 	call ReceiveMysteryGiftDataPayload
 	jp nz, EndOrContinueMysteryGiftIRCommunication
-	; fallthrough
-ReceiverExchangeMysteryGiftDataPayloads_GotPayload:
 	; Switch roles
 	call BeginSendingIRCommunication
 	jp nz, EndOrContinueMysteryGiftIRCommunication
@@ -405,18 +360,16 @@ ReceiveMysteryGiftDataPayload:
 	ld b, 1
 	call TryReceivingIRDataBlock
 	ret nz
-	; fallthrough
-ReceiveMysteryGiftDataPayload_GotRegionPrefix:
 	; Receive an empty block
 	call ReceiveEmptyIRDataBlock
 	ldh a, [hMGStatusFlags]
 	cp MG_OKAY
 	ret nz
-	; Verify the received region prefix
+	; Verify the received region code
 	ldh a, [hMGExchangedByte]
-	cp REGION_PREFIX
+	cp REGION_CODE
 	jp nz, WrongMysteryGiftRegion
-	ld a, REGION_CODE
+	swap a
 	ldh [hMGExchangedByte], a
 	; Switch roles
 	call BeginSendingIRCommunication
@@ -447,8 +400,8 @@ ReceiveMysteryGiftDataPayload_GotRegionPrefix:
 	ret
 
 SendMysteryGiftDataPayload:
-	; Send the region prefix
-	ld a, REGION_PREFIX
+	; Send the region code
+	ld a, REGION_CODE
 	ldh [hMGExchangedByte], a
 	ld hl, hMGExchangedByte
 	ld b, 1
@@ -474,6 +427,7 @@ SendMysteryGiftDataPayload:
 	ret nz
 	; Verify the received region code
 	ldh a, [hMGExchangedByte]
+	swap a
 	cp REGION_CODE
 	jp nz, WrongMysteryGiftRegion
 	; Switch roles
@@ -702,7 +656,7 @@ InitializeIRCommunicationRoles:
 	ld c, LOW(rRP)
 	; Check if we've pressed the B button to cancel
 	ldh a, [hMGJoypadReleased]
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jr z, .not_canceled
 	ld a, MG_CANCELED
 	ldh [hMGStatusFlags], a
@@ -710,7 +664,7 @@ InitializeIRCommunicationRoles:
 
 .not_canceled
 	; Check if we've pressed the A button to start sending
-	bit A_BUTTON_F, a
+	bit B_PAD_A, a
 	jr nz, SendIRHelloMessageAfterDelay
 	; If rRP is not receiving data, keep checking for input
 	ldh a, [c]
