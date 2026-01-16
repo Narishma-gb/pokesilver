@@ -265,1008 +265,1007 @@ MoveFDDescription:
 MoveFEDescription:
 MoveFFDescription:
 Move00Description:
-	db "?@"
+	db "？@"
 
 PoundDescription:
-	db   "Pounds with fore-"
-	next "legs or tail.@"
+	db   "てや　しっぽなど<WO>つかい"
+	next "てき<WO>はたいて　<KOUGEKI>@"
 
 KarateChopDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+	db   "チョップで　てき<WO><KOUGEKI>"
+	next "きゅうしょ<NI>あたりやすい@"
 
 DoubleslapDescription:
-	db   "Repeatedly slaps"
-	next "2-5 times.@"
+	db   "てき<WO>おうふくビンタで"
+	next "２ー５かい　れんぞくで　<KOUGEKI>@"
 
 CometPunchDescription:
-	db   "Repeatedly punches"
-	next "2-5 times.@"
+	db   "てき<WO>れんぞくで　なぐりつけ"
+	next "２ー５かい　れんぞくで　<KOUGEKI>@"
 
 MegaPunchDescription:
-	db   "A powerful punch"
-	next "thrown very hard.@"
+	db   "ものすごい　ちからをこめた　パンチで"
+	next "てき<WO>なぐ<TTE>　<KOUGEKI>@"
 
 PayDayDescription:
-	db   "Throws coins. Gets"
-	next "them back later.@"
+	db   "こばんをなげて　てき<WO><KOUGEKI>"
+	next "せんとうご<NI>おかね<GA>てにはいる@"
 
 FirePunchDescription:
-	db   "A fiery punch. May"
-	next "cause a burn.@"
+	db   "ほのおをこめた　パンチで　<KOUGEKI>"
+	next "てき<WO>やけどさせることがある@"
 
 IcePunchDescription:
-	db   "An icy punch. May"
-	next "cause freezing.@"
+	db   "れいきをこめた　パンチで　<KOUGEKI>"
+	next "てき<WO>こおらせることがある@"
 
 ThunderpunchDescription:
-	db   "An electric punch."
-	next "It may paralyze.@"
+	db   "でんげきをこめた　パンチで　<KOUGEKI>"
+	next "てき<WO>まひさせることがある@"
 
 ScratchDescription:
-	db   "Scratches with"
-	next "sharp claws.@"
+	db   "するどいツメ<WO>つかい"
+	next "てき<WO>ひっかいて　<KOUGEKI>@"
 
 VicegripDescription:
-	db   "Grips with power-"
-	next "ful pincers.@"
+	db   "おおきなハサミ<WO>つかい"
+	next "てき<WO>はさんで　<KOUGEKI>@"
 
 GuillotineDescription:
-	db   "A one-hit KO,"
-	next "pincer attack.@"
+	db   "おおきなハサミ<WO>つか<TTE>"
+	next "てき<WO>はさみ　せんとうふのうにする@"
 
 RazorWindDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+	db   "１ターンめで　かぜのやいば<WO>つくり"
+	next "つぎのターンで　てき<WO><KOUGEKI>@"
 
 SwordsDanceDescription:
-	db   "A dance that in-"
-	next "creases ATTACK.@"
+	db   "たたかい<NO>おどり<WO>おど<TTE>"
+	next "<KOUGEKI><WO>グーンとあげる@"
 
 CutDescription:
-	db   "Cuts using claws,"
-	next "scythes, etc.@"
+	db   "するどいカマや　ツメなど<WO>つか<TTE>"
+	next "てき<WO>きりつけて　<KOUGEKI>@"
 
 GustDescription:
-	db   "Whips up a strong"
-	next "gust of wind.@"
+	db   "つばさで　つよいかぜ<WO>おこし"
+	next "それ<WO>てきにぶつけて　<KOUGEKI>@"
 
 WingAttackDescription:
-	db   "Strikes the target"
-	next "with wings.@"
+	db   "つばさ<WO>おおきく　ひろげて"
+	next "そのまま　てき<NI>たいあたりする@"
 
 WhirlwindDescription:
-	db   "Blows away the foe"
-	next "& ends battle.@"
+	db   "つよいかぜで　てき<WO>ふきとばす"
+	next "ふきとばすと　せんとう<WA>おわる@"
 
 FlyDescription:
-	db   "1st turn: Fly"
-	next "2nd turn: Attack@"
+	db   "１ターンめで　そら<NI>とびた<TTE>"
+	next "つぎのターンで　てき<WO><KOUGEKI>@"
 
 BindDescription:
-	db   "Binds the target"
-	next "for 2-5 turns.@"
+	db   "２ー５ターンのあいだ　ながいからだや"
+	next "つる<WO>つか<TTE>　てき<WO>しめつける@"
 
 SlamDescription:
-	db   "Slams the foe with"
-	next "a tail, vine, etc.@"
+	db   "ながいシッポや　ツルなどを"
+	next "てき<NI>たたきつけて　<KOUGEKI>@"
 
 VineWhipDescription:
-	db   "Whips the foe with"
-	next "slender vines.@"
+	db   "ムチのよう<NI>ほそながい　つるを"
+	next "てき<NI>たたきつけて　<KOUGEKI>@"
 
 StompDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
+	db   "おおきなあしで　ふみつけて　<KOUGEKI>"
+	next "てき<WO>ひるませることがある@"
 
 DoubleKickDescription:
-	db   "A double kicking"
-	next "attack.@"
+	db   "２ほん<NO>あしをつか<TTE>　てきを"
+	next "２かい　れんぞくで　<KOUGEKI>@"
 
 MegaKickDescription:
-	db   "A powerful kicking"
-	next "attack.@"
+	db   "ものすごい　ちからをこめた　キックで"
+	next "てき<WO>けっとばして　<KOUGEKI>@"
 
 JumpKickDescription:
-	db   "May miss, damaging"
-	next "the user.@"
+	db   "ジャンプした　いきおいで　キックを"
+	next "くりだす　はずすと　ダメージをうける@"
 
 RollingKickDescription:
-	db   "A fast, spinning"
-	next "kick.@"
+	db   "からだ<WO>すばやく　１かいてんさせ"
+	next "そのいきおいで　キック<WO>くりだす@"
 
 SandAttackDescription:
-	db   "Reduces accuracy"
-	next "by throwing sand.@"
+	db   "てき<NO>かおなど<NI>すなをかけて"
+	next "めいちゅうりつ<WO>さげさせる@"
 
 HeadbuttDescription:
-	db   "An attack that may"
-	next "make foe flinch.@"
+	db   "あたまから　つっこんで　<KOUGEKI>"
+	next "てき<WO>ひるませることがある@"
 
 HornAttackDescription:
-	db   "An attack using a"
-	next "horn to jab.@"
+	db   "とがった　ツノ<WO>つかい"
+	next "てき<WO>つついて　<KOUGEKI>@"
 
 FuryAttackDescription:
-	db   "Jabs the target"
-	next "2-5 times.@"
+	db   "とがった　ツノなど<WO>つかい"
+	next "２ー５かい　れんぞくで　<KOUGEKI>@"
 
 HornDrillDescription:
-	db   "A one-hit KO,"
-	next "drill attack.@"
+	db   "ツノ<WO>ドリルのよう<NI>かいてんさせ"
+	next "てき<WO>つつき　せんとうふのうにする@"
 
 TackleDescription:
-	db   "A full-body charge"
-	next "attack.@"
+	db   "からだぜんたい<WO>つか<TTE>"
+	next "てき<NI>たいあたりして　<KOUGEKI>@"
 
 BodySlamDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
+	db   "からだごと　たおれこんで　<KOUGEKI>"
+	next "てき<WO>まひさせることがある@"
 
 WrapDescription:
-	db   "Squeezes the foe"
-	next "for 2-5 turns.@"
+	db   "２ー５ターンのあいだ　ながいからだや"
+	next "ツルをつか<TTE>　てき<WO>しめつける@"
 
 TakeDownDescription:
-	db   "A tackle that also"
-	next "hurts the user.@"
+	db   "いきおいをつけて　てき<NI>たいあたり"
+	next "じぶんもすこし　ダメージをうける@"
 
 ThrashDescription:
-	db   "Works 2-3 turns"
-	next "and confuses user.@"
+	db   "２ー３ターンのあいだ　あばれつづける"
+	next "あばれたあと<WA>こんらんしてしまう@"
 
 DoubleEdgeDescription:
-	db   "A tackle that also"
-	next "hurts the user.@"
+	db   "いのちをかけて　てき<NI>たいあたり"
+	next "じぶんもすこし　ダメージをうける@"
 
 TailWhipDescription:
-	db   "Lowers the foe's"
-	next "DEFENSE.@"
+	db   "てき<NI>しっぽをふ<TTE>　ゆだんさせて"
+	next "ぼうぎょ<WO>さげさせる@"
 
 PoisonStingDescription:
-	db   "An attack that may"
-	next "poison the target.@"
+	db   "どくのある　ハリや　ツノで　<KOUGEKI>"
+	next "てき<NI>どくをあたえることがある@"
 
 TwineedleDescription:
-	db   "Jabs the foe twice"
-	next "using stingers.@"
+	db   "りょうて<NO>ハリ<WO>つか<TTE>"
+	next "てき<WO>２かい　れんぞくで　<KOUGEKI>@"
 
 PinMissileDescription:
-	db   "Fires pins that"
-	next "strike 2-5 times.@"
+	db   "するどいハリ<WO>てき<NI>はっしゃして"
+	next "２ー５かい　れんぞくで　<KOUGEKI>@"
 
 LeerDescription:
-	db   "Reduces the foe's"
-	next "DEFENSE.@"
+	db   "てき<WO>にらんで　おびえさせて"
+	next "ぼうぎょ<WO>さげさせる@"
 
 BiteDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
+	db   "するどい　はで　かみついて　<KOUGEKI>"
+	next "てき<WO>ひるませることがある@"
 
 GrowlDescription:
-	db   "Reduces the foe's"
-	next "ATTACK.@"
+	db   "かわいくないて　てき<WO>ゆだんさせて"
+	next "<KOUGEKI><WO>さげさせる@"
 
 RoarDescription:
-	db   "Scares wild foes"
-	next "to end battle.@"
+	db   "ほえて　てき<WO>にげださせる"
+	next "てき<GA>にげると　せんとう<WA>おわる@"
 
 SingDescription:
-	db   "May cause the foe"
-	next "to fall asleep.@"
+	db   "ここちよい　うたごえで"
+	next "てき<WO>ふかいねむりへと　さそう@"
 
 SupersonicDescription:
-	db   "Sound waves that"
-	next "cause confusion.@"
+	db   "からだから　かいおんぱ<WO>はっして"
+	next "てき<WO>こんらんさせることがある@"
 
 SonicboomDescription:
-	db   "Always inflicts"
-	next "20HP damage.@"
+	db   "しょうげきはで　てき<WO><KOUGEKI>"
+	next "２０<NO>きまったダメージ<WO>あたえる@"
 
 DisableDescription:
-	db   "Disables the foe's"
-	next "most recent move.@"
+	db   "ちょうのうりょくで　てき<NO>うごきを"
+	next "とめて　わざ<WO>１つ　つかえなくする@"
 
 AcidDescription:
-	db   "An attack that may"
-	next "lower DEFENSE.@"
+	db   "つよいさんで　てき<NO>ひふ<WO>とかす"
+	next "ぼうぎょ<WO>さげることがある@"
 
 EmberDescription:
-	db   "An attack that may"
-	next "inflict a burn.@"
+	db   "ちいさな　ほのおで　<KOUGEKI>"
+	next "てき<WO>やけどさせることがある@"
 
 FlamethrowerDescription:
-	db   "An attack that may"
-	next "inflict a burn.@"
+	db   "すごい　ほのおで　<KOUGEKI>"
+	next "てき<WO>やけどさせることがある@"
 
 MistDescription:
-	db   "Prevents stat"
-	next "reduction.@"
+	db   "しろいきりで　からだ<WO>おおい"
+	next "のうりょく<WO>さげられないようにする@"
 
 WaterGunDescription:
-	db   "Squirts water to"
-	next "attack.@"
+	db   "みず<WO>はっしゃして"
+	next "てき<WO><KOUGEKI>@"
 
 HydroPumpDescription:
-	db   "A powerful water-"
-	next "type attack.@"
+	db   "みず<WO>ものすごい　いきおいで"
+	next "はっしゃして　てき<WO><KOUGEKI>@"
 
 SurfDescription:
-	db   "A strong water-"
-	next "type attack.@"
+	db   "みず<NI>なみ<WO>おこし　それを"
+	next "ものすごい　ちからで　たたきつける@"
 
 IceBeamDescription:
-	db   "An attack that may"
-	next "freeze the foe.@"
+	db   "れいき<WO>はっしゃして　<KOUGEKI>"
+	next "てき<WO>こおらせることがある@"
 
 BlizzardDescription:
-	db   "An attack that may"
-	next "freeze the foe.@"
+	db   "ゆき<WO>つよいかぜにのせて　<KOUGEKI>"
+	next "てき<WO>こおらせることがある@"
 
 PsybeamDescription:
-	db   "An attack that may"
-	next "confuse the foe.@"
+	db   "ふしぎな　ひかり<WO>はっしゃする"
+	next "てき<WO>こんらんさせることがある@"
 
 BubblebeamDescription:
-	db   "An attack that may"
-	next "lower SPEED.@"
+	db   "あわ<WO>いきおいよく　はっしゃする"
+	next "てき<NO>すばやさ<WO>さげることがある@"
 
 AuroraBeamDescription:
-	db   "An attack that may"
-	next "lower ATTACK.@"
+	db   "にじいろ<NO>ひかり<WO>はっしゃする"
+	next "<KOUGEKI><WO>さげることがある@"
 
 HyperBeamDescription:
-	db   "1st turn: Attack"
-	next "2nd turn: Rest@"
+	db   "ダメージ<WA>おおきい<GA>つかうと"
+	next "つぎのターン　うごけなくな<TTE>しまう@"
 
 PeckDescription:
-	db   "Jabs the foe with"
-	next "a beak, etc.@"
+	db   "くちばしなど<WO>つか<TTE>"
+	next "てき<WO>つついて　<KOUGEKI>@"
 
 DrillPeckDescription:
-	db   "A strong, spin-"
-	next "ning-peck attack.@"
+	db   "くちばし<WO>ちゅうしん<NI>からだを"
+	next "かいてんさせて　てき<NI>とっしんする@"
 
 SubmissionDescription:
-	db   "An attack that al-"
-	next "so hurts the user.@"
+	db   "じぶんごと　じめん<NI>たたきつける"
+	next "じぶんにも　すこしダメージ@"
 
 LowKickDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
+	db   "タイミングよく　あし<WO>ひっかける"
+	next "てき<WO>ひるませることがある@"
 
 CounterDescription:
-	db   "Returns a physical"
-	next "blow double.@"
+	db   "てきからうけた　ぶつり<KOUGEKI>の"
+	next "ダメージ<WO>ばいにしてかえす@"
 
 SeismicTossDescription:
-	db   "The user's level"
-	next "equals damage HP.@"
+	db   "いんりょく<WO>りようして　なげる"
+	next "レベルぶん<NO>ダメージ<WO>あたえる@"
 
 StrengthDescription:
-	db   "A powerful physi-"
-	next "cal attack.@"
+	db   "ぜんしん<NI>すごいちから<WO>ためて"
+	next "てき<WO><KOUGEKI>@"
 
 AbsorbDescription:
-	db   "Steals 1/2 of the"
-	next "damage inflicted.@"
+	db   "てき<NI>あたえた　ダメージの"
+	next "はんぶん　たいりょく<WO>かいふくする@"
 
 MegaDrainDescription:
-	db   "Steals 1/2 of the"
-	next "damage inflicted.@"
+	db   "てき<NI>あたえた　ダメージの"
+	next "はんぶん　たいりょく<WO>かいふくする@"
 
 LeechSeedDescription:
-	db   "Steals HP from the"
-	next "foe on every turn.@"
+	db   "てき<NO>からだ<NI>タネをうえて"
+	next "ターンごと<NI>たいりょく<WO>すいとる@"
 
 GrowthDescription:
-	db   "Raises the SPCL."
-	next "ATK rating.@"
+	db   "いっき<NI>からだ<WO>せいちょうさせて"
+	next "とくしゅ<KOUGEKI><WO>あげる@"
 
 RazorLeafDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+	db   "はっぱで　てき<WO>きりつける"
+	next "きゅうしょ<NI>あたりやすい@"
 
 SolarbeamDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+	db   "１ターンめで　ひかり<WO>きゅうしゅう"
+	next "つぎのターンで　てき<WO><KOUGEKI>@"
 
 PoisonpowderDescription:
-	db   "A move that may"
-	next "poison the foe.@"
+	db   "どくそ<WO>ふくんだ　こな<WO>ふりまき"
+	next "てき<NI>どくをあたえる@"
 
 StunSporeDescription:
-	db   "A move that may"
-	next "paralyze the foe.@"
+	db   "しびれる　こな<WO>ふりまき"
+	next "てき<WO>まひさせてしまう@"
 
 SleepPowderDescription:
-	db   "May cause the foe"
-	next "to fall asleep.@"
+	db   "ねむくなる　こな<WO>ふりまき"
+	next "てき<WO>ねむらせてしまう@"
 
 PetalDanceDescription:
-	db   "Works 2-3 turns"
-	next "and confuses user.@"
+	db   "２ー３ターンのあいだ　あばれつづける"
+	next "あばれたあと<WA>こんらんしてしまう@"
 
 StringShotDescription:
-	db   "A move that lowers"
-	next "the foe's SPEED.@"
+	db   "いと<WO>てき<NO>からだ<NI>まきつけ"
+	next "すばやさ<WO>さげさせる@"
 
 DragonRageDescription:
-	db   "Always inflicts"
-	next "40HP damage.@"
+	db   "しょうげきはで　てき<WO><KOUGEKI>"
+	next "４０<NO>きまったダメージ<WO>あたえる@"
 
 FireSpinDescription:
-	db   "Traps foe in fire"
-	next "for 2-5 turns.@"
+	db   "２ー５ターンのあいだ　てきを"
+	next "ほのお<NO>ちゅうしん<NI>とじこめる@"
 
 ThundershockDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
+	db   "でんげき<WO>あびせて　<KOUGEKI>"
+	next "てき<WO>まひさせることがある@"
 
 ThunderboltDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
+	db   "つよいでんげき<WO>あびせて　<KOUGEKI>"
+	next "てき<WO>まひさせることがある@"
 
 ThunderWaveDescription:
-	db   "A move that may"
-	next "cause paralysis.@"
+	db   "よわいでんげき<WO>てき<NI>ぶつけて"
+	next "まひさせてしまう@"
 
 ThunderDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
+	db   "てき<NI>むか<TTE>　かみなり<WO>おとす"
+	next "まひさせることがある@"
 
 RockThrowDescription:
-	db   "Drops rocks on the"
-	next "enemy.@"
+	db   "ちいさな　いわ<WO>なげつけて"
+	next "てき<WO><KOUGEKI>@"
 
 EarthquakeDescription:
-	db   "Tough but useless"
-	next "vs. flying foes.@"
+	db   "じめん<WO>ゆらして　<KOUGEKI>"
+	next "とんでる　てきいがい<NI>だいダメージ@"
 
 FissureDescription:
-	db   "A ground-type,"
-	next "one-hit KO attack.@"
+	db   "じわれ<WO>おこして　てき<WO>のみこむ"
+	next "のみこまれると　せんとうふのうになる@"
 
 DigDescription:
-	db   "1st turn: Burrow"
-	next "2nd turn: Attack@"
+	db   "１ターンめで　じめん<NI>もぐり"
+	next "つぎのターンで　てき<WO><KOUGEKI>@"
 
 ToxicDescription:
-	db   "A poison move with"
-	next "increasing damage.@"
+	db   "じょじょ<NI>ダメージがふえる　どくを"
+	next "てき<NI>あたえる@"
 
 ConfusionDescription:
-	db   "An attack that may"
-	next "cause confusion.@"
+	db   "ちょうのうりょくで　<KOUGEKI>"
+	next "てき<WO>こんらんさせることがある@"
 
 PsychicMDescription:
-	db   "An attack that may"
-	next "lower SPCL.DEF.@"
+	db   "つよいねんりきで　てき<WO><KOUGEKI>"
+	next "とくしゅぼうぎょ<WO>さげることがある@"
 
 HypnosisDescription:
-	db   "May put the foe to"
-	next "sleep.@"
+	db   "てき<NI>あんじ<WO>かけて"
+	next "ふかい　ねむりへと　さそう@"
 
 MeditateDescription:
-	db   "Raises the user's"
-	next "ATTACK.@"
+	db   "ヨガのポーズで　ねむった　ちからを"
+	next "ひきだし　<KOUGEKI><WO>あげる@"
 
 AgilityDescription:
-	db   "Sharply increases"
-	next "the user's SPEED.@"
+	db   "ちから<WO>ぬいて　からだ<WO>かるくし"
+	next "すばやさ<WO>グーンとあげる@"
 
 QuickAttackDescription:
-	db   "Lets the user get"
-	next "in the first hit.@"
+	db   "ものすごい　はやさで　うごいて　"
+	next "せんせい<KOUGEKI>する@"
 
 RageDescription:
-	db   "Raises ATTACK if"
-	next "the user is hit.@"
+	db   "<KOUGEKI>されるたび<NI>いかりで"
+	next "<KOUGEKI><GA>あが<TTE>いく@"
 
 TeleportDescription:
-	db   "A move for fleeing"
-	next "from battle.@"
+	db   "ちょうのうりょく<WO>つか<TTE>"
+	next "せんとうから　だっしゅつする@"
 
 NightShadeDescription:
-	db   "The user's level"
-	next "equals damage HP.@"
+	db   "てき<NI>おそろしい　まぼろし<WO>みせ"
+	next "レベルぶん<NO>ダメージ<WO>あたえる@"
 
 MimicDescription:
-	db   "Copies a move used"
-	next "by the foe.@"
+	db   "てき<GA>つかった　わざが"
+	next "そのときだけ　じぶん<NO>わざになる@"
 
 ScreechDescription:
-	db   "Sharply reduces"
-	next "the foe's DEFENSE.@"
+	db   "いやなおと<WO>だして　てきの"
+	next "ぼうぎょ<WO>ガクッとさげさせる@"
 
 DoubleTeamDescription:
-	db   "Heightens evasive-"
-	next "ness.@"
+	db   "ぶんしんで　てき<WO>まどわせ"
+	next "かいひりつ<WO>あげる@"
 
 RecoverDescription:
-	db   "Restores HP by 1/2"
-	next "the max HP.@"
+	db   "キズついた　からだ<WO>たいりょくの"
+	next "はんぶんだけ　かいふくする@"
 
 HardenDescription:
-	db   "Raises the user's"
-	next "DEFENSE.@"
+	db   "ぜんしん<NI>ちからをこめ　かたくなり"
+	next "ぼうぎょ<WO>あげる@"
 
 MinimizeDescription:
-	db   "Heightens evasive-"
-	next "ness.@"
+	db   "からだ<WO>ちぢめて　ちいさくなり"
+	next "かいひりつ<WO>あげる@"
 
 SmokescreenDescription:
-	db   "Lowers the foe's"
-	next "accuracy.@"
+	db   "けむりや　スミなどで　てきの"
+	next "めいちゅうりつ<WO>さげさせる@"
 
 ConfuseRayDescription:
-	db   "A move that causes"
-	next "confusion.@"
+	db   "あやしいひかりで　てきを"
+	next "まどわし　こんらんさせてしまう@"
 
 WithdrawDescription:
-	db   "Heightens the"
-	next "user's DEFENSE.@"
+	db   "かたいから<NI>もぐりこんで"
+	next "ぼうぎょ<WO>あげる@"
 
 DefenseCurlDescription:
-	db   "Heightens the"
-	next "user's DEFENSE.@"
+	db   "からだ<WO>まるめて　きゅうしょを"
+	next "かくし　ぼうぎょ<WO>あげる@"
 
 BarrierDescription:
-	db   "Sharply increases"
-	next "user's DEFENSE.@"
+	db   "めのまえ<NI>かべ<WO>つくりだし"
+	next "ぼうぎょ<WO>グーンとあげる@"
 
 LightScreenDescription:
-	db   "Ups SPCL.DEF with"
-	next "a wall of light.@"
+	db   "ひかりのかべ<WO>つくり　とくしゅ"
+	next "<KOUGEKI><NO>ダメージ<WO>よわめる@"
 
 HazeDescription:
-	db   "Eliminates all"
-	next "stat changes.@"
+	db   "くろいきり<NI>おおわれ　のうりょくの"
+	next "いじょう<WO>もとにもどす@"
 
 ReflectDescription:
-	db   "Raises DEFENSE"
-	next "with a barrier.@"
+	db   "ひかりのかべ<WO>つくり　ぶつり"
+	next "<KOUGEKI><NO>ダメージ<WO>よわめる@"
 
 FocusEnergyDescription:
-	db   "Raises the criti-"
-	next "cal hit ratio.@"
+	db   "<KOUGEKI><NI>きあい<WO>こめて"
+	next "きゅうしょ<NI>あたりやすくする@"
 
 BideDescription:
-	db   "Waits 2-3 turns &"
-	next "hits back double.@"
+	db   "２ー３ターン　<KOUGEKI><NI>たえて"
+	next "うけたダメージ<WO>ばいにしてかえす@"
 
 MetronomeDescription:
-	db   "Randomly uses any"
-	next "#MON move.@"
+	db   "ゆび<WO>ふ<TTE>　のう<WO>しげきして"
+	next "いろんな　ワザ<WO>ランダムでくりだす@"
 
 MirrorMoveDescription:
-	db   "Counters with the"
-	next "same move.@"
+	db   "てき<NO>わざ<WO>まねして"
+	next "おなじわざで　てき<WO><KOUGEKI>@"
 
 SelfdestructDescription:
-	db   "Powerful but makes"
-	next "the user faint.@"
+	db   "てき<NI>だいダメージ<WO>あたえるが"
+	next "つかうと　せんとうふのう<NI>なる@"
 
 EggBombDescription:
-	db   "Eggs are hurled at"
-	next "the foe.@"
+	db   "タマゴ<WO>おもいっきり　なげつけて"
+	next "てき<WO><KOUGEKI>@"
 
 LickDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
+	db   "ながいしたで　なめまわして　<KOUGEKI>"
+	next "てき<WO>まひさせることがある@"
 
 SmogDescription:
-	db   "An attack that may"
-	next "poison the foe.@"
+	db   "はいきガス<WO>ふきかけて　<KOUGEKI>"
+	next "てき<NI>どくをあたえることがある@"
 
 SludgeDescription:
-	db   "An attack that may"
-	next "poison the foe.@"
+	db   "ヘドロ<WO>なげつけて　<KOUGEKI>"
+	next "てき<NI>どくをあたえることがある@"
 
 BoneClubDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
+	db   "てにもった　ホネで　てき<WO><KOUGEKI>"
+	next "てき<WO>ひるませることがある@"
 
 FireBlastDescription:
-	db   "An attack that"
-	next "may cause a burn.@"
+	db   "だい<NO>もじ<GA>すべて<WO>やきつくす"
+	next "てき<WO>やけどさせることがある@"
 
 WaterfallDescription:
-	db   "An aquatic charge"
-	next "attack.@"
+	db   "たき<WO>さかのぼるような　いきおいで"
+	next "てき<NI>とっしんする@"
 
 ClampDescription:
-	db   "Traps the foe for"
-	next "2-5 turns.@"
+	db   "２ー５ターンのあいだ　てきを"
+	next "から<NI>はさみこんでしまう@"
 
 SwiftDescription:
-	db   "An attack that"
-	next "never misses.@"
+	db   "ぜったい<NI>よけられない　ほしがたの"
+	next "こうせん<WO>むすう<NI>はっしゃする@"
 
 SkullBashDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+	db   "１ターンめで　あたま<WO>ひっこめて"
+	next "つぎのターンで　てき<WO><KOUGEKI>@"
 
 SpikeCannonDescription:
-	db   "Fires spikes to"
-	next "hit 2-5 times.@"
+	db   "するどいハリ<WO>てき<NI>はっしゃして"
+	next "２ー５かい　れんぞくで　<KOUGEKI>@"
 
 ConstrictDescription:
-	db   "An attack that may"
-	next "lower SPEED.@"
+	db   "てき<NI>からみついて　<KOUGEKI>する"
+	next "てき<NO>すばやさ<WO>さげることがある@"
 
 AmnesiaDescription:
-	db   "Sharply raises the"
-	next "user's SPCL.DEF.@"
+	db   "いっしゅん　なにか<WO>わすれることで"
+	next "とくしゅぼうぎょ<WO>グーンとあげる@"
 
 KinesisDescription:
-	db   "Reduces the foe's"
-	next "accuracy.@"
+	db   "てき<NO>め<WO>スプーン<NI>むけさせて"
+	next "めいちゅうりつ<WO>さげさせる@"
 
 SoftboiledDescription:
-	db   "Restores HP by 1/2"
-	next "the user's max HP.@"
+	db   "キズついた　からだ<WO>たいりょくの"
+	next "はんぶんだけ　かいふくする@"
 
 HiJumpKickDescription:
-	db   "May miss and hurt"
-	next "the user.@"
+	db   "ジャンプした　いきおいで　ひざげりを"
+	next "くりだす　はずすと　ダメージをうける@"
 
 GlareDescription:
-	db   "A move that may"
-	next "cause paralysis.@"
+	db   "おなか<NO>もようで　てき<WO>いかくし"
+	next "おびえさせて　まひさせてしまう@"
 
 DreamEaterDescription:
-	db   "Steals HP from a"
-	next "sleeping victim.@"
+	db   "ねているてき<NI>あたえた　ダメージの"
+	next "はんぶん　たいりょく<WO>かいふくする@"
 
 PoisonGasDescription:
-	db   "A move that may"
-	next "poison the foe.@"
+	db   "どくガス<WO>てき<NI>ふきかけて"
+	next "どくをあたえる@"
 
 BarrageDescription:
-	db   "Throws orbs to hit"
-	next "2-5 times.@"
+	db   "まるいもの<WO>てき<NI>なげつけて"
+	next "２ー５かい　れんぞくで　<KOUGEKI>@"
 
 LeechLifeDescription:
-	db   "Steals 1/2 of the"
-	next "damage inflicted.@"
+	db   "てき<NI>あたえた　ダメージの"
+	next "はんぶん　たいりょく<WO>かいふくする@"
 
 LovelyKissDescription:
-	db   "May cause the foe"
-	next "to fall asleep.@"
+	db   "こわい　かおで　キス<WO>せまる"
+	next "キスされると　ねむ<TTE>しまう@"
 
 SkyAttackDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+	db   "１ターンめで　じゃくてん<WO>さがし"
+	next "つぎのターンで　てき<WO><KOUGEKI>@"
 
 TransformDescription:
-	db   "The user assumes"
-	next "the foe's guise.@"
+	db   "てき<NO>#と　おなじ　すがたに"
+	next "さいぼう<WO>へんかさせ　へんしんする@"
 
 BubbleDescription:
-	db   "An attack that may"
-	next "reduce SPEED.@"
+	db   "あわ<WO>ふきかけて　<KOUGEKI>"
+	next "てき<NO>すばやさ<WO>さげることがある@"
 
 DizzyPunchDescription:
-	db   "An attack that may"
-	next "cause confusion.@"
+	db   "おやこどうじ<NI>パンチで　<KOUGEKI>"
+	next "てき<WO>こんらんさせることがある@"
 
 SporeDescription:
-	db   "A move that"
-	next "induces sleep.@"
+	db   "さいみんこうかのある　ほうしを"
+	next "ふりまき　てき<WO>ねむらせる@"
 
 FlashDescription:
-	db   "Blinds the foe to"
-	next "reduce accuracy.@"
+	db   "つよい　ひかりで　め<WO>くらませて"
+	next "てき<NO>めいちゅうりつ<WO>さげさせる@"
 
 PsywaveDescription:
-	db   "An attack with"
-	next "variable power.@"
+	db   "ふしぎな　ねんぱで　てき<WO><KOUGEKI>"
+	next "つかうたび<NI>いりょく<GA>かわる@"
 
 SplashDescription:
-	db   "Has no effect"
-	next "whatsoever.@"
+	db   "はねるだけで　なにもおこらない⋯@"
 
 AcidArmorDescription:
-	db   "Sharply raises the"
-	next "user's DEFENSE.@"
+	db   "からだ<WO>えきじょう<NI>へんかさせて"
+	next "ぼうぎょ<WO>グーンとあげる@"
 
 CrabhammerDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+	db   "ハサミ<WO>てき<NI>たたきつける"
+	next "きゅうしょ<NI>あたりやすい@"
 
 ExplosionDescription:
-	db   "Very powerful but"
-	next "makes user faint.@"
+	db   "てき<NI>だいダメージ<WO>あたえるが"
+	next "つかうと　せんとうふのう<NI>なる@"
 
 FurySwipesDescription:
-	db   "Quickly scratches"
-	next "2-5 times.@"
+	db   "するどいツメやカマなどで　ひっかいて"
+	next "２ー５かい　れんぞくで　<KOUGEKI>@"
 
 BonemerangDescription:
-	db   "An attack that"
-	next "strikes twice.@"
+	db   "ホネ<WO>なげつけて　いきと　かえりで"
+	next "２かい　れんぞくで　<KOUGEKI>@"
 
 RestDescription:
-	db   "Sleep for 2 turns"
-	next "to fully recover.@"
+	db   "２ターン　ねむ<TTE>　たいりょくと"
+	next "からだのいじょう<WO>かいふくする@"
 
 RockSlideDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
+	db   "おおきな　いわ<WO>なげつける"
+	next "てき<WO>ひるませることがある@"
 
 HyperFangDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
+	db   "するどいまえばで　てき<WO><KOUGEKI>"
+	next "ひるませることがある@"
 
 SharpenDescription:
-	db   "A move that raises"
-	next "the user's ATTACK.@"
+	db   "ポリゴン<WO>へらし　カクカクにな<TTE>"
+	next "<KOUGEKI><WO>あげる@"
 
 ConversionDescription:
-	db   "Change user's type"
-	next "to a move's type.@"
+	db   "おぼえている　わざ<NO>タイプの"
+	next "どれか<NI>じぶん<NO>タイプ<WO>かえる@"
 
 TriAttackDescription:
-	db   "Fires three kinds"
-	next "of beams at once.@"
+	db   "３しゅるい<NO>こうせんを"
+	next "１つにまとめて　てき<NI>はっしゃする@"
 
 SuperFangDescription:
-	db   "Cuts the foe's HP"
-	next "by 1/2.@"
+	db   "するどいまえばで　<KOUGEKI>して"
+	next "てき<NO>たいりょく<WO>はんぶんにする@"
 
 SlashDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+	db   "するどいカマや　ツメなどで　<KOUGEKI>"
+	next "きゅうしょ<NI>あたりやすい@"
 
 SubstituteDescription:
-	db   "Makes a decoy with"
-	next "1/4 user's max HP.@"
+	db   "たいりょく<NO>４ぶんの１<WO>つか<TTE>"
+	next "じぶん<NO>ぶんしんをだす@"
 
 StruggleDescription:
-	db   "Used only if all"
-	next "PP are exhausted.@"
+	db   "わざポイントがなくなると　でるわざ"
+	next "じぶんもすこし　ダメージをうける@"
 
 SketchDescription:
-	db   "Copies the foe's"
-	next "move permanently.@"
+	db   "てき<GA>つかったわざ<WO>スケッチして"
+	next "そのわざ<WO>じぶんのもの<NI>する@"
 
 TripleKickDescription:
-	db   "Hits three times"
-	next "with rising power.@"
+	db   "てき<WO>３かい　れんぞくで　<KOUGEKI>"
+	next "あてるたび<NI>ダメージ<GA>あがる@"
 
 ThiefDescription:
-	db   "An attack that may"
-	next "steal a held item.@"
+	db   "<KOUGEKI><NO>さいちゅう<NI>すきをみて"
+	next "てき<GA>も<TTE>いる　どうぐ<WO>ぬすむ@"
 
 SpiderWebDescription:
-	db   "Prevents fleeing"
-	next "or switching.@"
+	db   "ネバネバとした　いと<WO>からませて"
+	next "てき<WO>にげられなく　してしまう@"
 
 MindReaderDescription:
-	db   "Ensures the next"
-	next "attack will hit.@"
+	db   "てき<NO>うごき<WO>こころで　かんじて"
+	next "つぎ<NO><KOUGEKI><WO>かならず　あてる@"
 
 NightmareDescription:
-	db   "A sleeper loses"
-	next "1/4 HP every turn.@"
+	db   "てき<GA>ねてるあいだ　たいりょくを"
+	next "まいターン　４ぶんの１　へらしていく@"
 
 FlameWheelDescription:
-	db   "An attack that may"
-	next "cause a burn.@"
+	db   "ほのお<WO>まと<TTE>　とっしんする"
+	next "てき<WO>やけどさせることがある@"
 
 SnoreDescription:
-	db   "An attack useable"
-	next "only while asleep.@"
+	db   "ねているときだけ　つかえる　わざ"
+	next "すごいいびきで　てき<WO><KOUGEKI>@"
 
 CurseDescription:
-	db   "Works differently"
-	next "for ghost-types.@"
+	db   "ゴーストタイプと　それいがいとでは"
+	next "わざ<NO>こうか<GA>ちがう@"
 
 FlailDescription:
-	db   "Stronger if the"
-	next "user's HP is low.@"
+	db   "じぶん<NO>たいりょく<GA>すくないほど"
+	next "てき<NI>おおきなダメージ<WO>あたえる@"
 
 Conversion2Description:
-	db   "The user's type is"
-	next "made resistant.@"
+	db   "うけたわざ<NO>タイプ<WO>じぶんの"
+	next "ていこうりょく<NI>かえる@"
 
 AeroblastDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+	db   "しんくうは<WO>はっしゃして　<KOUGEKI>"
+	next "きゅうしょ<NI>あたりやすい@"
 
 CottonSporeDescription:
-	db   "Sharply reduces"
-	next "the foe's SPEED.@"
+	db   "ほうし<WO>まとわりつかせ　てきの"
+	next "すばやさ<WO>ガクッとさげさせる@"
 
 ReversalDescription:
-	db   "Stronger if the"
-	next "user's HP is low.@"
+	db   "じぶん<NO>たいりょく<GA>すくないほど"
+	next "てき<NI>おおきなダメージ<WO>あたえる@"
 
 SpiteDescription:
-	db   "Cuts the PP of the"
-	next "foe's last move.@"
+	db   "あいて<GA>だした　わざ<WO>うらんで"
+	next "そ<NO>わざポイント<WO>へらしてしまう@"
 
 PowderSnowDescription:
-	db   "An attack that may"
-	next "cause freezing.@"
+	db   "ゆき<WO>かぜにのせて　<KOUGEKI>"
+	next "てき<WO>こおらせることがある@"
 
 ProtectDescription:
-	db   "Foils attack that"
-	next "turn. It may fail.@"
+	db   "そのターン<NO><KOUGEKI><WO>うけない"
+	next "れんぞくで　だすと　しっぱいしやすい@"
 
 MachPunchDescription:
-	db   "A fast punch that"
-	next "lands first.@"
+	db   "ものすごいはやさで　パンチをくりだし"
+	next "かならず　せんせい<KOUGEKI>する@"
 
 ScaryFaceDescription:
-	db   "Sharply reduces"
-	next "the foe's SPEED.@"
+	db   "こわいかおで　てき<WO>おびえさせて"
+	next "すばやさ<WO>ガクッとさげさせる@"
 
 FaintAttackDescription:
-	db   "An attack that"
-	next "never misses.@"
+	db   "てき<WO>ゆだんさせて　ちかづき"
+	next "よけられない　<KOUGEKI><WO>くりだす@"
 
 SweetKissDescription:
-	db   "A move that causes"
-	next "confusion.@"
+	db   "かわいい　かおで　キス<WO>せまる"
+	next "キスされると　こんらんしてしまう@"
 
 BellyDrumDescription:
-	db   "Reduces own HP to"
-	next "maximize ATTACK.@"
+	db   "じぶん<NO>たいりょく<WO>けず<TTE>"
+	next "<KOUGEKI><WO>さいだいまで　あげる@"
 
 SludgeBombDescription:
-	db   "An attack that may"
-	next "poison the foe.@"
+	db   "ヘドロ<WO>なげつけて　<KOUGEKI>"
+	next "てき<NI>どくをあたえることがある@"
 
 MudSlapDescription:
-	db   "Reduces the foe's"
-	next "accuracy.@"
+	db   "てき<NO>かおなど<NI>ドロをかけて"
+	next "めいちゅうりつ<WO>さげさせる@"
 
 OctazookaDescription:
-	db   "An attack that may"
-	next "reduce accuracy.@"
+	db   "すみ<NO>かたまり<WO>はっしゃして"
+	next "めいちゅうりつ<WO>さげさせる@"
 
 SpikesDescription:
-	db   "Hurts foes when"
-	next "they switch out.@"
+	db   "てき<NO>あしば<NI>わな<WO>しかけ"
+	next "こうたいした　てき<WO><KOUGEKI>する@"
 
 ZapCannonDescription:
-	db   "An attack that"
-	next "always paralyzes.@"
+	db   "あたりにくい<GA>ダメージ<WA>おおきい"
+	next "あたれば　かならず　まひさせる@"
 
 ForesightDescription:
-	db   "Negates accuracy"
-	next "reduction moves.@"
+	db   "わざ<GA>あたりにくくなった　てきに"
+	next "<KOUGEKI><WO>あてられるようになる@"
 
 DestinyBondDescription:
-	db   "The foe faints if"
-	next "the user does.@"
+	db   "このわざ<NO>あと<NI>たおされると"
+	next "てきも　せんとうふのうになる@"
 
 PerishSongDescription:
-	db   "Both user and foe"
-	next "faint in 3 turns.@"
+	db   "きいた　#<WA>３ターンごに"
+	next "せんとうふのう<NI>な<TTE>しまう@"
 
 IcyWindDescription:
-	db   "An icy attack that"
-	next "lowers SPEED.@"
+	db   "すごい　れいきで　てき<WO><KOUGEKI>"
+	next "すばやさ<WO>さげさせる@"
 
 DetectDescription:
-	db   "Evades attack that"
-	next "turn. It may fail.@"
+	db   "てき<NO><KOUGEKI><WO>かならずよける"
+	next "れんぞくで　だすと　しっぱいしやすい@"
 
 BoneRushDescription:
-	db   "An attack that"
-	next "hits 2-5 times.@"
+	db   "てにもった　ホネで　２ー５かい"
+	next "れんぞくで　てき<WO><KOUGEKI>する@"
 
 LockOnDescription:
-	db   "Ensures the next"
-	next "attack will hit.@"
+	db   "てき<NI>しょうじゅん<WO>あわせて"
+	next "つぎ<NO><KOUGEKI><WO>かならずあてる@"
 
 OutrageDescription:
-	db   "Works 2-3 turns"
-	next "and confuses user.@"
+	db   "２ー３ターンのあいだ　あばれつづける"
+	next "あばれたあと<WA>こんらんしてしまう@"
 
 SandstormDescription:
-	db   "Inflicts damage"
-	next "every turn.@"
+	db   "すなあらし<WO>はっせいさせて"
+	next "まいターン　ダメージ<WO>あたえる@"
 
 GigaDrainDescription:
-	db   "Steals 1/2 of the"
-	next "damage inflicted.@"
+	db   "てき<NI>あたえた　ダメージの"
+	next "はんぶん　たいりょく<WO>かいふくする@"
 
 EndureDescription:
-	db   "Always leaves at"
-	next "least 1HP.@"
+	db   "そのターンで　<KOUGEKI><WO>うけても"
+	next "かならず　たいりょく<GA>１のこる@"
 
 CharmDescription:
-	db   "Sharply lowers the"
-	next "foe's ATTACK.@"
+	db   "かわいくあまえて　てき<WO>ゆだんさせ"
+	next "<KOUGEKI><WO>ガクッとさげさせる@"
 
 RolloutDescription:
-	db   "Attacks 5 turns"
-	next "with rising power.@"
+	db   "５ターンのあいだ　てき<WO><KOUGEKI>"
+	next "あてるたび<NI>ダメージ<GA>あがる@"
 
 FalseSwipeDescription:
-	db   "Leaves the foe"
-	next "with at least 1HP.@"
+	db   "かならず　たいりょく<GA>１のこるよう"
+	next "てかげんして　<KOUGEKI>@"
 
 SwaggerDescription:
-	db   "Causes confusion"
-	next "and raises ATTACK.@"
+	db   "てき<WO>おこらせて　こんらんさせるが"
+	next "<KOUGEKI>も　グーンと　あげてしまう@"
 
 MilkDrinkDescription:
-	db   "Restores HP by 1/2"
-	next "the max HP.@"
+	db   "キズついた　からだ<WO>たいりょくの"
+	next "はんぶんだけ　かいふくする@"
 
 SparkDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
+	db   "でんき<WO>まと<TTE>　とっしんする"
+	next "てき<WO>まひさせることがある@"
 
 FuryCutterDescription:
-	db   "Successive hits"
-	next "raise power.@"
+	db   "れんぞくで　あてると"
+	next "いりょく<GA>ぞうだいしていく@"
 
 SteelWingDescription:
-	db   "Stiff wings strike"
-	next "the foe.@"
+	db   "かたいつばさ<WO>おおきく　ひろげて"
+	next "そのまま　てき<NI>たいあたりする@"
 
 MeanLookDescription:
-	db   "Prevents fleeing"
-	next "or switching.@"
+	db   "てき<WO>じーっと　みていると　なぜか"
+	next "てき<WA>にげられなく　な<TTE>しまう@"
 
 AttractDescription:
-	db   "Makes the opposite"
-	next "gender infatuated.@"
+	db   "オスなら　メス<NI>メスなら　オスに"
+	next "わざ<GA>だしにくくなる@"
 
 SleepTalkDescription:
-	db   "Randomly attacks"
-	next "while asleep.@"
+	db   "ねているときだけ　つかえる　わざ"
+	next "ランダムで　じぶんのわざ<WO>くりだす@"
 
 HealBellDescription:
-	db   "Eliminates all"
-	next "status problems.@"
+	db   "ここちよい　すずのね<WO>きかせて"
+	next "すべて<NO>じょうたい<WO>かいふくする@"
 
 ReturnDescription:
-	db   "An attack that is"
-	next "based on loyalty.@"
+	db   "よくしてくれる　トレーナー<NO>ために"
+	next "ぜんりょくで　てき<WO><KOUGEKI>@"
 
 PresentDescription:
-	db   "A bomb that may"
-	next "restore HP.@"
+	db   "てき<NI>ばくだん<WO>プレゼントする"
+	next "たま<NI>かいふくしてしまうことがある@"
 
 FrustrationDescription:
-	db   "An attack based on"
-	next "lack of loyalty.@"
+	db   "むごい　しうち<NO>うさばらしに"
+	next "てき<WO>ぜんりょくで　<KOUGEKI>@"
 
 SafeguardDescription:
-	db   "Prevents all"
-	next "status problems.@"
+	db   "ふしぎな　ちからで　まもられて"
+	next "とくしゅ　じょうたい<NI>ならなくなる@"
 
 PainSplitDescription:
-	db   "Adds user & foe's"
-	next "HPs. Shares total.@"
+	db   "てきと　じぶん<NO>たいりょくを"
+	next "たして　それ<WO>なかよく　わける@"
 
 SacredFireDescription:
-	db   "An attack that may"
-	next "inflict a burn.@"
+	db   "しんぴてきな　ほのおで　<KOUGEKI>"
+	next "てき<WO>やけどさせることがある@"
 
 MagnitudeDescription:
-	db   "A ground attack"
-	next "with random power.@"
+	db   "じめん<WO>ゆらして　てき<WO><KOUGEKI>"
+	next "ダメージ<WA>ランダムで　かわる@"
 
 DynamicpunchDescription:
-	db   "An attack that"
-	next "always confuses.@"
+	db   "あたりにくい<GA>ダメージ<WA>おおきい"
+	next "あたれば　かならず　こんらんさせる@"
 
 MegahornDescription:
-	db   "A powerful charge"
-	next "attack.@"
+	db   "かたいツノ<WO>ものすごい　いきおいで"
+	next "つきだして　<KOUGEKI>@"
 
 DragonbreathDescription:
-	db   "A strong breath"
-	next "attack.@"
+	db   "くちから　ものすごい　いきをはいて"
+	next "てき<WO><KOUGEKI>@"
 
 BatonPassDescription:
-	db   "Switches while"
-	next "keeping effects.@"
+	db   "ついかこうか<WO>のこしたまま"
+	next "ほか<NO>#と　いれかわる@"
 
 EncoreDescription:
-	db   "Makes the foe re-"
-	next "peat 2-6 times.@"
+	db   "てき<GA>さいご<NI>つかった　わざを"
+	next "２ー６かい　れんぞくで　ださせる@"
 
 PursuitDescription:
-	db   "Heavily strikes"
-	next "switching #MON.@"
+	db   "あいて<GA>こうかんするときに"
+	next "つかうと　だいダメージ<WO>あたえる@"
 
 RapidSpinDescription:
-	db   "A high-speed"
-	next "spinning attack.@"
+	db   "からだ<WO>はやく　かいてんさせて"
+	next "てき<WO><KOUGEKI>@"
 
 SweetScentDescription:
-	db   "Reduces the foe's"
-	next "evasiveness.@"
+	db   "あまいかおりで　き<WO>そらせて"
+	next "てき<NO>かいひりつ<WO>さげさせる@"
 
 IronTailDescription:
-	db   "An attack that may"
-	next "reduce DEFENSE.@"
+	db   "かたい　シッポで　てき<WO><KOUGEKI>"
+	next "てき<NO>ぼうぎょ<WO>さげることがある@"
 
 MetalClawDescription:
-	db   "An attack that may"
-	next "up user's ATTACK.@"
+	db   "かたいツメで　てき<WO><KOUGEKI>"
+	next "<KOUGEKI><GA>あがることがある@"
 
 VitalThrowDescription:
-	db   "A 2nd-strike move"
-	next "that never misses.@"
+	db   "あとぜめ<NI>なる<GA>かならず"
+	next "<KOUGEKI><GA>あたる@"
 
 MorningSunDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
+	db   "たいりょく<WO>かいふくする"
+	next "じかんで　かいふくりょう<GA>かわる@"
 
 SynthesisDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
+	db   "たいりょく<WO>かいふくする"
+	next "じかんで　かいふくりょう<GA>かわる@"
 
 MoonlightDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
+	db   "たいりょく<WO>かいふくする"
+	next "じかんで　かいふくりょう<GA>かわる@"
 
 HiddenPowerDescription:
-	db   "The power varies"
-	next "with the #MON.@"
+	db   "#によ<TTE>　てき<NI>あたえる"
+	next "ダメージ<NO>りょう<GA>へんかする@"
 
 CrossChopDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
+	db   "りょうてチョップで　てき<WO><KOUGEKI>"
+	next "きゅうしょ<NI>あたりやすい@"
 
 TwisterDescription:
-	db   "Whips up a tornado"
-	next "to attack.@"
+	db   "ものすごい　かぜ<WO>おこして"
+	next "てき<WO><KOUGEKI>@"
 
 RainDanceDescription:
-	db   "Boosts water-type"
-	next "moves for 5 turns.@"
+	db   "５ターンのあいだ　みずタイプの"
+	next "わざ<NO>いりょく<GA>あがる@"
 
 SunnyDayDescription:
-	db   "Boosts fire-type"
-	next "moves for 5 turns.@"
+	db   "５ターンのあいだ　ほのおタイプの"
+	next "わざ<NO>いりょく<GA>あがる@"
 
 CrunchDescription:
-	db   "An attack that may"
-	next "lower SPCL.DEF.@"
+	db   "するどい　はで　てき<WO>かみくだく"
+	next "とくしゅぼうぎょ<WO>さげることがある@"
 
 MirrorCoatDescription:
-	db   "Counters a SPCL."
-	next "ATK. move double.@"
+	db   "てきから　うけた　とくしゅ<KOUGEKI>の"
+	next "ダメージ<WO>ばいにして　かえす@"
 
 PsychUpDescription:
-	db   "Copies the foe's"
-	next "stat changes.@"
+	db   "てき<NI>かか<TTE>いる　ほじょこうかを"
+	next "じぶんにも　かける@"
 
 ExtremespeedDescription:
-	db   "A powerful first-"
-	next "strike move.@"
+	db   "ものすごい　はやさで　うごいて"
+	next "ちからづよい　<KOUGEKI>をする@"
 
 AncientpowerDescription:
-	db   "An attack that may"
-	next "raise all stats.@"
+	db   "げんし<NO>ちから<WO>よびさます"
+	next "のうりょく<GA>あがることがある@"
 
 ShadowBallDescription:
-	db   "An attack that may"
-	next "lower SPCL.DEF.@"
+	db   "くろいかたまり<WO>なげて　<KOUGEKI>"
+	next "とくしゅぼうぎょ<WO>さげることがある@"
 
 FutureSightDescription:
-	db   "An attack that"
-	next "hits on 3rd turn.@"
+	db   "せいしんりょく<WO>たかめて"
+	next "２ターンご<NI>てき<WO><KOUGEKI>する@"
 
 RockSmashDescription:
-	db   "An attack that may"
-	next "lower DEFENSE.@"
+	db   "いわ<WO>くだく　いきおいで　<KOUGEKI>"
+	next "てき<NO>ぼうぎょ<WO>さげることがある@"
 
 WhirlpoolDescription:
-	db   "Traps the foe for"
-	next "2-5 turns.@"
+	db   "２ー５ターンのあいだ　てきを"
+	next "うず<NO>ちゅうしん<NI>とじこめる@"
 
 BeatUpDescription:
-	db   "Party #MON join"
-	next "in the attack.@"
+	db   "なかま<NO>#が"
+	next "<KOUGEKI><NI>さんか　してくれる@"

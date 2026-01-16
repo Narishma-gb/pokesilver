@@ -1,4 +1,3 @@
-EXPORT DEF wMonOrItemNameBuffer EQU $CF72
 EXPORT DEF wNewGameResetWIP EQU $D18B
 EXPORT DEF wOptions EQU $D1AB
 EXPORT DEF wSaveFileExists EQU $D1AC

@@ -1685,12 +1685,12 @@ wOBP1:: db
 
 wBattleAfterAnim:: db
 
-	ds 22
-/*
+	ds 1
+
 wMonOrItemNameBuffer:: ds NAME_LENGTH
 	ds NAME_LENGTH
 wTMHMMoveNameBackup:: ds MOVE_NAME_LENGTH
-*/
+	ds 1
 wStringBuffer1:: ds STRING_BUFFER_LENGTH
 wStringBuffer2:: ds STRING_BUFFER_LENGTH
 wStringBuffer3:: ds STRING_BUFFER_LENGTH

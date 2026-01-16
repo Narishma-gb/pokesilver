@@ -18,7 +18,7 @@ StageDataForMysteryGift:
 	ld hl, sPlayerData + wPlayerName - wPlayerData
 	ld bc, NAME_LENGTH
 	call CopyBytes
-	push de ; wMysteryGiftStaging+14
+	push de ; wMysteryGiftStaging+9
 	ld hl, sPokemonData + wPokedexCaught - wPokemonData
 	ld b, wEndPokedexCaught - wPokedexCaught
 	call CountSetBits
@@ -26,21 +26,21 @@ StageDataForMysteryGift:
 	pop bc
 	ld a, [wNumSetBits]
 	ld [de], a
-	inc de ; wMysteryGiftStaging+15
+	inc de ; wMysteryGiftStaging+10
 	call CloseSRAM
 	call Random
 	and 1
 	ld [de], a
-	inc de ; wMysteryGiftStaging+16
+	inc de ; wMysteryGiftStaging+11
 	call .RandomSample
 	ld [de], a
-	inc de ; wMysteryGiftStaging+17
+	inc de ; wMysteryGiftStaging+12
 	ld a, c
 	ld c, b
 	ld b, a
 	call .RandomSample
 	ld [de], a
-	inc de ; wMysteryGiftStaging+18
+	inc de ; wMysteryGiftStaging+13
 	ld a, BANK(sBackupMysteryGiftItem)
 	call OpenSRAM
 	ld a, [sBackupMysteryGiftItem]

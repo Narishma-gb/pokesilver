@@ -60,36 +60,49 @@ MoveDeletion:
 	ret
 
 .MoveKnowsOneText:
-	text_far _MoveKnowsOneText
-	text_end
+	text "その#は　わざを　１つしか"
+	line "もってないよ"
+	done
 
 .AskDeleteMoveText:
-	text_far _AskDeleteMoveText
-	text_end
+	text "おお！　@"
+	text_ram wStringBuffer1
+	text "だね？"
+	done
 
 .DeleterForgotMoveText:
-	text_far _DeleterForgotMoveText
-	text_end
+	text "だいせいこう！きみの　#"
+	line "わざ　わすれたよ"
+	done
 
 .MailEggText:
-	text_far _DeleterEggText
-	text_end
+	text "おいおい"
+	line "それは　タマゴだよ"
+	done
 
 .DeleterNoComeAgainText:
-	text_far _DeleterNoComeAgainText
-	text_end
+	text "そうか　わすれさせたい　わざが"
+	line "あったら　また　きてよ"
+	done
 
 .DeleterAskWhichMoveText:
-	text_far _DeleterAskWhichMoveText
-	text_end
+	text "どの　わざを"
+	line "わすれさせるんだい？"
+	prompt
 
 .DeleterIntroText:
-	text_far _DeleterIntroText
-	text_end
+	text "えーと⋯⋯"
+	line "そうだ　わし　わすれオヤジ"
+
+	para "#の　わざを"
+	line "わすれさせることが　できるんだ"
+
+	para "わざを　わすれさせるかい？"
+	done
 
 .DeleterAskWhichMonText:
-	text_far _DeleterAskWhichMonText
-	text_end
+	text "どの　#？"
+	prompt
 
 .DeleteMove:
 	ld a, b

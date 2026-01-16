@@ -265,4 +265,4 @@ PrintHexNumber::
 	ret
 
 .HexDigits:
-	db "０１２３４５６７８９ABCDEF"
+	db "０１２３４５６７８９ＡＢＣＤＥＦ"

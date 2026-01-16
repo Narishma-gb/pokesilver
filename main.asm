@@ -142,16 +142,19 @@ INCLUDE "engine/link/mystery_gift.asm"
 INCLUDE "engine/overworld/wildmons.asm"
 
 
-;SECTION "bankB", ROMX
+SECTION "bankB", ROMX
 
-;INCLUDE "engine/items/print_item_description.asm"
-;INCLUDE "engine/battle/trainer_huds.asm"
-;INCLUDE "engine/battle/ai/redundant.asm"
-;INCLUDE "engine/events/move_deleter.asm"
-;INCLUDE "engine/link/mystery_gift_2.asm"
-;INCLUDE "engine/items/tmhm.asm"
-;INCLUDE "engine/pokemon/print_move_description.asm"
-;INCLUDE "engine/events/pokerus/pokerus.asm"
+INCLUDE "engine/items/print_item_description.asm"
+INCLUDE "data/items/descriptions.asm"
+INCLUDE "engine/battle/trainer_huds.asm"
+INCLUDE "data/trainers/class_names.asm"
+INCLUDE "engine/battle/ai/redundant.asm"
+INCLUDE "engine/events/move_deleter.asm"
+INCLUDE "engine/link/mystery_gift_2.asm"
+INCLUDE "engine/items/tmhm.asm"
+INCLUDE "engine/pokemon/print_move_description.asm"
+INCLUDE "data/moves/descriptions.asm"
+INCLUDE "engine/events/pokerus/pokerus.asm"
 
 
 ;SECTION "Effect Commands", ROMX
@@ -185,6 +188,8 @@ SECTION "bank11", ROMX
 INCLUDE "engine/events/fruit_trees.asm"
 INCLUDE "engine/battle/ai/move.asm"
 INCLUDE "engine/pokedex/pokedex_2.asm"
+
+
 ;INCLUDE "engine/battle/start_battle.asm"
 ;INCLUDE "engine/gfx/place_graphic.asm"
 ;INCLUDE "engine/pokemon/mail.asm"
@@ -346,19 +351,8 @@ INCLUDE "engine/pokedex/pokedex_2.asm"
 
 ;SECTION "Names", ROMX
 
-;INCLUDE "data/trainers/class_names.asm"
 ;INCLUDE "data/pokemon/names.asm"
 ;INCLUDE "data/moves/names.asm"
-
-
-;SECTION "Move Descriptions", ROMX
-
-;INCLUDE "data/moves/descriptions.asm"
-
-
-;SECTION "Item Descriptions", ROMX
-
-;INCLUDE "data/items/descriptions.asm"
 
 
 ;SECTION "bank70", ROMX

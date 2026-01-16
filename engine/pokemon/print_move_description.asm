@@ -7,10 +7,8 @@ PrintMoveDescription:
 	ld b, 0
 	add hl, bc
 	add hl, bc
-	ld a, BANK(MoveDescriptions)
-	call GetFarWord
-	ld d, h
-	ld e, l
+	ld a, [hli]
+	ld e, a
+	ld d, [hl]
 	pop hl
-	ld a, BANK(MoveDescriptions)
-	jp PlaceFarString
+	jp PlaceString

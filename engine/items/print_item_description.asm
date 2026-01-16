@@ -23,10 +23,8 @@ PrintItemDescription:
 	ld b, 0
 	add hl, bc
 	add hl, bc
-	ld a, BANK(ItemDescriptions)
-	call GetFarWord
-	ld d, h
-	ld e, l
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
 	pop hl
-	ld a, BANK(ItemDescriptions)
-	jp PlaceFarString
+	jp PlaceString

@@ -81,31 +81,12 @@ MACRO set_bank_offset
 ENDM
 
 
-EXPORT DEF MoveDescriptions EQU $5CF7
 EXPORT DEF EggPic EQU $7F21
 
 ;INCLUDE "constants_wip.asm"
 INCLUDE "main.asm"
 	set_gs_diff 0
 
-
-SECTION "rom11", ROMX, BANK[11]
-; ROM $0b : $2C000 - $2FFFF
-	set_bank_offset 11
-
-	dr PrintItemDescription, $4000
-	dr TrainerClassNames, $52d6
-	dr MoveDeletion, $55e2
-	dr StageDataForMysteryGift, $5771
-	dr MysteryGiftGetItem, $5837
-	dr MysteryGiftGetDecoration, $5844
-	dr TMHMPocket, $589e
-	dr AskTeachTMHM, $58ee
-	dr ChooseMonToLearnTMHM, $592a
-	dr TeachTMHM, $5996
-	dr PrintMoveDescription, $5ce3
-
-	dr_end
 
 SECTION "rom13", ROMX, BANK[13]
 ; ROM $0d : $34000 - $37FFF
@@ -116,6 +97,7 @@ SECTION "rom13", ROMX, BANK[13]
 	dr BattleCommand_StatUpMessage, $64d3
 	dr BattleCommand_StatUpFailText, $657f
 	dr CalcPlayerStats, $66ff
+	dr CheckOppositeGender, $7941
 	dr GetItemHeldEffect, $7ee8
 
 	dr_end
@@ -132,6 +114,7 @@ AIScoring::
 	dr AI_Types, $4645
 	dr AI_Offensive, $46b2
 	dr AI_Smart, $46ce
+	dr AICheckEnemyMaxHP, $5235
 	dr AI_Opportunist, $52f9
 	dr AI_Aggressive, $534d
 	dr AI_Cautious, $53fc

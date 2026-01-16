@@ -61,7 +61,8 @@ ROMX $09
 ROMX $0a
 	"bankA"
 ROMX $0b
-	; "bankB"
+	"bankB"
+	; "Garbage 11"
 ROMX $0c
 	"Tileset Data 4"
 ROMX $0d
@@ -249,10 +250,6 @@ ROMX $63
 ; 	"Text 3"
 ; ROMX $6c
 ; 	"Names"
-; ROMX $6d
-; 	"Move Descriptions"
-; ROMX $6e
-; 	"Item Descriptions"
 ; ROMX $70
 ; 	"bank70"
 ; 	"bank70_2"

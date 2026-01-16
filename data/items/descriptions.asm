@@ -261,750 +261,715 @@ ItemDescriptions:
 	assert_table_length $100
 
 MasterBallDesc:
-	db   "The best BALL. It"
-	next "never misses.@"
+	db   "#<WO>かならず　つかまえられる"
+	next "さいこう<NO>ボール@"
 
 UltraBallDesc:
-	db   "A BALL with a high"
-	next "rate of success.@"
+	db   "たかい　かくりつで　#を"
+	next "つかまえること<GA>できる　ボール@"
 
 BrightpowderDesc:
-	db   "Lowers the foe's"
-	next "accuracy. (HOLD)@"
+	db   "もたせると　ひかりで　まどわし"
+	next "あいて<NO>めいちゅうりつ<WO>さげる@"
 
 GreatBallDesc:
-	db   "A BALL with a de-"
-	next "cent success rate.@"
+	db   "#<WO>つかまえるため<NO>どうぐ"
+	next "モンスターボールより　こうせいのう@"
 
 PokeBallDesc:
-	db   "An item for catch-"
-	next "ing #MON.@"
+	db   "#<WO>つかまえるため<NO>どうぐ@"
 
 TeruSama1Desc:
-	db   "?@"
+	db   "？@"
 
 BicycleDesc:
-	db   "A collapsible bike"
-	next "for fast movement.@"
+	db   "２ばい<NO>はやさで　いどうできる"
+	next "おりたたみしき　じてんしゃ@"
 
 MoonStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "とくていの#<WO>しんかさせる@"
 
 AntidoteDesc:
-	db   "Cures poisoned"
-	next "#MON.@"
+	db   "どく　じょうたい<WO>かいふくする@"
 
 BurnHealDesc:
-	db   "Heals burned"
-	next "#MON.@"
+	db   "やけど　じょうたい<WO>かいふくする@"
 
 IceHealDesc:
-	db   "Defrosts frozen"
-	next "#MON.@"
+	db   "こおり　じょうたい<WO>かいふくする@"
 
 AwakeningDesc:
-	db   "Awakens sleeping"
-	next "#MON.@"
+	db   "ねむり　じょうたい<WO>かいふくする@"
 
 ParlyzHealDesc:
-	db   "Heals paralyzed"
-	next "#MON.@"
+	db   "まひ　じょうたい<WO>かいふくする@"
 
 FullRestoreDesc:
-	db   "Fully restores HP"
-	next "& status.@"
+	db   "すべて<NO>じょうたい　いじょうと"
+	next "たいりょく<WO>ぜんかいふくする@"
 
 MaxPotionDesc:
-	db   "Fully restores"
-	next "#MON HP.@"
+	db   "たいりょく<WO>ぜんかいふくする@"
 
 HyperPotionDesc:
-	db   "Restores #MON"
-	next "HP by 200.@"
+	db   "たいりょく<WO>２００　かいふくする@"
 
 SuperPotionDesc:
-	db   "Restores #MON"
-	next "HP by 50.@"
+	db   "たいりょく<WO>５０　かいふくする@"
 
 PotionDesc:
-	db   "Restores #MON"
-	next "HP by 20.@"
+	db   "たいりょく<WO>２０　かいふくする@"
 
 EscapeRopeDesc:
-	db   "Use for escaping"
-	next "from caves, etc.@"
+	db   "どうくつなどから　ぬけだせる@"
 
 RepelDesc:
-	db   "Repels weak #-"
-	next "MON for 100 steps.@"
+	db   "１００ぽのあいだ　よわい#と"
+	next "そうぐう　しなくなる@"
 
 MaxElixerDesc:
-	db   "Fully restores the"
-	next "PP of one #MON.@"
+	db   "#１ぴき<NO>すべて<NO>わざの"
+	next "ポイント<WO>ぜんかいふく　させる@"
 
 FireStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "とくていの#<WO>しんかさせる@"
 
 ThunderStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "とくていの#<WO>しんかさせる@"
 
 WaterStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "とくていの#<WO>しんかさせる@"
 
 TeruSama2Desc:
-	db   "?@"
+	db   "？@"
 
 HPUpDesc:
-	db   "Raises the HP of"
-	next "one #MON.@"
+	db   "たいりょく<NO>きそポイント<WO>あげる@"
 
 ProteinDesc:
-	db   "Raises ATTACK of"
-	next "one #MON.@"
+	db   "<KOUGEKI><NO>きそポイント<WO>あげる@"
 
 IronDesc:
-	db   "Raises DEFENSE of"
-	next "one #MON.@"
+	db   "ぼうぎょ<NO>きそポイント<WO>あげる@"
 
 CarbosDesc:
-	db   "Raises SPEED of"
-	next "one #MON.@"
+	db   "すばやさ<NO>きそポイント<WO>あげる@"
 
 LuckyPunchDesc:
-	db   "Ups critical hit"
-	next "ratio of CHANSEY.@"
+	db   "ラッキー<NI>もたせると"
+	next "きゅうしょ<NI>あたりやすくなる@"
 
 CalciumDesc:
-	db   "Ups SPECIAL stats"
-	next "of one #MON.@"
+	db   "とくしゅ<KOUGEKI>　とくしゅぼうぎょの"
+	next "きそポイント<WO>あげる@"
 
 RareCandyDesc:
-	db   "Raises level of a"
-	next "#MON by one.@"
+	db   "#<NO>レベル<WO>１　あげる@"
 
 XAccuracyDesc:
-	db   "Raises accuracy."
-	next "(1 BTL)@"
+	db   "しようした　せんとうちゅうだけ"
+	next "わざ<GA>あたりやすくなる@"
 
 LeafStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "とくていの#<WO>しんかさせる@"
 
 MetalPowderDesc:
-	db   "Raises DEFENSE of"
-	next "DITTO. (HOLD)@"
+	db   "メタモン<NI>もたせると"
+	next "ぼうぎょりょく<GA>あがる@"
 
 NuggetDesc:
-	db   "Made of pure gold."
-	next "Sell high.@"
+	db   "じゅんきん　せい"
+	next "たかく　うれる@"
 
 PokeDollDesc:
-	db   "Use to escape from"
-	next "a wild #MON.@"
+	db   "そうぐうした　やせいの#から"
+	next "かならず　にげられる@"
 
 FullHealDesc:
-	db   "Eliminates all"
-	next "status problems.@"
+	db   "すべて<NO>じょうたい　いじょうを"
+	next "かいふくする@"
 
 ReviveDesc:
-	db   "Restores a fainted"
-	next "#MON to 1/2 HP.@"
+	db   "たいりょく　はんぶん<NO>じょうたいで"
+	next "ひんしじょうたいから　かいふくする@"
 
 MaxReviveDesc:
-	db   "Fully restores a"
-	next "fainted #MON.@"
+	db   "たいりょく　ぜんかい<NO>じょうたいで"
+	next "ひんしじょうたいから　かいふくする@"
 
 GuardSpecDesc:
-	db   "Prevents stat"
-	next "reduction. (1 BTL)@"
+	db   "しようした　せんとうちゅうだけ"
+	next "のうりょく<WO>さげられなくする@"
 
 SuperRepelDesc:
-	db   "Repels weak #-"
-	next "MON for 200 steps.@"
+	db   "２００ぽのあいだ　よわい　#と"
+	next "そうぐう　しなくなる@"
 
 MaxRepelDesc:
-	db   "Repels weak #-"
-	next "MON for 250 steps.@"
+	db   "２５０ぽのあいだ　よわい　#と"
+	next "そうぐう　しなくなる@"
 
 DireHitDesc:
-	db   "Ups critical hit"
-	next "ratio. (1 BTL)@"
+	db   "しようした　せんとうちゅうだけ"
+	next "きゅうしょ<NI>あたりやすくなる@"
 
 TeruSama3Desc:
-	db   "?@"
+	db   "？@"
 
 FreshWaterDesc:
-	db   "Restores #MON"
-	next "HP by 50.@"
+	db   "シロガネやまで　とれた"
+	next "たいりょく<WO>５０かいふくする@"
 
 SodaPopDesc:
-	db   "Restores #MON"
-	next "HP by 60.@"
+	db   "ジュワーっと　そうかい"
+	next "たいりょく<WO>６０かいふくする@"
 
 LemonadeDesc:
-	db   "Restores #MON"
-	next "HP by 80.@"
+	db   "と<TTE>も　あまーい"
+	next "たいりょく<WO>８０かいふくする@"
 
 XAttackDesc:
-	db   "Raises ATTACK."
-	next "(1 BTL)@"
+	db   "しようした　せんとうちゅうだけ"
+	next "<KOUGEKI>りょく<GA>あがる@"
 
 TeruSama4Desc:
-	db   "?@"
+	db   "？@"
 
 XDefendDesc:
-	db   "Raises DEFENSE."
-	next "(1 BTL)@"
+	db   "しようした　せんとうちゅうだけ"
+	next "ぼうぎょりょく<GA>あがる@"
 
 XSpeedDesc:
-	db   "Raises SPEED."
-	next "(1 BTL)@"
+	db   "しようした　せんとうちゅうだけ"
+	next "すばやさ<GA>あがる@"
 
 XSpecialDesc:
-	db   "Raises SPECIAL"
-	next "stats. (1 BTL)@"
+	db   "しようした　せんとうちゅうだけ"
+	next "とくしゅ<KOUGEKI>りょく<GA>あがる@"
 
 CoinCaseDesc:
-	db   "Holds up to 9,999"
-	next "game coins.@"
+	db   "てにいれた　コインを"
+	next "９９９９まいまで　もつこと<GA>できる@"
 
 ItemfinderDesc:
-	db   "Checks for unseen"
-	next "items in the area.@"
+	db   "みえない　どうぐ<NI>はんのうして"
+	next "おとで　おしえて　くれる@"
 
 TeruSama5Desc:
-	db   "?@"
+	db   "？@"
 
 ExpShareDesc:
-	db   "Shares battle EXP."
-	next "points. (HOLD)@"
+	db   "も<TTE>いるだけで　けいけんちを"
+	next "わけて　もらえる@"
 
 OldRodDesc:
-	db   "Use by water to"
-	next "fish for #MON.@"
+	db   "みずべで　つかうと"
+	next "#<GA>つれる@"
 
 GoodRodDesc:
-	db   "A good ROD for"
-	next "catching #MON.@"
+	db   "#<WO>つるため<NO>どうぐ"
+	next "すこし　いい　つりざお@"
 
 SilverLeafDesc:
-	db   "A strange, silver-"
-	next "colored leaf.@"
+	db   "ぎんいろ<NO>ふしぎな　はっぱ@"
 
 SuperRodDesc:
-	db   "The best ROD for"
-	next "catching #MON.@"
+	db   "#<WO>つるため<NO>どうぐ"
+	next "さいこう<NO>つりざおとして　ゆうめい@"
 
 PPUpDesc:
-	db   "Raises max PP of"
-	next "a selected move.@"
+	db   "わざポイント<NO>さいだいち<GA>あがる@"
 
 EtherDesc:
-	db   "Restores PP of one"
-	next "move by 10.@"
+	db   "１つ<NO>わざ<NO>わざポイントを"
+	next "１０かいふくする@"
 
 MaxEtherDesc:
-	db   "Fully restores PP"
-	next "of one move.@"
+	db   "１つ<NO>わざ<NO>わざポイントを"
+	next "ぜんかいふくする@"
 
 ElixerDesc:
-	db   "Restores PP of all"
-	next "moves by 10.@"
+	db   "すべて<NO>わざ<NO>わざポイントを"
+	next "１０かいふくする@"
 
 RedScaleDesc:
-	db   "A scale from the"
-	next "red GYARADOS.@"
+	db   "いかりのみずうみ<NI>あらわれた"
+	next "あかい　ギャラドス<NO>ウロコ@"
 
 SecretPotionDesc:
-	db   "Fully heals any"
-	next "#MON.@"
+	db   "どんな　#も　げんきになる@"
 
 SSTicketDesc:
-	db   "A ticket for the"
-	next "S.S.AQUA.@"
+	db   "こうそくせん　アクアごうに"
+	next "のるため<NO>もの@"
 
 MysteryEggDesc:
-	db   "An EGG obtained"
-	next "from MR.#MON.@"
+	db   "#じいさんから<NO>あずかりもの"
+	next "なん<NO>タマゴか　わからない@"
 
 TeruSama6Desc:
-	db   "?@"
+	db   "？@"
 
 SilverWingDesc:
-	db   "A strange, silver-"
-	next "colored feather.@"
+	db   "ぎんいろ<NI>かがやく　ふしぎな　はね@"
 
 MoomooMilkDesc:
-	db   "Restores #MON"
-	next "HP by 100.@"
+	db   "えいよう　まんてん"
+	next "たいりょく<WO>１００かいふくする@"
 
 QuickClawDesc:
-	db   "Raises 1st strike"
-	next "ratio. (HOLD)@"
+	db   "もたせると　たまに"
+	next "せんせい<KOUGEKI><GA>できる@"
 
 PsnCureBerryDesc:
-	db   "A self-cure for"
-	next "poison. (HOLD)@"
+	db   "もたせると　じぶんで"
+	next "どく　じょうたい<WO>かいふくする@"
 
 GoldLeafDesc:
-	db   "A strange, gold-"
-	next "colored leaf.@"
+	db   "きんいろ<NO>ふしぎな　はっぱ@"
 
 SoftSandDesc:
-	db   "Powers up ground-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　じめんタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 SharpBeakDesc:
-	db   "Powers up flying-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　ひこうタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 PrzCureBerryDesc:
-	db   "A self-cure for"
-	next "paralysis. (HOLD)@"
+	db   "もたせると　じぶんで"
+	next "まひ　じょうたい<WO>かいふくする@"
 
 BurntBerryDesc:
-	db   "A self-cure for"
-	next "freezing. (HOLD)@"
+	db   "もたせると　じぶんで"
+	next "こおり　じょうたい<WO>かいふくする@"
 
 IceBerryDesc:
-	db   "A self-heal for a"
-	next "burn. (HOLD)@"
+	db   "もたせると　じぶんで"
+	next "やけど　じょうたい<WO>かいふくする@"
 
 PoisonBarbDesc:
-	db   "Powers up poison-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　どくタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 KingsRockDesc:
-	db   "May make the foe"
-	next "flinch. (HOLD)@"
+	db   "もたせると　たまに"
+	next "たいせん#<GA>ひるむ@"
 
 BitterBerryDesc:
-	db   "A self-cure for"
-	next "confusion. (HOLD)@"
+	db   "もたせると　じぶんで"
+	next "こんらん　じょうたい<WO>かいふくする@"
 
 MintBerryDesc:
-	db   "A self-awakening"
-	next "for sleep. (HOLD)@"
+	db   "もたせると　じぶんで"
+	next "ねむり　じょうたい<WO>かいふくする@"
 
 RedApricornDesc:
-	db   "A red APRICORN.@"
+	db   "あかい　ぼんぐり@"
 
 TinyMushroomDesc:
-	db   "An ordinary mush-"
-	next "room. Sell low.@"
+	db   "ふつう<NO>キノコ"
+	next "やすく　うれる@"
 
 BigMushroomDesc:
-	db   "A rare mushroom."
-	next "Sell high.@"
+	db   "めずらしい　キノコ"
+	next "たかく　うれる@"
 
 SilverPowderDesc:
-	db   "Powers up bug-type"
-	next "moves. (HOLD)@"
+	db   "もたせると　むしタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 BluApricornDesc:
-	db   "A blue APRICORN.@"
+	db   "あおい　ぼんぐり@"
 
 TeruSama7Desc:
-	db   "?@"
+	db   "？@"
 
 AmuletCoinDesc:
-	db   "Doubles monetary"
-	next "earnings. (HOLD)@"
+	db   "もたせた　#<WO>たたかいに"
+	next "だすと　もらえる　おかね<GA>２ばい@"
 
 YlwApricornDesc:
-	db   "A yellow APRICORN.@"
+	db   "きいろ<NO>ぼんぐり@"
 
 GrnApricornDesc:
-	db   "A green APRICORN.@"
+	db   "みどり<NO>ぼんぐり@"
 
 CleanseTagDesc:
-	db   "Helps repel wild"
-	next "#MON. (HOLD)@"
+	db   "もたせると　やせい#に"
+	next "そうぐう　しにくく　なる@"
 
 MysticWaterDesc:
-	db   "Powers up water-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　みずタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 TwistedSpoonDesc:
-	db   "Powers up psychic-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　エスパータイプの"
+	next "わざのいりょく<GA>あがる@"
 
 WhtApricornDesc:
-	db   "A white APRICORN.@"
+	db   "しろい　ぼんぐり@"
 
 BlackbeltDesc:
-	db   "Boosts fighting-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　かくとうタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 BlkApricornDesc:
-	db   "A black APRICORN."
-	next "@"
+	db   "くろい　ぼんぐり@"
 
 TeruSama8Desc:
-	db   "?@"
+	db   "？@"
 
 PnkApricornDesc:
-	db   "A pink APRICORN."
-	next "@"
+	db   "ももいろ<NO>ぼんぐり@"
 
 BlackGlassesDesc:
-	db   "Powers up dark-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　あくタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 SlowpokeTailDesc:
-	db   "Very tasty. Sell"
-	next "high.@"
+	db   "とても　おいしい"
+	next "たかく　うれる@"
 
 PinkBowDesc:
-	db   "Powers up normal-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　ノーマルタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 StickDesc:
-	db   "An ordinary stick."
-	next "Sell low.@"
+	db   "ふつう<NO>ながねぎ"
+	next "やすく　うれる@"
 
 SmokeBallDesc:
-	db   "Escape from wild"
-	next "#MON. (HOLD)@"
+	db   "そうぐうした　やせいの#から"
+	next "かならず　にげられる@"
 
 NeverMeltIceDesc:
-	db   "Powers up ice-type"
-	next "moves. (HOLD)@"
+	db   "もたせると　こおりタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 MagnetDesc:
-	db   "Boosts electric-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　でんきタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 MiracleBerryDesc:
-	db   "Cures all status"
-	next "problems. (HOLD)@"
+	db   "もたせると　じぶんで　すべての"
+	next "じょうたい　いじょう<WO>かいふくする@"
 
 PearlDesc:
-	db   "A beautiful pearl."
-	next "Sell low.@"
+	db   "きれいな　しんじゅ"
+	next "やすく　うれる@"
 
 BigPearlDesc:
-	db   "A big, beautiful"
-	next "pearl. Sell high.@"
+	db   "きれいな　おおつぶ<NO>しんじゅ"
+	next "たかく　うれる@"
 
 EverStoneDesc:
-	db   "Stops evolution."
-	next "(HOLD)@"
+	db   "もたせた　#<GA>しんか"
+	next "しなくなる　ふしぎな　いし@"
 
 SpellTagDesc:
-	db   "Powers up ghost-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　ゴーストタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 RageCandyBarDesc:
-	db   "Restores #MON"
-	next "HP by 20.@"
+	db   "チョウジめいぶつ<NO>まんじゅう"
+	next "たいりょく<WO>２０かいふくする@"
 
 TeruSama9Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama10Desc:
-	db   "?@"
+	db   "？@"
 
 MiracleSeedDesc:
-	db   "Powers up grass-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　くさタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 ThickClubDesc:
-	db   "A bone of some"
-	next "sort. Sell low.@"
+	db   "なにか<NO>ホネ"
+	next "やすく　うれる@"
 
 FocusBandDesc:
-	db   "May prevent faint-"
-	next "ing. (HOLD)@"
+	db   "も<TTE>いる　#は"
+	next "きぜつ　しない　ことがある@"
 
 TeruSama11Desc:
-	db   "?@"
+	db   "？@"
 
 EnergyPowderDesc:
-	db   "Restores #MON"
-	next "HP by 50. Bitter.@"
+	db   "たいりょく<WO>５０　かいふくする"
+	next "とても　にがい　こな@"
 
 EnergyRootDesc:
-	db   "Restores #MON"
-	next "HP by 200. Bitter.@"
+	db   "たいりょく<WO>２００　かいふくする"
+	next "とても　にがい　ねっこ@"
 
 HealPowderDesc:
-	db   "Cures all status"
-	next "problems. Bitter.@"
+	db   "すべて<NO>じょうたい　いじょうを"
+	next "なおす<GA>とても　にがい@"
 
 RevivalHerbDesc:
-	db   "Revives fainted"
-	next "#MON. Bitter.@"
+	db   "ひんしした　#<WO>かいふく"
+	next "させる<GA>とても　にがい@"
 
 HardStoneDesc:
-	db   "Powers up rock-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　いわタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 LuckyEggDesc:
-	db   "Earns extra EXP."
-	next "points. (HOLD)@"
+	db   "も<TTE>いる　#<WA>けいけんちを"
+	next "すこし　おおめ<NI>もらえる@"
 
 CardKeyDesc:
-	db   "Opens shutters in"
-	next "the RADIO TOWER.@"
+	db   "ラジオきょく<NO>シャッターを"
+	next "あけること<GA>できる@"
 
 MachinePartDesc:
-	db   "A machine part for"
-	next "the POWER PLANT.@"
+	db   "はつでんしょ<NO>きかいのぶひん@"
 
 TeruSama12Desc:
-	db   "?@"
+	db   "？@"
 
 LostItemDesc:
-	db   "The # DOLL lost"
-	next "by the COPYCAT.@"
+	db   "モノマネむすめ<GA>なくした"
+	next "ピッピにんぎょう@"
 
 StardustDesc:
-	db   "Pretty, red sand."
-	next "Sell high.@"
+	db   "あかくて　きれいな　すな"
+	next "たかく　うれる@"
 
 StarPieceDesc:
-	db   "A hunk of red gem."
-	next "Sell very high.@"
+	db   "あかくて　きれいな　ほうせきのかけら"
+	next "とても　たかく　うれる@"
 
 BasementKeyDesc:
-	db   "Opens doors.@"
+	db   "とびら<WO>あける　カギ@"
 
 PassDesc:
-	db   "A ticket for the"
-	next "MAGNET TRAIN.@"
+	db   "リニア<NI>のること<GA>できる@"
 
 TeruSama13Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama14Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama15Desc:
-	db   "?@"
+	db   "？@"
 
 CharcoalDesc:
-	db   "Powers up fire-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　ほのおタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 BerryJuiceDesc:
-	db   "Restores #MON"
-	next "HP by 20.@"
+	db   "きのみから　つくられた　ジュース"
+	next "たいりょく<WO>２０かいふくする@"
 
 ScopeLensDesc:
-	db   "Raises critical"
-	next "hit ratio. (HOLD)@"
+	db   "もたせると　きゅうしょに"
+	next "あたりやすくなる@"
 
 TeruSama16Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama17Desc:
-	db   "?@"
+	db   "？@"
 
 MetalCoatDesc:
-	db   "Powers up steel-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　はがねタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 DragonFangDesc:
-	db   "Powers up dragon-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　ドラゴンタイプ<NO>"
+	next "わざのいりょく<GA>あがる@"
 
 TeruSama18Desc:
-	db   "?@"
+	db   "？@"
 
 LeftoversDesc:
-	db   "Restores HP during"
-	next "battle. (HOLD)@"
+	db   "もたせると　せんとうちゅう"
+	next "たいりょく<GA>すこしずつ　かいふく@"
 
 TeruSama19Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama20Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama21Desc:
-	db   "?@"
+	db   "？@"
 
 MysteryBerryDesc:
-	db   "A self-restore"
-	next "for PP. (HOLD)@"
+	db   "もたせると　せんとうちゅう　じぶんで"
+	next "わざポイント<WO>かいふく　する@"
 
 DragonScaleDesc:
-	db   "A rare dragon-type"
-	next "item.@"
+	db   "ドラゴンタイプ<NO>#が"
+	next "たま<NI>も<TTE>いる　ふしぎな　ウロコ@"
 
 BerserkGeneDesc:
-	db   "Boosts ATTACK but"
-	next "causes confusion.@"
+	db   "<KOUGEKI>りょく<GA>グーンと　あがるが"
+	next "こんらん　じょうたい<NI>な<TTE>しまう@"
 
 TeruSama22Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama23Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama24Desc:
-	db   "?@"
+	db   "？@"
 
 SacredAshDesc:
-	db   "Fully revives all"
-	next "fainted #MON.@"
+	db   "ひんしした　すべて<NO>#を"
+	next "せいじょうな　じょうたい<NI>する@"
 
 HeavyBallDesc:
-	db   "A BALL for catch-"
-	next "ing heavy #MON.@"
+	db   "たいじゅう<NO>おもい　#を"
+	next "つかまえやすい　ボール@"
 
 FlowerMailDesc:
-	db   "Flower-print MAIL."
-	next "(HOLD)@"
+	db   "はながら<NO>びんせん"
+	next "かいたメール<WO>#<NI>もたせる@"
 
 LevelBallDesc:
-	db   "A BALL for lower-"
-	next "level #MON.@"
+	db   "じぶん<NO>#より　あいての"
+	next "レベル<GA>ひくいほど　つかまえやすい@"
 
 LureBallDesc:
-	db   "A BALL for #MON"
-	next "hooked by a ROD.@"
+	db   "つりあげた　#だと"
+	next "つかまえやすくなる　ボール@"
 
 FastBallDesc:
-	db   "A BALL for catch-"
-	next "ing fast #MON.@"
+	db   "にげあし<NO>はやい　#を"
+	next "つかまえやすい　ボール@"
 
 TeruSama25Desc:
-	db   "?@"
+	db   "？@"
 
 LightBallDesc:
-	db   "An odd, electrical"
-	next "orb. (HOLD)@"
+	db   "ビリビリしている　ふしぎな　たま@"
 
 FriendBallDesc:
-	db   "A BALL that makes"
-	next "#MON friendly.@"
+	db   "つかまえた　#が"
+	next "よく　なついて　くれる@"
 
 MoonBallDesc:
-	db   "A BALL for MOON"
-	next "STONE evolvers.@"
+	db   "つきのいし　で　しんかする"
+	next "#<WO>つかまえやすい@"
 
 LoveBallDesc:
-	db   "For catching the"
-	next "opposite gender.@"
+	db   "じぶん<NO>#<NO>せいべつと"
+	next "ちがう　とき<WA>つかまえやすい@"
 
 NormalBoxDesc:
-	db   "Open it and see"
-	next "what's inside.@"
+	db   "あけて　みよう@"
 
 GorgeousBoxDesc:
-	db   "Open it and see"
-	next "what's inside.@"
+	db   "あけて　みよう@"
 
 SunStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "とくていの#<WO>しんかさせる@"
 
 PolkadotBowDesc:
-	db   "Powers up normal-"
-	next "type moves. (HOLD)@"
+	db   "もたせると　ノーマルタイプの"
+	next "わざのいりょく<GA>あがる@"
 
 TeruSama26Desc:
-	db   "?@"
+	db   "？@"
 
 UpGradeDesc:
-	db   "A mysterious box"
-	next "made by SILPH CO.@"
+	db   "ふしぎな　はこ"
+	next "シルフ　カンパニーせい@"
 
 BerryDesc:
-	db   "A self-restore"
-	next "item. (10HP, HOLD)@"
+	db   "もたせると　じぶんで"
+	next "たいりょく<WO>１０かいふくする@"
 
 GoldBerryDesc:
-	db   "A self-restore"
-	next "item. (30HP, HOLD)@"
+	db   "もたせると　じぶんで"
+	next "たいりょく<WO>３０かいふくする@"
 
 SquirtBottleDesc:
-	db   "A bottle used for"
-	next "watering plants.@"
+	db   "ゼニガメ<NO>かたちをした　じょうろ"
+	next "くさき<NI>みず<WO>あげるためのどうぐ@"
 
 TeruSama27Desc:
-	db   "?@"
+	db   "？@"
 
 ParkBallDesc:
-	db   "The Bug-Catching"
-	next "Contest BALL.@"
+	db   "むしとりたいかいで　つかわれる"
+	next "#<WO>つかまえる　ボール@"
 
 RainbowWingDesc:
-	db   "A mystical feather"
-	next "of rainbow colors.@"
+	db   "にじいろ<NI>かがやく"
+	next "しんぴてきな　はね@"
 
 TeruSama28Desc:
-	db   "?@"
+	db   "？@"
 
 BrickPieceDesc:
-	db   "A rare chunk of"
-	next "brick.@"
+	db   "われた　かわら<NO>かけら@"
 
 SurfMailDesc:
-	db   "LAPRAS-print MAIL."
-	next "(HOLD)@"
+	db   "ラプラス<NO>びんせん"
+	next "かいたメール<WO>#<NI>もたせる@"
 
 LiteBlueMailDesc:
-	db   "DRATINI-print"
-	next "MAIL. (HOLD)@"
+	db   "ミニリュウ<NO>びんせん"
+	next "かいたメール<WO>#<NI>もたせる@"
 
 PortraitMailDesc:
-	db   "MAIL featuring the"
-	next "holder's likeness.@"
+	db   "もたせた　#<GA>プリントされる"
+	next "かいたメール<WO>#<NI>もたせる@"
 
 LovelyMailDesc:
-	db   "Heart-print MAIL."
-	next "(HOLD)@"
+	db   "ハートマーク<GA>かわいい　びんせん"
+	next "かいたメール<WO>#<NI>もたせる@"
 
 EonMailDesc:
-	db   "EEVEE-print MAIL."
-	next "(HOLD)@"
+	db   "イーブイのシルエット<NO>びんせん"
+	next "かいたメール<WO>#<NI>もたせる@"
 
 MorphMailDesc:
-	db   "DITTO-print MAIL."
-	next "(HOLD)@"
+	db   "メタモンのシルエット<NO>びんせん"
+	next "かいたメール<WO>#<NI>もたせる@"
 
 BlueSkyMailDesc:
-	db   "Sky-print MAIL."
-	next "(HOLD)@"
+	db   "きれいな　あおぞら<NO>びんせん"
+	next "かいたメール<WO>#<NI>もたせる@"
 
 MusicMailDesc:
-	db   "NATU-print MAIL."
-	next "(HOLD)@"
+	db   "ネイティ<NO>びんせん"
+	next "かいたメール<WO>#<NI>もたせる@"
 
 MirageMailDesc:
-	db   "MEW-print MAIL."
-	next "(HOLD)@"
+	db   "ミュウ<NO>びんせん"
+	next "かいたメール<WO>#<NI>もたせる@"
 
 TeruSama29Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama30Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama31Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama32Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama33Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama34Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama35Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama36Desc:
-	db   "?@"
+	db   "？@"
 
 TeruSama37Desc:
-	db   "?@"
+	db   "？@"

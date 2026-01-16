@@ -196,7 +196,7 @@ LinkBattle_TrainerHuds:
 	ld hl, wPlaceBallsX
 	ld a, 10 * TILE_WIDTH
 	ld [hli], a
-	ld [hl], 13 * TILE_WIDTH
+	ld [hl], 12 * TILE_WIDTH
 	ld hl, wShadowOAMSprite00 + PARTY_LENGTH * OBJ_SIZE
 	jp LoadTrainerHudOAM
 
@@ -234,20 +234,18 @@ INCBIN "gfx/battle/balls.2bpp"
 _ShowLinkBattleParticipants:
 	call ClearBGPalettes
 	call LoadFontsExtra
-	hlcoord 3, 3
-	ld b, 9
+	hlcoord 3, 4
+	ld b, 7
 	ld c, 12
 	call Textbox
-	hlcoord 4, 5
+	hlcoord 4, 6
 	ld de, wPlayerName
 	call PlaceString
 	hlcoord 4, 10
 	ld de, wOTPlayerName
 	call PlaceString
 	hlcoord 9, 8
-	ld a, '<BOLD_V>'
-	ld [hli], a
-	ld [hl], '<BOLD_S>'
+	ld_hli_a_string "ＶＳ"
 	farcall LinkBattle_TrainerHuds ; no need to farcall
 	ld b, SCGB_DIPLOMA
 	call GetSGBLayout

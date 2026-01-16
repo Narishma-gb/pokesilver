@@ -73,7 +73,7 @@ AskTeachTMHM:
 ChooseMonToLearnTMHM:
 	ld hl, wStringBuffer2
 	ld de, wTMHMMoveNameBackup
-	ld bc, MOVE_NAME_LENGTH - 1
+	ld bc, MOVE_NAME_LENGTH
 	call CopyBytes
 	call ClearBGPalettes
 	farcall LoadPartyMenuGFX
@@ -96,7 +96,7 @@ ChooseMonToLearnTMHM:
 	push bc
 	ld hl, wTMHMMoveNameBackup
 	ld de, wStringBuffer2
-	ld bc, MOVE_NAME_LENGTH - 1
+	ld bc, MOVE_NAME_LENGTH
 	call CopyBytes
 	pop af ; now contains the original contents of af
 	ret
@@ -165,28 +165,44 @@ TeachTMHM:
 	ret
 
 BootedTMText:
-	text_far _BootedTMText
-	text_end
+	text "<TM>を　きどうした！"
+	prompt
 
 BootedHMText:
-	text_far _BootedHMText
-	text_end
+	text "ひでんマシンを　きどうした！"
+	prompt
 
 ContainedMoveText:
-	text_far _ContainedMoveText
-	text_end
+	text "なかには　@"
+	text_ram wStringBuffer2
+	text "が"
+	line "きろくされていた！"
+
+	para "@"
+	text_ram wStringBuffer2
+	text "を"
+	line "#に　おぼえさせますか？"
+	done
 
 TMHMNotCompatibleText:
-	text_far _TMHMNotCompatibleText
-	text_end
+	text_ram wStringBuffer1
+	text "と　@"
+	text_ram wStringBuffer2
+	text "は"
+	line "あいしょうが　わるかった！"
+
+	para "@"
+	text_ram wStringBuffer2
+	text "は　おぼえられない！"
+	prompt
 
 TMHM_PocketLoop:
 	xor a
 	ldh [hBGMapMode], a
 	call TMHM_DisplayPocketItems
-	ld a, 2
+	ld a, 3
 	ld [w2DMenuCursorInitY], a
-	ld a, 7
+	ld a, 8
 	ld [w2DMenuCursorInitX], a
 	ld a, 1
 	ld [w2DMenuNumCols], a
@@ -227,9 +243,9 @@ TMHM_JoypadLoop:
 	jp nz, TMHM_ScrollPocket
 	ld a, b
 	ld [wMenuJoypad], a
-	bit A_BUTTON_F, a
+	bit B_PAD_A, a
 	jp nz, TMHM_ChooseTMorHM
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jp nz, TMHM_ExitPack
 	bit B_PAD_RIGHT, a
 	jp nz, TMHM_ExitPocket
@@ -327,14 +343,22 @@ TMHM_ScrollPocket:
 	call TMHM_DisplayPocketItems
 	jp TMHM_ShowTMMoveDescription
 
+; These strings are unreferenced
+TMHM_UnusedMoveAtk:
+	db "いりょく／@"
+TMHM_UnusedMoveNoPower:
+	db "ーーー@"
+TMHM_UnusedMoveType:
+	db "タイプ／@"
+
 TMHM_DisplayPocketItems:
 	ld a, [wBattleType]
 	cp BATTLETYPE_TUTORIAL
 	jp z, Tutorial_TMHMPocket
 
-	hlcoord 5, 2
-	lb bc, 10, 15
-	ld a, ' '
+	hlcoord 6, 2
+	lb bc, 10, 14
+	ld a, '　'
 	call ClearBox
 	call TMHM_GetCurrentPocketPosition
 	ld d, $5
@@ -366,7 +390,7 @@ TMHM_DisplayPocketItems:
 	push af
 	sub NUM_TMS
 	ld [wTempTMHM], a
-	ld [hl], 'H'
+	ld [hl], 'ひ'
 	inc hl
 	ld de, wTempTMHM
 	lb bc, PRINTNUM_LEFTALIGN | 1, 2
@@ -389,11 +413,11 @@ TMHM_DisplayPocketItems:
 	push bc
 	cp NUM_TMS + 1
 	jr nc, .hm2
-	ld bc, SCREEN_WIDTH + 9
+	ld bc, 8
 	add hl, bc
 	ld [hl], '×'
 	inc hl
-	ld a, '0' ; why are we doing this?
+	ld a, '０' ; why are we doing this?
 	pop bc
 	push bc
 	ld a, b
@@ -414,15 +438,12 @@ TMHM_DisplayPocketItems:
 	inc hl
 	inc hl
 	inc hl
-	push de
-	ld de, TMHM_CancelString
-	call PlaceString
-	pop de
+	ld_hli_a_string "やめる"
 .done
 	ret
 
 TMHMPocket_GetCurrentLineCoord:
-	hlcoord 5, 0
+	hlcoord 6, 1
 	ld bc, 2 * SCREEN_WIDTH
 	ld a, 6
 	sub d
@@ -448,9 +469,6 @@ PlaceMoveNameAfterTMHMName: ; unreferenced
 	pop hl
 	ret
 
-TMHM_CancelString:
-	db "CANCEL@"
-
 TMHM_GetCurrentPocketPosition:
 	ld hl, wTMsHMs
 	ld a, [wTMHMPocketScrollPosition]
@@ -470,10 +488,7 @@ TMHM_GetCurrentPocketPosition:
 
 Tutorial_TMHMPocket:
 	hlcoord 9, 3
-	push de
-	ld de, TMHM_CancelString
-	call PlaceString
-	pop de
+	ld_hli_a_string "やめる"
 	ret
 
 TMHM_PlaySFX_ReadText2:
@@ -493,12 +508,15 @@ VerboseReceiveTMHM: ; unreferenced
 	jp PrintText
 
 .NoRoomTMHMText:
-	text_far _NoRoomTMHMText
-	text_end
+	text_ram wStringBuffer1
+	text "は　これいじょう"
+	line "もてません！"
+	prompt
 
 .ReceivedTMHMText:
-	text_far _ReceivedTMHMText
-	text_end
+	text_ram wStringBuffer1
+	text "を　てにいれた！"
+	prompt
 
 .CheckHaveRoomForTMHM:
 	ld a, [wTempTMHM]
