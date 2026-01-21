@@ -4,7 +4,7 @@ BattleCommand_UsedMoveText:
 	jp WaitBGMap
 
 UsedMoveText:
-	text_far _ActorNameText
+	text "<USER>@"
 	text_asm
 
 	ldh a, [hBattleTurn]
@@ -55,12 +55,12 @@ UsedMoveText:
 	ret
 
 UsedMove1Text:
-	text_far _UsedMove1Text
+	text "<NO>@"
 	text_asm
 	jr UsedMoveText_CheckObedience
 
 UsedMove2Text:
-	text_far _UsedMove2Text
+	text "<WA>@"
 	text_asm
 UsedMoveText_CheckObedience:
 ; check obedience
@@ -72,14 +72,16 @@ UsedMoveText_CheckObedience:
 	ret
 
 .UsedInsteadText:
-	text_far _UsedInsteadText
+	text "めいれいをむしして@"
 	text_asm
 .GetMoveNameText:
 	ld hl, MoveNameText
 	ret
 
 MoveNameText:
-	text_far _MoveNameText
+	text_start
+	line "@"
+	text_ram wStringBuffer2
 	text_asm
 ; get start address
 	ld hl, .endusedmovetexts
@@ -112,24 +114,24 @@ MoveNameText:
 	dw EndUsedMove5Text
 
 EndUsedMove1Text:
-	text_far _EndUsedMove1Text
-	text_end
+	text "<WO>つかっ<TA!>"
+	done
 
 EndUsedMove2Text:
-	text_far _EndUsedMove2Text
-	text_end
+	text "し<TA!>"
+	done
 
 EndUsedMove3Text:
-	text_far _EndUsedMove3Text
-	text_end
+	text "<WO>し<TA!>"
+	done
 
 EndUsedMove4Text:
-	text_far _EndUsedMove4Text
-	text_end
+	text "　<KOUGEKI>！"
+	done
 
 EndUsedMove5Text:
-	text_far _EndUsedMove5Text
-	text_end
+	text "！"
+	done
 
 GetMoveGrammar:
 ; store move grammar type in wMoveGrammar

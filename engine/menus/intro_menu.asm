@@ -103,6 +103,9 @@ _ResetWRAM:
 	ld [wCoins], a
 	ld [wCoins + 1], a
 
+if START_MONEY >= $10000
+	ld a, HIGH(START_MONEY >> 8)
+endc
 	ld [wMoney], a
 	ld a, HIGH(START_MONEY) ; mid
 	ld [wMoney + 1], a

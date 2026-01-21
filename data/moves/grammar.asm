@@ -1,9 +1,8 @@
 ; Used by GetMoveGrammar (see engine/battle/used_move_text.asm)
 ; Each move is given an identifier for what usedmovetext to use (0-4).
-; Made redundant in English localization, where all are just "[mon]<LINE>used [move]!"
 
 MoveGrammar:
-; 0: originally "[mon]の<LINE>[move]を　つかった!" ("[mon]<LINE>used [move]!")
+; 0: "[mon]は　<LINE>[move]を　つかった！"
 	db SWORDS_DANCE
 	db GROWTH
 	db STRENGTH
@@ -35,7 +34,7 @@ MoveGrammar:
 	db EXTREMESPEED
 	db 0 ; end set
 
-; 1: originally "[mon]の<LINE>[move]した!" ("[mon]<LINE>did [move]!")
+; 1: "[mon]は　<LINE>[move]した！"
 	db RECOVER
 	db TELEPORT
 	db BIDE
@@ -44,7 +43,7 @@ MoveGrammar:
 	db FLAIL
 	db 0 ; end set
 
-; 2: originally "[mon]の<LINE>[move]を　した!" ("[mon]<LINE>did [move]!")
+; 2: "[mon]は　<LINE>[move]を　した！"
 	db MEDITATE
 	db AGILITY
 	db MIMIC
@@ -55,7 +54,7 @@ MoveGrammar:
 	db SCARY_FACE
 	db 0 ; end set
 
-; 3: originally "[mon]の<LINE>[move]　こうげき!" ("[mon]'s<LINE>[move] attack!")
+; 3: "[mon]の　<LINE>[move]　こうげき！"
 	db POUND
 	db SCRATCH
 	db VICEGRIP
@@ -96,6 +95,6 @@ MoveGrammar:
 	db ROCK_SMASH
 	db 0 ; end set
 
-; 4: originally "[mon]の<LINE>[move]!" ("[mon]'s<LINE>[move]!")
+; 4: "[mon]の　<LINE>[move]！"
 ; Any move not listed above uses this grammar.
 	db -1 ; end

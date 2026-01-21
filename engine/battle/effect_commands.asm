@@ -908,13 +908,6 @@ BattleCommand_CheckObedience:
 	xor a
 	ld [wLastPlayerMove], a
 	ld [wLastPlayerCounterMove], a
-
-	; Break Encore too.
-	ld hl, wPlayerSubStatus5
-	res SUBSTATUS_ENCORED, [hl]
-	xor a
-	ld [wPlayerEncoreCount], a
-
 	jp EndMoveEffect
 
 IgnoreSleepOnly:
@@ -2218,8 +2211,8 @@ GetFailureResultText:
 	ld hl, ButItFailedText
 	ld de, ItFailedText
 	jr z, .got_text
-	ld hl, AttackMissedText
-	ld de, AttackMissed2Text
+	ld hl, HoweverMissedText
+	ld de, AttackMissedText
 	ld a, [wCriticalHit]
 	cp -1
 	jr nz, .got_text
@@ -3575,7 +3568,7 @@ BattleCommand_SleepTarget:
 	and a
 	jp nz, PrintDidntAffect2
 
-	ld hl, DidntAffect1Text
+	ld hl, ButDidntAffectText
 	call .CheckAIRandomFail
 	jr c, .fail
 
@@ -3696,7 +3689,7 @@ BattleCommand_Poison:
 	jr .failed
 
 .do_poison
-	ld hl, DidntAffect1Text
+	ld hl, ButDidntAffectText
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVar
 	and a
@@ -4439,7 +4432,10 @@ BattleCommand_StatUpMessage:
 	jp PrintText
 
 .stat
-	text_far Text_BattleEffectActivate
+	text "<USER>の"
+	line "@"
+	text_ram wStringBuffer2
+	text "が@"
 	text_asm
 	ld hl, .BattleStatWentUpText
 	ld a, [wLoweredStat]
@@ -4449,12 +4445,12 @@ BattleCommand_StatUpMessage:
 	ret
 
 .BattleStatWentWayUpText:
-	text_far _BattleStatWentWayUpText
-	text_end
-
+	text_pause
+	text_start
+	scrl "ぐーんと@"
 .BattleStatWentUpText:
-	text_far _BattleStatWentUpText
-	text_end
+	text "　あがっ<TA!>"
+	prompt
 
 BattleCommand_StatDownMessage:
 	ld a, [wFailedMessage]
@@ -4469,7 +4465,10 @@ BattleCommand_StatDownMessage:
 	jp PrintText
 
 .stat
-	text_far Text_BattleFoeEffectActivate
+	text "<TARGET>の"
+	line "@"
+	text_ram wStringBuffer2
+	text "が@"
 	text_asm
 	ld hl, .BattleStatFellText
 	ld a, [wLoweredStat]
@@ -4479,12 +4478,12 @@ BattleCommand_StatDownMessage:
 	ret
 
 .BattleStatSharplyFellText:
-	text_far _BattleStatSharplyFellText
-	text_end
-
+	text_pause
+	text_start
+	scrl "がくっと@"
 .BattleStatFellText:
-	text_far _BattleStatFellText
-	text_end
+	text "　さがっ<TA!>"
+	prompt
 
 TryLowerStat:
 ; Lower stat c from stat struct hl (buffer de).
@@ -4580,7 +4579,7 @@ GetStatName:
 
 .Copy:
 	ld de, wStringBuffer2
-	ld bc, NAME_LENGTH - 1
+	ld bc, STAT_NAME_LENGTH
 	jp CopyBytes
 
 INCLUDE "data/battle/stat_names.asm"
@@ -5508,7 +5507,7 @@ BattleCommand_Charge:
 	jp EndMoveEffect
 
 .UsedText:
-	text_far Text_BattleUser ; "<USER>"
+	text "<USER>@"
 	text_asm
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
@@ -5539,28 +5538,34 @@ BattleCommand_Charge:
 	ret
 
 .BattleMadeWhirlwindText:
-	text_far _BattleMadeWhirlwindText
-	text_end
+	text "<NO>まわりで"
+	line "くうき<GA>うず<WO>まく！"
+	prompt
 
 .BattleTookSunlightText:
-	text_far _BattleTookSunlightText
-	text_end
+	text "は"
+	line "ひかり<WO>きゅうしゅうし<TA!>"
+	prompt
 
 .BattleLoweredHeadText:
-	text_far _BattleLoweredHeadText
-	text_end
+	text "は"
+	line "くび<WO>ひっこめ<TA!>"
+	prompt
 
 .BattleGlowingText:
-	text_far _BattleGlowingText
-	text_end
+	text "を"
+	line "はげしい　ひかり<GA>つつむ！"
+	prompt
 
 .BattleFlewText:
-	text_far _BattleFlewText
-	text_end
+	text "は"
+	line "そらたかく　とびあがっ<TA!>"
+	prompt
 
 .BattleDugText:
-	text_far _BattleDugText
-	text_end
+	text "は"
+	line "あなをほって　ちちゅう<NI>もぐっ<TA!>"
+	prompt
 
 BattleCommand_Unused3C:
 ; effect0x3c
@@ -5614,11 +5619,11 @@ BattleCommand_TrapTarget:
 	jp StdBattleTextbox
 
 .Traps:
-	dbw BIND,      UsedBindText   ; 'used BIND on'
-	dbw WRAP,      WrappedByText  ; 'was WRAPPED by'
-	dbw FIRE_SPIN, WasTrappedText ; 'was trapped!'
-	dbw CLAMP,     ClampedByText  ; 'was CLAMPED by'
-	dbw WHIRLPOOL, WasTrappedText ; 'was trapped!'
+	dbw BIND,      UsedBindText
+	dbw WRAP,      WrappedByText
+	dbw FIRE_SPIN, WasTrappedText
+	dbw CLAMP,     ClampedByText
+	dbw WHIRLPOOL, WasTrappedText
 
 INCLUDE "engine/battle/move_effects/mist.asm"
 
@@ -6164,22 +6169,21 @@ FailMove:
 	; fallthrough
 
 FailMimic:
-	ld hl, ButItFailedText ; 'but it failed!'
-	ld de, ItFailedText    ; 'it failed!'
+	ld hl, ButItFailedText
+	ld de, ItFailedText
 	jp FailText_CheckOpponentProtect
 
 PrintDidntAffect:
-	ld hl, DidntAffect1Text
+	ld hl, ButDidntAffectText
 	jp StdBattleTextbox
 
 PrintDidntAffect2:
 	call AnimateFailedMove
-	ld hl, DidntAffect1Text ; 'it didn't affect'
-	ld de, DidntAffect2Text ; 'it didn't affect'
+	ld hl, ButDidntAffectText
+	ld de, DidntAffectText
 	jp FailText_CheckOpponentProtect
 
 PrintParalyze:
-; 'paralyzed! maybe it can't attack!'
 	ld hl, ParalyzedText
 	jp StdBattleTextbox
 

@@ -157,9 +157,9 @@ INCLUDE "data/moves/descriptions.asm"
 INCLUDE "engine/events/pokerus/pokerus.asm"
 
 
-;SECTION "Effect Commands", ROMX
+SECTION "Effect Commands", ROMX
 
-;INCLUDE "engine/battle/effect_commands.asm"
+INCLUDE "engine/battle/effect_commands.asm"
 
 
 ;SECTION "Enemy Trainers", ROMX
@@ -330,7 +330,6 @@ INCLUDE "engine/pokedex/pokedex_2.asm"
 ;SECTION "Standard Scripts", ROMX
 
 ;INCLUDE "engine/events/std_scripts.asm"
-;INCLUDE "data/text/battle.asm"
 
 
 ;SECTION "Phone Scripts", ROMX

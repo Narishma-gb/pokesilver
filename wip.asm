@@ -88,20 +88,6 @@ INCLUDE "main.asm"
 	set_gs_diff 0
 
 
-SECTION "rom13", ROMX, BANK[13]
-; ROM $0d : $34000 - $37FFF
-	set_bank_offset 13
-
-	dr CheckTypeMatchup, $491f
-	dr RaiseStat, $630f
-	dr BattleCommand_StatUpMessage, $64d3
-	dr BattleCommand_StatUpFailText, $657f
-	dr CalcPlayerStats, $66ff
-	dr CheckOppositeGender, $7941
-	dr GetItemHeldEffect, $7ee8
-
-	dr_end
-
 SECTION "rom14", ROMX, BANK[14]
 ; ROM $0e : $38000 - $3BFFF
 	set_bank_offset 14
@@ -114,6 +100,7 @@ AIScoring::
 	dr AI_Types, $4645
 	dr AI_Offensive, $46b2
 	dr AI_Smart, $46ce
+	dr AICheckPlayerMaxHP, $522a
 	dr AICheckEnemyMaxHP, $5235
 	dr AI_Opportunist, $52f9
 	dr AI_Aggressive, $534d
@@ -126,31 +113,61 @@ AIScoring::
 	dr Battle_GetTrainerName, $5910
 	dr GetTrainerName, $5918
 	dr TrainerGroups, $595c
-	dr ConfusedNoMoreText, $7823
+	dr FastAsleepText_WIP, $77ae
 
-	dr_end
+INCLUDE "data/text/battle.asm"
 
+
+SECTION "Battle Core", ROMX, BANK[15]
 SECTION "rom15", ROMX, BANK[15]
 ; ROM $0f : $3C000 - $3FFFF
 	set_bank_offset 15
 
 	dr FleeMons, $4551
+	dr GetMoveEffect, $45a4
+	dr SubtractHPFromUser, $4be3
+	dr GetEighthMaxHP, $4c27
+	dr GetQuarterMaxHP, $4c32
+	dr GetHalfMaxHP, $4c43
+	dr GetMaxHP, $4c50
+	dr CheckUserHasEnoughHP, $4c82
+	dr RestoreHP, $4c93
+	dr SetUpBattlePartyMenu, $5220
+	dr ForcePickSwitchMonInBattle, $528b
+	dr ForceEnemySwitch, $537d
+	dr EnemySwitch_SetMode, $53d1
+	dr ResetBattleParticipants, $5434
 	dr CheckPlayerPartyForFitMon, $5706
 	dr GetPartyMonDVs, $58f1
 	dr GetEnemyMonDVs, $5903
+	dr SwitchPlayerMon, $599e
+	dr SpikesDamage, $5a80
+	dr UseHeldStatusHealingItem, $5c46
+	dr UseConfusionHealingItem, $5cae
 	dr UpdatePlayerHUD, $5da5
+	dr DrawPlayerHUD, $5db5
 	dr UpdateEnemyHUD, $5e98
+	dr DrawEnemyHUD, $5ea5
+	dr PassedBattleMonEntrance, $62a0
 	dr MoveSelectionScreen, $6303
 	dr CheckEnemyLockedIn, $6708
+	dr LinkBattleSendReceiveAction, $671b
 	dr LoadEnemyMon, $676b
+	dr ApplyPrzEffectOnSpeed, $6a97
+	dr ApplyBrnEffectOnAttack, $6ad4
+	dr ApplyStatLevelMultiplierOnAllStats, $6b09
+	dr BadgeStatBoosts, $6ba3
 	dr _LoadBattleFontsHPBar, $6bf8
 	dr _BattleRandom, $6c31
 	dr FillInExpBar, $720e
 	dr GetBattleMonBackpic, $72bb
+	dr DropPlayerSub, $72c5
 	dr GetEnemyMonFrontpic, $72fa
+	dr DropEnemySub, $7304
 	dr StartBattle, $733f
 	dr _DisplayLinkRecord, $75de
 	dr GetTrainerBackpic, $79b8
+	dr BattleCommandPointers, $7d9d
 
 	dr_end
 
@@ -636,6 +653,12 @@ SECTION "rom62", ROMX, BANK[62]
 	dr UpdateUnownDex, $7ae4
 	dr CheckMagikarpLength, $7bfe
 	dr MagikarpHouseSign, $7d87
+	dr HiddenPowerDamage, $7db6
+	dr _DisappearUser, $7e1f
+	dr _AppearUserRaiseSub, $7e34
+	dr _AppearUserLowerSub, $7e3c
+	dr DoWeatherModifiers, $7e6f
+	dr DoBadgeTypeBoosts, $7ef0
 
 	dr_end
 

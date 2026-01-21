@@ -2,6 +2,10 @@ MACRO text
 	db TX_START, \# ; Start writing text
 ENDM
 
+MACRO scrl
+	db "<SCROLL>", \# ; Scroll to the next line, without pausing
+ENDM
+
 MACRO next
 	db "<NEXT>", \# ; Move a line down
 ENDM
