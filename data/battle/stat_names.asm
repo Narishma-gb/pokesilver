@@ -1,6 +1,6 @@
 StatNames:
 ; entries correspond to stat ids
-	list_start
+	list_start STAT_NAME_LENGTH - 1
 	li "<KOUGEKI>りょく"
 	li "ぼうぎょりょく"
 	li "すばやさ"
