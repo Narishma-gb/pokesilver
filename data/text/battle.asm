@@ -1,360 +1,337 @@
-;BattleText:: ; used only for BANK(BattleText)
+BattleText:: ; used only for BANK(BattleText)
 
-;BattleText_PlayerPickedUpPayDayMoney:
-;	text "<PLAYER> picked up"
-;	line "¥@"
-;	text_decimal wPayDayMoney, 3, 6
-;	text "!"
-;	prompt
+BattleText_PlayerPickedUpPayDayMoney:
+	text "<PLAYER><WA>@"
+	text_decimal wPayDayMoney, 3, 6
+	text "円"
+	line "ひろっ<TA!>"
+	prompt
 
-;WildPokemonAppearedText:
-;	text "Wild @"
-;	text_ram wEnemyMonNickname
-;	text_start
-;	line "appeared!"
-;	prompt
+WildPokemonAppearedText:
+	text "あ！　やせいの"
+	line "@"
+	text_ram wEnemyMonNickname
+	text "<GA>とびだしてき<TA!>"
+	prompt
 
-;HookedPokemonAttackedText:
-;	text "The hooked"
-;	line "@"
-;	text_ram wEnemyMonNickname
-;	text_start
-;	cont "attacked!"
-;	prompt
+HookedPokemonAttackedText:
+	text "つりあげた　@"
+	text_ram wEnemyMonNickname
+	text "が"
+	line "とびかか<TTE>き<TA!>"
+	prompt
 
-;PokemonFellFromTreeText:
-;	text_ram wEnemyMonNickname
-;	text " fell"
-;	line "out of the tree!"
-;	prompt
+PokemonFellFromTreeText:
+	text "ゆらした　きから　@"
+	text_ram wEnemyMonNickname
+	text "が"
+	line "おちてき<TA!>"
+	prompt
 
-;WantsToBattleText::
-;	text "<ENEMY>"
-;	line "wants to battle!"
-;	prompt
+WantsToBattleText::
+	text "<ENEMY>が"
+	line "しょうぶ<WO>しかけてき<TA!>"
+	prompt
 
-;BattleText_WildFled:
-;	text "Wild @"
-;	text_ram wEnemyMonNickname
-;	text_start
-;	line "fled!"
-;	prompt
+BattleText_WildFled:
+	text "やせいの@"
+	text_ram wEnemyMonNickname
+	text "<WA>にげだし<TA!>"
+	prompt
 
-;BattleText_EnemyFled:
-;	text "Enemy @"
-;	text_ram wEnemyMonNickname
-;	text_start
-;	line "fled!"
-;	prompt
+BattleText_EnemyFled:
+	text "てきの@"
+	text_ram wEnemyMonNickname
+	text "<WA>にげだし<TA!>"
+	prompt
 
-;HurtByPoisonText:
-;	text "<USER>"
-;	line "is hurt by poison!"
-;	prompt
+HurtByPoisonText:
+	text "<USER>は"
+	line "どく<NO>ダメージ<WO>うけている！"
+	prompt
 
-;HurtByBurnText:
-;	text "<USER>'s"
-;	line "hurt by its burn!"
-;	prompt
+HurtByBurnText:
+	text "<USER>は"
+	line "やけど<NO>ダメージ<WO>うけている！"
+	prompt
 
-;LeechSeedSapsText:
-;	text "LEECH SEED saps"
-;	line "<USER>!"
-;	prompt
+LeechSeedSapsText:
+	text "やどりぎ<GA><USER>の"
+	line "たいりょく<WO>うばう！"
+	prompt
 
-;HasANightmareText:
-;	text "<USER>"
-;	line "has a NIGHTMARE!"
-;	prompt
+HasANightmareText:
+	text "<USER>は"
+	line "あくむ<NI>うなされている！"
+	prompt
 
-;HurtByCurseText:
-;	text "<USER>'s"
-;	line "hurt by the CURSE!"
-;	prompt
+HurtByCurseText:
+	text "<USER>は"
+	line "のろわれている！"
+	prompt
 
-;SandstormHitsText:
-;	text "The SANDSTORM hits"
-;	line "<USER>!"
-;	prompt
+SandstormHitsText:
+	text "すなあらし<GA><USER>を"
+	line "おそう！"
+	prompt
 
-;PerishCountText:
-;	text "<USER>'s"
-;	line "PERISH count is @"
-;	text_decimal wTextDecimalByte, 1, 1
-;	text "!"
-;	prompt
+PerishCountText:
+	text "<USER><NO>ほろびの"
+	line "カウント<GA>@"
+	text_decimal wTextDecimalByte, 1, 1
+	text "になっ<TA!>"
+	prompt
 
-;BattleText_TargetRecoveredWithItem:
-;	text "<TARGET>"
-;	line "recovered with"
-;	cont "@"
-;	text_ram wStringBuffer1
-;	text "."
-;	prompt
+BattleText_TargetRecoveredWithItem:
+	text "<TARGET>は"
+	line "@"
+	text_ram wStringBuffer1
+	text "で　すこし　かいふく"
+	prompt
 
-;BattleText_UserRecoveredPPUsing:
-;	text "<USER>"
-;	line "recovered PP using"
-;	cont "@"
-;	text_ram wStringBuffer1
-;	text "."
-;	prompt
+BattleText_UserRecoveredPPUsing:
+	text "<USER>は"
+	line "@"
+	text_ram wStringBuffer1
+	text "で　ピーピーかいふく"
+	prompt
 
-;BattleText_TargetWasHitByFutureSight:
-;	text "<TARGET>"
-;	line "was hit by FUTURE"
-;	cont "SIGHT!"
-;	prompt
+BattleText_TargetWasHitByFutureSight:
+	text "<TARGET><WA>みらいよちの"
+	line "<KOUGEKI><WO>うけ<TA!>"
+	prompt
 
-;BattleText_SafeguardFaded:
-;	text "<USER>'s"
-;	line "SAFEGUARD faded!"
-;	prompt
+BattleText_SafeguardFaded:
+	text "<USER><WO>つつんでいた"
+	line "しんぴ<NO>ベールが　なくなっ<TA!>"
+	prompt
 
-;BattleText_MonsLightScreenFell:
-;	text_ram wStringBuffer1
-;	text " #MON's"
-;	line "LIGHT SCREEN fell!"
-;	prompt
+BattleText_MonsLightScreenFell:
+	text_ram wStringBuffer1
+	text "<NO>ひかりのかべの"
+	line "こうか<GA>きれ<TA!>"
+	prompt
 
-;BattleText_MonsReflectFaded:
-;	text_ram wStringBuffer1
-;	text " #MON's"
-;	line "REFLECT faded!"
-;	prompt
+BattleText_MonsReflectFaded:
+	text_ram wStringBuffer1
+	text "<NO>リフレクターの"
+	line "こうか<GA>きれ<TA!>"
+	prompt
 
-;BattleText_RainContinuesToFall:
-;	text "Rain continues to"
-;	line "fall."
-;	prompt
+BattleText_RainContinuesToFall:
+	text "あめ<GA>ふりつづいている"
+	prompt
 
-;BattleText_TheSunlightIsStrong:
-;	text "The sunlight is"
-;	line "strong."
-;	prompt
+BattleText_TheSunlightIsStrong:
+	text "ひざし<GA>つよい"
+	prompt
 
-;BattleText_TheSandstormRages:
-;	text "The SANDSTORM"
-;	line "rages."
-;	prompt
+BattleText_TheSandstormRages:
+	text "すなあらし<GA>ふきあれる"
+	prompt
 
-;BattleText_TheRainStopped:
-;	text "The rain stopped."
-;	prompt
+BattleText_TheRainStopped:
+	text "あめ<GA>ふりやんだ！"
+	prompt
 
-;BattleText_TheSunlightFaded:
-;	text "The sunlight"
-;	line "faded."
-;	prompt
+BattleText_TheSunlightFaded:
+	text "ひざし<GA>よわくなっ<TA!>"
+	prompt
 
-;BattleText_TheSandstormSubsided:
-;	text "The SANDSTORM"
-;	line "subsided."
-;	prompt
+BattleText_TheSandstormSubsided:
+	text "すなあらし<GA>おさまっ<TA!>"
+	prompt
 
-;BattleText_EnemyMonFainted:
-;	text "Enemy @"
-;	text_ram wEnemyMonNickname
-;	text_start
-;	line "fainted!"
-;	prompt
+BattleText_EnemyMonFainted:
+	text "てき<NO>@"
+	text_ram wEnemyMonNickname
+	text "<WA>たおれ<TA!>"
+	prompt
 
-;GotMoneyForWinningText:
-;	text "<PLAYER> got ¥@"
-;	text_decimal wBattleReward, 3, 6
-;	text_start
-;	line "for winning!"
-;	prompt
+GotMoneyForWinningText:
+	text "<PLAYER><WA>しょうきんとして"
+	line "@"
+	text_decimal wBattleReward, 3, 6
+	text "円　てにいれ<TA!>"
+	prompt
 
-;BattleText_EnemyWasDefeated:
-;	text "<ENEMY>"
-;	line "was defeated!"
-;	prompt
+BattleText_EnemyWasDefeated:
+	text "<ENEMY>"
+	line "と<NO>しょうぶ<NI>かっ<TA!>"
+	prompt
 
-;TiedAgainstText:
-;	text "Tied against"
-;	line "<ENEMY>!"
-;	prompt
+TiedAgainstText:
+	text "<ENEMY>"
+	line "と<NO>しょうぶ<NI>ひきわけ<TA!>"
+	prompt
 
-;SentSomeToMomText:
-;	text "<PLAYER> got ¥@"
-;	text_decimal wBattleReward, 3, 6
-;	text_start
-;	line "for winning!"
-;	cont "Sent some to MOM!"
-;	prompt
+SentSomeToMomText:
+	text "<PLAYER><WA>しょうきんとして"
+	line "@"
+	text_decimal wBattleReward, 3, 6
+	text "円　てにいれ<TA!>"
+	cont "おかあさん<NI>すこし　おくっ<TA!>"
+	prompt
 
-;SentHalfToMomText:
-;	text "Sent half to MOM!"
-;	prompt
+SentHalfToMomText:
+	text "おかあさん<NI>はんぶん　おくっ<TA!>"
+	prompt
 
-;SentAllToMomText:
-;	text "Sent all to MOM!"
-;	prompt
+SentAllToMomText:
+	text "おかあさん<NI>ぜんぶ　おくっ<TA!>"
+	prompt
 
-;UnusedRivalLossText: ; unreferenced
-;	text "<RIVAL>: Huh? I"
-;	line "should've chosen"
-;	cont "your #MON!"
-;	prompt
+UnusedRivalLossText: ; unreferenced
+	text "<RIVAL>『あれー？"
+	line "おまえ<NO>#に"
+	cont "すりゃあ　よかったのかなあ？"
+	prompt
 
-;BattleText_MonFainted:
-;	text_ram wBattleMonNickname
-;	text_start
-;	line "fainted!"
-;	prompt
+BattleText_MonFainted:
+	text_ram wBattleMonNickname
+	text "<WA>たおれ<TA!>"
+	prompt
 
-;BattleText_UseNextMon:
-;	text "Use next #MON?"
-;	done
+BattleText_UseNextMon:
+	text "つぎ<NO>#をつかいますか？"
+	done
 
-;UnusedRivalWinText: ; unreferenced
-;	text "<RIVAL>: Yes!"
-;	line "I guess I chose a"
-;	cont "good #MON!"
-;	prompt
+UnusedRivalWinText: ; unreferenced
+	text "<RIVAL>『やっ<TA!>"
+	line "いい#　えらんだかも！"
+	prompt
 
-;LostAgainstText:
-;	text "Lost against"
-;	line "<ENEMY>!"
-;	prompt
+LostAgainstText:
+	text "<ENEMY>との"
+	line "しょうぶ<NI>まけ<TA!>"
+	prompt
 
-;BattleText_EnemyIsAboutToUseWillPlayerChangeMon:
-;	text "<ENEMY>"
-;	line "is about to use"
-;	cont "@"
-;	text_ram wEnemyMonNickname
-;	text "."
+BattleText_EnemyIsAboutToUseWillPlayerChangeMon:
+	text "<ENEMY>は"
+	line "@"
+	text_ram wEnemyMonNickname
+	text "<WO>くりだそうと　している"
 
-;	para "Will <PLAYER>"
-;	line "change #MON?"
-;	done
+	para "<PLAYER>も　#を"
+	line "いれかえますか？"
+	done
 
-;BattleText_EnemySentOut:
-;	text "<ENEMY>"
-;	line "sent out"
-;	cont "@"
-;	text_ram wEnemyMonNickname
-;	text "!"
-;	done
+BattleText_EnemySentOut:
+	text "<ENEMY>は"
+	line "@"
+	text_ram wEnemyMonNickname
+	text "<WO>くりだし<TA!>"
+	done
 
-;BattleText_TheresNoWillToBattle:
-;	text "There's no will to"
-;	line "battle!"
-;	prompt
+BattleText_TheresNoWillToBattle:
+	text "たたかう　きりょく<GA>ない！"
+	prompt
 
-;BattleText_AnEGGCantBattle:
-;	text "An EGG can't"
-;	line "battle!"
-;	prompt
+BattleText_AnEGGCantBattle:
+	text "タマゴ<WA>たたかえない！"
+	prompt
 
-;BattleText_CantEscape2:
-;	text "Can't escape!"
-;	prompt
+BattleText_CantEscape2:
+	text "にげられない！"
+	prompt
 
-;BattleText_TheresNoEscapeFromTrainerBattle:
-;	text "No! There's no"
-;	line "running from a"
-;	cont "trainer battle!"
-;	prompt
+BattleText_TheresNoEscapeFromTrainerBattle:
+	text "ダメだ！"
+	line "しょうぶ<NO>さいちゅうに"
+	cont "あいて<NI>せなか<WA>みせられない！"
+	prompt
 
-;BattleText_GotAwaySafely:
-;	text "Got away safely!"
-;	prompt
+BattleText_GotAwaySafely:
+	text "うまく　にげきれ<TA!>"
+	prompt
 
-;BattleText_UserFledUsingAStringBuffer1:
-;	text "<USER>"
-;	line "fled using a"
-;	cont "@"
-;	text_ram wStringBuffer1
-;	text "!"
-;	prompt
+BattleText_UserFledUsingAStringBuffer1:
+	text "<USER><WA>も<TTE>いた"
+	line "@"
+	text_ram wStringBuffer1
+	text "<WO>つか<TTE>　にげた"
+	prompt
 
-;BattleText_CantEscape:
-;	text "Can't escape!"
-;	prompt
+BattleText_CantEscape:
+	text "にげること<GA>できない！"
+	prompt
 
-;BattleText_UserHurtBySpikes:
-;	text "<USER>'s"
-;	line "hurt by SPIKES!"
-;	prompt
+BattleText_UserHurtBySpikes:
+	text "<USER><WA>まきびしの"
+	line "ダメージ<WO>うけ<TA!>"
+	prompt
 
-;RecoveredUsingText:
-;	text "<TARGET>"
-;	line "recovered using a"
-;	cont "@"
-;	text_ram wStringBuffer1
-;	text "!"
-;	prompt
+RecoveredUsingText:
+	text "<TARGET><WA>も<TTE>いた"
+	line "@"
+	text_ram wStringBuffer1
+	text "で　かいふくし<TA!>"
+	prompt
 
-;BattleText_UsersStringBuffer1Activated:
-;	text "<USER>'s"
-;	line "@"
-;	text_ram wStringBuffer1
-;	text_start
-;	cont "activated!"
-;	prompt
+BattleText_UsersStringBuffer1Activated:
+	text "<USER><GA>も<TTE>いた"
+	line "@"
+	text_ram wStringBuffer1
+	text "<GA>さどうし<TA!>"
+	prompt
 
-;BattleText_ItemsCantBeUsedHere:
-;	text "Items can't be"
-;	line "used here."
-;	prompt
+BattleText_ItemsCantBeUsedHere:
+	text "ここで<WA>どうぐを"
+	line "つかうこと<WA>できません"
+	prompt
 
-;BattleText_MonIsAlreadyOut:
-;	text_ram wBattleMonNickname
-;	text_start
-;	line "is already out."
-;	prompt
+BattleText_MonIsAlreadyOut:
+	text_ram wBattleMonNickname
+	text "はもうでています"
+	prompt
 
-;BattleText_MonCantBeRecalled:
-;	text_ram wBattleMonNickname
-;	text_start
-;	line "can't be recalled!"
-;	prompt
+BattleText_MonCantBeRecalled:
+	text_ram wBattleMonNickname
+	text "<WO>もどすことが"
+	line "できない！"
+	prompt
 
-;BattleText_TheresNoPPLeftForThisMove:
-;	text "There's no PP left"
-;	line "for this move!"
-;	prompt
+BattleText_TheresNoPPLeftForThisMove:
+	text "わざ<NO>のこりポイントが　ない！"
+	prompt
 
-;BattleText_TheMoveIsDisabled:
-;	text "The move is"
-;	line "DISABLED!"
-;	prompt
+BattleText_TheMoveIsDisabled:
+	text "わざ<WO>ふうじられている！"
+	prompt
 
-;BattleText_MonHasNoMovesLeft:
-;	text_ram wBattleMonNickname
-;	text_start
-;	line "has no moves left!"
-;	done
+BattleText_MonHasNoMovesLeft:
+	text_ram wBattleMonNickname
+	text "<WA>だすこと<NO>できる"
+	line "わざ<GA>ない！"
+	done
 
-;BattleText_TargetsEncoreEnded:
-;	text "<TARGET>'s"
-;	line "ENCORE ended!"
-;	prompt
+BattleText_TargetsEncoreEnded:
+	text "<TARGET>の"
+	line "アンコールじょうたいが　とけ<TA!>"
+	prompt
 
-;BattleText_StringBuffer1GrewToLevel:
-;	text_ram wStringBuffer1
-;	text " grew to"
-;	line "level @"
-;	text_decimal wCurPartyLevel, 1, 3
-;	text "!@"
-;	sound_dex_fanfare_50_79
-;	text_end
+BattleText_StringBuffer1GrewToLevel:
+	text_ram wStringBuffer1
+	text "は"
+	line "レベル@"
+	text_decimal wCurPartyLevel, 1, 3
+	text "　<NI>あがっ<TA!>@"
+	sound_dex_fanfare_50_79
+	text_end
 
-;BattleText_WildMonIsEating:
-;	text "Wild @"
-;	text_ram wEnemyMonNickname
-;	text_start
-;	line "is eating!"
-;	prompt
+BattleText_WildMonIsEating:
+	text "やせいの@"
+	text_ram wEnemyMonNickname
+	text "は"
+	line "エサ<WO>たべてる！"
+	prompt
 
-;BattleText_WildMonIsAngry:
-;	text "Wild @"
-;	text_ram wEnemyMonNickname
-;	text_start
-;	line "is angry!"
-;	prompt
+BattleText_WildMonIsAngry:
+	text "やせいの@"
+	text_ram wEnemyMonNickname
+	text "は"
+	line "おこ<TTE>る！"
+	prompt
 
 FastAsleepText:
 	text "<USER>は"

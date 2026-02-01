@@ -162,12 +162,13 @@ SECTION "Effect Commands", ROMX
 INCLUDE "engine/battle/effect_commands.asm"
 
 
-;SECTION "Enemy Trainers", ROMX
+SECTION "Enemy Trainers", ROMX
 
-;INCLUDE "engine/battle/ai/items.asm"
-;INCLUDE "engine/battle/ai/scoring.asm"
-;INCLUDE "engine/battle/read_trainer_attributes.asm"
-;INCLUDE "engine/battle/read_trainer_party.asm"
+INCLUDE "engine/battle/ai/items.asm"
+INCLUDE "engine/battle/ai/scoring.asm"
+INCLUDE "engine/battle/read_trainer_attributes.asm"
+INCLUDE "engine/battle/read_trainer_party.asm"
+INCLUDE "data/text/battle.asm"
 
 
 ;SECTION "Battle Core", ROMX

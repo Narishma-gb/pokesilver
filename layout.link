@@ -68,7 +68,7 @@ ROMX $0c
 ROMX $0d
 	"Effect Commands"
 ROMX $0e
-	; "Enemy Trainers"
+	"Enemy Trainers"
 ROMX $0f
 	; "Battle Core"
 ROMX $10

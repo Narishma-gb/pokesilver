@@ -366,7 +366,7 @@ GetTrainerName::
 CopyTrainerName:
 	ld de, wStringBuffer1
 	push de
-	ld bc, NAME_LENGTH
+	ld bc, TRAINER_CLASS_NAME_LENGTH - 1
 	call CopyBytes
 	pop de
 	ret

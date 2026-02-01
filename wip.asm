@@ -1,27 +1,30 @@
 ; \1 Label
 ; \2 Label address
 MACRO dr
-	IF !DEF(cur_bank)
-		FAIL "Error: use set_bank_offset to set Bank # and offset"
-	ENDC
-	ASSERT rom_offset >= 0 && rom_offset < 1048576, "Invalid ROM offset: {#x:rom_offset}"
-
-	IF cur_bank == 0
-		ASSERT FATAL, (\2) < $4000 && (\2) >= 0, "Wrong address format: \1"
-		DEF label_offset = \2
+	IF BANK(@) == 0
+		DEF inc_start = @
 	ELSE
-		ASSERT FATAL, (\2) < $8000 && (\2) > $3FFF, "Wrong address format: \1"
-		DEF label_offset = ((cur_bank) - 1) * $4000 + (\2)
+		DEF inc_start = @ - $4000
 	ENDC
 
-	ASSERT FATAL, label_offset - rom_offset >= 0, "Negative binary INCLUDE: \1"
-	IF DEF(_GOLD)
-		INCBIN "baserom_g.bin", rom_offset, label_offset - rom_offset
-	ELIF DEF(_SILVER)
-		INCBIN "baserom_s.bin", rom_offset, label_offset - rom_offset
+	DEF bank_start = BANK(@) * $4000
+	IF (_NARG)
+		DEF inc_size = (\2) - @
+		ASSERT FATAL, inc_size + inc_start <= $4000, "Bank overflow: \1"
+		ASSERT FATAL, inc_size >= 0, "Negative binary INCLUDE: \1"
+	ELSE
+		DEF inc_size = $4000 - inc_start
 	ENDC
-	DEF rom_offset = label_offset
-	\1::
+
+	IF DEF(_GOLD)
+		INCBIN "baserom_g.bin", bank_start + inc_start, inc_size
+	ELIF DEF(_SILVER)
+		INCBIN "baserom_s.bin", bank_start + inc_start, inc_size
+	ENDC
+
+	IF (_NARG)
+\1::
+	ENDC
 ENDM
 
 ; G/S label offset, in places where the ROMs diverge
@@ -42,44 +45,6 @@ MACRO drs
 	dr \1StdScript, (\2) * 3 + $4000
 ENDM
 
-MACRO dr_end
-	IF !DEF(cur_bank)
-		FAIL "Error: use set_bank_offset to set Bank # and offset"
-	ENDC
-	ASSERT rom_offset >= 0 && rom_offset < 1048576, "Invalid ROM offset: {#x:rom_offset}"
-
-	ASSERT FATAL, ((cur_bank) + 1) * 16384 - rom_offset >= 0, "Negative binary INCLUDE"
-	IF DEF(_GOLD)
-		INCBIN "baserom_g.bin", rom_offset, ((cur_bank) + 1) * 16384 - rom_offset
-	ELIF DEF(_SILVER)
-		INCBIN "baserom_s.bin", rom_offset, ((cur_bank) + 1) * 16384 - rom_offset
-	ENDC
-	PURGE cur_bank, rom_offset
-ENDM
-
-; \1 Bank #
-; \2 offset into Bank (optional)
-MACRO set_bank_offset
-	DEF cur_bank = \1
-	ASSERT FATAL, cur_bank >= 0 && cur_bank < 64, "Invalid Bank number: \1"
-
-	IF _NARG == 1
-		IF cur_bank == 0
-			DEF rom_offset = 0
-		ELSE
-			DEF rom_offset = cur_bank * 16384
-		ENDC
-	ELSE
-		IF cur_bank == 0
-			ASSERT FATAL, (\2) < $4000 && (\2) >= 0, "Wrong address format"
-			DEF rom_offset = \2
-		ELSE
-			ASSERT FATAL, (\2) < $8000 && (\2) > $3FFF, "Wrong address format"
-			DEF rom_offset = (cur_bank - 1) * $4000 + (\2)
-		ENDC
-	ENDC
-ENDM
-
 
 EXPORT DEF EggPic EQU $7F21
 
@@ -88,40 +53,9 @@ INCLUDE "main.asm"
 	set_gs_diff 0
 
 
-SECTION "rom14", ROMX, BANK[14]
-; ROM $0e : $38000 - $3BFFF
-	set_bank_offset 14
-Trainers::
-BattleText::
-
-	dr AI_Basic, $45a1
-AIScoring::
-	dr AI_Setup, $45f0
-	dr AI_Types, $4645
-	dr AI_Offensive, $46b2
-	dr AI_Smart, $46ce
-	dr AICheckPlayerMaxHP, $522a
-	dr AICheckEnemyMaxHP, $5235
-	dr AI_Opportunist, $52f9
-	dr AI_Aggressive, $534d
-	dr AI_Cautious, $53fc
-	dr AI_Status, $5437
-	dr AI_Risky, $548d
-	dr AI_None, $54e6
-	dr GetTrainerClassName, $5511
-	dr TrainerClassAttributes, $5580
-	dr Battle_GetTrainerName, $5910
-	dr GetTrainerName, $5918
-	dr TrainerGroups, $595c
-	dr FastAsleepText_WIP, $77ae
-
-INCLUDE "data/text/battle.asm"
-
-
 SECTION "Battle Core", ROMX, BANK[15]
-SECTION "rom15", ROMX, BANK[15]
+SECTION "rom15", ROMX[$4000], BANK[15]
 ; ROM $0f : $3C000 - $3FFFF
-	set_bank_offset 15
 
 	dr FleeMons, $4551
 	dr GetMoveEffect, $45a4
@@ -135,13 +69,17 @@ SECTION "rom15", ROMX, BANK[15]
 	dr SetUpBattlePartyMenu, $5220
 	dr ForcePickSwitchMonInBattle, $528b
 	dr ForceEnemySwitch, $537d
+	dr EnemySwitch, $539b
 	dr EnemySwitch_SetMode, $53d1
 	dr ResetBattleParticipants, $5434
+	dr NewEnemyMonStatus, $56c7
+	dr ResetEnemyStatLevels, $56fa
 	dr CheckPlayerPartyForFitMon, $5706
 	dr GetPartyMonDVs, $58f1
 	dr GetEnemyMonDVs, $5903
 	dr SwitchPlayerMon, $599e
 	dr SpikesDamage, $5a80
+	dr PursuitSwitch, $5ab8
 	dr UseHeldStatusHealingItem, $5c46
 	dr UseConfusionHealingItem, $5cae
 	dr UpdatePlayerHUD, $5da5
@@ -169,12 +107,11 @@ SECTION "rom15", ROMX, BANK[15]
 	dr GetTrainerBackpic, $79b8
 	dr BattleCommandPointers, $7d9d
 
-	dr_end
+	dr
 
 SECTION "Evolutions and Attacks", ROMX, BANK[16]
-SECTION "rom16", ROMX, BANK[16]
+SECTION "rom16", ROMX[$4000], BANK[16]
 ; ROM $10 : $40000 - $43FFF
-	set_bank_offset 16
 
 	dr Pokedex, $4000
 	dr MoveNames, $563e
@@ -186,12 +123,12 @@ SECTION "rom16", ROMX, BANK[16]
 	dr GetPreEvolution, $692f
 	dr EvosAttacksPointers, $695f
 
-	dr_end
+	dr
 
-SECTION "rom17", ROMX, BANK[17]
-; ROM $11 : $44000 - $47FFF
+
 	set_gs_diff $3e
-	set_bank_offset 17, $79ae + gs_diff
+SECTION "rom17", ROMX[$79ae + gs_diff], BANK[17]
+; ROM $11 : $44000 - $47FFF
 
 	drd PlaceGraphic, $7aa0
 	drd SendMailToPC, $7ad1
@@ -201,23 +138,20 @@ SECTION "rom17", ROMX, BANK[17]
 	drd IsAnyMonHoldingMail, $7ce4
 	drd _PlayerMailBoxMenu, $7d03
 
-	dr_end
+	dr
 
-SECTION "rom18", ROMX, BANK[18]
+SECTION "rom18", ROMX[$4000], BANK[18]
 ; ROM $12 : $48000 - $4BFFF
-	set_bank_offset 18
 
-	dr_end
+	dr
 
-SECTION "rom19", ROMX, BANK[19]
+SECTION "rom19", ROMX[$4000], BANK[19]
 ; ROM $13 : $4C000 - $4FFFF
-	set_bank_offset 19
 
-	dr_end
+	dr
 
-SECTION "rom20", ROMX, BANK[20]
+SECTION "rom20", ROMX[$4000], BANK[20]
 ; ROM $14 : $50000 - $53FFF
-	set_bank_offset 20
 
 	dr SelectMonFromParty, $4000
 	dr SelectTradeOrDayCareMon, $401d
@@ -261,83 +195,70 @@ SECTION "rom20", ROMX, BANK[20]
 	dr BaseData, $5aa9
 	dr PokemonNames, $7a09
 
-	dr_end
+	dr
 
-SECTION "rom21", ROMX, BANK[21]
+SECTION "rom21", ROMX[$4000], BANK[21]
 ; ROM $15 : $54000 - $57FFF
-	set_bank_offset 21
 
-	dr_end
+	dr
 
-SECTION "rom22", ROMX, BANK[22]
+SECTION "rom22", ROMX[$4000], BANK[22]
 ; ROM $16 : $58000 - $5BFFF
-	set_bank_offset 22
 
-	dr_end
+	dr
 
-SECTION "rom23", ROMX, BANK[23]
+SECTION "rom23", ROMX[$4000], BANK[23]
 ; ROM $17 : $5C000 - $5FFFF
-	set_bank_offset 23
 
-	dr_end
+	dr
 
-SECTION "rom24", ROMX, BANK[24]
+SECTION "rom24", ROMX[$4000], BANK[24]
 ; ROM $18 : $60000 - $63FFF
-	set_bank_offset 24
 
-	dr_end
+	dr
 
-SECTION "rom25", ROMX, BANK[25]
+SECTION "rom25", ROMX[$4000], BANK[25]
 ; ROM $19 : $64000 - $67FFF
-	set_bank_offset 25
 
-	dr_end
+	dr
 
-SECTION "rom26", ROMX, BANK[26]
+SECTION "rom26", ROMX[$4000], BANK[26]
 ; ROM $1a : $68000 - $6BFFF
-	set_bank_offset 26
 
-	dr_end
+	dr
 
-SECTION "rom27", ROMX, BANK[27]
+SECTION "rom27", ROMX[$4000], BANK[27]
 ; ROM $1b : $6C000 - $6FFFF
-	set_bank_offset 27
 
-	dr_end
+	dr
 
-SECTION "rom28", ROMX, BANK[28]
+SECTION "rom28", ROMX[$4000], BANK[28]
 ; ROM $1c : $70000 - $73FFF
-	set_bank_offset 28
 
-	dr_end
+	dr
 
-SECTION "rom29", ROMX, BANK[29]
+SECTION "rom29", ROMX[$4000], BANK[29]
 ; ROM $1d : $74000 - $77FFF
-	set_bank_offset 29
 
-	dr_end
+	dr
 
-SECTION "rom30", ROMX, BANK[30]
+SECTION "rom30", ROMX[$4000], BANK[30]
 ; ROM $1e : $78000 - $7BFFF
-	set_bank_offset 30
 
-	dr_end
+	dr
 
-SECTION "rom31", ROMX, BANK[31]
+SECTION "rom31", ROMX[$4000], BANK[31]
 ; ROM $1f : $7C000 - $7FFFF
-	set_bank_offset 31
 
-	dr_end
+	dr
 
-SECTION "rom32", ROMX, BANK[32]
+SECTION "rom32", ROMX[$4000], BANK[32]
 ; ROM $20 : $80000 - $83FFF
-	set_bank_offset 32
 
-	dr_end
+	dr
 
-SECTION "rom33", ROMX, BANK[33]
+SECTION "rom33", ROMX[$4000], BANK[33]
 ; ROM $21 : $84000 - $87FFF
-	set_bank_offset 33
 
 	dr _PrinterReceive, $42d5
 	dr PrintUnownStamp, $4528
@@ -345,17 +266,15 @@ SECTION "rom33", ROMX, BANK[33]
 	dr _PrintDiploma, $45fc
 	dr _HallOfFamePC, $67f3
 
-	dr_end
+	dr
 
-SECTION "rom34", ROMX, BANK[34]
+SECTION "rom34", ROMX[$4000], BANK[34]
 ; ROM $22 : $88000 - $8BFFF
-	set_bank_offset 34
 
-	dr_end
+	dr
 
-SECTION "rom35", ROMX, BANK[35]
+SECTION "rom35", ROMX[$4000], BANK[35]
 ; ROM $23 : $8C000 - $8FFFF
-	set_bank_offset 35
 
 	dr SaveMenu_CopyTilemapAtOnce, $4000
 	dr DummyPredef35, $417a
@@ -389,11 +308,10 @@ DummyPredef36::
 	drd UnfreezeMonIcons, $6728
 	drd HoldSwitchmonIcon, $6743
 
-	dr_end
+	dr
 
-SECTION "rom36", ROMX, BANK[36]
+SECTION "rom36", ROMX[$4000], BANK[36]
 ; ROM $24 : $90000 - $93FFF
-	set_bank_offset 36
 
 	dr GetCallerLocation, $441f
 	dr InitClock, $4677
@@ -408,11 +326,10 @@ SECTION "rom36", ROMX, BANK[36]
 	dr Fish, $68c9
 	dr _SlotMachine, $6b85
 
-	dr_end
+	dr
 
-SECTION "rom37", ROMX, BANK[37]
+SECTION "rom37", ROMX[$4000], BANK[37]
 ; ROM $25 : $94000 - $97FFF
-	set_bank_offset 37
 
 	dr MapScenes, $4000
 	dr MapGroupPointers, $40ed
@@ -423,59 +340,50 @@ SECTION "rom37", ROMX, BANK[37]
 	dr WarpToSpawnPoint, $7a7d
 	dr ClearCmdQueue, $7c4e
 
-	dr_end
+	dr
 
-SECTION "rom38", ROMX, BANK[38]
+SECTION "rom38", ROMX[$4000], BANK[38]
 ; ROM $26 : $98000 - $9BFFF
-	set_bank_offset 38
 
-	dr_end
+	dr
 
-SECTION "rom39", ROMX, BANK[39]
+SECTION "rom39", ROMX[$4000], BANK[39]
 ; ROM $27 : $9C000 - $9FFFF
-	set_bank_offset 39
 
-	dr_end
+	dr
 
-SECTION "rom40", ROMX, BANK[40]
+SECTION "rom40", ROMX[$4000], BANK[40]
 ; ROM $28 : $A0000 - $A3FFF
-	set_bank_offset 40
 
-	dr_end
+	dr
 
-SECTION "rom41", ROMX, BANK[41]
+SECTION "rom41", ROMX[$4000], BANK[41]
 ; ROM $29 : $A4000 - $A7FFF
-	set_bank_offset 41
 
-	dr_end
+	dr
 
-SECTION "rom42", ROMX, BANK[42]
+SECTION "rom42", ROMX[$4000], BANK[42]
 ; ROM $2a : $A8000 - $ABFFF
-	set_bank_offset 42
 
-	dr_end
+	dr
 
-SECTION "rom43", ROMX, BANK[43]
+SECTION "rom43", ROMX[$4000], BANK[43]
 ; ROM $2b : $AC000 - $AFFFF
-	set_bank_offset 43
 
-	dr_end
+	dr
 
-SECTION "rom44", ROMX, BANK[44]
+SECTION "rom44", ROMX[$4000], BANK[44]
 ; ROM $2c : $B0000 - $B3FFF
-	set_bank_offset 44
 
-	dr_end
+	dr
 
-SECTION "rom45", ROMX, BANK[45]
+SECTION "rom45", ROMX[$4000], BANK[45]
 ; ROM $2d : $B4000 - $B7FFF
-	set_bank_offset 45
 
-	dr_end
+	dr
 
-SECTION "rom46", ROMX, BANK[46]
+SECTION "rom46", ROMX[$4000], BANK[46]
 ; ROM $2e : $B8000 - $BBFFF
-	set_bank_offset 46
 
 	dr CheckForHiddenItems, $6300
 	dr TreeMonEncounter, $6378
@@ -483,17 +391,15 @@ SECTION "rom46", ROMX, BANK[46]
 	dr ReadPartyMonMail, $7258
 	dr ItemIsMail, $7e63
 
-	dr_end
+	dr
 
-SECTION "rom47", ROMX, BANK[47]
+SECTION "rom47", ROMX[$4000], BANK[47]
 ; ROM $2f : $BC000 - $BFFFF
-	set_bank_offset 47
 
-	dr_end
+	dr
 
-SECTION "rom49", ROMX, BANK[49]
+SECTION "rom49", ROMX[$7a40], BANK[49]
 ; ROM $31 : $C4000 - $C7FFF
-	set_bank_offset 49, $7a40
 
 	dr _CheckPokerus, $7a40
 	dr CheckForLuckyNumberWinners, $7a5a
@@ -501,21 +407,19 @@ SECTION "rom49", ROMX, BANK[49]
 	dr CheckPartyFullAfterContest, $7c15
 	dr GiveANickname_YesNo, $7d26
 
-	dr_end
+	dr
 
-SECTION "rom50", ROMX, BANK[50]
+SECTION "rom50", ROMX[$4000], BANK[50]
 ; ROM $32 : $C8000 - $CBFFF
-	set_bank_offset 50
 BattleAnimations::
 
 	dr DummyPredef2F, $40e4
 	dr LoadPoisonBGPals, $7c06
 
-	dr_end
+	dr
 
-SECTION "rom51", ROMX, BANK[51]
+SECTION "rom51", ROMX[$4000], BANK[51]
 ; ROM $33 : $CC000 - $CFFFF
-	set_bank_offset 51
 ClearBattleAnims::
 BattleAnimCommands::
 
@@ -525,23 +429,20 @@ BattleAnimCommands::
 DummyPredef39::
 	dr PlayBattleAnim, $40e5
 
-	dr_end
+	dr
 
-SECTION "rom52", ROMX, BANK[52]
+SECTION "rom52", ROMX[$4000], BANK[52]
 ; ROM $34 : $D0000 - $D3FFF
-	set_bank_offset 52
 
-	dr_end
+	dr
 
-SECTION "rom53", ROMX, BANK[53]
+SECTION "rom53", ROMX[$4000], BANK[53]
 ; ROM $35 : $D4000 - $D7FFF
-	set_bank_offset 53
 
-	dr_end
+	dr
 
-SECTION "rom54", ROMX, BANK[54]
+SECTION "rom54", ROMX[$4000], BANK[54]
 ; ROM $36 : $D8000 - $DBFFF
-	set_bank_offset 54
 StdScripts::
 	drs MagazineBookshelfScript, $3
 	drs IncenseBurnerScript, $5
@@ -553,17 +454,15 @@ StdScripts::
 	drs BugContestResultsWarpScript, $16
 	drs PCScript, $2b
 
-	dr_end
+	dr
 
-SECTION "rom55", ROMX, BANK[55]
+SECTION "rom55", ROMX[$4000], BANK[55]
 ; ROM $37 : $DC000 - $DFFFF
-	set_bank_offset 55
 
 	dr rom55_end, $5773
 
-SECTION "rom56", ROMX, BANK[56]
+SECTION "rom56", ROMX[$4000], BANK[56]
 ; ROM $38 : $E0000 - $E3FFF
-	set_bank_offset 56
 
 	dr _Diploma, $4002
 	dr RotateUnownFrontpic, $47cf
@@ -575,11 +474,10 @@ SECTION "rom56", ROMX, BANK[56]
 	dr _MovePKMNWithoutMail, $6f4e
 	dr _ChangeBox, $7ce3
 
-	dr_end
+	dr
 
-SECTION "rom57", ROMX, BANK[57]
+SECTION "rom57", ROMX[$4000], BANK[57]
 ; ROM $39 : $E4000 - $E7FFF
-	set_bank_offset 57
 
 	dr CopyrightGFX, $4000
 	dr TitleScreenGFX3, $41a0
@@ -594,11 +492,10 @@ SECTION "rom57", ROMX, BANK[57]
 	drd SplashScreen, $5196
 	drd GoldSilverIntro, $549f
 
-	dr_end
+	dr
 
-SECTION "rom58", ROMX, BANK[58]
+SECTION "rom58", ROMX[$4000], BANK[58]
 ; ROM $3a : $E8000 - $EBFFF
-	set_bank_offset 58
 LoadMusicByte::
 
 	dr _InitSound, $4000
@@ -608,31 +505,27 @@ LoadMusicByte::
 	dr _PlaySFX, $4c04
 	dr ClearChannels, $4fe9
 
-	dr_end
+	dr
 
-SECTION "rom59", ROMX, BANK[59]
+SECTION "rom59", ROMX[$4000], BANK[59]
 ; ROM $3b : $EC000 - $EFFFF
-	set_bank_offset 59
 
-	dr_end
+	dr
 
-SECTION "rom60", ROMX, BANK[60]
+SECTION "rom60", ROMX[$4000], BANK[60]
 ; ROM $3c : $F0000 - $F3FFF
-	set_bank_offset 60
 
 	dr PokemonCries, $6747
 
-	dr_end
+	dr
 
-SECTION "rom61", ROMX, BANK[61]
+SECTION "rom61", ROMX[$4000], BANK[61]
 ; ROM $3d : $F4000 - $F7FFF
-	set_bank_offset 61
 
-	dr_end
+	dr
 
-SECTION "rom62", ROMX, BANK[62]
+SECTION "rom62", ROMX[$4000], BANK[62]
 ; ROM $3e : $F8000 - $FBFFF
-	set_bank_offset 62
 
 	dr _LoadStandardFont, $4000
 	dr _LoadFontsExtra, $400c
@@ -660,11 +553,10 @@ SECTION "rom62", ROMX, BANK[62]
 	dr DoWeatherModifiers, $7e6f
 	dr DoBadgeTypeBoosts, $7ef0
 
-	dr_end
+	dr
 
-SECTION "rom63", ROMX, BANK[63]
+SECTION "rom63", ROMX[$4000], BANK[63]
 ; ROM $3f : $FC000 - $FFFFF
-	set_bank_offset 63
 
 	dr DummyPredef3A, $4001
 	dr _AnimateTileset, $4003
@@ -700,4 +592,4 @@ TilesetUndergroundAnim::
 	dr StagePartyDataForMysteryGift, $5192
 	dr InitMysteryGiftLayout, $51da
 
-	dr_end
+	dr

@@ -704,8 +704,11 @@ AI_Switch:
 	ret
 
 EnemyWithdrewText:
-	text_far _EnemyWithdrewText
-	text_end
+	text "<ENEMY>は"
+	line "@"
+	text_ram wEnemyMonNickname
+	text "<WO>ひっこめた！"
+	prompt
 
 EnemyUsedFullHealRed: ; unreferenced
 	call AIUsedItemSound
@@ -829,5 +832,12 @@ PrintText_UsedItemOn:
 	jp PrintText
 
 EnemyUsedOnText:
-	text_far _EnemyUsedOnText
-	text_end
+	text "<ENEMY>は"
+	line "@"
+	text_ram wEnemyMonNickname
+	text "に"
+
+	para "@"
+	text_ram wMonOrItemNameBuffer
+	text "を　つかっ<TA!>"
+	prompt
