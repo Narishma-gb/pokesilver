@@ -1598,9 +1598,9 @@ HandleScreens:
 	jp CopyName2
 
 .Your:
-	db "Your@"
+	db "みかた@"
 .Enemy:
-	db "Enemy@"
+	db "てき@"
 
 .LightScreenTick:
 	ld a, [de]
@@ -2873,7 +2873,7 @@ MonFaintedAnimation:
 	ret
 
 .Spaces:
-	db "       @"
+	db "　　　　　　　@"
 
 SlideBattlePicOut:
 	ldh [hMapObjectIndex], a
@@ -3661,7 +3661,7 @@ InitBattleMon:
 	ld a, [wCurBattleMon]
 	call SkipNames
 	ld de, wBattleMonNickname
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	ld hl, wBattleMonAttack
 	ld de, wPlayerStats
@@ -3741,7 +3741,7 @@ InitEnemyMon:
 	ld a, [wCurPartyMon]
 	call SkipNames
 	ld de, wEnemyMonNickname
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	ld hl, wEnemyMonAttack
 	ld de, wEnemyStats
@@ -4412,8 +4412,8 @@ CheckDanger:
 
 PrintPlayerHUD:
 	ld de, wBattleMonNickname
-	hlcoord 10, 7
-	call Battle_DummyFunction
+	hlcoord 10, 8
+	call CenterMonName
 	call PlaceString
 
 	push bc
@@ -4441,20 +4441,27 @@ PrintPlayerHUD:
 
 	pop hl
 	dec hl
+	ld a, [hli]
+	cp '♂'
+	jr z, .print_status
+	cp '♀'
+	jr z, .print_status
 
 	ld a, TEMPMON
 	ld [wMonType], a
+	push hl
 	callfar GetGender
-	ld a, ' '
+	pop hl
+	ld a, '　'
 	jr c, .got_gender_char
 	ld a, '♂'
 	jr nz, .got_gender_char
 	ld a, '♀'
 
 .got_gender_char
-	hlcoord 17, 8
-	ld [hl], a
-	hlcoord 14, 8
+	ld [hli], a
+
+.print_status
 	push af ; back up gender
 	push hl
 	ld de, wBattleMonStatus
@@ -4463,7 +4470,7 @@ PrintPlayerHUD:
 	pop bc
 	ret nz
 	ld a, b
-	cp ' '
+	cp '　'
 	jr nz, .copy_level ; male or female
 	dec hl ; genderless
 
@@ -4498,13 +4505,19 @@ DrawEnemyHUD:
 	ld [wCurPartySpecies], a
 	call GetBaseData
 	ld de, wEnemyMonNickname
-	hlcoord 1, 0
-	call Battle_DummyFunction
+	hlcoord 2, 1
+	call CenterMonName
 	call PlaceString
 	ld h, b
 	ld l, c
 	dec hl
+	ld a, [hli]
+	cp '♂'
+	jr z, .print_status
+	cp '♀'
+	jr z, .print_status
 
+	push hl
 	ld hl, wEnemyMonDVs
 	ld de, wTempMonDVs
 	ld a, [wEnemySubStatus5]
@@ -4521,17 +4534,17 @@ DrawEnemyHUD:
 	ld a, TEMPMON
 	ld [wMonType], a
 	callfar GetGender
-	ld a, ' '
+	pop hl
+	ld a, '　'
 	jr c, .got_gender
 	ld a, '♂'
 	jr nz, .got_gender
 	ld a, '♀'
 
 .got_gender
-	hlcoord 9, 1
-	ld [hl], a
+	ld [hli], a
 
-	hlcoord 6, 1
+.print_status
 	push af
 	push hl
 	ld de, wEnemyMonStatus
@@ -4540,7 +4553,7 @@ DrawEnemyHUD:
 	pop bc
 	jr nz, .skip_level
 	ld a, b
-	cp ' '
+	cp '　'
 	jr nz, .print_level
 	dec hl
 .print_level
@@ -4628,8 +4641,29 @@ UpdateHPPal:
 	ret z
 	jp FinishBattleAnim
 
-Battle_DummyFunction:
-; called before placing either battler's nickname in the HUD
+; center mon name and level on the HUD
+; if the name is 5 chars long, print at the leftmost position
+; if the name is 3 or 4 chars long, print 1 space to the right
+; if the name is 1 or 2 chars long, print 2 spaces to the right
+CenterMonName:
+	push de
+	inc hl
+	inc hl
+	ld b, 2
+.loop
+	inc de
+	ld a, [de]
+	cp '@'
+	jr z, .done
+	inc de
+	ld a, [de]
+	cp '@'
+	jr z, .done
+	dec hl
+	dec b
+	jr nz, .loop
+.done
+	pop de
 	ret
 
 BattleMenu:
@@ -4655,12 +4689,6 @@ BattleMenu:
 	jr .next
 .not_contest
 
-	; Auto input: choose "ITEM"
-	ld a, [wInputType]
-	or a
-	jr z, .skip_dude_pack_select
-	farcall _DudeAutoInput_DownA
-.skip_dude_pack_select
 	callfar LoadBattleMenu
 
 .next
@@ -4669,9 +4697,9 @@ BattleMenu:
 	ld a, [wBattleMenuCursorPosition]
 	cp $1
 	jp z, BattleMenu_Fight
-	cp $3
-	jp z, BattleMenu_Pack
 	cp $2
+	jp z, BattleMenu_Pack
+	cp $3
 	jp z, BattleMenu_PKMN
 	cp $4
 	jp z, BattleMenu_Run
@@ -5065,37 +5093,36 @@ MoveSelectionScreen:
 	xor a
 	ldh [hBGMapMode], a
 
-	hlcoord 4, 17 - NUM_MOVES - 1
-	ld b, 4
-	ld c, 14
+	hlcoord 0, 8
+	ld b, 8
+	ld c, 8
 	ld a, [wMoveSelectionMenuType]
 	cp $2
 	jr nz, .got_dims
-	hlcoord 4, 17 - NUM_MOVES - 1 - 4
-	ld b, 4
-	ld c, 14
+	hlcoord 10, 8
+	ld b, 8
+	ld c, 8
 .got_dims
 	call Textbox
 
-	hlcoord 6, 17 - NUM_MOVES
+	hlcoord 2, 10
 	ld a, [wMoveSelectionMenuType]
 	cp $2
 	jr nz, .got_start_coord
-	hlcoord 6, 17 - NUM_MOVES - 4
+	hlcoord 12, 10
 .got_start_coord
-	ld a, SCREEN_WIDTH
+	ld a, 2 * SCREEN_WIDTH
 	ld [wListMovesLineSpacing], a
 	predef ListMoves
 
-	ld b, 5
+	ld b, 1
 	ld a, [wMoveSelectionMenuType]
 	cp $2
-	ld a, 17 - NUM_MOVES
 	jr nz, .got_default_coord
-	ld b, 5
-	ld a, 17 - NUM_MOVES - 4
+	ld b, 11
 
 .got_default_coord
+	ld a, 10
 	ld [w2DMenuCursorInitY], a
 	ld a, b
 	ld [w2DMenuCursorInitX], a
@@ -5134,7 +5161,7 @@ MoveSelectionScreen:
 	ld [w2DMenuFlags1], a
 	xor a
 	ld [w2DMenuFlags2], a
-	ld a, $10
+	ld a, $20
 	ld [w2DMenuCursorOffsets], a
 .menu_loop
 	ld a, [wMoveSelectionMenuType]
@@ -5143,7 +5170,7 @@ MoveSelectionScreen:
 	dec a
 	jr nz, .interpret_joypad
 	hlcoord 11, 14
-	ld de, .empty_string
+	ld de, .mimic_string
 	call PlaceString
 	jr .interpret_joypad
 
@@ -5152,9 +5179,9 @@ MoveSelectionScreen:
 	ld a, [wSwappingMove]
 	and a
 	jr z, .interpret_joypad
-	hlcoord 5, 13
-	ld bc, SCREEN_WIDTH
+	hlcoord 1, 10
 	dec a
+	ld bc, 2 * SCREEN_WIDTH
 	call AddNTimes
 	ld [hl], '▷'
 
@@ -5168,7 +5195,7 @@ MoveSelectionScreen:
 	jp nz, .pressed_down
 	bit B_PAD_SELECT, a
 	jp nz, .pressed_select
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	; A button
 	push af
 
@@ -5239,8 +5266,9 @@ MoveSelectionScreen:
 	call SafeLoadTempTilemapToTilemap
 	jp MoveSelectionScreen
 
-.empty_string
-	db "@"
+.mimic_string
+	db   "どのわざを"
+	next "ものまねする？@"
 
 .pressed_up
 	ld a, [wMenuCursorY]
@@ -5398,8 +5426,8 @@ MoveInfoBox:
 	xor a
 	ldh [hBGMapMode], a
 
-	hlcoord 0, 8
-	ld b, 3
+	hlcoord 9, 12
+	ld b, 4
 	ld c, 9
 	call Textbox
 
@@ -5414,7 +5442,7 @@ MoveInfoBox:
 	cp b
 	jr nz, .not_disabled
 
-	hlcoord 1, 10
+	hlcoord 10, 15
 	ld de, .Disabled
 	call PlaceString
 	jr .done
@@ -5446,18 +5474,20 @@ MoveInfoBox:
 	ld a, [hl]
 	and PP_MASK
 	ld [wStringBuffer1], a
-	hlcoord 1, 9
+	hlcoord 10, 15
 	ld de, .Type
 	call PlaceString
 
-	hlcoord 7, 11
-	ld [hl], '/'
-	hlcoord 5, 11
+	hlcoord 16, 13
+	ld [hl], '／'
+	hlcoord 14, 16
+	ld [hl], '／'
+	hlcoord 14, 13
 	ld de, wStringBuffer1
 	lb bc, 1, 2
 	call PrintNum
 
-	hlcoord 8, 11
+	hlcoord 17, 13
 	ld de, wNamedObjectIndex
 	lb bc, 1, 2
 	call PrintNum
@@ -5465,16 +5495,16 @@ MoveInfoBox:
 	callfar UpdateMoveData
 	ld a, [wPlayerMoveStruct + MOVE_ANIM]
 	ld b, a
-	hlcoord 2, 10
+	hlcoord 15, 16
 	predef PrintMoveType
 
 .done
 	ret
 
 .Disabled:
-	db "Disabled!@"
+	db "ふうじられている！@"
 .Type:
-	db "TYPE/@"
+	db "わざタイプ@"
 
 ParseEnemyAction:
 	ld a, [wEnemyIsSwitching]
@@ -5909,14 +5939,8 @@ LoadEnemyMon:
 	jr c, .GenerateDVs ; try again
 
 .Magikarp:
-; These filters are untranslated.
-; They expect at wMagikarpLength a 2-byte value in mm,
-; but the value is in feet and inches (one byte each).
-
-; The first filter is supposed to make very large Magikarp even rarer,
-; by targeting those 1600 mm (= 5'3") or larger.
-; After the conversion to feet, it is unable to target any,
-; since the largest possible Magikarp is 5'3", and $0503 = 1283 mm.
+; The first filter makes very large Magikarp even rarer,
+; by targeting those 1600 mm or larger.
 	ld a, [wTempEnemyMonSpecies]
 	cp MAGIKARP
 	jr nz, .Happiness
@@ -5926,27 +5950,27 @@ LoadEnemyMon:
 	ld bc, wPlayerID
 	callfar CalcMagikarpLength
 
-; No reason to keep going if length > 1536 mm (i.e. if HIGH(length) > 6 feet)
+; No reason to keep going if length > 1536 mm
 	ld a, [wMagikarpLength]
-	cp HIGH(1536) ; should be "cp 5", since 1536 mm = 5'0", but HIGH(1536) = 6
+	cp HIGH(1536)
 	jr nz, .CheckMagikarpArea
 
 ; 5% chance of skipping both size checks
 	call Random
 	cp 5 percent
 	jr c, .CheckMagikarpArea
-; Try again if length >= 1616 mm (i.e. if LOW(length) >= 4 inches)
+; Try again if length >= 1616 mm
 	ld a, [wMagikarpLength + 1]
-	cp LOW(1616) ; should be "cp 4", since 1616 mm = 5'4", but LOW(1616) = 80
+	cp LOW(1616)
 	jr nc, .GenerateDVs
 
 ; 20% chance of skipping this check
 	call Random
 	cp 20 percent - 1
 	jr c, .CheckMagikarpArea
-; Try again if length >= 1600 mm (i.e. if LOW(length) >= 3 inches)
+; Try again if length >= 1600 mm
 	ld a, [wMagikarpLength + 1]
-	cp LOW(1600) ; should be "cp 3", since 1600 mm = 5'3", but LOW(1600) = 64
+	cp LOW(1600)
 	jr nc, .GenerateDVs
 
 .CheckMagikarpArea:
@@ -5961,8 +5985,6 @@ LoadEnemyMon:
 ; Intended behavior enforces a minimum size at Lake of Rage.
 ; The real behavior prevents a minimum size in the Lake of Rage area.
 
-; Moreover, due to the check not being translated to feet+inches, all Magikarp
-; smaller than 4'0" may be caught by the filter, a lot more than intended.
 	ld a, [wMapGroup]
 	cp GROUP_LAKE_OF_RAGE
 	jr z, .Happiness
@@ -5973,9 +5995,9 @@ LoadEnemyMon:
 	call Random
 	cp 39 percent + 1
 	jr c, .Happiness
-; Try again if length < 1024 mm (i.e. if HIGH(length) < 3 feet)
+; Try again if length < 1024 mm
 	ld a, [wMagikarpLength]
-	cp HIGH(1024) ; should be "cp 3", since 1024 mm = 3'4", but HIGH(1024) = 4
+	cp HIGH(1024)
 	jr c, .GenerateDVs ; try again
 
 ; Finally done with DVs
@@ -6191,7 +6213,7 @@ LoadEnemyMon:
 ; Update enemy nickname
 	ld hl, wStringBuffer1
 	ld de, wEnemyMonNickname
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 
 ; Saw this mon
@@ -7055,7 +7077,7 @@ GiveExperiencePoints:
 	ld b, 10
 	ld c, 9
 	call Textbox
-	hlcoord 11, 1
+	hlcoord 11, 2
 	ld bc, 4
 	predef PrintTempMonStats
 	ld c, 30
@@ -7164,7 +7186,8 @@ BoostExp:
 	ret
 
 Text_MonGainedExpPoint:
-	text_far Text_Gained
+	text_ram wStringBuffer1
+	text "は@"
 	text_asm
 	ld hl, ExpPointsText
 	ld a, [wStringBuffer2 + 2] ; IsTradedMon
@@ -7175,12 +7198,13 @@ Text_MonGainedExpPoint:
 	ret
 
 BoostedExpPointsText:
-	text_far _BoostedExpPointsText
-	text_end
-
+	text "　おおめに@"
 ExpPointsText:
-	text_far _ExpPointsText
-	text_end
+	text_start
+	line "@"
+	text_decimal wStringBuffer2, 2, 4
+	text "　けいけんち<WO>もらった！"
+	prompt
 
 AnimateExpBar:
 	push bc
@@ -7268,7 +7292,7 @@ AnimateExpBar:
 	call PrintPlayerHUD
 	ld hl, wBattleMonNickname
 	ld de, wStringBuffer1
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	call TerminateExpBarSound
 	ld de, SFX_HIT_END_OF_EXP_BAR
@@ -7420,27 +7444,40 @@ SendOutMonText:
 	jp PrintText
 
 GoMonText:
-	text_far _GoMonText
-	text_end
+	text "ゆけっ！　@"
+	text_asm
+	jr SendOutCommonText
 
 DoItMonText:
-	text_far _DoItMonText
-	text_end
+	text "いってこい！　@"
+	text_asm
+	jr SendOutCommonText
 
 GoForItMonText:
-	text_far _GoForItMonText
-	text_end
+	text "がんばれ！　@"
+	text_asm
+	jr SendOutCommonText
 
 YourFoesWeakGetmMonText:
-	text_far _YourFoesWeakGetmMonText
-	text_end
+	text "あいて<GA>よわっている！"
+	line "チャンスだ！　@"
+	text_asm
+SendOutCommonText:
+	ld hl, .SendOutCommonText
+	ret
+
+.SendOutCommonText:
+	text_ram wBattleMonNickname
+	text "！"
+	done
 
 WithdrawMonText:
 	ld hl, .WithdrawMonText
 	jp PrintText
 
 .WithdrawMonText:
-	text_far _BattleMonNickCommaText
+	text_ram wBattleMonNickname
+	text "　@"
 	text_asm
 ; Depending on the HP lost since the enemy mon was sent out, the game prints a different text
 	push de
@@ -7491,20 +7528,28 @@ WithdrawMonText:
 	ret
 
 ThatsEnoughComeBackText:
-	text_far _ThatsEnoughComeBackText
-	text_end
+	text "もういい！@"
+	text_asm
+	jr WithdrawCommonText
 
 OKComeBackText:
-	text_far _OKComeBackText
-	text_end
+	text "いいぞ！@"
+	text_asm
+	jr WithdrawCommonText
 
 GoodComeBackText:
-	text_far _GoodComeBackText
-	text_end
+	text "よくやった！@"
+	text_asm
+	jr WithdrawCommonText
+
+WithdrawCommonText:
+	ld hl, ComeBackText
+	ret
 
 ComeBackText:
-	text_far _ComeBackText
-	text_end
+	text_start
+	line "もどれ！"
+	done
 
 HandleSafariAngerEatingStatus: ; unreferenced
 	ld hl, wSafariMonEating
@@ -7800,7 +7845,7 @@ StartBattle:
 	set B_LCDC_WIN_MAP, [hl] ; select vBGMap1/vBGMap3
 	call EmptyBattleTextbox
 	hlcoord 9, 7
-	lb bc, 5, 11
+	lb bc, 5, 10
 	call ClearBox
 	hlcoord 1, 0
 	lb bc, 4, 10
@@ -8036,8 +8081,11 @@ CheckPayDay:
 	ret
 
 PlayerPickedUpPayDayMoney: ; unreferenced
-	text_far _PlayerPickedUpPayDayMoney
-	text_end
+	text "<PLAYER><WA>@"
+	text_decimal wPayDayMoney, 3, 6
+	text "円"
+	line "ひろった！"
+	prompt
 
 ShowLinkBattleParticipantsAfterEnd:
 	ld a, [wCurOTMon]
@@ -8076,11 +8124,11 @@ ShowLinkBattleParticipantsAfterEnd:
 	ret
 
 .YouWin:
-	db "YOU WIN@"
+	db "あなた<NO>かち@"
 .YouLose:
-	db "YOU LOSE@"
+	db "あなた<NO>まけ@"
 .Draw:
-	db "  DRAW@"
+	db "　　ひきわけ@"
 
 _DisplayLinkRecord:
 	ld a, BANK(sLinkBattleStats)
@@ -8135,7 +8183,7 @@ ReadAndPrintLinkBattleRecord:
 	pop hl
 	call PlaceString
 	pop hl
-	ld de, 26
+	ld de, 6
 	add hl, de
 	push hl
 	ld de, wLinkBattleRecordWins
@@ -8174,38 +8222,45 @@ ReadAndPrintLinkBattleRecord:
 	ret
 
 .PrintBattleRecord:
-	hlcoord 1, 0
+	hlcoord 2, 1
 	ld de, .Record
 	call PlaceString
 
-	hlcoord 0, 6
+	hlcoord 7, 6
 	ld de, .Result
 	call PlaceString
 
-	hlcoord 0, 2
-	ld de, .Total
-	call PlaceString
-
-	hlcoord 6, 4
+	hlcoord 1, 3
 	ld de, sLinkBattleWins
 	call .PrintZerosIfNoSaveFileExists
 
-	lb bc, 2, 4
+	lb bc, PRINTNUM_LEFTALIGN | 2, 4
 	call PrintNum
+	ld [hl], 'し'
+	inc hl
+	ld [hl], 'ょ'
+	inc hl
+	ld [hl], 'う'
+	inc hl
 
-	hlcoord 11, 4
 	ld de, sLinkBattleLosses
 	call .PrintZerosIfNoSaveFileExists
 
-	lb bc, 2, 4
+	lb bc, PRINTNUM_LEFTALIGN | 2, 4
 	call PrintNum
+	ld [hl], 'は'
+	inc hl
+	ld [hl], 'い'
+	inc hl
 
-	hlcoord 16, 4
 	ld de, sLinkBattleDraws
 	call .PrintZerosIfNoSaveFileExists
 
-	lb bc, 2, 4
+	lb bc, PRINTNUM_LEFTALIGN | 2, 4
 	call PrintNum
+	ld [hl], 'わ'
+	inc hl
+	ld [hl], 'け'
 
 	ret
 
@@ -8219,14 +8274,11 @@ ReadAndPrintLinkBattleRecord:
 .Scores:
 	db "<NULL><NULL>"
 .Format:
-	db "  ---  <LF>"
-	db "         -    -    -@"
+	db "ーーーーー　ーーーー　ーーーー　ーーーー@"
 .Record:
-	db "<PLAYER>'s RECORD@"
+	db "<PLAYER><NO>たいせん　せいせき@"
 .Result:
-	db "RESULT WIN LOSE DRAW@"
-.Total:
-	db "TOTAL  WIN LOSE DRAW@"
+	db "かち　　　まけ　　ひきわけ@"
 
 BattleEnd_HandleRoamMons:
 	ld a, [wBattleType]
@@ -8343,11 +8395,7 @@ AddLastLinkBattleToLinkRecord:
 	ld d, NUM_LINK_BATTLE_RECORDS
 .loop
 	push hl
-	inc hl
-	inc hl
 	ld a, [hl]
-	dec hl
-	dec hl
 	and a
 	jr z, .copy
 	push de
@@ -8584,7 +8632,7 @@ InitBattleDisplay:
 
 	ld hl, sDecompressScratch
 	ld bc, TILEMAP_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 
 	ld de, sDecompressScratch

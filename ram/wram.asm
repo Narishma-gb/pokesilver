@@ -1503,7 +1503,7 @@ NEXTU
 wCurTradePartyMon:: db
 wCurOTTradePartyMon:: db
 wBufferTrademonNickname:: ds NAME_LENGTH
-/*
+
 NEXTU
 ; link battle record data
 wLinkBattleRecordBuffer::
@@ -1511,7 +1511,7 @@ wLinkBattleRecordName::   ds NAME_LENGTH
 wLinkBattleRecordWins::   dw
 wLinkBattleRecordLosses:: dw
 wLinkBattleRecordDraws::  dw
-*/
+
 NEXTU
 ; miscellaneous
 wTempDayOfWeek::

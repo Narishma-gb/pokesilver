@@ -70,7 +70,8 @@ ROMX $0d
 ROMX $0e
 	"Enemy Trainers"
 ROMX $0f
-	; "Battle Core"
+	"Battle Core"
+	; "Garbage 15"
 ROMX $10
 	; "bank10"
 	; "Evolutions and Attacks"
