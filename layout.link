@@ -73,11 +73,12 @@ ROMX $0f
 	"Battle Core"
 	; "Garbage 15"
 ROMX $10
-	; "bank10"
-	; "Evolutions and Attacks"
+	"bank10"
+	"Evolutions and Attacks"
 ROMX $11
 	"bank11"
 	"Pokedex Entries"
+	"Pokemon Mail"
 ROMX $12
 	; org $4000
 	; "Pic Pointers"

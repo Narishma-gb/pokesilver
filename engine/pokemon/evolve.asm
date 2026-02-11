@@ -365,7 +365,7 @@ UpdateSpeciesNameIfNotNicknamed:
 	jr nz, .loop
 
 	ld a, [wCurPartyMon]
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	ld hl, wPartyMonNicknames
 	call AddNTimes
 	push hl
@@ -374,7 +374,7 @@ UpdateSpeciesNameIfNotNicknamed:
 	call GetPokemonName
 	ld hl, wStringBuffer1
 	pop de
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	jp CopyBytes
 
 CancelEvolution:
@@ -396,20 +396,31 @@ IsMonHoldingEverstone:
 	ret
 
 CongratulationsYourPokemonText:
-	text_far _CongratulationsYourPokemonText
-	text_end
+	text "おめでとう！　@"
+	text_ram wStringBuffer2
+	text "は"
+	done
 
 EvolvedIntoText:
-	text_far _EvolvedIntoText
-	text_end
+	text_start
+	line "@"
+	text_ram wStringBuffer1
+	text "に　しんかした"
+	done
 
 StoppedEvolvingText:
-	text_far _StoppedEvolvingText
-	text_end
+	text "あれ<⋯>？"
+	line "@"
+	text_ram wStringBuffer2
+	text "<NO>へんか<GA>とまっ<TA!>"
+	prompt
 
 EvolvingText:
-	text_far _EvolvingText
-	text_end
+	text "<⋯>　おや！？"
+	line "@"
+	text_ram wStringBuffer2
+	text "<NO>ようすが<⋯>！"
+	done
 
 LearnLevelMoves:
 	ld a, [wTempSpecies]

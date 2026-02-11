@@ -1012,10 +1012,9 @@ wSomeoneIsRampaging:: db
 
 wPlayerJustGotFrozen:: db
 wEnemyJustGotFrozen:: db
-wBattleEnd::
 
 	ds 1
-
+wBattleEnd::
 ENDU
 
 
@@ -1469,11 +1468,11 @@ NEXTU
 NEXTU
 	ds MAIL_STRUCT_LENGTH
 ENDU
-
+*/
 NEXTU
 ; giving pokemon mail
 wMonMailMessageBuffer:: ds MAIL_MSG_LENGTH + 1
-
+/*
 NEXTU
 ; bill's pc
 UNION

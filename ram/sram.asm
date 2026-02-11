@@ -19,55 +19,59 @@ for n, 1, PARTY_LENGTH + 1
 sPartyMon{d:n}Mail:: mailmsg sPartyMon{d:n}Mail
 endr
 
-;sPartyMailBackup::
-;; sPartyMon1MailBackup - sPartyMon6MailBackup
-;for n, 1, PARTY_LENGTH + 1
-;sPartyMon{d:n}MailBackup:: mailmsg sPartyMon{d:n}MailBackup
-;endr
+sPartyMailBackup::
+; sPartyMon1MailBackup - sPartyMon6MailBackup
+for n, 1, PARTY_LENGTH + 1
+sPartyMon{d:n}MailBackup:: mailmsg sPartyMon{d:n}MailBackup
+endr
 
-;sMailboxCount:: db
-;sMailboxes::
-;; sMailbox1 - sMailbox10
-;for n, 1, MAILBOX_CAPACITY + 1
-;sMailbox{d:n}:: mailmsg sMailbox{d:n}
-;endr
+sMailboxCount:: db
+sMailboxes::
+; sMailbox1 - sMailbox10
+for n, 1, MAILBOX_CAPACITY + 1
+sMailbox{d:n}:: mailmsg sMailbox{d:n}
+endr
 
-;sMailboxCountBackup:: db
-;sMailboxesBackup::
-;; sMailbox1Backup - sMailbox10Backup
-;for n, 1, MAILBOX_CAPACITY + 1
-;sMailbox{d:n}Backup:: mailmsg sMailbox{d:n}Backup
-;endr
+sMailboxCountBackup:: db
+sMailboxesBackup::
+; sMailbox1Backup - sMailbox10Backup
+for n, 1, MAILBOX_CAPACITY + 1
+sMailbox{d:n}Backup:: mailmsg sMailbox{d:n}Backup
+endr
 
-;sMysteryGiftData::
-;sMysteryGiftItem:: db
-;sMysteryGiftUnlocked:: db
-;sBackupMysteryGiftItem:: db
-;sNumDailyMysteryGiftPartnerIDs:: db
-;sDailyMysteryGiftPartnerIDs:: ds MAX_MYSTERY_GIFT_PARTNERS * 2
-;sMysteryGiftDecorationsReceived:: flag_array NUM_NON_TROPHY_DECOS
-;	ds 4
-;sMysteryGiftTimer:: dw
-;	ds 1
-;sMysteryGiftTrainerHouseFlag:: db
-;sMysteryGiftPartnerName:: ds NAME_LENGTH
-;sMysteryGiftUnusedFlag:: db
-;sMysteryGiftTrainer:: ds wMysteryGiftTrainerEnd - wMysteryGiftTrainer
-;sBackupMysteryGiftItemEnd::
+	ds 14
 
-;	ds $30
+sMysteryGiftData::
+sMysteryGiftItem:: db
+sMysteryGiftUnlocked:: db
+sBackupMysteryGiftItem:: db
+sNumDailyMysteryGiftPartnerIDs:: db
+sDailyMysteryGiftPartnerIDs:: ds MAX_MYSTERY_GIFT_PARTNERS * 2
+sMysteryGiftDecorationsReceived:: flag_array NUM_NON_TROPHY_DECOS
+	ds 4
+sMysteryGiftTimer:: dw
+	ds 1
+sMysteryGiftTrainerHouseFlag:: db
+sMysteryGiftPartnerName:: ds NAME_LENGTH
+sMysteryGiftUnusedFlag:: db
+sMysteryGiftTrainer:: ds wMysteryGiftTrainerEnd - wMysteryGiftTrainer
+sBackupMysteryGiftItemEnd::
 
-;sRTCStatusFlags:: db
-;	ds 7
-;sLuckyNumberDay:: db
-;sLuckyIDNumber::  dw
+	ds $462
 
+sRTCStatusFlags:: db
 
-;SECTION "SRAM Stack", SRAM
+	ds $ff
 
-;sStackTop:: dw
-;sRTCHaltCheckValue:: dw
+sLuckyNumberDay:: db
+sLuckyIDNumber::  dw
 
+/*
+SECTION "SRAM Stack", SRAM
+
+sStackTop:: dw
+sRTCHaltCheckValue:: dw
+*/
 
 SECTION "SRAM Window Stack", SRAM
 

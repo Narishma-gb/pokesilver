@@ -9,7 +9,7 @@
 ; - PokemonPicPointers (see data/pokemon/pic_pointers.asm)
 ; - PokemonPalettes (see data/pokemon/palettes.asm)
 ; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)
-; - AlphabeticalPokedexOrder (see data/pokemon/dex_order_alpha.asm)
+; - GojuonPokedexOrder (see data/pokemon/dex_order_alpha.asm)
 ; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)
 ; - Pokered_MonIndices (see data/pokemon/gen1_order.asm)
 ; - Footprints (see gfx/footprints.asm)

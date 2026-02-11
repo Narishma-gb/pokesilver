@@ -10,7 +10,7 @@ DEF AUTO_INPUT EQU $ff
 	const_def
 	const DEXMODE_NEW
 	const DEXMODE_OLD
-	const DEXMODE_ABC
+	const DEXMODE_AIUEO
 	const DEXMODE_UNOWN
 
 ; wMonType::

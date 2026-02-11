@@ -177,11 +177,12 @@ INCLUDE "engine/battle/core.asm"
 INCLUDE "data/battle/effect_command_pointers.asm"
 
 
-;SECTION "bank10", ROMX
+SECTION "bank10", ROMX
 
-;INCLUDE "engine/pokedex/pokedex.asm"
-;INCLUDE "data/moves/moves.asm"
-;INCLUDE "engine/pokemon/evolve.asm"
+INCLUDE "engine/pokedex/pokedex.asm"
+INCLUDE "data/moves/names.asm"
+INCLUDE "data/moves/moves.asm"
+INCLUDE "engine/pokemon/evolve.asm"
 
 
 SECTION "bank11", ROMX
@@ -191,9 +192,11 @@ INCLUDE "engine/battle/ai/move.asm"
 INCLUDE "engine/pokedex/pokedex_2.asm"
 
 
-;INCLUDE "engine/battle/start_battle.asm"
-;INCLUDE "engine/gfx/place_graphic.asm"
-;INCLUDE "engine/pokemon/mail.asm"
+SECTION "Pokemon Mail", ROMX
+
+INCLUDE "engine/battle/start_battle.asm"
+INCLUDE "engine/gfx/place_graphic.asm"
+INCLUDE "engine/pokemon/mail.asm"
 
 
 ;SECTION "bank14", ROMX
@@ -352,7 +355,6 @@ INCLUDE "engine/pokedex/pokedex_2.asm"
 ;SECTION "Names", ROMX
 
 ;INCLUDE "data/pokemon/names.asm"
-;INCLUDE "data/moves/names.asm"
 
 
 ;SECTION "bank70", ROMX

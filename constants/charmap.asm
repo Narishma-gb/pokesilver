@@ -149,10 +149,24 @@
 
 ; Actual characters (from gfx/pokedex/pokedex.png)
 
-;	needed for ShowPokedexDataInternal (see engine/menus/pokedex.asm)
-	charmap "ｍ", $60
-	charmap "ｋ", $61
-	charmap "ｇ", $62
+;	Needed for Pokedex_DrawDexEntryScreenBG (see engine/menus/pokedex.asm)
+;	As these characters partially overlap with control codes values,
+;	they can not be used with PlaceString or PrintText.
+	charmap "<ず>", $50
+	charmap "<プ>", $51
+	charmap "<リ>", $52
+	charmap "<ン>", $53
+	charmap "<ト>", $54
+	charmap "<ぶ>", $55
+	charmap "<ん>", $56
+	charmap "<ぷ>", $57
+	charmap "<な>", $58
+	charmap "<き>", $59
+	charmap "<ご>", $5a
+	charmap "<え>", $5b
+	charmap "ｍ", $5e
+	charmap "ｋ", $5f
+	charmap "ｇ", $60
 
 
 ; Actual characters (from other graphics files)

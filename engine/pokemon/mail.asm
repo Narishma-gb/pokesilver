@@ -101,7 +101,7 @@ MoveMailFromPCToParty:
 	ld bc, MAIL_STRUCT_LENGTH
 	call CopyBytes
 	pop hl
-	ld de, PARTYMON_STRUCT_LENGTH - MON_MOVES
+	ld de, MAIL_STRUCT_LENGTH - 1 ; message type
 	add hl, de
 	ld d, [hl]
 	ld a, [wCurPartyMon]
@@ -310,8 +310,9 @@ _PlayerMailBoxMenu:
 	jp MenuTextboxBackup
 
 .EmptyMailboxText:
-	text_far _EmptyMailboxText
-	text_end
+	text "メール<WA>１つうも"
+	line "ありません"
+	prompt
 
 InitMail:
 ; return z if no mail
@@ -455,16 +456,19 @@ MailboxPC:
 	jp MenuTextboxBackup
 
 .MailClearedPutAwayText:
-	text_far _MailClearedPutAwayText
-	text_end
+	text "ないよう<WO>けしたメールを"
+	line "リュックに　いれました"
+	prompt
 
 .MailPackFullText:
-	text_far _MailPackFullText
-	text_end
+	text "リュック<GA>いっぱいなので"
+	line "メール<GA>はいりません！"
+	prompt
 
 .MailMessageLostText:
-	text_far _MailMessageLostText
-	text_end
+	text "ないよう<WA>きえてしまいますが"
+	line "よろしいですか？"
+	done
 
 .GetMailType:
 	push af
@@ -523,23 +527,24 @@ MailboxPC:
 	jp CloseSubmenu
 
 .MailAlreadyHoldingItemText:
-	text_far _MailAlreadyHoldingItemText
-	text_end
+	text "すでに　どうぐ<WO>もっているので"
+	line "メール<WO>もたせること<GA>できません"
+	prompt
 
 .MailEggText:
-	text_far _MailEggText
-	text_end
+	text "タマゴに<WA>もたせられない！"
+	prompt
 
 .MailMovedFromBoxText:
-	text_far _MailMovedFromBoxText
-	text_end
+	text "ボックスから　メール<WO>うつしました"
+	prompt
 
 .Cancel:
 	ret
 
 .TopMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 8, 1, SCREEN_WIDTH - 2, 10
+	menu_coords 9, 1, 16, 10
 	dw .TopMenuData
 	db 1 ; default option
 
@@ -561,7 +566,7 @@ MailboxPC:
 .SubMenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "READ MAIL@"
-	db "PUT IN PACK@"
-	db "ATTACH MAIL@"
-	db "CANCEL@"
+	db "ないよう<WO>よむ@"
+	db "リュックに　もどす@"
+	db "#に　もたせる@"
+	db "やめる@"

@@ -53,39 +53,6 @@ INCLUDE "main.asm"
 	set_gs_diff 0
 
 
-SECTION "Evolutions and Attacks", ROMX, BANK[16]
-SECTION "rom16", ROMX[$4000], BANK[16]
-; ROM $10 : $40000 - $43FFF
-
-	dr Pokedex, $4000
-	dr MoveNames, $563e
-	dr Moves, $5c6c
-	dr EvolvePokemon, $6349
-	dr EvolveAfterBattle, $6357
-	dr LearnLevelMoves, $6625
-	dr FillMoves, $667f
-	dr GetPreEvolution, $692f
-	dr EvosAttacksPointers, $695f
-
-	dr
-
-
-	set_gs_diff $3e
-SECTION "rom17", ROMX[$79ae + gs_diff], BANK[17]
-; ROM $11 : $44000 - $47FFF
-
-	drd PlayBattleMusic, $79ae
-	drd ClearBattleRAM, $7a4a
-	drd PlaceGraphic, $7aa0
-	drd SendMailToPC, $7ad1
-	drd BackupPartyMonMail, $7c88
-	drd RestorePartyMonMail, $7ca8
-	drd DeletePartyMonMail, $7cc8
-	drd IsAnyMonHoldingMail, $7ce4
-	drd _PlayerMailBoxMenu, $7d03
-
-	dr
-
 SECTION "rom18", ROMX[$4000], BANK[18]
 ; ROM $12 : $48000 - $4BFFF
 
@@ -207,6 +174,7 @@ SECTION "rom33", ROMX[$4000], BANK[33]
 ; ROM $21 : $84000 - $87FFF
 
 	dr _PrinterReceive, $42d5
+	dr PrintDexEntry, $4426
 	dr PrintUnownStamp, $4528
 	dr PrintPartymon, $45c4
 	dr _PrintDiploma, $45fc
@@ -270,6 +238,7 @@ SECTION "rom36", ROMX[$4000], BANK[36]
 	dr PokegearMap, $5b77
 	dr _FlyMap, $5b89
 	dr Pokedex_GetArea, $5da5
+	dr RegionCheck, $689d
 	dr Fish, $68c9
 	dr _SlotMachine, $6b85
 
@@ -336,6 +305,7 @@ SECTION "rom46", ROMX[$4000], BANK[46]
 	dr TreeMonEncounter, $6378
 	dr RockMonEncounter, $63a1
 	dr ReadPartyMonMail, $7258
+	dr ReadAnyMail, $7266
 	dr ItemIsMail, $7e63
 
 	dr
@@ -485,6 +455,8 @@ SECTION "rom62", ROMX[$4000], BANK[62]
 	dr EnemyHPBarBorderGFX, $4bb2
 	dr HPExpBarBorderGFX, $4bd2
 	dr ExpBarGFX, $4c02
+	dr Footprints, $519a
+	dr UnownFont, $719a
 	dr CollisionPermissionTable, $734a
 	dr Shrink1Pic, $744a
 	dr Shrink2Pic, $74da
@@ -498,6 +470,7 @@ SECTION "rom62", ROMX[$4000], BANK[62]
 	dr ConvertMon_2to1, $79bd
 	dr ConvertMon_1to2, $79d4
 	dr UpdateUnownDex, $7ae4
+	dr PrintUnownWord, $7afa
 	dr CheckMagikarpLength, $7bfe
 	dr CalcMagikarpLength, $7ccc
 	dr MagikarpHouseSign, $7d87

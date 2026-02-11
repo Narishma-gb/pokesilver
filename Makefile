@@ -13,13 +13,13 @@ rom_obj := \
 	home.o \
 	ram.o \
 	data/pokemon/egg_moves.o \
+	data/pokemon/evos_attacks.o \
 	gfx/sprites.o \
 	gfx/tilesets.o \
 	wip.o
 # 	main.o \
 # 	data/text/common.o \
 # 	data/maps/map_data.o \
-# 	data/pokemon/evos_attacks.o \
 # 	engine/movie/credits.o \
 # 	engine/overworld/events.o \
 # 	gfx/misc.o \
@@ -293,7 +293,6 @@ gfx/mail/flower_mail_border.1bpp: tools/gfx += --remove-whitespace
 gfx/mail/litebluemail_border.1bpp: tools/gfx += --remove-whitespace
 
 gfx/pokedex/pokedex.2bpp: tools/gfx += --trim-whitespace
-gfx/pokedex/pokedex_sgb.2bpp: tools/gfx += --trim-whitespace
 gfx/pokedex/question_mark.2bpp: RGBGFXFLAGS += --columns
 gfx/pokedex/slowpoke.2bpp: tools/gfx += --trim-whitespace
 
