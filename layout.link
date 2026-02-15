@@ -80,39 +80,40 @@ ROMX $11
 	"Pokedex Entries"
 	"Pokemon Mail"
 ROMX $12
-	; org $4000
-	; "Pic Pointers"
-	; "Pics 1"
+	org $4000
+	"Pic Pointers"
+	"Pics 1"
+ROMX $13
 ROMX $14
 	; "bank14"
 	; "Egg Pic"
 ROMX $15
-	; "Pics 2"
+	"Pics 2"
 ROMX $16
-	; "Pics 3"
+	"Pics 3"
 ROMX $17
-	; "Pics 4"
+	"Pics 4"
 ROMX $18
-	; "Pics 5"
+	"Pics 5"
 ROMX $19
-	; "Pics 6"
+	"Pics 6"
 ROMX $1a
-	; "Pics 7"
+	"Pics 7"
 ROMX $1b
-	; "Pics 8"
+	"Pics 8"
 ROMX $1c
-	; "Pics 9"
+	"Pics 9"
 ROMX $1d
-	; "Pics 10"
+	"Pics 10"
 ROMX $1e
-	; "Pics 11"
+	"Pics 11"
 ROMX $1f
-	; org $4000
-	; "Unown Pic Pointers"
-	; "Pics 12"
+	org $4000
+	"Unown Pic Pointers"
+	"Pics 12"
 ROMX $20
-	; "Trainer Pic Pointers"
-	; "Pics 13"
+	"Trainer Pic Pointers"
+	"Pics 13"
 ROMX $21
 	; "bank21"
 	; "Credits"
@@ -130,7 +131,7 @@ ROMX $2a
 ROMX $2b
 	; "Map Blocks 2"
 ROMX $2e
-	; "Pics 14"
+	"Pics 14"
 	; org $6300
 	; "bank2E"
 ROMX $30

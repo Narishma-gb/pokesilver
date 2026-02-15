@@ -53,11 +53,6 @@ INCLUDE "main.asm"
 	set_gs_diff 0
 
 
-SECTION "rom18", ROMX[$4000], BANK[18]
-; ROM $12 : $48000 - $4BFFF
-
-	dr
-
 SECTION "rom19", ROMX[$4000], BANK[19]
 ; ROM $13 : $4C000 - $4FFFF
 
@@ -107,66 +102,6 @@ SECTION "rom20", ROMX[$4000], BANK[20]
 	dr DecompressGet2bpp, $58e4
 	dr BaseData, $5aa9
 	dr PokemonNames, $7a09
-
-	dr
-
-SECTION "rom21", ROMX[$4000], BANK[21]
-; ROM $15 : $54000 - $57FFF
-
-	dr
-
-SECTION "rom22", ROMX[$4000], BANK[22]
-; ROM $16 : $58000 - $5BFFF
-
-	dr
-
-SECTION "rom23", ROMX[$4000], BANK[23]
-; ROM $17 : $5C000 - $5FFFF
-
-	dr
-
-SECTION "rom24", ROMX[$4000], BANK[24]
-; ROM $18 : $60000 - $63FFF
-
-	dr
-
-SECTION "rom25", ROMX[$4000], BANK[25]
-; ROM $19 : $64000 - $67FFF
-
-	dr
-
-SECTION "rom26", ROMX[$4000], BANK[26]
-; ROM $1a : $68000 - $6BFFF
-
-	dr
-
-SECTION "rom27", ROMX[$4000], BANK[27]
-; ROM $1b : $6C000 - $6FFFF
-
-	dr
-
-SECTION "rom28", ROMX[$4000], BANK[28]
-; ROM $1c : $70000 - $73FFF
-
-	dr
-
-SECTION "rom29", ROMX[$4000], BANK[29]
-; ROM $1d : $74000 - $77FFF
-
-	dr
-
-SECTION "rom30", ROMX[$4000], BANK[30]
-; ROM $1e : $78000 - $7BFFF
-
-	dr
-
-SECTION "rom31", ROMX[$4000], BANK[31]
-; ROM $1f : $7C000 - $7FFFF
-
-	dr
-
-SECTION "rom32", ROMX[$4000], BANK[32]
-; ROM $20 : $80000 - $83FFF
 
 	dr
 
@@ -298,7 +233,7 @@ SECTION "rom45", ROMX[$4000], BANK[45]
 
 	dr
 
-SECTION "rom46", ROMX[$4000], BANK[46]
+SECTION "rom46", ROMX[$6300], BANK[46]
 ; ROM $2e : $B8000 - $BBFFF
 
 	dr CheckForHiddenItems, $6300
