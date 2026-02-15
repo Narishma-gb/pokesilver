@@ -1,6 +1,6 @@
 SUMMARY:
 	ROM0: 15927 bytes used / 457 free
-	ROMX: 1027649 bytes used / 4543 free in 63 banks
+	ROMX: 1025207 bytes used / 6985 free in 63 banks
 	SRAM: 30100 bytes used / 2668 free in 4 banks
 	WRAM0: 4057 bytes used / 39 free
 	WRAMX: 3594 bytes used / 502 free in 1 bank
@@ -11010,7 +11010,33 @@ ROMX bank #17:
 	TOTAL EMPTY: $0055 bytes
 
 ROMX bank #18:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom18"]
+	SECTION: $4000-$45e1 ($05e2 bytes) ["Pic Pointers"]
+	         $4000 = PokemonPicPointers
+	SECTION: $45e2-$7fff ($3a1e bytes) ["Pics 1"]
+	         $45e2 = NidokingFrontpic
+	         $489f = HoOhFrontpic
+	         $4b4f = GyaradosFrontpic
+	         $4dff = MeganiumFrontpic
+	         $50ad = MachampFrontpic
+	         $5359 = FeraligatrFrontpic
+	         $55ea = SteelixFrontpic
+	         $5875 = NinetalesFrontpic
+	         $5aef = RhydonFrontpic
+	         $5d5e = RaikouFrontpic
+	         $5fc8 = TaurosFrontpic
+	         $6230 = RapidashFrontpic
+	         $648b = NidoqueenFrontpic
+	         $66e6 = EnteiFrontpic
+	         $693f = KangaskhanFrontpic
+	         $6b97 = BlastoiseFrontpic
+	         $6dee = ArbokFrontpic
+	         $7041 = CharizardFrontpic
+	         $7294 = SkarmoryFrontpic
+	         $74e6 = WeezingFrontpic
+	         $7734 = VenusaurFrontpic
+	         $7982 = BeedrillFrontpic
+	         $7bcc = LugiaFrontpic
+	         $7e15 = HitmontopFrontpic
 	TOTAL EMPTY: $0000 bytes
 
 ROMX bank #19:
@@ -11063,52 +11089,604 @@ ROMX bank #20:
 	TOTAL EMPTY: $0000 bytes
 
 ROMX bank #21:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom21"]
+	SECTION: $4000-$7fff ($4000 bytes) ["Pics 2"]
+	         $4000 = KingdraFrontpic
+	         $41e0 = SandslashFrontpic
+	         $43bc = JumpluffFrontpic
+	         $4597 = SmeargleFrontpic
+	         $4770 = ExeggutorBackpic
+	         $4948 = MagcargoFrontpic
+	         $4b20 = LaprasFrontpic
+	         $4cf4 = LickitungFrontpic
+	         $4ec8 = ChuckPic
+	         $5099 = ParasectFrontpic
+	         $5268 = ButterfreeBackpic
+	         $5437 = FearowFrontpic
+	         $5605 = KimonoGirlPic
+	         $57d3 = AlakazamBackpic
+	         $59a0 = GolbatFrontpic
+	         $5b6b = GirafarigFrontpic
+	         $5d36 = HitmontopBackpic
+	         $5f00 = KoffingFrontpic
+	         $60ca = DrowzeeFrontpic
+	         $6294 = CloysterBackpic
+	         $645e = StarmieFrontpic
+	         $6627 = KabutopsFrontpic
+	         $67ef = DodrioBackpic
+	         $69b6 = VenomothFrontpic
+	         $6b7c = HitmonleeFrontpic
+	         $6d42 = BayleefFrontpic
+	         $6f07 = JugglerPic
+	         $70cb = GuitaristPic
+	         $728e = VenomothBackpic
+	         $7450 = PokefanfPic
+	         $7612 = ClairPic
+	         $77d3 = NoctowlFrontpic
+	         $7994 = OmastarFrontpic
+	         $7b54 = PokemaniacPic
+	         $7d14 = SkierPic
+	         $7ed2 = LugiaBackpic
 	TOTAL EMPTY: $0000 bytes
 
 ROMX bank #22:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom22"]
-	TOTAL EMPTY: $0000 bytes
+	SECTION: $4000-$7fce ($3fcf bytes) ["Pics 3"]
+	         $4000 = GravelerFrontpic
+	         $41bd = MrMimeFrontpic
+	         $4379 = KangaskhanBackpic
+	         $4534 = GligarFrontpic
+	         $46ee = FarfetchDFrontpic
+	         $48a8 = MagnetonFrontpic
+	         $4a61 = AmpharosFrontpic
+	         $4c19 = ScytherFrontpic
+	         $4dd1 = HoundoomFrontpic
+	         $4f87 = JolteonFrontpic
+	         $513b = NidorinaFrontpic
+	         $52ef = GyaradosBackpic
+	         $54a2 = RaticateFrontpic
+	         $5654 = YanmaBackpic
+	         $5805 = HeracrossFrontpic
+	         $59b5 = GolemFrontpic
+	         $5b64 = SneaselFrontpic
+	         $5d12 = ElekidFrontpic
+	         $5ebf = OmastarBackpic
+	         $606c = ClefableBackpic
+	         $6218 = LassPic
+	         $63c4 = MiltankFrontpic
+	         $656f = FeraligatrBackpic
+	         $671a = MagnetonBackpic
+	         $68c3 = FlareonFrontpic
+	         $6a6b = GastlyFrontpic
+	         $6c13 = GranbullFrontpic
+	         $6dba = SuicuneBackpic
+	         $6f61 = SlowkingBackpic
+	         $7107 = CharmeleonFrontpic
+	         $72ac = SeelFrontpic
+	         $7451 = ElekidBackpic
+	         $75f6 = AriadosFrontpic
+	         $779b = QuilavaFrontpic
+	         $7940 = WartortleFrontpic
+	         $7ae5 = CelebiBackpic
+	         $7c89 = BugCatcherPic
+	         $7e2c = KrabbyBackpic
+	EMPTY: $7fcf-$7fff ($0031 bytes)
+	TOTAL EMPTY: $0031 bytes
 
 ROMX bank #23:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom23"]
+	SECTION: $4000-$7fff ($4000 bytes) ["Pics 4"]
+	         $4000 = VenusaurBackpic
+	         $41a2 = MoltresBackpic
+	         $4342 = PonytaFrontpic
+	         $44e2 = SunfloraBackpic
+	         $4681 = DragonairFrontpic
+	         $4820 = RhydonBackpic
+	         $49bd = TyranitarBackpic
+	         $4b5a = TwinsPic
+	         $4cf6 = CroconawFrontpic
+	         $4e92 = PoliwhirlFrontpic
+	         $502e = SandslashBackpic
+	         $51ca = SeadraBackpic
+	         $5366 = NidoranMBackpic
+	         $5501 = FarfetchDBackpic
+	         $569c = TangelaFrontpic
+	         $5837 = LedybaBackpic
+	         $59d2 = CyndaquilBackpic
+	         $5b6c = ChanseyFrontpic
+	         $5d06 = MagmarBackpic
+	         $5ea0 = VulpixFrontpic
+	         $6038 = BayleefBackpic
+	         $61cf = NinetalesBackpic
+	         $6366 = CroconawBackpic
+	         $64fc = TogeticFrontpic
+	         $6690 = DoduoBackpic
+	         $6824 = DelibirdFrontpic
+	         $69b8 = RapidashBackpic
+	         $6b4c = EspeonFrontpic
+	         $6ce0 = CrobatFrontpic
+	         $6e73 = MankeyBackpic
+	         $7006 = GloomFrontpic
+	         $7198 = HypnoBackpic
+	         $7329 = TyphlosionBackpic
+	         $74ba = QuilavaBackpic
+	         $764a = YanmaFrontpic
+	         $77da = FurretFrontpic
+	         $7968 = SandshrewBackpic
+	         $7af5 = SailorPic
+	         $7c81 = BeautyPic
+	         $7e0c = ZubatBackpic
+	         $7f97 = UnownQBackpic
 	TOTAL EMPTY: $0000 bytes
 
 ROMX bank #24:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom24"]
-	TOTAL EMPTY: $0000 bytes
+	SECTION: $4000-$7fc8 ($3fc9 bytes) ["Pics 5"]
+	         $4000 = ShellderBackpic
+	         $418b = GloomBackpic
+	         $4315 = GruntmPic
+	         $449f = SunfloraFrontpic
+	         $4629 = BeedrillBackpic
+	         $47b3 = BellossomFrontpic
+	         $493d = CuboneBackpic
+	         $4ac7 = KabutopsBackpic
+	         $4c51 = VileplumeFrontpic
+	         $4dda = FlaaffyFrontpic
+	         $4f63 = ArcanineBackpic
+	         $50ec = FlareonBackpic
+	         $5275 = GoldeenBackpic
+	         $53fe = JynxFrontpic
+	         $5586 = OmanyteBackpic
+	         $570e = SudowoodoFrontpic
+	         $5895 = PidgeyBackpic
+	         $5a1c = ScientistPic
+	         $5ba3 = QwilfishBackpic
+	         $5d2a = MisdreavusFrontpic
+	         $5eb0 = PidgeottoFrontpic
+	         $6036 = ClefableFrontpic
+	         $61bb = GligarBackpic
+	         $6340 = HaunterFrontpic
+	         $64c5 = CharmeleonBackpic
+	         $6649 = NidoqueenBackpic
+	         $67cc = GrimerBackpic
+	         $694f = MagcargoBackpic
+	         $6ad2 = PupitarBackpic
+	         $6c55 = ElectabuzzBackpic
+	         $6dd7 = LedianBackpic
+	         $6f58 = HeracrossBackpic
+	         $70d9 = PiloswineFrontpic
+	         $725a = VaporeonFrontpic
+	         $73db = SteelixBackpic
+	         $755b = MarowakFrontpic
+	         $76da = PersianBackpic
+	         $7859 = TeacherPic
+	         $79d7 = LtSurgePic
+	         $7b55 = FlaaffyBackpic
+	         $7cd2 = EeveeBackpic
+	         $7e4e = PonytaBackpic
+	EMPTY: $7fc9-$7fff ($0037 bytes)
+	TOTAL EMPTY: $0037 bytes
 
 ROMX bank #25:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom25"]
-	TOTAL EMPTY: $0000 bytes
+	SECTION: $4000-$7fbd ($3fbe bytes) ["Pics 6"]
+	         $4000 = GengarFrontpic
+	         $417b = BirdKeeperPic
+	         $42f5 = OnixBackpic
+	         $446f = KoffingBackpic
+	         $45e9 = KarenPic
+	         $4761 = FalknerPic
+	         $48d9 = MiltankBackpic
+	         $4a51 = PinsirBackpic
+	         $4bc9 = OctilleryFrontpic
+	         $4d41 = TogeticBackpic
+	         $4eb9 = KogaPic
+	         $5030 = TentacruelBackpic
+	         $51a7 = RaichuBackpic
+	         $531e = MagikarpFrontpic
+	         $5495 = NidorinaBackpic
+	         $560c = GrowlitheBackpic
+	         $5783 = MachokeBackpic
+	         $58fa = PoliwrathBackpic
+	         $5a70 = SeadraFrontpic
+	         $5be5 = JumpluffBackpic
+	         $5d5a = WigglytuffFrontpic
+	         $5ecf = SwimmermPic
+	         $6044 = NidorinoBackpic
+	         $61b7 = CooltrainerfPic
+	         $6329 = UmbreonBackpic
+	         $649a = LedybaFrontpic
+	         $660b = MarowakBackpic
+	         $677b = GirafarigBackpic
+	         $68eb = CorsolaFrontpic
+	         $6a5b = SudowoodoBackpic
+	         $6bcb = BugsyPic
+	         $6d3b = LedianFrontpic
+	         $6eaa = HoundoomBackpic
+	         $7019 = GeodudeBackpic
+	         $7188 = ScytherBackpic
+	         $72f6 = ChinchouFrontpic
+	         $7464 = VileplumeBackpic
+	         $75d2 = DugtrioFrontpic
+	         $7740 = HitmonchanBackpic
+	         $78ad = BlastoiseBackpic
+	         $7a18 = CooltrainermPic
+	         $7b83 = MisdreavusBackpic
+	         $7ced = ScizorBackpic
+	         $7e56 = StantlerBackpic
+	EMPTY: $7fbe-$7fff ($0042 bytes)
+	TOTAL EMPTY: $0042 bytes
 
 ROMX bank #26:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom26"]
-	TOTAL EMPTY: $0000 bytes
+	SECTION: $4000-$7ffc ($3ffd bytes) ["Pics 7"]
+	         $4000 = SmeargleBackpic
+	         $4168 = CharizardBackpic
+	         $42d0 = KadabraBackpic
+	         $4437 = PrimeapeBackpic
+	         $459e = PupitarFrontpic
+	         $4705 = FurretBackpic
+	         $486b = WartortleBackpic
+	         $49d1 = ExeggcuteBackpic
+	         $4b37 = RaticateBackpic
+	         $4c9c = LanturnFrontpic
+	         $4e01 = VulpixBackpic
+	         $4f66 = PsyduckBackpic
+	         $50ca = BurglarPic
+	         $522e = EkansBackpic
+	         $5392 = MeowthFrontpic
+	         $54f6 = SeakingBackpic
+	         $565a = PikachuBackpic
+	         $57bc = WeepinbellFrontpic
+	         $591d = RemoraidBackpic
+	         $5a7e = MareepBackpic
+	         $5bdf = KingdraBackpic
+	         $5d3f = CamperPic
+	         $5e9f = ClefairyBackpic
+	         $5ffe = VenonatBackpic
+	         $615d = Rival1Pic
+	         $62bb = PokemonProfPic
+	         $6419 = MewtwoBackpic
+	         $6577 = BellossomBackpic
+	         $66d5 = SnubbullFrontpic
+	         $6833 = SneaselBackpic
+	         $6990 = CalPic
+	         $6aed = SwimmerfPic
+	         $6c4a = SlugmaBackpic
+	         $6da7 = KrabbyFrontpic
+	         $6f03 = OfficerPic
+	         $705f = MukBackpic
+	         $71ba = IvysaurFrontpic
+	         $7315 = DelibirdBackpic
+	         $7470 = SabrinaPic
+	         $75ca = AriadosBackpic
+	         $7723 = WobbuffetFrontpic
+	         $787c = MagikarpBackpic
+	         $79d5 = TyrogueBackpic
+	         $7b2e = HitmonchanFrontpic
+	         $7c86 = MurkrowBackpic
+	         $7ddd = XatuFrontpic
+	         $7f34 = NatuBackpic
+	EMPTY: $7ffd-$7fff ($0003 bytes)
+	TOTAL EMPTY: $0003 bytes
 
 ROMX bank #27:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom27"]
+	SECTION: $4000-$7fff ($4000 bytes) ["Pics 8"]
+	         $4000 = IvysaurBackpic
+	         $4157 = PsyduckFrontpic
+	         $42ad = GrowlitheFrontpic
+	         $4403 = PsychicTPic
+	         $4559 = SlowbroBackpic
+	         $46af = GolduckBackpic
+	         $4804 = WeezingBackpic
+	         $4958 = GrimerFrontpic
+	         $4aab = PidgeotBackpic
+	         $4bfe = GruntfPic
+	         $4d51 = DunsparceFrontpic
+	         $4ea4 = PorygonFrontpic
+	         $4ff6 = HoOhBackpic
+	         $5147 = PoliwhirlBackpic
+	         $5297 = RhyhornBackpic
+	         $53e7 = MachopBackpic
+	         $5536 = MewBackpic
+	         $5685 = AbraBackpic
+	         $57d4 = WeepinbellBackpic
+	         $5922 = AerodactylBackpic
+	         $5a70 = DugtrioBackpic
+	         $5bbe = NidoranFBackpic
+	         $5d0c = AipomBackpic
+	         $5e59 = EspeonBackpic
+	         $5fa6 = GravelerBackpic
+	         $60f3 = MurkrowFrontpic
+	         $623f = TotodileBackpic
+	         $638b = CyndaquilFrontpic
+	         $64d7 = MankeyFrontpic
+	         $6622 = SnubbullBackpic
+	         $676d = KinglerBackpic
+	         $68b8 = GengarBackpic
+	         $6a02 = CuboneFrontpic
+	         $6b4b = RattataBackpic
+	         $6c94 = WillPic
+	         $6ddc = YoungsterPic
+	         $6f24 = AbraFrontpic
+	         $706c = SchoolboyPic
+	         $71b3 = ErikaPic
+	         $72f8 = JaninePic
+	         $743c = HoothootBackpic
+	         $7580 = UmbreonFrontpic
+	         $76c4 = MortyPic
+	         $7807 = VenonatFrontpic
+	         $794a = NoctowlBackpic
+	         $7a8d = GoldeenFrontpic
+	         $7bd0 = KabutoBackpic
+	         $7d13 = StaryuFrontpic
+	         $7e56 = MeganiumBackpic
+	         $7f98 = UnownUFrontpic
 	TOTAL EMPTY: $0000 bytes
 
 ROMX bank #28:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom28"]
+	SECTION: $4000-$7fff ($4000 bytes) ["Pics 9"]
+	         $4000 = MeowthBackpic
+	         $4142 = VictreebelBackpic
+	         $4284 = PicnickerPic
+	         $43c6 = LickitungBackpic
+	         $4507 = SuperNerdPic
+	         $4648 = Porygon2Backpic
+	         $4788 = HaunterBackpic
+	         $48c8 = XatuBackpic
+	         $4a08 = RedPic
+	         $4b48 = JasminePic
+	         $4c87 = PinecoBackpic
+	         $4dc6 = PolitoedBackpic
+	         $4f03 = SeelBackpic
+	         $5040 = QuagsireBackpic
+	         $517c = WhitneyPic
+	         $52b8 = ShellderFrontpic
+	         $53f3 = JolteonBackpic
+	         $552e = ParasectBackpic
+	         $5668 = EkansFrontpic
+	         $57a2 = MagbyFrontpic
+	         $58db = QuagsireFrontpic
+	         $5a14 = GranbullBackpic
+	         $5b4c = HoppipBackpic
+	         $5c84 = BluePic
+	         $5dbc = AipomFrontpic
+	         $5ef4 = GentlemanPic
+	         $602a = ExecutivemPic
+	         $6160 = PinecoFrontpic
+	         $6295 = LaprasBackpic
+	         $63c9 = MagbyBackpic
+	         $64fd = ChikoritaBackpic
+	         $6630 = CharmanderFrontpic
+	         $6763 = DragonairBackpic
+	         $6896 = ZapdosBackpic
+	         $69c9 = ChinchouBackpic
+	         $6afb = HoothootFrontpic
+	         $6c2c = SunkernBackpic
+	         $6d5d = SpearowBackpic
+	         $6e8e = ChanseyBackpic
+	         $6fbe = MachopFrontpic
+	         $70ed = SkiploomBackpic
+	         $721b = TotodileFrontpic
+	         $7349 = Rival2Pic
+	         $7477 = CharmanderBackpic
+	         $75a4 = SandshrewFrontpic
+	         $76d0 = MistyPic
+	         $77fc = BellsproutFrontpic
+	         $7928 = BlainePic
+	         $7a53 = LarvitarBackpic
+	         $7b7d = TyrogueFrontpic
+	         $7ca7 = SlugmaFrontpic
+	         $7dd1 = Porygon2Frontpic
+	         $7efa = ArticunoBackpic
 	TOTAL EMPTY: $0000 bytes
 
 ROMX bank #29:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom29"]
-	TOTAL EMPTY: $0000 bytes
+	SECTION: $4000-$7fde ($3fdf bytes) ["Pics 10"]
+	         $4000 = PorygonBackpic
+	         $4129 = ClefairyFrontpic
+	         $4252 = ParasBackpic
+	         $437a = MareepFrontpic
+	         $44a2 = HoundourFrontpic
+	         $45ca = TentacoolBackpic
+	         $46f1 = DoduoFrontpic
+	         $4817 = LanturnBackpic
+	         $493d = VaporeonBackpic
+	         $4a62 = EeveeFrontpic
+	         $4b87 = OmanyteFrontpic
+	         $4cac = ExecutivefPic
+	         $4dd0 = BulbasaurBackpic
+	         $4ef2 = CorsolaBackpic
+	         $5013 = JigglypuffFrontpic
+	         $5134 = SmoochumBackpic
+	         $5255 = TogepiBackpic
+	         $5376 = DunsparceBackpic
+	         $5496 = BellsproutBackpic
+	         $55b6 = MarillFrontpic
+	         $56d5 = ChikoritaFrontpic
+	         $57f3 = SmoochumFrontpic
+	         $5911 = PikachuFrontpic
+	         $5a2f = SagePic
+	         $5b4d = MrMimeBackpic
+	         $5c6a = StaryuBackpic
+	         $5d87 = PidgeottoBackpic
+	         $5ea4 = CaterpieBackpic
+	         $5fc0 = PichuBackpic
+	         $60dc = NidoranMFrontpic
+	         $61f7 = PrycePic
+	         $6311 = BrockPic
+	         $642a = AmpharosBackpic
+	         $6542 = RemoraidFrontpic
+	         $6659 = ZubatFrontpic
+	         $6770 = ArbokBackpic
+	         $6887 = DragoniteBackpic
+	         $699e = PidgeyFrontpic
+	         $6ab5 = ParasFrontpic
+	         $6bcb = EnteiBackpic
+	         $6ce1 = HitmonleeBackpic
+	         $6df7 = UrsaringBackpic
+	         $6f0c = TeddiursaBackpic
+	         $7020 = KakunaBackpic
+	         $7133 = PhanpyBackpic
+	         $7246 = SkiploomFrontpic
+	         $7356 = WobbuffetBackpic
+	         $7464 = CelebiFrontpic
+	         $7572 = DratiniFrontpic
+	         $7680 = CrobatBackpic
+	         $778d = TentacoolFrontpic
+	         $789a = BlisseyBackpic
+	         $79a6 = LarvitarFrontpic
+	         $7ab2 = StarmieBackpic
+	         $7bbd = SlowpokeFrontpic
+	         $7cc6 = IgglybuffBackpic
+	         $7dcf = AzumarillBackpic
+	         $7ed7 = ElectrodeFrontpic
+	EMPTY: $7fdf-$7fff ($0021 bytes)
+	TOTAL EMPTY: $0021 bytes
 
 ROMX bank #30:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom30"]
-	TOTAL EMPTY: $0000 bytes
+	SECTION: $4000-$7fc5 ($3fc6 bytes) ["Pics 11"]
+	         $4000 = SpearowFrontpic
+	         $4107 = OctilleryBackpic
+	         $420e = RaikouBackpic
+	         $4314 = MewFrontpic
+	         $441a = HoppipFrontpic
+	         $4520 = SentretBackpic
+	         $4625 = HorseaBackpic
+	         $472a = RattataFrontpic
+	         $482f = SquirtleFrontpic
+	         $4931 = WigglytuffBackpic
+	         $4a33 = QwilfishFrontpic
+	         $4b34 = DittoBackpic
+	         $4c34 = WeedleBackpic
+	         $4d34 = TeddiursaFrontpic
+	         $4e34 = SentretFrontpic
+	         $4f32 = PhanpyFrontpic
+	         $5030 = ShuckleFrontpic
+	         $512e = PoliwagFrontpic
+	         $522b = CleffaBackpic
+	         $5327 = DrowzeeBackpic
+	         $5422 = GastlyBackpic
+	         $551c = MarillBackpic
+	         $5615 = DratiniBackpic
+	         $570e = FearowBackpic
+	         $5807 = WooperFrontpic
+	         $58ff = HoundourBackpic
+	         $59f6 = KabutoFrontpic
+	         $5aed = ElectrodeBackpic
+	         $5be3 = MetapodBackpic
+	         $5cd8 = JigglypuffBackpic
+	         $5dcd = WooperBackpic
+	         $5ec1 = SunkernFrontpic
+	         $5fb5 = OddishBackpic
+	         $60a9 = JynxBackpic
+	         $619c = SpinarakBackpic
+	         $628f = SkarmoryBackpic
+	         $6381 = PoliwagBackpic
+	         $6471 = SquirtleBackpic
+	         $6560 = ShuckleBackpic
+	         $664c = DewgongBackpic
+	         $6738 = SlowpokeBackpic
+	         $6823 = GeodudeFrontpic
+	         $690c = DonphanBackpic
+	         $69f5 = TaurosBackpic
+	         $6adc = WeedleFrontpic
+	         $6bc2 = CleffaFrontpic
+	         $6ca8 = VoltorbBackpic
+	         $6d8d = NidoranFFrontpic
+	         $6e6d = SwinubBackpic
+	         $6f4b = BulbasaurFrontpic
+	         $7029 = PichuFrontpic
+	         $7106 = TangelaBackpic
+	         $71e3 = IgglybuffFrontpic
+	         $72bf = SpinarakFrontpic
+	         $7398 = GolemBackpic
+	         $7471 = MantineBackpic
+	         $7549 = HorseaFrontpic
+	         $7620 = PiloswineBackpic
+	         $76f2 = KakunaFrontpic
+	         $77c4 = SwinubFrontpic
+	         $7894 = OddishFrontpic
+	         $7956 = DiglettFrontpic
+	         $7a17 = DiglettBackpic
+	         $7ad6 = UnownCFrontpic
+	         $7b92 = TogepiFrontpic
+	         $7c4d = MetapodFrontpic
+	         $7d04 = UnownCBackpic
+	         $7db8 = CaterpieFrontpic
+	         $7e6a = UnownHBackpic
+	         $7f1a = UnownGFrontpic
+	EMPTY: $7fc6-$7fff ($003a bytes)
+	TOTAL EMPTY: $003a bytes
 
 ROMX bank #31:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom31"]
+	SECTION: $4000-$409b ($009c bytes) ["Unown Pic Pointers"]
+	         $4000 = UnownPicPointers
+	SECTION: $409c-$7fff ($3f64 bytes) ["Pics 12"]
+	         $409c = SuicuneFrontpic
+	         $42e4 = RhyhornFrontpic
+	         $452a = TyranitarFrontpic
+	         $4769 = MoltresFrontpic
+	         $49a8 = ZapdosFrontpic
+	         $4be7 = SeakingFrontpic
+	         $4e20 = MukFrontpic
+	         $5059 = DragoniteFrontpic
+	         $5290 = AlakazamFrontpic
+	         $54c4 = AerodactylFrontpic
+	         $56f7 = TyphlosionFrontpic
+	         $5928 = MachokeFrontpic
+	         $5b54 = ExeggcuteFrontpic
+	         $5d7f = ScizorFrontpic
+	         $5fa7 = FirebreatherPic
+	         $61cf = DodrioFrontpic
+	         $63f4 = ArticunoFrontpic
+	         $6619 = ButterfreeFrontpic
+	         $683a = PidgeotFrontpic
+	         $6a5a = PersianFrontpic
+	         $6c79 = DewgongFrontpic
+	         $6e98 = CloysterFrontpic
+	         $70b7 = GolduckFrontpic
+	         $72d3 = ArcanineFrontpic
+	         $74ee = OnixFrontpic
+	         $7705 = ChampionPic
+	         $7919 = MediumPic
+	         $7b2c = SlowkingFrontpic
+	         $7d3e = VictreebelFrontpic
+	         $7f50 = GolbatBackpic
 	TOTAL EMPTY: $0000 bytes
 
 ROMX bank #32:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom32"]
-	TOTAL EMPTY: $0000 bytes
+	SECTION: $4000-$40c5 ($00c6 bytes) ["Trainer Pic Pointers"]
+	         $4000 = TrainerPicPointers
+	SECTION: $40c6-$7fd9 ($3f14 bytes) ["Pics 13"]
+	         $40c6 = HypnoFrontpic
+	         $42d4 = BlackbeltTPic
+	         $44e2 = BlisseyFrontpic
+	         $46ef = BikerPic
+	         $48fc = PrimeapeFrontpic
+	         $4b07 = RaichuFrontpic
+	         $4d12 = BrunoPic
+	         $4f1b = ExeggutorFrontpic
+	         $5124 = ForretressFrontpic
+	         $532c = MagmarFrontpic
+	         $5533 = HikerPic
+	         $5737 = StantlerFrontpic
+	         $5938 = AzumarillFrontpic
+	         $5b38 = KinglerFrontpic
+	         $5d38 = PoliwrathFrontpic
+	         $5f36 = PinsirFrontpic
+	         $6131 = MewtwoFrontpic
+	         $6326 = SlowbroFrontpic
+	         $651a = KadabraFrontpic
+	         $670d = SnorlaxFrontpic
+	         $68ff = DonphanFrontpic
+	         $6aee = NidorinoFrontpic
+	         $6cdc = MantineFrontpic
+	         $6ec8 = PolitoedFrontpic
+	         $70b1 = FisherPic
+	         $729a = ElectabuzzFrontpic
+	         $7481 = TentacruelFrontpic
+	         $7667 = NidokingBackpic
+	         $784c = PokefanmPic
+	         $7a31 = BoarderPic
+	         $7c15 = UrsaringFrontpic
+	         $7df8 = MachampBackpic
+	EMPTY: $7fda-$7fff ($0026 bytes)
+	TOTAL EMPTY: $0026 bytes
 
 ROMX bank #33:
 	SECTION: $4000-$7fff ($4000 bytes) ["rom33"]
@@ -11221,14 +11799,69 @@ ROMX bank #45:
 	TOTAL EMPTY: $0000 bytes
 
 ROMX bank #46:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom46"]
+	SECTION: $4000-$5aa3 ($1aa4 bytes) ["Pics 14"]
+	         $4000 = UnownHFrontpic
+	         $40ab = DittoFrontpic
+	         $4153 = SnorlaxBackpic
+	         $41f9 = MagnemiteBackpic
+	         $429f = UnownGBackpic
+	         $4343 = ForretressBackpic
+	         $43e3 = NatuFrontpic
+	         $4482 = UnownSFrontpic
+	         $4520 = UnownVFrontpic
+	         $45bc = UnownVBackpic
+	         $4658 = UnownFBackpic
+	         $46f1 = UnownDBackpic
+	         $4787 = UnownDFrontpic
+	         $481b = UnownSBackpic
+	         $48ad = UnownEFrontpic
+	         $493a = UnownEBackpic
+	         $49c6 = VoltorbFrontpic
+	         $4a51 = MagnemiteFrontpic
+	         $4adb = UnownBFrontpic
+	         $4b62 = UnownZFrontpic
+	         $4be9 = UnownFFrontpic
+	         $4c6d = UnownBBackpic
+	         $4cf0 = UnownJBackpic
+	         $4d73 = UnownOBackpic
+	         $4df5 = UnownWFrontpic
+	         $4e77 = UnownZBackpic
+	         $4ef6 = UnownWBackpic
+	         $4f74 = UnownJFrontpic
+	         $4ff2 = UnownNFrontpic
+	         $506f = UnownKFrontpic
+	         $50ec = UnownNBackpic
+	         $5167 = UnownABackpic
+	         $51e2 = UnownAFrontpic
+	         $525c = UnownMBackpic
+	         $52d5 = UnownTFrontpic
+	         $534e = UnownOFrontpic
+	         $53c6 = UnownKBackpic
+	         $543b = UnownTBackpic
+	         $54af = UnownXBackpic
+	         $5520 = UnownMFrontpic
+	         $558f = UnownLBackpic
+	         $55fb = UnownYFrontpic
+	         $5666 = UnownUBackpic
+	         $56d1 = UnownLFrontpic
+	         $573c = UnownXFrontpic
+	         $57a6 = UnownQFrontpic
+	         $580d = UnownPFrontpic
+	         $5874 = UnownYBackpic
+	         $58da = UnownPBackpic
+	         $5938 = UnownIBackpic
+	         $5996 = UnownIFrontpic
+	         $59f1 = UnownRBackpic
+	         $5a4b = UnownRFrontpic
+	EMPTY: $5aa4-$62ff ($085c bytes)
+	SECTION: $6300-$7fff ($1d00 bytes) ["rom46"]
 	         $6300 = CheckForHiddenItems
 	         $6378 = TreeMonEncounter
 	         $63a1 = RockMonEncounter
 	         $7258 = ReadPartyMonMail
 	         $7266 = ReadAnyMail
 	         $7e63 = ItemIsMail
-	TOTAL EMPTY: $0000 bytes
+	TOTAL EMPTY: $085c bytes
 
 ROMX bank #47:
 	SECTION: $4000-$7fff ($4000 bytes) ["rom47"]
