@@ -72,17 +72,17 @@ GoldenrodVendingMachine:
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 0, 2, 15, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "FRESH WATER  ¥{d:GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE}@"
-	db "SODA POP     ¥{d:GOLDENRODDEPTSTORE6F_SODA_POP_PRICE}@"
-	db "LEMONADE     ¥{d:GOLDENRODDEPTSTORE6F_LEMONADE_PRICE}@"
-	db "CANCEL@"
+	db "おいしいみず　　２００円@"
+	db "サイコソーダ　　３００円@"
+	db "ミックスオレ　　３５０円@"
+	db "やめる@"
 
 GoldenrodDeptStore6FLassScript:
 	jumptextfaceplayer GoldenrodDeptStore6FLassText
@@ -97,56 +97,45 @@ GoldenrodDeptStore6FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 GoldenrodVendingText:
-	text "A vending machine!"
-	line "Here's the menu."
+	text "じどう　はんばいき　だ！"
+	line "ほしい　のみものは<⋯>　<⋯>"
 	done
 
 GoldenrodClangText:
-	text "Clang! A can of"
-	line "@"
+	text "ガゴン！"
+
+	para "@"
 	text_ram wStringBuffer3
-	text_start
-	cont "popped out!"
+	text "<GA>でてき<TA!>"
 	done
 
 GoldenrodVendingNoMoneyText:
-	text "Oops, not enough"
-	line "money."
+	text "おかね<GA>たりないぞ！"
 	done
 
 GoldenrodVendingNoSpaceText:
-	text "There's no more"
-	line "room for stuff."
+	text "これ　いじょう　もてない！"
 	done
 
 GoldenrodDeptStore6FLassText:
-	text "Do you listen to"
-	line "LUCKY CHANNEL?"
+	text "ねえ　あなた　ラジオ<NO>"
+	line "ラッキーチャンネル　きいてる？"
 
-	para "If you want to"
-	line "win, trade #MON"
-
-	para "with as many peo-"
-	line "ple as possible to"
-
-	para "get different ID"
-	line "numbers."
+	para "あれ<TTE>　いろんな　ひとと"
+	line "#こうかん　して"
+	cont "いろんな　アイディ　あつめたほうが"
+	cont "あたりやすく　なるのよね"
 	done
 
 GoldenrodDeptStore6FSuperNerdText:
-	text "If you're tired,"
-	line "try the vending"
-	cont "machine's drinks."
-
-	para "Your #MON will"
-	line "love them too."
+	text "つかれたとき<WA>じどうはんばいきの"
+	line "のみもの<GA>１ばん！"
+	cont "#も　のみも<NO>だいすきなんだ"
 	done
 
 GoldenrodDeptStore6FDirectoryText:
-	text "Take a Break from"
-	line "Shopping!"
-
-	para "6F ROOFTOP SQUARE"
+	text "おかいもの<NI>つかれたら"
+	line "６かい<⋯>いこい<NO>ひろば"
 	done
 
 GoldenrodDeptStore6F_MapEvents:

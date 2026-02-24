@@ -84,6 +84,7 @@ ROMX $12
 	"Pic Pointers"
 	"Pics 1"
 ROMX $13
+	"Map Scripts 1"
 ROMX $14
 	; "bank14"
 	; "Egg Pic"
@@ -180,7 +181,6 @@ ROMX $40
 ROMX $41
 	; "Phone Scripts"
 ROMX $42
-	; "Map Scripts 1"
 ROMX $43
 	; "Map Scripts 2"
 ROMX $44

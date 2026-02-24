@@ -20,63 +20,49 @@ ElmsHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
 ElmsWifeText:
-	text "Hi, <PLAYER>! My"
-	line "husband's always"
+	text "あら　<PLAYER>くん！"
 
-	para "so busy--I hope"
-	line "he's OK."
+	para "うち<NO>だんな"
+	line "なんだか　いそがしそうだけど"
+	cont "むり　してないかしら？"
 
-	para "When he's caught"
-	line "up in his #MON"
-
-	para "research, he even"
-	line "forgets to eat."
+	para "#<NO>けんきゅう<NI>なると"
+	line "むちゅうで　ごはんも　たべないのよ"
 	done
 
 ElmsSonText:
-	text "When I grow up,"
-	line "I'm going to help"
-	cont "my Dad!"
+	text "ぼく　おおきくなったら"
+	line "おとうさん<NO>おてつだい<WO>する！"
 
-	para "I'm going to be a"
-	line "great #MON"
-	cont "professor!"
+	para "そして　すごい"
+	line "#はかせ<NI>なるんだ！"
 	done
 
 ElmsHouseLabFoodText: ; unreferenced
-	text "There's some food"
-	line "here. It must be"
-	cont "for the LAB."
+	text "しょくじ<NO>じゅんび<GA>してある"
+	line "けんきゅうしょ<NO>ぶん　かな？"
 	done
 
 ElmsHousePokemonFoodText: ; unreferenced
-	text "There's some food"
-	line "here. This must be"
-	cont "for #MON."
+	text "しょくじ<NO>じゅんび<GA>してある"
+	line "こっち<WA>#よう　かな？"
 	done
 
 ElmsHousePCText:
-	text "#MON. Where do"
-	line "they come from? "
+	text "#<WA>どこから　きて"
+	line "どこへ　いくのか？"
 
-	para "Where are they"
-	line "going?"
+	para "なぜ　うまれてくる　しゅんかんを"
+	line "だれも　みたこと<GA>ないのか？"
 
-	para "Why has no one"
-	line "ever witnessed a"
-	cont "#MON's birth?"
+	para "<WATASHI><WA>それ<WO>しりたい！"
+	line "じんせい<NO>すべて<WO>かけて"
+	cont "けんきゅう　するつもりだ！"
 
-	para "I want to know! I"
-	line "will dedicate my"
+	para "<⋯>　<⋯>　<⋯>"
 
-	para "life to the study"
-	line "of #MON!"
-
-	para "…"
-
-	para "It's a part of"
-	line "PROF.ELM's re-"
-	cont "search papers."
+	para "ウツギはかせ<GA>まとめている"
+	line "けんきゅう　はっぴょう<NO>いちぶだ！"
 	done
 
 ElmsHouse_MapEvents:

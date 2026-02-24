@@ -183,198 +183,172 @@ BridgetWalksAwayMovement:
 	step_end
 
 WhitneyBeforeText:
-	text "Hi! I'm WHITNEY!"
+	text "はーい！"
+	line "うち<GA>アカネちゃーん！！"
 
-	para "Everyone was into"
-	line "#MON, so I got"
-	cont "into it too!"
+	para "みんな　#　や<TTE>るやん"
+	line "うちも　はじめたら"
+	cont "もー　めっちゃ　かわいーて！"
 
-	para "#MON are"
-	line "super-cute!"
-
-	para "You want to bat-"
-	line "tle? I'm warning"
-	cont "you--I'm good!"
+	para "えー　ちょうせん　するの？"
+	line "ゆうとくけど　うち"
+	cont "めっちゃ　つよいで！"
 	done
 
 WhitneyShouldntBeSoSeriousText:
-	text "Sob…"
+	text "うう<⋯>"
 
-	para "…Waaaaaaah!"
-	line "You're mean!"
+	para "<⋯>　うわーん！！"
+	line "ひどいよ　ひどいよ！！"
 
-	para "You shouldn't be"
-	line "so serious! You,"
-	cont "you, child, you!"
+	para "むき<NI>なんないでよ！！"
+	line "もお　こども　なんやから<⋯>"
 	done
 
 WhitneyYouMeanieText:
-	text "Waaaaah!"
+	text "わーん！！"
 
-	para "Waaaaah!"
+	para "わーん！！"
 
-	para "…Snivel, hic…"
-	line "…You meanie!"
+	para "<⋯>　ぐっすん　ひっぐ"
+	line "<⋯>　ひどいよお！！"
 	done
 
 WhitneyWhatDoYouWantText:
-	text "…Sniff…"
+	text "<⋯>ぐすん"
 
-	para "What? What do you"
-	line "want? A BADGE?"
+	para "なに？　まだ　なんか　あるの？"
+	line "ああ　バッジ？"
 
-	para "Oh, right. I for-"
-	line "got. Here's PLAIN-"
-	cont "BADGE."
+	para "ごめん　わすれてた"
+	line "はい　レギュラーバッジ"
+	cont "これ<GA>ほしいんでしょ！"
 	done
 
 PlayerReceivedPlainBadgeText:
-	text "<PLAYER> received"
-	line "PLAINBADGE."
+	text "<PLAYER><WA>アカネから"
+	line "レギュラーバッジ<WO>もらっ<TA!>"
 	done
 
 WhitneyPlainBadgeText:
-	text "PLAINBADGE lets"
-	line "your #MON use"
+	text "レギュラーバッジ<WO>も<TTE>ると"
+	line "たたか<TTE>ない　ときでも"
+	cont "かいりき<NO>わざ<GA>つかえるし"
+	cont "#<NO>すばやさも　あがるんよ"
 
-	para "STRENGTH outside"
-	line "of battle."
-
-	para "It also boosts"
-	line "your #MON's"
-	cont "SPEED."
-
-	para "Oh, you can have"
-	line "this too!"
+	para "あと<WA>これも　あげる！"
 	done
 
 WhitneyAttractText:
-	text "It's ATTRACT!"
-	line "It makes full use"
-
-	para "of a #MON's"
-	line "charm."
-
-	para "Isn't it just per-"
-	line "fect for a cutie"
-	cont "like me?"
+	text "なかみ<WA>メロメロ　ゆーて"
+	line "#<NO>みりょくを"
+	cont "さいだいげん<NI>つかう　わざ　やねん"
+	cont "かわいー　うち<NI>ぴったし　やろ？"
 	done
 
 WhitneyGoodCryText:
-	text "Ah, that was a"
-	line "good cry!"
+	text "ふう！"
+	line "ないたら　すっきり　しちゃっ<TA!>"
 
-	para "Come for a visit"
-	line "again! Bye-bye!"
+	para "ほな　また　あそび<NI>おいでーな！"
+	line "バイバイ！"
 	done
 
 LassCarrieSeenText:
-	text "Don't think I'm a"
-	line "pushover!"
+	text "おんなのこ　だから<TTE>"
+	line "ゆだん　しないほう<GA>いいわよ！"
 	done
 
 LassCarrieBeatenText:
-	text "Darn… I thought"
-	line "you were weak…"
+	text "やっちゃった<⋯>"
+	line "あたし<GA>ゆだん　しちゃったみたい"
 	done
 
 LassCarrieAfterBattleText:
-	text "In the world of"
-	line "#MON, I wonder"
-
-	para "what's stronger:"
-	line "male or female?"
+	text "#<NO>せかい　では"
+	line "メスと　オス"
+	cont "どっち<GA>つよいのかしら？"
 	done
 
 LassBridgetSeenText:
-	text "I like cute #-"
-	line "MON better than"
-	cont "strong #MON."
+	text "つよい　#　より"
+	line "かわいい　#<GA>すきー！"
 
-	para "But I have strong"
-	line "and cute #MON!"
+	para "でも　あたし<GA>も<TTE>るのは"
+	line "つよくて　かわいい　#よ！"
 	done
 
 LassBridgetBeatenText:
-	text "Oh, no, no, no!"
+	text "あーん　ダメダメー！"
 	done
 
 LassBridgetAfterBattleText:
-	text "I'm trying to beat"
-	line "WHITNEY, but…"
-	cont "It's depressing."
+	text "アカネちゃん<NI>かてるよう"
+	line "がんば<TTE>るの<NI>まだまだ　なのかな"
+	cont "なーんか　おちこんじゃう<⋯>"
 
-	para "I'm okay! If I"
-	line "lose, I'll just"
-
-	para "try harder next"
-	line "time!"
+	para "なーんてね"
+	line "まけたら　つぎ　がんばればいいのよ！"
 	done
 
 BridgetWhitneyCriesText:
-	text "Oh, no. You made"
-	line "WHITNEY cry."
+	text "あーあ　アカネちゃん"
+	line "なかしちゃったのね"
 
-	para "It's OK. She'll"
-	line "stop soon. She"
-
-	para "always cries when"
-	line "she loses."
+	para "だいじょうぶ！"
+	line "しばらくしたら　なきやむから"
+	cont "まけると　いつも　ないちゃうのよ"
 	done
 
 BeautyVictoriaSeenText:
-	text "Oh, you are a cute"
-	line "little trainer! "
-
-	para "I like you, but I"
-	line "won't hold back!"
+	text "あら　かわいい　<TRAINER>ね！"
+	line "おねーさん　きにいっちゃっ<TA!>"
+	cont "でも　てかげん<WA>しないわよ！"
 	done
 
 BeautyVictoriaBeatenText:
-	text "Let's see… Oops,"
-	line "it's over?"
+	text "えーと<⋯>"
+	line "あら　おわ<TTE>る？"
 	done
 
 BeautyVictoriaAfterBattleText:
-	text "Wow, you must be"
-	line "good to beat me!"
-	cont "Keep it up!"
+	text "おねーさん<WO>まかすなんて"
+	line "すごい　すごーい！"
+	cont "そ<NO>ちょうしで　がんば<TTE>ね"
 	done
 
 BeautySamanthaSeenText:
-	text "Give it your best"
-	line "shot, or I'll take"
-	cont "you down!"
+	text "ほんきで　こないと"
+	line "きつーい<NO>おみまい　しちゃうわよ！"
 	done
 
 BeautySamanthaBeatenText:
-	text "No! Oh, MEOWTH,"
-	line "I'm so sorry!"
+	text "いやーん！！"
+	line "ごめんね　<WATASHI><NO>ニャースちゃん"
 	done
 
 BeautySamanthaAfterBattleText:
-	text "I taught MEOWTH"
-	line "moves for taking"
-	cont "on any type…"
+	text "どんな　タイプ<NO>#も"
+	line "<KOUGEKI>　できるように"
+	cont "わざ<WO>おしえたんだけどな"
 	done
 
 GoldenrodGymGuideText:
-	text "Yo! CHAMP in"
-	line "making!"
+	text "おーす！"
+	line "みらい<NO>チャンピオン！"
 
-	para "This GYM is home"
-	line "to normal-type"
-	cont "#MON trainers."
+	para "こ<NO>ジムは"
+	line "ノーマルタイプ　#の"
+	cont "つかいて<GA>あつま<TTE>いる！"
 
-	para "I recommend you"
-	line "use fighting-type"
-	cont "#MON."
+	para "たたかわせる　なら"
+	line "かくとうタイプの"
+	cont "#<GA>おすすめ　だな！"
 	done
 
 GoldenrodGymGuideWinText:
-	text "You won? Great! I"
-	line "was busy admiring"
-	cont "the ladies here."
+	text "かったか？　それ<WA>よかっ<TA!>"
+	line "おれ<WA>おんなのこ<NI>みとれていたよ"
 	done
 
 GoldenrodGym_MapEvents:

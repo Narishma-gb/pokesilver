@@ -46,56 +46,60 @@ GoldenrodBikeShopBicycle:
 	jumptext GoldenrodBikeShopBicycleText
 
 GoldenrodBikeShopClerkIntroText:
-	text "…sigh… I moved"
-	line "here, but I can't"
+	text "はあ<⋯>"
+	line "わざわざ　コガネ<NI>きたけど"
+	cont "じてんしゃ　ぜんぜん　うれない"
 
-	para "sell my BICYCLES."
-	line "Why is that?"
-
-	para "Could you ride a"
-	line "BICYCLE and adver-"
-	cont "tise for me?"
+	para "どうだろう？"
+	line "きみ　じてんしゃ<NI>のりまく<TTE>"
+	cont "せんでん　してくれない？"
 	done
 
 GoldenrodBikeShopClerkAgreedText:
-	text "Really? Great!"
+	text "ほ　ほんと？"
 
-	para "Give me your name"
-	line "and phone number,"
-
-	para "and I'll loan you"
-	line "a BICYCLE."
+	para "じゃあ　なまえと　でんわばんごう"
+	line "おしえてよ"
+	cont "じてんしゃ<WO>かすからさ"
 	done
 
 BorrowedABicycleText:
-	text "<PLAYER> borrowed a"
-	line "BICYCLE."
+	text "<PLAYER>は"
+	line "じてんしゃ<WO>かり<TA!>"
 	done
 
 GoldenrodBikeShopClerkFirstRateBikesText:
-	text "My BICYCLES are"
-	line "first-rate! You"
-
-	para "can ride them"
-	line "anywhere."
+	text "ミラクル　サイクル<NO>じてんしゃは"
+	line "せいのう　ばつぐん　だからね！"
+	cont "どんな　みちも　スイスイ　はしるよ！"
 	done
 
 GoldenrodBikeShopClerkRefusedText:
-	text "…sigh… Oh, for"
-	line "the kindness of"
-	cont "people…"
+	text "はあ<⋯>"
+	line "ひと<NO>やさしさ<NI>ふれたいよ"
+	done
+
+BikeShopPhoneCallerText:
+	text "やあ　<PLAYER>くん"
+	line "さいきん　じてんしゃ　うれてるよ！"
+
+	para "きみ<GA>じてんしゃ<NI>の<TTE>"
+	line "せんでん　してくれてるからだね"
+
+	para "おれい　といっちゃ　なんだけど"
+	line "かしている　じてんしゃ"
+	cont "きみ<NO>もの<NI>してください！"
+
+	para "ほんと　ありがとう　だよ"
 	done
 
 GoldenrodBikeShopJustReleasedCompactBikeText:
-	text "Just released!"
-
-	para "First-rate compact"
-	line "BICYCLES!"
+	text "つい<NI>はつばい！"
+	line "さいこうきゅう　コンパクト　サイクル"
 	done
 
 GoldenrodBikeShopBicycleText:
-	text "It's a shiny new"
-	line "BICYCLE!"
+	text "ピッカピカ<NO>じてんしゃだ！"
 	done
 
 GoldenrodBikeShop_MapEvents:

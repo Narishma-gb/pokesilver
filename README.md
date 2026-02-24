@@ -1,6 +1,6 @@
 # Japanese Pokémon Gold and Silver
 
-This is a WIP disassembly of ポケットモンスター　金・銀, based on pret [**pokegold**](https://github.com/pret/pokegold) full decompilation.
+This is a WIP disassembly of ポケットモンスター　金・銀.
 
 It builds the following ROMs:
 
@@ -13,6 +13,14 @@ It builds the following ROMs:
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
-### Note
+## Credits
+
+- The whole repository structure, most ASM files, tools and build scripts originate from pret [**pokegold**][pokegold].
+- [**Emulicious**][emulicious] debugger features have been invaluable, navigating the ROM to look for differences with the US release.
+
+## Note
 
 The base ROMs of Gold & Silver (V1.0) are required to build, these should be placed at the top-level directory: `baserom_g.bin` and `baserom_s.bin`.
+
+[pokegold]: https://github.com/pret/pokegold
+[emulicious]:https://www.emulicious.net

@@ -70,68 +70,56 @@ HappinessRatersHouseRadio:
 	jumpstd Radio2Script
 
 GoldenrodHappinessRaterTeacherText:
-	text "If you treat your"
-	line "#MON nicely,"
+	text "#もね"
+	line "だいじ<NI>してあげると　なつくのよ"
 
-	para "they will love you"
-	line "in return."
-
-	para "Oh? Let me see"
-	line "your @"
+	para "あら？"
+	line "あなた<NO>@"
 	text_ram wStringBuffer3
-	text "…"
+	text "<⋯>"
 	done
 
 GoldenrodHappinessRatingText_LovesYouALot:
-	text "It looks really"
-	line "happy! It must"
-	cont "love you a lot."
+	text "と<TTE>も　しあわせそう！"
+	line "きっと　ものすごく"
+	cont "あなた<NI>なついているのね！"
 	done
 
 GoldenrodHappinessRatingText_ReallyTrustsYou:
-	text "I get the feeling"
-	line "that it really"
-	cont "trusts you."
+	text "あなたのこと　しんじてる"
+	line "そんな　かんじ<GA>するわ"
 	done
 
 GoldenrodHappinessRatingText_SortOfHappy:
-	text "It's friendly to-"
-	line "ward you. It looks"
-	cont "sort of happy."
+	text "あなた<NI>なついてるのね"
+	line "なんだか　しあわせ　そうだわ"
 	done
 
 GoldenrodHappinessRatingText_QuiteCute:
-	text "It's quite cute."
+	text "けっこう　かわいいわね"
 	done
 
 GoldenrodHappinessRatingText_NotUsedToYou:
-	text "You should treat"
-	line "it better. It's"
-	cont "not used to you."
+	text "もっと　かわいが<TTE>あげたら　どう？"
+	line "まだ　あなた<NI>なれてないみたいよ"
 	done
 
 GoldenrodHappinessRatingText_LooksMean:
-	text "It doesn't seem to"
-	line "like you at all."
-	cont "It looks mean."
+	text "ぜんぜん　なついてないようね"
+	line "なんだか　めつき<GA>わるいわ"
 	done
 
 GoldenrodHappinessRaterPokefanMText:
-	text "I keep losing in"
-	line "battles, and my"
+	text "いつも　#しょうぶで　まけて"
+	line "ひんし<NI>させてばかり<⋯>"
 
-	para "#MON end up"
-	line "fainting…"
-
-	para "Maybe that's why"
-	line "my #MON don't"
-	cont "like me much…"
+	para "それ<GA>りゆう　なのか"
+	line "#　なついてくれないんだよ"
 	done
 
 GoldenrodHappinessRaterTwinText:
-	text "When I use an item"
-	line "on my #MON, it"
-	cont "acts really glad!"
+	text "#<NI>どうぐ　つか<TTE>あげると"
+	line "すごく　うれしそう<NI>するの！"
 	done
 
 GoldenrodHappinessRater_MapEvents:

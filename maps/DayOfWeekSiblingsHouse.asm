@@ -21,51 +21,45 @@ DayOfWeekSiblingsHousePokedexScript:
 	end
 
 DayOfWeekSiblingsHousePokedexText1:
-	text "There's something"
-	line "written here."
-
-	para "Read it?"
+	text "<⋯>ノート<NI>なにか　かいてある！"
+	line "よみますか？"
 	done
 
 DayOfWeekSiblingsHousePokedexText2:
-	text "To my brothers and"
-	line "sisters:"
+	text "<⋯>#　<TRAINER>に"
+	line "きょうりょく　することが"
+	cont "<WATASHI>たち　きょうだい<NO>よろこび"
 
-	para "We take pride in"
-	line "serving #MON"
-	cont "trainers."
+	para "<TRAINER><NI>はなしかけられたら"
+	line "べんりな　どうぐ<WO>あげましょう！"
 
-	para "When trainers talk"
-	line "to you, give them"
-	cont "something useful."
+	para "おとうと　いもうと　たちへ"
+	line "ちょうじょ　ツキコ　より<⋯>"
 
-	para "Love,"
-	line "MONICA"
-
-	para "Keep reading?"
+	para "つぎ<NO>ページも　よむ？"
 	done
 
 DayOfWeekSiblingsHousePokedexText3:
-	text "Monday, MONICA"
-	line "ROUTE 40"
+	text "げつようび<NO>ツキコ"
+	line "<⋯>　４０ばん　すいどう"
 
-	para "Tuesday, TUSCANY"
-	line "ROUTE 29"
+	para "かようび<NO>ヒコ"
+	line "<⋯>　２９<ROUTE>"
 
-	para "Wednesday, WESLEY"
-	line "LAKE OF RAGE"
+	para "すいようび<NO>ミズオ"
+	line "<⋯>　いかりのみずうみ"
 
-	para "Thursday, ARTHUR"
-	line "ROUTE 36"
+	para "もくようび<NO>モクオ"
+	line "<⋯>　３６<ROUTE>"
 
-	para "Friday, FRIEDA"
-	line "ROUTE 32"
+	para "きんようび<NO>カネコ"
+	line "<⋯>　３２<ROUTE>"
 
-	para "Saturday, SANTOS"
-	line "BLACKTHORN CITY"
+	para "どようび<NO>ツチオ"
+	line "<⋯>　フスベ　シティ"
 
-	para "Sunday, SUNNY"
-	line "ROUTE 37"
+	para "にちようび<NO>ニチオ"
+	line "<⋯>　３７<ROUTE>"
 	done
 
 DayOfWeekSiblingsHouse_MapEvents:

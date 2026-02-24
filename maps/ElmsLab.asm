@@ -666,553 +666,456 @@ AfterChikoritaMovement:
 	step_end
 
 ElmText_Intro:
-	text "ELM: <PLAYER>!"
-	line "There you are!"
+	text "ウツギ『やあ　<PLAYER>くん"
+	line "ま<TTE>いたよ！"
 
-	para "I needed to ask"
-	line "you a favor."
+	para "きょう　きみ<WO>よんだのは"
+	line "おねがい<GA>あるからなんだ！"
 
-	para "I have an acquain-"
-	line "tance called MR."
-	cont "#MON."
+	para "ぼく<NO>しりあいにね"
+	line "#じいさん　とい<TTE>"
 
-	para "He keeps finding"
-	line "weird things and"
+	para "へんなモノ<WO>みつけてきては"
+	line "だいはっけん！　<TTE>　おおさわぎする"
+	cont "おじいさん<GA>いるんだよ"
 
-	para "raving about his"
-	line "discoveries."
+	para "で　さっきね"
+	line "「こんどこそ<WA>ほんも<NO>ですぞ！」"
+	cont "<TTE>　メール<GA>きたんだ"
 
-	para "Anyway, I just got"
-	line "an e-mail from him"
+	para "き<NI>なるんだけど"
+	line "ぼくも　じょしゅも　#の"
+	cont "けんきゅうで　いそがしくてね"
+	cont "かわり<NI>い<TTE>きてほしいんだ"
 
-	para "saying that this"
-	line "time it's real."
+	para "もちろん　パートナーとなる"
+	line "#<WO>あげるよ"
 
-	para "It is intriguing,"
-	line "but we're busy"
-
-	para "with our #MON"
-	line "research."
-
-	para "Could you look"
-	line "into it for us?"
-
-	para "I'll give you a"
-	line "#MON for a"
-	cont "partner."
-
-	para "They're all rare"
-	line "#MON that we"
-	cont "just found."
-
-	para "Go on. Pick one!"
+	para "さいきん　みつけたばかりの"
+	line "めずらしい　#　だよ"
+	cont "さあ　えらんでよ！"
 	done
 
 ElmText_LetYourMonBattleIt:
-	text "If a wild #MON"
-	line "appears, let your"
-	cont "#MON battle it!"
+	text "#<WO>も<TTE>いれば"
+	line "やせい<NO>#<GA>でてきても"
+	cont "たたかわせれば　いいんだよ！"
 	done
 
 LabWhereGoingText:
-	text "ELM: Wait! Where"
-	line "are you going?"
+	text "ウツギ『ちょっと　ちょっと"
+	line "どこ<NI>いくんだよ！"
 	done
 
 TakeCyndaquilText:
-	text "ELM: You'll take"
-	line "CYNDAQUIL, the"
-	cont "fire #MON?"
+	text "ウツギ『ほのお<NO>#"
+	line "ヒノアラシ<NI>するのかい！？"
 	done
 
 TakeTotodileText:
-	text "ELM: Do you want"
-	line "TOTODILE, the"
-	cont "water #MON?"
+	text "ウツギ『みず<NO>#"
+	line "ワニノコ<GA>いいんだね！？"
 	done
 
 TakeChikoritaText:
-	text "ELM: So, you like"
-	line "CHIKORITA, the"
-	cont "grass #MON?"
+	text "ウツギ『くさ<NO>#"
+	line "チコリータ<GA>き<NI>いったんだね！？"
 	done
 
 DidntChooseStarterText:
-	text "ELM: Think it over"
-	line "carefully."
-
-	para "Your partner is"
-	line "important."
+	text "ウツギ『じっくり　かんがえて"
+	line "きめると　いいよ"
+	cont "だいじな　パートナー　だからね"
 	done
 
 ChoseStarterText:
-	text "ELM: I think"
-	line "that's a great"
-	cont "#MON too!"
+	text "ウツギ『ぼくも　こいつは"
+	line "さいこう<NO>#だと　おもうよ！"
 	done
 
 ReceivedStarterText:
-	text "<PLAYER> received"
+	text "<PLAYER><WA>ウツギはかせ　から"
 	line "@"
 	text_ram wStringBuffer3
-	text "!"
+	text "<WO>もらっ<TA!>"
 	done
 
 ElmDirectionsText1:
-	text "MR.#MON lives"
-	line "near CHERRYGROVE,"
-	cont "the next city."
+	text "#じいさん<GA>いるのは"
+	line "こ<NO>まち<NO>となり"
+	cont "ヨシノシティ<NO>さき　だよ"
 
-	para "It's almost a"
-	line "direct route to"
-	cont "there."
+	para "そこまで<WA>ほとんど"
+	line "いっぽんみち　だからね"
 	done
 
 ElmDirectionsText2:
-	text "If your #MON is"
-	line "hurt, you should"
-
-	para "heal it with this"
-	line "machine."
+	text "#<GA>きずついたら"
+	line "そこ<NO>マシンで"
+	cont "#<WO>かいふく　させてあげてね"
 	done
 
 ElmDirectionsText3:
-	text "Oh, here's my"
-	line "phone number."
-
-	para "Call me if some-"
-	line "thing comes up."
+	text "おっと　ぼく<NO>でんわばんごう"
+	line "おしえて　おくから"
+	cont "なにか　あったら　れんらく　してよ！"
 	done
 
 GotElmsNumberText:
-	text "<PLAYER> got ELM's"
-	line "phone number."
+	text "<PLAYER><WA>ウツギはかせの"
+	line "でんわばんごう<WO>とうろく　し<TA!>"
 	done
 
 ElmDescribesMrPokemonText:
-	text "MR.#MON goes"
-	line "everywhere and"
-	cont "finds rarities."
+	text "#じいさん　はね"
+	line "いろんな　ところ<NI>い<TTE>は"
+	cont "めずらしいモノ<WO>みつけるんだ"
 
-	para "Too bad they're"
-	line "just rare and"
-	cont "not very useful…"
+	para "めずらしいだけで"
+	line "やく<NI>たたないんだけどね<⋯>"
 
-	para "<PLAYER>, I'm"
-	line "counting on you!"
+	para "それじゃ"
+	line "<PLAYER>くん　よろしくね！"
 	done
 
 ElmPokeBallText:
-	text "It contains a"
-	line "#MON caught by"
-	cont "PROF.ELM."
+	text "ウツギはかせ<GA>みつけた"
+	line "#<GA>はい<TTE>る！"
 	done
 
 ElmsLabHealingMachineText1:
-	text "I wonder what this"
-	line "does?"
+	text "なん<NO>マシン　だろう？"
 	done
 
 ElmsLabHealingMachineText2:
-	text "Heal #MON?"
+	text "#<NO>かいふく<WO>させますか？"
 	done
 
 ElmAfterTheftText1:
-	text "ELM: <PLAYER>, this"
-	line "is terrible…"
+	text "ウツギ『<PLAYER>くん<⋯>"
+	line "たいへんな　め<NI>あったよ"
 
-	para "Oh, yes, what was"
-	line "MR.#MON's big"
-	cont "discovery?"
+	para "あっ　そうそう"
+	line "#じいさんの"
+	cont "だいはっけん　<TTE>　なんだったの？"
 	done
 
 ElmAfterTheftText2:
-	text "<PLAYER> handed"
-	line "the MYSTERY EGG to"
-	cont "PROF.ELM."
+	text "<PLAYER><WA>ウツギはかせに"
+	line "ふしぎなタマゴ<WO><WATASHI><TA!>"
 	done
 
 ElmAfterTheftText3:
-	text "ELM: This?"
+	text "ウツギ『これは<⋯>"
 	done
 
 ElmAfterTheftText4:
-	text "But… Is it a"
-	line "#MON EGG?"
+	text "<⋯>　ひょっとして"
+	line "#<NO>タマゴ！？"
 
-	para "If it is, it is a"
-	line "great discovery!"
+	para "もし　そうなら　ほんとうに"
+	line "だい　だい　だいはっけん　だよ！"
 	done
 
 ElmAfterTheftText5:
-	text "ELM: What?!?"
+	text "ウツギ『え？　オーキドはかせから"
+	line "#ずかん<WO>もらっ<TA!>？"
 
-	para "PROF.OAK gave you"
-	line "a #DEX?"
+	para "<PLAYER>くん　ほ　ほんとうかい？"
+	line "そ　そりゃ　すごいこと　だよ！"
 
-	para "<PLAYER>, is that"
-	line "true? Th-that's"
-	cont "incredible!"
+	para "なんた<TTE>　オーキドはかせは"
+	line "<TRAINER><NO>さいのう<WO>みぬく"
+	cont "ちから<NO>もちぬし　だからね"
 
-	para "He is superb at"
-	line "seeing the poten-"
-	cont "tial of people as"
-	cont "trainers."
+	para "そうか　<PLAYER>くん　きみには"
+	line "チャンピオン<NI>なれるだけの"
+	cont "そしつ<GA>あるのかも　しれないね"
 
-	para "Wow, <PLAYER>. You"
-	line "may have what it"
+	para "#も　なついてるようだし"
+	line "このまま　かくち<NO>#ジムに"
+	cont "ちょうせん　するの<WA>どうかな？"
 
-	para "takes to become"
-	line "the CHAMPION."
-
-	para "You seem to be"
-	line "getting on great"
-	cont "with #MON too."
-
-	para "You should take"
-	line "the #MON GYM"
-	cont "challenge."
-
-	para "The closest GYM"
-	line "would be the one"
-	cont "in VIOLET CITY."
+	para "ここからだと　キキョウシティの"
+	line "#ジム<GA>いちばん　ちかいよ"
 	done
 
 ElmAfterTheftText6:
-	text "…<PLAYER>. The"
-	line "road to the"
+	text "<⋯>　<PLAYER>くん"
+	line "チャンピオン<WO>めざすのは"
+	cont "ながい　たび<NI>なるとおもう"
 
-	para "championship will"
-	line "be a long one."
-
-	para "Before you leave,"
-	line "make sure that you"
-	cont "talk to your mom."
+	para "しゅっぱつ<NO>まえに"
+	line "おかあさん<NI>はなしておくんだよ"
 	done
 
 ElmStudyingEggText:
-	text "ELM: Don't give"
-	line "up! I'll call if"
-
-	para "I learn anything"
-	line "about that EGG!"
+	text "ウツギ『がんばるんだよ！"
+	line "ボクも　タマゴについて　わかりしだい"
+	cont "れんらく　するからね！"
 	done
 
 ElmAideHasEggText:
-	text "ELM: <PLAYER>?"
-	line "Didn't you meet my"
-	cont "assistant?"
+	text "ウツギ『あれ　<PLAYER>くん"
+	line "ぼく<NO>じょしゅと　あわなかった？"
 
-	para "He should have met"
-	line "you with the EGG"
+	para "きみ<NI>タマゴ<WO>とどけるため"
+	line "キキョウ<NO>#センターに"
+	cont "い<TTE>る　はず　なのに<⋯>"
 
-	para "at VIOLET CITY's"
-	line "#MON CENTER."
-
-	para "You must have just"
-	line "missed him. Try to"
-	cont "catch him there."
+	para "いきちがい　かなあ？"
+	line "わるいけど　い<TTE>　あげてよ"
 	done
 
 ElmWaitingEggHatchText:
-	text "ELM: Hey, has that"
-	line "EGG changed any?"
+	text "ウツギ『どうだい"
+	line "タマゴ<NI>へんかはあったかい？"
 	done
 
 ElmThoughtEggHatchedText:
-	text "<PLAYER>? I thought"
-	line "the EGG hatched."
-
-	para "Where is the"
-	line "#MON?"
+	text "あれ　<PLAYER>くん"
+	line "タマゴ　かえったんでしょ"
+	cont "#　どうしてるの？"
 	done
 
 ShowElmTogepiText1:
-	text "ELM: <PLAYER>, you"
-	line "look great!"
+	text "ウツギ『<PLAYER>くん"
+	line "げんき　そうだね"
 	done
 
 ShowElmTogepiText2:
-	text "What?"
-	line "That #MON!?!"
+	text "えっ？"
+	line "そ<NO>#は<⋯>！"
 	done
 
 ShowElmTogepiText3:
-	text "The EGG hatched!"
-	line "So, #MON are"
-	cont "born from EGGS…"
+	text "タマゴ<GA>かえったんだね！"
 
-	para "No, perhaps not"
-	line "all #MON are."
+	para "そうすると　#は"
+	line "タマゴから　うまれるのか<⋯>"
 
-	para "Wow, there's still"
-	line "a lot of research"
-	cont "to be done."
+	para "いやいや　すべて<NO>#が"
+	line "そうと　きまった　わけじゃないぞ"
+
+	para "うーん　まだまだ"
+	line "しらべること　いっぱい　なんだね"
 	done
 
 ElmGiveEverstoneText1:
-	text "Thanks, <PLAYER>!"
-	line "You're helping"
+	text "<PLAYER>くん　ありがとう！"
+	line "きみ<NO>おかげで"
+	cont "#<NO>なぞ<GA>わかりそうだよ"
 
-	para "unravel #MON"
-	line "mysteries for us!"
-
-	para "I want you to have"
-	line "this as a token of"
-	cont "our appreciation."
+	para "これ<WA>ぼく<NO>かんしゃ<NO>きもち"
+	line "えんりょせず<NI>も<TTE>い<TTE>よ！"
 	done
 
 ElmGiveEverstoneText2:
-	text "That's an"
-	line "EVERSTONE."
+	text "それ<WA>かわらずのいし！"
 
-	para "Some species of"
-	line "#MON evolve"
+	para "#<WA>しゅるい<NI>よ<TTE>は"
+	line "あるていど　そだつと"
+	cont "しんかして　すがた<WO>かえる"
 
-	para "when they grow to"
-	line "certain levels."
+	para "そのとき　かわらずのいしを"
+	line "もたせていると　しんか　しないんだ"
 
-	para "A #MON holding"
-	line "the EVERSTONE"
-	cont "won't evolve."
-
-	para "Give it to a #-"
-	line "MON you don't want"
-	cont "to evolve."
+	para "いま<NO>すがたのまま　そだてたい"
+	line "#がいたら　つか<TTE>みてよ"
 	done
 
 ElmText_CallYou:
-	text "ELM: <PLAYER>, I'll"
-	line "call you if any-"
-	cont "thing comes up."
+	text "ウツギ『じゃあ　<PLAYER>くん"
+	line "なにか　わかったら　れんらくするね"
 	done
 
 AideText_AfterTheft:
-	text "…sigh… That"
-	line "stolen #MON."
+	text "<⋯>　はあ"
+	line "<⋯>　とられた　#"
+	cont "いまごろ　どうしてるだろう<⋯>"
 
-	para "I wonder how it's"
-	line "doing."
-
-	para "They say a #MON"
-	line "raised by a bad"
-
-	para "person turns bad"
-	line "itself."
+	para "わるい　ひと<NI>そだてられると"
+	line "わるい#になる　といいますから"
 	done
 
 ElmGiveMasterBallText1:
-	text "ELM: Hi, <PLAYER>!"
-	line "Thanks to you, my"
+	text "ウツギ『やあ　<PLAYER>くん！"
+	line "きみ<NO>おかげで"
+	cont "けんきゅうも　はかど<TTE>いるよ"
 
-	para "research is going"
-	line "great!"
-
-	para "Take this as a"
-	line "token of my"
-	cont "appreciation."
+	para "これ<WA>ぼく<NO>きもち"
+	line "ぜひ　つか<TTE>よ！"
 	done
 
 ElmGiveMasterBallText2:
-	text "The MASTER BALL is"
-	line "the best!"
+	text "そ<NO>マスターボールは！！"
 
-	para "It's the ultimate"
-	line "BALL! It'll catch"
+	para "どんな　#でも"
+	line "ぜったい<NI>つかまえられる"
+	cont "きゅうきょく<NO>モンスターボール"
 
-	para "any #MON with-"
-	line "out fail."
+	para "#<NO>けんきゅうを"
+	line "みとめられた　ひとに"
+	cont "おくられるも<NO>らしいけど<⋯>"
 
-	para "It's given only to"
-	line "recognized #MON"
-	cont "researchers."
-
-	para "I think you can"
-	line "make better use of"
-
-	para "it than I can,"
-	line "<PLAYER>!"
+	para "ぼくより　きみ<NO>ほうが"
+	line "うまく　つかえると　おもうからね"
+	cont "<PLAYER>くん<NI>あげるよ！"
 	done
 
 ElmGiveTicketText1:
-	text "ELM: <PLAYER>!"
-	line "There you are!"
+	text "ウツギ『やあ　<PLAYER>くん"
+	line "ま<TTE>いたよ！"
 
-	para "I called because I"
-	line "have something for"
-	cont "you."
+	para "きょう　きみ<WO>よんだのは"
+	line "あげたいもの<GA>あるからなんだ！"
 
-	para "See? It's an"
-	line "S.S.TICKET."
+	para "ほら！"
+	line "ふねのチケット"
 
-	para "Now you can catch"
-	line "#MON in KANTO."
+	para "これで　カントー<NO>#も"
+	line "つかまえられるよう<NI>なるね！"
 	done
 
 ElmGiveTicketText2:
-	text "The ship departs"
-	line "from OLIVINE CITY."
+	text "こうそくせん<NI>のるなら"
+	line "アサギシティ　だよ！"
 
-	para "But you knew that"
-	line "already, <PLAYER>."
+	para "<⋯><TTE>　<PLAYER>くんの"
+	line "ほう<GA>くわしいよね"
 
-	para "After all, you've"
-	line "traveled all over"
-	cont "with your #MON."
+	para "#と　いっしょに"
+	line "いろんなところ　まわったんだもんね"
 
-	para "Give my regards to"
-	line "PROF.OAK in KANTO!"
+	para "じゃあ　カントー<NI>いったら"
+	line "オーキドはかせ<NI>よろしく！"
 	done
 
 ElmsLabMonEggText: ; unreferenced
-	text "It's the #MON"
-	line "EGG being studied"
-	cont "by PROF.ELM."
+	text "はかせ<GA>けんきゅう　している"
+	line "#<NO>タマゴだ！"
 	done
 
 AideText_GiveYouPotion:
-	text "<PLAYER>, I want"
-	line "you to have this"
-	cont "for your errand."
+	text "<PLAYER>くん！"
+	line "おつかい<WO>してくれる　きみに"
+	cont "これ<WO>お<WATASHI>　します！"
 	done
 
 AideText_AlwaysBusy:
-	text "There are only two"
-	line "of us, so we're"
-	cont "always busy."
+	text "ふたりしか　いませんから"
+	line "ちょっとのことで　てんてこまい<⋯>"
+
+	para "あー　いそがしいです"
 	done
 
 AideText_TheftTestimony:
-	text "There was a loud"
-	line "noise outside…"
+	text "そとで　おおきな　おとがして<⋯>"
 
-	para "When we went to"
-	line "look, someone"
-	cont "stole a #MON."
+	para "はかせと　みにいった　すきに"
+	line "#<WO>とられたようです<⋯>"
 
-	para "It's unbelievable"
-	line "that anyone would"
-	cont "do that!"
+	para "ひと<NO>もの<WO>とる　だなんて"
+	line "しんじられない　ですよ！"
 
-	para "…sigh… That"
-	line "stolen #MON."
+	para "<⋯>　はあ"
+	line "<⋯>　とられた　#"
+	cont "いまごろ　どうしてるだろう<⋯>"
 
-	para "I wonder how it's"
-	line "doing."
-
-	para "They say a #MON"
-	line "raised by a bad"
-
-	para "person turns bad"
-	line "itself."
+	para "わるい　ひと<NI>そだてられると"
+	line "わるい#になる　といいますから"
 	done
 
 AideText_GiveYouBalls:
-	text "<PLAYER>!"
+	text "<PLAYER>くん！"
 
-	para "Use these on your"
-	line "#DEX quest!"
+	para "#ずかん<WO>つくる　きみに"
+	line "これ<WO>お<WATASHI>　します！"
 	done
 
 AideText_ExplainBalls:
-	text "To add to your"
-	line "#DEX, you have"
-	cont "to catch #MON."
+	text "#ずかん<WO>つくるには"
+	line "#<WO>つかまえないと！"
 
-	para "Throw # BALLS"
-	line "at wild #MON"
-	cont "to get them."
+	para "モンスターボールを"
+	line "やせい<NO>#<NI>なげると"
+	cont "つかまえること<GA>できるのです！"
 	done
 
 ElmsLabOfficerText1:
-	text "I heard a #MON"
-	line "was stolen here…"
+	text "こ<NO>けんきゅうしょ"
+	line "#<GA>ぬすまれたそうで<⋯>"
 
-	para "I was just getting"
-	line "some information"
-	cont "from PROF.ELM."
+	para "いま　ウツギはかせ　から"
+	line "はなし<WO>きいていた　ところです"
+	cont "なんでも　あかくて　ながい"
+	cont "かみのけ<NO>しょうねん　だそうで"
 
-	para "Apparently, it was"
-	line "a young male with"
-	cont "long, red hair…"
+	para "えっ！"
+	line "そんな　<TRAINER>と　たたかった？"
 
-	para "What?"
-
-	para "You battled a"
-	line "trainer like that?"
-
-	para "Did you happen to"
-	line "get his name?"
+	para "なまえ　とか"
+	line "い<TTE>ませんでしたか？"
 	done
 
 ElmsLabOfficerText2:
-	text "OK! So <RIVAL>"
-	line "was his name."
+	text "わかりまし<TA!>"
+	line "<RIVAL>と　いうのですね！"
 
-	para "Thanks for helping"
-	line "my investigation!"
+	para "ごきょうりょく"
+	line "ありがとう　ございまし<TA!>"
 	done
 
 ElmsLabWindowText1:
-	text "The window's open."
-
-	para "A pleasant breeze"
-	line "is blowing in."
+	text "まど<GA>あいている"
+	line "かぜ<GA>きもち　いい！"
 	done
 
 ElmsLabWindowText2:
-	text "He broke in"
-	line "through here!"
+	text "ここから　はい<TTE>　きたんだ！"
 	done
 
 ElmsLabTravelTip1Text:
-	text "<PLAYER> opened a"
-	line "book."
+	text "<PLAYER><WA>ほん<WO>とりだした"
 
-	para "Travel Tip 1:"
+	para "たんけん<NO>こころえ　その１"
 
-	para "Press START to"
-	line "open the MENU."
+	para "スタート　ボタン<WO>ぷしゅ！"
+	line "メニュー<GA>ひらくなり！"
 	done
 
 ElmsLabTravelTip2Text:
-	text "<PLAYER> opened a"
-	line "book."
+	text "<PLAYER><WA>ほん<WO>とりだした"
 
-	para "Travel Tip 2:"
+	para "たんけん<NO>こころえ　その２"
 
-	para "Record your trip"
-	line "with SAVE!"
+	para "#　レポートで"
+	line "きろく　できるなり！"
 	done
 
 ElmsLabTravelTip3Text:
-	text "<PLAYER> opened a"
-	line "book."
+	text "<PLAYER><WA>ほん<WO>とりだした"
 
-	para "Travel Tip 3:"
+	para "たんけん<NO>こころえ　その３"
 
-	para "Open your PACK and"
-	line "press SELECT to"
-	cont "move items."
+	para "リュック<WO>ひろげて"
+	line "セレクト　ボタン<WO>ぷしゅ！"
+	cont "どうぐ<NO>いれかえ<GA>できるなり！"
 	done
 
 ElmsLabTravelTip4Text:
-	text "<PLAYER> opened a"
-	line "book."
+	text "<PLAYER><WA>ほん<WO>とりだした"
 
-	para "Travel Tip 4:"
+	para "たんけん<NO>こころえ　その４"
 
-	para "Check your #MON"
-	line "moves. Press the"
-
-	para "A Button to switch"
-	line "moves."
+	para "#<NO>つかえるわざ<WO>みて"
+	line "エー　ボタン<WO>ぷしゅ！"
+	cont "わざ<NO>いれかえ<GA>できるなり！"
 	done
 
 ElmsLabTrashcanText:
-	text "The wrapper from"
-	line "the snack PROF.ELM"
-	cont "ate is in there…"
+	text "ウツギはかせ<GA>たべた"
+	line "おかし<NO>ふくろ<GA>すててある<⋯>"
 	done
 
 ElmsLab_MapEvents:

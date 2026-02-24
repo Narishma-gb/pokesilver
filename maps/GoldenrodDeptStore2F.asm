@@ -40,59 +40,44 @@ GoldenrodDeptStore2FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 GoldenrodDeptStore2FUnusedText1: ; unreferenced
-	text "We intend to sell"
-	line "items for #MON"
-	cont "to hold."
+	text "ここで<WA>#<GA>もてる"
+	line "どうぐ<WO>いろいろ　うるつもりだよ"
 
-	para "This is a free"
-	line "gift. Have a #-"
-	cont "MON hold it."
+	para "これ<WA>サービス"
+	line "#<NI>もたせてあげてよ"
 	done
 
 GoldenrodDeptStore2FUnusedText2: ; unreferenced
-	text "Giving #MON"
-	line "items to hold dur-"
-	cont "ing battle could "
-	cont "tip the scales in"
-	cont "your favor."
+	text "#<NI>どうぐ<WO>もたせると"
+	line "しょうぶのとき"
+	cont "いろいろ　かけひき<GA>うまれそうだね"
 	done
 
 GoldenrodDeptStore2FYoungsterText:
-	text "#GEAR can store"
-	line "up to ten phone"
-	cont "numbers."
+	text "ポケギアで　とうろく　できる"
+	line "でんわばんごう　１０にんぶん　だろ"
 
-	para "It's hard to de-"
-	line "cide which numbers"
-	cont "to keep."
+	para "だれ<NO>でんわばんごう"
+	line "とうろく　しとくか　まよっちゃうよ"
 	done
 
 GoldenrodDeptStore2FCooltrainerFText:
-	text "I got my ABRA at"
-	line "the GAME CORNER."
-
-	para "Now it's my best"
-	line "partner."
+	text "<WATASHI><NO>ケーシィ"
+	line "ゲームコーナーで　てにいれたの"
+	cont "いまで<WA>たいせつな　パートナーよ"
 	done
 
 GoldenrodDeptStore2FGentlemanText:
-	text "This DEPT.STORE"
-	line "makes me realize"
+	text "ひゃっかてん<NI>くると"
+	line "コガネ<WA>とかいだなあと　おもうね"
 
-	para "that GOLDENROD is"
-	line "a big city."
-
-	para "The selection here"
-	line "is unmatched any-"
-	cont "where else."
+	para "こ<NO>しなぞろえ<NO>よさ"
+	line "ほかと<WA>ちがうよ"
 	done
 
 GoldenrodDeptStore2FDirectoryText:
-	text "Your Travel"
-	line "Companion"
-
-	para "2F TRAINER'S"
-	line "   MARKET"
+	text "たび<NO>おともに"
+	line "２かい<⋯><TRAINER>ズ　マーケット"
 	done
 
 GoldenrodDeptStore2F_MapEvents:

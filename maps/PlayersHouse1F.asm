@@ -39,20 +39,7 @@ MeetMomScript:
 	promptbutton
 	special SetDayOfWeek
 .SetDayOfWeek:
-	writetext IsItDSTText
-	yesorno
-	iffalse .WrongDay
-	special InitialSetDSTFlag
-	yesorno
-	iffalse .SetDayOfWeek
-	sjump .DayOfWeekDone
-
-.WrongDay:
-	special InitialClearDSTFlag
-	yesorno
-	iffalse .SetDayOfWeek
-.DayOfWeekDone:
-	writetext ComeHomeForDSTText
+	writetext DoYouKnowHowToUsePhoneText
 	yesorno
 	iffalse .ExplainPhone
 	sjump .KnowPhone
@@ -76,7 +63,7 @@ MeetMomScript:
 	end
 
 PokegearName:
-	db "#GEAR@"
+	db "#ギア@"
 
 PlayersHouse1FReceiveItemStd:
 	jumpstd ReceiveItemScript
@@ -148,143 +135,102 @@ MomWalksBackMovement:
 	step_end
 
 ElmsLookingForYouText:
-	text "Oh, <PLAYER>…! Our"
-	line "neighbor, PROF."
+	text "あら　<PLAYER>！"
+	line "おとなり<NO>ウツギはかせが"
+	cont "さがしていたわよ"
 
-	para "ELM, was looking"
-	line "for you."
+	para "なんでも　あなたに"
+	line "たのみたいこと<GA>あるんだ<TTE>"
 
-	para "He said he wanted"
-	line "you to do some-"
-	cont "thing for him."
+	para "そうだ！　わすれるとこだったわ"
+	line "しゅうり<NI>だしてた"
+	cont "#ギア　もど<TTE>きてたわよ"
 
-	para "Oh! I almost for-"
-	line "got! Your #MON"
-
-	para "GEAR is back from"
-	line "the repair shop."
-
-	para "Here you go!"
+	para "はい！"
 	done
 
 MomGivesPokegearText:
-	text "#MON GEAR, or"
-	line "just #GEAR."
+	text "#ギア"
+	line "りゃくして　ポケギア"
 
-	para "It's essential if"
-	line "you want to be a"
-	cont "good trainer."
+	para "いちにんまえ<NO><TRAINER>に"
+	line "なるなら　も<TTE>ないとね"
 
-	para "Oh, the day of the"
-	line "week isn't set."
-
-	para "You mustn't forget"
-	line "that!"
+	para "あら？　ようび<GA>はい<TTE>ないわよ"
+	line "つかうまえ<NI>きょうは"
+	cont "なんようびか　いれておかないと"
 	done
 
-IsItDSTText:
-	text "Is it Daylight"
-	line "Saving Time now?"
-	done
-
-ComeHomeForDSTText:
-	text "Come home to"
-	line "adjust your clock"
-
-	para "for Daylight"
-	line "Saving Time."
-
-	para "By the way, do you"
-	line "know how to use"
-	cont "the PHONE?"
+DoYouKnowHowToUsePhoneText:
+	text "そうそう"
+	line "でんわ<NO>つかいかた　おぼえてる？"
 	done
 
 KnowTheInstructionsText:
-	text "Don't you just"
-	line "turn the #GEAR"
-
-	para "on and select the"
-	line "PHONE icon?"
+	text "#ギア<NO>スイッチ<WO>いれて"
+	line "アイコン<WO>えらぶだけ　なんでしょ？"
 	done
 
 DontKnowTheInstructionsText:
-	text "I'll read the"
-	line "instructions."
+	text "じゃあ　せつめいしょ<WO>よむね"
 
-	para "Turn the #GEAR"
-	line "on and select the"
-	cont "PHONE icon."
+	para "#ギア<NO>スイッチ<WO>いれて"
+	line "でんわアイコン<WO>えらぶのよ"
 	done
 
 InstructionsNextText:
-	text "Phone numbers are"
-	line "stored in memory."
+	text "でんわばんごうは"
+	line "じどうで　とうろく　されているから"
+	cont "かけたい　あいて<WO>えらぶだけね"
 
-	para "Just choose a name"
-	line "you want to call."
-
-	para "Gee, isn't that"
-	line "convenient?"
+	para "こんな　かんたんに"
+	line "でんわ　できるなんて　すごいわね"
 	done
 
 HurryUpElmIsWaitingText:
-	text "PROF.ELM is wait-"
-	line "ing for you."
-
-	para "Hurry up, baby!"
+	text "ウツギはかせ<GA>よんでたわよ"
+	line "はやく　いかなきゃ！"
 	done
 
 SoWhatWasProfElmsErrandText:
-	text "So, what was PROF."
-	line "ELM's errand?"
+	text "ウツギはかせの"
+	line "ようじ<TTE>　なんだったの？"
 
-	para "…"
+	para "<⋯>　<⋯>　<⋯>　"
 
-	para "That does sound"
-	line "challenging."
-
-	para "But, you should be"
-	line "proud that people"
-	cont "rely on you."
+	para "そう　たいへん　そうね"
+	line "でも　ひと<NI>おねがい　される<TTE>"
+	cont "だいじなこと　なのよ！"
 	done
 
 ImBehindYouText:
-	text "<PLAYER>, do it!"
-
-	para "I'm behind you all"
-	line "the way!"
+	text "<PLAYER>！　がんばるのよ！"
+	line "おかあさん　おうえん　してるから！"
 	done
 
 PlayersHouse1FStoveText:
-	text "Mom's specialty!"
-
-	para "CINNABAR VOLCANO"
-	line "BURGER!"
+	text "おかあさん<NO>とくい　りょうり"
+	line "グレンふう　かざんハンバーグ！"
 	done
 
 PlayersHouse1FSinkText:
-	text "The sink is spot-"
-	line "less. Mom likes it"
-	cont "clean."
+	text "ぴかぴか<NO>ながしだい！"
+	line "おかあさん<WA>きれいずき"
 	done
 
 PlayersHouse1FFridgeText:
-	text "Let's see what's"
-	line "in the fridge…"
+	text "れいぞうこ<NO>なか　には<⋯>"
 
-	para "FRESH WATER and"
-	line "tasty LEMONADE!"
+	para "おいしいみず　<GA>いっぱい"
+	line "そして　あまーい　ミックスオレ！"
 	done
 
 PlayersHouse1FTVText:
-	text "There's a movie on"
-	line "TV: Stars dot the"
+	text "テレビで　えいが<WO>や<TTE>る！"
+	line "おとこのこ<GA>ふたり　たびしてる"
+	cont "きしゃのまどから　ほし<GA>みえる<⋯>"
 
-	para "sky as two boys"
-	line "ride on a train…"
-
-	para "I'd better get"
-	line "rolling too!"
+	para "<⋯>　ぼくも　もう　いかなきゃ！"
 	done
 
 PlayersHouse1F_MapEvents:

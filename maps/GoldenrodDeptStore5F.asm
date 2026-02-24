@@ -139,80 +139,67 @@ GoldenrodDeptStore5FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 GoldenrodDeptStore5FReceptionistOhYourMonDotDotDotText:
-	text "Hello. Oh, your"
-	line "#MON…"
+	text "いらっしゃいませ！"
+
+	para "あら　あなた<NO>#<⋯>"
 	done
 
 GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText:
-	text "It's very attached"
-	line "to you."
-
-	para "This move should"
-	line "be perfect for a"
-	cont "pair like you."
+	text "と<TTE>も　なついてるわね"
+	line "あなたたち<NO>コンビネーションなら"
+	cont "こ<NO>わざ　つかいこなせそうね"
 	done
 
 GoldenrodDeptStore5FReceptionistItsAdorableText:
-	text "It's adorable!"
+	text "かわいいわね！"
 
-	para "You should teach"
-	line "it good TM moves."
+	para "<TM>　つか<TTE>"
+	line "いい　わざ　おしえて　あげてね！"
 	done
 
 GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText:
-	text "It looks evil. How"
-	line "about this TM for"
-	cont "it?"
+	text "なんだか　めつき<GA>わるいわね"
+	line "そんな　#には"
+	cont "こ<NO><TM>　どうかしら？"
 	done
 
 GoldenrodDeptStore5FReceptionistThereAreTMsPerfectForMonText:
-	text "There are sure to"
-	line "be TMs that are"
-
-	para "just perfect for"
-	line "your #MON."
+	text "きっと　あなた<NO>#に"
+	line "ぴったり<NO><TM><GA>あるはずよ"
 	done
 
 GoldenrodDeptStore5FCarrieMysteryGiftExplanationText:
-	text "MYSTERY GIFT."
+	text "ふしぎな　おくりもの"
 
-	para "With just a"
-	line "little beep, you"
-	cont "get a gift."
+	para "ピッ！"
+
+	para "っと　おくりもの<GA>とどくです"
 	done
 
 GoldenrodDeptStore5FCarrieMysteryGiftRequiresGBCText:
-	text "The MYSTERY GIFT"
-	line "option requires a"
-	cont "Game Boy Color."
+	text "ふしぎな　おくりもの"
+
+	para "あたし<NO>ゲームボーイでは"
+	line "できない　です<⋯>"
 	done
 
 GoldenrodDeptStore5FLassText:
-	text "On Sundays, a lady"
-	line "comes to check out"
-	cont "#MON."
-
-	para "She even gives"
-	line "away TMs!"
+	text "にちようび　にくる　おねーさん"
+	line "#<NO>ようす<WO>みて"
+	cont "<TM><WO>くれたりするのよ"
 	done
 
 GoldenrodDeptStore5FPokefanMText:
-	text "You can't rename a"
-	line "#MON you get in"
-	cont "a trade."
+	text "ひとから　もらった　#は"
+	line "なまえ<WO>かえること<WA>できないよ"
 
-	para "The name is a re-"
-	line "flection of the"
-
-	para "original trainer's"
-	line "feelings for it."
+	para "なまえ<WO>つけた　ひとの"
+	line "きもち<GA>こめられているからね"
 	done
 
 GoldenrodDeptStore5FDirectoryText:
-	text "Customize Your"
-	line "#MON"
-
-	para "5F TM CORNER"
+	text "あなたごのみ<NO>#に"
+	line "５かい<⋯><TM>　コーナー"
 	done
 
 GoldenrodDeptStore5F_MapEvents:

@@ -40,55 +40,39 @@ SandstormHouseBookshelf:
 	jumpstd MagazineBookshelfScript
 
 SandstormHouseWomanText1:
-	text "Where are you off"
-	line "to with #MON?"
+	text "ひょひょひょ"
+	line "#つれて　どこ　いくんじゃ？"
 
-	para "#MON LEAGUE?"
+	para "#　リーグか"
+	line "かちぬけるほど　つよい"
+	cont "きずな<WO>も<TTE>おるのか？"
 
-	para "Are your #MON"
-	line "loyal enough for"
-	cont "you to win?"
-
-	para "Let me see…"
+	para "どれどれ　おぬし<NO>#<⋯>"
 	done
 
 SandstormHouseWomanLoyalText:
-	text "Ah! Your #MON"
-	line "trusts you very"
-	cont "much."
+	text "おお　けっこう　なついとるの"
+	line "いい<TRAINER>　みると　うれしいの"
 
-	para "It's nice to see a"
-	line "good trainer."
-
-	para "Here. A gift for"
-	line "your journey."
+	para "これ<WA>せんべつ！"
+	line "も<TTE>　いきなさいよ"
 	done
 
 SandstormHouseSandstormDescription:
-	text "TM37 happens to be"
-	line "SANDSTORM."
+	text "<TM>３７<WA>すなあらし！"
 
-	para "It's a move that"
-	line "inflicts damage on"
-	cont "both battlers."
+	para "つかうと　おたがい　ダメージをうける"
+	line "じょうきゅうしゃ　むけ<NO>わざ"
 
-	para "It's for advanced"
-	line "trainers only."
-
-	para "Use it if you"
-	line "dare. Good luck!"
+	para "まっ　がんばりなさいよ"
 	done
 
 SandstormHouseWomanDisloyalText:
-	text "If it doesn't come"
-	line "to trust you some"
+	text "もうちっと　なついてもらわんと"
+	line "かちぬくの<WA>きびしそうじゃの"
 
-	para "more, it could be"
-	line "tough going."
-
-	para "Trust is the tie"
-	line "that binds #MON"
-	cont "and trainers."
+	para "<TRAINER>と　#<WO>つなぐのは"
+	line "しんらい　じゃからの"
 	done
 
 Route27SandstormHouse_MapEvents:

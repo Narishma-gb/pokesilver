@@ -14,24 +14,18 @@ Route29Route46GateYoungsterScript:
 	jumptextfaceplayer Route29Route46GateYoungsterText
 
 Route29Route46GateOfficerText:
-	text "You can't climb"
-	line "ledges."
+	text "だんさ<WO>のぼること<WA>できない"
 
-	para "But you can jump"
-	line "down from them to"
-	cont "take a shortcut."
+	para "でも　おりるとき<WA>はやくて"
+	line "なんだか　とくした　きぶん　だよね"
 	done
 
 Route29Route46GateYoungsterText:
-	text "Different kinds of"
-	line "#MON appear"
-	cont "past here."
+	text "このさきじゃ　でてくる　#も"
+	line "ちょっと　ちがうんだ"
 
-	para "If you want to"
-	line "catch them all,"
-
-	para "you have to look"
-	line "everywhere."
+	para "いろんな　#　あつめるなら"
+	line "いろんな　ところ<WO>さがさないとな！"
 	done
 
 Route29Route46Gate_MapEvents:

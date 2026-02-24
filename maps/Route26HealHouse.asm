@@ -29,20 +29,16 @@ Route26HealHouseBookshelf:
 	jumpstd PictureBookshelfScript
 
 Route26HealHouseRestAWhileText:
-	text "Your #MON look"
-	line "a little tired."
+	text "きみ<NO>#"
+	line "つかれてる　みたい<⋯>"
 
-	para "You should rest"
-	line "them a while."
+	para "すこし　やすんで　いきなさいよ"
 	done
 
 Route26HealHouseKeepAtItText:
-	text "There!"
-
-	para "Your #MON are"
-	line "looking good!"
-
-	para "Keep at it!"
+	text "うん！"
+	line "#　げんき<NI>なったね！"
+	cont "それじゃ　がんば<TTE>！"
 	done
 
 Route26HealHouse_MapEvents:

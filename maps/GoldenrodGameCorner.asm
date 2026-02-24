@@ -123,10 +123,10 @@ GoldenrodGameCornerTMVendorMenuHeader:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "TM25    5500@"
-	db "TM14    5500@"
-	db "TM38    5500@"
-	db "CANCEL@"
+	db "わざマシン２５　５５００@"
+	db "わざマシン１４　５５００@"
+	db "わざマシン３８　５５００@"
+	db "やめる@"
 
 GoldenrodGameCornerPrizeMonVendorScript:
 	faceplayer
@@ -135,11 +135,11 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	waitbutton
 	checkitem COIN_CASE
 	iffalse GoldenrodGameCornerPrizeVendor_NoCoinCaseScript
+	writetext GoldenrodGameCornerPrizeVendorWhichPrizeText
 	checkver
 	iftrue .Silver_Loop
 
 .Gold_Loop:
-	writetext GoldenrodGameCornerPrizeVendorWhichPrizeText
 	special DisplayCoinCaseBalance
 	loadmenu .Gold_MenuHeader
 	verticalmenu
@@ -161,8 +161,6 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	setval ABRA
-	special GameCornerPrizeMonCheckDex
 	givepoke ABRA, 10
 	takecoins GOLDENRODGAMECORNER_ABRA_COINS
 	sjump .Gold_Loop
@@ -179,8 +177,6 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	setval EKANS
-	special GameCornerPrizeMonCheckDex
 	givepoke EKANS, 10
 	takecoins GOLDENRODGAMECORNER_EKANS_COINS
 	sjump .Gold_Loop
@@ -197,28 +193,25 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	setval DRATINI
-	special GameCornerPrizeMonCheckDex
 	givepoke DRATINI, 10
 	takecoins GOLDENRODGAMECORNER_DRATINI_COINS
 	sjump .Gold_Loop
 
 .Gold_MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 17, TEXTBOX_Y - 1
+	menu_coords 0, 2, 15, TEXTBOX_Y - 1
 	dw .Gold_MenuData
 	db 1 ; default option
 
 .Gold_MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "ABRA        200@"
-	db "EKANS       700@"
-	db "DRATINI    2100@"
-	db "CANCEL@"
+	db "ケーシィ　　　　　２００@"
+	db "アーボ　　　　　　７００@"
+	db "ミニリュウ　　　２１００@"
+	db "やめる@"
 
 .Silver_Loop:
-	writetext GoldenrodGameCornerPrizeVendorWhichPrizeText
 	special DisplayCoinCaseBalance
 	loadmenu .Silver_MenuHeader
 	verticalmenu
@@ -240,8 +233,6 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	setval ABRA
-	special GameCornerPrizeMonCheckDex
 	givepoke ABRA, 10
 	takecoins GOLDENRODGAMECORNER_ABRA_COINS
 	sjump .Silver_Loop
@@ -258,8 +249,6 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	setval SANDSHREW
-	special GameCornerPrizeMonCheckDex
 	givepoke SANDSHREW, 10
 	takecoins GOLDENRODGAMECORNER_SANDSHREW_COINS
 	sjump .Silver_Loop
@@ -276,25 +265,23 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	setval DRATINI
-	special GameCornerPrizeMonCheckDex
 	givepoke DRATINI, 10
 	takecoins GOLDENRODGAMECORNER_DRATINI_COINS
 	sjump .Silver_Loop
 
 .Silver_MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 17, TEXTBOX_Y - 1
+	menu_coords 0, 2, 15, TEXTBOX_Y - 1
 	dw .Silver_MenuData
 	db 1 ; default option
 
 .Silver_MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "ABRA        200@"
-	db "SANDSHREW   700@"
-	db "DRATINI    2100@"
-	db "CANCEL@"
+	db "ケーシィ　　　　　２００@"
+	db "サンド　　　　　　７００@"
+	db "ミニリュウ　　　２１００@"
+	db "やめる@"
 
 GoldenrodGameCornerPharmacistScript:
 	faceplayer
@@ -370,113 +357,88 @@ GoldenrodGameCornerCardFlipMachineScript:
 	end
 
 GoldenrodGameCornerPrizeVendorIntroText:
-	text "Welcome!"
+	text "いらっしゃいませ！"
 
-	para "We exchange your"
-	line "game coins for"
-	cont "fabulous prizes!"
+	para "ゲームで　ためた　コインは"
+	line "こちらで　おすきな"
+	cont "けいひんと　こうかん　します！"
 	done
 
 GoldenrodGameCornerPrizeVendorWhichPrizeText:
-	text "Which prize would"
-	line "you like?"
+	text "どれ<GA>いいですか？"
 	done
 
 GoldenrodGameCornerPrizeVendorConfirmPrizeText:
+	text "@"
 	text_ram wStringBuffer3
-	text "."
-	line "Is that right?"
+	text "で　いいですね？"
 	done
 
 GoldenrodGameCornerPrizeVendorHereYouGoText:
-	text "Here you go!"
+	text "はい　どうぞ！"
 	done
 
 GoldenrodGameCornerPrizeVendorNeedMoreCoinsText:
-	text "Sorry! You need"
-	line "more coins."
+	text "コイン<GA>たりませんね"
 	done
 
 GoldenrodGameCornerPrizeVendorNoMoreRoomText:
-	text "Sorry. You can't"
-	line "carry any more."
+	text "それいじょう　もてない　ですよ"
 	done
 
 GoldenrodGameCornerPrizeVendorQuitText:
-	text "OK. Please save"
-	line "your coins and"
-	cont "come again!"
+	text "あら　そうですか"
+	line "コイン　ためて　きてくださいね！"
 	done
 
 GoldenrodGameCornerPrizeVendorNoCoinCaseText:
-	text "Oh? You don't have"
-	line "a COIN CASE."
+	text "あれ？"
+	line "コインケース<GA>ありませんね"
 	done
 
 GoldenrodGameCornerPharmacistText:
-	text "I always play this"
-	line "slot machine. It"
-
-	para "pays out more than"
-	line "others, I think."
+	text "いつも　こ<NO>スロットで　あそんでる"
+	line "なんだか　ほか<NI>くらべて"
+	cont "でやすいような　き<GA>するんだ"
 	done
 
 GoldenrodGameCornerPokefanM1Text:
-	text "I just love this"
-	line "new slot machine."
-
-	para "It's more of a"
-	line "challenge than the"
-	cont "ones in CELADON."
+	text "さいしんがた<NO>スロット<WA>いいねえ"
+	line "タマムシで　あそんでた　ときより"
+	cont "ちょうせん　しがい<GA>あるよ！"
 	done
 
 GoldenrodGameCornerCooltrainerMText:
-	text "Life is a gamble."
-	line "I'm going to flip"
-	cont "cards till I drop!"
+	text "じんせい　いっぱつ　しょうぶ！"
+	line "めく<TTE>　めくりまくるぜ！"
 	done
 
 GoldenrodGameCornerPokefanFText:
-	text "Card flip…"
+	text "カードめくり<⋯>"
 
-	para "I prefer it over"
-	line "the slots because"
-
-	para "it's easier to"
-	line "figure the odds."
-
-	para "But the payout is"
-	line "much lower."
+	para "じぶんで　よそう<WO>たてやすいから"
+	line "ばいりつ<WA>ひくくても"
+	cont "スロットより　すきなのよ"
 	done
 
 GoldenrodGameCornerCooltrainerFText:
-	text "I won't quit until"
-	line "I win!"
+	text "もう　かつまで　やめないわよ！"
 	done
 
 GoldenrodGameCornerGentlemanText:
-	text "I taught BLIZZARD"
-	line "to my #MON."
+	text "じぶん<NO>#に"
+	line "ふぶき<WO>おぼえさせたよ"
 
-	para "It was hard to get"
-	line "enough coins for"
-
-	para "it, but it was"
-	line "worth it."
+	para "コイン<WO>ためる<NO>たいへんだったが"
+	line "それだけ<NO>かち<GA>あるよ"
 	done
 
 GoldenrodGameCornerPokefanM2Text:
-	text "I couldn't win at"
-	line "the slots, and I"
+	text "スロットでも　かてない"
+	line "カードめくりでも　かてない"
 
-	para "blew it on card"
-	line "flipping…"
-
-	para "I got so furious,"
-	line "I tossed out my"
-
-	para "COIN CASE in the"
-	line "UNDERGROUND."
+	para "あたま<NI>きたから　ちかつうろに"
+	line "コインケース<WO>すてたよ！"
 	done
 
 GoldenrodGameCorner_MapEvents:

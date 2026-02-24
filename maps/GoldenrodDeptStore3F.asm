@@ -28,30 +28,23 @@ GoldenrodDeptStore3FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 GoldenrodDeptStore3FSuperNerdText:
-	text "I, I, I'm really"
-	line "impatient!"
-
-	para "I use X SPEED in"
-	line "battle to speed up"
-	cont "my #MON."
+	text "お　おれ　せ　せっかち　だから"
+	line "ポ　#　バトル<NO>ときも"
+	cont "スピーダー　つか<TTE>"
+	cont "ポ　#<NO>すばやさ　あげてる！"
 	done
 
 GoldenrodDeptStore3FRockerText:
-	text "Hey! When you bat-"
-	line "tle, do you use X"
-	cont "SPECIAL?"
+	text "おう　たたかうとき　#に"
+	line "スペシャルアップ<WA>つか<TTE>るか？"
 
-	para "It's awesome. It"
-	line "really jacks up"
-	cont "the SPECIAL stats!"
+	para "とくしゅ　のうりょく<GA>あが<TTE>"
+	line "ばっちり　いいかんじ　だぜ！"
 	done
 
 GoldenrodDeptStore3FDirectoryText:
-	text "For Victory"
-	line "Seekers"
-
-	para "3F BATTLE"
-	line "   COLLECTION"
+	text "しょうぶ<NI>かつために"
+	line "３かい<⋯>バトル　コレクション"
 	done
 
 GoldenrodDeptStore3F_MapEvents:

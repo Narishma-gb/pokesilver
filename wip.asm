@@ -47,16 +47,13 @@ ENDM
 
 
 EXPORT DEF EggPic EQU $7F21
+EXPORT DEF SCENE_NEWBARKTOWN_NOOP EQU 1
+EXPORT DEF SCENE_ROUTE29_CATCH_TUTORIAL EQU 1
 
 ;INCLUDE "constants_wip.asm"
 INCLUDE "main.asm"
 	set_gs_diff 0
 
-
-SECTION "rom19", ROMX[$4000], BANK[19]
-; ROM $13 : $4C000 - $4FFFF
-
-	dr
 
 SECTION "rom20", ROMX[$4000], BANK[20]
 ; ROM $14 : $50000 - $53FFF
@@ -298,6 +295,9 @@ SECTION "rom53", ROMX[$4000], BANK[53]
 SECTION "rom54", ROMX[$4000], BANK[54]
 ; ROM $36 : $D8000 - $DBFFF
 StdScripts::
+	drs PokecenterNurseScript, 0
+	drs DifficultBookshelfScript, $1
+	drs PictureBookshelfScript, $2
 	drs MagazineBookshelfScript, $3
 	drs IncenseBurnerScript, $5
 	drs MerchandiseShelfScript, $6
@@ -305,8 +305,19 @@ StdScripts::
 	drs WindowScript, $8
 	drs TVScript, $9
 	drs Radio1Script, $b
+	drs Radio2Script, $c
+	drs TrashCanScript, $d
+	drs PokecenterSignScript, $10
+	drs GoldenrodRocketsScript, $12
+	drs RadioTowerRocketsScript, $13
+	drs ElevatorButtonScript, $14
 	drs BugContestResultsWarpScript, $16
+	drs InitializeEventsScript, $18
+	drs GymStatue1Script, $27
+	drs GymStatue2Script, $28
+	drs ReceiveItemScript, $29
 	drs PCScript, $2b
+	drs GameCornerCoinVendorScript, $2c
 
 	dr
 

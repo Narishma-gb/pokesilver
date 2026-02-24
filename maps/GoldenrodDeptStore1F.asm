@@ -28,50 +28,38 @@ GoldenrodDeptStore1FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 GoldenrodDeptStore1FReceptionistText:
-	text "Welcome to GOLDEN-"
-	line "ROD DEPT.STORE."
+	text "いらっしゃいませ！"
+	line "コガネ　ひゃっかてん　です"
 	done
 
 GoldenrodDeptStore1FGentlemanText:
-	text "The DEPT.STORE"
-	line "has a decent se-"
-	cont "lection."
+	text "コガネ<NO>ひゃっかてん　には"
+	line "いろんな　もの<GA>そろっとる"
 
-	para "But some items"
-	line "are only available"
-
-	para "as GAME CORNER"
-	line "prizes."
+	para "でもね　このまちの"
+	line "ゲームコーナー<NO>けいひん　でないと"
+	cont "て<NI>はいらない　ものも　あるんだよ"
 	done
 
 GoldenrodDeptStore1FPokefanFText:
-	text "I'm raring to shop"
-	line "again today!"
+	text "さあ　きょうも"
+	line "たくさん　おかいも<NO>するわよ！"
 	done
 
 GoldenrodDeptStore1FBugCatcherText:
-	text "Mom's good at"
-	line "bargain hunting."
+	text "おかあさん<WA>かいも<NO>じょうず"
 
-	para "She always buys"
-	line "stuff at lower"
-	cont "prices."
+	para "ちょっと　やすい　ねだんで"
+	line "どうぐ<WO>か<TTE>　くるよ"
 	done
 
 GoldenrodDeptStore1FDirectoryText:
-	text "1F SERVICE COUNTER"
-
-	para "2F TRAINER'S"
-	line "   MARKET"
-
-	para "3F BATTLE"
-	line "   COLLECTION"
-
-	para "4F MEDICINE BOX"
-
-	para "5F TM CORNER"
-
-	para "6F ROOFTOP SQUARE"
+	text "１かい<⋯>サービス　カウンター"
+	line "２かい<⋯><TRAINER>ズ　マーケット"
+	cont "３かい<⋯>バトル　コレクション"
+	cont "４かい<⋯>メディシン　ボックス"
+	cont "５かい<⋯><TM>　コーナー"
+	cont "６かい<⋯>いこい<NO>ひろば"
 	done
 
 GoldenrodDeptStore1F_MapEvents:

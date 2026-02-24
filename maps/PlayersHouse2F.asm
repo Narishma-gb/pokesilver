@@ -91,23 +91,22 @@ PlayersHouseGameConsoleScript:
 	describedecoration DECODESC_CONSOLE
 
 PlayersRadioText1:
-	text "PROF.OAK'S #MON"
-	line "TALK! Please tune"
-	cont "in next time!"
+	text "オーキドはかせ<NO>#こうざ"
+	line "みんな　きいて　くださいね！"
 	done
 
 PlayersRadioText2:
-	text "#MON CHANNEL!"
+	text "こちら<WA>#チャンネル"
 	done
 
 PlayersRadioText3:
-	text "This is DJ MARY,"
-	line "your co-host!"
+	text "おあいては"
+	line "ディージェイ　クルミ　でし<TA!>"
 	done
 
 PlayersRadioText4:
-	text "#MON!"
-	line "#MON CHANNEL…"
+	text "ポケ　モン"
+	line "#チャンネル　<⋯>"
 	done
 
 PlayersHouse2F_MapEvents:

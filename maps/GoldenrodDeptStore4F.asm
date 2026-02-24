@@ -38,41 +38,28 @@ GoldenrodDeptStore4FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 GoldenrodDeptStore4FCooltrainerMText:
-	text "Hey. I love strong"
-	line "#MON."
-
-	para "I feed them PRO-"
-	line "TEIN to crank up"
-	cont "their ATTACK."
+	text "つよい　#<GA>すきでよ"
+	line "タウリン　あげまく<TTE>"
+	cont "<KOUGEKI>りょく　あげまくり　だぜ！"
 	done
 
 GoldenrodDeptStore4FBugCatcherText:
-	text "IRON adds to your"
-	line "#MON's DEFENSE."
+	text "ブロムヘキシンでね　#<NO>"
+	line "ぼうぎょりょく<GA>アップするの！"
 	done
 
 GoldenrodDeptStore4FGameboyKidText:
-	text "Some #MON"
-	line "evolve only by"
+	text "つうしんケーブル<WO>とおることで"
+	line "しんか　する　#も　いるよ"
 
-	para "being traded via a"
-	line "Game Link cable."
-
-	para "I know of four:"
-	line "MACHOKE, KADABRA,"
-
-	para "HAUNTER and, um,"
-	line "GRAVELER."
-
-	para "I heard there are"
-	line "others too."
+	para "ゴーリキー　ユンゲラー　ゴースト"
+	line "ゴローン<NO>４しゅるい　だけど"
+	cont "ほかにも　いる<TTE>　はなし　だな"
 	done
 
 GoldenrodDeptStore4FDirectoryText:
-	text "Let Us Pump Up"
-	line "Your #MON!"
-
-	para "4F MEDICINE BOX"
+	text "#<NO>のうりょく　アップ！"
+	line "４かい<⋯>メディシン　ボックス"
 	done
 
 GoldenrodDeptStore4F_MapEvents:

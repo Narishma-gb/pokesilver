@@ -41,42 +41,36 @@ PlayersNeighborsHouseRadioScript:
 	end
 
 PlayersNeighborsDaughterText:
-	text "PIKACHU is an"
-	line "evolved #MON."
+	text "ピカチュウ<WA>すで<NI>しんかした"
+	line "#である！"
 
-	para "I was amazed by"
-	line "PROF.ELM's find-"
-	cont "ings."
+	para "あ<NO>ウツギはかせ<NO>はっぴょうには"
+	line "<WATASHI>も　びっくり　しちゃっ<TA!>"
 
-	para "He's so famous for"
-	line "his research on"
-	cont "#MON evolution."
+	para "さす<GA>#しんかの"
+	line "けんきゅうで　ゆうめいな　はかせ"
 
-	para "…sigh…"
-
-	para "I wish I could be"
-	line "a researcher like"
-	cont "him…"
+	para "はあ<⋯>　<WATASHI>も　あんな"
+	line "すごい　けんきゅうしゃ<NI>なりたいわ"
 	done
 
 PlayerNeighborRadioText1:
-	text "PROF.OAK'S #MON"
-	line "TALK! Please tune"
-	cont "in next time!"
+	text "オーキドはかせ<NO>#こうざ"
+	line "みんな　きいて　くださいね！"
 	done
 
 PlayerNeighborRadioText2:
-	text "#MON CHANNEL!"
+	text "こちら<WA>#チャンネル"
 	done
 
 PlayerNeighborRadioText3:
-	text "This is DJ MARY,"
-	line "your co-host!"
+	text "おあいては"
+	line "ディージェイ　クルミ　でし<TA!>"
 	done
 
 PlayerNeighborRadioText4:
-	text "#MON!"
-	line "#MON CHANNEL…"
+	text "ポケ　モン"
+	line "#チャンネル　<⋯>"
 	done
 
 PlayersNeighborsHouse_MapEvents:

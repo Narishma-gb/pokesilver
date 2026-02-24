@@ -28,47 +28,29 @@ GoldenrodPokecenter1FLassScript:
 	jumptextfaceplayer GoldenrodPokecenter1FLassText
 
 GoldenrodPokecenter1FGameboyKidText:
-	text "The COLOSSEUM--"
-	line "upstairs at any"
+	text "#　センターの"
+	line "２かいにある　コロシアムで"
+	cont "つうしんたいせん　できるだろ"
 
-	para "#MON CENTER--is"
-	line "for link battles."
-
-	para "Battle records are"
-	line "posted on the"
-
-	para "wall, so I can't"
-	line "afford to lose."
+	para "かべをみると　じぶん<NO>せいせきが"
+	line "わかるから　まけてられないよ"
 	done
 
 GoldenrodPokecenter1FPersonText:
-	text "I wonder how many"
-	line "kinds of #MON"
+	text "せかいに<WA>どれだけの"
+	line "#<GA>いるんだろうな"
 
-	para "there are in the"
-	line "world."
-
-	para "Three years ago,"
-	line "PROF.OAK said that"
-
-	para "there were 150"
-	line "different kinds."
+	para "３ねんまえ　オーキドはかせは"
+	line "１５０しゅるい　いる<TTE>"
+	cont "はっぴょう　してたけどな"
 	done
 
 GoldenrodPokecenter1FLassText:
-	text "A higher level"
-	line "#MON doesn't"
-	cont "always win."
+	text "どんな<NI>レベル<GA>たかくた<TTE>"
+	line "タイプ<NO>あいしょう<GA>あるの"
 
-	para "After all, it may"
-	line "have a type dis-"
-	cont "advantage."
-
-	para "I don't think"
-	line "there is a single"
-
-	para "#MON that is"
-	line "the toughest."
+	para "ぜったい<NI>つよい　#<TTE>のは"
+	line "そうそう　いないでしょうね"
 	done
 
 GoldenrodPokecenter1F_MapEvents:

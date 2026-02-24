@@ -54,50 +54,37 @@ FlowerShopRadio: ; unreferenced
 	jumpstd Radio2Script
 
 GoldenrodFlowerShopTeacherBetterThanWhitneyText:
-	text "Oh, you're better"
-	line "than WHITNEY."
+	text "あら？　あなた"
+	line "アカネちゃんより　つよいんだ"
 
-	para "Do you know about"
-	line "that moving tree?"
+	para "うごく　き　<TTE>　し<TTE>る？"
 
-	para "If you wet it with"
-	line "a SQUIRTBOTTLE, it"
-	cont "attacks."
-
-	para "But since you"
-	line "have some BADGES,"
-	cont "you should be OK."
+	para "ゼニガメじょうろで　みず<WO>かけると"
+	line "おそいかか<TTE>　くるんだけど"
+	cont "そんな<NI>バッジ　も<TTE>るなら"
+	cont "だいじょうぶ　そうね！"
 	done
 
 GoldenrodFlowerShopTeacherLalalaHavePlentyOfWaterText:
-	text "Lalala lalalala."
-	line "Have plenty of"
-	cont "water, my lovely!"
+	text "ラララ　ララララ"
+	line "たーっぷり　おみず<WO>あげるわよ"
 	done
 
 GoldenrodFlowerShopFloriaMustBeAMonText:
-	text "When I watered"
-	line "that moving tree"
+	text "３６<ROUTE>の"
+	line "うごく　き<NI>みず<WO>かけてあげたら"
+	cont "おどろいて　とびあがったの"
 
-	para "on ROUTE 36, it"
-	line "jumped!"
-
-	para "I think it must be"
-	line "a #MON."
-
-	para "But it would take"
-	line "someone like WHIT-"
-	cont "NEY, our GYM LEAD-"
-	cont "ER, to beat it."
+	para "きっと　#だと　おもうけど"
+	line "ジムリーダー<NO>アカネちゃん　くらい"
+	cont "つよくないと　かてないわよ<⋯>"
 	done
 
 GoldenrodFlowerShopFloriaJumpsInSurpriseText:
-	text "Do you know about"
-	line "the moving tree?"
+	text "うごく　き　<TTE>　し<TTE>る？"
 
-	para "If you water it,"
-	line "it jumps up in"
-	cont "surprise!"
+	para "おみず<WO>かけてあげたら"
+	line "おどろいて　とびあがるのよ！"
 	done
 
 GoldenrodFlowerShop_MapEvents:

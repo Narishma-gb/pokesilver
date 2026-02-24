@@ -107,121 +107,101 @@ BillsHouseRadio:
 	jumpstd Radio2Script
 
 BillTakeThisEeveeText:
-	text "BILL: Hi, <PLAYER>!"
-	line "Do us a favor and"
-	cont "take this EEVEE."
+	text "マサキ『おお　<PLAYER>　やん"
+	line "そや　たのみごと　あるねん"
+	cont "イーブイ　ひきと<TTE>ーな"
 
-	para "It came over when"
-	line "I was adjusting"
-	cont "the TIME CAPSULE."
+	para "こいつ　タイムカプセルの"
+	line "ちょうせい　してたら"
+	cont "とつぜん　おくられてきたんや"
 
-	para "Someone has to"
-	line "take care of it,"
-
-	para "but I don't like"
-	line "being outside."
-
-	para "Can I count on you"
-	line "to play with it,"
-	cont "<PLAYER>?"
+	para "だれか　めんどうみたらな　あかんけど"
+	line "わい　そとにでる<NO>すきちゃうし"
+	cont "<PLAYER><GA>あそんだ<TTE>えな"
 	done
 
 BillImCountingOnYouText:
-	text "BILL: I knew it!"
-	line "Way to go, hero!"
+	text "マサキ『さすがやな　"
+	line "よっ<⋯>　いろおとこ！"
+	cont "にくいねーッ"
+	cont "だいとうりょう！"
 
-	para "You're the real"
-	line "deal, dude!"
-
-	para "OK, I'm counting"
-	line "on you. Take good"
-	cont "care of it."
+	para "ほな　たのんだで"
+	line "かわいがったりや！"
 	done
 
 ReceivedEeveeText:
-	text "<PLAYER> received"
-	line "EEVEE!"
+	text "<PLAYER>は"
+	line "イーブイ<WO>もらっ<TA!>"
 	done
 
 BillEeveeMayEvolveText:
-	text "BILL: PROF.ELM"
-	line "claims EEVEE may"
-
-	para "evolve in new and"
-	line "unknown ways."
+	text "マサキ『イーブイに<WA>あたらしい"
+	line "しんか<NO>かのうせい　ある<TTE>"
+	cont "ウツギはかせ　はっぴょう　してたで"
 	done
 
 BillPartyFullText:
-	text "Whoa, wait. You"
-	line "can't carry any"
-	cont "more #MON."
+	text "<TTE>　あかんがな"
+	line "それいじょう　#　もてへんやん"
 	done
 
 BillNoEeveeText:
-	text "Oh… Now what to"
-	line "do?"
+	text "そーかいな<⋯>"
 	done
 
 BillPopWontWorkText:
-	text "BILL: I used to"
-	line "experiment with a"
-	cont "TELEPORTER."
-
-	para "I ought to do a"
-	line "follow-up."
+	text "マサキ『わいな　むかし"
+	line "てんそうマシン<NO>じっけん　しててん"
+	cont "あれ<NO>つづきでも　はじめよかな"
 	done
 
 BillsMomText_BeforeEcruteak:
-	text "Oh, you collect"
-	line "#MON? My son"
-	cont "BILL is an expert."
+	text "あら　あなた　#あつめてるの"
+	line "<WATASHI><NO>むすこも"
+	cont "#<NI>くわしいのよ"
 
-	para "He had to leave"
-	line "for the #MON"
-
-	para "CENTER in ECRUTEAK"
-	line "CITY."
+	para "マサキ<TTE>　いうんだけど"
+	line "いま　エンジュ<NO>#センターに"
+	cont "よばれて　いったわ"
 	done
 
 BillsMomText_AfterEcruteak:
-	text "I am so glad to"
-	line "see my son again."
+	text "なんにせよ　むすこ<NO>かおを"
+	line "みられるの<WA>ははとして　しあわせね"
 	done
 
 BillsYoungerSisterUsefulNumberText:
-	text "Are you a trainer?"
+	text "あなた　#<TRAINER>？"
 
-	para "I've got a useful"
-	line "phone number for"
-	cont "you."
+	para "だったら　あたし<GA>すてきな"
+	line "でんわばんごう　おしえてあげようか？"
 	done
 
 RecordedBillsNumberText:
-	text "<PLAYER> recorded"
-	line "BILL's number."
+	text "<PLAYER><WA>マサキの"
+	line "でんわばんごう<WO>とうろく　し<TA!>"
 	done
 
 BillsYoungerSisterRefusedNumberText:
-	text "My brother made"
-	line "the PC #MON"
-	cont "storage system."
+	text "<PC>で　#<WO>あずかる"
+	line "システム<WO>つくったの"
+	cont "あたし<NO>おにいちゃん　なの"
 
-	para "I was going to"
-	line "give you BILL's"
-	cont "number…"
+	para "あなた<NI>マサキにいちゃんの"
+	line "でんわばんごうを"
+	cont "おしえてあげようと　おもったのにぃ"
 	done
 
 BillsYoungerSisterPhoneFullText:
-	text "You can't record"
-	line "any more numbers."
+	text "あっ！"
+	line "それいじょう　とうろく　できないね"
 	done
 
 BillsYoungerSisterStorageSystemText:
-	text "My big brother"
-	line "BILL made the PC"
-
-	para "#MON storage"
-	line "system."
+	text "<PC>で　#を"
+	line "あずかる　システム　つくったの"
+	cont "マサキにいちゃん　なのよ"
 	done
 
 BillsFamilysHouse_MapEvents:

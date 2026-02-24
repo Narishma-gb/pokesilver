@@ -98,62 +98,53 @@ GoldenrodMagnetTrainStationPlayerLeaveTrainAndEnterStationMovement:
 	step_end
 
 GoldenrodMagnetTrainStationOfficerTheTrainHasntComeInText:
-	text "The train hasn't"
-	line "come in…"
+	text "でんしゃ<GA>こない！"
 
-	para "I know! I'll carry"
-	line "the passengers on"
-	cont "my back!"
+	para "こうなりゃ　かわり<NI><WATASHI>が"
+	line "おきゃくさん<WO>せお<TTE><⋯>"
 
-	para "That won't work."
+	para "そりゃ　むりか"
 	done
 
 GoldenrodMagnetTrainStationOfficerAreYouComingAboardText:
-	text "We'll soon depart"
-	line "for SAFFRON."
-
-	para "Are you coming"
-	line "aboard?"
+	text "ヤマブキ　いき"
+	line "まもなく　しゅっぱつ　です"
+	cont "おのり<NI>なられますか？"
 	done
 
 GoldenrodMagnetTrainStationOfficerRightThisWayText:
-	text "May I see your"
-	line "rail PASS, please?"
+	text "じょうしゃけん<WO>かくにん　します！"
 
-	para "OK. Right this"
-	line "way, sir."
+	para "はい！"
+	line "こちら<NI>どうぞ！"
 	done
 
 GoldenrodMagnetTrainStationOfficerYouDontHaveARailPassText:
-	text "Sorry. You don't"
-	line "have a rail PASS."
+	text "あっと　おきゃくさん"
+	line "じょうしゃけん<WO>おもちでないですね"
 	done
 
 GoldenrodMagnetTrainStationOfficerHopeToSeeYouAgainText:
-	text "We hope to see you"
-	line "again!"
+	text "また<NO>ごりようを"
+	line "よろしく　おねがい　しまーす！"
 	done
 
 GoldenrodMagnetTrainStationOfficerArrivedInGoldenrodText:
-	text "We have arrived in"
-	line "GOLDENROD."
+	text "おつかれさま　でした"
+	line "コガネ　とうちゃくです"
 
-	para "We hope to see you"
-	line "again."
+	para "また<NO>ごりようを"
+	line "よろしく　おねがい　しまーす！"
 	done
 
 GoldenrodMagnetTrainStationGentlemanText:
-	text "I'm the PRESIDENT."
+	text "わし<GA>しゃちょう！"
 
-	para "My dream was to"
-	line "build a train that"
+	para "#よりも　はやい　てつどう！"
+	line "それ<GA>ゆめ　だったんだ！"
 
-	para "is faster than any"
-	line "#MON."
-
-	para "It really brings"
-	line "JOHTO much closer"
-	cont "to KANTO."
+	para "これで　ジョウトと　カントーが"
+	line "ぐぐーんと　ちかくなったよ！"
 	done
 
 GoldenrodMagnetTrainStation_MapEvents:

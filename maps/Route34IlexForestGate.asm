@@ -37,42 +37,35 @@ Route34IlexForestGateLassScript:
 	jumptextfaceplayer Route34IlexForestGateLassText
 
 Route34IlexForestGateTeacherText:
-	text "Oh, honey. You're"
-	line "making a #DEX?"
+	text "あん　あなた"
+	line "#ずかん　つく<TTE>るの？"
 
-	para "It must be hard if"
-	line "#MON won't"
-
-	para "appear. Try using"
-	line "this TM."
+	para "#<GA>でてこないと　たいへんね"
+	line "よかったら　こ<NO><TM>"
+	cont "つか<TTE>みたら　どうかしらん？"
 	done
 
 Route34IlexForestGateTeacher_GotSweetScent:
-	text "It's SWEET SCENT."
+	text "なかみ<WA>あまいかおり"
 
-	para "Use it wherever"
-	line "#MON appear."
+	para "#<GA>でてきそうな"
+	line "ばしょで　つかうと<⋯>"
 
-	para "#MON will be"
-	line "enticed by it."
+	para "あまいかおり<NI>さそわれて"
+	line "#<GA>あらわれるんだからあ"
 	done
 
 Route34IlexForestGateButterfreeText:
-	text "BUTTERFREE: Freeh!"
+	text "バタフリー『フイイイッ！"
 	done
 
 Route34IlexForestGateLassText:
-	text "Did you see the"
-	line "shrine honoring"
-	cont "the protector?"
+	text "あなた　もりのかみさまの"
+	line "ほこら<NI>おまいりした？"
 
-	para "It watches over"
-	line "the FOREST from"
-	cont "across time."
-
-	para "I think that it"
-	line "must be a grass-"
-	cont "type #MON."
+	para "もりのかみさま<WA>じかん<WO>こえて"
+	line "もり<WO>みまも<TTE>　くれてるのよ"
+	cont "きっと　くさ#　なのね"
 	done
 
 Route34IlexForestGate_MapEvents:

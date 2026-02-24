@@ -23,30 +23,19 @@ GoldenrodPPSpeechHouseRadio:
 	jumpstd Radio2Script
 
 GoldenrodPPSpeechHouseFisherText:
-	text "Once while I was"
-	line "battling, my"
+	text "このまえ　たたか<TTE>るとき"
+	line "#　わざ<WO>だせなくなった"
 
-	para "#MON couldn't"
-	line "make any moves."
-
-	para "The POWER POINTS,"
-	line "or PP, of its"
-
-	para "moves were all"
-	line "gone."
+	para "パワーポイントが"
+	line "ゼロ<NI>な<TTE>たんだ"
 	done
 
 GoldenrodPPSpeechHouseLassText:
-	text "Sometimes, a"
-	line "healthy #MON"
+	text "#<GA>げんきいっぱい　でも"
+	line "わざ<WO>つかえないことも　あるわ！"
 
-	para "may be unable to"
-	line "use its moves."
-
-	para "If that happens,"
-	line "heal it at a #-"
-	cont "MON CENTER or use"
-	cont "an item."
+	para "そんなとき<WA>#センターか"
+	line "どうぐで　なおしてあげなきゃ！"
 	done
 
 GoldenrodPPSpeechHouse_MapEvents:

@@ -9,60 +9,48 @@
 ; The last text is associated with a second NPC, probably a Butterfree.
 
 UnusedSweetHoneyText: ; unreferenced
-	text "My #MON is an"
-	line "expert at collect-"
-	cont "ing SWEET HONEY."
+	text "<WATASHI><NO>#"
+	line "あまいミツ<WO>あつめるのが"
+	cont "と<TTE>も　じょうず"
 
-	para "I'll share some"
-	line "with you."
+	para "よかったら　あなたにも　わけてあげる"
 	done
 
 UnusedSweetHoneyBagFullText: ; unreferenced
-	text "I want to give you"
-	line "some SWEET HONEY,"
-
-	para "but you have no"
-	line "room for it."
+	text "あん"
+	line "あまいミツ<WO>わけてあげたいのに"
+	cont "それじゃ　も<TTE>いけないわね"
 	done
 
 UnusedSweetHoneyGiveText: ; unreferenced
-	text "Here you go! Have"
-	line "some SWEET HONEY!"
+	text "はーい"
+	line "あまいミツ　たーっぷり　どうぞ！"
 	done
 
 UnusedGotSweetHoneyText: ; unreferenced
-	text "<PLAYER> received"
-	line "SWEET HONEY."
+	text "<PLAYER><WA>おねえさんから"
+	line "あまいミツ<WO>わけてもらっ<TA!>"
 	done
 
 UnusedSweetHoneyAfterText1: ; unreferenced
-	text "My little brother"
-	line "takes SWEET HONEY"
+	text "<WATASHI><NO>おとうとも"
+	line "まいにち　あまいミツ<WO>もら<TTE>は"
+	cont "どこか<NI>い<TTE>るの"
 
-	para "and goes somewhere"
-	line "with it."
-
-	para "I wonder what he's"
-	line "up to?"
+	para "なにしてるのかしらね？"
 	done
 
 UnusedSweetHoneyAfterText2: ; unreferenced
-	text "Did you put SWEET"
-	line "HONEY on a tree?"
-
-	para "What happened to"
-	line "it?"
+	text "あまいミツ<WO>き<NI>ぬったの？"
+	line "ぬった　ばしょ　どうな<TTE>るかしら"
 	done
 
 UnusedSweetHoneyAfterText3: ; unreferenced
-	text "Did you put SWEET"
-	line "HONEY on a tree?"
-
-	para "It takes about a"
-	line "day for #MON to"
-	cont "be drawn to it."
+	text "あまいミツ<WO>き<NI>ぬったの？"
+	line "#<GA>におい<NI>さそわれるまで"
+	cont "１にち　くらい　かかるそうよ"
 	done
 
 UnusedSweetHoneyButterfreeText: ; unreferenced
-	text "BUTTERFREE: Freeh!"
+	text "バタフリー『フイイイッ！"
 	done
