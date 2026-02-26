@@ -146,9 +146,14 @@ DoPoisonStep::
 	ret
 
 .PoisonFaintText:
-	text_far _PoisonFaintText
-	text_end
+	text_ram wStringBuffer3
+	text "は　ちからつきた"
+	prompt
 
 .PoisonWhiteoutText: ; unreferenced
-	text_far _PoisonWhiteoutText
-	text_end
+	text "<PLAYER>の　てもとには"
+	line "たたかえる#が　もういない！"
+
+	para "<PLAYER>は"
+	line "めのまえが　まっくらに　なった！"
+	prompt

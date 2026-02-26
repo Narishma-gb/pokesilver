@@ -199,27 +199,28 @@ INCLUDE "engine/gfx/place_graphic.asm"
 INCLUDE "engine/pokemon/mail.asm"
 
 
-;SECTION "bank14", ROMX
+SECTION "bank14", ROMX
 
-;INCLUDE "engine/pokemon/party_menu.asm"
-;INCLUDE "engine/events/fishing_gfx.asm"
-;INCLUDE "engine/events/poisonstep.asm"
-;INCLUDE "engine/events/sweet_scent.asm"
-;INCLUDE "engine/events/squirtbottle.asm"
-;INCLUDE "engine/events/card_key.asm"
-;INCLUDE "engine/events/basement_key.asm"
-;INCLUDE "engine/events/sacred_ash.asm"
-;INCLUDE "engine/pokemon/tempmon.asm"
-;INCLUDE "engine/pokemon/types.asm"
-;INCLUDE "engine/battle/getgen1trainerclassname.asm"
-;INCLUDE "engine/pokemon/mon_stats.asm"
-;INCLUDE "engine/link/init_list.asm"
-;INCLUDE "engine/pokemon/experience.asm"
-;INCLUDE "engine/pokemon/switchpartymons.asm"
-;INCLUDE "engine/gfx/load_pics.asm"
-;INCLUDE "engine/pokemon/move_mon_wo_mail.asm"
-;INCLUDE "data/pokemon/base_stats.asm"
-;INCLUDE "data/pokemon/unused_pic_banks.asm"
+INCLUDE "engine/pokemon/party_menu.asm"
+INCLUDE "engine/events/fishing_gfx.asm"
+INCLUDE "engine/events/poisonstep.asm"
+INCLUDE "engine/events/sweet_scent.asm"
+INCLUDE "engine/events/squirtbottle.asm"
+INCLUDE "engine/events/card_key.asm"
+INCLUDE "engine/events/basement_key.asm"
+INCLUDE "engine/events/sacred_ash.asm"
+INCLUDE "engine/pokemon/tempmon.asm"
+INCLUDE "engine/pokemon/types.asm"
+INCLUDE "engine/battle/getgen1trainerclassname.asm"
+INCLUDE "engine/pokemon/mon_stats.asm"
+INCLUDE "engine/link/init_list.asm"
+INCLUDE "engine/pokemon/experience.asm"
+INCLUDE "engine/pokemon/switchpartymons.asm"
+INCLUDE "engine/gfx/load_pics.asm"
+INCLUDE "engine/pokemon/move_mon_wo_mail.asm"
+INCLUDE "data/pokemon/base_stats.asm"
+INCLUDE "data/pokemon/names.asm"
+INCLUDE "data/pokemon/unused_pic_banks.asm"
 
 
 ;SECTION "bank21", ROMX
@@ -350,11 +351,6 @@ INCLUDE "engine/pokemon/mail.asm"
 ;INCLUDE "data/phone/text/elm.asm"
 ;INCLUDE "data/phone/text/trainers.asm"
 ;INCLUDE "data/phone/text/bike_shop.asm"
-
-
-;SECTION "Names", ROMX
-
-;INCLUDE "data/pokemon/names.asm"
 
 
 ;SECTION "bank70", ROMX

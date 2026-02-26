@@ -49,7 +49,7 @@ WritePartyMenuTilemap:
 	ldh [hBGMapMode], a
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill ; blank the tilemap
 	call GetPartyMenuQualityIndexes
 .loop
@@ -109,7 +109,7 @@ PlacePartyNicknames:
 	ret
 
 .CancelString:
-	db "CANCEL@"
+	db "やめる@"
 
 PlacePartyHPBar:
 	xor a
@@ -119,7 +119,7 @@ PlacePartyHPBar:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 11, 2
+	hlcoord 11, 1
 .loop
 	push bc
 	push hl
@@ -185,7 +185,7 @@ PlacePartyMenuHPDigits:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 13, 1
+	hlcoord 12, 0
 .loop
 	push bc
 	push hl
@@ -203,7 +203,7 @@ PlacePartyMenuHPDigits:
 	lb bc, 2, 3
 	call PrintNum
 	pop de
-	ld a, '/'
+	ld a, '／'
 	ld [hli], a
 	inc de
 	inc de
@@ -226,7 +226,7 @@ PlacePartyMonLevel:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 8, 2
+	hlcoord 8, 1
 .loop
 	push bc
 	push hl
@@ -268,7 +268,7 @@ PlacePartyMonStatus:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 5, 2
+	hlcoord 8, 0
 .loop
 	push bc
 	push hl
@@ -300,7 +300,7 @@ PlacePartyMonTMHMCompatibility:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 12, 2
+	hlcoord 12, 1
 .loop
 	push bc
 	push hl
@@ -340,10 +340,10 @@ PlacePartyMonTMHMCompatibility:
 	ret
 
 .string_able
-	db "ABLE@"
+	db "おぼえられる@"
 
 .string_not_able
-	db "NOT ABLE@"
+	db "おぼえられない@"
 
 PlacePartyMonEvoStoneCompatibility:
 	ld a, [wPartyCount]
@@ -351,7 +351,7 @@ PlacePartyMonEvoStoneCompatibility:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 12, 2
+	hlcoord 12, 1
 .loop
 	push bc
 	push hl
@@ -422,9 +422,9 @@ PlacePartyMonEvoStoneCompatibility:
 	ret
 
 .string_able
-	db "ABLE@"
+	db "つかえる@"
 .string_not_able
-	db "NOT ABLE@"
+	db "つかえない@"
 
 PlacePartyMonGender:
 	ld a, [wPartyCount]
@@ -432,7 +432,7 @@ PlacePartyMonGender:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 12, 2
+	hlcoord 12, 1
 .loop
 	push bc
 	push hl
@@ -466,13 +466,13 @@ PlacePartyMonGender:
 	ret
 
 .male
-	db "♂…MALE@"
+	db "♂⋯⋯オス@"
 
 .female
-	db "♀…FEMALE@"
+	db "♀⋯⋯メス@"
 
 .unknown
-	db "…UNKNOWN@"
+	db "⋯⋯ふめい@"
 
 PartyMenuCheckEgg:
 	ld a, LOW(wPartySpecies)
@@ -601,7 +601,7 @@ PartyMenuSelect:
 	ld [wPartyMenuCursor], a
 	ldh a, [hJoyLast]
 	ld b, a
-	bit B_BUTTON_F, b
+	bit B_PAD_B, b
 	jr nz, .exitmenu ; B button
 	ld a, [wMenuCursorY]
 	dec a
@@ -669,31 +669,33 @@ PartyMenuStrings:
 	dw ToWhichPKMNString
 
 ChooseAMonString:
-	db "Choose a #MON.@"
+	db "#を　えらんで　ください@"
 
 UseOnWhichPKMNString:
-	db "Use on which <PK><MN>?@"
+	db "どの#に　つかいますか？@"
 
 WhichPKMNString:
-	db "Which <PK><MN>?@"
+	db "どの#を　だしますか？@"
 
 TeachWhichPKMNString:
-	db "Teach which <PK><MN>?@"
+	db "どの#に　おしえますか？@"
 
 MoveToWhereString:
-	db "Move to where?@"
+	db "どこに　いどうしますか？@"
 
 ChooseAFemalePKMNString: ; unreferenced
-	db "Choose a ♀<PK><MN>.@"
+	db   "メスの　#を"
+	line "えらんで　ください@"
 
 ChooseAMalePKMNString: ; unreferenced
-	db "Choose a ♂<PK><MN>.@"
+	db   "オスの　#を"
+	line "えらんで　ください@"
 
 ToWhichPKMNString:
-	db "To which <PK><MN>?@"
+	db "どの#に　もたせますか？@"
 
 YouHaveNoPKMNString:
-	db "You have no <PK><MN>!@"
+	db "#を　もっていません！@"
 
 PrintPartyMenuActionText:
 	ld a, [wCurPartyMon]
@@ -719,44 +721,68 @@ PrintPartyMenuActionText:
 	dw .CameToItsSensesText
 
 .RecoveredSomeHPText:
-	text_far _RecoveredSomeHPText
-	text_end
+	text_ram wStringBuffer1
+	text "の　たいりょくが"
+	line "@"
+	text_decimal wCurHPAnimDeltaHP, 2, 3
+	text "　かいふくした"
+	done
 
 .CuredOfPoisonText:
-	text_far _CuredOfPoisonText
-	text_end
+	text_ram wStringBuffer1
+	text "の　どくは"
+	line "きれい　さっぱり　なくなった！"
+	done
 
 .RidOfParalysisText:
-	text_far _RidOfParalysisText
-	text_end
+	text_ram wStringBuffer1
+	text "の　からだの"
+	line "しびれが　とれた"
+	done
 
 .BurnWasHealedText:
-	text_far _BurnWasHealedText
-	text_end
+	text_ram wStringBuffer1
+	text "の"
+	line "やけどが　なおった"
+	done
 
 .WasDefrostedText:
-	text_far _WasDefrostedText
-	text_end
+	text_ram wStringBuffer1
+	text "の　からだの"
+	line "こおりが　とけた"
+	done
 
 .WokeUpText:
-	text_far _WokeUpText
-	text_end
+	text_ram wStringBuffer1
+	text "は"
+	line "めを　さました"
+	done
 
 .HealthReturnedText:
-	text_far _HealthReturnedText
-	text_end
+	text_ram wStringBuffer1
+	text "は"
+	line "けんこうになった！"
+	done
 
 .RevitalizedText:
-	text_far _RevitalizedText
-	text_end
+	text_ram wStringBuffer1
+	text "は"
+	line "げんきを　とりもどした！"
+	done
 
 .GrewToLevelText:
-	text_far _GrewToLevelText
+	text_ram wStringBuffer1
+	text "の　レベルが@"
+	text_decimal wCurPartyLevel, 1, 3
+	text "になった@"
+	sound_dex_fanfare_50_79 ; plays SFX_DEX_FANFARE_50_79, identical to SFX_LEVEL_UP
+	text_promptbutton
 	text_end
 
 .CameToItsSensesText:
-	text_far _CameToItsSensesText
-	text_end
+	text_ram wStringBuffer1
+	text "<WA>しょうきに　もどった！"
+	done
 
 .PrintText:
 	ld e, a

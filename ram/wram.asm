@@ -1340,13 +1340,13 @@ wBetaTitleSequenceOpeningType::
 
 wDefaultSpawnpoint:: db
 
-UNION/*
+UNION
 ; mon buffer
-wBufferMonNickname:: ds MON_NAME_LENGTH
+wBufferMonNickname:: ds NAME_LENGTH
 wBufferMonOT:: ds NAME_LENGTH
 wBufferMon:: party_struct wBufferMon
 
-NEXTU*/
+NEXTU
 ; magnet train
 wMagnetTrainDirection:: db
 wMagnetTrainInitPosition:: db
@@ -1456,7 +1456,7 @@ wEarthquakeMovementDataBuffer:: ds 5
 NEXTU
 ; switching items in pack
 wSwitchItemBuffer:: ds 2 ; may store 1 or 2 bytes
-/*
+
 NEXTU
 ; switching pokemon in party
 ; may store a name, partymon, or mail
@@ -1468,7 +1468,7 @@ NEXTU
 NEXTU
 	ds MAIL_STRUCT_LENGTH
 ENDU
-*/
+
 NEXTU
 ; giving pokemon mail
 wMonMailMessageBuffer:: ds MAIL_MSG_LENGTH + 1

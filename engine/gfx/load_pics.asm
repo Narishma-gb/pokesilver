@@ -49,17 +49,6 @@ GetUnownLetter:
 	ret
 
 GetMonFrontpic:
-	call GetFrontpic
-	jp Load2bppToSRAM
-
-UnusedFrontpicPredef:
-	call GetFrontpic
-	push hl
-	farcall StubbedGetFrontpic
-	pop hl
-	jp Load2bppToSRAM
-
-GetFrontpic:
 	ld a, [wCurPartySpecies]
 	ld [wCurSpecies], a
 	and a
@@ -115,12 +104,9 @@ GetFrontpic:
 	ld hl, sDecompressScratch
 	ld de, sDecompressBuffer
 	call PadFrontpic
-	pop hl
-	ret
-
-Load2bppToSRAM:
 	ld de, sDecompressScratch
 	ld c, 7 * 7
+	pop hl
 	ldh a, [hROMBank]
 	ld b, a
 	call Get2bpp
@@ -386,30 +372,19 @@ PadFrontpic:
 	ret
 
 .Fill:
-rept 4
-	srl c
-endr
-.fill_loop
-rept 16
 	ld [hli], a
-endr
 	dec c
-	jr nz, .fill_loop
+	jr nz, .Fill
 	ret
 
 LoadOrientedFrontpic:
 	ld a, [wBoxAlignment]
 	and a
 	jr nz, .x_flip
-rept 4
-	srl c
-endr
 .left_loop
-rept 16
 	ld a, [de]
 	inc de
 	ld [hli], a
-endr
 	dec c
 	jr nz, .left_loop
 	ret

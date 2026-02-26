@@ -4,68 +4,68 @@ EggPic::
 INCBIN "gfx/pokemon/egg/egg.2bpp.lz"
 
 
-SECTION "Title Screen", ROMX
+;SECTION "Title Screen", ROMX
 
-IF DEF(_GOLD)
-TitleScreenGFX1::
-INCBIN "gfx/title/logo_bottom_gold.2bpp.lz"
-TitleScreenGFX2::
-INCBIN "gfx/title/logo_top_gold.2bpp.lz"
+;IF DEF(_GOLD)
+;TitleScreenGFX1::
+;INCBIN "gfx/title/logo_bottom_gold.2bpp.lz"
+;TitleScreenGFX2::
+;INCBIN "gfx/title/logo_top_gold.2bpp.lz"
 
-ELIF DEF(_SILVER)
-TitleScreenGFX1::
-INCBIN "gfx/title/logo_bottom_silver.2bpp.lz"
-TitleScreenGFX2::
-INCBIN "gfx/title/logo_top_silver.2bpp.lz"
-ENDC
+;ELIF DEF(_SILVER)
+;TitleScreenGFX1::
+;INCBIN "gfx/title/logo_bottom_silver.2bpp.lz"
+;TitleScreenGFX2::
+;INCBIN "gfx/title/logo_top_silver.2bpp.lz"
+;ENDC
 
-TitleScreenTilemap::
-INCBIN "gfx/title/logo.tilemap"
-
-
-SECTION "The End", ROMX
-
-TheEndGFX::
-INCBIN "gfx/credits/theend.2bpp"
+;TitleScreenTilemap::
+;INCBIN "gfx/title/logo.tilemap"
 
 
-SECTION "Font Inversed", ROMX
+;SECTION "The End", ROMX
 
-FontInversed::
-INCBIN "gfx/font/font_inversed.1bpp"
-
-
-SECTION "Copyright", ROMX
-
-CopyrightGFX::
-INCBIN "gfx/splash/copyright.2bpp"
+;TheEndGFX::
+;INCBIN "gfx/credits/theend.2bpp"
 
 
-SECTION "Title Screen 2", ROMX
+;SECTION "Font Inversed", ROMX
 
-IF DEF(_GOLD)
-TitleScreenGFX3::
-INCBIN "gfx/title/title_trail_gold.2bpp"
-TitleScreenGFX4::
-INCBIN "gfx/title/hooh_gold.2bpp.lz"
-
-ELIF DEF(_SILVER)
-TitleScreenGFX3::
-INCBIN "gfx/title/title_trail_silver.2bpp"
-TitleScreenGFX4::
-INCBIN "gfx/title/lugia_silver.2bpp.lz"
-ENDC
+;FontInversed::
+;INCBIN "gfx/font/font_inversed.1bpp"
 
 
-SECTION "Shrink Pics", ROMX
+;SECTION "Copyright", ROMX
 
-Shrink1Pic::
-INCBIN "gfx/new_game/shrink1.2bpp.lz"
-Shrink2Pic::
-INCBIN "gfx/new_game/shrink2.2bpp.lz"
+;CopyrightGFX::
+;INCBIN "gfx/splash/copyright.2bpp"
 
 
-SECTION "Pokégear GFX", ROMX
+;SECTION "Title Screen 2", ROMX
 
-PokegearGFX::
-INCBIN "gfx/pokegear/pokegear.2bpp.lz"
+;IF DEF(_GOLD)
+;TitleScreenGFX3::
+;INCBIN "gfx/title/title_trail_gold.2bpp"
+;TitleScreenGFX4::
+;INCBIN "gfx/title/hooh_gold.2bpp.lz"
+
+;ELIF DEF(_SILVER)
+;TitleScreenGFX3::
+;INCBIN "gfx/title/title_trail_silver.2bpp"
+;TitleScreenGFX4::
+;INCBIN "gfx/title/lugia_silver.2bpp.lz"
+;ENDC
+
+
+;SECTION "Shrink Pics", ROMX
+
+;Shrink1Pic::
+;INCBIN "gfx/new_game/shrink1.2bpp.lz"
+;Shrink2Pic::
+;INCBIN "gfx/new_game/shrink2.2bpp.lz"
+
+
+;SECTION "Pokégear GFX", ROMX
+
+;PokegearGFX::
+;INCBIN "gfx/pokegear/pokegear.2bpp.lz"

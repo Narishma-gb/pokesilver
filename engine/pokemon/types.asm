@@ -29,13 +29,13 @@ PrintMonTypes:
 .hide_type_2
 	; Erase any type name that was here before.
 	; Seems to be pointless in localized versions.
-	ld a, ' '
+	ld a, '　'
 	ld bc, SCREEN_WIDTH - 3
 	add hl, bc
 	ld [hl], a
 	inc bc
 	add hl, bc
-	ld bc, NAME_LENGTH_JAPANESE - 1
+	ld bc, 5
 	jp ByteFill
 
 PrintMoveType:
@@ -86,7 +86,7 @@ GetTypeName:
 	ld h, [hl]
 	ld l, a
 	ld de, wStringBuffer1
-	ld bc, MOVE_NAME_LENGTH
+	ld bc, TYPE_NAME_LENGTH
 	jp CopyBytes
 
 INCLUDE "data/types/names.asm"

@@ -57,9 +57,12 @@ SweetScentEncounter:
 	ret
 
 UseSweetScentText:
-	text_far _UseSweetScentText
-	text_end
+	text_ram wStringBuffer3
+	text "は"
+	line "あまいかおりを　つかった！"
+	done
 
 SweetScentNothingText:
-	text_far _SweetScentNothingText
-	text_end
+	text "<⋯>ここには"
+	line "なにも　いないようだ<⋯>"
+	done

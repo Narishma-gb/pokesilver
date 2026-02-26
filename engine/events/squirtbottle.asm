@@ -16,8 +16,9 @@ _Squirtbottle:
 	jumptext .SquirtbottleNothingText
 
 .SquirtbottleNothingText:
-	text_far _SquirtbottleNothingText
-	text_end
+	text "<PLAYER>は　みずを　まいた！"
+	line "<⋯>なにも　おきない"
+	done
 
 .CheckCanUseSquirtbottle:
 	ld a, [wMapGroup]

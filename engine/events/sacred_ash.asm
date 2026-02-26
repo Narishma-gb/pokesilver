@@ -64,5 +64,6 @@ SacredAshScript:
 	end
 
 .UseSacredAshText:
-	text_far _UseSacredAshText
-	text_end
+	text "<PLAYER>の　#は"
+	line "みんな　げんきになった！"
+	done

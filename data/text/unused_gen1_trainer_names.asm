@@ -67,5 +67,5 @@ Gen1TrainerClassNames:
 .Chief:        db "チーフ@"
 .Scientist:    db "けんきゅういん@"
 .Rocket:       db "だんいん@"
-.CooltrainerM: db "エりート♂@"
-.CooltrainerF: db "エりート♀@"
+.CooltrainerM: db "エリート♂@"
+.CooltrainerF: db "エリート♀@"

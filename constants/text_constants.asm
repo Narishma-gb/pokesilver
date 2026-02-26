@@ -1,4 +1,5 @@
 ; name lengths
+DEF TYPE_NAME_LENGTH          EQU 5
 DEF NAME_LENGTH               EQU 6
 DEF MOVE_NAME_LENGTH          EQU 8
 DEF PLAYER_NAME_LENGTH        EQU 8

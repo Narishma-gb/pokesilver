@@ -46,7 +46,6 @@ MACRO drs
 ENDM
 
 
-EXPORT DEF EggPic EQU $7F21
 EXPORT DEF SCENE_NEWBARKTOWN_NOOP EQU 1
 EXPORT DEF SCENE_ROUTE29_CATCH_TUTORIAL EQU 1
 
@@ -54,53 +53,6 @@ EXPORT DEF SCENE_ROUTE29_CATCH_TUTORIAL EQU 1
 INCLUDE "main.asm"
 	set_gs_diff 0
 
-
-SECTION "rom20", ROMX[$4000], BANK[20]
-; ROM $14 : $50000 - $53FFF
-
-	dr SelectMonFromParty, $4000
-	dr SelectTradeOrDayCareMon, $401d
-	dr LoadPartyMenuGFX, $404f
-	dr WritePartyMenuTilemap, $405f
-	dr InitPartyMenuGFX, $4349
-	dr InitPartyMenuWithCancel, $436e
-	dr InitPartyMenuNoCancel, $4396
-	dr PartyMenuSelect, $43c0
-	dr PlacePartyMenuText, $4403
-	dr PrintPartyMenuActionText, $44c8
-	dr LoadFishingGFX, $45d1
-	dr SweetScentFromMenu, $47a4
-	dr _Squirtbottle, $4832
-	dr _CardKey, $488d
-	dr _BasementKey, $48c8
-	dr _SacredAsh, $48fa
-	dr CopyMonToTempMon, $496d
-	dr PrintMonTypes, $4a30
-	dr PrintMoveType, $4a5d
-	dr PrintType, $4a76
-	dr GetTypeName, $4a87
-	dr DrawPlayerHP, $4c05
-	dr DrawEnemyHP, $4c09
-	dr StatsScreenInit, $4c76
-	dr PrintTempMonStats, $52b5
-	dr GetGender, $5305
-	dr ListMovePP, $5378
-	dr Unused_PlaceEnemyHPLevel, $53f8
-	dr PlaceNonFaintStatus, $543c
-	dr ListMoves, $5477
-	dr InitList, $54c1
-	dr CalcLevel, $5523
-	dr CalcExpAtLevel, $554f
-	dr _SwitchPartyMons, $561a
-	dr GetUnownLetter, $5748
-	dr GetMonFrontpic, $577f
-	dr GetMonBackpic, $57ed
-	dr GetTrainerPic, $588a
-	dr DecompressGet2bpp, $58e4
-	dr BaseData, $5aa9
-	dr PokemonNames, $7a09
-
-	dr
 
 SECTION "rom33", ROMX[$4000], BANK[33]
 ; ROM $21 : $84000 - $87FFF
@@ -116,6 +68,8 @@ SECTION "rom33", ROMX[$4000], BANK[33]
 
 SECTION "rom34", ROMX[$4000], BANK[34]
 ; ROM $22 : $88000 - $8BFFF
+
+	dr BasementDoorScript, $4422
 
 	dr
 
@@ -186,6 +140,8 @@ SECTION "rom37", ROMX[$4000], BANK[37]
 	dr ScriptEvents, $6b91
 	dr CallCallback, $7389
 	dr WarpToSpawnPoint, $7a7d
+	dr CanEncounterWildMon, $7b52
+	dr ChooseWildEncounter_BugContest, $7b86
 	dr ClearCmdQueue, $7c4e
 
 	dr
@@ -197,6 +153,8 @@ SECTION "rom38", ROMX[$4000], BANK[38]
 
 SECTION "rom39", ROMX[$4000], BANK[39]
 ; ROM $27 : $9C000 - $9FFFF
+
+	dr CardKeySlotScript, $540d
 
 	dr
 
@@ -244,6 +202,8 @@ SECTION "rom46", ROMX[$6300], BANK[46]
 
 SECTION "rom47", ROMX[$4000], BANK[47]
 ; ROM $2f : $BC000 - $BFFFF
+
+	dr WateredWeirdTreeScript, $5f18
 
 	dr
 
@@ -337,6 +297,7 @@ SECTION "rom56", ROMX[$4000], BANK[56]
 	dr _DepositPKMN, $6bb6
 	dr _WithdrawPKMN, $6d81
 	dr _MovePKMNWithoutMail, $6f4e
+	dr StatsScreenDPad, $775b
 	dr _ChangeBox, $7ce3
 
 	dr
@@ -397,6 +358,7 @@ SECTION "rom62", ROMX[$4000], BANK[62]
 	dr _LoadFontsBattleExtra, $4032
 	dr LoadBattleFontsHPBar, $4066
 	dr LoadHPBar, $4081
+	dr StatsScreen_LoadFont, $40a6
 	dr LoadStatsScreenPageTilesGFX, $40d9
 	dr EnemyHPBarBorderGFX, $4bb2
 	dr HPExpBarBorderGFX, $4bd2

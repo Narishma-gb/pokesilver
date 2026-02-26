@@ -171,13 +171,14 @@
 
 ; Actual characters (from other graphics files)
 
+; needed for StatsScreen and PrintPartyMonPage1
+	charmap "Ｐ", $3e ; gfx/font/P.1bpp
+	charmap "⁂", $3f ; gfx/stats/stats_tiles.png, tile 14
+
 ;	needed for _LoadFontsExtra1 (see engine/gfx/load_font.asm)
 	charmap "■",  $60 ; gfx/font/black.2bpp
 	charmap "▲",  $61 ; gfx/font/up_arrow.png
 	charmap "☎", $62 ; gfx/font/phone_icon.2bpp
-
-;	needed for StatusScreen (see engine/pokemon/status_screen.asm)
-	charmap "Ｐ", $72 ; gfx/font/P.1bpp
 
 ;	needed for LoadTownMap_Fly (see engine/items/town_map.asm)
 ;	charmap "▲",       $ed ; gfx/town_map/up_arrow.1bpp

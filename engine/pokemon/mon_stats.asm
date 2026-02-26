@@ -71,7 +71,7 @@ DrawHP:
 	lb bc, 2, 3
 	call PrintNum
 
-	ld a, '/'
+	ld a, '／'
 	ld [hli], a
 
 ; Print max HP
@@ -92,8 +92,6 @@ PrintTempMonStats:
 	call PlaceString
 	pop hl
 	pop bc
-	add hl, bc
-	ld bc, SCREEN_WIDTH
 	add hl, bc
 	ld de, wTempMonAttack
 	lb bc, 2, 3
@@ -116,11 +114,11 @@ PrintTempMonStats:
 	ret
 
 .StatNames:
-	db   "ATTACK"
-	next "DEFENSE"
-	next "SPCL.ATK"
-	next "SPCL.DEF"
-	next "SPEED"
+	db   "こうげき"
+	next "ぼうぎょ"
+	next "とくこう"
+	next "とくぼう"
+	next "すばやさ"
 	next "@"
 
 GetGender:
@@ -247,13 +245,13 @@ ListMovePP:
 	ld a, [wListMovesLineSpacing]
 	ld e, a
 	ld d, 0
-	ld a, $3e ; P
+	ld a, 'Ｐ'
 	call .load_loop
 	ld a, b
 	and a
 	jr z, .skip
 	ld c, a
-	ld a, '-'
+	ld a, 'ー'
 	call .load_loop
 
 .skip
@@ -295,7 +293,7 @@ ListMovePP:
 	ld de, wStringBuffer1 + 4
 	lb bc, 1, 2
 	call PrintNum
-	ld a, '/'
+	ld a, '／'
 	ld [hli], a
 	ld de, wTempPP
 	lb bc, 1, 2
@@ -365,61 +363,36 @@ PlaceStatusString:
 	or b
 	pop de
 	jr nz, PlaceNonFaintStatus
-	push de
-	ld de, FntString
-	call CopyStatusString
-	pop de
-	ld a, TRUE
+	ld_hli_a_string "ひんし"
 	and a
-	ret
-
-FntString:
-	db "FNT@"
-
-CopyStatusString:
-	ld a, [de]
-	inc de
-	ld [hli], a
-	ld a, [de]
-	inc de
-	ld [hli], a
-	ld a, [de]
-	ld [hl], a
 	ret
 
 PlaceNonFaintStatus:
-	push de
 	ld a, [de]
-	ld de, PsnString
 	bit PSN, a
-	jr nz, .place
-	ld de, BrnString
+	jr nz, .Psn
 	bit BRN, a
-	jr nz, .place
-	ld de, FrzString
+	jr nz, .Brn
 	bit FRZ, a
-	jr nz, .place
-	ld de, ParString
+	jr nz, .Frz
 	bit PAR, a
-	jr nz, .place
-	ld de, SlpString
+	jr nz, .Par
 	and SLP_MASK
-	jr z, .no_status
-
-.place
-	call CopyStatusString
-	ld a, TRUE
-	and a
-
-.no_status
-	pop de
+	ret z
+	ld_hli_a_string "ねむり"
 	ret
-
-SlpString: db "SLP@"
-PsnString: db "PSN@"
-BrnString: db "BRN@"
-FrzString: db "FRZ@"
-ParString: db "PAR@"
+.Psn
+	ld_hli_a_string "<do>く"
+	ret
+.Brn
+	ld_hli_a_string "やけ<do>"
+	ret
+.Frz
+	ld_hli_a_string "こおり"
+	ret
+.Par
+	ld_hli_a_string "まひ"
+	ret
 
 ListMoves:
 ; List moves at hl, spaced every [wListMovesLineSpacing] tiles.
@@ -462,7 +435,7 @@ ListMoves:
 	ld a, b
 .nonmove_loop
 	push af
-	ld [hl], '-'
+	ld [hl], 'ー'
 	ld a, [wListMovesLineSpacing]
 	ld c, a
 	ld b, 0
