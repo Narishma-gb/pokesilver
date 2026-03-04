@@ -15,13 +15,13 @@ rom_obj := \
 	data/maps/map_data.o \
 	data/pokemon/egg_moves.o \
 	data/pokemon/evos_attacks.o \
+	engine/movie/credits.o \
 	gfx/misc.o \
 	gfx/sprites.o \
 	gfx/tilesets.o \
 	wip.o
 # 	main.o \
 # 	data/text/common.o \
-# 	engine/movie/credits.o \
 # 	engine/overworld/events.o \
 
 # Distinguish asm files which are game-exclusive for building (*_[gold|silver].asm)

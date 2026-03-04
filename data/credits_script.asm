@@ -13,7 +13,7 @@ CreditsScript:
 
 	db CREDITS_WAIT2, 10
 
-	db CREDITS_WAIT, 1
+	db CREDITS_WAIT, 4
 
 ; Update the banner.
 	db CREDITS_SCENE, 0 ; Bellossom
@@ -22,40 +22,47 @@ CreditsScript:
 	db       SATOSHI_TAJIRI, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db          SUBDIRECTOR, 1
 	db       JUNICHI_MASUDA, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db          PROGRAMMERS, 0
 	db     TETSUYA_WATANABE, 1
 	db     SHIGEKI_MORIMOTO, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db          PROGRAMMERS, 0
 	db       SOUSUKE_TAMADA, 1
 	db        TAKENORI_OOTA, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db    GRAPHICS_DIRECTOR, 1
 	db         KEN_SUGIMORI, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db       MONSTER_DESIGN, 0
 	db         KEN_SUGIMORI, 1
 	db    MOTOFUMI_FUJIWARA, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db       MONSTER_DESIGN, 0
 	db     SHIGEKI_MORIMOTO, 1
 	db       ATSUKO_NISHIDA, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db       MONSTER_DESIGN, 0
 	db     HIRONOBU_YOSHIDA, 1
@@ -77,6 +84,7 @@ CreditsScript:
 	db       RENA_YOSHIKAWA, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db      GRAPHICS_DESIGN, 0
 	db          JUN_OKUTANI, 1
@@ -84,12 +92,14 @@ CreditsScript:
 	db     TETSUYA_WATANABE, 3
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db         CREDIT_MUSIC, 0
 	db       JUNICHI_MASUDA, 1
 	db          GO_ICHINOSE, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db CREDIT_SOUND_EFFECTS, 0
 	db        MORIKAZU_AOKI, 1
@@ -97,6 +107,7 @@ CreditsScript:
 	db     TETSUYA_WATANABE, 3
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db          GAME_DESIGN, 0
 	db       SATOSHI_TAJIRI, 1
@@ -104,18 +115,21 @@ CreditsScript:
 	db     SHIGEKI_MORIMOTO, 3
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db          GAME_DESIGN, 0
 	db       JUNICHI_MASUDA, 1
 	db     KENJI_MATSUSHIMA, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db        GAME_SCENARIO, 0
 	db  TOSHINOBU_MATSUMIYA, 1
 	db     KENJI_MATSUSHIMA, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db     TOOL_PROGRAMMING, 1
 	db        TAKENORI_OOTA, 2
@@ -135,16 +149,19 @@ CreditsScript:
 	db        KOHJI_NISHINO, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db        SCRIPT_DESIGN, 1
 	db        NOBUHIRO_SEYA, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db      MAP_DATA_DESIGN, 1
 	db      KAZUHITO_SEKINE, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db           MAP_DESIGN, 0
 	db         TETSUJI_OOTA, 1
@@ -152,19 +169,41 @@ CreditsScript:
 	db        NOBUHIRO_SEYA, 3
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
-	db            PRODUCERS, 1
-	db      TAKEHIRO_IZUSHI, 2
-
-	db CREDITS_WAIT, 12
-
-	db            PRODUCERS, 1
-	db    TAKASHI_KAWAGUCHI, 2
+	db      PRODUCT_TESTING, 0
+	db NCL_SUPER_MARIO_CLUB, 1
+	db          KENJI_SAIKI, 2
+	db         ATSUSHI_TADA, 3
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
-	db            PRODUCERS, 1
-	db   TSUNEKAZU_ISHIHARA, 2
+	db      PRODUCT_TESTING, 0
+	db          SARUGAKUCHO, 1
+	db      TOHRU_HASHIMOTO, 2
+	db     NOBORU_MATSUMOTO, 3
+
+	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
+
+	db       SPECIAL_THANKS, 0
+	db       NAOKO_KAWAKAMI, 1
+	db           AKITO_MORI, 2
+
+	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
+	
+	db       SPECIAL_THANKS, 0
+	db      TAKAHIRO_HARADA, 1
+	db         SATORU_IWATA, 2
+
+	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
+	
+	db       SPECIAL_THANKS, 0
+	db      HIROYUKI_ZINNAI, 1
+	db      KUNIMI_KAWAMURA, 2
 
 	db CREDITS_WAIT, 12
 	db CREDITS_WAIT, 0
@@ -177,77 +216,34 @@ CreditsScript:
 ; Update the banner.
 	db CREDITS_SCENE, 3 ; Sentret
 
-	db     US_VERSION_STAFF, 1
+	db            PRODUCERS, 1
+	db      TAKEHIRO_IZUSHI, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
-	db      US_COORDINATION, 0
-	db          GAIL_TILDEN, 1
-	db        HIRO_NAKAMURA, 2
-
-	db CREDITS_WAIT, 12
-
-	db      US_COORDINATION, 0
-	db       JUNICHI_MASUDA, 1
-	db       NAOKO_KAWAKAMI, 2
+	db            PRODUCERS, 1
+	db    TAKASHI_KAWAGUCHI, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
-	db      US_COORDINATION, 0
-	db          JEFF_KALLES, 1
-	db        WILLIAM_GIESE, 2
-
-	db CREDITS_WAIT, 12
-
-	db     TEXT_TRANSLATION, 1
-	db        NOB_OGASAWARA, 2
+	db            PRODUCERS, 1
+	db   TSUNEKAZU_ISHIHARA, 2
 
 	db CREDITS_WAIT, 12
-
-	db          PROGRAMMERS, 0
-	db      TERUKI_MURAKAWA, 1
-	db      KAZUYOSHI_OSAWA, 2
-
-	db CREDITS_WAIT, 12
-
-	db         PAAD_TESTING, 0
-	db       RANDY_SHOEMAKE, 1
-	db      KATHY_HUGUENARD, 2
-	db           JOEL_SIMON, 3
-
-	db CREDITS_WAIT, 12
-
-	db      PRODUCT_TESTING, 0
-	db NCL_SUPER_MARIO_CLUB, 1
-	db          KENJI_SAIKI, 2
-	db         ATSUSHI_TADA, 3
-
-	db CREDITS_WAIT, 12
-
-	db       SPECIAL_THANKS, 0
-	db           AKITO_MORI, 1
-	db      TAKAHIRO_HARADA, 2
-	db         SATORU_IWATA, 3
-
-	db CREDITS_WAIT, 12
-
-	db       SPECIAL_THANKS, 0
-	db      HIROYUKI_ZINNAI, 1
-	db      KUNIMI_KAWAMURA, 2
-	db     KIMIKO_NAKAMICHI, 3
-
-	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db   EXECUTIVE_PRODUCER, 1
 	db     HIROSHI_YAMAUCHI, 2
 
 	db CREDITS_WAIT, 12
+	db CREDITS_WAIT, 2
 
 	db            COPYRIGHT, 0
 
 	db CREDITS_WAIT, 20
-
-	db CREDITS_WAIT, 19
+	db CREDITS_WAIT, 11
 
 ; Display "The End" graphic.
 	db CREDITS_THEEND

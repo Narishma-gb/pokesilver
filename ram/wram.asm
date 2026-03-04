@@ -1178,7 +1178,6 @@ wHallOfFameMonCounter::
 wTradeDialog::
 	db
 wFrameCounter2::
-wPrinterQueueLength::
 wUnusedSGB1eColorOffset::
 	db
 ENDU

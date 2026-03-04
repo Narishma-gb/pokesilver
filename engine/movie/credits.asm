@@ -39,7 +39,7 @@ Credits::
 
 	ld de, CopyrightGFX
 	ld hl, vTiles2 tile $60
-	lb bc, BANK(CopyrightGFX), 30
+	lb bc, BANK(CopyrightGFX), 26
 	call Request2bpp
 
 	ld de, TheEndGFX
@@ -242,7 +242,7 @@ ParseCredits:
 	ldh [hBGMapMode], a
 	hlcoord 0, 5
 	ld bc, SCREEN_WIDTH * 8
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 
 ; Then read the script.
@@ -289,7 +289,7 @@ ParseCredits:
 
 ; The rest start from line 6.
 
-	hlcoord 0, 6
+	hlcoord 3, 6
 	jr .print
 
 .copyright
@@ -297,15 +297,14 @@ ParseCredits:
 	jr .print
 
 .staff
-	hlcoord 0, 6
+	hlcoord 7, 6
 
 .print
 ; Print strings spaced every two lines.
 	call .get
 	ld bc, SCREEN_WIDTH * 2
 	call AddNTimes
-	ld a, BANK(CreditsStrings)
-	call PlaceFarString
+	call PlaceString
 	jr .loop
 
 .theend
@@ -631,4 +630,4 @@ CreditsElekidGFX:    INCBIN "gfx/credits/elekid.2bpp"
 CreditsSentretGFX:   INCBIN "gfx/credits/sentret.2bpp"
 
 INCLUDE "data/credits_script.asm"
-INCLUDE "data/credits_strings_pointers.asm"
+INCLUDE "data/credits_strings.asm"

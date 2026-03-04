@@ -75,7 +75,7 @@ Print_InitPrinterHandshake:
 	xor a
 	ld [wPrinterSendByteCounter], a
 	ld [wPrinterSendByteCounter + 1], a
-	ld a, [wPrinterQueueLength]
+	ld a, 9
 	ld [wPrinterRowIndex], a
 	call _Printer_NextSection
 	call Printer_WaitHandshake
@@ -149,7 +149,7 @@ Printer_SignalLoopBack:
 	xor a
 	ld [wPrinterSendByteCounter], a
 	ld [wPrinterSendByteCounter + 1], a
-	ld a, [wPrinterQueueLength]
+	ld a, 9
 	ld [wPrinterRowIndex], a
 	call _Printer_NextSection
 	call Printer_WaitHandshake
@@ -353,13 +353,10 @@ Printer_StageHeaderForSend:
 	ret
 
 Printer_Convert2RowsTo2bpp:
-	; de = wPrinterTilemapBuffer + 2 * SCREEN_WIDTH * ([wPrinterQueueLength] - [wPrinterRowIndex])
+	; de = wPrinterTilemapBuffer + 2 * SCREEN_WIDTH * (10 - [wPrinterRowIndex])
 	ld a, [wPrinterRowIndex]
 	xor $ff
-	ld d, a
-	ld a, [wPrinterQueueLength]
-	inc a
-	add d
+	add 10
 	ld hl, wPrinterTilemapBuffer
 	ld de, 2 * SCREEN_WIDTH
 .loop1

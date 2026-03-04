@@ -223,12 +223,12 @@ INCLUDE "data/pokemon/names.asm"
 INCLUDE "data/pokemon/unused_pic_banks.asm"
 
 
-;SECTION "bank21", ROMX
+SECTION "bank21", ROMX
 
-;INCLUDE "engine/printer/printer_serial.asm"
-;INCLUDE "engine/printer/printer.asm"
-;INCLUDE "gfx/battle_anims.asm"
-;INCLUDE "engine/events/halloffame.asm"
+INCLUDE "engine/printer/printer_serial.asm"
+INCLUDE "engine/printer/printer.asm"
+INCLUDE "gfx/battle_anims.asm"
+INCLUDE "engine/events/halloffame.asm"
 
 
 ;SECTION "bank23", ROMX
@@ -367,11 +367,6 @@ INCLUDE "data/pokemon/unused_pic_banks.asm"
 ;INCLUDE "engine/pokedex/pokedex_3.asm"
 ;INCLUDE "engine/events/catch_tutorial_input.asm"
 ;INCLUDE "engine/pokegear/townmap_convertlinebreakcharacters.asm"
-
-
-;SECTION "Credits Strings", ROMX
-
-;INCLUDE "data/credits_strings.asm"
 
 
 ;SECTION "Stadium 2 Checksums", ROMX[$7DF8], BANK[$7F]

@@ -1,4 +1,4 @@
-; CreditsStringsPointers indexes (see data/credits_strings_pointers.asm)
+; CreditsStringsPointers indexes (see data/credits_strings.asm)
 	const_def
 	const SATOSHI_TAJIRI
 	const JUNICHI_MASUDA
@@ -39,17 +39,6 @@
 	const NAOKO_KAWAKAMI
 	const HIROYUKI_ZINNAI
 	const KUNIMI_KAWAMURA
-	const GAIL_TILDEN
-	const HIRO_NAKAMURA
-	const JEFF_KALLES
-	const WILLIAM_GIESE
-	const NOB_OGASAWARA
-	const RANDY_SHOEMAKE
-	const KATHY_HUGUENARD
-	const JOEL_SIMON
-	const TERUKI_MURAKAWA
-	const KAZUYOSHI_OSAWA
-	const KIMIKO_NAKAMICHI
 	const CREDIT_END
 	const STAFF
 	const DIRECTOR
@@ -72,10 +61,6 @@
 	const PRODUCERS
 	const EXECUTIVE_PRODUCER
 	const COPYRIGHT
-	const US_VERSION_STAFF
-	const US_COORDINATION
-	const TEXT_TRANSLATION
-	const PAAD_TESTING
 DEF NUM_CREDITS_STRINGS EQU const_value
 
 ; CreditsScript indexes (see data/credits_script.asm)

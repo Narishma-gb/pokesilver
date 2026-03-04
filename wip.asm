@@ -54,18 +54,6 @@ INCLUDE "main.asm"
 	set_gs_diff 0
 
 
-SECTION "rom33", ROMX[$4000], BANK[33]
-; ROM $21 : $84000 - $87FFF
-
-	dr _PrinterReceive, $42d5
-	dr PrintDexEntry, $4426
-	dr PrintUnownStamp, $4528
-	dr PrintPartymon, $45c4
-	dr _PrintDiploma, $45fc
-	dr _HallOfFamePC, $67f3
-
-	dr
-
 SECTION "rom34", ROMX[$4000], BANK[34]
 ; ROM $22 : $88000 - $8BFFF
 
@@ -108,6 +96,8 @@ DummyPredef36::
 	drd FreezeMonIcons, $6701
 	drd UnfreezeMonIcons, $6728
 	drd HoldSwitchmonIcon, $6743
+	drd InitDisplayForHallOfFame, $7bc4
+	drd InitDisplayForRedCredits, $7c25
 
 	dr
 
@@ -224,6 +214,7 @@ BattleAnimations::
 
 	dr DummyPredef2F, $40e4
 	dr LoadPoisonBGPals, $7c06
+	dr TheEndGFX, $7c4d
 
 	dr
 
@@ -290,6 +281,8 @@ SECTION "rom56", ROMX[$4000], BANK[56]
 ; ROM $38 : $E0000 - $E3FFF
 
 	dr _Diploma, $4002
+	dr PlaceDiplomaOnScreen, $4009
+	dr PrintDiplomaPage2, $40af
 	dr RotateUnownFrontpic, $47cf
 	dr _CardFlip, $48bd
 	dr _UnownPuzzle, $5995
@@ -315,6 +308,7 @@ SECTION "rom57", ROMX[$4000], BANK[57]
 	drd TitleScreenTilemap, $497c
 	set_gs_diff $17a
 	drd _Option, $4a35
+	drd FontInversed, $4d96
 	drd SplashScreen, $5196
 	drd GoldSilverIntro, $549f
 
@@ -360,6 +354,8 @@ SECTION "rom62", ROMX[$4000], BANK[62]
 	dr LoadHPBar, $4081
 	dr StatsScreen_LoadFont, $40a6
 	dr LoadStatsScreenPageTilesGFX, $40d9
+	dr FontExtra, $40f2
+	dr StatsScreenPageTilesGFX, $4aa2
 	dr EnemyHPBarBorderGFX, $4bb2
 	dr HPExpBarBorderGFX, $4bd2
 	dr ExpBarGFX, $4c02

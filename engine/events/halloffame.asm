@@ -127,7 +127,7 @@ AnimateHallOfFame:
 	ret
 
 .String_NewHallOfFamer:
-	db "New Hall of Famer!@"
+	db "でんどういり　おめでとう！！@"
 
 GetHallOfFameParty:
 	ld hl, wHallOfFamePokemonList
@@ -195,9 +195,9 @@ GetHallOfFameParty:
 	push bc
 	ld a, c
 	ld hl, wPartyMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call AddNTimes
-	ld bc, MON_NAME_LENGTH - 1
+	ld bc, NAME_LENGTH - 1
 	call CopyBytes
 
 	pop bc
@@ -232,7 +232,7 @@ AnimateHOFMonEntrance:
 	predef GetUnownLetter
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	ld de, vTiles2 tile $31
 	predef GetMonBackpic
@@ -256,7 +256,7 @@ AnimateHOFMonEntrance:
 	ld [wBoxAlignment], a
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	hlcoord 6, 5
 	call _PrepMonFrontpic
@@ -361,7 +361,7 @@ _HallOfFamePC:
 	ld a, [wHallOfFameTempWinCount]
 	cp HOF_MASTER_COUNT + 1
 	jr c, .print_num_hof
-	ld de, .HOFMaster
+	ld de, .HowManyTimes
 	hlcoord 1, 2
 	call PlaceString
 	hlcoord 13, 2
@@ -369,16 +369,16 @@ _HallOfFamePC:
 
 .print_num_hof
 	ld de, .TimeFamer
-	hlcoord 1, 2
+	hlcoord 3, 2
 	call PlaceString
-	hlcoord 2, 2
+	hlcoord 5, 2
 	ld de, wHallOfFameTempWinCount
 	lb bc, 1, 3
 	call PrintNum
 	hlcoord 11, 2
 
 .finish
-	ld de, .EmptyString
+	ld de, .HallOfFamer
 	call PlaceString
 	call WaitBGMap
 	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
@@ -389,17 +389,14 @@ _HallOfFamePC:
 	and a
 	ret
 
-.EmptyString:
-	db "@"
+.HallOfFamer:
+	db "でんどういり@"
 
-.EmptyString2: ; unreferenced
-	db "@"
-
-.HOFMaster:
-	db "    HOF Master!@"
+.HowManyTimes:
+	db "だい⋯なんかいだっけ？@"
 
 .TimeFamer:
-	db "    -Time Famer@"
+	db "だい　　　かい@"
 
 LoadHOFTeam:
 	ld a, [wJumptableIndex]
@@ -443,13 +440,13 @@ DisplayHOFMon:
 	ld a, [hli]
 	ld [wTempMonLevel], a
 	ld de, wStringBuffer2
-	ld bc, MON_NAME_LENGTH - 1
+	ld bc, NAME_LENGTH - 1
 	call CopyBytes
 	ld a, '@'
-	ld [wStringBuffer2 + MON_NAME_LENGTH - 1], a
+	ld [wStringBuffer2 + NAME_LENGTH - 1], a
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	hlcoord 0, 0
 	lb bc, 3, SCREEN_WIDTH - 2
@@ -469,31 +466,30 @@ DisplayHOFMon:
 	ld a, [wCurPartySpecies]
 	cp EGG
 	jr z, .print_id_no
-	hlcoord 1, 13
+	hlcoord 1, 14
 	ld a, '№'
 	ld [hli], a
-	ld [hl], '.'
-	hlcoord 3, 13
+	ld [hl], '．'
+	hlcoord 3, 14
 	ld de, wTextDecimalByte
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
 	call PrintNum
 	call GetBasePokemonName
-	hlcoord 7, 13
+	hlcoord 7, 14
 	call PlaceString
 	ld a, TEMPMON
 	ld [wMonType], a
 	farcall GetGender
-	ld a, ' '
+	ld a, '　'
 	jr c, .got_gender
 	ld a, '♂'
 	jr nz, .got_gender
 	ld a, '♀'
 
 .got_gender
-	hlcoord 18, 13
+	hlcoord 12, 14
 	ld [hli], a
-	hlcoord 8, 14
-	ld a, '/'
+	ld a, '／'
 	ld [hli], a
 	ld de, wStringBuffer2
 	call PlaceString
@@ -506,7 +502,7 @@ DisplayHOFMon:
 	ld [hli], a
 	ld a, '№'
 	ld [hli], a
-	ld [hl], '/'
+	ld [hl], '／'
 	hlcoord 10, 16
 	ld de, wTempMonID
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
@@ -521,7 +517,7 @@ HOF_AnimatePlayerPic:
 	call Request2bpp
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 
 	ld hl, ChrisBackpic
@@ -551,7 +547,7 @@ HOF_AnimatePlayerPic:
 	ld [wBoxAlignment], a
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	ld a, CAL
 	ld [wTrainerClass], a
@@ -585,7 +581,7 @@ HOF_AnimatePlayerPic:
 	ld [hli], a
 	ld a, '№'
 	ld [hli], a
-	ld [hl], '/'
+	ld [hl], '／'
 	hlcoord 4, 6
 	ld de, wPlayerID
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
@@ -607,4 +603,4 @@ HOF_AnimatePlayerPic:
 	ret
 
 .PlayTime:
-	db "PLAY TIME@"
+	db "プレイじかん@"

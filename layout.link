@@ -116,8 +116,8 @@ ROMX $20
 	"Trainer Pic Pointers"
 	"Pics 13"
 ROMX $21
-	; "bank21"
-	; "Credits"
+	"bank21"
+	"Credits"
 ROMX $23
 	; "bank23"
 ROMX $24
@@ -220,7 +220,6 @@ ROMX $3f
 ; 	"bank70"
 ; 	"bank70_2"
 ; 	"Pokégear GFX"
-; 	"Credits Strings"
 ; ROMX $7f
 ; 	org $7df8
 ; 	"Stadium 2 Checksums"
