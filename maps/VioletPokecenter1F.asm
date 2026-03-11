@@ -53,7 +53,7 @@ VioletPokecenter1F_ElmsAideScript:
 	end
 
 .eggname
-	db "EGG@"
+	db "タマゴ@"
 
 .AideGivesEgg:
 	jumpstd ReceiveTogepiEggScript
@@ -104,90 +104,75 @@ MovementData_AideFinishesLeavingPokecenter:
 	step_end
 
 VioletPokecenterElmsAideFavorText:
-	text "<PLAYER>, long"
-	line "time, no see."
+	text "<PLAYER>くん　おひさしぶりです"
+	line "ウツギはかせ<NI>たのまれて"
+	cont "きみ<WO>さがしてたんですよ"
 
-	para "PROF.ELM asked me"
-	line "to find you."
+	para "じつはですね<⋯>"
 
-	para "He has another"
-	line "favor to ask."
-
-	para "Would you take the"
-	line "#MON EGG?"
+	para "#<NO>タマゴを"
+	line "も<TTE>い<TTE>　ほしいんですよ！"
 	done
 
 VioletPokecenterElmsAideGiveEggText:
-	text "We discovered that"
-	line "a #MON will not"
+	text "ウツギはかせ<GA>しらべたところ"
+	line "#<WA>タマゴ<NO>なかで"
+	cont "あるていど　そだたないと"
+	cont "うまれてこない　そうです！"
 
-	para "hatch until it"
-	line "grows in the EGG."
+	para "しかも　いつも　げんきな"
+	line "#<NO>そば<NI>いないと"
+	cont "いけない　らしいんですよ"
 
-	para "It also has to be"
-	line "with other active"
-	cont "#MON to hatch."
+	para "そういうこと<WO>おねがい　できるのは"
+	line "<PLAYER>くん　だけですから"
+	cont "よろしく　たのみます！"
 
-	para "<PLAYER>, you're"
-	line "the only person"
-	cont "we can rely on."
-
-	para "Please call PROF."
-	line "ELM when that EGG"
-	cont "hatches!"
+	para "うまれたら　ウツギはかせに"
+	line "れんらく　してあげて　くださいね"
 	done
 
 VioletCityElmsAideFullPartyText:
-	text "Oh, no. You can't"
-	line "carry any more"
-	cont "#MON with you."
-
-	para "I'll wait here"
-	line "while you make"
-	cont "room for the EGG."
+	text "#<GA>いっぱいで"
+	line "それいじょう　つれあるけませんね"
+	cont "で<WA>ここで　またせて　いただきます"
 	done
 
 VioletPokecenterElmsAideRefuseText:
-	text "B-but… PROF.ELM"
-	line "asked for you…"
+	text "そ　そんな<⋯>"
+	line "ウツギはかせ<NO>おねがい　なんですよ"
 	done
 
 VioletPokecenterElmsAideAskEggText:
-	text "<PLAYER>, will you"
-	line "take the EGG?"
+	text "<PLAYER>くん"
+	line "タマゴ<WO>も<TTE>い<TTE>　くれますか？"
 	done
 
 VioletPokecenter1FSuperNerdText:
-	text "A guy named BILL"
-	line "made the #MON"
-	cont "PC storage system."
+	text "つかまえた　#を"
+	line "<PC><NI>あずける　システム"
+	cont "マサキ<TTE>　やつ<GA>つくったんだ<TTE>"
 	done
 
 VioletPokecenter1FGentlemanText:
-	text "It was around"
-	line "three years ago."
+	text "３ねんほど　まえ<NO>はなし　だよ"
 
-	para "TEAM ROCKET was up"
-	line "to no good with"
-	cont "#MON."
+	para "<ROCKET>　という　やつらが"
+	line "#<WO>つか<TTE>"
+	cont "わるいことばかり　してたのだよ"
 
-	para "But justice pre-"
-	line "vailed--a young"
-	cont "kid broke 'em up."
+	para "だがね　あく<WA>ほろびる！"
+	line "ある　しょうねん<NO>かつやくで"
+	cont "かいさん　させられたのだよ！"
 	done
 
 VioletPokecenter1FYoungsterText:
-	text "#MON are smart."
-	line "They won't obey a"
+	text "#<WA>あたま<GA>いいからね"
+	line "そんけい　できる　<TRAINER>の"
+	cont "いうことじゃないと　きかないよ"
 
-	para "trainer they don't"
-	line "respect."
-
-	para "Without the right"
-	line "GYM BADGES, they"
-
-	para "will just do as"
-	line "they please."
+	para "ジムバッジ<WO>も<TTE>いないと"
+	line "めいれい　きかず<NI>すきか<TTE>するよ"
 	done
 
 VioletPokecenter1F_MapEvents:

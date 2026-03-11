@@ -21,29 +21,19 @@ VioletMartCooltrainerMScript:
 	jumptextfaceplayer VioletMartCooltrainerMText
 
 VioletMartGrannyText:
-	text "When you first"
-	line "catch a #MON,"
-	cont "it may be weak."
+	text "つかまえた　ばかりじゃ"
+	line "よわい　#でも　そだてりゃ"
+	cont "いつか<WA>つよくなりますよ"
 
-	para "But it will even-"
-	line "tually grow to be"
-	cont "strong."
-
-	para "It's important to"
-	line "treat #MON with"
-	cont "love."
+	para "だいじ　なの<WA>#への"
+	line "あいじょう　だと　おもいます"
 	done
 
 VioletMartCooltrainerMText:
-	text "#MON can hold"
-	line "items like POTION"
-	cont "and ANTIDOTE."
-
-	para "But they don't"
-	line "appear to know how"
-
-	para "to use manmade"
-	line "items."
+	text "#も　どうぐ　もてるけど"
+	line "キズぐすりとか　どくけしとか"
+	cont "ひと<GA>つくった　どうぐは"
+	cont "つかいかた<GA>わからん　ようだな"
 	done
 
 VioletMart_MapEvents:

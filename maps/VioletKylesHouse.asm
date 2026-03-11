@@ -19,15 +19,11 @@ Kyle:
 	end
 
 VioletKylesHousePokefanMText:
-	text "A #MON you get"
-	line "in a trade grows"
-	cont "quickly."
+	text "ひとと　こうかんした　#は"
+	line "そだつの<GA>はやい！"
 
-	para "But if you don't"
-	line "have the right GYM"
-
-	para "BADGE, they may"
-	line "disobey you."
+	para "<⋯>でも　ジムバッジ　も<TTE>ないと"
+	line "いうこと<WO>きいてくれなくなるんだ"
 	done
 
 VioletKylesHouse_MapEvents:

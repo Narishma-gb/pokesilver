@@ -18,30 +18,21 @@ Route32RuinsOfAlphGateYoungsterScript:
 	jumptextfaceplayer Route32RuinsOfAlphGateYoungsterText
 
 Route32RuinsOfAlphGateOfficerText:
-	text "RUINS OF ALPH"
+	text "みて　さわれる"
+	line "アルフ<NO>いせき　かんこう！"
 
-	para "A Look-and-Touch"
-	line "Tourist Site"
-
-	para "Try the sliding"
-	line "stone panels!"
+	para "うごかせる　いし<NO>いたを"
+	line "ぜひ　てで　さわ<TTE>　みてください"
 	done
 
 Route32RuinsOfAlphGatePokefanMText:
-	text "You're studying"
-	line "the RUINS?"
-
-	para "I see a scientist"
-	line "in the making."
+	text "おっ　いせき<NO>べんきょうかい？"
+	line "しょうらい<WA>はかせ　だな！"
 	done
 
 Route32RuinsOfAlphGateYoungsterText:
-	text "There are drawings"
-	line "on stone panels."
-
-	para "I tried moving"
-	line "them. I wonder"
-	cont "what they are."
+	text "いし<NO>いた<NI>え<GA>かかれてる！"
+	line "うごかしてみたけど　あれ　なんだろな"
 	done
 
 Route32RuinsOfAlphGate_MapEvents:

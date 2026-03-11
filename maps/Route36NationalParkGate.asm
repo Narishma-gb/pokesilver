@@ -35,7 +35,6 @@ Route36NationalParkGateLeaveContestEarlyScene:
 Route36NationalParkGateCheckIfContestRunningCallback:
 	checkflag ENGINE_BUG_CONTEST_TIMER
 	iftrue .BugContestIsRunning
-	setscene SCENE_ROUTE36NATIONALPARKGATE_NOOP
 	endcallback
 
 .BugContestIsRunning:
@@ -474,375 +473,279 @@ Route36NationalParkGatePlayerWaitWithContestantsMovement:
 	step_end
 
 Route36NationalParkGateOfficer1AskToParticipateText:
-	text "Today's @"
+	text "きょう<WA>@"
 	text_ram wStringBuffer3
-	text "."
-	line "That means the"
+	text "ようび"
+	line "むしとりたいかい<GA>ひらかれます！"
 
-	para "Bug-Catching Con-"
-	line "test is on today."
+	para "ルール<WA>かんたん！"
 
-	para "The rules are"
-	line "simple."
+	para "てもち<NO>#　１ぴきで"
+	line "つよそうな　むし#を"
+	cont "つかまえられるか　くらべるだけです"
 
-	para "Using one of your"
-	line "#MON, catch a"
-
-	para "bug #MON to be"
-	line "judged."
-
-	para "Would you like to"
-	line "give it a try?"
+	para "さんか　しますか？"
 	done
 
 Route36NationalParkGateOfficer1GiveParkBallsText:
-	text "Here are the PARK"
-	line "BALLS for the"
-	cont "Contest."
+	text "たいかいで　つかう"
+	line "せんよう<NO>ボール<WO>どうぞ！"
 	done
 
 Route36NationalParkGatePlayerReceivedParkBallsText:
-	text "<PLAYER> received"
-	line "{d:BUG_CONTEST_BALLS} PARK BALLS."
+	text "<PLAYER>は"
+	line "パークボール<WO>２０こ　もらっ<TA!>"
 	done
 
 Route36NationalParkGateOfficer1ExplainsRulesText:
-	text "The person who"
-	line "gets the strong-"
-	cont "est bug #MON"
-	cont "is the winner."
+	text "いちばん　つよそうな　#を"
+	line "つかまえたひと<GA>ゆうしょうです！"
 
-	para "You have {d:BUG_CONTEST_MINUTES}"
-	line "minutes."
+	para "せいげん　じかん<WA>２０ぷん！"
 
-	para "If you run out of"
-	line "PARK BALLS, you're"
-	cont "done."
+	para "また　パークボール<GA>なくなると"
+	line "しゅうりょう　です！"
 
-	para "You may keep the"
-	line "last #MON you"
-	cont "catch as your own."
+	para "さいご<NI>つかまえた　#は"
+	line "さんかしゃ<NO>もの<NI>なります！"
 
-	para "Go out and catch"
-	line "the strongest bug"
-
-	para "#MON you can"
-	line "find!"
+	para "がんば<TTE>　つよそうな"
+	line "#<WO>つかまえて　ください！"
 	done
 
 Route36NationalParkGateOfficer1AskToUseFirstMonText:
-	text "Uh-oh…"
+	text "あれ？"
+	line "#<GA>１ぴきじゃ　ないですね！"
 
-	para "You have more than"
-	line "one #MON."
-
-	para "You'll have to use"
+	para "せんとう<NI>いる　#<⋯>"
 	line "@"
 	text_ram wStringBuffer3
-	text ", the"
-
-	para "first #MON in"
-	line "your party."
-
-	para "Is that OK with"
-	line "you?"
+	text "で"
+	cont "さんか　すること<NI>なります"
+	cont "よろしい　ですか？"
 	done
 
 Route36NationalParkGateOfficer1WellHoldYourMonText:
-	text "Fine. We'll hold"
-	line "your other #MON"
-	cont "while you compete."
+	text "それで<WA>のこり<NO>#は"
+	line "こちらで　あずかりますね！"
 	done
 
 Route36NationalParkGatePlayersMonLeftWithHelperText:
-	text "<PLAYER>'s #MON"
-	line "were left with the"
-	cont "CONTEST HELPER."
+	text "<PLAYER><WA>かかりいんに"
+	line "#<WO>あずけ<TA!>"
 	done
 
 Route36NationalParkGateOfficer1ChooseMonAndComeBackText:
-	text "Please choose the"
-	line "#MON to be used"
-
-	para "in the Contest,"
-	line "then come see me."
+	text "たいかいで　たたかわせる"
+	line "#<WO>きめてから"
+	cont "もういちど　おねがいします"
 	done
 
 Route36NationalParkGateOfficer1TakePartInFutureText:
-	text "OK. We hope you'll"
-	line "take part in the"
-	cont "future."
+	text "そうですか"
+	line "つぎ<WA>さんか　してくださいね！"
 	done
 
 Route36NationalParkGateOfficer1FirstMonCantBattleText:
-	text "Uh-oh…"
-	line "The first #MON"
+	text "あれ？"
+	line "せんとう<NO>#が"
+	cont "たたかえない　みたい　ですね"
 
-	para "in your party"
-	line "can't battle."
-
-	para "Please switch it"
-	line "with the #MON"
-
-	para "you want to use,"
-	line "then come see me."
+	para "#<WO>いれかえてから"
+	line "きてくださいね"
 	done
 
 Route36NationalParkGateOfficer1MakeRoomText:
-	text "Uh-oh…"
-	line "Both your party"
+	text "あれ？"
+	line "てもちも　<PC><NO>ボックスも"
+	cont "いっぱい　みたい　ですね"
 
-	para "and your PC BOX"
-	line "are full."
+	para "それで<WA>むし#を"
+	line "つかまえても　もてませんよ"
 
-	para "You have nowhere"
-	line "to put the bug"
-	cont "#MON you catch."
-
-	para "Please make room"
-	line "in your party or"
-
-	para "your PC BOX, then"
-	line "come see me."
+	para "てもちと　<PC><NO>ボックスを"
+	line "せいりして　きてくださいね"
 	done
 
 Route36NationalParkGateOfficer1EggAsFirstMonText:
-	text "Uh-oh…"
-	line "You have an EGG as"
+	text "あれ？"
+	line "せんとう<NO>#が"
+	cont "タマゴ　みたい　ですね"
 
-	para "the first #MON"
-	line "in your party."
-
-	para "Please switch it"
-	line "with the #MON"
-
-	para "you want to use,"
-	line "then come see me."
+	para "#<WO>いれかえてから"
+	line "きてくださいね"
 	done
 
 Route36NationalParkGateOfficer1WantToFinishText:
-	text "You still have @"
+	text "のこり　じかんは"
+	line "あと　@"
 	text_ram wStringBuffer3
-	text_start
-	line "minutes left."
-
-	para "Do you want to"
-	line "finish now?"
+	text "ふん　です"
+	cont "もう　おわり<NI>しますか？"
 	done
 
 Route36NationalParkGateOfficer1WaitHereForAnnouncementText:
-	text "OK. Please wait"
-	line "here for the"
-
-	para "announcement of"
-	line "the winners."
+	text "そうですか"
+	line "で<WA>ここで　けっかはっぴょうを"
+	cont "おまちください"
 	done
 
 Route36NationalParkGateOfficer1OkGoFinishText:
-	text "OK. Please go back"
-	line "outside and finish"
-	cont "up."
+	text "そうですか"
+	line "で<WA>のこり<NO>じかん"
+	cont "がんば<TTE>　きてくださいませ！"
 	done
 
 Route36NationalParkGateOfficer1ContestIsOverText:
-	text "Today's Contest is"
-	line "over. We hope you"
-
-	para "will participate"
-	line "in the future."
+	text "きょう<NO>コンテストは"
+	line "おわったよ"
+	cont "また　こんど　さんかしてね！"
 	done
 
 Route36NationalParkGateOfficer1SomeMonOnlySeenInParkText:
-	text "Some #MON can"
-	line "only be seen in"
-	cont "the PARK."
+	text "こうえんでしか　みつからない"
+	line "#も　いるんだよ！"
 	done
 
 BugCatchingContestant1BText:
-	text "DON: Wow, you beat"
-	line "me. You're pretty"
-	cont "good."
+	text "ミキヤス『ボク<WO>まかすなんて<⋯>"
+	line "きみ　なかなか　やるね！"
 	done
 
 BugCatchingContestant1BStillCompetingText:
-	text "DON: Luck plays a"
-	line "big part in this."
-
-	para "You never know"
-	line "what #MON will"
-	cont "appear."
+	text "ミキヤス『#　でてくるかどうか"
+	line "うんも　だいじ　なんだよな"
 	done
 
 BugCatchingContestant2BText:
-	text "ED: I envy you."
-	line "I just couldn't"
-	cont "do it this time."
+	text "ヨウジ『うーん　うらやましい"
+	line "こんかい<WA>ちょうし　わるかったよ"
 	done
 
 BugCatchingContestant2BStillCompetingText:
-	text "ED: Maybe you win"
-	line "with big #MON?"
+	text "ヨウジ『ひょっとして　おおきい"
+	line "#だと　ゆうしょう　なのかな？"
 	done
 
 BugCatchingContestant3BText:
-	text "NICK: Well done!"
-	line "I'm going to raise"
-	cont "my #MON better."
+	text "ケン『おみごと！"
+	line "ぼくも　#　そだてなおすよ！"
 	done
 
 BugCatchingContestant3BStillCompetingText:
-	text "NICK: Maybe you"
-	line "get a higher score"
-
-	para "for a #MON of"
-	line "an unusual color."
+	text "ケン『#<NO>いろが"
+	line "めずらしいと　ポイント　たかいのかな"
 	done
 
 BugCatchingContestant4BText:
-	text "WILLIAM: You're"
-	line "the winner? What"
-	cont "did you catch?"
+	text "アキヒト『きみ<NO>ゆうしょうか！"
+	line "どんな　#<WO>つかまえたんだい"
 	done
 
 BugCatchingContestant4BStillCompetingText:
-	text "WILLIAM: Well, I'm"
-	line "satisfied because"
-
-	para "I caught a #MON"
-	line "that I wanted."
+	text "アキヒト『ほしかった　#"
+	line "みつかったから　まんぞく　しとるよ"
 	done
 
 BugCatchingContestant5BText:
-	text "BENNY: Congrats!"
-	line "You have earned my"
-	cont "respect!"
+	text "サダオ『おめでとう！"
+	line "きみのこと　そんけい　しちゃうよ！"
 	done
 
 BugCatchingContestant5BStillCompetingText:
-	text "BENNY: I caught a"
-	line "SCYTHER before,"
-	cont "but I didn't win."
+	text "サダオ『このまえ"
+	line "ストライク<WO>つかまえたのに"
+	cont "ゆうしょう　できなかったんだ<⋯>"
 	done
 
 BugCatchingContestant6BText:
-	text "BARRY: That #-"
-	line "MON you caught…"
-	cont "it's awesome!"
+	text "ユウイチ『きみ<NO>つかまえた"
+	line "#　かっこいいね！"
 	done
 
 BugCatchingContestant6BStillCompetingText:
-	text "BARRY: It's easier"
-	line "to win if you get"
-
-	para "a high-level bug"
-	line "#MON."
-
-	para "But I think they"
-	line "also consider some"
-	cont "other points."
+	text "ユウイチ『レベル<GA>たかいと"
+	line "ゆうしょう　しやすいけど<⋯>"
+	cont "ほかにも　ポイント<GA>あるみたい"
 	done
 
 BugCatchingContestant7BText:
-	text "CINDY: You won?"
-	line "That's great!"
+	text "サトミ『あなた<GA>ゆうしょう！？"
+	line "すごいんだ！！"
 
-	para "Do you feel like"
-	line "looking for bug"
-	cont "#MON with me?"
+	para "こんど　いっしょ<NI>むし#"
+	line "つかまえ<NI>いかない？"
 	done
 
 BugCatchingContestant7BStillCompetingText:
-	text "CINDY: I really"
-	line "love bug #MON!"
+	text "サトミ『あたし　むし#"
+	line "だいすき　なのよね"
 	done
 
 BugCatchingContestant8BText:
-	text "JOSH: I… I can't"
-	line "believe I lost at"
-	cont "bug-catching…"
+	text "トモミチ『むし#とりで"
+	line "こ<NO>ボク<GA>まけるなんて<⋯>"
 	done
 
 BugCatchingContestant8BStillCompetingText:
-	text "JOSH: I heard that"
-	line "somebody won with"
-	cont "a CATERPIE!"
+	text "トモミチ『キャタピーで"
+	line "ゆうしょうした　ひと<GA>いる<TTE>さ！"
 	done
 
 BugCatchingContestant9BText:
-	text "SAMUEL: Next time,"
-	line "I'm going to win."
+	text "コウタ『こんど<WA>オレ<GA>かつよ！"
 	done
 
 BugCatchingContestant9BStillCompetingText:
-	text "SAMUEL: Darn."
-	line "I thought I would"
-	cont "score higher…"
+	text "コウタ『うーん　もっと"
+	line "ポイント　たかいと　おも<TTE>たのに"
 	done
 
 BugCatchingContestant10BText:
-	text "KIPP: Could you"
-	line "give me some tips?"
-
-	para "I want to study"
-	line "your style."
+	text "トモユキ『ぜひ　コツ<WO>おしえてよ！"
+	line "べんきょう　したいんだよ！"
 	done
 
 BugCatchingContestant10BStillCompetingText:
-	text "KIPP: I study a"
-	line "lot, but that's"
-
-	para "not good enough to"
-	line "win."
+	text "トモユキ『べんきょう　してるけど<⋯>"
+	line "それだけじゃ　かてないんだよね"
 	done
 
 UnusedSilphScope2Text: ; unreferenced
 ; This text is referring to Sudowoodo.
 ; The SILPHSCOPE2 was later reworked into the SQUIRTBOTTLE.
-	text "I hear there's a"
-	line "#MON that looks"
-	cont "just like a tree."
+	text "おおきな　き　と　おなじ　すがたの"
+	line "#<GA>どこか<NI>いるらしいよ"
 
-	para "You can reveal its"
-	line "identity using a"
-	cont "SILPHSCOPE 2."
+	para "シルフスコープ２<GA>あれば"
+	line "しょうたい<GA>わかるんだ<TTE>"
 	done
 
 UnusedBugCatchingContestExplanationText:
 ; duplicate of BugCatchingContestExplanationText in Route35NationalParkGate.asm
-	text "The Bug-Catching"
-	line "Contest is held on"
+	text "むしとり　たいかいが"
+	line "ひらかれるのは<⋯>"
+	cont "かようび　もくようび　どようび"
 
-	para "Tuesday, Thursday"
-	line "and Saturday."
-
-	para "Not only do you"
-	line "earn a prize just"
-
-	para "for participating,"
-	line "you also get to"
-
-	para "keep a bug #MON"
-	line "that you catch."
+	para "さんかしょう<GA>もらえる　だけでなく"
+	line "つかまえた　むし#を"
+	cont "じぶんのもの<NI>すること<GA>できます"
 	done
 
 Route36NationalParkGateOfficer1WellHoldPrizeText:
-	text "Uh-oh… Your PACK"
-	line "is full."
+	text "おや？"
+	line "にもつ<GA>いっぱい<NO>ようですね⋯"
 
-	para "We'll hold on to"
-	line "your prize, but"
-	cont "only for today."
-
-	para "Please make room,"
-	line "then come see me."
+	para "きょういっぱい　なら"
+	line "とりおきして　おきますので"
+	cont "にもつ<WO>せいりして　きてください"
 	done
 
 Route36NationalParkGateOfficer1HeresThePrizeText:
-	text "<PLAYER>?"
+	text "<PLAYER>さんですね？"
 
-	para "Here's the prize"
-	line "we were holding"
-	cont "for you."
+	para "はい"
+	line "とりおきしておいた　しょうひんです"
 	done
 
 Route36NationalParkGate_MapEvents:

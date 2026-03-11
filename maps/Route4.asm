@@ -52,62 +52,56 @@ Route4HiddenUltraBall:
 	hiddenitem ULTRA_BALL, EVENT_ROUTE_4_HIDDEN_ULTRA_BALL
 
 BirdKeeperHankSeenText:
-	text "There's been news"
-	line "of an incident at"
-	cont "the POWER PLANT."
+	text "はつでんしょで"
+	line "じけん<GA>あった　らしいな！"
 	done
 
 BirdKeeperHankBeatenText:
-	text "I lost? That's"
-	line "news too…"
+	text "おれ<GA>まけるなんて<⋯>"
+	line "これも　じけん　だ！"
 	done
 
 BirdKeeperHankAfterBattleText:
-	text "I might go to the"
-	line "POWER PLANT. Is it"
-	cont "near ROCK TUNNEL?"
+	text "はつでんしょに"
+	line "いこうと　おも<TTE>るんだけど"
+	cont "イワヤマ　トンネル<NO>ちかく"
+	cont "だったっけ？"
 	done
 
 PicnickerHopeSeenText:
-	text "I have a feeling"
-	line "that I can win."
-
-	para "Let's see if I'm"
-	line "right!"
+	text "なんとなく　かてそうな　かんじ！"
+	line "あたしと　たいせん　しましょ！"
 	done
 
 PicnickerHopeBeatenText:
-	text "Aww, you are too"
-	line "strong."
+	text "つよいわ　やっぱ<⋯>！"
 	done
 
 PicnickerHopeAfterBattleText:
-	text "I heard CLEFAIRY"
-	line "appear at MT.MOON."
-
-	para "But where could"
-	line "they be?"
+	text "おつきみやま<NI>ピッピが"
+	line "すがた<WO>みせる<TTE>　きいたけど"
+	cont "どこ<NI>いるのかしら？"
 	done
 
 PicnickerSharonSeenText:
-	text "Um…"
-	line "I…"
+	text "あのう<⋯>"
+	line "<WATASHI><⋯>"
 	done
 
 PicnickerSharonBeatenText:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 	done
 
 PicnickerSharonAfterBattleText:
-	text "……I'll go train"
-	line "some more…"
+	text "<⋯>　<⋯>　<⋯>"
+
+	para "<⋯>　もう　すこし"
+	line "しゅぎょう　してます<⋯>"
 	done
 
 MtMoonSquareSignText:
-	text "MT.MOON SQUARE"
-
-	para "Just go up the"
-	line "stairs."
+	text "おつきみやま　ひろば"
+	line "<⋯>かいだん<WO>のぼ<TTE>　すぐ！"
 	done
 
 Route4_MapEvents:

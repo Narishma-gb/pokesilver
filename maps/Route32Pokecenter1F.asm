@@ -44,52 +44,43 @@ Route32Pokecenter1FCooltrainerFScript:
 	jumptextfaceplayer Route32Pokecenter1FCooltrainerFText
 
 Route32Pokecenter1FFishingGuruText_Question:
-	text "This is a great"
-	line "fishing spot."
+	text "ここいら<WA>つりのめいしょ　でねえ"
+	line "みんな<GA>つ<TTE>いるの<WO>みて"
+	cont "きみも　つり<GA>したくなったろ？"
 
-	para "You saw people"
-	line "fishing? How"
-	cont "about you?"
-
-	para "Would you like one"
-	line "of my RODS?"
+	para "よかったら　<WATASHI>の"
+	line "つりざお　わけて　あげようか？"
 	done
 
 Route32Pokecenter1FFishingGuruText_Yes:
-	text "Heh, that's good"
-	line "to hear."
-
-	para "Now you're an"
-	line "angler too!"
+	text "うれしいねえ！　これで　きみも"
+	line "つりびと<NO>なかまいり　だねえ"
 	done
 
 Route32Pokecenter1FFishingGuruText_GiveOldRod:
-	text "Fishing is great!"
+	text "つり<WA>いいよお！"
 
-	para "If there's water,"
-	line "be it the sea or a"
-
-	para "stream, try out"
-	line "your ROD."
+	para "みず<NO>ある　ところなら"
+	line "うみ　だろう<GA>かわ　だろうが"
+	cont "どんどん　つりざお<WO>つか<TTE>ねえ！"
 	done
 
 Route32Pokecenter1FFishingGuruText_No:
-	text "Oh. That's rather"
-	line "disappointing…"
+	text "あらら"
+	line "そりゃ　ざんねん　だねえ"
 	done
 
 Route32Pokecenter1FFishingGuruText_After:
-	text "Yo, youngster. How"
-	line "are they biting?"
+	text "よっ！　しょうねん"
+	line "つり<NO>ちょうし<WA>どうだい？"
 	done
 
 Route32Pokecenter1FCooltrainerFText:
-	text "What should I make"
-	line "my #MON hold?"
+	text "うーん　#に"
+	line "な<NI>もたせるか　まよっちゃうな"
 
-	para "Maybe an item that"
-	line "increases ATTACK"
-	cont "power…"
+	para "<KOUGEKI>りょく<WO>つよくする"
+	line "どうぐ<NI>しようかな"
 	done
 
 Route32Pokecenter1F_MapEvents:

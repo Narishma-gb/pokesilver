@@ -109,17 +109,17 @@ AcademyBlackboard:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	dn 3, 2 ; rows, columns
-	db 5 ; spacing
+	db 6 ; spacing
 	dba .Text
 	dbw BANK(@), NULL
 
 .Text:
-	db "PSN@"
-	db "PAR@"
-	db "SLP@"
-	db "BRN@"
-	db "FRZ@"
-	db "QUIT@"
+	db "どく@"
+	db "まひ@"
+	db "ねむり@"
+	db "やけど@"
+	db "こおり@"
+	db "やめる@"
 
 AcademyNotebook:
 	opentext
@@ -161,250 +161,199 @@ AcademyEarlSpinMovement:
 	step_end
 
 AcademyEarlIntroText:
-	text "EARL, I am!"
+	text "ジョバンニ　でーす！"
+	line "#<WA>すばらしー　ですね！"
 
-	para "Wonderful are"
-	line "#MON, yes!"
+	para "ワタシ　つよく　なるため"
+	line "いろいろ　おしえまーす"
 
-	para "Teach you I will"
-	line "to be a better"
-	cont "trainer!"
-
-	para "What you want to"
-	line "know? Want to be"
-	cont "a winner is you?"
+	para "な<NI>しりたい？"
+	line "どうすれば　つよくなるか"
+	cont "しりたい　アルか？"
 	done
 
 AcademyEarlTeachHowToWinText:
-	text "Good! Teach you,"
-	line "I will!"
+	text "それではー　ワタシが"
+	line "おしえて　あげましょー！"
 
-	para "In battle, #MON"
-	line "top on list jump"
-	cont "out first!"
+	para "しょうぶ<NO>とき"
+	line "#　リストの"
+	cont "いちばん　うえ<NO>ポケモンが"
+	cont "さいしょ<NI>とびだしまーす！"
 
-	para "Change order in"
-	line "list, make battle"
-	cont "easy, maybe!"
+	para "リスト<NO>じゅんばん　かえると"
+	line "しょうぶ<GA>ゆうり<NI>なるかもねー！"
 
-	para "More from me you"
-	line "want to hear?"
+	para "ほかにも　ききたい　アルか？"
 	done
 
 AcademyEarlTeachMoreText:
-	text "So, want to know"
-	line "how to raise"
-	cont "#MON well?"
+	text "ではー　#の"
+	line "じょーずな　そだてかた"
+	cont "しりたい　アルか？"
 	done
 
 AcademyEarlTeachHowToRaiseWellText:
-	text "Fine! Teach you,"
-	line "I will!"
+	text "それではー　ワタシが"
+	line "おしえて　あげましょー！"
 
-	para "If #MON come"
-	line "out in battle even"
+	para "しょうぶ<NO>とき"
+	line "いちど　でも　かおをだした　#"
+	cont "けいけんち<GA>もらえまーす！"
 
-	para "briefly, some EXP."
-	line "points it gets."
+	para "よわい　#を"
+	line "リスト<NO>うえ<NI>して"
+	cont "しょうぶのとき　すぐ<NI>こうたい！"
 
-	para "At top of list put"
-	line "weak #MON."
-
-	para "Switch in battle"
-	line "quick!"
-
-	para "This way, weak"
-	line "#MON strong"
-	cont "become!"
+	para "これで　よわい　#も"
+	line "そだつ　アルねー！"
 	done
 
 AcademyEarlNoMoreToTeachText:
-	text "Oh! Smart student"
-	line "you are! Nothing"
-	cont "more do I teach!"
+	text "おー　あなた　ゆうとうせい！"
+	line "おしえる　こと　ないアルねー"
 
-	para "Good to #MON"
-	line "you must be!"
+	para "つかまえた　#と"
+	line "なかよく　して　くださいですねー！"
 	done
 
 EarlsPokemonAcademyYoungster1Text:
-	text "I'm taking notes"
-	line "of the teacher's"
-	cont "lecture."
+	text "せんせい<NO>おはなし"
+	line "ノートにかいて　おぼえるんだ！"
 
-	para "I'd better copy"
-	line "the stuff on the"
-	cont "blackboard too."
+	para "こくばん<NI>かいてあることも"
+	line "ノート<NI>うつさなくちゃ<⋯>"
 	done
 
 EarlsPokemonAcademyGameboyKid1Text:
-	text "I traded my best"
-	line "#MON to the"
-	cont "guy beside me."
+	text "となりのこに"
+	line "ぼく<NO>すきな#　おくったよ！"
 	done
 
 EarlsPokemonAcademyGameboyKid2Text:
-	text "Huh? The #MON I"
-	line "just got is hold-"
-	cont "ing something!"
+	text "あれ？　おくられてきた　#"
+	line "なにか　も<TTE>る！？"
 	done
 
 EarlsPokemonAcademyYoungster2Text:
-	text "A #MON holding"
-	line "a BERRY will heal"
-	cont "itself in battle."
+	text "<⋯>#<NI>きのみ<WO>もたせると"
+	line "じぶんで　たいりょく<WO>かいふくする"
 
-	para "Many other items"
-	line "can be held by"
-	cont "#MON…"
+	para "#<GA>もてる　どうぐは"
+	line "ほかにも　たくさん<⋯>"
 
-	para "It sure is tough"
-	line "taking notes…"
+	para "ノート<WO>ちゃんと　とるのは"
+	line "たいへんだなあ<⋯>"
 	done
 
 AcademyBlackboardText:
-	text "The blackboard"
-	line "describes #MON"
-
-	para "status changes in"
-	line "battle."
+	text "こくばんに"
+	line "#<GA>たたか<TTE>る　とき"
+	cont "おこる　たいちょうの"
+	cont "へんか<NI>ついて　かかれてる"
 	done
 
 AcademyBlackboardText2: ; unreferenced
-	text "Read which topic?"
+	text "ど<NO>こうもく<WO>みますか？"
 	done
 
 AcademyPoisonText:
-	text "If poisoned, a"
-	line "#MON steadily"
-	cont "loses HP."
+	text "どく<WO>うけると"
+	line "たいりょく<GA>へ<TTE>いきます"
 
-	para "Poison lingers"
-	line "after the battle,"
-
-	para "and HP is lost as"
-	line "you walk."
-
-	para "To cure it, use an"
-	line "ANTIDOTE."
+	para "せんとうのあとも　どく<WA>のこるので"
+	line "あるくたび<NI>たいりょく<GA>へります"
+	cont "どくけしで　なおしましょう"
 	done
 
 AcademyParalysisText:
-	text "Paralysis reduces"
-	line "speed and may"
-	cont "prevent movement."
+	text "まひすると　すばやさ<GA>さがり"
+	line "ときどき　わざ<GA>だせなくなります"
 
-	para "It remains after"
-	line "battle, so use"
-	cont "a PARLYZ HEAL."
+	para "たたかい　おわ<TTE>も"
+	line "まひした　ままです"
+	cont "まひなおしで　なおしましょう"
 	done
 
 AcademySleepText:
-	text "If asleep, your"
-	line "#MON can't make"
-	cont "a move."
+	text "ねむ<TTE>　しまうと"
+	line "そ<NO>あいだ　<KOUGEKI>　できません"
 
-	para "A sleeping #MON"
-	line "doesn't wake up"
-	cont "after battle."
-
-	para "Wake it up with"
-	line "an AWAKENING."
+	para "せんとう<GA>おわ<TTE>も"
+	line "ねむった　ままです"
+	cont "ねむけざましで　おこしてあげましょう"
 	done
 
 AcademyBurnText:
-	text "A burn steadily"
-	line "consumes HP."
+	text "やけど<WA>たいりょく<GA>へ<TTE>いき"
+	line "<KOUGEKI>りょく<GA>さがります"
 
-	para "It also reduces"
-	line "attack power."
-
-	para "A burn lingers"
-	line "after battle."
-
-	para "Use a BURN HEAL as"
-	line "the cure."
+	para "せんとう<GA>おわ<TTE>も"
+	line "やけど<NO>ままです"
+	cont "やけどなおしで　なおしましょう"
 	done
 
 AcademyFreezeText:
-	text "If your #MON is"
-	line "frozen, it can't"
-	cont "do a thing."
+	text "こお<TTE>　しまうと"
+	line "なにも　できなくなります"
 
-	para "It remains frozen"
-	line "after battle."
-
-	para "Thaw it out with"
-	line "an ICE HEAL."
+	para "たたかい　おわ<TTE>も"
+	line "こおりついた　ままです"
+	cont "こおりなおしで　とかしましょう"
 	done
 
 AcademyNotebookText:
-	text "It's this kid's"
-	line "notebook…"
+	text "このこ<NO>ノートだ　<⋯>"
 
-	para "Catch #MON"
-	line "using # BALLS."
+	para "#は"
+	line "モンスターボールで　つかまえて"
+	cont "どうじ<NI>６ぴき　もち　あるける"
 
-	para "Up to six can be"
-	line "in your party."
-
-	para "Keep reading?"
+	para "つづきも　よむ？"
 	done
 
 AcademyNotebookText1:
-	text "Before throwing a"
-	line "# BALL, weaken"
-	cont "the target first."
+	text "モンスターボール<WO>なげる　ときは"
+	line "#<NO>わざで"
+	cont "どく　とか　やけど　とか　にすると"
+	cont "つかまえ　やすい！"
 
-	para "A poisoned or"
-	line "burned #MON is"
-	cont "easier to catch."
-
-	para "Keep reading?"
+	para "つづきも　よむ？"
 	done
 
 AcademyNotebookText2:
-	text "Some moves may"
-	line "cause confusion."
+	text "ほかにも　#<NO>わざで"
+	line "こんらん　するときがある"
 
-	para "Confusion may make"
-	line "a #MON attack"
-	cont "itself."
+	para "こんらん　すると"
+	line "たま<NI>まちがえて"
+	cont "じぶん<WO><KOUGEKI>　してしまう"
 
-	para "Leaving battle"
-	line "clears up any"
-	cont "confusion."
+	para "いちどでも　せんとうから　はなれると"
+	line "もと<NI>もどる<⋯>"
 
-	para "Keep reading?"
+	para "つづきも　よむ？"
 	done
 
 AcademyNotebookText3:
-	text "People who catch"
-	line "and use #MON"
+	text "そうして　つかまえた　#を"
+	line "そだてて　たたかわせる　ひとを"
+	cont "#<TRAINER>と　いう"
 
-	para "in battle are"
-	line "#MON trainers."
+	para "<TRAINER><NO>もくひょうは"
+	line "かくち<NO>#ジム<NI>いる"
+	cont "つよい　<TRAINER><NI>かつこと！"
 
-	para "They are expected"
-	line "to visit #MON"
+	para "つづきは<⋯>"
+	line "まっしろ　だ！"
 
-	para "GYMS and defeat"
-	line "other trainers."
-
-	para "The next page"
-	line "is… Blank!"
-
-	para "Boy: E-he-he…"
-
-	para "I haven't written"
-	line "anymore…"
+	para "しょうねん『てへへ<⋯>"
+	line "あと<WA>なにも　かいてないんだ<⋯>"
 	done
 
 AcademyStickerMachineText:
-	text "This super machine"
-	line "prints data out as"
-
-	para "stickers!"
+	text "いろんな　データを"
+	line "シールにできる　すごい　マシン！"
 	done
 
 EarlsPokemonAcademy_MapEvents:

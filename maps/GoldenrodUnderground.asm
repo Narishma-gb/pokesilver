@@ -419,232 +419,195 @@ GoldenrodUndergroundHiddenAntidote:
 	hiddenitem ANTIDOTE, EVENT_GOLDENROD_UNDERGROUND_HIDDEN_ANTIDOTE
 
 SupernerdEricSeenText:
-	text "I got booted out"
-	line "of the GAME COR-"
-	cont "NER."
-
-	para "I was trying to"
-	line "cheat using my"
-	cont "#MON…"
+	text "#　つか<TTE>"
+	line "いかさま　しようとしたら　バレて"
+	cont "ゲームコーナーから　おいだされた<⋯>"
 	done
 
 SupernerdEricBeatenText:
-	text "…Grumble…"
+	text "<⋯>　ぶつぶつ"
 	done
 
 SupernerdEricAfterBattleText:
-	text "I guess I have to"
-	line "do things fair and"
-	cont "square…"
+	text "やはり　せいせいどうどう　じゃないと"
+	line "ダメ　なのか<⋯>"
 	done
 
 SupernerdTeruSeenText:
-	text "Do you consider"
-	line "type alignments in"
-	cont "battle?"
+	text "きみ　#の"
+	line "あいしょう<WO>かんがえてる？"
 
-	para "If you know your"
-	line "type advantages,"
-
-	para "you'll do better"
-	line "in battle."
+	para "タイプ<NO>あいしょう<WO>し<TTE>ると"
+	line "#　つよくなれるぞ！"
 	done
 
 SupernerdTeruBeatenText:
-	text "Ow, ow, ow!"
+	text "あいたたた"
 	done
 
 SupernerdTeruAfterBattleText:
-	text "I know my #MON"
-	line "type alignments."
-
-	para "But I only use one"
-	line "type of #MON."
+	text "タイプ<NO>あいしょう<WA>くわしいけど"
+	line "ぼく<WA>おなじ　タイプの"
+	cont "#ばかり　つかうんだよな"
 	done
 
 PokemaniacIssacSeenText:
-	text "My #MON just"
-	line "got haircuts!"
-
-	para "I'll show you how"
-	line "strong they are!"
+	text "さんぱつ　したて<NO>#ちゃん！"
+	line "そ<NO>つよさ<WO>みせてやれ！"
 	done
 
 PokemaniacIssacBeatenText:
-	text "Aiyeeee!"
+	text "あひゃーっ！！"
 	done
 
 PokemaniacIssacAfterBattleText:
-	text "Your #MON will"
-	line "like you more if"
-
-	para "you give them"
-	line "haircuts."
+	text "さんぱつ　してもらうと"
+	line "なんだか　#　なついてくれるよ"
 	done
 
 PokemaniacDonaldSeenText:
-	text "I think you have"
-	line "some rare #MON"
-	cont "with you."
-
-	para "Let me see them!"
+	text "きみ　なんだか"
+	line "めずらしそうな　#　も<TTE>るね"
+	cont "ちょっと　みせてくれよ"
 	done
 
 PokemaniacDonaldBeatenText:
-	text "Gaah! I lost!"
-	line "That makes me mad!"
+	text "むきーっ！"
+	line "まけたーっ！　くやしーっ！"
 	done
 
 PokemaniacDonaldAfterBattleText:
-	text "Are you making a"
-	line "#DEX? Here's a"
-	cont "hot tip."
+	text "#ずかん<WO>つく<TTE>る？"
+	line "じゃあ　と<TTE>おき<NO>じょうほう！"
 
-	para "The HIKER on ROUTE"
-	line "33, ANTHONY, is a"
-	cont "good guy."
+	para "３３ばんどうろ<NI>いる"
+	line "やまおとこ<NO>ツトムさん"
 
-	para "He'll phone you if"
-	line "he sees any rare"
-	cont "#MON."
+	para "めずらしい　#　みかけると"
+	line "でんわで　おしえてくれるぜ！"
 	done
 
 GoldenrodUndergroundTheDoorsLockedText:
-	text "The door's locked…"
+	text "カギ<GA>かか<TTE>いる！"
 	done
 
 GoldenrodUndergroundTheDoorIsOpenText:
-	text "The door is open."
+	text "とびら<WA>あいている"
 	done
 
 GoldenrodUndergroundBasementKeyOpenedDoorText:
-	text "The BASEMENT KEY"
-	line "opened the door."
+	text "ちかのカギ<WO>つかっ<TA!>"
+	line "とびら<GA>あい<TA!>"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherOfferHaircutText:
-	text "Welcome!"
+	text "いらっしゃい！"
+	line "うち<WA>#　びようしつ！"
 
-	para "I run the #MON"
-	line "SALON!"
+	para "うで<NO>たしかな　ボク"
+	line "びようし　きょうだい　あ<NI>が"
+	cont "５００円で　あなた<NO>#を"
+	cont "きれい<NI>して　あげますよ！"
 
-	para "I'm the older and"
-	line "better of the two"
-	cont "HAIRCUT BROTHERS."
-
-	para "I can make your"
-	line "#MON beautiful"
-	cont "for just ¥500."
-
-	para "Would you like me"
-	line "to do that?"
+	para "どうする？"
+	line "きれい<NI>するかい？"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherAskWhichMonText:
-	text "Which #MON"
-	line "should I work on?"
+	text "ど<NO>#<WO>うつくしく　する？"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherWatchItBecomeBeautifulText:
-	text "OK! Watch it"
-	line "become beautiful!"
+	text "よーし！"
+	line "うつくしく　するからね！"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherAllDoneText:
-	text "There! All done!"
+	text "はい　おわり！"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherThatsAShameText:
-	text "Is that right?"
-	line "That's a shame!"
+	text "そうかい？"
+	line "ざんねん　だな"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherYoullNeedMoreMoneyText:
-	text "You'll need more"
-	line "money than that."
+	text "おかね<GA>たりない　みたいだね"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherOneHaircutADayText:
-	text "I do only one"
-	line "haircut a day. I'm"
-	cont "done for today."
+	text "１にち　１ぴき　までだよ"
+	line "きょう<NO>えいぎょう<WA>おしまい！"
 	done
 
 GoldenrodUndergroundYoungerHaircutBrotherOfferHaircutText:
-	text "Welcome to the"
-	line "#MON SALON!"
+	text "ようこそ　#　びようしつへ！"
 
-	para "I'm the younger"
-	line "and less expen-"
-	cont "sive of the two"
-	cont "HAIRCUT BROTHERS."
+	para "ボクは"
+	line "びようし　きょうだい　おとうと！"
 
-	para "I'll spiff up your"
-	line "#MON for just"
-	cont "¥300."
+	para "ねだん<NO>やすいの<GA>うり！"
+	line "３００円で　あなた<NO>#を"
+	cont "きれい<NI>して　あげますよ！"
 
-	para "So? How about it?"
+	para "どうする？"
+	line "ボク<NI>まかせて　みるかい？"
 	done
 
 GoldenrodUndergroundYoungerHaircutBrotherAskWhichMonText:
-	text "OK, which #MON"
-	line "should I do?"
+	text "ど<NO>#<WO>かっこよく　する？"
 	done
 
 GoldenrodUndergroundYoungerHaircutBrotherIllMakeItLookCoolText:
-	text "OK! I'll make it"
-	line "look cool!"
+	text "よーし！"
+	line "かっこよく　するからね！"
 	done
 
 GoldenrodUndergroundYoungerHaircutBrotherAllDoneText:
-	text "There we go!"
-	line "All done!"
+	text "はい　おわったよ！"
 	done
 
 GoldenrodUndergroundYoungerHaircutBrotherHowDisappointingText:
-	text "No? "
-	line "How disappointing!"
+	text "そうかい？"
+	line "ざんねん　だな"
 	done
 
 GoldenrodUndergroundYoungerHaircutBrotherShortOnFundsText:
-	text "You're a little"
-	line "short on funds."
+	text "おかね<GA>たりない　みたいだね"
 	done
 
 GoldenrodUndergroundYoungerHaircutBrotherOneHaircutADayText:
-	text "I can do only one"
-	line "haircut a day."
-
-	para "Sorry, but I'm all"
-	line "done for today."
+	text "１にち　１ぴき　だけなんだ"
+	line "ごめんね　きょう<WA>おしまい！"
 	done
 
 HaircutBrosText_SlightlyHappier:
+	text "@"
 	text_ram wStringBuffer3
-	text " looks a"
-	line "little happier."
+	text "は"
+	line "ちょっとだけ　うれしそう"
 	done
 
 HaircutBrosText_Happier:
+	text "@"
 	text_ram wStringBuffer3
-	text " looks"
-	line "happy."
+	text "は"
+	line "うれしそうだ！"
 	done
 
 HaircutBrosText_MuchHappier:
+	text "@"
 	text_ram wStringBuffer3
-	text " looks"
-	line "delighted!"
+	text "は"
+	line "と<TTE>も　うれしそうだ！"
 	done
 
 GoldenrodUndergroundWeAreNotOpenTodayText:
-	text "We're not open"
-	line "today."
+	text "きょう<WA>や<TTE>ないよ"
 	done
 
 GoldenrodUndergroundNoEntryText:
-	text "NO ENTRY BEYOND"
-	line "THIS POINT"
+	text "このさき　たちいり　きんし！"
 	done
 
 GoldenrodUnderground_MapEvents:

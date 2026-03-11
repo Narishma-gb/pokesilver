@@ -111,172 +111,137 @@ VioletGymStatue:
 	jumpstd GymStatue2Script
 
 FalknerIntroText:
-	text "I'm FALKNER, the"
-	line "VIOLET #MON GYM"
-	cont "leader!"
+	text "おれ<GA>キキョウ　#ジム"
+	line "リーダー<NO>ハヤト！"
 
-	para "People say you can"
-	line "clip flying-type"
+	para "せけん　じゃ"
+	line "ひこうタイプ<NO>#なんか"
+	cont "でんげきで　いちころ<⋯>"
 
-	para "#MON's wings"
-	line "with a jolt of"
-	cont "electricity…"
+	para "そう　とり#<WO>ばかにする"
+	line "おれ<WA>それ<GA>ゆるせない！"
 
-	para "I won't allow such"
-	line "insults to bird"
-	cont "#MON!"
-
-	para "I'll show you the"
-	line "real power of the"
-
-	para "magnificent bird"
-	line "#MON!"
+	para "おおぞら<WO>かれい<NI>まう"
+	line "とり#<NO>ほんとう<NO>すごさ"
+	cont "おもいしらせて　やるよ！"
 	done
 
 FalknerWinLossText:
-	text "…Darn! My Dad's"
-	line "cherished bird"
-	cont "#MON…"
+	text "<⋯>ちくしょう"
+	line "とうさん<GA>たいせつ<NI>していた"
+	cont "#が<⋯>"
 
-	para "All right."
-	line "Take this."
+	para "わかった"
+	line "これ<WO>も<TTE>いけよ！"
 
-	para "It's the official"
-	line "#MON LEAGUE"
-	cont "ZEPHYRBADGE."
+	para "#　リーグ　こうにん"
+	line "ウイングバッジ　だ！"
 	done
 
 ReceivedZephyrBadgeText:
-	text "<PLAYER> received"
-	line "ZEPHYRBADGE."
+	text "<PLAYER><WA>ハヤトから"
+	line "ウイングバッジ<WO>もらっ<TA!>"
 	done
 
 FalknerZephyrBadgeText:
-	text "ZEPHYRBADGE"
-	line "raises the attack"
-	cont "power of #MON."
+	text "ウイングバッジ<WO>も<TTE>いると"
+	line "きみ<NO>#の"
+	cont "<KOUGEKI>　りょく<GA>アップする！"
 
-	para "It also enables"
-	line "#MON to use"
+	para "あと　フラッシュ　という"
+	line "わざ<WO>おぼえている　#は"
+	cont "たたか<TTE>いない　ときでも"
+	cont "フラッシュ<GA>つかえる！"
 
-	para "FLASH, if they"
-	line "have it, anytime."
-
-	para "Here--take this"
-	line "too."
+	para "それから　こいつも　も<TTE>いけよ"
 	done
 
 FalknerTMMudSlapText:
-	text "By using a TM, a"
-	line "#MON will"
+	text "<TM><WO>つかえば"
+	line "いっしゅんで　#に"
+	cont "わざ<WO>おしえること<GA>できる！"
 
-	para "instantly learn a"
-	line "new move."
+	para "ただし　つかいすて　だから"
+	line "よく　かんがえて　つかわないとな"
 
-	para "Think before you"
-	line "act--a TM can be"
-	cont "used only once."
+	para "ちなみ<NI><TM>３１<NO>なかには"
+	line "どろかけ　<GA>はい<TTE>いる"
 
-	para "TM31 contains"
-	line "MUD-SLAP."
+	para "あいて<NO>めいちゅうりつ<WO>さげつつ"
+	line "ダメージ<WO>あたえる"
 
-	para "It reduces the"
-	line "enemy's accuracy"
-
-	para "while it causes"
-	line "damage."
-
-	para "In other words, it"
-	line "is both defensive"
-	cont "and offensive."
+	para "つまり　<KOUGEKI>と　まもりが"
+	line "どうじ<NI>できる　わざ　さ"
 	done
 
 FalknerFightDoneText:
-	text "There are #MON"
-	line "GYMS in cities and"
-	cont "towns ahead."
+	text "このさき　いろんな　まちに"
+	line "#ジム<GA>あるから"
+	cont "そこで　うでだめし<WO>するといい"
 
-	para "You should test"
-	line "your skills at"
-	cont "these GYMS."
-
-	para "I'm going to train"
-	line "harder to become"
-
-	para "the greatest bird"
-	line "master!"
+	para "おれ<WA>さいきょうの"
+	line "とりつかい<NI>なるため"
+	cont "#と　おのれ<WO>きたえるよ！"
 	done
 
 BirdKeeperRodSeenText:
-	text "The keyword is"
-	line "guts!"
+	text "あいことば<WA>どこんじょうっ！！"
 
-	para "Those here are"
-	line "training night and"
+	para "ここ<NI>あつまった　にんげんは"
+	line "とり#で　さいきょう<WO>めざし"
+	cont "あさばん　とっくん　してる！"
 
-	para "day to become bird"
-	line "#MON masters."
-
-	para "Come on!"
+	para "かか<TTE>　こーいっ！"
 	done
 
 BirdKeeperRodBeatenText:
-	text "Gaaah!"
+	text "がーん！！"
 	done
 
 BirdKeeperRodAfterBattleText:
-	text "FALKNER's skills"
-	line "are for real!"
+	text "ハヤトさんの"
+	line "じつりょく<WA>ほんも<NO>だ！"
 
-	para "Don't get cocky"
-	line "just because you"
-	cont "beat me!"
+	para "おれ<NI>かった　ぐらいで"
+	line "ちょうし<NI>のるなよ！"
 	done
 
 BirdKeeperAbeSeenText:
-	text "Let me see if you"
-	line "are good enough to"
-	cont "face FALKNER!"
+	text "ハヤトさん<NI>ちょうせん　できるか"
+	line "たしかめて　やるぜ！"
 	done
 
 BirdKeeperAbeBeatenText:
-	text "This can't be"
-	line "true!"
+	text "ほんとかよー！？"
 	done
 
 BirdKeeperAbeAfterBattleText:
-	text "This is pathetic,"
-	line "losing to some"
-	cont "rookie trainer…"
+	text "<TRAINER><NI>なったばかりの"
+	line "やつ<NI>まけると<WA>なさけない<⋯>"
 	done
 
 VioletGymGuideText:
-	text "Hey! I'm no train-"
-	line "er but I can give"
-	cont "some advice!"
+	text "おーっす！"
+	line "おれ<WA><TRAINER>じゃないが"
+	cont "アドバイス<WA>できるぜ！"
 
-	para "Believe me!"
-	line "If you believe, a"
+	para "しんじろよ！"
+	line "しんじれば"
+	cont "チャンピオンだ<TTE>　ゆめ　じゃない！"
 
-	para "championship dream"
-	line "can come true."
+	para "そうか　きいてくれるか！"
+	line "いいか！"
 
-	para "You believe?"
-	line "Then listen."
-
-	para "The grass-type is"
-	line "weak against the"
-
-	para "flying-type. Keep"
-	line "this in mind."
+	para "くさタイプ<WA>ひこうタイプに"
+	line "ものすごく　あいしょう<GA>わるい"
+	cont "ようちゅうい　だぜ！"
 	done
 
 VioletGymGuideWinText:
-	text "Nice battle! Keep"
-	line "it up, and you'll"
-
-	para "be the CHAMP in no"
-	line "time at all!"
+	text "ナイス　ファイト！"
+	line "そ<NO>ちょうしで　いっきに"
+	cont "　"
+	line "#　チャンピオンだぜ！"
 	done
 
 VioletGym_MapEvents:

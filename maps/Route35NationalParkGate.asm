@@ -26,7 +26,6 @@ Route35NationalParkGateLeaveContestEarlyScene:
 Route35NationalParkGateCheckIfContestRunningCallback:
 	checkflag ENGINE_BUG_CONTEST_TIMER
 	iftrue Route35NationalParkBugContestIsRunningScript
-	setscene SCENE_ROUTE35NATIONALPARKGATE_NOOP
 	endcallback
 
 Route35NationalParkBugContestIsRunningScript:
@@ -223,213 +222,155 @@ Route35NationalParkGatePlayerEnterParkMovement:
 	step_end
 
 Route35NationalParkGateOfficer1AskToParticipateText:
-	text "Today's @"
+	text "きょう<WA>@"
 	text_ram wStringBuffer3
-	text "."
-	line "That means the"
+	text "ようび"
+	line "むしとりたいかい<GA>ひらかれます！"
 
-	para "Bug-Catching Con-"
-	line "test is on today."
+	para "ルール<WA>かんたん！"
 
-	para "The rules are sim-"
-	line "ple."
+	para "てもち<NO>#　１ぴきで"
+	line "つよそうな　むし#を"
+	cont "つかまえられるか　くらべるだけです"
 
-	para "Using one of your"
-	line "#MON, catch a"
-
-	para "bug #MON to be"
-	line "judged."
-
-	para "Would you like to"
-	line "give it a try?"
+	para "さんか　しますか？"
 	done
 
 Route35NationalParkGateOfficer1GiveParkBallsText:
-	text "Here are the PARK"
-	line "BALLS for the"
-	cont "Contest."
+	text "たいかいで　つかう"
+	line "せんよう<NO>ボール<WO>どうぞ！"
 	done
 
 Route35NationalParkGatePlayerReceivedParkBallsText:
-	text "<PLAYER> received"
-	line "{d:BUG_CONTEST_BALLS} PARK BALLS."
+	text "<PLAYER>は"
+	line "パークボール<WO>２０こ　もらっ<TA!>"
 	done
 
 Route35NationalParkGateOfficer1ExplainsRulesText:
-	text "The person who"
-	line "gets the strong-"
-	cont "est bug #MON"
-	cont "is the winner."
+	text "いちばん　つよそうな　#を"
+	line "つかまえたひと<GA>ゆうしょうです！"
 
-	para "You have {d:BUG_CONTEST_MINUTES}"
-	line "minutes."
+	para "せいげん　じかん<WA>２０ぷん！"
 
-	para "If you run out of"
-	line "PARK BALLS, you're"
-	cont "done."
+	para "また　パークボール<GA>なくなると"
+	line "しゅうりょう　です！"
 
-	para "You can keep the"
-	line "last #MON you"
-	cont "catch as your own."
+	para "さいご<NI>つかまえた　#は"
+	line "さんかしゃ<NO>もの<NI>なります！"
 
-	para "Go out and catch"
-	line "the strongest bug"
-
-	para "#MON you can"
-	line "find!"
+	para "がんば<TTE>　つよそうな"
+	line "#<WO>つかまえて　ください！"
 	done
 
 Route35NationalParkGateOfficer1AskToUseFirstMonText:
-	text "Uh-oh…"
+	text "あれ？"
+	line "#<GA>１ぴきじゃ　ないですね！"
 
-	para "You have more than"
-	line "one #MON."
-
-	para "You'll have to use"
+	para "せんとう<NI>いる　#<⋯>"
 	line "@"
 	text_ram wStringBuffer3
-	text ", the"
-
-	para "first #MON in"
-	line "your party."
-
-	para "Is that OK with"
-	line "you?"
+	text "で"
+	cont "さんか　すること<NI>なります"
+	cont "よろしい　ですか？"
 	done
 
 Route35NationalParkGateOfficer1WellHoldYourMonText:
-	text "Fine, we'll hold"
-	line "your other #MON"
-	cont "while you compete."
+	text "それで<WA>のこり<NO>#は"
+	line "こちらで　あずかりますね！"
 	done
 
 Route35NationalParkGatePlayersMonLeftWithHelperText:
-	text "<PLAYER>'s #MON"
-	line "were left with the"
-	cont "CONTEST HELPER."
+	text "<PLAYER><WA>かかりいんに"
+	line "#<WO>あずけ<TA!>"
 	done
 
 Route35NationalParkGateOfficer1ChooseMonAndComeBackText:
-	text "Please choose the"
-	line "#MON to be used"
-
-	para "in the Contest,"
-	line "then come see me."
+	text "たいかいで　たたかわせる"
+	line "#<WO>きめてから"
+	cont "もういちど　おねがいします"
 	done
 
 Route35NationalParkGateOfficer1TakePartInFutureText:
-	text "OK. We hope you'll"
-	line "take part in the"
-	cont "future."
+	text "そうですか"
+	line "つぎ<WA>さんか　してくださいね！"
 	done
 
 Route35NationalParkGateOfficer1FirstMonCantBattleText:
-	text "Uh-oh…"
-	line "The first #MON"
+	text "あれ？"
+	line "せんとう<NO>#が"
+	cont "たたかえない　みたい　ですね"
 
-	para "in your party"
-	line "can't battle."
-
-	para "Please switch it"
-	line "with the #MON"
-
-	para "you want to use,"
-	line "then come see me."
+	para "#<WO>いれかえてから"
+	line "きてくださいね"
 	done
 
 Route35NationalParkGateOfficer1MakeRoomText:
-	text "Uh-oh…"
-	line "Both your party"
+	text "あれ？"
+	line "てもちも　<PC><NO>ボックスも"
+	cont "いっぱい　みたい　ですね"
 
-	para "and your PC BOX"
-	line "are full."
+	para "それで<WA>むし#を"
+	line "つかまえても　もてませんよ"
 
-	para "You have no room"
-	line "to put the bug"
-	cont "#MON you catch."
-
-	para "Please make room"
-	line "in your party or"
-
-	para "your PC BOX, then"
-	line "come see me."
+	para "てもちと　<PC><NO>ボックスを"
+	line "せいりして　きてくださいね"
 	done
 
 Route35NationalParkGateOfficer1EggAsFirstMonText:
-	text "Uh-oh…"
-	line "You have an EGG as"
+	text "あれ？"
+	line "せんとう<NO>#が"
+	cont "タマゴ　みたい　ですね"
 
-	para "the first #MON"
-	line "in your party."
-
-	para "Please switch it"
-	line "with the #MON"
-
-	para "you want to use,"
-	line "then come see me."
+	para "#<WO>いれかえてから"
+	line "きてくださいね"
 	done
 
 Route35NationalParkGateOfficer1WantToFinishText:
-	text "You still have @"
+	text "のこり　じかんは"
+	line "あと　@"
 	text_ram wStringBuffer3
-	text_start
-	line "minute(s) left."
-
-	para "Do you want to"
-	line "finish now?"
+	text "ふん　です"
+	cont "もう　おわり<NI>しますか？"
 	done
 
 Route35NationalParkGateOfficer1WaitAtNorthGateText:
-	text "OK. Please wait at"
-	line "the North Gate for"
-
-	para "the announcement"
-	line "of the winners."
+	text "そうですか"
+	line "で<WA>うえのゲートで"
+	cont "けっかはっぴょうを"
+	cont "おまちください"
 	done
 
 Route35NationalParkGateOfficer1OkGoFinishText:
-	text "OK. Please get"
-	line "back outside and"
-	cont "finish up."
+	text "そうですか"
+	line "で<WA>のこり<NO>じかん"
+	cont "がんば<TTE>　きてくださいませ！"
 	done
 
 Route35NationalParkGateOfficer1ContestIsOverText:
-	text "Today's Contest is"
-	line "over. We hope you"
-
-	para "will participate"
-	line "in the future."
+	text "きょう<NO>コンテストは"
+	line "おわったよ"
+	cont "また　こんど　さんかしてね！"
 	done
 
 Route35NationalParkGateOfficer1WeHoldContestsText:
-	text "We hold Contests"
-	line "regularly in the"
-
-	para "PARK. You should"
-	line "give it a shot."
+	text "こうえん　ではね　ときどき　"
+	line "たいかい<GA>おこなわれるんだ"
+	cont "よかったら　きみも　さんか　しない？"
 	done
 
 Route35NationalParkGateYoungsterText:
-	text "When is the next"
-	line "Bug-Catching Con-"
-	cont "test going to be?"
+	text "むしとり　たいかい"
+	line "こんど<WA>いつ　かなあ？"
 	done
 
 BugCatchingContestExplanationText:
-	text "The Bug-Catching"
-	line "Contest is held on"
+	text "むしとり　たいかいが"
+	line "ひらかれるのは<⋯>"
+	cont "かようび　もくようび　どようび"
 
-	para "Tuesday, Thursday"
-	line "and Saturday."
-
-	para "Not only do you"
-	line "earn a prize just"
-
-	para "for participating,"
-	line "you also get to"
-
-	para "keep a bug #MON"
-	line "that you catch."
+	para "さんかしょう<GA>もらえる　だけでなく"
+	line "つかまえた　むし#を"
+	cont "じぶんのもの<NI>すること<GA>できます"
 	done
 
 Route35NationalParkGate_MapEvents:

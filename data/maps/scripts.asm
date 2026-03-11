@@ -32,6 +32,36 @@ INCLUDE "maps/Route27SandstormHouse.asm"
 INCLUDE "maps/Route29Route46Gate.asm"
 
 
+SECTION "Map Scripts 2", ROMX
+
+INCLUDE "maps/Route4.asm"
+INCLUDE "maps/GoldenrodUnderground.asm"
+INCLUDE "maps/GoldenrodUndergroundSwitchRoomEntrances.asm"
+INCLUDE "maps/GoldenrodDeptStoreB1F.asm"
+INCLUDE "maps/GoldenrodUndergroundWarehouse.asm"
+INCLUDE "maps/MountMortar1FOutside.asm"
+INCLUDE "maps/MountMortar1FInside.asm"
+INCLUDE "maps/MountMortar2FInside.asm"
+INCLUDE "maps/MountMortarB1F.asm"
+INCLUDE "maps/IcePath1F.asm"
+INCLUDE "maps/IcePathB1F.asm"
+INCLUDE "maps/IcePathB2FMahoganySide.asm"
+INCLUDE "maps/IcePathB2FBlackthornSide.asm"
+INCLUDE "maps/IcePathB3F.asm"
+INCLUDE "maps/VioletMart.asm"
+INCLUDE "maps/VioletGym.asm"
+INCLUDE "maps/EarlsPokemonAcademy.asm"
+INCLUDE "maps/VioletNicknameSpeechHouse.asm"
+INCLUDE "maps/VioletPokecenter1F.asm"
+INCLUDE "maps/VioletKylesHouse.asm"
+INCLUDE "maps/Route32RuinsOfAlphGate.asm"
+INCLUDE "maps/Route32Pokecenter1F.asm"
+INCLUDE "maps/Route35GoldenrodGate.asm"
+INCLUDE "maps/Route35NationalParkGate.asm"
+INCLUDE "maps/Route36RuinsOfAlphGate.asm"
+INCLUDE "maps/Route36NationalParkGate.asm"
+
+
 ;INCLUDE "maps/SproutTower1F.asm"
 ;INCLUDE "maps/SproutTower2F.asm"
 ;INCLUDE "maps/SproutTower3F.asm"
@@ -54,9 +84,6 @@ INCLUDE "maps/Route29Route46Gate.asm"
 ;INCLUDE "maps/SafariZoneFuchsiaGateBeta.asm"
 ;INCLUDE "maps/SafariZoneBeta.asm"
 ;INCLUDE "maps/VictoryRoad.asm"
-
-
-;SECTION "Map Scripts 2", ROMX
 
 ;INCLUDE "maps/NationalPark.asm"
 ;INCLUDE "maps/NationalParkBugContest.asm"
@@ -99,20 +126,6 @@ INCLUDE "maps/Route29Route46Gate.asm"
 
 
 ;SECTION "Map Scripts 5", ROMX
-
-;INCLUDE "maps/GoldenrodUnderground.asm"
-;INCLUDE "maps/GoldenrodUndergroundSwitchRoomEntrances.asm"
-;INCLUDE "maps/GoldenrodDeptStoreB1F.asm"
-;INCLUDE "maps/GoldenrodUndergroundWarehouse.asm"
-;INCLUDE "maps/MountMortar1FOutside.asm"
-;INCLUDE "maps/MountMortar1FInside.asm"
-;INCLUDE "maps/MountMortar2FInside.asm"
-;INCLUDE "maps/MountMortarB1F.asm"
-;INCLUDE "maps/IcePath1F.asm"
-;INCLUDE "maps/IcePathB1F.asm"
-;INCLUDE "maps/IcePathB2FMahoganySide.asm"
-;INCLUDE "maps/IcePathB2FBlackthornSide.asm"
-;INCLUDE "maps/IcePathB3F.asm"
 
 
 ;SECTION "Map Scripts 6", ROMX
@@ -233,7 +246,6 @@ INCLUDE "maps/Route29Route46Gate.asm"
 ;INCLUDE "maps/Route24.asm"
 ;INCLUDE "maps/Route25.asm"
 ;INCLUDE "maps/Route3.asm"
-;INCLUDE "maps/Route4.asm"
 ;INCLUDE "maps/Route8.asm"
 ;INCLUDE "maps/Route10North.asm"
 ;INCLUDE "maps/Route10South.asm"
@@ -315,19 +327,6 @@ INCLUDE "maps/Route29Route46Gate.asm"
 
 
 ;SECTION "Map Scripts 21", ROMX
-
-;INCLUDE "maps/VioletMart.asm"
-;INCLUDE "maps/VioletGym.asm"
-;INCLUDE "maps/EarlsPokemonAcademy.asm"
-;INCLUDE "maps/VioletNicknameSpeechHouse.asm"
-;INCLUDE "maps/VioletPokecenter1F.asm"
-;INCLUDE "maps/VioletKylesHouse.asm"
-;INCLUDE "maps/Route32RuinsOfAlphGate.asm"
-;INCLUDE "maps/Route32Pokecenter1F.asm"
-;INCLUDE "maps/Route35GoldenrodGate.asm"
-;INCLUDE "maps/Route35NationalParkGate.asm"
-;INCLUDE "maps/Route36RuinsOfAlphGate.asm"
-;INCLUDE "maps/Route36NationalParkGate.asm"
 
 
 ;SECTION "Map Scripts 22", ROMX

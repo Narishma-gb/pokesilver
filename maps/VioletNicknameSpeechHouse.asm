@@ -24,22 +24,20 @@ VioletNicknameSpeechHouseBirdScript:
 	end
 
 VioletNicknameSpeechHouseTeacherText:
-	text "She uses the names"
-	line "of her favorite"
-	cont "things to eat."
+	text "すきな　たべもの<NO>なまえを"
+	line "つけて　いるのよ"
 
-	para "For the nicknames"
-	line "she gives to her"
-	cont "#MON, I mean."
+	para "ウチのむすめ<GA>つけてる"
+	line "#<NO>ニックネーム<NO>ことよ"
 	done
 
 VioletNicknameSpeechHouseLassText:
-	text "I call my PIDGEY"
-	line "STRAWBERRY!"
+	text "あたし<NO>ポッポ"
+	line "イチゴちゃん　<TTE>　なまえなの！"
 	done
 
 VioletNicknameSpeechHouseBirdText:
-	text "STRAWBERRY: Pijji!"
+	text "イチゴ『ぽっぽー！"
 	done
 
 VioletNicknameSpeechHouse_MapEvents:

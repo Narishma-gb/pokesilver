@@ -49,10 +49,14 @@ IcePathB1FSetUpStoneTableCallback:
 	pause 30
 	scall .BoulderFallsThrough
 	opentext
-	writetext IcePathBoulderFellThroughText
+	writetext .BoulderFellThroughText
 	waitbutton
 	closetext
 	end
+
+.BoulderFellThroughText:
+	text "いわ<WA>した<NI>おち<TA!>"
+	done
 
 .BoulderFallsThrough:
 	playsound SFX_STRENGTH
@@ -67,11 +71,6 @@ IcePathB1FIron:
 
 IcePathB1FHiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_ICE_PATH_B1F_HIDDEN_MAX_POTION
-
-IcePathBoulderFellThroughText:
-	text "The boulder fell"
-	line "through."
-	done
 
 IcePathB1F_MapEvents:
 	db 0, 0 ; filler

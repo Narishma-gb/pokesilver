@@ -61,63 +61,54 @@ MountMortarB1FHiddenMaxRevive:
 	hiddenitem MAX_REVIVE, EVENT_MOUNT_MORTAR_B1F_HIDDEN_MAX_REVIVE
 
 MountMortarB1FKiyoIntroText:
-	text "Hey!"
+	text "オスッ！"
+	line "わし<GA>カラテ　だいおう　である！"
 
-	para "I am the KARATE"
-	line "KING!"
+	para "くらい　ほらあなで　ひとり"
+	line "しゅぎょう<WO>する　おとこだ！"
 
-	para "I train alone here"
-	line "in the dark!"
-
-	para "You!"
-	line "Battle with me!"
-
-	para "Hwaaarggh!"
+	para "おい！"
+	line "おぬし！"
+	cont "わしと　たたかえっ！"
+	cont "トオリャー！"
 	done
 
 MountMortarB1FKiyoWinText:
-	text "Waaaarggh!"
-	line "I'm beaten!"
+	text "ウオリャ！"
+	line "だー！　やられたあー！"
 	done
 
 MountMortarB1FTyrogueRewardText:
-	text "I… I'm crushed…"
+	text "むむ<⋯>　むねんっ！"
+	line "まだ　しゅぎょう<GA>たりぬか<⋯>！"
 
-	para "My training is"
-	line "still not enough…"
+	para "くやしい<GA>まけ<WA>まけ！"
+	line "いさぎよく　みとめるぞ！"
 
-	para "But a loss is a"
-	line "loss. I admit it."
-
-	para "As proof that you"
-	line "defeated me, I'll"
-
-	para "give you a rare"
-	line "fighting #MON."
+	para "おぬし！　かった　あかしとして"
+	line "わし<NO>だいじな"
+	cont "かくとう　#<WO>わたす！"
 	done
 
 MountMortarB1FReceiveMonText:
-	text "<PLAYER> received"
-	line "TYROGUE."
+	text "<PLAYER><WA>カラテ　だいおうから"
+	line "バルキー<WO>もらっ<TA!>"
 	done
 
 MountMortarB1FKiyoGotTyrogueText:
-	text "TYROGUE is a"
-	line "fighting-type."
+	text "バルキー<WA>かくとうタイプ！"
 
-	para "It evolves into a"
-	line "tougher #MON."
+	para "そだてると　つよーい　#に"
+	line "しんか　するらしいのだ！"
 
-	para "Keep up the hard"
-	line "work. I'll keep"
-	cont "training too."
-
-	para "Farewell!"
+	para "おぬしも　がんばれっ！"
+	line "わしも　しゅぎょう<WO>つづけるのだ！"
+	cont "ウオッスッ！"
 	done
 
 MountMortarB1FKiyoFullPartyText:
-	text "You have no room"
-	line "in your party!"
+	text "ウスッ！"
+	line "いっぱいで　もてないぞ！"
 	done
 
 MountMortarB1F_MapEvents:

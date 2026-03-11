@@ -63,14 +63,14 @@ RandyScript:
 
 GiftSpearowMail:
 	db FLOWER_MAIL
-	db   "DARK CAVE leads"
-	next "to another road@"
+	db   "くらやみ<NO>ほらあな　からは"
+	next "べつ<NO>みち<NI>つづいているよ@"
 
 GiftSpearowName:
-	db "KENYA@"
+	db "ひきゃく@"
 
 GiftSpearowOTName:
-	db "RANDY@"
+	db "ユウジ@"
 
 Route35GoldenrodGatePokefanFScript:
 	faceplayer
@@ -89,90 +89,70 @@ Route35GoldenrodGatePokefanFScript:
 	end
 
 Route35GoldenrodGateRandyAskTakeThisMonToMyFriendText:
-	text "Excuse me, guy!"
-	line "Can you do a guy"
-	cont "a favor?"
+	text "ねー　キミ　キミ！"
 
-	para "Can you take this"
-	line "#MON with MAIL"
-	cont "to my friend?"
-
-	para "He's on ROUTE 31."
+	para "このメール<WO>もたせた　#を"
+	line "３１<ROUTE><NI>いる"
+	cont "ともだち<NI>とどけて　ほしいんだ"
+	cont "おねがい　できるかな？"
 	done
 
 Route35GoldenrodGateRandyThanksText:
-	text "You will? Perfect!"
-	line "Thanks, guy!"
+	text "ありがとう！"
 
-	para "My pal's a chubby"
-	line "guy who snoozes"
-	cont "all the time."
-
-	para "You'll recognize"
-	line "him right away!"
+	para "ともだち<WA>ふとった　おとこで"
+	line "いつも　いねむり　してるから"
+	cont "すぐ<NI>わかると　おもうよ！"
 	done
 
 Route35GoldenrodGatePlayerReceivedAMonWithMailText:
-	text "<PLAYER> received a"
-	line "#MON with MAIL."
+	text "<PLAYER><WA>メール<WO>もった"
+	line "#<WO>あずかっ<TA!>"
 	done
 
 Route35GoldenrodGateRandyWeirdTreeBlockingRoadText:
-	text "You can read it,"
-	line "but don't lose it!"
-	cont "ROUTE 31!"
+	text "メール<WO>よんでも　いいけど"
+	line "なくさないでよ！"
+	cont "３１<ROUTE>　まで　たのむね！"
 
-	para "Oh, yeah. There"
-	line "was a weird tree"
-	cont "blocking the road."
-
-	para "I wonder if it's"
-	line "been cleared?"
+	para "<⋯>おっと　そういえば"
+	line "ヘンテコな　き　が"
+	cont "みち<WO>ふさいでる　らしいけど"
+	cont "もう　とおれるよう<NI>なったのかな？"
 	done
 
 Route35GoldenrodGateRandyCantCarryAnotherMonText:
-	text "You can't carry"
-	line "another #MON…"
+	text "それ　いじょう"
+	line "#<WO>もてない　みたいだね<⋯>"
 	done
 
 Route35GoldenrodGateRandyOhNeverMindThenText:
-	text "Oh… Never mind,"
-	line "then…"
+	text "そうか<⋯>"
+	line "しかたない　かな<⋯>"
 	done
 
 Route35GoldenrodGateRandySomethingForYourTroubleText:
-	text "Thanks, guy! You"
-	line "made the delivery"
-	cont "for me!"
-
-	para "Here's something"
-	line "for your trouble!"
+	text "ありがとう！"
+	line "ちゃんと　とどけて　くれたんだね！"
+	cont "おれい<WO>あげるよ！"
 	done
 
 Route35GoldenrodGateRandyMyPalWasSnoozingRightText:
-	text "My pal was snooz-"
-	line "ing, right? Heh,"
-	cont "what'd I say?"
+	text "ボク<NO>ともだち<WA>ねてたでしょ？"
+	line "ねてばかり<NO>ヤツ　なんだよ！"
 	done
 
 Route35GoldenrodGatePokefanFText:
-	text "A strange tree is"
-	line "blocking the road."
+	text "はなしかけると　グネグネ　うごく"
+	line "き<GA>みち<WO>ふさいでるんです<TTE>"
 
-	para "It wriggles around"
-	line "if you talk to it."
-
-	para "I heard it became"
-	line "wild when someone"
-
-	para "watered it with a"
-	line "SQUIRTBOTTLE."
+	para "ゼニガメじょうろで　みず<WO>かけたら"
+	line "あばれだした<TTE>　はなしも　きいたわ"
 	done
 
 Route35GoldenrodGatePokefanFText_FoughtSudowoodo:
-	text "I like the #MON"
-	line "Lullaby they play"
-	cont "on the radio."
+	text "<WATASHI>　ラジオから　ながれる"
+	line "#<NO>こもりうた　すきなのよ"
 	done
 
 Route35GoldenrodGate_MapEvents:

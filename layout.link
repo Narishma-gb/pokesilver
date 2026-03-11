@@ -118,6 +118,8 @@ ROMX $20
 ROMX $21
 	"bank21"
 	"Credits"
+ROMX $22
+	"Map Scripts 2"
 ROMX $23
 	; "bank23"
 ROMX $24
@@ -179,7 +181,6 @@ ROMX $3f
 ; ROMX $40
 	; "Standard Scripts"
 	; "Phone Scripts"
-	; "Map Scripts 2"
 	; "Map Scripts 3"
 	; "Map Scripts 4"
 	; "Map Scripts 5"

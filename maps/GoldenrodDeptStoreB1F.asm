@@ -74,37 +74,26 @@ GoldenrodDeptStoreB1FUltraBall:
 	itemball ULTRA_BALL
 
 GoldenrodDeptStoreB1FBlackBelt1Text:
-	text "Hey, kid! You're"
-	line "holding us up!"
-
-	para "Our policy is to"
-	line "work behind the"
-
-	para "scenes where no-"
-	line "one can see us!"
+	text "こらこら　しごと<NO>じゃま　するなよ"
+	line "だれも　みてないとき<NI>はたらく"
+	cont "それ<GA>オレたち<NO>ポリシー！"
 	done
 
 GoldenrodDeptStoreB1FBlackBelt2Text:
-	text "I lose my passion"
-	line "for work if some-"
-	cont "one's watching."
-
-	para "Come on, kid,"
-	line "scoot!"
+	text "ひと<NI>みられてちゃ"
+	line "にもつ<WO>はこぶ　げんき　なくなるぜ"
+	cont "あっち　いった　いっ<TA!>"
 	done
 
 GoldenrodDeptStoreB1FBlackBelt3Text:
-	text "Oohah! Oohah!"
+	text "エッホ　エッホ"
 
-	para "The stuff on the"
-	line "ground's junk."
-
-	para "Take it if you"
-	line "want it!"
+	para "おちてるの<WA>がらくた　ばかり"
+	line "ほしけりゃ　も<TTE>いきな！"
 	done
 
 GoldenrodDeptStoreB1FMachokeText:
-	text "MACHOKE: Maaacho!"
+	text "ゴーリキー『ごご　ごおお！"
 	done
 
 GoldenrodDeptStoreB1F_MapEvents:

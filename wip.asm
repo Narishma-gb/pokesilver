@@ -48,18 +48,13 @@ ENDM
 
 EXPORT DEF SCENE_NEWBARKTOWN_NOOP EQU 1
 EXPORT DEF SCENE_ROUTE29_CATCH_TUTORIAL EQU 1
+EXPORT DEF SCENE_BURNEDTOWER1F_FIREBREATHER_DICK EQU 1
+EXPORT DEF SCENE_ROUTE32_OFFER_SLOWPOKETAIL EQU 1
 
 ;INCLUDE "constants_wip.asm"
 INCLUDE "main.asm"
 	set_gs_diff 0
 
-
-SECTION "rom34", ROMX[$4000], BANK[34]
-; ROM $22 : $88000 - $8BFFF
-
-	dr BasementDoorScript, $4422
-
-	dr
 
 SECTION "rom35", ROMX[$4000], BANK[35]
 ; ROM $23 : $8C000 - $8FFFF
@@ -258,15 +253,20 @@ StdScripts::
 	drs Radio1Script, $b
 	drs Radio2Script, $c
 	drs TrashCanScript, $d
+	drs StrengthBoulderScript, $e
+	drs SmashRockScript, $f
 	drs PokecenterSignScript, $10
 	drs GoldenrodRocketsScript, $12
 	drs RadioTowerRocketsScript, $13
 	drs ElevatorButtonScript, $14
+	drs DayToTextScript, $15
 	drs BugContestResultsWarpScript, $16
+	drs BugContestResultsScript, $17
 	drs InitializeEventsScript, $18
 	drs GymStatue1Script, $27
 	drs GymStatue2Script, $28
 	drs ReceiveItemScript, $29
+	drs ReceiveTogepiEggScript, $2a
 	drs PCScript, $2b
 	drs GameCornerCoinVendorScript, $2c
 

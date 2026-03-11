@@ -666,267 +666,207 @@ UndergroundRivalRetreatMovement2:
 	step_end
 
 UndergroundRivalBeforeText:
-	text "Hold it!"
+	text "まてよ！"
 
-	para "I saw you, so I"
-	line "tailed you."
+	para "おまえ<NO>すがた<WO>みかけたからさ"
+	line "あと<WO>つけたのさ"
 
-	para "I don't need you"
-	line "underfoot while I"
+	para "また　<ROCKET><WO>つぶすの"
+	line "じゃま　されちゃ　たまらないからな"
 
-	para "take care of TEAM"
-	line "ROCKET."
+	para "<⋯>　おもいだした"
+	line "そういや　おまえにも"
+	cont "まけたこと<GA>あったな"
 
-	para "…Wait a second."
-	line "You beat me be-"
-	cont "fore, didn't you?"
-
-	para "That was just a"
-	line "fluke."
-
-	para "But I repay my"
-	line "debts!"
+	para "あんな<NO>まぐれ　だろうが"
+	line "かり<WA>かえして　おくぜ"
 	done
 
 UndergroundRivalWinText:
-	text "…Why…"
-	line "Why do I lose?"
+	text "<⋯>　なぜだ"
+	line "なぜ　まける"
 
-	para "I've assembled the"
-	line "toughest #MON."
+	para "さいきょう<NO>#<WO>そろえた"
+	line "てかげんも　してない<⋯>"
 
-	para "I didn't ease up"
-	line "on the gas."
-
-	para "So why do I lose?"
+	para "なの<NI>どうしてだ？"
 	done
 
 UndergroundRivalAfterText:
-	text "…I don't under-"
-	line "stand…"
+	text "<⋯>　くっ　わからない"
 
-	para "Is what that LANCE"
-	line "guy said true?"
+	para "あ<NO>ワタル<TTE>　やつ<GA>いうように"
+	line "オレに<WA>#への"
 
-	para "That I don't treat"
-	line "#MON properly?"
+	para "あいじょうが<⋯>"
 
-	para "Love…"
+	para "しんらいが<⋯>"
 
-	para "Trust…"
+	para "たりないから　かてない　<TTE>のか"
 
-	para "Are they really"
-	line "what I lack?"
+	para "なんのことだか　わかんない"
 
-	para "Are they keeping"
-	line "me from winning?"
+	para "だ<GA>このまま　おわれるかよ"
 
-	para "I… I just don't"
-	line "understand."
-
-	para "But it's not going"
-	line "to end here."
-
-	para "Not now. Not"
-	line "because of this."
-
-	para "I won't give up my"
-	line "dream of becoming"
-
-	para "the world's best"
-	line "#MON trainer!"
+	para "こんなことで　さいきょう<NI>なる<TTE>"
+	line "ゆめ　あきらめられるかよ<⋯>"
 	done
 
 UndergroundRivalLossText:
-	text "Humph. This is my"
-	line "real power, wimp."
+	text "これ<GA>オレ<NO>じつりょく"
 
-	para "I'll make TEAM"
-	line "ROCKET history."
-
-	para "And I'm going to"
-	line "grind that LANCE"
-	cont "under my heels."
+	para "このまま　<ROCKET><WO>つぶし"
+	line "あ<NO>ワタル<TTE>　やつも"
+	cont "かんぜん<NI>うちまかして　やるさ"
 	done
 
 GoldenrodUndergroundSwitchRoomEntrances_SuperNerdText:
-	text "I was challenged"
-	line "to a battle down-"
-	cont "stairs."
-
-	para "It's rough down"
-	line "there. You'd"
-	cont "better be careful."
+	text "ふう<⋯>"
+	line "ちかで　#しょうぶ　いどまれて"
+	cont "たいへんな　め<NI>あった"
+	cont "　"
+	line "きみも　きをつけた　ほう<GA>いいよ"
 	done
 
 GoldenrodUndergroundSwitchRoomEntrances_TeacherText:
-	text "There are some"
-	line "shops downstairs…"
+	text "ちかに<WA>おみせ<GA>あるけど<⋯>"
 
-	para "But there are"
-	line "also trainers."
-
-	para "I'm scared to go"
-	line "down there."
+	para "<TRAINER><GA>いっぱい　いるから"
+	line "なんだか　こわくて　ちかよれないわ"
 	done
 
 GruntM11SeenText:
-	text "Open one shutter,"
-	line "another closes."
-
-	para "Bet you can't get"
-	line "where you want!"
+	text "どこか<NO>シャッター<GA>あけば"
+	line "どこか<NO>シャッター<GA>しまる"
+	cont "もくてきち<NI>たどりつけるかな？"
 	done
 
 GruntM11BeatenText:
-	text "Drat! I was sunk"
-	line "by indecision!"
+	text "くっ！　たたかいかた"
+	line "まよ<TTE>しまったか"
 	done
 
 GruntM11AfterBattleText:
-	text "I'm confused too…"
-	line "The switch on the"
+	text "<⋯>　おれも　まよ<TTE>んだよ"
 
-	para "end is the one to"
-	line "press first, but…"
+	para "さいしょ<NI>おすのは"
+	line "おく<NO>スイッチ　だったはずだけど"
 	done
 
 GruntM25SeenText:
-	text "Kwahaha!"
+	text "くはは！"
 
-	para "Confounded by the"
-	line "shutters, are we?"
+	para "シャッター<NO>しくみ<GA>わからなくて"
+	line "こま<TTE>るな"
 
-	para "I'll let you in on"
-	line "a secret if you"
-	cont "can beat me!"
+	para "オレさま<NI>かてたら"
+	line "いいこと　おしえてやるぜ"
 	done
 
 GruntM25BeatenText:
-	text "Uwww…"
-	line "I blew it."
+	text "うう<⋯>"
+	line "まけてしまった"
 	done
 
 GruntM25AfterBattleText:
-	text "All right. A hint!"
+	text "わかった　ヒントだ"
 
-	para "Change the order"
-	line "of switching."
-
-	para "That'll change the"
-	line "ways the shutters"
-	cont "open and close."
+	para "シャッター<NO>スイッチを"
+	line "おす　じゅんばん<GA>かわると"
+	cont "ひらく　ばしょも　かわるんだ"
 	done
 
 BurglarDuncanSeenText:
-	text "Fork over your"
-	line "goodies!"
+	text "おまえ<NO>だいじなもの"
+	line "どろぼう　してやるぞ！"
 	done
 
 BurglarDuncanBeatenText:
-	text "Mercy!"
+	text "どろどろー"
 	done
 
 BurglarDuncanAfterBattleText:
-	text "Steal and sell!"
-	line "That's basic in"
-	cont "crime, bub!"
+	text "ひと<NO>もの<WO>ぬすんで"
+	line "しょうばい<WO>する<⋯>"
+	cont "これぞ　わる<NO>やりかた"
 	done
 
 BurglarEddieSeenText:
-	text "They ditched this"
-	line "project before"
-	cont "they finished."
-
-	para "I'm searching for"
-	line "leftover loot."
+	text "<KOKO_WA>かいはつ　とちゅうで"
+	line "ほうりだされた　ばしょ<⋯>"
+	cont "なにか　ないかと　さぐ<TTE>るのさ"
 	done
 
 BurglarEddieBeatenText:
-	text "Over the top!"
+	text "つよい<⋯>"
 	done
 
 BurglarEddieAfterBattleText:
-	text "UNDERGROUND WARE-"
-	line "HOUSE?"
+	text "ちかそうこ<NI>いくのか？"
 
-	para "What do you want"
-	line "to go there for?"
-
-	para "There's nothing"
-	line "down there."
+	para "やめとけ"
+	line "あそこにゃ　なんにも　ないよ"
 	done
 
 GruntM13SeenText:
-	text "I don't care if"
-	line "you're lost."
-
-	para "You show up here,"
-	line "you're nothing but"
-	cont "a victim!"
+	text "まいごだろう<GA>なんだろうが"
+	line "おれ<NO>まえ<NI>あらわれる　やつは"
+	cont "ぜんいん　たおしてやるぜ！"
 	done
 
 GruntM13BeatenText:
-	text "Urk! Yeah, think"
-	line "you're cool, huh?"
+	text "くっ！"
+	line "かっこいい　まね　してんじゃねーよ"
 	done
 
 GruntM13AfterBattleText:
-	text "You must have ice"
-	line "in your veins to"
-	cont "dis TEAM ROCKET."
+	text "<ROCKET><NI>はむかうとは"
+	line "こわいものしらず　というか<⋯>"
 	done
 
 SwitchRoomText_Switch1:
-	text "It's labeled"
-	line "SWITCH 1."
+	text "スイッチ<NI>１　と　かかれている"
 	done
 
 GruntF3SeenText:
-	text "Are you lost? No,"
-	line "you can't be."
+	text "まよったの？　いや　ちがうわね"
 
-	para "You don't have"
-	line "that scared look."
-
-	para "I'll give you"
-	line "something to be"
-	cont "scared about!"
+	para "そんな　おびえた　め<WO>してないもの"
+	line "じゃあ　おねえさん<GA>おしえたげる"
+	cont "ほんと<NO>こわさ<TTE>　やつを！"
 	done
 
 GruntF3BeatenText:
-	text "How could you?"
+	text "まあ　なんてこと"
 	done
 
 GruntF3AfterBattleText:
-	text "Go wherever you'd"
-	line "like! Get lost!"
-	cont "See if I care!"
+	text "もう　いいわよ"
+	line "いきたい　ところ　どこへでも　い<TTE>"
+	cont "まよっちゃいなさいよ！"
 	done
 
 SwitchRoomText_OffTurnOn:
-	text "It's OFF."
-	line "Turn it ON?"
+	text "オフ　<NI>な<TTE>いますが"
+	line "オン　にしますか？"
 	done
 
 SwitchRoomText_OnTurnOff:
-	text "It's ON."
-	line "Turn it OFF?"
+	text "オン　<NI>な<TTE>いますが"
+	line "オフ　にしますか？"
 	done
 
 SwitchRoomText_Switch2:
-	text "It's labeled"
-	line "SWITCH 2."
+	text "スイッチ<NI>２　と　かかれている"
 	done
 
 SwitchRoomText_Switch3:
-	text "It's labeled"
-	line "SWITCH 3."
+	text "スイッチ<NI>３　と　かかれている"
 	done
 
 SwitchRoomText_Emergency:
-	text "It's labeled"
-	line "EMERGENCY."
+	text "スイッチ<NI>ひじょうよう"
+	line "と　かかれている"
 	done
 
 GoldenrodUndergroundSwitchRoomEntrances_MapEvents:

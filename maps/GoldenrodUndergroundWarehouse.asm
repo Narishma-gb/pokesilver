@@ -92,116 +92,87 @@ GoldenrodUndergroundWarehouseTMSleepTalk:
 	itemball TM_SLEEP_TALK
 
 GruntM24SeenText:
-	text "How did you get"
-	line "this far?"
+	text "まさか　ここまで　くるとは<⋯>"
 
-	para "I guess it can't"
-	line "be helped. I'll"
-	cont "dispose of you."
+	para "しかたがない"
+	line "おれ<GA>しまつ　してやるぜ！"
 	done
 
 GruntM24BeatenText:
-	text "He disposed of me…"
+	text "しまつ　され<TA!>"
 	done
 
 GruntM24AfterBattleText:
-	text "TEAM ROCKET will"
-	line "keep going, wait-"
-	cont "ing for the return"
-	cont "of GIOVANNI."
+	text "おれたち<WA>サカキさまが"
+	line "おもどり<NI>なられるまで"
+	cont "<ROCKET><WO>まもりつづけるぞ"
 
-	para "We'll do whatever"
-	line "it takes."
+	para "たとえ　どんなこと<WO>してでもな"
 	done
 
 GruntM14SeenText:
-	text "You're not going"
-	line "any farther!"
+	text "くそう！"
+	line "これいじょう　さき<NI>いかせるか！"
 
-	para "I don't show mercy"
-	line "to my enemies, not"
-	cont "even brats!"
+	para "オレ<WA>あいて<GA>こども　だろうが"
+	line "てかげん　しない　おとこだぜ！"
 	done
 
 GruntM14BeatenText:
-	text "Blast it!"
+	text "どがーん！！"
 	done
 
 GruntM14AfterBattleText:
-	text "I lost…"
-
-	para "Please forgive me,"
-	line "GIOVANNI!"
+	text "まけてしまった<⋯>"
+	line "サカキさま　すみません<⋯>"
 	done
 
 GruntM15SeenText:
-	text "Hyuck-hyuck-hyuck!"
-	line "I remember you!"
+	text "ひゃひゃひゃっ！"
 
-	para "You got me good"
-	line "at our hideout!"
+	para "おまえのこと　おぼえてるぜ"
+	line "アジトじゃ　せわ<NI>なったからな"
 	done
 
 GruntM15BeatenText:
-	text "Hyuck-hyuck-hyuck!"
-	line "So, that's how?"
+	text "ひゃひゃひゃっ！"
+	line "そう　きたか"
 	done
 
 GruntM15AfterBattleText:
-	text "Hyuck-hyuck-hyuck!"
-	line "That was a blast!"
-	cont "I'll remember you!"
+	text "ひゃひゃひゃっ！　おもしろかったぜ"
+	line "おまえのこと　おぼえとくよ"
 	done
 
 DirectorIntroText:
-	text "DIRECTOR: Who?"
-	line "What? You came to"
-	cont "rescue me?"
+	text "きょくちょう『<⋯>　き　きみは？"
+	line "そうか　たすけ<NI>きてくれたのか"
+	cont "ありがとう　れいをいうよ"
 
-	para "Thank you!"
+	para "そ　そうだ！"
+	line "ラジオとう<WA>どうな<TTE>る？"
 
-	para "The RADIO TOWER!"
-
-	para "What's happening"
-	line "there?"
-
-	para "Taken over by TEAM"
-	line "ROCKET?"
-
-	para "Here. Take this"
-	line "CARD KEY."
+	para "な<NI><ROCKET>で　いっぱい！"
+	line "わかっ<TA!>"
+	cont "こ<NO>カードキー<WO>わたそう"
 	done
 
 DirectorCardKeyText:
-	text "DIRECTOR: Use that"
-	line "to open the shut-"
-	cont "ters on 3F."
+	text "きょくちょう『それさえ　あれば"
+	line "３かい<NO>シャッター<WA>ひらく"
 	done
 
 DirectorAfterText:
-	text "I'm begging you to"
-	line "help."
+	text "たのむ　ラジオ<WO>のっとられたら"
+	line "なに<WO>されるか　わからない"
 
-	para "There's no telling"
-	line "what they'll do if"
+	para "おかしな　でんぱ<WO>ながして"
+	line "#<WO>あやつることだ<TTE>"
+	cont "できてしまうかも　しれない"
 
-	para "they control the"
-	line "transmitter."
-
-	para "They may even be"
-	line "able to control"
-
-	para "#MON using a"
-	line "special signal!"
-
-	para "You're the only"
-	line "one I can call on."
-
-	para "Please save the"
-	line "RADIO TOWER…"
-
-	para "And all the #-"
-	line "MON nationwide!"
+	para "たのめるの<WA>きみだけ　なんだ"
+	line "ラジオとうを<⋯>"
+	cont "ぜんこく<NO>#<WO>たすけてくれ"
 	done
 
 GoldenrodUndergroundWarehouse_MapEvents:
