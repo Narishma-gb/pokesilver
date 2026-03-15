@@ -7,7 +7,7 @@ InitDisplayForHallOfFame:
 	call LoadFontsBattleExtra
 	hlbgcoord 0, 0
 	ld bc, vBGMap1 - vBGMap0
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	hlcoord 0, 0, wAttrmap
 	ld bc, SCREEN_AREA
@@ -24,8 +24,9 @@ InitDisplayForHallOfFame:
 	ret
 
 .SavingRecordText:
-	text_far _SavingRecordText
-	text_end
+	text "でんどういりデータを　かきこみちゅう"
+	line "でんげんを　きらないで　ください"
+	done
 
 InitDisplayForRedCredits:
 	call ClearBGPalettes
@@ -36,7 +37,7 @@ InitDisplayForRedCredits:
 	call LoadFontsBattleExtra
 	hlbgcoord 0, 0
 	ld bc, vBGMap1 - vBGMap0
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	hlcoord 0, 0, wAttrmap
 	ld bc, SCREEN_AREA

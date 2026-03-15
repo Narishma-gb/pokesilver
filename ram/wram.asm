@@ -404,13 +404,13 @@ SECTION UNION "Overworld Map", WRAM0
 wOverworldMapBlocks:: ds 1300
 wOverworldMapBlocksEnd::
 
-/*
+
 SECTION UNION "Overworld Map", WRAM0
 
 ; decompress buffer in wram
 wDecompressScratch:: ds 40 tiles
 
-*/
+
 SECTION UNION "Overworld Map", WRAM0
 
 ; GB Printer data
@@ -476,7 +476,7 @@ SECTION UNION "Overworld Map", WRAM0
 
 ; debug color picker
 wDebugOriginalColors:: ds 256 * 4
-
+*/
 
 SECTION UNION "Overworld Map", WRAM0
 
@@ -485,7 +485,7 @@ SECTION UNION "Overworld Map", WRAM0
 wUnusedPikachuFrameset:: db
 	ds 18
 wUnusedJigglypuffNoteXCoord:: db
-*/
+
 
 SECTION UNION "Overworld Map", WRAM0
 
@@ -748,7 +748,7 @@ wBattleMon:: battle_struct wBattleMon
 
 NEXTU
 ; intro water/grass/fire cutscene data
-	ds 4
+	ds 14
 wIntroJumptableIndex:: db
 wIntroBGMapPointer:: dw
 wIntroTilemapPointer:: dw

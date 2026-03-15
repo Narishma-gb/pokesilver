@@ -496,22 +496,22 @@ ENDC
 .OAMData_TextEntryCursor:
 	db 4
 	dbsprite -1, -1,  7,  7, $00, 0
-	dbsprite  0, -1,  0,  7, $00, 0 | OAM_XFLIP
-	dbsprite -1,  0,  7,  0, $00, 0 | OAM_YFLIP
-	dbsprite  0,  0,  0,  0, $00, 0 | OAM_XFLIP | OAM_YFLIP
+	dbsprite  0, -1,  1,  7, $00, 0 | OAM_XFLIP
+	dbsprite -1,  0,  7,  1, $00, 0 | OAM_YFLIP
+	dbsprite  0,  0,  1,  1, $00, 0 | OAM_XFLIP | OAM_YFLIP
 
 .OAMData_TextEntryCursorBig:
 	db 10
-	dbsprite  0, -1,  0,  7, $00, 0
-	dbsprite  1, -1,  0,  7, $01, 0
-	dbsprite  2, -1,  0,  7, $01, 0
-	dbsprite  3, -1,  0,  7, $01, 0
-	dbsprite  4, -1,  0,  7, $00, 0 | OAM_XFLIP
-	dbsprite  0,  0,  0,  0, $00, 0 | OAM_YFLIP
-	dbsprite  1,  0,  0,  0, $01, 0 | OAM_YFLIP
-	dbsprite  2,  0,  0,  0, $01, 0 | OAM_YFLIP
-	dbsprite  3,  0,  0,  0, $01, 0 | OAM_YFLIP
-	dbsprite  4,  0,  0,  0, $00, 0 | OAM_XFLIP | OAM_YFLIP
+	dbsprite -1, -1,  7,  7, $00, 0
+	dbsprite  0, -1,  7,  7, $01, 0
+	dbsprite  1, -1,  7,  7, $01, 0
+	dbsprite  2, -1,  7,  7, $01, 0
+	dbsprite  3, -1,  1,  7, $00, 0 | OAM_XFLIP
+	dbsprite -1,  0,  7,  1, $00, 0 | OAM_YFLIP
+	dbsprite  0,  0,  7,  1, $01, 0 | OAM_YFLIP
+	dbsprite  1,  0,  7,  1, $01, 0 | OAM_YFLIP
+	dbsprite  2,  0,  7,  1, $01, 0 | OAM_YFLIP
+	dbsprite  3,  0,  1,  1, $00, 0 | OAM_XFLIP | OAM_YFLIP
 
 .OAMData_GSGameFreakLogo:
 	db 15

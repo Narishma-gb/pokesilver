@@ -58,7 +58,7 @@ PartyMenu_InitAnimatedMonIcon:
 	add a
 	add a
 	add a
-	add $1c
+	add $1a
 	ld d, a
 ; x coord
 	ld e, $10
@@ -154,8 +154,8 @@ MoveList_InitAnimatedMonIcon:
 	ld [wCurIcon], a
 	xor a
 	call GetIconGFX
-	ld d, 3 * TILE_WIDTH + 2 ; depixel 3, 4, 2, 4
-	ld e, 4 * TILE_WIDTH + 4
+	ld d, 3 * TILE_WIDTH + 2 ; depixel 3, 3, 2, 0
+	ld e, 3 * TILE_WIDTH
 	ld a, SPRITE_ANIM_OBJ_PARTY_MON
 	call _InitSpriteAnimStruct
 	ld hl, SPRITEANIMSTRUCT_ANIM_SEQ_ID

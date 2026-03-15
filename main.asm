@@ -231,19 +231,17 @@ INCLUDE "gfx/battle_anims.asm"
 INCLUDE "engine/events/halloffame.asm"
 
 
-;SECTION "bank23", ROMX
+SECTION "bank23", ROMX
 
-;INCLUDE "engine/menus/savemenu_copytilemapatonce.asm"
-;INCLUDE "engine/phone/phonering_copytilemapatonce.asm"
-;INCLUDE "engine/rtc/reset_password.asm"
-;INCLUDE "engine/menus/delete_save.asm"
-;INCLUDE "engine/tilesets/timeofday_pals.asm"
-;INCLUDE "engine/battle/battle_transition.asm"
-;INCLUDE "engine/events/field_moves.asm"
-;INCLUDE "engine/events/magnet_train.asm"
-;INCLUDE "engine/sprite_anims/core.asm"
-;INCLUDE "engine/gfx/mon_icons.asm"
-;INCLUDE "engine/movie/init_hof_credits.asm"
+INCLUDE "engine/menus/savemenu_copytilemapatonce.asm"
+INCLUDE "engine/phone/phonering_copytilemapatonce.asm"
+INCLUDE "engine/tilesets/timeofday_pals.asm"
+INCLUDE "engine/battle/battle_transition.asm"
+INCLUDE "engine/events/field_moves.asm"
+INCLUDE "engine/events/magnet_train.asm"
+INCLUDE "engine/sprite_anims/core.asm"
+INCLUDE "engine/gfx/mon_icons.asm"
+INCLUDE "engine/movie/init_hof_credits.asm"
 
 
 ;SECTION "bank24", ROMX
