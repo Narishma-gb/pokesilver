@@ -33,46 +33,37 @@ Route18Sign:
 	jumptext Route18SignText
 
 BirdKeeperBorisSeenText:
-	text "If you're looking"
-	line "for #MON, you"
-
-	para "have to look in"
-	line "the tall grass."
+	text "#　さがし<NO>コツは"
+	line "くさむら　みつけたら"
+	cont "まず　はい<TTE>みる　ことだね！"
 	done
 
 BirdKeeperBorisBeatenText:
-	text "Ayieee!"
+	text "ひー！"
 	done
 
 BirdKeeperBorisAfterBattleText:
-	text "Since you're so"
-	line "strong, it must be"
-	cont "fun to battle."
+	text "きみ　ぐらい　つよければ"
+	line "たいせん　するのも　たのしいでしょ"
 	done
 
 BirdKeeperBobSeenText:
-	text "CYCLING ROAD is a"
-	line "quick shortcut to"
-	cont "CELADON."
+	text "サイクリング　ロードが"
+	line "タマムシへ<NO>ちかみち　だよね！"
 	done
 
 BirdKeeperBobBeatenText:
-	text "…Whew!"
+	text "<⋯>　<⋯>ふう！"
 	done
 
 BirdKeeperBobAfterBattleText:
-	text "If you don't have"
-	line "a BICYCLE, you're"
-
-	para "not allowed to use"
-	line "the shortcut."
+	text "じてんしゃ　も<TTE>ないから"
+	line "ちかみち　つかえないんだけどね"
 	done
 
 Route18SignText:
-	text "ROUTE 18"
-
-	para "CELADON CITY -"
-	line "FUCHSIA CITY"
+	text "<KOKO_WA>１８<ROUTE>"
+	line "タマムシシティ　<⋯>　セキチクシティ"
 	done
 
 Route18_MapEvents:

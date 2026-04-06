@@ -50,64 +50,52 @@ CinnabarGymSign:
 	jumptext CinnabarGymSignText
 
 SwimmerfNicoleSeenText:
-	text "I feel so much"
-	line "lighter in water."
+	text "みず<NO>なか<NI>はいると"
+	line "からだ<GA>かるくなった　き<GA>するわ"
 	done
 
 SwimmerfNicoleBeatenText:
-	text "Oh, no!"
+	text "いやーん！"
 	done
 
 SwimmerfNicoleAfterBattleText:
-	text "Swimming exercises"
-	line "your full body."
-
-	para "It's really good"
-	line "for you."
+	text "すいえい<WA>ぜんしん<WO>つかうから"
+	line "と<TTE>も　けんこう<NI>いいのよ！"
 	done
 
 SwimmerfLoriSeenText:
-	text "What an impressive"
-	line "collection of GYM"
-
-	para "BADGES. We should"
-	line "battle!"
+	text "すごい　バッジ<NO>かずね！"
+	line "しょうぶ　しましょう！"
 	done
 
 SwimmerfLoriBeatenText:
-	text "No!"
+	text "やだー！"
 	done
 
 SwimmerfLoriAfterBattleText:
-	text "SURF is no longer"
-	line "the only HM move"
-	cont "you use in water."
+	text "みずで　つかう　ひでんわざは"
+	line "なみのり　だけじゃ　ないのよね"
 	done
 
 SwimmermCameronSeenText:
-	text "I guess it's im-"
-	line "possible to swim"
-
-	para "all the way to"
-	line "JOHTO."
+	text "このまま　ジョウトまで"
+	line "およぐこと<WA>ムリだろうなあ"
 	done
 
 SwimmermCameronBeatenText:
-	text "Aiyah!"
+	text "うひーっ！"
 	done
 
 SwimmermCameronAfterBattleText:
-	text "Besides the sea, I"
-	line "can also swim in"
-	cont "ponds and rivers."
+	text "うみ<NO>ほかにも　いけや　かわ<TTE>"
+	line "あちこち<NI>あるよなあ<⋯>"
 	done
 
 CinnabarGymSignText:
-	text "What does this"
-	line "sign say?"
+	text "<⋯>　はりがみ<GA>は<TTE>　ある！"
 
-	para "CINNABAR GYM"
-	line "LEADER: BLAINE"
+	para "グレンタウン<NO>ジム<WA>ここ！"
+	line "ジムリーダー　カツラ"
 	done
 
 Route20_MapEvents:

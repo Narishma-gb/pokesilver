@@ -44,17 +44,13 @@ RuinsOfAlphHoOhChamberDescriptionSign:
 	jumptext RuinsOfAlphHoOhChamberDescriptionText
 
 RuinsOfAlphHoOhChamberAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	text "むかし<NO>#を"
+	line "まねして　つくられた　もの"
 	done
 
 RuinsOfAlphHoOhChamberDescriptionText:
-	text "A #MON that"
-	line "flew gracefully on"
-
-	para "rainbow-colored"
-	line "wings."
+	text "にじいろ<NI>かがやく　ハネで"
+	line "おおぞら<WO>ゆうが<NI>まう　#"
 	done
 
 RuinsOfAlphHoOhChamber_MapEvents:

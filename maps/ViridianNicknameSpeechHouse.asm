@@ -32,31 +32,25 @@ Rattey:
 	end
 
 ViridianNicknameSpeechHousePokefanMText:
-	text "Do you put a lot"
-	line "of thought into"
+	text "#<NO>ニックネーム"
+	line "ちゃんと　かんがえて　つけてる？"
 
-	para "naming your"
-	line "#MON?"
-
-	para "Giving them good"
-	line "nicknames adds to"
-
-	para "the fun of trading"
-	line "with others."
+	para "ニックネーム<WO>つけて　おくと"
+	line "ひとと　こうかん　した　とき"
+	cont "たのしい　よね！"
 	done
 
 ViridianNicknameSpeechHouseLassText:
-	text "They're SPEARY--"
-	line "a SPEAROW--and"
-	cont "RATTEY--a RATTATA."
+	text "オニスズメ<NO>オニチャンと"
+	line "コラッタ<NO>コーチャン　よ！"
 	done
 
 SpearyText:
-	text "SPEARY: Ch-chun!"
+	text "オニチャン『ちゅ　ちゅん！"
 	done
 
 RatteyText:
-	text "RATTEY: Kikiii!"
+	text "コーチャン『きっきーっ！"
 	done
 
 ViridianNicknameSpeechHouse_MapEvents:

@@ -172,149 +172,111 @@ RuinsOfAlphResearchCenterLeavesPlayerMovement:
 	step_end
 
 RuinsOfAlphResearchCenterModifiedDexText:
-	text "Done!"
+	text "よし！"
 
-	para "I modified your"
-	line "#DEX."
+	para "#ずかん<NO>かいぞうが"
+	line "おわったぞ！"
 
-	para "I added an"
-	line "optional #DEX"
+	para "オプション<NI>アンノーンずかんを"
+	line "ついかさせて　もらったよ"
 
-	para "to store UNOWN"
-	line "data."
-
-	para "It records them in"
-	line "the sequence that"
-	cont "they were caught."
+	para "つかまえた　じゅんばんで"
+	line "きろくするよう<NI>したんだよ"
 	done
 
 RuinsOfAlphResearchCenterDexUpgradedText:
-	text "<PLAYER>'s #DEX"
-	line "was upgraded."
+	text "<PLAYER>の"
+	line "#ずかん<GA>パワーアップし<TA!>"
 	done
 
 RuinsOfAlphResearchCenterScientist3Text:
-	text "The UNOWN you"
-	line "catch will all be"
-	cont "recorded."
+	text "つかまえた　アンノーンが"
+	line "ぜんぶ　きろくされる　からね"
 
-	para "Check to see how"
-	line "many kinds exist."
+	para "なんしゅるい　いるのか"
+	line "キミも　たしかめてくれ！"
 	done
 
 RuinsOfAlphResearchCenterScientist3_PrinterAvailable:
-	text "You caught all the"
-	line "UNOWN variations?"
+	text "アンノーン<WO>ぜんしゅるい"
+	line "つかまえたのか！"
+	cont "それ<WA>すごい！！"
 
-	para "That's a great"
-	line "achievement!"
+	para "こ<NO>けんきゅうしつ<NI>ある"
+	line "プリンタで　アンノーン<NO>すがたを"
+	cont "プリントできるよう<NI>してみたんだ"
 
-	para "I've set up the"
-	line "printer here for"
-	cont "handling UNOWN."
-
-	para "Feel free to use"
-	line "it anytime."
+	para "ぜひ　つか<TTE>みてくれ！"
 	done
 
 RuinsOfAlphResearchCenterScientist1Text:
-	text "The RUINS are"
-	line "about 1500 years"
-	cont "old."
-
-	para "But it's not known"
-	line "why they were"
-	cont "built--or by whom."
+	text "およそ　１５００ねん　まえに"
+	line "いせき<WA>つくられたのですが"
+	cont "だれ<GA>なんのため<NI>つくったのか"
+	cont "まだ　わか<TTE>　いません<⋯>"
 	done
 
 RuinsOfAlphResearchCenterScientist1Text_GotUnownDex:
-	text "I wonder how many"
-	line "kinds of #MON"
-	cont "are in the RUINS?"
+	text "いせき<NO>#"
+	line "ぜんぶで　なんしゅるい　いるんだ？"
 	done
 
 RuinsOfAlphResearchCenterScientist1Text_UnownAppeared:
-	text "#MON appeared"
-	line "in the RUINS?"
+	text "いせき<NI>#が"
+	line "しゅつげん　したんですか！？"
 
-	para "That's incredible"
-	line "news!"
-
-	para "We'll need to"
-	line "investigate this."
+	para "これ<WA>だいじけん！"
+	line "さっそく　ちょうさ　しないと！"
 	done
 
 RuinsOfAlphResearchCenterScientist2Text:
-	text "There are odd pat-"
-	line "terns drawn on the"
+	text "カベ<NI>かかれた　もようが"
+	line "いせき<NO>ナゾ<WO>とく　カギ！"
 
-	para "walls of the"
-	line "RUINS."
-
-	para "They must be the"
-	line "keys for unravel-"
-	cont "ing the mystery"
-	cont "of the RUINS."
+	para "<⋯>だと　おもうんだけどなあ"
 	done
 
 RuinsOfAlphResearchCenterScientist2Text_UnownAppeared:
-	text "The strange #-"
-	line "MON you saw in the"
-	cont "RUINS?"
+	text "キミ<GA>であった　#は"
+	line "いせき<NO>カベ<NO>もように"
+	cont "にている　みたいだね"
 
-	para "They appear to be"
-	line "very much like the"
+	para "<⋯>ふむ"
 
-	para "drawings on the"
-	line "walls there."
-
-	para "Hmm…"
-
-	para "That must mean"
-	line "there are many"
-	cont "kinds of them…"
+	para "だとすると　たくさん<NO>しゅるいが"
+	line "いせき<NI>いるんだろうか<⋯>"
 	done
 
 RuinsOfAlphResearchCenterComputerText:
-	text "RUINS OF ALPH"
-
-	para "Exploration"
-	line "Year 10"
+	text "アルフ<NO>いせき　ちょうさ"
+	line "<⋯>ことしで　１０ねんめ"
 	done
 
 RuinsOfAlphResearchCenterComputerText_GotAllUnown:
-	text "Mystery #MON"
-	line "Name: UNOWN"
-
-	para "A total of {d:NUM_UNOWN}"
-	line "kinds found."
+	text "ナゾの#"
+	line "なまえ<⋯>アンノーン"
+	cont "ぜんぶで　２６しゅるい　はっけん"
 	done
 
 RuinsOfAlphResearchCenterPrinterText_DoesntWork:
-	text "This doesn't seem"
-	line "to work yet."
+	text "いま<WA>つかえない　みたい<⋯>"
 	done
 
 RuinsOfAlphResearchCenterUnownPrinterText:
-	text "UNOWN may be"
-	line "printed out."
+	text "アンノーン<NO>すがたを"
+	line "プリントすること<GA>できます！"
 	done
 
 RuinsOfAlphResearchCenterProfSilktreePhotoText:
-	text "It's a photo of"
-	line "the RESEARCH"
-
-	para "CENTER'S founder,"
-	line "PROF.SILKTREE."
+	text "アルフのいせき　けんきゅうしょ"
+	line "しょだい　しょちょう"
+	cont "ネムノキはかせ<NO>しゃしんだ！"
 	done
 
 RuinsOfAlphResearchCenterAcademicBooksText:
-	text "There are many"
-	line "academic books."
-
-	para "Ancient Ruins…"
-	line "Mysteries of the"
-	cont "Ancients…"
+	text "むずかしい　ほん<GA>いっぱい"
+	line "『こだいのいせき』<⋯>"
+	cont "『こだいぶんめいのナゾ』<⋯>"
 	done
 
 RuinsOfAlphResearchCenter_MapEvents:

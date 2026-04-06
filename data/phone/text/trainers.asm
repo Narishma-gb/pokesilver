@@ -1,355 +1,281 @@
 PhoneMaleAnswerMornText:
-	text "Hello. This is"
-	line "@"
+	text "もしもし　@"
 	text_ram wStringBuffer3
-	text "…"
+	text "ですけど⋯"
 
-	para "Good morning,"
-	line "<PLAYER>!"
+	para "やあ　<PLAYER>くん　おはよう！"
 	done
 
 PhoneMaleAnswerDayText:
-	text "Hello. This is"
-	line "@"
+	text "もしもし　@"
 	text_ram wStringBuffer3
-	text "…"
+	text "ですけど⋯"
 
-	para "How's it going,"
-	line "<PLAYER>?"
+	para "やあ　<PLAYER>くん　こんにちは！"
 	done
 
 PhoneMaleAnswerNiteText:
-	text "Hello. This is"
-	line "@"
+	text "もしもし　@"
 	text_ram wStringBuffer3
-	text "…"
+	text "ですけど⋯"
 
-	para "Good evening,"
-	line "<PLAYER>!"
+	para "やあ　<PLAYER>くん　こんばんは！"
 	done
 
 PhoneFemaleAnswerMornText:
-	text "Hi. This is"
-	line "@"
+	text "はい　@"
 	text_ram wStringBuffer3
-	text "."
+	text "です"
 
-	para "Hi, <PLAYER>!"
-	line "Good morning."
+	para "あら　<PLAYER>くん　おはよう"
 	done
 
 PhoneFemaleAnswerDayText:
-	text "Hi. This is"
-	line "@"
+	text "はい　@"
 	text_ram wStringBuffer3
-	text "."
+	text "です"
 
-	para "Hi, <PLAYER>!"
-	line "How are you?"
+	para "あら　<PLAYER>くん　こんにちは"
 	done
 
 PhoneFemaleAnswerNiteText:
-	text "Hi. This is"
-	line "@"
+	text "はい　@"
 	text_ram wStringBuffer3
-	text "."
+	text "です"
 
-	para "Hi, <PLAYER>!"
-	line "Good evening."
+	para "あら　<PLAYER>くん　こんばんは"
 	done
 
 PhoneMaleGreetMornText:
-	text "<PLAYER>, good"
-	line "morning!"
+	text "<PLAYER>くん　おはよう！"
 
-	para "It's me, @"
+	para "@"
 	text_ram wStringBuffer3
-	text "."
-	line "How are you doing?"
+	text "だけど　げんきかい？"
 	done
 
 PhoneMaleGreetDayText:
-	text "<PLAYER>, howdy!"
+	text "<PLAYER>くん　こんにちは！"
 
-	para "It's me, @"
+	para "@"
 	text_ram wStringBuffer3
-	text "."
-	line "Isn't it nice out?"
+	text "だけど　いいてんきだね！"
 	done
 
 PhoneMaleGreetNiteText:
-	text "<PLAYER>, good"
-	line "evening!"
+	text "<PLAYER>くん　こんばんは！"
 
-	para "It's me, @"
+	para "@"
 	text_ram wStringBuffer3
-	text "."
-	line "Got a minute?"
+	text "だけど　ちょっといい？"
 	done
 
 PhoneFemaleGreetMornText:
-	text "Good morning,"
-	line "<PLAYER>."
-
-	para "This is @"
+	text "<PLAYER>くん　おはよう"
+	line "@"
 	text_ram wStringBuffer3
-	text "."
-	line "Did I wake you?"
+	text "ですけど　ねてました？"
 	done
 
 PhoneFemaleGreetDayText:
-	text "Hello, <PLAYER>."
-
-	para "This is @"
+	text "<PLAYER>くん　こんにちは"
+	line "@"
 	text_ram wStringBuffer3
-	text "."
-	line "How are things?"
+	text "ですけど　おげんき　ですか？"
 	done
 
 PhoneFemaleGreetNiteText:
-	text "Good evening,"
-	line "<PLAYER>."
-
-	para "This is @"
+	text "<PLAYER>くん　こんばんは"
+	line "@"
 	text_ram wStringBuffer3
-	text "."
-	line "Were you awake?"
+	text "ですけど　おきてます？"
 	done
 
 PhoneMaleReallyEnergeticText:
-	text "How are your"
-	line "#MON doing?"
+	text "きみ<NO>#　げんきかい？"
 
-	para "My @"
+	para "ボク<NO>@"
 	text_ram wStringBuffer4
-	text "'s"
-	line "really energetic."
-	cont "It's a handful!"
+	text "は"
+	line "げんきすぎて　こまっちゃう"
+	cont "くらいだよ"
 	done
 
 PhoneFemaleTopShapeText:
-	text "How are your"
-	line "#MON doing?"
+	text "#<NO>ちょうし<WA>どう？"
 
-	para "I always keep my"
-	line "@"
+	para "<WATASHI><NO>@"
 	text_ram wStringBuffer4
-	text " in top"
-
-	para "shape by going to"
-	line "#MON CENTERS."
+	text "<WA>いつも"
+	line "#センター　い<TTE>るから"
+	cont "ちょうし<WA>バッチリよ！"
 	done
 
 PhoneMaleLookingAwesomeText:
-	text "My @"
+	text "ボク<NO>@"
 	text_ram wStringBuffer4
-	text "'s"
-	line "looking awesome."
-
-	para "I wish I could"
-	line "show you."
+	text "ねぇ　また"
+	line "いちだんと　かっこよくなったよ！"
+	cont "きみにも　みせて　あげたいな"
 	done
 
 PhoneFemaleDressedUpText:
-	text "I dressed up my"
-	line "@"
+	text "<WATASHI><NO>@"
 	text_ram wStringBuffer4
-	text "."
-
-	para "It looks even"
-	line "cuter than before."
+	text "ちゃん"
+	line "おしゃれ　したら　ますます"
+	cont "キュート<NI>なったのよ"
 	done
 
 PhoneMaleManagedToBeatText:
-	text "Oh, yeah, I man-"
-	line "aged to beat a"
-	cont "tough @"
+	text "そうそう"
+	line "このまえ　@"
 	text_ram wStringBuffer4
-	text "."
+	text "<WO>なんとか"
+	cont "たおしたよ"
 
-	para "I need to make my"
-	line "party stronger."
+	para "まだまだ　そだて<GA>たりないかな？"
 	done
 
 PhoneFemaleTypeAdvantageText:
-	text "You have to hear"
-	line "this! I battled"
-
-	para "@"
+	text "ねえねえ　きいてきいて"
+	line "このまえ　@"
 	text_ram wStringBuffer4
-	text " the"
-	line "other day."
+	text "と　たたかったら"
+	cont "かんたん<NI>たおせたのよ！"
 
-	para "It was easy! I had"
-	line "a type advantage."
+	para "あいしょう<GA>よかったのかな？"
 	done
 
 PhoneMaleAlmostCaughtText:
-	text "Hey, listen!"
-	line "I almost caught"
-
-	para "@"
+	text "それから　きいてくれよ！"
+	line "このまえ　もうすこしのところで"
+	cont "@"
 	text_ram wStringBuffer4
-	text " the"
-	line "other day."
+	text "<NI>にげられたよ"
 
-	para "Oh, it was soooo"
-	line "close too!"
+	para "あれ<WA>もったいなかったなぁ"
 	done
 
 PhoneFemaleMissedCatchingText:
-	text "Guess what happen-"
-	line "ed the other day."
+	text "それからね　きいてよー"
 
-	para "I missed catching"
-	line "@"
+	para "また　@"
 	text_ram wStringBuffer4
-	text " again."
-
-	para "Maybe I'm not very"
-	line "good at this…"
+	text "を"
+	line "つかまえられなかったのー"
+	cont "<WATASHI>　ヘタなのかなぁ⋯"
 	done
 
 PhoneMaleWantsToBattleText:
-	text "Want to battle?"
-	line "It's not going to"
-
-	para "be a repeat of the"
-	line "last time we met."
-
-	para "I'll be around"
-	line "@"
-	text_ram wStringBuffer5
-	text "."
-	done
-
-PhoneFemaleWantsToBattleText:
-	text "Do you want to"
-	line "battle? I'm going"
-	cont "to win this time!"
-
-	para "I'll be waiting"
-	line "for you around"
+	text "#しょうぶ　しない？"
+	line "このまえ　みたいに<WA>いかないよ！"
 
 	para "@"
 	text_ram wStringBuffer5
-	text "."
-	line "Look for me, OK?"
+	text "<NI>いるから"
+	line "ちかくにきたら　こえかけてくれ！"
+	done
+
+PhoneFemaleWantsToBattleText:
+	text "#しょうぶ　やらない？"
+	line "こんど<WA><WATASHI><GA>かつんだから！"
+
+	para "@"
+	text_ram wStringBuffer5
+	text "<NI>いるから"
+	line "ちかくをとおったら　こえかけてね！"
 	done
 
 PhoneWrongNumberKazText:
-	text "Hello? This is"
-	line "@"
+	text "もしもし　@"
 	text_ram wStringBuffer3
-	text "…"
+	text "ですけど⋯"
 
-	para "Uh-oh… You're not"
-	line "KAZ! Sorry, wrong"
-	cont "number."
+	para "えっ！　ツネカズくんじゃないの？"
+	line "ごめんごめん　まちがえました"
 	done
 
 PhoneWrongNumberAudreyText:
-	text "Hello, this is"
-	line "@"
+	text "もしもし　@"
 	text_ram wStringBuffer3
-	text ". How are"
-	cont "you doing, AUDREY?"
+	text "ですけど"
+	line "アツコちゃん　げんきー？"
 
-	para "Huh? <PLAYER>?"
-	line "Oops! My mistake!"
+	para "えっ　<PLAYER>くん！？"
+	line "まちがえちゃった　ごめんねー"
 	done
 
 PhoneSeeYouLaterText:
-	text "See you later!"
+	text "それじゃあ　またね！"
 	done
 
 PhoneByeByeText:
-	text "Bye-bye!"
+	text "それじゃあ　バイバイ！"
 	done
 
 PhoneSwarmGrassText:
-	text "You have to see"
-	line "this! It's wild!"
+	text "ねえねえ　スゴイんだよ！"
 
-	para "A whole bunch of"
+	para "@"
+	text_ram wStringBuffer5
+	text "で"
 	line "@"
 	text_ram wStringBuffer4
-	text " have"
-
-	para "shown up around"
-	line "@"
-	text_ram wStringBuffer5
-	text "!"
+	text "<GA>たくさん　いるんだよ！"
+	cont "ほんとだよ　きみも　きてみてよ！"
 	done
 
 PhoneSwarmFishText:
-	text "It's amazing!"
+	text "なんか　スゴイんだよ！"
 
-	para "On @"
+	para "@"
 	text_ram wStringBuffer5
-	text ","
+	text "で"
 	line "@"
 	text_ram wStringBuffer4
-	text " are"
-
-	para "biting like there"
-	line "is no tomorrow."
-
-	para "<PLAYER>, bring"
-	line "your ROD, buddy!"
+	text "<GA>つれて　つれて！"
+	cont "<PLAYER>くんも　つり<NI>こない？"
 	done
 
 PhoneSwarmCaveText:
-	text "A friend just told"
-	line "me this."
+	text "さっきねー"
+	line "なかまから　きいたんだけど"
 
-	para "He saw a lot of"
+	para "@"
+	text_ram wStringBuffer5
+	text "で　たくさん"
 	line "@"
 	text_ram wStringBuffer4
-	text " in"
-	cont "@"
-	text_ram wStringBuffer5
-	text "."
+	text "<WO>みかけた"
+	cont "らしいんだ<TTE>"
 
-	para "<PLAYER>, you ought"
-	line "to go look."
+	para "<PLAYER>くん　い<TTE>みたら"
+	line "どうだい？"
 	done
 
 PhoneBugCatchingContestText:
-	text "They're holding"
-	line "the Bug-Catching"
+	text "きょう<TTE>　たしか"
+	line "こうえんで　むしとりたいかいが"
+	cont "ひらかれる　ひ　だよね？"
 
-	para "Contest today at"
-	line "the PARK."
-
-	para "<PLAYER>, are you"
-	line "going to go?"
+	para "<PLAYER>くん<WA>いくの？"
 	done
 
 IrwinRocketTakeoverRumorText:
-	text "<PLAYER>, did you"
-	line "know?"
+	text "<PLAYER>くん　し<TTE>る？"
 
-	para "I hear GOLDENROD's"
-	line "RADIO TOWER was"
+	para "コガネ<NO>ラジオとうが"
+	line "<ROCKET><NI>のっとられた<TTE>"
 
-	para "taken over by TEAM"
-	line "ROCKET."
-
-	para "But what exactly"
-	line "is TEAM ROCKET?"
+	para "で　<ROCKET><TTE>　なに？"
 	done
 
 GinaRocketTakeoverRumorText:
-	text "<PLAYER>, did you"
-	line "hear the news?"
+	text "<PLAYER>くん　きいた？"
 
-	para "TEAM ROCKET has"
-	line "taken over the"
+	para "コガネ<NO>ラジオとうが"
+	line "<ROCKET><NI>うばわれた<TTE>！"
 
-	para "RADIO TOWER in"
-	line "GOLDENROD CITY."
-
-	para "I wonder if the"
-	line "workers are OK…"
+	para "なかのひと　だいじょうぶかな？"
 	done

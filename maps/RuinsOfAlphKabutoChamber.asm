@@ -51,36 +51,24 @@ RuinsOfAlphKabutoChamberDescriptionSign:
 	jumptext RuinsOfAlphKabutoChamberDescriptionText
 
 RuinsOfAlphKabutoChamberReceptionistText:
-	text "Welcome to this"
-	line "chamber."
+	text "ようこそ　いせき<NO>こべやへ！"
 
-	para "There are sliding"
-	line "panels that depict"
+	para "おおむかし<NO>ひと<GA>えがいた"
+	line "#<NO>え　<GA>あります！"
+	cont "うごかしてみて　ください！"
 
-	para "a #MON drawn by"
-	line "the ancients."
-
-	para "Slide the panels"
-	line "around to form the"
-	cont "picture."
-
-	para "To the right is a"
-	line "description of the"
-	cont "#MON."
+	para "みぎがわ<WA>そ<NO>#の"
+	line "せつめいと　いわれています"
 	done
 
 RuinsOfAlphKabutoChamberAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	text "むかし<NO>#を"
+	line "まねして　つくられた　もの"
 	done
 
 RuinsOfAlphKabutoChamberDescriptionText:
-	text "A #MON that hid"
-	line "on the sea floor."
-
-	para "Eyes on its back"
-	line "scanned the area."
+	text "かいてい<NI>かくれて<WA>せなかの"
+	line "めで　あたり<WO>みていた　#"
 	done
 
 RuinsOfAlphKabutoChamber_MapEvents:

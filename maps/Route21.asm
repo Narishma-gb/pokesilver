@@ -42,51 +42,46 @@ TrainerFisherArnold:
 	end
 
 SwimmermSethSeenText:
-	text "Land ho! Gotta"
-	line "keep going!"
+	text "がんばれ！"
+	line "りくち<GA>みえてき<TA!>"
 	done
 
 SwimmermSethBeatenText:
-	text "Glug…"
+	text "ざっぱーん！"
 	done
 
 SwimmermSethAfterBattleText:
-	text "This arrogant guy"
-	line "was at CINNABAR's"
-	cont "volcano."
+	text "グレン　タウン<NO>ふんかこうに"
+	line "かっこつけた　ヤツ　ひとり　いたな"
 	done
 
 SwimmerfNikkiSeenText:
-	text "Hi!"
+	text "あ！　きみ！"
 
-	para "I was just going"
-	line "to put some sun"
-	cont "block on."
+	para "いま　<WATASHI><NI>サンオイル"
+	line "ぬりたいと　おもったでしょ！"
 	done
 
 SwimmerfNikkiBeatenText:
-	text "I'm worried about"
-	line "sunburn…"
+	text "ひやけ<GA>き<NI>なるわ<⋯>"
 	done
 
 SwimmerfNikkiAfterBattleText:
-	text "I have to watch"
-	line "out for blemishes"
-	cont "caused by the sun."
+	text "シミ　ソバカス<GA>しんぱいな"
+	line "としごろ　なのよ　<WATASHI>"
 	done
 
 FisherArnoldSeenText:
-	text "I'm bored by fish-"
-	line "ing. Let's battle!"
+	text "つりも　あき<TA!>"
+	line "よし！　しょうぶだ！"
 	done
 
 FisherArnoldBeatenText:
-	text "Utter failure…"
+	text "ざんぱい　だ<⋯>"
 	done
 
 FisherArnoldAfterBattleText:
-	text "I'll just go back"
-	line "to fishing…"
+	text "おとなしく　つり<WO>してるよ<⋯>"
 	done
 
 Route21_MapEvents:

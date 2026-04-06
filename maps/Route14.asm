@@ -51,60 +51,50 @@ TrainerPokefanmTrevor:
 	end
 
 PokefanmCarterSeenText:
-	text "Let me tell you,"
-	line "I had a hard time"
-
-	para "catching my prized"
-	line "#MON."
+	text "くろうして　てにいれた"
+	line "じまん<NO>#と　しょうぶだ！"
 	done
 
 PokefanmCarterBeatenText:
-	text "Awaaah!"
+	text "うわあ<⋯>！"
 	done
 
 PokefanmCarterAfterBattleText:
-	text "SQUIRTLE, CHARMAN-"
-	line "DER and BULBASAUR…"
-
-	para "I think that's a"
-	line "well-balanced mix."
+	text "ゼニガメ　ヒトカゲ　フシギダネ"
+	line "こ<NO>くみあわせ<TTE>　けっこう"
+	cont "バランス　いいと　おもうんだ！"
 	done
 
 BirdKeeperRoySeenText:
-	text "My dream is to fly"
-	line "with my beloved"
-	cont "bird #MON."
+	text "だいすきな　とり#と"
+	line "おおぞら　とぶの<GA>ボクのゆめ！"
 	done
 
 BirdKeeperRoyBeatenText:
-	text "I can dream, but I"
-	line "can't ever fly…"
+	text "ばたばたー！"
+	line "はばたいても　ボク<WA>とべない！"
 	done
 
 BirdKeeperRoyAfterBattleText:
-	text "You have #MON"
-	line "that know the HM"
-
-	para "move FLY, don't"
-	line "you? I envy you."
+	text "きみ<NO>#"
+	line "ひでんワザ<NO>そらをとぶ　<TTE>"
+	cont "もちろん　おぼえてるんでしょ"
+	cont "うらやましいーなあ<⋯>"
 	done
 
 PokefanmTrevorSeenText:
-	text "Did you battle all"
-	line "the GYM trainers?"
+	text "ジム　<TRAINER>　ぜんいんと"
+	line "たたかったのかい？"
 	done
 
 PokefanmTrevorBeatenText:
-	text "Oh, wow! Too"
-	line "strong for me!"
+	text "うひゃー！"
+	line "つよい！！"
 	done
 
 PokefanmTrevorAfterBattleText:
-	text "If you have KANTO"
-	line "BADGES, they'll"
-
-	para "help you in linked"
-	line "battles."
+	text "カントーバッジ<WO>も<TTE>ると"
+	line "たいせんで　ゆうり<NI>なるよ！"
 	done
 
 Route14_MapEvents:

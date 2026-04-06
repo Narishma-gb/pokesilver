@@ -31,40 +31,35 @@ BluesHouseSign:
 	jumptext BluesHouseSignText
 
 PalletTownTeacherText:
-	text "I'm raising #-"
-	line "MON too."
-
-	para "They serve as my"
-	line "private guards."
+	text "<WATASHI>も"
+	line "#<WO>そだててるの！"
+	cont "いまじゃ　ガードマン<NO>かわりよ！"
 	done
 
 PalletTownFisherText:
-	text "Technology is"
-	line "incredible!"
+	text "かがく<NO>ちから<TTE>　すげー！"
 
-	para "You can now trade"
-	line "#MON across"
-	cont "time like e-mail."
+	para "いま<NO><PC>つうしんは"
+	line "じだい<WO>こえて"
+	cont "#<NO>やりとり<GA>できるんだと"
 	done
 
 PalletTownSignText:
-	text "PALLET TOWN"
-
-	para "A Tranquil Setting"
-	line "of Peace & Purity"
+	text "<KOKO_WA>マサラ　タウン"
+	line "マサラ<WA>まっしろ　けがれなき　いろ"
 	done
 
 RedsHouseSignText:
-	text "RED'S HOUSE"
+	text "<KOKO_WA>レッド　のいえ"
 	done
 
 OaksLabSignText:
-	text "OAK #MON"
-	line "RESEARCH LAB"
+	text "<KOKO_WA>オーキド　はかせの"
+	line "#　けんきゅうじょ"
 	done
 
 BluesHouseSignText:
-	text "BLUE'S HOUSE"
+	text "<KOKO_WA>グリーン　のいえ"
 	done
 
 PalletTown_MapEvents:

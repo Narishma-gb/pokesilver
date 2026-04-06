@@ -52,47 +52,35 @@ VictoryRoadGateStepDownMovement:
 	step_end
 
 VictoryRoadGateOfficerText:
-	text "Only trainers who"
-	line "have proven them-"
-	cont "selves may pass."
+	text "ここから　さきは"
+	line "ほんとう<NI>つよい"
+	cont "#<TRAINER>だけ　とおれます"
 	done
 
 VictoryRoadGateNotEnoughBadgesText:
-	text "You don't have all"
-	line "the GYM BADGES of"
-	cont "JOHTO."
+	text "あなた<WA>まだ　ジョウト<NO>バッジを"
+	line "すべて　も<TTE>　ませんね！"
 
-	para "I'm sorry, but I"
-	line "can't let you go"
-	cont "through."
+	para "きまり　ですから"
+	line "とおす　わけに<WA>いきません！"
 	done
 
 VictoryRoadGateEightBadgesText:
-	text "Oh! The eight"
-	line "BADGES of JOHTO!"
-
-	para "Please, go right"
-	line "ahead, sir!"
+	text "おおーッ！"
+	line "それ<WA>ジョウト<NO>８つ<NO>バッジ！"
+	cont "どうぞ　おとおりください！"
 	done
 
 VictoryRoadGateLeftBlackBeltText:
-	text "This way leads to"
-	line "MT.SILVER."
-
-	para "You'll see scary-"
-	line "strong #MON out"
-	cont "there."
+	text "このさきは<⋯>　シロガネやま！"
+	line "こわい　ほど　つよい　#が"
+	cont "せいそく　してるぞ！"
 	done
 
 VictoryRoadGateRightBlackBeltText:
-	text "Off to the #MON"
-	line "LEAGUE, are you?"
-
-	para "The ELITE FOUR are"
-	line "so strong it's"
-
-	para "scary, and they're"
-	line "ready for you!"
+	text "#　リーグ　ちょうせんか？"
+	line "こわい　ほど　つよい　してんのうが"
+	cont "ちょうせん<WO>ま<TTE>いるぞ！"
 	done
 
 VictoryRoadGate_MapEvents:

@@ -33,44 +33,38 @@ Route10Sign:
 	jumptext Route10SignText
 
 HikerJimSeenText:
-	text "Hahahah!"
+	text "はーっ　はっはっはっはっ！"
 	done
 
 HikerJimBeatenText:
-	text "Hahaha-hachoo!"
+	text "はーっ　はっはっはっ！"
+	line "ひーっ　ひっひっひっ！"
+	cont "わらいキノコ<WO>たべて　しまっ<TA!>"
 	done
 
 HikerJimAfterBattleText:
-	text "Hay fever is"
-	line "making me sneeze!"
-	cont "Ahahah-CHOO!"
+	text "ひーっ　ひっひっひっひっ！"
+	line "<⋯>　はひぃ　はひぃい<⋯>"
 	done
 
 PokefanmRobertSeenText:
-	text "You like #MON,"
-	line "don't you?"
-
-	para "Me too!"
+	text "おたく　#　すきでしょ？"
+	line "わしも　だいすき　なんだ！"
 	done
 
 PokefanmRobertBeatenText:
-	text "I'd have to say"
-	line "that's my loss."
+	text "これ<WA>いわゆる"
+	line "わし<NO>まけ　みたいなー！"
 	done
 
 PokefanmRobertAfterBattleText:
-	text "Look what you did"
-	line "to my #MON…"
-
-	para "I won't forget"
-	line "this…"
+	text "だいじな　#ちゃんを<⋯>"
+	line "きみのこと　わすれないよ<⋯>"
 	done
 
 Route10SignText:
-	text "ROUTE 10"
-
-	para "CERULEAN CITY -"
-	line "LAVENDER TOWN"
+	text "<KOKO_WA>１０<ROUTE>"
+	line "ハナダシティ　<⋯>　シオンタウン"
 	done
 
 Route10South_MapEvents:

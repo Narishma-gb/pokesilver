@@ -128,195 +128,147 @@ DanceTheaterFancyPanel:
 	jumptext DanceTheaterFancyPanelText
 
 KimonoGirlNaokoSeenText:
-	text "You have lovely"
-	line "#MON. May I see"
-	cont "them in battle?"
+	text "すてきな　#　つれたはりますね"
+	line "うでまえ　みさせて　くださいますか？"
 	done
 
 KimonoGirlNaokoBeatenText:
-	text "Oh, you are very"
-	line "strong."
+	text "おつよい　どすなあ！"
 	done
 
 KimonoGirlNaokoAfterBattleText:
-	text "I enjoyed that"
-	line "bout. I would like"
-	cont "to see you again."
+	text "あいて　してもろて　たのしかったどす"
+	line "また　おたのもうします"
 	done
 
 KimonoGirlSayoSeenText:
-	text "I always dance"
-	line "with my #MON."
-
-	para "Of course, I also"
-	line "train them."
+	text "いつも　だいじな　#と"
+	line "いっしょ<NI>おど<TTE>るんよ"
+	cont "もちろん　#も　そだててるんよ"
 	done
 
 KimonoGirlSayoBeatenText:
-	text "Oh, so close!"
-	line "I almost had you."
+	text "おしいわあ"
+	line "もうちょっとで　かてそうやったのに"
 	done
 
 KimonoGirlSayoAfterBattleText:
-	text "Rhythm is impor-"
-	line "tant for both"
-
-	para "dancing and #-"
-	line "MON."
+	text "おどりも　#も"
+	line "リズム<GA>だいじ　なんやわ"
 	done
 
 KimonoGirlZukiSeenText:
-	text "Isn't my barrette"
-	line "pretty?"
-
-	para "Oh. A #MON"
-	line "battle?"
+	text "うち<NO>はなかんざし　きれいやろ？"
+	line "え　#で　しょうぶ　しはるの？"
 	done
 
 KimonoGirlZukiBeatenText:
-	text "I don't have any"
-	line "#MON left…"
+	text "もう　たたかえる　#"
+	line "おらんよう<NI>なったわ"
 	done
 
 KimonoGirlZukiAfterBattleText:
-	text "I put a different"
-	line "flower in my bar-"
-	cont "rette every month."
+	text "はなかんざしね　まいつき"
+	line "きまった　はな<WO>さしてるんよ"
 	done
 
 KimonoGirlKuniSeenText:
-	text "Oh, you're a cute"
-	line "trainer. Would you"
-	cont "like to battle?"
+	text "あら　かわいい　<TRAINER>やこと"
+	line "うちと　しょうぶ　しはります？"
 	done
 
 KimonoGirlKuniBeatenText:
-	text "You're stronger"
-	line "than you look."
+	text "あら　かんにん　やわ"
+	line "みかけによらず　つよいんやね"
 	done
 
 KimonoGirlKuniAfterBattleText:
-	text "I trained a lot,"
-	line "so I thought I was"
-
-	para "a capable trainer."
-	line "I guess I'm not."
+	text "ぎょうさん　おけいこ　して"
+	line "いちにんまえ<NI>なった　つもりやけど"
+	cont "まだまだ　やったわ"
 	done
 
 KimonoGirlMikiSeenText:
-	text "Do you like my"
-	line "dancing? I'm good"
-	cont "at #MON too."
+	text "どう　うちら<NO>おどり？"
+	line "#も　じょうず　なんよ"
 	done
 
 KimonoGirlMikiBeatenText:
-	text "Ooh, you're good"
-	line "at #MON too."
+	text "うーん"
+	line "あなたも　#　じょうず　やね"
 	done
 
 KimonoGirlMikiAfterBattleText:
-	text "I can keep dancing"
-	line "because there are"
-
-	para "people who enjoy"
-	line "what I do."
-
-	para "My #MON keep my"
-	line "spirits up too."
+	text "うちら<NO>おどり　みて"
+	line "よろこんでくれる　ひと<GA>いて"
+	cont "#も　そば<NI>おるから"
+	cont "どんなことでも　がんばれるんどす"
 	done
 
 SurfGuyNeverLeftAScratchText:
-	text "Not only are the"
-	line "KIMONO GIRLS great"
+	text "まいこはん　おどり　だけでなく"
+	line "#も　たっしゃだ！"
 
-	para "dancers, they're"
-	line "also skilled at"
-	cont "#MON."
-
-	para "I always challenge"
-	line "them, but I've"
-
-	para "never even left a"
-	line "scratch…"
+	para "いつも　ちょうせん　してるが"
+	line "まったく　は<GA>たたなくてね<⋯>"
 	done
 
 SurfGuyLadGiftText:
-	text "Lad! If you can"
-	line "defeat all the"
-
-	para "KIMONO GIRLS, I'll"
-	line "give you a gift."
+	text "ぼん！"
+	line "まいこはん　ぜんいん<NI>かてたら"
+	cont "わし<GA>いいもの<WO>あげよう！"
 	done
 
 SurfGuyLikeADanceText:
-	text "The way you bat-"
-	line "tled, it was like"
-	cont "watching a dance."
+	text "それ<NI>くらべ"
+	line "きみ<NO>#<NO>たたかいかた"
+	cont "まさ<NI>おどるようだっ<TA!>"
 
-	para "It was a rare"
-	line "treat to see!"
+	para "ええも<NO>みせて　もらったよ！"
 
-	para "I want you to have"
-	line "this. Don't worry"
-	cont "--take it!"
+	para "これ<WA>ほん<NO>きもちだ"
+	line "きにせず　と<TTE>おきなさい！"
 	done
 
 SurfGuySurfExplanationText:
-	text "That's SURF."
-
-	para "It's a move that"
-	line "lets #MON swim"
-	cont "across water."
+	text "それ<WA>なみのり　とい<TTE>"
+	line "みず<NO>うえを"
+	cont "すいすい　すすめる　わざ　なんだよ！"
 	done
 
 SurfGuyElegantKimonoGirlsText:
-	text "I wish my #MON"
-	line "were as elegant as"
-	cont "the KIMONO GIRLS…"
+	text "わし<NO>#も　あんなふうに"
+	line "あでやか<NI>な<TTE>ほしいんだよ"
 	done
 
 RhydonText:
-	text "RHYDON: Gugooh"
-	line "gugogooh!"
+	text "サイドン『ぐごー　ぐごご！"
 	done
 
 DanceTheaterCooltrainerMText:
-	text "That man's always"
-	line "with his RHYDON."
+	text "あ<NO>おじさん"
+	line "いつも　サイドンと　いっしょ！"
 
-	para "Says he wants a"
-	line "#MON that can"
-	cont "SURF and dance."
+	para "なみのり　つかえる　#に"
+	line "おどりも　おぼえて　ほしいんだと！"
 
-	para "Is he trying to"
-	line "make a synchro-"
-	cont "nized swimming"
-	cont "#MON?"
+	para "シンクロナイズド　スイミングでも"
+	line "やらせる　つもり　なのかな"
 	done
 
 DanceTheaterGrannyText:
-	text "The KIMONO GIRLS"
-	line "are so beautiful…"
+	text "まいこはん　きれい　やの<⋯>"
 
-	para "But they have to"
-	line "go through rigor-"
-	cont "ous training."
+	para "しかし　ひとまえ<NI>でるには"
+	line "きびしい　しきたりや　しゅぎょうを"
+	cont "こなさないと　いかん！"
 
-	para "And they have to"
-	line "learn to follow"
-
-	para "customs before ap-"
-	line "pearing in public."
-
-	para "But if you love"
-	line "something, any-"
-	cont "thing is possible."
+	para "まあ　すきなら　なんでも　できるがな"
 	done
 
 DanceTheaterFancyPanelText:
-	text "It's a fancy panel"
-	line "that's decorated"
-	cont "with flowers."
+	text "たかそうな　ついたて"
+	line "きせつ<NO>はな<GA>かかれてる！"
 	done
 
 DanceTheater_MapEvents:

@@ -97,26 +97,22 @@ Route33FruitTree:
 	fruittree FRUITTREE_ROUTE_33
 
 HikerAnthony2SeenText:
-	text "I came through the"
-	line "tunnel, but I"
-
-	para "still have plenty"
-	line "of energy left."
+	text "どうくつ　ぬけた　ばかりだが"
+	line "まだまだ　げんき　だぞー！"
 	done
 
 HikerAnthony2BeatenText:
-	text "Whoa, boy! You've"
-	line "got more zip."
+	text "おおっ！"
+	line "ぼうず<NO>ほう<GA>げんき　だな！"
 	done
 
 HikerAnthony2AfterText:
-	text "We HIKERS are at"
-	line "our best in the"
-	cont "mountains."
+	text "やまおとこ<WA>やま<NI>いれば"
+	line "げんき　１００ばい　<TTE>な　もんだ！"
 	done
 
 Route33SignText:
-	text "ROUTE 33"
+	text "<KOKO_WA>３３<ROUTE>"
 	done
 
 Route33_MapEvents:

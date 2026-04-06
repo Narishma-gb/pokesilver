@@ -10,17 +10,14 @@ Route2GateScientistScript:
 	jumptextfaceplayer Route2GateScientistText
 
 Route2GateScientistText:
-	text "Are you <PLAYER>?"
+	text "あなた<GA><PLAYER>くん？"
 
-	para "I work as PROF."
-	line "OAK's AIDE."
+	para "オーキドはかせ<NO>じょしゅを"
+	line "している　ものです"
 
-	para "I had no idea that"
-	line "you were out here."
-
-	para "PROF.OAK's LAB is"
-	line "nearby in PALLET"
-	cont "TOWN."
+	para "もう　ここまで　きていたんですね！"
+	line "オーキドはかせ<NO>けんきゅうじょは"
+	cont "こ<NO>ちかく<NO>マサラ　タウンですよ"
 	done
 
 Route2Gate_MapEvents:

@@ -50,19 +50,19 @@ MomPhoneInTown:
 	getstring STRING_BUFFER_4, .text_sprout_tower
 	sjump MomPhoneLandmark
 .text_sprout_tower
-	db "SPROUT TOWER@"
+	db "マダツボミのとう@"
 
 .azalea
 	getstring STRING_BUFFER_4, .text_slowpoke_well
 	sjump MomPhoneLandmark
 .text_slowpoke_well
-	db "SLOWPOKE WELL@"
+	db "ヤドンのいど@"
 
 .goldenrod
 	getstring STRING_BUFFER_4, .text_radio_tower
 	sjump MomPhoneLandmark
 .text_radio_tower
-	db "RADIO TOWER@"
+	db "ラジオとう@"
 
 MomPhoneOnRoute:
 	writetext MomOtherAreaText

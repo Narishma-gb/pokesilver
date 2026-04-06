@@ -90,55 +90,45 @@ EcruteakTinTowerEntranceSageBlocksRightMovement:
 	step_end
 
 EcruteakTinTowerEntranceSageText:
-	text "TIN TOWER is off"
-	line "limits to anyone"
+	text "スズのとう<WA>エンジュの"
+	line "ジムバッジ<WO>もつ　ものだけが"
+	cont "のぼれる　しんせいな　とう"
 
-	para "without ECRUTEAK"
-	line "GYM's BADGE."
-
-	para "Sorry, but you'll"
-	line "have to leave."
+	para "もうしわけないが"
+	line "おひきとり　くださいまし"
 	done
 
 EcruteakTinTowerEntranceSageText_GotFogBadge:
-	text "TIN TOWER is off"
-	line "limits to anyone"
+	text "スズのとう<WA>エンジュの"
+	line "ジムバッジ<WO>もつ　ものだけが"
+	cont "のぼれる　しんせいな　とう"
 
-	para "without ECRUTEAK"
-	line "GYM's BADGE."
+	para "おお！"
 
-	para "Ah!"
+	para "それ<WA>エンジュ<NO>ジムバッジ！"
 
-	para "ECRUTEAK's GYM"
-	line "BADGE! Please, go"
-	cont "right through."
+	para "どうぞ　おとおり　くださいまし"
 	done
 
 EcruteakTinTowerEntranceWanderingSageText:
-	text "The TIN TOWER up"
-	line "ahead was built"
-
-	para "as a roost for"
-	line "flying #MON."
+	text "こ<NO>さきにある　スズのとうは"
+	line "おおぞら<WO>とぶ　#<GA>やすむ"
+	cont "ばしょ　として　つくられました"
 	done
 
 EcruteakTinTowerEntranceWanderingSageText_GotRainbowWing:
-	text "The TIN TOWER"
-	line "shook! A #MON"
+	text "スズのとう<GA>ゆれまし<TA!>"
 
-	para "must have returned"
-	line "to the top!"
+	para "きっと　いちばん　うえに"
+	line "#<GA>もど<TTE>きたのです！"
 	done
 
 EcruteakTinTowerEntranceGrampsText:
-	text "Two towers…"
-	line "Two #MON…"
+	text "２つ<NO>とうに"
+	line "２ひき<NO>#<⋯>"
 
-	para "But when one"
-	line "burned down, both"
-
-	para "#MON flew away,"
-	line "never to return."
+	para "しかし　とう<GA>１つ　やけていらい"
+	line "#も　とびたったまま　じゃ<⋯>"
 	done
 
 EcruteakTinTowerEntrance_MapEvents:

@@ -21,26 +21,20 @@ EcruteakMartGrannyScript:
 	jumptextfaceplayer EcruteakMartGrannyText
 
 EcruteakMartSuperNerdText:
-	text "My EEVEE evolved"
-	line "into an ESPEON."
+	text "ぼく<NO>イーブイ"
+	line "エーフィ<NI>しんか　したよ"
 
-	para "But my friend's"
-	line "EEVEE turned into"
-	cont "an UMBREON."
+	para "でも　ともだち<NO>イーブイは"
+	line "ブラッキー<NI>しんか　したよ"
 
-	para "I wonder why? We"
-	line "both were raising"
-
-	para "our EEVEE in the"
-	line "same way…"
+	para "なに<GA>ちがったんだろな"
+	line "ふたりとも　ずっと　イーブイのまま"
+	cont "そだてて　いたのに<⋯>"
 	done
 
 EcruteakMartGrannyText:
-	text "If you use REVIVE,"
-	line "a #MON that's"
-
-	para "fainted will wake"
-	line "right up."
+	text "げんきのかけら<WO>つか<TTE>あげると"
+	line "ひんし<NO>#も　とびおきますよ"
 	done
 
 EcruteakMart_MapEvents:

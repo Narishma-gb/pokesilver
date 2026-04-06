@@ -40,89 +40,55 @@ CinnabarIslandBlueTeleport:
 	step_end
 
 CinnabarIslandBlueText:
-	text "Who are you?"
+	text "だれだ　おまえ？"
+	line "#　<TRAINER><TTE>　ことは"
+	cont "みれば　すぐ<NI>わかるけどな<⋯>"
 
-	para "Well, it's plain"
-	line "to see that you're"
-	cont "a trainer…"
+	para "オレ<NO>なまえ<WA>グリーン！"
+	line "チャンピオン<NI>なった　おとこさ！"
+	cont "まあ　すこしだけ　だったけどな<⋯>"
+	cont "レッドのヤローに"
+	cont "ジャマされちまった　からな<⋯>！"
 
-	para "My name's BLUE."
+	para "ところで　おまえ　なにか　ようか？"
+	line "オレと　たたかいたいのか？"
 
-	para "I was once the"
-	line "CHAMPION, although"
+	para "<⋯>　わりぃ　<GA>いま"
+	line "たたかう　きぶんじゃ　ねーんだ"
 
-	para "it was for only a"
-	line "short time…"
+	para "みろよ　こ<NO>ありさま<⋯>"
 
-	para "That meddling RED"
-	line "did me in…"
+	para "かざん<GA>ちょっと　ふんかしたら"
+	line "まち　ひとつ　なくなっちまった"
 
-	para "Anyway, what do"
-	line "you want? You want"
+	para "#　しょうぶで"
+	line "かった　まけた　い<TTE>も"
+	cont "しぜん<NO>みぶるい　ひとつで"
+	cont "オレたち<WA>まけちまうんだ<⋯>"
 
-	para "to challenge me or"
-	line "something?"
+	para "<⋯>　<⋯>　<⋯>"
+	line "<⋯>　<⋯>　<⋯>"
+	cont "まあ　いいや"
+	cont "オレ<WA><TRAINER>だからな"
+	cont "つよい　ヤツ<GA>いたら"
+	cont "たたかいたく　なるんだけどな"
 
-	para "…I hate to say"
-	line "it, but I'm not in"
-
-	para "the mood for a"
-	line "battle now."
-
-	para "Take a good look"
-	line "around you…"
-
-	para "A volcano erupts,"
-	line "and just like"
-
-	para "that, a whole town"
-	line "disappears."
-
-	para "We can go on win-"
-	line "ning and losing in"
-
-	para "#MON. But if"
-	line "nature so much as"
-
-	para "twitches, we can"
-	line "lose in a second."
-
-	para "…"
-
-	para "That's the way it"
-	line "is…"
-
-	para "But, anyway, I'm"
-	line "still a trainer."
-
-	para "If I see a strong"
-	line "opponent, it makes"
-	cont "me want to battle."
-
-	para "If you want to"
-	line "battle me, come to"
-	cont "the VIRIDIAN GYM."
-
-	para "I'll take you on"
-	line "then."
+	para "おまえ　オレと　たたかいたければ"
+	line "トキワ<NO>ジム<NI>こいよ"
+	cont "そのとき　あいてして　やるぜ"
 	done
 
 CinnabarIslandGymSignText:
-	text "There's a notice"
-	line "here…"
+	text "<⋯>はりがみ<GA>は<TTE>ある！"
 
-	para "CINNABAR GYM has"
-	line "relocated to SEA-"
-	cont "FOAM ISLANDS."
-
-	para "BLAINE"
+	para "グレン　タウン<NO>ジムは"
+	line "ふたごじま　<NI>うつりました"
+	cont "<⋯>　カツラ"
 	done
 
 CinnabarIslandSignText:
-	text "CINNABAR ISLAND"
-
-	para "The Fiery Town of"
-	line "Burning Desire"
+	text "<KOKO_WA>グレン　タウン"
+	line "グレン<NO>あか<WA>じょうねつ<NO>いろ"
 	done
 
 CinnabarIsland_MapEvents:

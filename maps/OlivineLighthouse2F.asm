@@ -102,44 +102,36 @@ TrainerSailorHuey:
 	end
 
 SailorHueySeenText:
-	text "Men of the sea are"
-	line "always spoiling"
-	cont "for a good fight!"
+	text "うみ<NO>おとこは"
+	line "いつだ<TTE>　ケンカ　したいのだ！"
 	done
 
 SailorHueyBeatenText:
-	text "Urf!"
-	line "I lose!"
+	text "おう！"
+	line "おれ<NO>まけだ！"
 	done
 
 SailorHueyAfterBattleText:
-	text "What power!"
-	line "How would you like"
-
-	para "to sail the seas"
-	line "with me?"
+	text "そ<NO>つよさ　きにいっ<TA!>"
+	line "いっしょ<NI>がいこくへ　いこうか？"
 	done
 
 GentlemanAlfredSeenText:
-	text "Hm? This is no"
-	line "place for playing."
+	text "おや　きみは<⋯>？"
+	line "<KOKO_WA>あそぶ　ばしょ　ではないよ"
 	done
 
 GentlemanAlfredBeatenText:
-	text "Ah! I can see that"
-	line "you're serious."
+	text "おお　しんけん　だなあ"
 	done
 
 GentlemanAlfredAfterBattleText:
-	text "Up top is a #-"
-	line "MON that keeps the"
-	cont "LIGHTHOUSE lit."
+	text "いちばん　うえに<WA>#がいて"
+	line "いつも　ひか<TTE>る"
 
-	para "But I hear that"
-	line "it's sick now and"
-
-	para "can't be cured by"
-	line "ordinary medicine."
+	para "でも　いま<WA>びょうき　だそうだ"
+	line "しかも　ふつう<NO>キズぐすり　じゃ"
+	cont "なおせない　という　はなし　なんだ"
 	done
 
 OlivineLighthouse2F_MapEvents:

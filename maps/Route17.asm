@@ -66,68 +66,60 @@ Route17HiddenMaxElixer:
 	hiddenitem MAX_ELIXER, EVENT_ROUTE_17_HIDDEN_MAX_ELIXER
 
 BikerRileySeenText:
-	text "Hey, you! You're"
-	line "from JOHTO, huh?"
+	text "おまえ！"
+	line "ジョウトから　きたな！"
 	done
 
 BikerRileyBeatenText:
-	text "Whoa, you kick!"
+	text "つええ<⋯>！"
 	done
 
 BikerRileyAfterBattleText:
-	text "Don't get cocky,"
-	line "you JOHTO punk!"
+	text "ジョウト<NO>ヤツに"
+	line "なめられて　たまるかー！"
 	done
 
 BikerJoelSeenText:
-	text "Wow. That's a cool"
-	line "BICYCLE!"
+	text "よう　よう！"
+	line "かっこいい　じてんしゃ　じゃねーか！"
 	done
 
 BikerJoelBeatenText:
-	text "But you don't just"
-	line "look cool…"
+	text "かっこ　だけじゃ　ない<⋯>！"
 	done
 
 BikerJoelAfterBattleText:
-	text "I look cool, but"
-	line "I'm weak, so I'm"
-	cont "not really cool."
-
-	para "I have to train"
-	line "harder…"
+	text "かっこつけてても　よわくちゃ"
+	line "かっこわるい　よなあ<⋯>"
+	cont "オレも　がんばろう！"
 	done
 
 BikerGlennSeenText:
-	text "Hey! Want to have"
-	line "a speed battle?"
+	text "オレさまと　スピードしょうぶ"
+	line "や<TTE>みる　かい？"
 	done
 
 BikerGlennBeatenText:
-	text "Yikes! You've got"
-	line "awesome torque!"
+	text "すばらしい　きゃくりょく<⋯>"
 	done
 
 BikerGlennAfterBattleText:
-	text "Hands-free riding"
-	line "is considered cool"
-	cont "on CYCLING ROAD."
+	text "サイクリング　ロードは"
+	line "てばなし　うんてん<GA>いい　きもち"
 	done
 
 BikerCharlesSeenText:
-	text "We're fearless"
-	line "highway stars!"
+	text "オレたちゃ"
+	line "いのち　しらず<NO>はしりや　さ！"
 	done
 
 BikerCharlesBeatenText:
-	text "Arrrgh! Crash and"
-	line "burn!"
+	text "ばりばりーんっ！"
 	done
 
 BikerCharlesAfterBattleText:
-	text "Reckless driving"
-	line "causes accidents!"
-	cont "Take it easy!"
+	text "むぼうな　うんてん　じこ<NO>もと"
+	line "みんな　きをつけようぜ<⋯>！"
 	done
 
 Route17_MapEvents:

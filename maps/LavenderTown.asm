@@ -45,62 +45,44 @@ LavenderMartSignText:
 	jumpstd MartSignScript
 
 LavenderTownPokefanMText:
-	text "That's quite some"
-	line "building, eh?"
-
-	para "It's KANTO's RADIO"
-	line "TOWER."
+	text "おおきな　たても<NO>だろう？"
+	line "カントー<NO>ラジオとう　だよ！"
 	done
 
 LavenderTownTeacherText:
-	text "KANTO has many"
-	line "good radio shows."
+	text "カントーでも　おもしろい"
+	line "ラジオばんぐみ<WO>や<TTE>るのよ"
 	done
 
 LavenderTownGrampsText:
-	text "People come from"
-	line "all over to pay"
-
-	para "their respects to"
-	line "the departed souls"
-	cont "of #MON."
+	text "いろんな　まち<NO>ひとたちが"
+	line "おはかまいり<NI>きてるのじゃ"
 	done
 
 LavenderTownYoungsterText:
-	text "You need a #"
-	line "FLUTE to wake"
-	cont "sleeping #MON."
-
-	para "Every trainer has"
-	line "to know that!"
+	text "ねむ<TTE>る　#　おこすには"
+	line "#のふえ　<GA>いちばん！"
+	cont "<TRAINER><NO>じょうしき　だぜ！"
 	done
 
 LavenderTownSignText:
-	text "LAVENDER TOWN"
-
-	para "The Noble Purple"
-	line "Town"
+	text "<KOKO_WA>シオン　タウン"
+	line "シオン<WA>むらさき　とうとい　いろ"
 	done
 
 KantoRadioStationSignText:
-	text "KANTO RADIO"
-	line "STATION"
-
-	para "Your Favorite"
-	line "Programs On-Air"
-	cont "Around the Clock!"
+	text "<KOKO_WA>カントー　ラジオきょく"
+	line "ばんぐみ　ほうそうちゅう！"
 	done
 
 VolunteerPokemonHouseSignText:
-	text "LAVENDER VOLUNTEER"
-	line "#MON HOUSE"
+	text "<KOKO_WA>あい<NO>ボランティア"
+	line "#　ハウス"
 	done
 
 SoulHouseSignText:
-	text "SOUL HOUSE"
-
-	para "May the Souls of"
-	line "#MON Rest Easy"
+	text "<KOKO_WA>たましい<NO>いえ"
+	line "#　ここ<NI>ねむる"
 	done
 
 LavenderTown_MapEvents:

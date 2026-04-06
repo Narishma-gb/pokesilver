@@ -56,108 +56,75 @@ ItemFinderHouseRadio:
 	jumpstd Radio2Script
 
 EcruteakItemfinderAdventureText:
-	text "Ah. You're on an"
-	line "adventure with"
-	cont "your #MON?"
+	text "ほう！　#と　いっしょに"
+	line "たんけん<NO>たび<WO>しているのか"
 
-	para "Well, what's an"
-	line "adventure without"
-	cont "treasure hunting?"
-
-	para "Am I right, or am"
-	line "I right?"
+	para "たんけんと　いえば　たからさがし！"
+	line "そう　おもうだろ？"
 	done
 
 EcruteakItemfinderTrueSpiritText:
-	text "Good! You under-"
-	line "stand the true"
+	text "おお！"
+	line "おとこ<NO>ロマン<GA>わか<TTE>るな"
 
-	para "spirit of adven-"
-	line "ture."
-
-	para "I like that! Take"
-	line "this with you."
+	para "きにいっ<TA!>"
+	line "これ<WO>も<TTE>いきな！"
 	done
 
 ItemfinderExplanationText:
-	text "There are many"
-	line "items lying about"
+	text "みえなくても　あちこちに"
+	line "どうぐ<GA>おちている"
 
-	para "that aren't ob-"
-	line "vious."
+	para "ダウジングマシン<WO>つかうと"
+	line "きみ<NO>ちかくに"
+	cont "どうぐ<GA>おちているか　どうか"
+	cont "しらべること<GA>できる"
 
-	para "Use ITEMFINDER to"
-	line "check if there is"
+	para "ただし　どこ<NI>おちているかまでは"
+	line "わからないから　じぶんで　さがせよ"
 
-	para "an item on the"
-	line "ground near you."
-
-	para "It doesn't show"
-	line "the exact spot,"
-
-	para "so you'll have to"
-	line "look yourself."
-
-	para "Oh yeah--I heard"
-	line "there are items"
-
-	para "in ECRUTEAK's"
-	line "BURNED TOWER."
+	para "そうだ！"
+	line "エンジュ<NO>やけた　とう　にも"
+	cont "たから<GA>あるという　ウワサだな"
 	done
 
 EcruteakItemfinderToEachHisOwnText:
-	text "Oh… To each his"
-	line "own, I suppose…"
+	text "<⋯>　そうか"
+	line "まあ　ひと　それぞれだ"
 	done
 
 EcruteakHistoryBookText:
-	text "HISTORY OF"
-	line "ECRUTEAK"
+	text "エンジュ<NO>れきし<⋯>"
 
-	para "Want to read it?"
+	para "よんでみますか？"
 	done
 
 EcruteakTwoTowersText:
-	text "In ECRUTEAK, there"
-	line "were two towers."
+	text "エンジュに<WA>２つ<NO>とう<GA>あり"
+	line "それぞれ　#が"
+	cont "まいおりる　ばしょ　でした"
 
-	para "Each tower was the"
-	line "roost of powerful"
-	cont "flying #MON."
+	para "です<GA>とう<GA>もえていらい"
+	line "#<WO>みかけなくなった<⋯>"
+	cont "そう　つたえられています"
 
-	para "But one of the"
-	line "towers burned to"
-	cont "the ground."
-
-	para "The two #MON"
-	line "haven't been seen"
-	cont "since…"
-
-	para "Keep reading?"
+	para "つづき<WO>よみますか？"
 	done
 
 EcruteakThreeMonText:
-	text "ECRUTEAK was also"
-	line "home to three"
+	text "また　エンジュには"
+	line "まち<NO>まわり<WO>かけめぐる"
+	cont "#たち<GA>いました"
 
-	para "#MON that raced"
-	line "around the town."
+	para "それぞれ"
+	line "かみなり　ほのお　みず　の"
+	cont "うまれかわり　と　いわれてました"
 
-	para "They were said to"
-	line "have been born of"
-
-	para "water, lightning"
-	line "and fire."
-
-	para "But they could not"
-	line "contain their"
-	cont "excessive power."
-
-	para "So they say the"
-	line "three ran like the"
-
-	para "wind off into the"
-	line "grassland."
+	para "です<GA>じぶんたちの"
+	line "つよすぎる　ちから<WO>もてあまし"
+	cont "あちこち<NO>くさむらを"
+	cont "かぜのよう<NI>かけぬけていた<⋯>"
+	cont "そう　つたえられています"
 	done
 
 EcruteakItemfinderHouse_MapEvents:

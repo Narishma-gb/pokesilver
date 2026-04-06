@@ -110,61 +110,50 @@ Movement_TrainerHouseTurnBack:
 	step_end
 
 TrainerHouseB1FIntroText:
-	text "Hi. Welcome to our"
-	line "TRAINING HALL."
-
-	para "You may battle a"
-	line "trainer once per"
-	cont "day."
+	text "<KOKO_WA>れんしゅう　じょう！"
+	line "１にち　１かい　ですが"
+	cont "<TRAINER><WO>あいてに"
+	cont "たいせん<GA>できます！"
 	done
 
 TrainerHouseB1FYourOpponentIsText:
+	text "こんかい<NO>たいせん　あいては"
+	line "@"
 	text_ram wStringBuffer3
-	text " is your"
-	line "opponent today."
+	text "さん　です！"
 	done
 
 TrainerHouseB1FAskWantToBattleText:
-	text "Would you like to"
-	line "battle?"
+	text "たいせん<WO>しますか？"
 	done
 
 TrainerHouseB1FGoRightInText:
-	text "Please go right"
-	line "through."
-
-	para "You may begin"
-	line "right away."
+	text "どうぞ　おはいり　ください"
+	line "すぐ<NI>たいせん<GA>はじまります！"
 	done
 
 TrainerHouseB1FPleaseComeAgainText:
-	text "Sorry. Only those"
-	line "trainers who will"
-
-	para "be battling are"
-	line "allowed to go in."
+	text "れんしゅう　じあいを"
+	line "される　<TRAINER>しか"
+	cont "はいること<WA>できません！"
 	done
 
 TrainerHouseB1FSecondChallengeDeniedText:
-	text "I'm sorry, sir."
-	line "This would be your"
+	text "おきゃくさん"
+	line "きょう　２かいめ　ですね！"
 
-	para "second time today."
-	line "You're permitted"
-
-	para "to enter just once"
-	line "a day."
+	para "たいせん<WA>１にち　１かいです"
+	line "もうしわけ　ありません"
 	done
 
 TrainerHouseB1FCalBeatenText:
-	text "I lost…"
-	line "Darn…"
+	text "まけた<⋯>"
+	line "ざんねん<⋯>！"
 	done
 
 TrainerHouseB1FCalBeforeText:
-	text "I traveled out"
-	line "here just so I"
-	cont "could battle you."
+	text "おまえと　たたかうために"
+	line "はるばる　や<TTE>きたぜ！"
 	done
 
 TrainerHouseB1F_MapEvents:

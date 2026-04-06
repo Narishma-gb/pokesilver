@@ -10,7 +10,7 @@ Route28HiddenRareCandy:
 	hiddenitem RARE_CANDY, EVENT_ROUTE_28_HIDDEN_RARE_CANDY
 
 Route28SignText:
-	text "ROUTE 28"
+	text "<KOKO_WA>２８<ROUTE>"
 	done
 
 Route28_MapEvents:

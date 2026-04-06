@@ -10,26 +10,22 @@ Route7LockedDoor:
 	jumptext Route7LockedDoorText
 
 Route7UndergroundPathSignText:
-	text "What's this flyer?"
+	text "<⋯>　おしらせ<NO>チラシだ！"
 
-	para "… Uncouth trainers"
-	line "have been holding"
+	para "さいきん　ちかつうろで"
+	line "マナー<NO>わるい　<TRAINER>たちが"
+	cont "#　しょうぶ<WO>しています"
 
-	para "battles in the"
-	line "UNDERGROUND PATH."
+	para "ふきん　じゅうみん　から"
+	line "くじょう<GA>あったので"
+	cont "ちかつうろ<WO>へいさ　しまし<TA!>"
 
-	para "Because of rising"
-	line "complaints by lo-"
-	cont "cal residents, the"
-	cont "UNDERGROUND PATH"
-	cont "has been sealed"
-	cont "indefinitely."
-
-	para "CELADON POLICE"
+	para "<⋯>　タマムシ　けいさつ　より"
 	done
 
 Route7LockedDoorText:
-	text "It's locked…"
+	text "カギ<GA>かか<TTE>いる！"
+	line "<⋯>あけられない！"
 	done
 
 Route7_MapEvents:

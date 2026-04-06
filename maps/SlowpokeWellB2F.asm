@@ -31,32 +31,22 @@ SlowpokeWellB2FTMRainDance:
 	itemball TM_RAIN_DANCE
 
 SlowpokeWellB2FGymGuideText:
-	text "I'm waiting to see"
-	line "SLOWPOKE's moment"
-	cont "of evolution."
+	text "ぼく<WA>ここで"
+	line "ヤドン<GA>しんかする　しゅんかんを"
+	cont "ま<TTE>いるんだよ"
 
-	para "Through observa-"
-	line "tion, I made a new"
-	cont "discovery."
+	para "かんさつしてて　わかったのは"
+	line "おうじゃのしるし<WO>も<TTE>る"
+	cont "ヤドン<WA>どうしてだか"
+	cont "シェルダー<NI>よく　かみつかれる"
 
-	para "A SLOWPOKE with a"
-	line "KING'S ROCK often"
-
-	para "gets bitten by a"
-	line "SHELLDER."
-
-	para "Here, I'll share a"
-	line "KING'S ROCK with"
-	cont "you."
+	para "そうだ　きみにも"
+	line "おうじゃのしるし　わけてあげよう！"
 	done
 
 SlowpokeWellB2FGymGuideText_GotKingsRock:
-	text "I'm going to be"
-	line "like SLOWPOKE."
-
-	para "I'll wait patient-"
-	line "ly, so I can see"
-	cont "one evolve."
+	text "ヤドン<WO>まねして　きながに"
+	line "しんかする　しゅんかん<WO>まつよ"
 	done
 
 SlowpokeWellB2F_MapEvents:

@@ -143,179 +143,137 @@ KurtSlowpokeWellVictoryMovementData:
 	step_end
 
 SlowpokeWellB1FKurtText:
-	text "KURT: Hey there,"
-	line "<PLAYER>!"
+	text "ガンテツ『おう　<PLAYER>か"
 
-	para "The guards up top"
-	line "took off when I"
-	cont "shouted at them."
+	para "うえで　みは<TTE>た　やつは"
+	line "おおごえで　しかりとばしたら"
+	cont "にげよったがな<⋯>"
 
-	para "But then I took a"
-	line "tumble down the"
-	cont "WELL."
+	para "わし　いどから　おちてしもて"
+	line "こし<WO>う<TTE>　うごけんのじゃ"
 
-	para "I slammed down"
-	line "hard on my back,"
-	cont "so I can't move."
+	para "くそう<⋯>　げんきなら"
+	line "わし<NO>#が"
+	cont "ちょちょいと　こらしめたのに<⋯>"
 
-	para "Rats! If I were"
-	line "fit, my #MON"
-
-	para "would've punished"
-	line "them…"
-
-	para "Ah, it can't be"
-	line "helped."
-
-	para "<PLAYER>, show them"
-	line "how gutsy you are"
-	cont "in my place!"
+	para "まあええ　<PLAYER>！　"
+	line "わし<NO>かわりに"
+	cont "<TRAINER>だましい<WO>みせるのじゃ！"
 	done
 
 KurtLeaveSlowpokeWellText:
-	text "KURT: Way to go,"
-	line "<PLAYER>!"
+	text "ガンテツ『<PLAYER>　ようやったな"
+	line "<ROCKET><NO>やつら"
+	cont "にげていきおったわい"
 
-	para "TEAM ROCKET has"
-	line "taken off."
-
-	para "My back's better"
-	line "too. Let's get out"
-	cont "of here."
+	para "こし<NO>ぐあいも　よくなったし　"
+	line "わしらも　かえるとしようぞ"
 	done
 
 GruntM29SeenText:
-	text "Darn! I was stand-"
-	line "ing guard up top"
+	text "ちくしょう　うえで　みは<TTE>いたのに"
+	line "なんだ　あ<NO>じいさん"
 
-	para "when some old coot"
-	line "yelled at me."
+	para "いきなり　おおごえ　だすから"
+	line "おどろいて　いど<NI>おちてしまった"
 
-	para "He startled me so"
-	line "much that I fell"
-	cont "down here."
-
-	para "I think I'll vent"
-	line "my anger by taking"
-	cont "it out on you!"
+	para "ええい　うさばらしに"
+	line "おまえ<WO>いじめると　するか！"
 	done
 
 GruntM29BeatenText:
-	text "Arrgh! This is NOT"
-	line "my day!"
+	text "あー　もー"
+	line "ぜんぜん　だめだめだ！"
 	done
 
 GruntM29AfterBattleText:
-	text "Sure, we've been"
-	line "hacking the tails"
+	text "そうだよ　おれたちが"
+	line "ヤドン<NO>シッポ<WO>き<TTE>は"
+	cont "う<TTE>いたんだよ"
 
-	para "off SLOWPOKE and"
-	line "selling them."
-
-	para "Everything we do"
-	line "is for profit."
-
-	para "That's right!"
-	line "We're TEAM ROCKET,"
-
-	para "and we'll do any-"
-	line "thing for money!"
+	para "それも　これも　かねもうけ<NO>ためさ"
+	line "そう　かね<NO>ためなら"
+	cont "なんだ<TTE>するの<GA><ROCKET>！"
 	done
 
 GruntM1SeenText:
-	text "What do you want?"
+	text "なんだ？"
 
-	para "If you interrupt"
-	line "our work, don't"
-	cont "expect any mercy!"
+	para "おれたち<NO>しごと　じゃま　するなら"
+	line "ようしゃ<WA>しないぞ！"
 	done
 
 GruntM1BeatenText:
-	text "You did OK today,"
-	line "brat, but wait"
-	cont "'til next time!"
+	text "くっ　こぞう"
+	line "なかなか　やるな"
+	cont "だ<GA>つぎから<WA>そう<WA>いかないぜ"
 	done
 
 TrainerGruntM1WhenTalkText:
-	text "Yeah, TEAM ROCKET"
-	line "was broken up"
-	cont "three years ago."
+	text "たしか<NI>われら　<ROCKET>は"
+	line "３ねんまえ<NI>かいさんした"
 
-	para "But we continued"
-	line "our activities"
-	cont "underground."
+	para "だがな　こうして　ちか<NI>もぐり"
+	line "かつどう<WO>つづけていたのだ"
 
-	para "Now you can have"
-	line "fun watching us"
-	cont "stir up trouble!"
+	para "これから　なに<GA>おきるか"
+	line "たのしみ<NI>してる<GA>いいぜ！"
 	done
 
 GruntM2SeenText:
-	text "Quit taking SLOW-"
-	line "POKETAILS?"
+	text "シッポ<WO>とるの<WO>やめろ<TTE>？"
 
-	para "If we obeyed you,"
-	line "TEAM ROCKET's rep"
-	cont "would be ruined!"
+	para "ひと<NI>いわれて　やめてたら"
+	line "<ROCKET><NO>な<GA>すたるぜ！"
 	done
 
 GruntM2BeatenText:
-	text "Just…"
-	line "Too strong…"
+	text "つ　つよすぎる<⋯>"
 	done
 
 GruntM2AfterBattleText:
-	text "We need the money,"
-	line "but selling SLOW-"
-	cont "POKETAILS?"
+	text "かねもうけ　と<WA>いえ"
+	line "ヤドンのシッポ<WO>うるなんて<⋯>"
 
-	para "It's tough being a"
-	line "ROCKET GRUNT!"
+	para "したっぱ<WA>つらいぜ<⋯>"
 	done
 
 GruntF1SeenText:
-	text "Stop taking TAILS?"
+	text "シッポ<WO>とるの<WO>やめろ<TTE>？"
 
-	para "Yeah, just try to"
-	line "defeat all of us!"
+	para "じゃあ　<WATASHI>たち"
+	line "ぜんいん<WO>たおして　ごらん！"
 	done
 
 GruntF1BeatenText:
-	text "You rotten brat!"
+	text "まあ　こにくたらしい"
 	done
 
 GruntF1AfterBattleText:
-	text "SLOWPOKETAILS"
-	line "grow back fast!"
-
-	para "What's wrong with"
-	line "selling them?"
+	text "ヤドンのシッポ　なんて"
+	line "すぐ<NI>はえてくる　じゃない"
+	cont "それ<WO>う<TTE>　なに<GA>わるいのよ！"
 	done
 
 SlowpokeWellB1FSlowpokeWithMailText:
-	text "A SLOWPOKE with"
-	line "its TAIL cut off…"
+	text "ヤドンだ<⋯>"
+	line "シッポ<WO>きられている<⋯>"
 
-	para "Huh? It has MAIL."
-	line "Read it?"
+	para "おや　メール<WO>も<TTE>いる"
+	line "よんでみる？"
 	done
 
 SlowpokeWellB1FSlowpokeMailText:
-	text "<PLAYER> read the"
-	line "MAIL."
+	text "<PLAYER>は"
+	line "メール<WO>よんでみ<TA!>"
 
-	para "Be good and look"
-	line "after the house"
-
-	para "with Grandpa and"
-	line "SLOWPOKE."
-
-	para "Love, Dad"
+	para "おじいさんと　ヤドンと　なかよく"
+	line "おるすばんしてね　　　おとうさんより"
 	done
 
 SlowpokeWellB1FTaillessSlowpokeText:
-	text "A SLOWPOKE with"
-	line "its TAIL cut off…"
+	text "ヤドンだ<⋯>"
+	line "シッポ<WO>きられている<⋯>"
 	done
 
 SlowpokeWellB1F_MapEvents:

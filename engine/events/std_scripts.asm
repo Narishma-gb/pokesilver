@@ -234,19 +234,19 @@ DayToTextScript:
 	getstring STRING_BUFFER_3, .SaturdayText
 	end
 .SundayText:
-	db "SUNDAY@"
+	db "にち@"
 .MondayText:
-	db "MONDAY@"
+	db "げつ@"
 .TuesdayText:
-	db "TUESDAY@"
+	db "か@"
 .WednesdayText:
-	db "WEDNESDAY@"
+	db "すい@"
 .ThursdayText:
-	db "THURSDAY@"
+	db "もく@"
 .FridayText:
-	db "FRIDAY@"
+	db "きん@"
 .SaturdayText:
-	db "SATURDAY@"
+	db "ど@"
 
 GoldenrodRocketsScript:
 	clearevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
@@ -744,9 +744,9 @@ CoinVendor_IntroScript:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 3 ; items
-	db " 50 :  ¥1000@"
-	db "500 : ¥10000@"
-	db "CANCEL@"
+	db "　５０まい　　１０００円@"
+	db "５００まい　１００００円@"
+	db "やめる@"
 
 HappinessCheckScript:
 	faceplayer

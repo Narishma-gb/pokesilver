@@ -37,45 +37,36 @@ Route1FruitTree:
 	fruittree FRUITTREE_ROUTE_1
 
 SchoolboyDannySeenText:
-	text "If trainers meet,"
-	line "the first thing to"
-	cont "do is battle."
+	text "<TRAINER>と　であったら"
+	line "まず　しょうぶ！"
 	done
 
 SchoolboyDannyBeatenText:
-	text "Awww… I've got a"
-	line "losing record…"
+	text "まけこしだー！"
 	done
 
 SchoolboyDannyAfterBattleText:
-	text "For trainers, it's"
-	line "a given that we'll"
-
-	para "battle whenever we"
-	line "meet."
+	text "<TRAINER>にと<TTE>　しょうぶは"
+	line "あいさつ　みたいな　ものだね"
 	done
 
 CooltrainerfQuinnSeenText:
-	text "You there!"
-	line "Want to battle?"
+	text "ちょっと　キミ！"
+	line "<WATASHI>と　しょうぶ　しない？"
 	done
 
 CooltrainerfQuinnBeatenText:
-	text "Down and out…"
+	text "まけた<⋯>！"
 	done
 
 CooltrainerfQuinnAfterBattleText:
-	text "You're strong."
-
-	para "You obviously must"
-	line "have trained hard."
+	text "つよいわね　キミ"
+	line "そうとう　しゅぎょう　してるわ"
 	done
 
 Route1SignText:
-	text "ROUTE 1"
-
-	para "PALLET TOWN -"
-	line "VIRIDIAN CITY"
+	text "<KOKO_WA>１<ROUTE>"
+	line "マサラタウン　<⋯>　トキワシティ"
 	done
 
 Route1_MapEvents:

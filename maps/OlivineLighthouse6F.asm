@@ -160,99 +160,82 @@ OlivineLighthouseJasmineLeavesRightMovement:
 	step_end
 
 JasmineCianwoodPharmacyText:
-	text "JASMINE: … This"
-	line "#MON always"
+	text "ミカン『<⋯>　こ<NO>#　いつも"
+	line "うみ<WO>てらして　くれてたの"
 
-	para "kept the sea lit"
-	line "at night."
+	para "<⋯>　でも　"
+	line "いきなり　ぐったり　して"
+	cont "いきも　たえだえ<⋯>"
 
-	para "…But it suddenly"
-	line "got sick… It's"
-	cont "gasping for air…"
+	para "<⋯>　うみのむこう　タンバには"
+	line "すごい　くすりやさんが"
+	cont "いるそうですけど<⋯>"
 
-	para "…I understand"
-	line "that there is a"
-
-	para "wonderful PHARMACY"
-	line "in CIANWOOD…"
-
-	para "But that's across"
-	line "the sea…"
-
-	para "And I can't leave"
-	line "AMPHY unattended…"
+	para "<WATASHI>　アカリちゃん<NO>そばを"
+	line "はなれる　わけに<WA>いかないし<⋯>"
 	done
 
 JasmineGetSomeMedicineText:
-	text "…May I ask you to"
-	line "get some medicine"
-	cont "for me? Please?"
+	text "<⋯>　あ　あのう　おねがいです"
+	line "<WATASHI><NO>かわり<NI>くすりを"
+	cont "もら<TTE>きて　いただけませんか？"
 	done
 
 JasmineCureAmphyText:
-	text "JASMINE: …Will"
-	line "that medicine cure"
-	cont "AMPHY?"
+	text "ミカン『<⋯>　そ<NO>くすりで"
+	line "アカリちゃん　なおせる<NO>ですか？"
 	done
 
 PlayerHandedSecretpotionText:
-	text "<PLAYER> handed the"
-	line "SECRETPOTION to"
-	cont "JASMINE."
+	text "<PLAYER><WA>ミカンに"
+	line "ひでんのくすり<WO><WATASHI>た"
 	done
 
 JasmineDontBeOffendedText:
-	text "JASMINE: …Um,"
-	line "please don't be"
-	cont "offended…"
+	text "ミカン『<⋯>　あ　あの"
+	line "き<WO>わるく　しないでくださいね"
 
-	para "…AMPHY will not"
-	line "take anything from"
-	cont "anyone but me…"
+	para "<⋯>　アカリちゃん"
+	line "<WATASHI>いがい<NO>ひと　から"
+	cont "もの<WO>うけとらないから"
 	done
 
 JasmineAmphyHowAreYouFeelingText:
-	text "JASMINE: …"
+	text "ミカン『<⋯>　<⋯>　<⋯>"
 
-	para "AMPHY, how are you"
-	line "feeling?"
+	para "アカリちゃん　ぐあい<WA>どう？"
 	done
 
 JasmineThankYouText:
-	text "JASMINE: …Oh, I'm"
-	line "so relieved…"
+	text "ミカン『<⋯>　ああ　よかった"
+	line "ほんと<NI>よかったです"
 
-	para "This is just so"
-	line "wonderful…"
+	para "ありがとう　ございます"
+	line "あなた<NO>おかげ　です"
 
-	para "Thank you so very,"
-	line "very much."
-
-	para "…I will return to"
-	line "the GYM…"
+	para "<⋯>　で<WA><WATASHI>"
+	line "ジム<NI>もどります"
 	done
 
 JasmineISeeText:
-	text "JASMINE: …I see…"
+	text "ミカン『<⋯>　そう　ですか"
 	done
 
 JasmineAmphyHangOnText:
-	text "…AMPHY, hang on!"
+	text "<⋯>　アカリちゃん　がんば<TTE>！"
 	done
 
 AmphyPalPalooText:
-	text "AMPHY: …"
-	line "…Pa… paloo…"
+	text "アカリちゃん『<⋯>　<⋯>　<⋯>"
+	line "<⋯>　ぱ<⋯>　ぱるう"
 	done
 
 AmphyBreathingLaboredText:
-	text "Its breathing is"
-	line "terribly labored…"
+	text "いき<WO>するのも　くるしそう"
 	done
 
 AmphyPaluPaluluText:
-	text "AMPHY: Palu!"
-	line "Palulu!"
+	text "アカリちゃん『パルッ！　パルルッ！"
 	done
 
 OlivineLighthouse6F_MapEvents:

@@ -12,12 +12,11 @@ IndigoPlateauSign:
 	jumptext IndigoPlateauSignText
 
 IndigoPlateauSignText:
-	text "INDIGO PLATEAU"
+	text "<KOKO_WA>セキエイ　こうげん"
 
-	para "The Ultimate Goal"
-	line "for Trainers!"
-
-	para "#MON LEAGUE HQ"
+	para "#　<TRAINER><NO>ちょうてん！"
+	line "#<NO>さいこう　きかん"
+	cont "#　リーグ　ほんぶ"
 	done
 
 Route23_MapEvents:

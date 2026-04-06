@@ -39,38 +39,28 @@ RuinsOfAlphInnerChamberStatue:
 	jumptext RuinsOfAlphInnerChamberStatueText
 
 RuinsOfAlphStrangePresenceText:
-	text "There is a strange"
-	line "presence here…"
+	text "なにか<NO>けはい<WO>かんじる<⋯>"
 	done
 
 RuinsOfAlphInnerChamberFisherText:
-	text "This is a big"
-	line "room, but there's"
-	cont "nothing here."
+	text "ひろい　へや　だけど"
+	line "なにも　ないや"
 	done
 
 RuinsOfAlphInnerChamberTeacherText:
-	text "This place has a"
-	line "mystical quality"
-	cont "to it."
-
-	para "It feels sort of"
-	line "ethereal even."
+	text "こうごうしい　<TTE>　いうのかしら"
+	line "しんぴてきな　ばしょね"
 	done
 
 RuinsOfAlphInnerChamberGrampsText:
-	text "Ancient buildings"
-	line "are often tombs of"
-	cont "kings."
-
-	para "Like the pyramids,"
-	line "for instance."
+	text "おおむかし<NO>たてものと　いうと"
+	line "おうさま<NO>はか<WO>れんそう　する"
+	cont "ピラミッドとか　こふん　とか<⋯>"
 	done
 
 RuinsOfAlphInnerChamberStatueText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	text "むかし<NO>#を"
+	line "まねして　つくられた　もの"
 	done
 
 RuinsOfAlphInnerChamber_MapEvents:

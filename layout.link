@@ -130,7 +130,7 @@ ROMX $25
 	"Events"
 	; "Garbage 37"
 ROMX $26
-	; "Title Screen"
+	"Map Scripts 3"
 ROMX $2a
 	; "Map Blocks 1"
 ROMX $2b
@@ -152,7 +152,9 @@ ROMX $33
 	; "Move Animations"
 	; "Extra Songs 2"
 ROMX $36
-	; "Font Inversed"
+	"Standard Scripts"
+	"Phone Scripts"
+	"Map Scripts 12"
 ROMX $37
 	; "Map Blocks 3"
 	org $5773
@@ -181,9 +183,8 @@ ROMX $3e
 ROMX $3f
 	; "bank3F"
 ; ROMX $40
-	; "Standard Scripts"
-	; "Phone Scripts"
-	; "Map Scripts 3"
+	; "Title Screen"
+	; "Font Inversed"
 	; "Map Scripts 4"
 	; "Map Scripts 5"
 	; "Map Scripts 6"
@@ -192,27 +193,9 @@ ROMX $3f
 	; "Map Scripts 9"
 	; "Map Scripts 10"
 	; "Map Scripts 11"
-	; "Map Scripts 12"
 	; "Map Scripts 13"
 	; "Map Scripts 14"
 	; "Map Scripts 15"
-	; "Map Scripts 16"
-	; "Map Scripts 17"
-	; "Map Scripts 18"
-	; "Map Scripts 19"
-	; "Map Scripts 20"
-	; "Map Scripts 21"
-	; "Map Scripts 22"
-	; "Map Scripts 23"
-	; "Map Scripts 24"
-	; "Map Scripts 25"
-	; "Map Scripts 26"
-	; "Map Scripts 27"
-	; "Map Scripts 28"
-	; "Map Scripts 29"
-	; "Map Scripts 30"
-	; "Map Scripts 31"
-	; "Map Scripts 32"
 ; ROMX $64
 ; 	"Text 1"
 ; ROMX $65

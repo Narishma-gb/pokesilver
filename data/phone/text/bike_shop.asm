@@ -1,19 +1,13 @@
 BikeShopPhoneCallerText:
-	text "Hi, <PLAYER>!"
-	line "Our BICYCLE sales"
+	text "やあ　<PLAYER>くん"
+	line "さいきん　じてんしゃ　うれてるよ！"
 
-	para "have gone through"
-	line "the roof!"
+	para "きみ<GA>じてんしゃ<NI>の<TTE>"
+	line "せんでん　してくれてるからだね"
 
-	para "We owe it all to"
-	line "your advertising"
+	para "おれい　といっちゃ　なんだけど"
+	line "かしている　じてんしゃ"
+	cont "きみ<NO>もの<NI>してください！"
 
-	para "by riding around"
-	line "on our BICYCLE."
-
-	para "As our way of say-"
-	line "ing thanks, please"
-
-	para "keep that BICYCLE."
-	line "Thanks again!"
+	para "ほんと　ありがとう　だよ"
 	done

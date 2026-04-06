@@ -16,25 +16,20 @@ HouseForSaleSign:
 	jumptext HouseForSaleSignText
 
 Route5PokefanMText:
-	text "The road is closed"
-	line "until the problem"
-
-	para "at the POWER PLANT"
-	line "is solved."
+	text "はつでんしょ<NO>じこが"
+	line "かいけつ　するまで"
+	cont "つうこうきんし　なんだ<TTE>！"
 	done
 
 Route5UndergroundPathSignText:
-	text "UNDERGROUND PATH"
-
-	para "CERULEAN CITY -"
-	line "VERMILION CITY"
+	text "ここから　ちかつうろ"
+	line "ハナダシティ　<⋯>　クチバシティ"
 	done
 
 HouseForSaleSignText:
-	text "What's this?"
-
-	para "House for Sale…"
-	line "Nobody lives here."
+	text "<⋯>かみ<GA>は<TTE>　ある！"
+	cont "うりや<⋯>"
+	cont "だれも　すんでない　みたい<⋯>"
 	done
 
 Route5_MapEvents:

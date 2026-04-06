@@ -1,211 +1,157 @@
 ElmPhoneHealYourMonText:
-	text "Hello, <PLAYER>?"
+	text "もしもし　<PLAYER>くん　かい？"
 
-	para "Try not to overdo"
-	line "it."
-
-	para "Be sure to heal"
-	line "your #MON if"
-	cont "they are hurt."
+	para "あんまり　むり　しないでよ"
+	line "#　きずついたら"
+	cont "やすませるのも　だいじ　だからね"
 	done
 
 ElmPhoneSawMrPokemonText:
-	text "Hello, <PLAYER>?"
+	text "もしもし　<PLAYER>くん　かい？"
 
-	para "Did you meet MR."
-	line "#MON? Great!"
-	cont "Come back safely!"
+	para "#じいさん<NI>あったの？"
+	line "それじゃあ　きをつけて"
+	cont "かえ<TTE>　きてね"
 	done
 
 ElmPhonePokemonStolenText:
-	text "<PLAYER>? I'm very"
-	line "upset now."
+	text "ああ　<PLAYER>くん<⋯>"
 
-	para "We had a #MON"
-	line "stolen from here."
-
-	para "How could anyone"
-	line "do that?"
+	para "#　とられちゃったんだ<⋯>"
+	line "なんて　ことだろう<⋯>"
 	done
 
 ElmPhoneCheckingTheEggText:
-	text "Hello, <PLAYER>?"
+	text "もしもし　<PLAYER>くん　かい？"
 
-	para "We're checking the"
-	line "EGG now. It does"
-
-	para "appear to be a"
-	line "#MON EGG."
+	para "いま　タマゴ<WO>しらべてるけど"
+	line "やっぱり　#<NO>タマゴみたい"
 	done
 
 ElmPhoneAssistantText:
-	text "Hello, <PLAYER>?"
+	text "やあ　<PLAYER>くん"
 
-	para "Did you see my"
-	line "assistant? He's at"
-
-	para "the #MON CENTER"
-	line "in VIOLET CITY."
+	para "キキョウ<NO>ポケセンにいる"
+	line "じょしゅに<WA>あ<TTE>　くれたかい？"
 	done
 
 ElmPhoneHowIsTheEggText:
-	text "Hello, <PLAYER>?"
+	text "もしもし　<PLAYER>くん　かい？"
 
-	para "How's the EGG? Has"
-	line "anything changed?"
+	para "タマゴ<WA>どんな　ようすだい？"
+	line "なにか　へんかとか　ない？"
 
-	para "If anything hap-"
-	line "pens, please call."
+	para "かわったこと<GA>あったら"
+	line "でんわ　ちょうだいね"
 	done
 
 ElmPhoneEggHatchedText:
-	text "Hello, <PLAYER>?"
-	line "How is the EGG?"
+	text "やあ　<PLAYER>くん"
+	line "タマゴ<WA>どんな　かんじ？"
 
-	para "What? It hatched?"
-	line "Wow! What kind of"
-	cont "#MON is it?"
-
-	para "Please come show"
-	line "me now!"
+	para "えっ　#　うまれたの！"
+	line "ど　どんな　#かな"
+	cont "ちょっと　もど<TTE>きてよ！"
 	done
 
 ElmPhoneDiscoveredHatchTimeText:
-	text "Hello, <PLAYER>?"
+	text "もしもし　<PLAYER>くん　かい？"
 
-	para "I just made a new"
-	line "discovery."
-
-	para "The time it takes"
-	line "for an EGG to"
-
-	para "hatch depends on"
-	line "the #MON."
+	para "#<NO>しゅるい<NI>よ<TTE>"
+	line "タマゴ<GA>かえるまでの"
+	cont "じかん<NI>ちがい<GA>あるみたい"
 	done
 
 ElmPhoneInvestigatingEggMovesText:
-	text "Hello, <PLAYER>?"
+	text "もしもし　<PLAYER>くん　かい？"
 
-	para "It's still a"
-	line "mystery what kinds"
-
-	para "of moves hatched"
-	line "#MON have."
-
-	para "We're investigat-"
-	line "ing that now."
+	para "うまれてきた　#が"
+	line "どんな　わざ<WO>おぼえているか"
+	cont "なにか　ひみつ<GA>あるみたいだね！"
+	cont "それ<WO>いま　しらべてるんだよ"
 	done
 
 ElmPhoneDiscoveredPokerusText:
-	text "Hello, <PLAYER>?"
+	text "あっ　<PLAYER>くん！？"
 
-	para "I discovered an"
-	line "odd thing."
+	para "さいきん　わかったこと　なんだけど"
+	line "#<NI>くっつく"
+	cont "ポケルス<TTE>　やつ<GA>いるらしいよ"
 
-	para "Apparently there's"
-	line "something called"
+	para "うん　ウイルス　みたいだから"
+	line "ポケルス<TTE>　いうんだ<TTE>"
 
-	para "#RUS that in-"
-	line "fects #MON."
+	para "でね　そ<NO>ポケルス<TTE>"
+	line "どんどん　ふえて　いっしょにいる"
+	cont "ほか<NO>#にも　くっつくけど"
+	cont "ただ　それだけ　なんだ<TTE>"
 
-	para "Yes, it's like a"
-	line "virus, so it's"
-	cont "called #RUS."
+	para "しばらく　じかん<GA>たてば"
+	line "しぜん<NI>きえる　らしいしね"
 
-	para "It multiplies fast"
-	line "and infects other"
-
-	para "#MON too. But"
-	line "that's all."
-
-	para "It doesn't seem to"
-	line "do anything, and"
-
-	para "it goes away over"
-	line "time."
-
-	para "I guess it's"
-	line "nothing to worry"
-	cont "about. Bye!"
+	para "じゃあ　がんば<TTE>ね！"
 	done
 
 ElmPhoneDisasterText:
-	text "H-hello? <PLAYER>?"
-	line "It's a disaster!"
+	text "もっ　もしもし　<PLAYER>くん？"
 
-	para "Uh, um, it's just"
-	line "terrible!"
+	para "た　たいへん　なんだ！！"
+	line "えー　えーと　なに<GA>なんだか<⋯>"
 
-	para "What should I do?"
-	line "It… Oh, no…"
-
-	para "Please get back"
-	line "here now!"
+	para "どうしよう<⋯>"
+	line "とにかく　たいへん　なんだよ！"
+	cont "すぐ　もど<TTE>きてよ！！"
 	done
 
 ElmPhoneEggAssistantText:
-	text "Hello, <PLAYER>? We"
-	line "discovered some-"
+	text "もしもし　<PLAYER>くん！"
+	line "#<NO>タマゴ<NI>ついて"
+	cont "わかったこと<GA>あるんだ！"
 
-	para "thing about the"
-	line "EGG!"
-
-	para "My assistant is at"
-	line "the #MON CENTER"
-
-	para "in VIOLET CITY. "
-	line "Could you talk to"
-	cont "him?"
+	para "キキョウ<NO>#センターに"
+	line "ぼく<NO>じょしゅ<GA>いるはずだから"
+	cont "はなし<WO>きいてよ！"
 	done
 
 ElmPhoneRadioTowerRocketTakeoverText:
-	text "<PLAYER>, how are"
-	line "things going?"
+	text "<PLAYER>くん"
+	line "さいきん　ちょうし<WA>どう？"
 
-	para "I called because"
-	line "something weird is"
+	para "いやね　なんだか"
+	line "ラジオほうそう<GA>おかしいからね"
+	cont "きにな<TTE>　でんわ　したんだ"
 
-	para "happening with the"
-	line "radio broadcasts."
+	para "うん　ラジオ<WO>きくと"
+	line "<ROCKET>が<⋯>"
+	cont "とか　い<TTE>るんだよ"
 
-	para "They were talking"
-	line "about TEAM ROCKET."
+	para "<PLAYER>くん"
+	line "なにか　しらない？"
 
-	para "<PLAYER>, do you"
-	line "know anything"
-	cont "about it?"
+	para "それとも　ひょっとして"
+	line "<ROCKET><TTE>　ふっかつしたとか？"
+	cont "そんなこと　ないか<⋯>"
 
-	para "Maybe TEAM ROCKET"
-	line "has returned. No,"
-
-	para "that just can't"
-	line "be true."
-
-	para "Sorry to bug you."
-	line "Take care!"
+	para "へんな　でんわして　ごめんね"
+	line "じゃあ　きをつけて！"
 	done
 
 ElmPhoneGiftText:
-	text "Hello, <PLAYER>?"
+	text "もしもし　<PLAYER>くん"
+	line "<WATASHI>たい　もの<GA>あるんだ"
 
-	para "I have something"
-	line "here for you."
-
-	para "Could you swing by"
-	line "my LAB?"
-
-	para "See you later!"
+	para "ちょっと"
+	line "けんきゅうしょ<NI>きてくれないかな"
+	cont "じゃ　よろしくね！"
 	done
 
 ElmPhoneGotAholdOfSomethingNeatText:
-	text "Hello, <PLAYER>?"
-	line "How's it going?"
+	text "もしもし　<PLAYER>くん"
+	line "ちょうし<WA>どう？"
 
-	para "I got ahold of"
-	line "something neat."
+	para "あのね"
+	line "いいもの<GA>て<NI>はいったんだ"
+	cont "よかったら　とり<NI>おいでよ！"
 
-	para "Swing by my LAB"
-	line "and pick it up!"
-
-	para "See you later!"
+	para "じゃね！"
 	done

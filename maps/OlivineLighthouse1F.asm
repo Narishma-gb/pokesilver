@@ -14,24 +14,19 @@ OlivineLighthouse1FPokefanFScript:
 	jumptextfaceplayer OlivineLighthouse1FPokefanFText
 
 OlivineLighthouse1FSailorText:
-	text "People train at"
-	line "this LIGHTHOUSE."
+	text "こ<NO>とうだいは"
+	line "しゅぎょう<NO>ばしょでも　ある"
 
-	para "It's not easy to"
-	line "climb because of"
-	cont "all the trainers."
+	para "<TRAINER>　いっぱい　いるから"
+	line "かんたん<NI>のぼれないよ"
 	done
 
 OlivineLighthouse1FPokefanFText:
-	text "In the past, #-"
-	line "MON used to light"
+	text "アサギじゃ　ふるくから　#が"
+	line "よる<NO>うみ<WO>てらしていたの"
 
-	para "the sea around"
-	line "OLIVINE at night."
-
-	para "The LIGHTHOUSE was"
-	line "made in honor of"
-	cont "those #MON."
+	para "それ<WO>おまつりして　できたのが"
+	line "こ<NO>とうだい　です<TTE>"
 	done
 
 OlivineLighthouse1F_MapEvents:

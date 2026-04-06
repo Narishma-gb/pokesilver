@@ -1,101 +1,78 @@
 BillPhoneMornGreetingText:
-	text "Good morning!"
+	text "おはよう！"
 
-	para "This is the #-"
-	line "MON STORAGE SYSTEM"
-
-	para "ADMINISTRATION"
-	line "SERVICE."
+	para "こちら　#あずかりシステム"
+	line "かんりサービス！"
 	done
 
 BillPhoneDayGreetingText:
-	text "Good day!"
+	text "こんちは！"
 
-	para "This is the #-"
-	line "MON STORAGE SYSTEM"
-
-	para "ADMINISTRATION"
-	line "SERVICE."
+	para "こちら　#あずかりシステム"
+	line "かんりサービス！"
 	done
 
 BillPhoneNiteGreetingText:
-	text "Good evening!"
+	text "おつかれ！"
 
-	para "This is the #-"
-	line "MON STORAGE SYSTEM"
-
-	para "ADMINISTRATION"
-	line "SERVICE."
+	para "こちら　#あずかりシステム"
+	line "かんりサービス！"
 	done
 
 BillPhoneGenericText:
-	text "Who's calling?"
+	text "なまえ<WA>なんて　ゆーんや？"
 
-	para "<PLAYER>, is it?"
-	line "Hang on a sec…"
+	para "そうか　<PLAYER>くんか"
+	line "ちょっと　まった<TTE>なー！"
 
-	para "<……>"
-	line "<……>"
+	para "<⋯>　<⋯>　<⋯>　<⋯>　<⋯>"
+	line "　<⋯>　<⋯>　<⋯>　<⋯>"
 	done
 
 BillPhoneNotFullText:
-	text "Thanks for"
-	line "waiting!"
+	text "はいはい　おまたせー！"
 
-	para "<PLAYER>, your BOX"
-	line "has room for @"
+	para "<PLAYER>くん<GA>つこてる　ボックス"
+	line "まだ　@"
 	text_ram wStringBuffer3
-	text_start
-	cont "more #MON."
+	text "ひき　あいてるで"
 
-	para "Get out there and"
-	line "fill it up!"
+	para "どんどん　あずけた<TTE>な！"
 	done
 
 BillPhoneNearlyFullText:
-	text "Thanks for"
-	line "waiting!"
+	text "はいはい　おまたせー！"
 
-	para "<PLAYER>, your BOX"
-	line "has room for only"
-	cont "@"
+	para "<PLAYER>くん<GA>つこてる　ボックス"
+	line "いま　@"
 	text_ram wStringBuffer3
-	text " more #MON."
+	text "ひきしか　あいてへんで"
 
-	para "Maybe you should"
-	line "switch your BOX."
+	para "そろそろ　せいり　したほうが"
+	line "ええんとちゃう？"
 	done
 
 BillPhoneFullText:
-	text "Thanks for"
-	line "waiting!"
+	text "はいはい　おまたせー！"
 
-	para "<PLAYER>, your BOX"
-	line "is full!"
+	para "<PLAYER>くん<GA>つこてる　ボックス"
+	line "ぜんぜん　あいてへんわ！"
 
-	para "You'll have to"
-	line "switch BOXES if"
-
-	para "you want to catch"
-	line "more #MON."
+	para "せいり　しとかな"
+	line "もう　#　あずかれへんで！"
 	done
 
 BillPhoneNewlyFullText:
-	text "Hi, <PLAYER>?"
-	line "It's me, BILL!"
+	text "もしもし　<PLAYER>くん？"
 
-	para "Thanks for using"
-	line "my STORAGE SYSTEM."
+	para "わいや　マサキや！"
+	line "いつも　ごりよう　ありがとな"
 
-	para "That last #MON"
-	line "you sent filled"
-	cont "your BOX up."
+	para "いま　おくられた　#で"
+	line "ボックス　いっぱい<NI>なったんや！"
 
-	para "You'll have to"
-	line "switch BOXES if"
+	para "<PC>　せいり　せえへんと"
+	line "もう　あずかれへんで！"
 
-	para "you want to catch"
-	line "more #MON."
-
-	para "Bye now!"
+	para "ほな　バイバイ！"
 	done

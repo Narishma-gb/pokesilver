@@ -129,67 +129,53 @@ Route46FruitTree2:
 	fruittree FRUITTREE_ROUTE_46_2
 
 HikerBaileySeenText:
-	text "Awright! I'll show"
-	line "you the power of"
-	cont "mountain #MON!"
+	text "おーしっ！"
+	line "やま<NO>#<NO>パワフルさ"
+	cont "おしえて　やろう！"
 	done
 
 HikerBaileyBeatenText:
-	text "Mercy! You showed"
-	line "me your power!"
+	text "まいっ<TA!>"
+	line "おまえ<NO>つよさ<WO>しっ<TA!>"
 	done
 
 HikerBaileyAfterBattleText:
-	text "It's over. I don't"
-	line "mind. We HIKERS"
-	cont "are like that."
+	text "おわったこと<WA>き<NI>しない！"
+	line "それ<GA>やまおとこ<NO>こころいき！"
 	done
 
 CamperTedSeenText:
-	text "I'm raising #-"
-	line "MON too!"
-
-	para "Will you battle"
-	line "with me?"
+	text "ぼくも　#　そだててるよ"
+	line "ちょっと　あいて　してよ！"
 	done
 
 CamperTedBeatenText:
-	text "Wha…?"
+	text "あり？"
 	done
 
 CamperTedAfterBattleText:
-	text "I did my best but"
-	line "came up short."
-
-	para "No excuses--I"
-	line "admit I lost."
+	text "ベスト<WO>つくして　かてなかったら"
+	line "すなお<NI>まけ<WO>みとめるよ！"
 	done
 
 PicnickerErin1SeenText:
-	text "I raise #MON"
-	line "too!"
-
-	para "Let's battle!"
+	text "<WATASHI>も　#　そだててるよ"
+	line "ちょっと　あいて　してよ！"
 	done
 
 PicnickerErin1BeatenText:
-	text "Oh, darn it!"
+	text "ああん　くやしい！"
 	done
 
 PicnickerErinAfterBattleText:
-	text "I've been to many"
-	line "GYMS, but the GYM"
-
-	para "in GOLDENROD is my"
-	line "favorite."
-
-	para "It's filled with"
-	line "pretty flowers!"
+	text "いろんな　#ジム　まわったけど"
+	line "コガネのジム<GA>いちばん　すき"
+	cont "おはな<GA>いっぱいで　きれいだもん"
 	done
 
 Route46SignText:
-	text "ROUTE 46"
-	line "MOUNTAIN RD. AHEAD"
+	text "<KOKO_WA>４６<ROUTE>"
+	line "このさき　マウンテン　ロード"
 	done
 
 Route46_MapEvents:

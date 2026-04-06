@@ -80,68 +80,56 @@ Route2HiddenRevive:
 	hiddenitem REVIVE, EVENT_ROUTE_2_HIDDEN_REVIVE
 
 BugCatcherRobSeenText:
-	text "My bug #MON are"
-	line "tough. Prepare to"
-	cont "lose!"
+	text "ボク<NO>むし#　つよいぜ！"
+	line "かくごしろ！"
 	done
 
 BugCatcherRobBeatenText:
-	text "I was whipped…"
+	text "やられたー！"
 	done
 
 BugCatcherRobAfterBattleText:
-	text "I'm going to look"
-	line "for stronger bug"
-	cont "#MON."
+	text "もっと　つよい　むし#"
+	line "さがそー　っと！"
 	done
 
 BugCatcherEdSeenText:
-	text "If you walk in"
-	line "tall grass wearing"
-
-	para "shorts, do you get"
-	line "nicks and cuts?"
+	text "はんズボンで　くさむら<NI>はいると"
+	line "くさで　あし<WO>きったり　しない？"
 	done
 
 BugCatcherEdBeatenText:
-	text "Ouch, ouch, ouch!"
+	text "いたたたたた<⋯>！"
 	done
 
 BugCatcherEdAfterBattleText:
-	text "They'll really"
-	line "sting when you"
-	cont "take a bath."
+	text "おフロ<NI>はいると"
+	line "しみるんだよね　すごく！"
 	done
 
 BugCatcherDougSeenText:
-	text "Why don't girls"
-	line "like bug #MON?"
+	text "おんなのこ　<TTE>　どうして"
+	line "むし#　きらい　かなあ？"
 	done
 
 BugCatcherDougBeatenText:
-	text "No good!"
+	text "だめだ！"
 	done
 
 BugCatcherDougAfterBattleText:
-	text "Bug #MON squish"
-	line "like plush toys"
-
-	para "when you squeeze"
-	line "their bellies."
-
-	para "I love how they"
-	line "feel!"
+	text "むし#<NO>おなかを"
+	line "つまんだ　ときの"
+	cont "ぷにぷ<NI>した　かんしょく！"
+	cont "アレ<GA>いいのにっ！"
 	done
 
 Route2SignText:
-	text "ROUTE 2"
-
-	para "VIRIDIAN CITY -"
-	line "PEWTER CITY"
+	text "<KOKO_WA>２<ROUTE>"
+	line "トキワシティ　<⋯>　ニビシティ"
 	done
 
 Route2DiglettsCaveSignText:
-	text "DIGLETT'S CAVE"
+	text "<KOKO_WA>ディグダ<NO>あな"
 	done
 
 Route2_MapEvents:

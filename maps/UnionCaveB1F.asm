@@ -66,88 +66,69 @@ UnionCaveB1FBoulder:
 	jumpstd StrengthBoulderScript
 
 HikerPhillipSeenText:
-	text "It's been a while"
-	line "since I last saw"
-	cont "another person."
-
-	para "Don't be shy."
-	line "Let's battle!"
+	text "ああ　ひさしぶり<NI>ひと<WO>みた<⋯>"
+	line "じゃあ　さっそく　#だな！"
 	done
 
 HikerPhillipBeatenText:
-	text "Uurggh…"
+	text "ぐう<⋯>"
 	done
 
 HikerPhillipAfterBattleText:
-	text "I've been lost for"
-	line "a long time…"
+	text "ずーっと　まよ<TTE>て<⋯>"
 
-	para "I don't mind it"
-	line "here, but I am"
-	cont "soooo hungry!"
+	para "ここから　でられないの<WA>かまわんが"
+	line "はら　へったなあ　もう"
 	done
 
 HikerLeonardSeenText:
-	text "What do you know!"
-	line "A visitor!"
+	text "おお　ひさしぶり<NO>おきゃく　だな！"
 	done
 
 HikerLeonardBeatenText:
-	text "Wahahah! You're a"
-	line "feisty one!"
+	text "わはははー"
+	line "げんきな　ぼうずだ！"
 	done
 
 HikerLeonardAfterBattleText:
-	text "I live down here."
-
-	para "You can, too, if"
-	line "you'd like."
-
-	para "There's plenty of"
-	line "room, you see."
+	text "おれ　ここで　くらしてる！"
+	line "きみも　きにいったら　すんでいいぞ"
+	cont "ばしょ<WA>いっぱい　あいてるしな"
 	done
 
 PokemaniacAndrewSeenText:
-	text "Who's there?"
-
-	para "Leave me and my"
-	line "#MON alone!"
+	text "だれ？　ぼくと　#しか"
+	line "いない　せかい<WO>じゃましないでよ！"
 	done
 
 PokemaniacAndrewBeatenText:
-	text "Go…"
-	line "Go away!"
+	text "うう<⋯>"
+	line "あっち　いけ！"
 	done
 
 PokemaniacAndrewAfterBattleText:
-	text "Just me and my"
-	line "#MON. I'm de-"
-	cont "lirious with joy."
+	text "ぼくと　#　ばかり<⋯>"
+	line "ああ　ぼかあ　しあわせ　だなあ"
 	done
 
 PokemaniacCalvinSeenText:
-	text "I came all the way"
-	line "here to conduct my"
-	cont "#MON research."
+	text "#のこと　しらべるため"
+	line "こんなところまで　や<TTE>きましたあ"
 
-	para "Let me demonstrate"
-	line "my findings in a"
-	cont "real battle!"
+	para "ぼく<NO>ちょうさけっか"
+	line "じっせんで　おしえてあげよう！"
 	done
 
 PokemaniacCalvinBeatenText:
-	text "You demonstrated"
-	line "on me!"
+	text "ぼく<GA>おしえられたあ"
 	done
 
 PokemaniacCalvinAfterBattleText:
-	text "I should compile"
-	line "and announce my"
-	cont "study findings."
+	text "そろそろ　ちょうさ　したこと"
+	line "まとめて　はっぴょう　しようかな"
 
-	para "I might even be-"
-	line "come famous like"
-	cont "PROF.ELM."
+	para "そうすりゃ　ウツギはかせ　みたいに"
+	line "ゆうめい<NI>なれるかも"
 	done
 
 UnionCaveB1F_MapEvents:

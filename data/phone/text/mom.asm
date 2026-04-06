@@ -1,165 +1,136 @@
 MomPhoneGreetingText:
-	text "Hello?"
+	text "もしもし⋯"
 
-	para "Oh, hi, <PLAYER>!"
-	line "Working hard?"
+	para "あっ　<PLAYER>じゃない！"
+	line "ちゃんと　がんば<TTE>る？"
 	done
 
 MomPhoneLandmarkText:
-	text "Oh, so you're in"
-	line "@"
+	text "そう　@"
 	text_ram wStringBuffer3
-	text "…"
+	text "<NI>いるの⋯"
 
-	para "Isn't that where"
+	para "たしか　そこ<TTE>"
 	line "@"
 	text_ram wStringBuffer4
-	text_start
-	para "is? Did you go"
-	line "take a look?"
+	text "が"
+	cont "あると　おもったけど"
+	cont "い<TTE>みた？"
 	done
 
 MomPhoneGenericAreaText:
-	text "Really, you're in"
-	line "@"
+	text "ふぅん　@"
 	text_ram wStringBuffer3
-	text "?"
+	text "<NI>いるの？"
+	line "おかあさん　いったこと　ないわ"
 
-	para "I've never gone"
-	line "there. That's kind"
-	cont "of neat, <PLAYER>."
+	para "<PLAYER><TTE>　すごいわね！"
 	done
 
 MomPhoneNewBarkText:
-	text "What? You're in"
-	line "@"
+	text "なんだ　@"
 	text_ram wStringBuffer3
-	text "?"
-
-	para "Come see your MOM"
-	line "sometime!"
+	text "<NI>いるの？"
+	line "たまに<WA>かお　みせなさいね"
 	done
 
 MomPhoneCherrygroveText:
-	text "You're visiting"
-	line "@"
+	text "あら　@"
 	text_ram wStringBuffer3
-	text "?"
-
-	para "How about coming"
-	line "home for a bit?"
+	text "<NI>いるの？"
+	line "ワカバ<NI>ちかいんだから"
+	cont "たまに<WA>かお　みせなさいね"
 	done
 
 MomOtherAreaText:
-	text "Wow, you're in"
-	line "@"
+	text "いま　@"
 	text_ram wStringBuffer3
-	text "?"
-
-	para "Good luck on your"
-	line "#MON quest!"
+	text "　なんだ"
+	line "#あつめ　がんば<TTE>ね！"
 	done
 
 MomDeterminedText:
-	text "That sounds really"
-	line "tough."
+	text "ふーん　いろいろ　たいへんねぇ"
 
-	para "But, <PLAYER>, I"
-	line "know you're really"
-
-	para "determined. You'll"
-	line "be OK, right?"
+	para "でも　<PLAYER>は"
+	line "がんばりやさん　だから"
+	cont "だいじょうぶよねっ"
 	done
 
 MomCheckBalanceText:
-	text "By the way, you've"
-	line "saved up ¥@"
+	text "それはそうと　ちょきん"
+	line "@"
 	text_ram wStringBuffer3
-	text "."
-
-	para "Do you want to"
-	line "keep on saving?"
+	text "えん　たま<TTE>るけど"
+	cont "まだ　ちょきんする？"
 	done
 
 MomImportantToSaveText:
-	text "It's important to"
-	line "save your money."
+	text "ちょきん　も　しっかり"
+	line "ためないとね！"
 	done
 
 MomYoureNotSavingText:
-	text "Oh, <PLAYER>,"
-	line "you're not saving"
-
-	para "any money. Would"
-	line "you like to save?"
+	text "そういえば　<PLAYER>"
+	line "ちょきんしてないけど　ちょきんする？"
 	done
 
 MomYouveSavedText:
-	text "By the way, you've"
-	line "saved up ¥@"
+	text "そういえば　<PLAYER>"
+	line "おかあさん　@"
 	text_ram wStringBuffer3
-	text "."
-
-	para "Want to start"
-	line "saving again?"
+	text "えん"
+	cont "あずか<TTE>るけど"
+	cont "また　ちょきん　はじめる？"
 	done
 
 MomOKIllSaveText:
-	text "OK. I'll save your"
-	line "money."
+	text "じゃあ　ちょきん　しておくね"
 	done
 
 MomPhoneStopSavingMoneyText:
-	text "OK. I'll stop"
-	line "saving your money."
+	text "じゃあ　ちょきん　しないわね"
 	done
 
 MomPhoneHangUpText:
-	text "<PLAYER>, keep it"
-	line "up! I'm rooting"
-	cont "for you, baby!"
+	text "<PLAYER>！　がんばるのよ！"
+	line "おかあさん　おうえん　してるから！"
 	done
 
 MomPhoneNoPokemonText:
-	text "Hello?"
+	text "もしもし⋯"
 
-	para "Oh, hi, <PLAYER>!"
-	line "Wasn't PROF.ELM"
-	cont "waiting for you?"
+	para "あら　<PLAYER>"
+	line "ウツギはかせ<GA>よんでいたんじゃ"
+	cont "なかったかしら？"
 	done
 
 MomPhoneNoPokedexText:
-	text "Hello?"
+	text "もしもし⋯"
 
-	para "Oh, hi, <PLAYER>!"
-	line "You're on a big"
-
-	para "mission for PROF."
-	line "ELM? Be good!"
+	para "あら　<PLAYER>"
+	line "ウツギはかせから"
+	cont "ようじを　たのまれたんだ<TTE>？"
+	cont "がんば<TTE>ね！"
 	done
 
 MomPhoneNoGymQuestText:
-	text "Hello?"
+	text "もしもし⋯"
 
-	para "Hi, <PLAYER>! If"
-	line "you're done with"
-
-	para "your errand come"
-	line "on home, dear."
+	para "あら　<PLAYER>"
+	line "ようじが　すんだのなら"
+	cont "あそんでないで　かえ<TTE>くるのよ"
 	done
 
 MomPhoneLectureText:
-	text "Hello?"
+	text "もしもし⋯"
 
-	para "…… <PLAYER>?"
-	line "I heard from PROF."
+	para "<⋯>　<PLAYER>？"
+	line "ウツギさんから　きいたわ"
+	cont "たびにでる<TTE>⋯"
 
-	para "ELM that you went"
-	line "on a long trip."
+	para "おかあさん　ひとこと　ほしかったな⋯"
 
-	para "I wish you would"
-	line "have told me…"
-
-	para "What about money?"
-	line "Should I save it?"
+	para "おかねとか<TTE>　どうするの？"
+	line "おかあさん　ちょきんしてあげようか？"
 	done

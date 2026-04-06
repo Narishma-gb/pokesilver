@@ -79,7 +79,7 @@ GoldenrodBikeShopClerkRefusedText:
 	line "ひと<NO>やさしさ<NI>ふれたいよ"
 	done
 
-BikeShopPhoneCallerText:
+UnusedBikeShopPhoneCallerText: ; unreferenced
 	text "やあ　<PLAYER>くん"
 	line "さいきん　じてんしゃ　うれてるよ！"
 

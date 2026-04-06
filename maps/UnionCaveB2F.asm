@@ -75,68 +75,55 @@ UnionCaveB2FHyperPotion:
 	itemball HYPER_POTION
 
 CooltrainermNickSeenText:
-	text "There are two"
-	line "kinds of people."
+	text "よのなかに<WA>２しゅるいの"
+	line "にんげん<GA>いるんだ"
+	cont "センス<NO>ある　やつと　ない　やつ"
 
-	para "Those who have"
-	line "style, and those"
-	cont "who don't."
-
-	para "What kind of"
-	line "person are you?"
+	para "きみ<WA>どっちかな？"
 	done
 
 CooltrainermNickBeatenText:
-	text "You've got"
-	line "dazzling style!"
+	text "きらり　ひか<TTE>いる！"
 	done
 
 CooltrainermNickAfterBattleText:
-	text "Your #MON style"
-	line "is stunning and"
-	cont "colorful, I admit."
-
-	para "You'll just keep"
-	line "getting better!"
+	text "きみ<NO>#<NO>センス"
+	line "みどころ<GA>あった　ひか<TTE><TA!>"
+	cont "きっと　つよく　なるよ！"
 	done
 
 CooltrainerfGwenSeenText:
-	text "I'm in training."
-	line "Care for a round?"
+	text "ただいま　ここで　とっくん　してるの"
+	line "あなた　つきあ<TTE>　くださらない？"
 	done
 
 CooltrainerfGwenBeatenText:
-	text "Aww, no! You're"
-	line "too good for me."
+	text "ああん　もう！"
+	line "つよすぎるわよ！"
 	done
 
 CooltrainerfGwenAfterBattleText:
-	text "I'm going to train"
-	line "by myself until I"
-	cont "improve."
+	text "つよく　なるまで"
+	line "ひとしれず　とっくん　するのよ！"
 	done
 
 CooltrainerfEmmaSeenText:
-	text "If the #MON I"
-	line "liked were there,"
-	cont "I'd go anywhere."
-
-	para "That's what a real"
-	line "trainer does."
+	text "すきな　#<GA>いるのなら"
+	line "どんなところにだ<TTE>　いくわ"
+	cont "それ<GA><TRAINER>　なのよ！"
 	done
 
 CooltrainerfEmmaBeatenText:
-	text "I'd rather pet my"
-	line "babies than this!"
+	text "<WATASHI>　しょうぶ　するより"
+	line "#　かわいがるほう<GA>すきかも"
 	done
 
 CooltrainerfEmmaAfterBattleText:
-	text "Just once a week,"
-	line "a #MON comes to"
-	cont "the water's edge."
+	text "まいしゅう　１どだけ"
+	line "みずべ<NI>#<GA>や<TTE>くるの"
 
-	para "I wanted to see"
-	line "that #MON…"
+	para "そ<NO>#<NI>あいたいなあ<⋯>"
+	line "なんて　おも<TTE>るの"
 	done
 
 UnionCaveB2F_MapEvents:

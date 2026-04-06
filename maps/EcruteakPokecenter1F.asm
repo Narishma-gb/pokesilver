@@ -93,94 +93,67 @@ EcruteakPokecenter1FPlayerMovement1:
 	step_end
 
 EcruteakPokecenter1F_BillText1:
-	text "Hi, I'm BILL. And"
-	line "who are you?"
+	text "わい　マサキ"
+	line "きみは<⋯>？"
 
-	para "Hmm, <PLAYER>, huh?"
-	line "You've come at the"
-	cont "right time."
+	para "ふうん　<PLAYER>　ゆーんか"
+	line "ええとこ　きたなあ"
 	done
 
 EcruteakPokecenter1F_BillText2:
-	text "I just finished"
-	line "adjustments on my"
-	cont "TIME CAPSULE."
+	text "いまな　タイムカプセルの"
+	line "ちょうせい<GA>おわったとこ　やねん"
 
-	para "You know that"
-	line "#MON can be"
-	cont "traded, right?"
+	para "きみも　し<TTE>のとおり"
+	line "#<TTE>　こうかん　できるやろ"
 
-	para "My TIME CAPSULE"
-	line "was developed to"
+	para "それで　むかし<NO>ひととも"
+	line "こうかん　できるよう"
+	cont "タイムカプセル<GA>つくられたんや"
 
-	para "enable trades with"
-	line "the past."
+	para "<⋯>　でもな"
+	line "むかし<NO>ひと<GA>しらんもんは"
+	cont "おくること<GA>できひんねん"
+	cont "<PC><GA>パンクしよる　からな"
 
-	para "But you can't send"
-	line "anything that"
+	para "そやから　こっちで　むかし<NI>"
+	line "なかったもん<WA>はずさな　あかん"
 
-	para "didn't exist in"
-	line "the past."
+	para "はっきり　ゆーたら"
+	line "あたらしい　#"
+	cont "あたらしい　わざは"
+	cont "タイムカプセルでは"
+	cont "つうしんこうかん　できひんねん"
 
-	para "If you did, the PC"
-	line "in the past would"
-	cont "have a breakdown."
+	para "まっ　そのへん　ちょうせい　すんだし"
+	line "あした<NI>なったら"
+	cont "ぜんこく<NO>#センターで"
+	cont "タイムカプセル　つかえる　はずやで"
 
-	para "So you have to"
-	line "remove anything"
+	para "ほな　わい　コガネ<NI>かえるわ"
+	line "たまに<WA>おやこうこう　せんとな"
 
-	para "that wasn't around"
-	line "in the past."
-
-	para "Put simply, no"
-	line "sending new moves"
-
-	para "or new #MON in"
-	line "the TIME CAPSULE."
-
-	para "Don't you worry."
-	line "I'm done with the"
-	cont "adjustments."
-
-	para "Tomorrow, TIME"
-	line "CAPSULES will be"
-
-	para "running at all"
-	line "#MON CENTERS."
-
-	para "I have to hurry on"
-	line "back to GOLDENROD"
-	cont "and see my folks."
-
-	para "Buh-bye!"
+	para "ほな　バイバイ！"
 	done
 
 EcruteakPokecenter1FPokefanMText:
-	text "The way the KIMONO"
-	line "GIRLS dance is"
-
-	para "marvelous. Just"
-	line "like the way they"
-	cont "use their #MON."
+	text "まいこはん　おどりも"
+	line "#つかう　すがたも　きれいやな"
 	done
 
 EcruteakPokecenter1FCooltrainerFText:
-	text "MORTY, the GYM"
-	line "LEADER, is soooo"
-	cont "cool."
+	text "ジムリーダー<NO>マツバさま"
+	line "すてきだわあ"
+	cont "あ<NO>クールなところ<GA>いいの"
 
-	para "His #MON are"
-	line "really tough too."
+	para "それ<NI>#も"
+	line "と<TTE>も　つよいんだから"
 	done
 
 EcruteakPokecenter1FGymGuideText:
-	text "LAKE OF RAGE…"
-
-	para "The appearance of"
-	line "a GYARADOS swarm…"
-
-	para "I smell a conspir-"
-	line "acy. I know it!"
+	text "いかりのみずうみ<⋯>"
+	line "ギャラドス<NO>たいりょうはっせい<⋯>"
+	cont "なにか　じけん<NO>におい<GA>するな"
 	done
 
 EcruteakPokecenter1F_MapEvents:

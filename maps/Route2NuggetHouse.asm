@@ -27,26 +27,17 @@ Route2NuggetHouseBookshelf: ; unreferenced
 	jumpstd DifficultBookshelfScript
 
 Route2NuggetHouseFisherText:
-	text "Hi! Wow, I'm glad"
-	line "to see you."
+	text "やあやあ　よく　きたね！"
+	line "ひさしぶり<NO>おきゃくさんだ！"
 
-	para "You're the first"
-	line "visitor I've had"
-	cont "in a long time."
-
-	para "I'm super-happy!"
-	line "Let me give you a"
-	cont "little present."
+	para "おじさん　すごく　うれしいよ！"
+	line "これ　きみ<NI>あげよう！"
 	done
 
 Route2NuggetHouseFisherText_GotNugget:
-	text "That's a NUGGET."
-
-	para "I can't give you"
-	line "any nuggets of"
-
-	para "wisdom, so that'll"
-	line "have to do!"
+	text "それ<WA>おじさん<NO>きんのたま！"
+	line "ゆうこう<NI>かつようして　くれ！"
+	cont "おじさん<NO>きんのたま　だからね！"
 	done
 
 Route2NuggetHouse_MapEvents:

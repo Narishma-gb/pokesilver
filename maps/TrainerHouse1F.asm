@@ -35,104 +35,66 @@ TrainerHouseIllegibleBook:
 	jumptext TrainerHouseIllegibleText
 
 TrainerHouse1FReceptionistText:
-	text "Welcome to TRAINER"
-	line "HOUSE, the newest"
+	text "<KOKO_WA><TRAINER>　ハウス"
+	line "トキワ　シティ<NO>しん　めいしょ！"
+	cont "<TRAINER><NO>しゃこうのば　です！"
 
-	para "and most happening"
-	line "place in VIRIDIAN."
-
-	para "We're open to"
-	line "trainers only."
-
-	para "You can battle"
-	line "against the best"
-
-	para "of the best right"
-	line "downstairs."
+	para "ちか<NO>れんしゅうじょうで"
+	line "たいせんも　できますよ！"
 	done
 
 TrainerHouse1FCooltrainerMText:
-	text "VIRIDIAN is the"
-	line "town closest to"
-	cont "INDIGO PLATEAU."
+	text "トキワ<WA>セキエイこうげんに"
+	line "いちばん　ちかい　まち"
 
-	para "They built this"
-	line "place because so"
-
-	para "many trainers pass"
-	line "through on their"
-
-	para "way up to INDIGO"
-	line "PLATEAU."
+	para "セキエイこうげん<WO>めざす"
+	line "<TRAINER><GA>たくさん　たちよるから"
+	cont "こ<NO>しせつ<GA>できたのさ"
 	done
 
 TrainerHouse1FCooltrainerFText:
-	text "They hold practice"
-	line "battles downstairs"
-	cont "here."
+	text "ちか<NO>へやで"
+	line "れんしゅう　じあい<WO>してるの"
 
-	para "I would love to"
-	line "see how well a"
-
-	para "trainer from JOHTO"
-	line "battles."
+	para "ジョウト<NO><TRAINER><NO>じつりょく"
+	line "みせて　ほしいわ！"
 	done
 
 TrainerHouse1FYoungsterText:
-	text "I guess you can't"
-	line "become the CHAMP"
+	text "いろんな　まちへ　い<TTE>"
+	line "いろんな　ひとと　たたかわないと"
+	cont "チャンピオン<NI>なれない　かなあ"
 
-	para "unless you go all"
-	line "over the place and"
-
-	para "battle all kinds"
-	line "of people."
-
-	para "The CHAMPION from"
-	line "PALLET traveled to"
-
-	para "all the cities and"
-	line "towns in KANTO."
+	para "マサラ<NO>チャンピオンも"
+	line "カントー　ぜんぶ<NO>まちを"
+	cont "たびして　あるいたんだ<TTE>！"
 	done
 
 TrainerHouse1FGentlemanText:
-	text "Whew… I'm taking a"
-	line "rest from #MON"
-	cont "battles."
+	text "ふー<⋯>"
+	line "#　しょうぶ<NI>つかれたから"
+	cont "ひとやすみ<⋯>"
 	done
 
 TrainerHouseSign1Text:
-	text "Practice battles"
-	line "are held in the"
-
-	para "TRAINING HALL"
-	line "downstairs."
-
-	para "Skilled trainers"
-	line "are invited to"
-	cont "participate."
+	text "ちか　トレーニングじょう"
+	line "れんしゅう　じあい<WO>かいさい！"
+	cont "うでじまん<NO><TRAINER>は"
+	cont "ふる<TTE>　ごさんか　ください！"
 	done
 
 TrainerHouseSign2Text:
-	text "There are no rules"
-	line "or regulations for"
-
-	para "practice matches."
-	line "Just like in field"
-
-	para "battles, anything"
-	line "goes!"
+	text "ルール　きせい<WA>ありません！"
+	line "どうろ　で<NO>フリーバトルと"
+	cont "おなじ　です！"
 	done
 
 TrainerHouseIllegibleText:
-	text "…What's this?"
-	line "A strategy memo?"
+	text "<⋯>　な<NI>なに"
+	line "たいせん　こうりゃく　メモ<⋯>？"
 
-	para "This writing looks"
-	line "like ONIX tracks…"
-
-	para "It's completely"
-	line "illegible…"
+	para "イワーク<GA>あるいた　あと"
+	line "みたいな　もじで　よめない<⋯>！"
 	done
 
 TrainerHouse1F_MapEvents:

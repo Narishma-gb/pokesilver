@@ -117,95 +117,75 @@ RuinsOfAlphOutsidePlayerEnterLabMovement:
 	step_end
 
 RuinsOfAlphOutsideScientistText:
-	text "Hm? That's a #-"
-	line "DEX, isn't it?"
-	cont "May I see it?"
+	text "ん？"
+	line "それ<WA>#ずかん　だね！"
+	cont "ちょっと　みせてくれないか？"
 
-	para "There are so many"
-	line "kinds of #MON."
+	para "ふむう"
+	line "いろんな　#<GA>いるね"
 
-	para "Hm? What's this?"
+	para "なんと！"
 
-	para "What is this"
-	line "#MON?"
+	para "こ<NO>#は？"
 
-	para "It looks like the"
-	line "strange writing on"
+	para "いせき<NO>カベ<NI>かかれた"
+	line "ナゾのもよう<NI>にている<⋯>"
 
-	para "the walls of the"
-	line "RUINS."
+	para "あ<NO>もよう<GA>#だとすると"
+	line "もっと　たくさん　いるはず<⋯>"
 
-	para "If those drawings"
-	line "are really #-"
-	cont "MON, there should"
-	cont "be many more."
-
-	para "I know! Let me up-"
-	line "grade your #-"
-	cont "DEX. Follow me."
+	para "よし！　<WATASHI><GA>きみ<NO>ずかんを"
+	line "パワーアップして　あげよう！"
+	cont "ついて　きなさい！"
 	done
 
 SuperNerdEricUnusedSeenText:
-	text "What do you want?"
-	line "I'm studying--"
-	cont "don't disturb me!"
+	text "なんだ　きみは？"
+	line "けんきゅう<NO>じゃま<WA>させないぞ！"
 	done
 
 SuperNerdEricUnusedBeatenText:
-	text "Sorry…"
-	line "I'm frustrated by"
+	text "すまない<⋯>"
 
-	para "our lack of real"
-	line "understanding…"
+	para "わからない　ことばかりで"
+	line "むしゃくしゃ　してたんだよ<⋯>"
 	done
 
 SuperNerdEricUnusedAfterBattleText:
-	text "The RUINS are from"
-	line "about 1500 years"
-	cont "ago."
+	text "こ<NO>いせき<GA>つくられたのは"
+	line "いまから　１５００ねんほど　まえだ"
 
-	para "Nobody knows who"
-	line "built them."
-
-	para "It's also not"
-	line "known if the #-"
-	cont "MON statues have"
-	cont "any meaning."
-
-	para "It's all one big"
-	line "mystery…"
+	para "でも　だれ<GA>つくったか　とか"
+	line "#ぞう<NI>いみがあるのか　とか"
+	cont "わからないこと　ばかり　でね<⋯>"
 	done
 
 PsychicNathanSeenText:
-	text "Hmmm… This is a"
-	line "strange place."
+	text "<⋯>　うーん"
+	line "<KOKO_WA>ふしぎな　ところ　だな"
 	done
 
 PsychicNathanBeatenText:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 	done
 
 PsychicNathanAfterBattleText:
-	text "I like thinking"
-	line "here."
+	text "いせきで　かんがえごと<WO>するのが"
+	line "だいすき　なんだよ"
 	done
 
 RuinsOfAlphOutsideMysteryChamberSignText:
-	text "MYSTERY STONE"
-	line "PANEL CHAMBER"
+	text "ナゾ<NO>せきばん<NO>へや"
 	done
 
 RuinsOfAlphSignText:
-	text "RUINS OF ALPH"
-	line "Visitors Welcome"
+	text "アルフ<NO>いせき"
+	line "けんがく　じゆう　です"
 	done
 
 RuinsOfAlphResearchCenterSignText:
-	text "RUINS OF ALPH"
-	line "RESEARCH CENTER"
-
-	para "The Authority on"
-	line "the RUINS OF ALPH"
+	text "アルフ<NO>いせき　けんきゅうしょ"
+	line "いせき<NO>しつもん　うけつけちゅう！"
 	done
 
 RuinsOfAlphOutside_MapEvents:

@@ -51,75 +51,55 @@ FuchsiaCityFruitTree:
 	fruittree FRUITTREE_FUCHSIA_CITY
 
 FuchsiaCityYoungsterText:
-	text "One of the ELITE"
-	line "FOUR used to be"
-
-	para "the LEADER of"
-	line "FUCHSIA's GYM."
+	text "いま<NO>してんのう<NO>ひとりは"
+	line "セキチク　ジムの"
+	cont "ジムリーダー　だったんだぜ！"
 	done
 
 FuchsiaCityPokefanMText:
-	text "KOGA's daughter"
-	line "succeeded him as"
-
-	para "the GYM LEADER"
-	line "after he joined"
-	cont "the ELITE FOUR."
+	text "げんざい<NO>ジムリーダーは"
+	line "してんのう<NI>なった"
+	cont "キョウさん<NO>むすめさんだよ！"
 	done
 
 FuchsiaCityTeacherText:
-	text "The SAFARI ZONE is"
-	line "closed… It's sad,"
-
-	para "considering it's"
-	line "FUCHSIA's main"
-	cont "attraction."
+	text "サファリゾーン<WA>おやすみちゅう"
+	line "セキチク　シティ<NO>めいしょ　だから"
+	cont "すこし　さみしいわね<⋯>"
 	done
 
 FuchsiaCitySignText:
-	text "FUCHSIA CITY"
-
-	para "Behold! It's"
-	line "Passion Pink!"
+	text "<KOKO_WA>セキチク　シティ"
+	line "セキチク<WA>ピンク　はなやかな　いろ"
 	done
 
 FuchsiaGymSignText:
-	text "FUCHSIA CITY"
-	line "#MON GYM"
-	cont "LEADER: JANINE"
-
-	para "The Poisonous"
-	line "Ninja Master"
+	text "セキチク　シティ　#ジム"
+	line "リーダー　アンズ"
+	cont "どく<NO>ことなら　なんでも　ござれ"
 	done
 
 SafariZoneOfficeSignText:
-	text "There's a notice"
-	line "here…"
+	text "<⋯>　チラシ<GA>は<TTE>ある"
 
-	para "SAFARI ZONE OFFICE"
-	line "is closed until"
-	cont "further notice."
+	para "サファリゾーン　じむきょくは"
+	line "きゅうぎょうちゅう　です"
 	done
 
 WardensHomeSignText:
-	text "SAFARI ZONE"
-	line "WARDEN'S HOME"
+	text "サファリ　ゾーン"
+	line "えんちょう<NO>いえ"
 	done
 
 SafariZoneClosedSignText:
-	text "The WARDEN is"
-	line "traveling abroad."
-
-	para "Therefore, the"
-	line "SAFARI ZONE is"
-	cont "closed."
+	text "サファリゾーン<NO>えんちょうさんが"
+	line "とおい　くにへ　たび<NI>いったので"
+	cont "おやすみ　しています"
 	done
 
 NoLitteringSignText:
-	text "No littering."
-
-	para "Please take your"
-	line "waste with you."
+	text "ゴミ<NO>ポイすて　きんし"
+	line "ゴミ<WA>もちかえ<TTE>　ください"
 	done
 
 FuchsiaCity_MapEvents:

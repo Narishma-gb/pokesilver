@@ -35,38 +35,30 @@ ViridianPokecenter1FBugCatcherScript:
 	jumptextfaceplayer ViridianPokecenter1FBugCatcherText
 
 ViridianPokecenter1FCooltrainerMText:
-	text "Where in the world"
-	line "is VIRIDIAN's GYM"
-
-	para "LEADER? I wanted"
-	line "to challenge him."
+	text "トキワ<NO>ジムリーダー"
+	line "どこ<NI>いったのかな"
+	cont "ちょうせん　したかった　のに"
 	done
 
 ViridianPokecenter1FCooltrainerMText_BlueReturned:
-	text "There are no GYM"
-	line "TRAINERS at the"
-	cont "VIRIDIAN GYM."
+	text "トキワ<NO>ジムには"
+	line "ジム　<TRAINER><GA>いないんだ"
 
-	para "The LEADER claims"
-	line "his policy is to"
-
-	para "win without having"
-	line "any underlings."
+	para "とりまき　なんか　いなくても　かつ"
+	line "<TTE>の<GA>リーダー<NO>ポリシーだ<TTE>"
 	done
 
 ViridianPokecenter1FCooltrainerFText:
-	text "I heard that the"
-	line "GYM in CINNABAR is"
-	cont "gone."
+	text "グレン　タウン<NO>ジムが"
+	line "なくなっちゃった　みたいよ"
 
-	para "I wonder what be-"
-	line "came of BLAINE,"
-	cont "the GYM LEADER."
+	para "リーダー<NO>カツラさん"
+	line "どこで　な<NI>してる<NO>かしら？"
 	done
 
 ViridianPokecenter1FBugCatcherText:
-	text "My dream is to be-"
-	line "come a GYM LEADER."
+	text "ジムリーダー<NI>なることが"
+	line "ぼく<NO>ゆめ　なんだ！"
 	done
 
 ViridianPokecenter1F_MapEvents:

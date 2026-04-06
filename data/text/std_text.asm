@@ -1,422 +1,354 @@
 NurseMornText:
-	text "Good morning!"
-	line "Welcome to our"
-	cont "#MON CENTER."
+	text "おはよう　ございます！"
+	line "#　センター　です！"
 	done
 
 NurseDayText:
-	text "Hello!"
-	line "Welcome to our"
-	cont "#MON CENTER."
+	text "こんにちは！"
+	line "#　センター　です！"
 	done
 
 NurseNiteText:
-	text "Good evening!"
-	line "You're out late."
-
-	para "Welcome to our"
-	line "#MON CENTER."
+	text "おそくまで　おつかれさまです！"
+	line "#　センター　です！"
 	done
 
 NurseAskHealText:
-	text "We can heal your"
-	line "#MON to perfect"
-	cont "health."
+	text "ここで<WA>#の"
+	line "たいりょく　かいふく<WO>します！"
 
-	para "Shall we heal your"
-	line "#MON?"
+	para "あなた<NO>#を"
+	line "やすませて　あげますか？"
 	done
 
 NurseTakePokemonText:
-	text "OK, may I see your"
-	line "#MON?"
+	text "それでは"
+	line "あずからせて　いただきます！"
 	done
 
 NurseReturnPokemonText:
-	text "Thank you for"
-	line "waiting."
+	text "おまちどおさま！"
 
-	para "Your #MON are"
-	line "fully healed."
+	para "おあずかり　した　#は"
+	line "みんな　げんき<NI>なりましたよ！"
 	done
 
 NurseGoodbyeText:
-	text "We hope to see you"
-	line "again."
+	text "またの"
+	line "ごりよう<WO>おまち　してます！"
 	done
 
 ; not used
-	text "We hope to see you"
-	line "again."
+	text "またの"
+	line "ごりよう<WO>おまち　してます！"
 	done
 
 NursePokerusText:
-	text "Your #MON ap-"
-	line "pear to have tiny"
+	text "おあずかり　した　#に"
+	line "なんだか　ちいさな　せいめいたいが"
+	cont "くっついて　いるようです"
 
-	para "life forms stuck"
-	line "to them."
-
-	para "Your #MON are"
-	line "healthy and seem"
-	cont "to be fine."
-
-	para "But we can't tell"
-	line "you anything more"
-
-	para "at a #MON"
-	line "CENTER."
+	para "#<WA>げんき　ですし"
+	line "もんだい　なさそうですけど"
+	cont "#　センターでは"
+	cont "これいじょう<NO>こと<WA>わかりません"
 	done
 
 DifficultBookshelfText:
-	text "It's full of"
-	line "difficult books."
+	text "むずかしい　ほんで　いっぱいだ！"
 	done
 
 PictureBookshelfText:
-	text "A whole collection"
-	line "of #MON picture"
-	cont "books!"
+	text "#えほん<GA>そろ<TTE>る！"
 	done
 
 MagazineBookshelfText:
-	text "#MON magazines…"
-	line "#MON PAL,"
+	text "#ざっし<GA>ならんでる！"
 
-	para "#MON HANDBOOK,"
-	line "#MON GRAPH…"
+	para "<⋯>#のとも　"
+	line "<⋯>#　てちょう"
+	cont "<⋯>#　グラフ"
 	done
 
 TeamRocketOathText:
-	text "TEAM ROCKET OATH"
+	text "<ROCKET><NO>こころえ"
 
-	para "Steal #MON for"
-	line "profit!"
+	para "#<WO>うば<TTE>　かねもうけ！"
+	line "#<WO>つか<TTE>　かねもうけ！"
 
-	para "Exploit #MON"
-	line "for profit!"
-
-	para "All #MON exist"
-	line "for the glory of"
-	cont "TEAM ROCKET!"
+	para "すべて<NO>#は"
+	line "<ROCKET><NO>ために！"
 	done
 
 IncenseBurnerText:
-	text "What is this?"
-
-	para "Oh, it's an"
-	line "incense burner!"
+	text "ぶつだん　だ<⋯>"
+	line "うーん　おせんこう<NO>におい"
 	done
 
 MerchandiseShelfText:
-	text "Lots of #MON"
-	line "merchandise!"
+	text "#　グッズが"
+	line "たくさん　そろ<TTE>る！"
 	done
 
 LookTownMapText:
-	text "It's the TOWN MAP."
+	text "タウンマップだ！"
 	done
 
 WindowText:
-	text "My reflection!"
-	line "Lookin' good!"
+	text "ぴかぴか<NO>まどガラス！"
+	line "じぶん<NO>かお<GA>うつ<TTE>る！"
 	done
 
 TVText:
-	text "It's a TV."
+	text "テレビだ！"
 	done
 
 HomepageText:
-	text "#MON JOURNAL"
-	line "HOME PAGE…"
-
-	para "It hasn't been"
-	line "updated…"
+	text "#ジャーナル　ホームページ"
+	line "<⋯>うーん　ないよう<GA>かわ<TTE>ない"
 	done
 
 ; not used
-	text "#MON RADIO!"
-
-	para "Call in with your"
-	line "requests now!"
+	text "こちら　#　レイディオ！"
+	line "リクエスト　うけつけちゅう！"
 	done
 
 TrashCanText:
-	text "There's nothing in"
-	line "here…"
+	text "なか<WA>からっぽ<⋯>"
 	done
 
 ; not used
-	text "A #MON may be"
-	line "able to move this."
+	text "おおきな　いわ　だけど<⋯>"
+	line "#<NO>わざで　おせるかも？"
 	done
 
 ; not used
-	text "Maybe a #MON"
-	line "can break this."
+	text "かたそうな　いわ　だけど<⋯>"
+	line "#<NO>わざで　こわせるかも？"
 	done
 
 PokecenterSignText:
-	text "Heal Your #MON!"
-	line "#MON CENTER"
+	text "#<NO>たいりょく　かいふく！"
+	line "#センター"
 	done
 
 MartSignText:
-	text "For All Your"
-	line "#MON Needs"
-
-	para "#MON MART"
+	text "#　グッズ<NO>ことなら"
+	line "フレンドリィショップ"
 	done
 
 ContestResults_ReadyToJudgeText:
-	text "We will now judge"
-	line "the #MON you've"
-	cont "caught."
+	text "みなさん<GA>つかまえた"
+	line "#<NO>しんさ<WO>いたします！"
 
-	para "<……>"
-	line "<……>"
+	para "<⋯>　<⋯>　<⋯>"
+	line "<⋯>　<⋯>　<⋯>"
 
-	para "We have chosen the"
-	line "winners!"
-
-	para "Are you ready for"
-	line "this?"
+	para "けっか　はっぴょうー！！"
+	line "じゃじゃじゃーん！！"
 	done
 
 AskNumber1MText:
-	text "Wow! You're pretty"
-	line "tough."
+	text "ところで　つよいね　きみ！"
+	line "よかったら　でんわばんごう"
+	cont "おしえて　くれない？"
 
-	para "Could I get your"
-	line "phone number?"
-
-	para "I'll call you for"
-	line "a rematch."
+	para "また　しょうぶ　したくなったら"
+	line "でんわ　するから"
 	done
 
 AskNumber2MText:
-	text "Register the phone"
-	line "number?"
+	text "でんわばんごう"
+	line "とうろく　するかい？"
 	done
 
 RegisteredNumberMText:
-	text "<PLAYER> registered"
-	line "@"
+	text "<PLAYER><WA>@"
 	text_ram wStringBuffer3
-	text "'s number."
+	text "の"
+	line "でんわばんごう<WO>とうろく　し<TA!>"
 	done
 
 NumberAcceptedMText:
-	text "I'll call you if"
-	line "anything comes up."
+	text "なにか　あったら"
+	line "でんわ　するからね"
 	done
 
 NumberDeclinedMText:
-	text "Oh, OK…"
-	line "Just talk to me if"
-
-	para "you want to get my"
-	line "phone number."
+	text "ま　いいか⋯"
+	line "とうろく　したく　なったら"
+	cont "また　はなしかけてよ！"
 	done
 
 PhoneFullMText:
-	text "Your phone doesn't"
-	line "have enough memory"
-	cont "for more numbers."
+	text "<TTE>　きみ<NO>でんわ"
+	line "いっぱいで　とうろく　できないな！"
 	done
 
 RematchMText:
-	text "I was waiting for"
-	line "you. Let's battle!"
+	text "ま<TTE>たよ！"
+	line "それじゃあ　しょうぶ　しようか！"
 	done
 
 AskNumber1FText:
-	text "Wow, you're good"
-	line "at battling."
+	text "ところで　#　つよいわね！"
+	line "よかったら"
+	cont "でんわばんごう　おしえて？"
 
-	para "Want to give me"
-	line "your phone number?"
-
-	para "I'll phone you for"
-	line "another battle."
+	para "また　しょうぶ　したくなったら"
+	line "でんわ　するから"
 	done
 
 AskNumber2FText:
-	text "Register the phone"
-	line "number?"
+	text "でんわばんごう"
+	line "とうろく　するの？"
 	done
 
 RegisteredNumberFText:
-	text "<PLAYER> registered"
-	line "@"
+	text "<PLAYER><WA>@"
 	text_ram wStringBuffer3
-	text "'s number."
+	text "の"
+	line "でんわばんごう<WO>とうろく　し<TA!>"
 	done
 
 NumberAcceptedFText:
-	text "I'll call you if"
-	line "something's up."
+	text "なにか　あったら"
+	line "でんわ　するね！"
 	done
 
 NumberDeclinedFText:
-	text "Oh, fine then…"
-	line "If you want to get"
-
-	para "my phone number,"
-	line "just tell me."
+	text "そう？　とうろく　したくなったら"
+	line "また　はなしかけてね"
 	done
 
 PhoneFullFText:
-	text "Your phone doesn't"
-	line "have enough memory"
-	cont "for more numbers."
+	text "<TTE>　きみ<NO>でんわ"
+	line "いっぱいで　とうろく　できないわ！"
 	done
 
 RematchFText:
-	text "I waited for you."
-	line "Let's battle!"
+	text "ま<TTE>たわ"
+	line "それじゃあ　しょうぶ　しましょう！"
 	done
 
 ContestResults_PlayerWonAPrizeText:
-	text "<PLAYER> wins the"
-	line "No. @"
+	text "@"
 	text_ram wStringBuffer3
-	text " prize,"
-	cont "a @"
+	text "ばん<NO><PLAYER>さんには"
+	line "@"
 	text_ram wStringBuffer4
-	text "!"
+	text "<WO>さしあげます"
 	done
 
 ReceivedItemText:
-	text "<PLAYER> received"
+	text "<PLAYER>は"
 	line "@"
 	text_ram wStringBuffer4
-	text "."
+	text "<WO>もらっ<TA!>"
 	done
 
 ContestResults_JoinUsNextTimeText:
-	text "Please join us for"
-	line "the next Contest!"
+	text "つぎ<NO>たいかいも"
+	line "がんば<TTE>　くださいね"
 	done
 
 ContestResults_ConsolationPrizeText:
-	text "Everyone else gets"
-	line "a BERRY as a con-"
-	cont "solation prize!"
+	text "おしくも"
+	line "にゅうしょう　できなかった"
+	cont "ひとに<WA>きのみ<WO>さしあげます"
 	done
 
 ContestResults_DidNotWinText:
-	text "We hope you do"
-	line "better next time."
+	text "つぎ<NO>たいかいは"
+	line "がんば<TTE>　くださいね"
 	done
 
 ContestResults_ReturnPartyText:
-	text "We'll return the"
-	line "#MON we kept"
-
-	para "for you."
-	line "Here you go!"
+	text "あずかった　#は"
+	line "おかえししますね"
 	done
 
 ContestResults_PartyFullText:
-	text "Your party's full,"
-	line "so the #MON was"
-
-	para "sent to your BOX"
-	line "in BILL's PC."
+	text "てもちが　いっぱいなので"
+	line "ボックス<NI>てんそうされた"
 	done
 
 GymStatue_CityGymText:
+	text "@"
 	text_ram wStringBuffer3
-	text_start
-	line "#MON GYM"
+	text "　#ジム"
 	done
 
 GymStatue_WinningTrainersText:
-	text "LEADER: @"
+	text "@"
 	text_ram wStringBuffer4
-	text_start
-	para "WINNING TRAINERS:"
+	text "　にんてい　<TRAINER>！"
 	line "<PLAYER>"
 	done
 
 CoinVendor_WelcomeText:
-	text "Welcome to the"
-	line "GAME CORNER."
+	text "いらっしゃい！"
+	line "ゲーム　コーナーだよ！"
 	done
 
 CoinVendor_NoCoinCaseText:
-	text "Do you need game"
-	line "coins?"
+	text "ゲームよう　コイン　ですか？"
 
-	para "Oh, you don't have"
-	line "a COIN CASE for"
-	cont "your coins."
+	para "あれ？　コイン<WO>いれる"
+	line "コインケース<GA>ないよ！"
 	done
 
 CoinVendor_IntroText:
-	text "Do you need some"
-	line "game coins?"
+	text "ゲームよう　コイン　ですか？"
 
-	para "It costs ¥1000 for"
-	line "50 coins. Do you"
-	cont "want some?"
+	para "５０まい　１０００円<NI>なります！"
+	line "コイン<WO>かいますか？"
 	done
 
 CoinVendor_Buy50CoinsText:
-	text "Thank you!"
-	line "Here are 50 coins."
+	text "はい！　まいど　ありがと！"
+	line "コイン　５０まい　どうぞ！"
 	done
 
 CoinVendor_Buy500CoinsText:
-	text "Thank you! Here"
-	line "are 500 coins."
+	text "はい！　まいど　ありがと！"
+	line "コイン　５００まい　どうぞ！"
 	done
 
 CoinVendor_NotEnoughMoneyText:
-	text "You don't have"
-	line "enough money."
+	text "おかね　たりないよ！"
 	done
 
 CoinVendor_CoinCaseFullText:
-	text "Whoops! Your COIN"
-	line "CASE is full."
+	text "おっと<⋯>！"
+	line "コインケースから　あふれちゃうよ！"
 	done
 
 CoinVendor_CancelText:
-	text "No coins for you?"
-	line "Come again!"
+	text "<⋯>　いりませんか！"
+	line "それで<WA>また　きてね！"
 	done
 
 BugContestPrizeNoRoomText:
-	text "Oh? Your PACK is"
-	line "full."
+	text "おや？"
+	line "にもつ<GA>いっぱい<NO>ようですね⋯"
 
-	para "We'll keep this"
-	line "for you today, so"
-
-	para "come back when you"
-	line "make room for it."
+	para "きょういっぱい　なら"
+	line "とりおきして　おきますので"
+	cont "にもつ<WO>せいりして　きてください"
 	done
 
 HappinessText3:
-	text "Wow! You and your"
-	line "#MON are really"
-	cont "close!"
+	text "おおっ！！　きみと　#<TTE>"
+	line "なかのよい　きょうだい　みたいだな！"
 	done
 
 HappinessText2:
-	text "#MON get more"
-	line "friendly if you"
-
-	para "spend time with"
-	line "them."
+	text "#と　いっしょ<NI>いれば"
+	line "だんだん　なついて　もらえる<TTE>よ"
 	done
 
 HappinessText1:
-	text "You haven't tamed"
-	line "your #MON."
-
-	para "If you aren't"
-	line "nice, it'll pout."
+	text "むむ！　#<GA>なついてない！"
+	line "やさしくしないと　#　すねるよ"
 	done

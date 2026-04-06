@@ -56,6 +56,8 @@ EXPORT DEF SCENE_NEWBARKTOWN_NOOP EQU 1
 EXPORT DEF SCENE_ROUTE29_CATCH_TUTORIAL EQU 1
 EXPORT DEF SCENE_BURNEDTOWER1F_FIREBREATHER_DICK EQU 1
 EXPORT DEF SCENE_ROUTE32_OFFER_SLOWPOKETAIL EQU 1
+EXPORT DEF SCENE_AZALEATOWN_RIVAL_BATTLE EQU 1
+EXPORT DEF SCENE_MAHOGANYTOWN_NOOP EQU 1
 
 ;INCLUDE "constants_wip.asm"
 INCLUDE "main.asm"
@@ -69,11 +71,6 @@ SECTION "rom37", ROMX[$4000], BANK[37]
 	dr MapGroupPointers, $40ed
 	dr Map_data_end, $65f9
 
-
-SECTION "rom38", ROMX[$4000], BANK[38]
-; ROM $26 : $98000 - $9BFFF
-
-	dr
 
 SECTION "rom39", ROMX[$4000], BANK[39]
 ; ROM $27 : $9C000 - $9FFFF
@@ -179,78 +176,11 @@ SECTION "rom53", ROMX[$4000], BANK[53]
 
 	dr
 
-SECTION "rom54", ROMX[$4000], BANK[54]
-; ROM $36 : $D8000 - $DBFFF
-StdScripts::
-	drs PokecenterNurseScript, 0
-	drs DifficultBookshelfScript, $1
-	drs PictureBookshelfScript, $2
-	drs MagazineBookshelfScript, $3
-	drs IncenseBurnerScript, $5
-	drs MerchandiseShelfScript, $6
-	drs TownMapScript, $7
-	drs WindowScript, $8
-	drs TVScript, $9
-	drs Radio1Script, $b
-	drs Radio2Script, $c
-	drs TrashCanScript, $d
-	drs StrengthBoulderScript, $e
-	drs SmashRockScript, $f
-	drs PokecenterSignScript, $10
-	drs GoldenrodRocketsScript, $12
-	drs RadioTowerRocketsScript, $13
-	drs ElevatorButtonScript, $14
-	drs DayToTextScript, $15
-	drs BugContestResultsWarpScript, $16
-	drs BugContestResultsScript, $17
-	drs InitializeEventsScript, $18
-	drs GymStatue1Script, $27
-	drs GymStatue2Script, $28
-	drs ReceiveItemScript, $29
-	drs ReceiveTogepiEggScript, $2a
-	drs PCScript, $2b
-	drs GameCornerCoinVendorScript, $2c
-	dr UnusedPhoneScript, $4cb2
-	dr MomPhoneCalleeScript, $4cbc
-	dr MomPhoneLectureScript, $4dcb
-	drc BillPhone, $4dde, $4e19
-	drc ElmPhone, $4e1e, $4e88
-	drc JackPhone, $4ed1, $4edb
-	drc BeverlyPhone, $4efd, $4f07
-	drc HueyPhone, $4f29, $4f33
-	drc GavenPhone, $4f4e, $4f58
-	drc BethPhone, $4f7a, $4f84
-	drc JosePhone, $4fa6, $4fb0
-	drc ReenaPhone, $4fd9, $4fe3
-	drc JoeyPhone, $5005, $500f
-	drc WadePhone, $5037, $505c
-	drc RalphPhone, $509f, $50a9
-	drc LizPhone, $50ed, $50f7
-	drc AnthonyPhone, $511f, $5129
-	drc ToddPhone, $516b, $5175
-	drc GinaPhone, $519d, $51ad
-	drc IrwinPhone, $51db, $51eb
-	drc ArniePhone, $5213, $521d
-	drc AlanPhone, $5259, $5263
-	drc DanaPhone, $5285, $528f
-	drc ChadPhone, $52b1, $52bb
-	drc DerekPhone, $52f7, $531c
-	drc ChrisPhone, $5359, $5363
-	drc BrentPhone, $5385, $538f
-	drc TiffanyPhone, $53b8, $53c2
-	drc VancePhone, $53eb, $53f5
-	drc WiltonPhone, $5417, $5421
-	drc KenjiPhone, $545f, $5469
-	drc ParryPhone, $548b, $5495
-	drc ErinPhone, $54d1, $54db
-	dr BikeShopPhoneCallerScript, $5700
-
-	dr
-
 SECTION "rom55", ROMX[$4000], BANK[55]
 ; ROM $37 : $DC000 - $DFFFF
 
 	dr rom55_end, $5773
+
 
 SECTION "rom56", ROMX[$4000], BANK[56]
 ; ROM $38 : $E0000 - $E3FFF

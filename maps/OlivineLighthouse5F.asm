@@ -45,47 +45,37 @@ OlivineLighthouse5FHiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_OLIVINE_LIGHTHOUSE_5F_HIDDEN_HYPER_POTION
 
 SailorErnestSeenText:
-	text "I wanted to battle"
-	line "JASMINE, but she's"
-
-	para "not up to it now."
-	line "So, how about you?"
+	text "ミカンさんと　しょうぶ　したかったが"
+	line "それどころじゃ　ないようだ"
+	cont "かわり<NI>あいて　してくれんかね"
 	done
 
 SailorErnestBeatenText:
-	text "Whoa, whoa. You're"
-	line "overwhelming!"
+	text "おお　おお！"
+	line "なんという　つよさだ！"
 	done
 
 SailorErnestAfterBattleText:
-	text "A GYM LEADER isn't"
-	line "just about being"
-
-	para "strong. A LEADER"
-	line "also needs to be"
-	cont "compassionate."
+	text "つよいだけ<GA>ジムリーダー　じゃない"
+	line "やさしさも　ひつよう　<TTE>ことだな"
 	done
 
 BirdKeeperDenisSeenText:
-	text "We're pretty high"
-	line "up here. My bird"
-
-	para "#MON are in"
-	line "prime form."
+	text "そら<GA>ちかいからな"
+	line "ぼく<NO>とりポケ　ぜっこうちょう！"
 	done
 
 BirdKeeperDenisBeatenText:
-	text "Oops…They crashed…"
+	text "ありゃりゃ"
+	line "いきなり　ぜっふちょう<⋯>"
 	done
 
 BirdKeeperDenisAfterBattleText:
-	text "My #MON learned"
-	line "how to use FLY in"
-	cont "CIANWOOD."
+	text "ぼく<NO>#　タンバで"
+	line "そらをとぶ　わざ<WO>おぼえたよ"
 
-	para "Well, since I'm a"
-	line "loser, I'll FLY"
-	cont "across the sea…"
+	para "さてと　まけちゃったし"
+	line "うみ<WO>こえて　どこか<NI>いこうかな"
 	done
 
 OlivineLighthouse5F_MapEvents:

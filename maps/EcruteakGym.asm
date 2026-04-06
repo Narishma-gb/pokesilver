@@ -136,198 +136,159 @@ EcruteakGymStatue:
 	jumpstd GymStatue2Script
 
 MortyIntroText:
-	text "Good of you to"
-	line "have come."
+	text "よく　きたね"
 
-	para "Here in ECRUTEAK,"
-	line "#MON have been"
-	cont "revered."
+	para "エンジュでは"
+	line "むかしから　#を"
+	cont "かみさまとして　まつ<TTE>いた"
 
-	para "It's said that"
-	line "legendary #MON"
+	para "そして　しん<NO>じつりょく<WO>もつ"
+	line "<TRAINER><NO>まえに"
+	cont "でんせつの#<WA>まいおりる<⋯>"
+	cont "そう　つたえられている"
 
-	para "will appear to the"
-	line "truly powerful"
-	cont "trainers."
+	para "ぼく<WA>そ<NO>いいつたえ<WO>しんじ"
+	line "うまれたときから　ずっと　ここで"
+	cont "ひみつ<NO>しゅぎょう<WO>している"
 
-	para "I believed that"
-	line "tale, so I have"
+	para "そ<NO>おかげで"
+	line "ほか<NO>ひとに<WA>みえない　ものも"
+	cont "みえるよう<NI>なった"
 
-	para "secretly trained"
-	line "here all my life."
+	para "もうすこし<⋯>"
 
-	para "As a result, I can"
-	line "now see what"
-	cont "others cannot."
+	para "もうすこしで"
+	line "でんせつ<NO>#<NI>あえる"
+	cont "そんな　みらい<GA>みえそうなんだ"
 
-	para "Just a bit more…"
-
-	para "With a little"
-	line "more, I could see"
-
-	para "a future in which"
-	line "I meet the legen-"
-	cont "dary #MON."
-
-	para "You're going to"
-	line "help me reach that"
-	cont "level!"
+	para "そのため<NO>しゅぎょう"
+	line "きみ　にも"
+	cont "きょうりょく　してもらうよ"
 	done
 
 MortyWinLossText:
-	text "I'm not good"
-	line "enough yet…"
+	text "まだ　たりないのか"
 
-	para "All right. This"
-	line "BADGE is yours."
+	para "わかった"
+	line "こ<NO>バッジ<WA>きみ<NO>ものだよ！"
 	done
 
 Text_ReceivedFogBadge:
-	text "<PLAYER> received"
-	line "FOGBADGE."
+	text "<PLAYER><WA>マツバから"
+	line "ファントムバッジ<WO>もらっ<TA!>"
 	done
 
 MortyText_FogBadgeSpeech:
-	text "By having FOG-"
-	line "BADGE, #MON up"
+	text "ファントムバッジ<WO>も<TTE>いると"
+	line "レベル５０まで<NO>#なら"
+	cont "どんな#も　きみ<NI>したがう"
 
-	para "to L50 will obey"
-	line "you."
+	para "あと　なみのり　という"
+	line "わざ<GA>つかえるようになる"
 
-	para "Also, #MON that"
-	line "know SURF will be"
-
-	para "able to use that"
-	line "move anytime."
-
-	para "I want you to have"
-	line "this too."
+	para "それから　これも　ゆずろう"
 	done
 
 MortyText_ShadowBallSpeech:
-	text "It's SHADOW BALL."
-	line "It causes damage"
+	text "なかみ<WA>シャドーボール"
 
-	para "and may reduce"
-	line "SPCL.DEF."
+	para "ただ　<KOUGEKI>　するだけでなく"
+	line "まれ<NI>とくしゅぼうぎょも　さげる"
 
-	para "Use it if it"
-	line "appeals to you."
+	para "きにいったら　つかうと　いいよ"
 	done
 
 MortyFightDoneText:
-	text "I see…"
+	text "そうか"
 
-	para "Your journey has"
-	line "taken you to far-"
-	cont "away places."
+	para "きみ<WA>いろんなところ<WO>ぼうけんし"
+	line "ぼく<NO>しらない　ものを"
+	cont "いろいろと　みてきたんだね<⋯>"
 
-	para "And you have wit-"
-	line "nessed much more"
-	cont "than I."
-
-	para "I envy you for"
-	line "that…"
+	para "それも　うらやましいな"
 	done
 
 SageJeffreySeenText:
-	text "I spent the spring"
-	line "with my #MON."
+	text "#と　いっしょ<NI>はるをすごし"
+	line "なつから　あき　そして　ふゆ"
+	cont "すると　また　はる<GA>きて<⋯>"
 
-	para "Then summer, fall"
-	line "and winter…"
-
-	para "Then spring came"
-	line "again. We have"
-
-	para "lived together"
-	line "for a long time."
+	para "そうして　<WATASHI>たち<WA>ずっと"
+	line "#と　くらしてきたのです"
 	done
 
 SageJeffreyBeatenText:
-	text "Wins and losses, I"
-	line "experienced both."
+	text "かちも　まけも"
+	line "いっぱい　ありましたよ"
 	done
 
 SageJeffreyAfterBattleText:
-	text "Where did #MON"
-	line "come from?"
+	text "#<WA>どこから　きたのかのう"
 	done
 
 SagePingSeenText:
-	text "Can you inflict"
-	line "any damage on our"
-	cont "#MON?"
+	text "<WATASHI>たち<NO>#に"
+	line "ダメージ<WO>あたえられるか？"
 	done
 
 SagePingBeatenText:
-	text "Ah! Well done!"
+	text "おお　なかなか！"
 	done
 
 SagePingAfterBattleText:
-	text "We use only ghost-"
-	line "type #MON."
+	text "<WATASHI>たち<GA>くりだす　#は"
+	line "ゴーストタイプ　ばかり"
 
-	para "No normal-type"
-	line "attack can harm"
-	cont "them!"
+	para "ノーマルタイプ<NO><KOUGEKI>　じゃ"
+	line "ダメージ<WO>あたえられない！"
 	done
 
 MediumMarthaSeenText:
-	text "I shall win!"
+	text "かっ　かーつっ！！"
 	done
 
 MediumMarthaBeatenText:
-	text "I, I, I lost!"
+	text "まっ　まけたー！"
 	done
 
 MediumMarthaAfterBattleText:
-	text "The one who wants"
-	line "to win most--will!"
+	text "さいご<WA>かちたい　という"
+	line "きもち<NO>つよいほう<GA>かつ！"
 	done
 
 MediumGraceSeenText:
-	text "Stumped by our in-"
-	line "visible floor?"
-
-	para "Defeat me if you"
-	line "want a hint!"
+	text "みえない　ゆか<NI>とまど<TTE>おるな"
+	line "<WATASHI><NI>かてたら"
+	cont "いいこと<WO>おしえてやるぞよ！"
 	done
 
 MediumGraceBeatenText:
-	text "Wha-what?"
+	text "なな　なんとっ！"
 	done
 
 MediumGraceAfterBattleText:
-	text "Fine. I shall tell"
-	line "you the secret of"
+	text "よかろう"
+	line "みえない　ゆか<NO>なぞ　おしえよう"
 
-	para "the invisible"
-	line "floor."
-
-	para "The path is right"
-	line "before our eyes!"
+	para "<WATASHI>たち<NO>め<NO>まえ"
+	line "そこ<NI>みち<WA>ある！"
 	done
 
 EcruteakGymGuideText:
-	text "The trainers here"
-	line "have secret mo-"
-	cont "tives."
+	text "ここ<NO><TRAINER>たちは"
+	line "ひみつ<NO>もくてき<GA>あ<TTE>"
+	cont "しゅぎょう<WO>つづけていると　いう"
 
-	para "If you win, they"
-	line "may tell you some"
-
-	para "deep secrets about"
-	line "ECRUTEAK."
+	para "かてば　エンジュ<NO>ひみつ<NI>ついて"
+	line "なにか　おしえて　もらえるかもな"
 	done
 
 EcruteakGymGuideWinText:
-	text "Whew, <PLAYER>."
-	line "You did great!"
+	text "ふはー　<PLAYER>"
+	line "よく　かてたな！"
 
-	para "I was cowering in"
-	line "the corner out of"
-	cont "pure terror!"
+	para "おれなんか　こわくて"
+	line "すみっこで　ふるえてたぜ"
 	done
 
 EcruteakGym_MapEvents:

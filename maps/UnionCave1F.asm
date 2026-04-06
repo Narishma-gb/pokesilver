@@ -85,116 +85,89 @@ UnionCave1FUnusedSign: ; unreferenced
 	jumptext UnionCave1FUnusedSignText
 
 HikerRussellSeenText:
-	text "You're headed to"
-	line "AZALEA, are you?"
-
-	para "Let my #MON see"
-	line "if you are good"
-	cont "enough to battle."
+	text "ヒワダタウン<NI>むかうのか？"
+	line "ここ<WO>ぬけられるか"
+	cont "わし<NO>#で　ためしてやろう！"
 	done
 
 HikerRussellBeatenText:
-	text "Oh, oh, oh!"
+	text "ありゃりゃ<⋯>"
 	done
 
 HikerRussellAfterBattleText:
-	text "All right, then!"
-	line "I've decided."
+	text "おーしっ！　きめたっ！"
 
-	para "I'm not leaving"
-	line "until my #MON"
-	cont "get tougher!"
+	para "わし<NO>#<GA>つよくなるまで"
+	line "ここから　でないっ！"
 	done
 
 PokemaniacLarrySeenText:
-	text "I roam far and"
-	line "wide in search of"
-	cont "#MON."
+	text "#　さがして　にしひがし"
+	line "きみも　#　さがしにきたの？"
 
-	para "Are you looking"
-	line "for #MON too?"
-
-	para "Then you're my"
-	line "collecting rival!"
+	para "じゃあ　ぼく<NO>コレクションの"
+	line "きょうそうあいて　だな！"
 	done
 
 PokemaniacLarryBeatenText:
-	text "Ugh. My poor #-"
-	line "MON…"
+	text "ああ　ぼく<NO>#ちゃん<⋯>"
 	done
 
 PokemaniacLarryAfterBattleText:
-	text "Every Friday, you"
-	line "can hear #MON"
-
-	para "roars from deep"
-	line "inside the cave."
+	text "きんようび<NI>なるたびに"
+	line "どうくつ<NO>おくから"
+	cont "#<NO>なきごえ<GA>きこえるんだ"
 	done
 
 HikerDanielSeenText:
-	text "Whoa! What a"
-	line "surprise!"
-
-	para "I didn't expect to"
-	line "see anyone here!"
+	text "おっと　びっくり　どっきり"
+	line "こんなところ<NI>ひと<GA>いるなんて！"
 	done
 
 HikerDanielBeatenText:
-	text "Whoa! I'm beaten"
-	line "big time!"
+	text "おっと　びっくり　どっきり"
+	line "こんな<NI>つよいひと<GA>いるなんて！"
 	done
 
 HikerDanielAfterBattleText:
-	text "I was conned into"
-	line "buying a SLOWPOKE-"
-	cont "TAIL."
-
-	para "I feel sorry for"
-	line "the poor #MON."
+	text "だまされたのか　うっかり"
+	line "ヤドンのシッポ　か<TTE>しまったよ"
+	cont "なーんか　ヤドン　かわいそうだ"
 	done
 
 FirebreatherBillSeenText:
-	text "ZUBAT's SUPERSONIC"
-	line "keeps confusing"
-	cont "my #MON."
-
-	para "I'm seriously"
-	line "upset about that!"
+	text "ズバット<NO>ちょうおんぱで"
+	line "こんらん　させられてばかり"
+	cont "なんだか　あたま<NI>きたぞ！"
 	done
 
 FirebreatherBillBeatenText:
-	text "I flamed out!"
+	text "も　え　つ　き　た"
 	done
 
 FirebreatherBillAfterBattleText:
-	text "On weekends, you"
-	line "can hear strange"
-
-	para "roars from deep in"
-	line "the cave."
+	text "しゅうまつ<NI>なると"
+	line "どうくつ<NO>おくから"
+	cont "ふしぎな　なきごえ<GA>きこえるぞ"
 	done
 
 FirebreatherRaySeenText:
-	text "If it's light, a"
-	line "cave isn't scary."
-
-	para "If you're strong,"
-	line "#MON aren't"
-	cont "scary."
+	text "あかるければ　どうくつ　こわくない"
+	line "つよければ　#　こわくない"
 	done
 
 FirebreatherRayBeatenText:
-	text "FLASH!"
+	text "ふらーっしゅ！！"
 	done
 
 FirebreatherRayAfterBattleText:
-	text "It's my #MON's"
-	line "fire that lights"
-	cont "up this cave."
+	text "おれ<NO>#が"
+	line "ほのおで　てらしてるから"
+	cont "こ<NO>どうくつ<WA>あかるいんだぞ！"
 	done
 
 UnionCave1FUnusedSignText:
-	text "UNION CAVE"
+	text "つながり<NO>どうくつ"
 	done
 
 UnionCave1F_MapEvents:

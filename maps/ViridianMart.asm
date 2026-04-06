@@ -21,17 +21,15 @@ ViridianMartCooltrainerMScript:
 	jumptextfaceplayer ViridianMartCooltrainerMText
 
 ViridianMartLassText:
-	text "The GYM LEADER"
-	line "here is totally"
-	cont "cool."
+	text "こ<NO>まち<NO>ジムリーダー"
+	line "すごく　クールで　かっこいいのよ！"
 	done
 
 ViridianMartCooltrainerMText:
-	text "Have you been to"
-	line "CINNABAR?"
+	text "グレン　タウンに<WA>いった？"
 
-	para "It's an island way"
-	line "south of here."
+	para "ここから　ずっと　みなみの"
+	line "しま<GA>グレン　なんだよ！"
 	done
 
 ViridianMart_MapEvents:

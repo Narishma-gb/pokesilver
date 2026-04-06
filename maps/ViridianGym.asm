@@ -62,108 +62,87 @@ ViridianGymStatue:
 	jumpstd GymStatue2Script
 
 LeaderBlueBeforeText:
-	text "BLUE: Yo! Finally"
-	line "got here, huh?"
+	text "グリーン『よお　きたな"
 
-	para "I wasn't in the"
-	line "mood at CINNABAR,"
+	para "グレンじゃ　ちょっと"
+	line "ナーバス<NI>なった　けど"
+	cont "いま<WA>むしょうに"
+	cont "たたかいたい　きぶん　だぜ！"
 
-	para "but now I'm ready"
-	line "to battle you."
+	para "<⋯>　<⋯>　<⋯>"
 
-	para "…"
+	para "おまえ<GA>ジョウトのジムを"
+	line "ぜんぶ　せい<WA>した<TTE>？"
 
-	para "You're telling me"
-	line "you conquered all"
-	cont "the GYMS in JOHTO?"
+	para "ジョウト<NO>レベルが"
+	line "ひくいんじゃ　ねえのか？"
 
-	para "Heh! JOHTO's GYMS"
-	line "must be pretty"
-	cont "pathetic then."
+	para "まあ　いいさ"
+	line "たたかえば　わかることだ"
+	cont "おまえ<NO>じつりょくが"
+	cont "ホンモノか　どうかはな！"
 
-	para "Hey, don't worry"
-	line "about it."
-
-	para "I'll know if you"
-	line "are good or not by"
-
-	para "battling you right"
-	line "now."
-
-	para "Ready, JOHTO boy?"
+	para "いくぜ！"
+	line "ジョウト<NO>ぼうず！"
 	done
 
 LeaderBlueWinText:
-	text "BLUE: What?"
+	text "グリーン『バカなっ！"
 
-	para "How the heck did I"
-	line "lose to you?"
+	para "オレ<GA>こんな　ヤツに"
+	line "まける　なんてっ！！"
 
-	para "…"
-
-	para "Tch, all right…"
-	line "Here, take this--"
-	cont "it's EARTHBADGE."
+	para "<⋯>　<⋯>　<⋯>"
+	line "<⋯>　ちっ　しょうがねえ"
+	cont "ほら　グリーンバッジだ"
+	cont "おまえ<NI>やるよ！"
 	done
 
 Text_ReceivedEarthBadge:
-	text "<PLAYER> received"
-	line "EARTHBADGE."
+	text "<PLAYER><WA>グリーンから"
+	line "グリーンバッジ<WO>もらっ<TA!>"
 	done
 
 LeaderBlueAfterText:
-	text "BLUE: …"
+	text "グリーン『<⋯>　<⋯>　<⋯>"
 
-	para "All right, I was"
-	line "wrong. You're the"
+	para "オレ<GA>まちが<TTE>たよ"
+	line "おまえ<WA>ほんも<NO>だよ"
+	cont "つよい　<TRAINER>だ！"
+	cont "すなお<NI>みとめるぜ！"
 
-	para "real deal. You are"
-	line "a good trainer."
+	para "だがな！"
+	line "わすれるな！"
 
-	para "But I'm going to"
-	line "beat you someday."
-
-	para "Don't you forget"
-	line "it!"
+	para "いつか　オレ<GA>おまえを"
+	line "たおすからなっ！"
 	done
 
 LeaderBlueEpilogueText:
-	text "BLUE: Listen, you."
+	text "グリーン『いいか！"
 
-	para "You'd better not"
-	line "lose until I beat"
-	cont "you. Got it?"
+	para "オレ<GA>たおすまで"
+	line "まけるんじゃねーぞ！"
 	done
 
 ViridianGymGuideText:
-	text "Yo, CHAMP in"
-	line "making!"
+	text "おーす！"
+	line "みらい<NO>チャンピオン！"
+	cont "ちょうし<WA>どうだい？"
+	cont "こうちょう　そうだな！"
 
-	para "How's it going?"
-	line "Looks like you're"
-	cont "on a roll."
+	para "３ねんまえ　チャンピオンと"
+	line "たたかった　おとこが"
+	cont "こ<NO>ジム<NO>リーダーだ"
 
-	para "The GYM LEADER is"
-	line "a guy who battled"
-
-	para "the CHAMPION three"
-	line "years ago."
-
-	para "He's no pushover."
-
-	para "Give it everything"
-	line "you've got!"
+	para "てごわいぜ！"
+	line "がんばれよ！"
 	done
 
 ViridianGymGuideWinText:
-	text "Man, you are truly"
-	line "tough…"
-
-	para "That was a heck of"
-	line "an inspirational"
-
-	para "battle. It brought"
-	line "tears to my eyes."
+	text "さす<GA>つよいねっ！"
+	line "オレ　なみだ<GA>でてきたよ"
+	cont "かんどうてきな　しょうぶ　だったぜ！"
 	done
 
 ViridianGym_MapEvents:

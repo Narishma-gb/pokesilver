@@ -46,68 +46,57 @@ OlivineLighthouse3FEther:
 	itemball ETHER
 
 BirdKeeperTheoSeenText:
-	text "Why are you here?"
-	line "Are you just going"
-
-	para "to gawk? I suggest"
-	line "that you leave!"
+	text "きみ<WA>なんなんだ？"
+	line "おみまいか？　ひやかしか？"
+	cont "ひやかしなら　かえ<TTE>もらうよ！"
 	done
 
 BirdKeeperTheoBeatenText:
-	text "You really are"
-	line "concerned…"
+	text "ほんき　だね"
+	line "おみまい　するんだね"
 	done
 
 BirdKeeperTheoAfterBattleText:
-	text "How the heck do"
-	line "you go up?"
-
-	para "I want to visit"
-	line "the sick #MON,"
-
-	para "but I can't get up"
-	line "there…"
+	text "どうや<TTE>　うえ<NI>のぼるんだ？"
+	line "おみまい<NI>いきたいのに"
+	cont "いけなくて　こま<TTE>るんだよ"
 	done
 
 SailorTerrellSeenText:
-	text "Sailors are both"
-	line "kind and strong."
-	cont "How about you?"
+	text "うみのおとこ<WA>つよさと　やさしさ"
+	line "そ<NO>２つ<WO>かねそなえている"
+	cont "きみ<WA>どうなんだ？"
 	done
 
 SailorTerrellBeatenText:
-	text "You are both kind"
-	line "and strong…"
+	text "きみ<NO>たたかいかた"
+	line "つよさと　やさしさ<GA>かんじられる"
 	done
 
 SailorTerrellAfterBattleText:
-	text "Every time I come"
-	line "back to OLIVINE, I"
-	cont "visit the GYM."
+	text "アサギ<NI>もどるたび"
+	line "#ジム<NI>よ<TTE>たのだが<⋯>"
 
-	para "The GYM LEADER's"
-	line "#MON type has"
-
-	para "changed without me"
-	line "noticing."
+	para "ジムリーダー<NO>つかう　#の"
+	line "タイプ<GA>いつのまにか　かわ<TTE>たよ"
 	done
 
 GentlemanPrestonSeenText:
-	text "I travel the world"
-	line "to train my #-"
-	cont "MON. I wish to"
-	cont "battle with you."
+	text "<WATASHI><WA>せかい<WO>たびして"
+	line "#<WO>きたえている"
+	cont "ちょっと　しょうぶ　してもらいますぞ"
 	done
 
 GentlemanPrestonBeatenText:
-	text "…sigh… I must"
-	line "train some more…"
+	text "はあ<⋯>"
+	line "まだまだ　しゅぎょう<GA>たりないな"
 	done
 
 GentlemanPrestonAfterBattleText:
-	text "JASMINE used to"
-	line "use rock #MON"
-	cont "like ONIX."
+	text "ミカンさん<WA>もともと"
+	line "イワークなど　いわタイプの"
+	cont "#<WO>つかう"
+	cont "#<TRAINER>　だったのだ"
 	done
 
 OlivineLighthouse3F_MapEvents:

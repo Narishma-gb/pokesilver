@@ -30,53 +30,39 @@ TrainerSailorKent:
 	end
 
 SailorKentSeenText:
-	text "JASMINE must be"
-	line "worried sick about"
-	cont "the #MON here."
-
-	para "She won't even"
-	line "smile these days."
+	text "ミカンちゃん<⋯>"
+	line "#<GA>しんぱい　なんだろな"
+	cont "クスリ　とも　わらわないんだ"
 	done
 
 SailorKentBeatenText:
-	text "I can't manage a"
-	line "smile either…"
+	text "おれも　わらえない<⋯>"
 	done
 
 SailorKentAfterBattleText:
-	text "Speaking of sick,"
-	line "I've heard there's"
-
-	para "a good PHARMACY in"
-	line "CIANWOOD."
+	text "くすり<⋯>"
+	line "そうだ！　タンバに<WA>うでのいい"
+	cont "くすりや<GA>いる<TTE>　はなしだ！"
 	done
 
 LassConnie1SeenText:
-	text "JASMINE is this"
-	line "city's GYM LEADER."
+	text "ミカンちゃん"
+	line "このまち<NO>ジムリーダーなのに<⋯>"
 
-	para "I mean to bring"
-	line "her back with me."
-
-	para "Nobody had better"
-	line "get in my way!"
+	para "あたし　つれもどす　つもりなの"
+	line "だれにも　じゃま<WA>させないわよ！"
 	done
 
 LassConnie1BeatenText:
-	text "Aaack! My #MON!"
+	text "ああ　<WATASHI><NO>#！"
 	done
 
 LassConnie1AfterBattleText:
-	text "Right. Anybody"
-	line "would be worried"
-	cont "if his or her own"
-	cont "#MON were hurt."
+	text "そうね　だれだ<TTE>　#"
+	line "きずついたら　しんぱい　するわよね"
 
-	para "I'll pray for the"
-	line "#MON here, so"
-
-	para "JASMINE can come"
-	line "back to the GYM."
+	para "ミカンちゃん<GA>ジム<NI>もどれるよう"
+	line "<WATASHI>　おいのり　するわ"
 	done
 
 OlivineLighthouse4F_MapEvents:

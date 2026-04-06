@@ -71,97 +71,74 @@ Route12HiddenElixer:
 	hiddenitem ELIXER, EVENT_ROUTE_12_HIDDEN_ELIXER
 
 FisherMartinSeenText:
-	text "Patience is the"
-	line "key to both fish-"
-	cont "ing and #MON."
+	text "つり<WA>にんたい"
+	line "#も　にんたい！"
 	done
 
 FisherMartinBeatenText:
-	text "Gwaaah!"
+	text "にん　にん！"
 	done
 
 FisherMartinAfterBattleText:
-	text "I'm too impatient"
-	line "for fishing…"
+	text "たんきな　ボクには"
+	line "つり<WA>むいてないのかも<⋯>"
 	done
 
 FisherStephenSeenText:
-	text "I feel so content,"
-	line "fishing while lis-"
-	cont "tening to some"
-	cont "tunes on my radio."
+	text "つり　しながら　ラジオに"
+	line "みみ<WO>かたむける　しあわせ！"
 	done
 
 FisherStephenBeatenText:
-	text "My stupid radio"
-	line "distracted me!"
+	text "ラジオ　ききながらだったから<⋯>"
+	line "だから　まけたんだよ！"
 	done
 
 FisherStephenAfterBattleText:
-	text "Have you checked"
-	line "out KANTO's radio"
-
-	para "stations? We get a"
-	line "good variety here."
+	text "カントー<NO>ラジオほうそう"
+	line "きいたことある？"
+	cont "いろんな　ばんぐみ　や<TTE>るよ"
 	done
 
 FisherBarneySeenText:
-	text "What's most impor-"
-	line "tant in our every-"
-	cont "day lives?"
+	text "にちじょう<NO>せいかつで"
+	line "たいせつなも<NO>なーんだ？"
 	done
 
 FisherBarneyBeatenText:
-	text "The answer is"
-	line "coming up next!"
+	text "こたえ<WA>このあと　すぐ！"
 	done
 
 FisherBarneyAfterBattleText:
-	text "I think electric-"
-	line "ity is the most"
+	text "ボク<WA>やっぱり"
+	line "でんき　だと　おもうんだ"
 
-	para "important thing in"
-	line "our daily lives."
-
-	para "If it weren't,"
-	line "people wouldn't"
-
-	para "have made such a"
-	line "fuss when the"
-
-	para "POWER PLANT went"
-	line "out of commission."
+	para "じゃなかったら　はつでんしょが"
+	line "うごかないくらいで　あんなに"
+	cont "みんな<GA>あわてたり　しないよ"
 	done
 
 FisherKyleSeenText:
-	text "Do you remember?"
+	text "きみ<WA>おぼえているか<⋯>！？"
 	done
 
 FisherKyleBeatenText:
-	text "You do remember?"
+	text "おぼえてるのかー！？"
 	done
 
 FisherKyleAfterBattleText:
-	text "The tug you feel"
-	line "on the ROD when"
-
-	para "you hook a #-"
-	line "MON…"
-
-	para "That's the best"
-	line "feeling ever for"
-	cont "an angler like me."
+	text "#<GA>つれる　ときの"
+	line "あ<NO>さお<WO>つたわる　てごたえ！"
+	cont "つり<NO>だいごみ　だよね！"
 	done
 
 Route12SignText:
-	text "ROUTE 12"
-
-	para "NORTH TO LAVENDER"
-	line "TOWN"
+	text "<KOKO_WA>１２<ROUTE>"
+	line "きた　<⋯>　シオンタウン"
 	done
 
 FishingSpotSignText:
-	text "FISHING SPOT"
+	text "<KOKO_WA>つり<NO>めいしょ"
 	done
 
 Route12_MapEvents:

@@ -42,30 +42,23 @@ CelebrityHouseBookshelf:
 	jumpstd MagazineBookshelfScript
 
 CelebrityText1:
-	text "Oh, dear."
-	line "You've found me."
+	text "あらま<⋯>！"
+	line "みつかっちゃったわね！"
 
-	para "Please don't tell"
-	line "anyone about me."
-
-	para "I'll give you this"
-	line "for keeping my"
-	cont "secret. Please?"
+	para "<WATASHI><NO>こと"
+	line "だれにも　いわないで"
+	cont "これ　あげる　から"
+	cont "<⋯>　おねがいよ"
 	done
 
 CelebrityText2:
-	text "It's tough being a"
-	line "top celebrity."
-
-	para "Everywhere I go,"
-	line "people chase me."
-
-	para "I just want to be"
-	line "left alone…"
+	text "うれっこアイドル<WA>つらいわ"
+	line "どこ<NI>い<TTE>も　ひと<GA>くるもの"
+	cont "しずか<NI>くらしたいのに<⋯>"
 	done
 
 CelebritysFearowText:
-	text "FEAROW: Feero!"
+	text "オニドリル『キュイン！"
 	done
 
 Route28SteelWingHouse_MapEvents:

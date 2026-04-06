@@ -17,29 +17,21 @@ LugiaSpeechHouseRadio:
 	jumpstd Radio2Script
 
 EcruteakLugiaSpeechHouseGrampsText:
-	text "This happened when"
-	line "I was young."
+	text "わし<GA>ちいさいころ<NO>はなし"
 
-	para "The sky suddenly"
-	line "turned black. A"
+	para "そら<GA>とつぜん"
+	line "まっくらになったと　おもったら"
+	cont "おっきな　#<GA>とんでいった"
 
-	para "giant flying #-"
-	line "MON was blocking"
-	cont "out the sun."
-
-	para "I wonder what that"
-	line "#MON was? "
-
-	para "It was like a bird"
-	line "and a dragon."
+	para "あ<NO>りゅうのような"
+	line "とりのような　#は"
+	cont "なんじゃったのかのう？"
 	done
 
 EcruteakLugiaSpeechHouseYoungsterText:
-	text "Is there really a"
-	line "#MON that big?"
-
-	para "If it exists, it"
-	line "must be powerful."
+	text "そんな　でっかい　#"
+	line "ほんとう<NI>いるのかな？"
+	cont "いたら　すっげー　つよそうだけど"
 	done
 
 EcruteakLugiaSpeechHouse_MapEvents:
