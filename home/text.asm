@@ -456,8 +456,7 @@ ContText::
 .cont: db "<_CONT>@"
 
 PlaceDexEnd::
-; Ends a Pokédex entry in Gen 1.
-; Dex entries are now regular strings.
+; Ends a Pokédex entry.
 	ld [hl], '。'
 	pop hl
 	ret

@@ -43,33 +43,29 @@ CeladonMansion1FBookshelf:
 	jumpstd PictureBookshelfScript
 
 CeladonMansionManagerText:
-	text "My dear #MON"
-	line "keep me company,"
+	text "#<NI>かこまれてると"
+	line "ひとり　ぐらしも　<⋯>"
+	cont "さびしく　ないよ　<⋯>"
 
-	para "so I don't ever"
-	line "feel lonely."
-
-	para "MEOWTH even brings"
-	line "money home."
+	para "うち<NO>ニャース<WA><⋯>"
+	line "たま<NI>おかね　ひろ<TTE>　くるの"
 	done
 
 CeladonMansion1FMeowthText:
-	text "MEOWTH: Meow!"
+	text "ニャース『にゃーご！"
 	done
 
 CeladonMansion1FClefairyText:
-	text "CLEFAIRY: Clef"
-	line "cleff!"
+	text "ピッピ『ぴ　ぴっぴ！"
 	done
 
 CeladonMansion1FNidoranFText:
-	text "NIDORAN: Kya"
-	line "kyaoo!"
+	text "ニドラン『きゃ　きゃう！"
 	done
 
 CeladonMansionManagersSuiteSignText:
-	text "CELADON MANSION"
-	line "MANAGER'S SUITE"
+	text "タマムシ　マンション"
+	line "<⋯>　かんりにん　しつ"
 	done
 
 CeladonMansion1F_MapEvents:

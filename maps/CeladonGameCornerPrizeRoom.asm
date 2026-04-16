@@ -116,10 +116,10 @@ CeladonPrizeRoom_TMMenuHeader:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "TM32    {d:CELADONGAMECORNERPRIZEROOM_TM32_COINS}@"
-	db "TM29    {d:CELADONGAMECORNERPRIZEROOM_TM29_COINS}@"
-	db "TM15    {d:CELADONGAMECORNERPRIZEROOM_TM15_COINS}@"
-	db "CANCEL@"
+	db "わざマシン３２　{d:CELADONGAMECORNERPRIZEROOM_TM32_COINS}@"
+	db "わざマシン２９　{d:CELADONGAMECORNERPRIZEROOM_TM29_COINS}@"
+	db "わざマシン１５　{d:CELADONGAMECORNERPRIZEROOM_TM15_COINS}@"
+	db "やめる@"
 
 CeladonGameCornerPrizeRoomPokemonVendor:
 	faceplayer
@@ -128,8 +128,8 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	waitbutton
 	checkitem COIN_CASE
 	iffalse CeladonPrizeRoom_NoCoinCase
-.loop
 	writetext CeladonPrizeRoom_AskWhichPrizeText
+.loop
 	special DisplayCoinCaseBalance
 	loadmenu .MenuHeader
 	verticalmenu
@@ -151,8 +151,6 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	playsound SFX_TRANSACTION
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
-	setval MR__MIME
-	special GameCornerPrizeMonCheckDex
 	givepoke MR__MIME, 15
 	takecoins CELADONGAMECORNERPRIZEROOM_MR_MIME_COINS
 	sjump .loop
@@ -169,8 +167,6 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	playsound SFX_TRANSACTION
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
-	setval EEVEE
-	special GameCornerPrizeMonCheckDex
 	givepoke EEVEE, 15
 	takecoins CELADONGAMECORNERPRIZEROOM_EEVEE_COINS
 	sjump .loop
@@ -187,85 +183,78 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	playsound SFX_TRANSACTION
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
-	setval PORYGON
-	special GameCornerPrizeMonCheckDex
 	givepoke PORYGON, 20
 	takecoins CELADONGAMECORNERPRIZEROOM_PORYGON_COINS
 	sjump .loop
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 17, TEXTBOX_Y - 1
+	menu_coords 0, 2, 15, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "MR.MIME    {d:CELADONGAMECORNERPRIZEROOM_MR_MIME_COINS}@"
-	db "EEVEE      {d:CELADONGAMECORNERPRIZEROOM_EEVEE_COINS}@"
-	db "PORYGON    {d:CELADONGAMECORNERPRIZEROOM_PORYGON_COINS}@"
-	db "CANCEL@"
+	db "バリヤード　　　{d:CELADONGAMECORNERPRIZEROOM_MR_MIME_COINS}@"
+	db "イーブイ　　　　{d:CELADONGAMECORNERPRIZEROOM_EEVEE_COINS}@"
+	db "ポリゴン　　　　{d:CELADONGAMECORNERPRIZEROOM_PORYGON_COINS}@"
+	db "やめる@"
 
 CeladonGameCornerPrizeRoomGentlemanText:
-	text "I wanted MR.MIME,"
-	line "but I was short by"
-	cont "100 coins…"
+	text "バリヤード<GA>ほしかったのに<⋯>"
+	line "コイン<GA>あと　１００まい"
+	cont "たらなかった<⋯>！"
 	done
 
 CeladonGameCornerPrizeRoomPharmacistText:
-	text "Whew…"
+	text "ふううううう<⋯>"
 
-	para "I've got to stay"
-	line "calm and cool…"
+	para "あまり　アツく　ならないよう"
+	line "き<WO>つけなければ<⋯>"
 
-	para "I can't lose my"
-	line "cool, or I'll lose"
-	cont "all my money…"
+	para "おかね<WO>ぜんぶ　なくしたら"
+	line "しかた<GA>ない　からね<⋯>"
 	done
 
 CeladonPrizeRoom_PrizeVendorIntroText:
-	text "Welcome!"
+	text "いらっしゃいませ！"
 
-	para "We exchange your"
-	line "coins for fabulous"
-	cont "prizes!"
+	para "ゲームで　ためた　コインは"
+	line "こちらで　おすきな"
+	cont "けいひんと　こうかん　します！"
 	done
 
 CeladonPrizeRoom_AskWhichPrizeText:
-	text "Which prize would"
-	line "you like?"
+	text "どれ<GA>いいですか？"
 	done
 
 CeladonPrizeRoom_ConfirmPurchaseText:
-	text "OK, so you wanted"
-	line "a @"
+	text "@"
 	text_ram wStringBuffer3
-	text "?"
+	text "で　いいですね？"
 	done
 
 CeladonPrizeRoom_HereYouGoText:
-	text "Here you go!"
+	text "はい　どうぞ！"
 	done
 
 CeladonPrizeRoom_NotEnoughCoinsText:
-	text "You don't have"
-	line "enough coins."
+	text "コイン<GA>たりませんね"
 	done
 
 CeladonPrizeRoom_NotEnoughRoomText:
-	text "You have no room"
-	line "for it."
+	text "それいじょう　もてない　ですよ"
 	done
 
 CeladonPrizeRoom_ComeAgainText:
-	text "Oh. Please come"
-	line "back with coins!"
+	text "あら　そうですか"
+	line "コイン　ためて　きてくださいね！"
 	done
 
 CeladonPrizeRoom_NoCoinCaseText:
-	text "Oh? You don't have"
-	line "a COIN CASE."
+	text "あれ？"
+	line "コインケース<GA>ありませんね"
 	done
 
 CeladonGameCornerPrizeRoom_MapEvents:

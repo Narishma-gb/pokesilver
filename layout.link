@@ -131,6 +131,8 @@ ROMX $25
 	; "Garbage 37"
 ROMX $26
 	"Map Scripts 3"
+ROMX $27
+	"Map Scripts 4"
 ROMX $2a
 	; "Map Blocks 1"
 ROMX $2b
@@ -185,7 +187,6 @@ ROMX $3f
 ; ROMX $40
 	; "Title Screen"
 	; "Font Inversed"
-	; "Map Scripts 4"
 	; "Map Scripts 5"
 	; "Map Scripts 6"
 	; "Map Scripts 7"

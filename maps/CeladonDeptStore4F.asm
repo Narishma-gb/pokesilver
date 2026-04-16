@@ -28,24 +28,18 @@ CeladonDeptStore4FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 CeladonDeptStore4FSuperNerdText:
-	text "I'm here to buy"
-	line "SURF MAIL to send"
-	cont "to my girlfriend."
+	text "かのじょ<NI>メール<WO>かくんで"
+	line "なみのりメール<WO>かい<NI>きたんだ！"
 	done
 
 CeladonDeptStore4FYoungsterText:
-	text "This is the only"
-	line "place where you"
-
-	para "can buy LOVELY"
-	line "MAIL."
+	text "ラブリーメールは"
+	line "ここでしか　かえないんだぜ！"
 	done
 
 CeladonDeptStore4FDirectoryText:
-	text "Express Yourself"
-	line "With Gifts!"
-
-	para "4F: WISEMAN GIFTS"
+	text "４かい<⋯>まごころ　おくろう！"
+	line "　　ワイズマン·ギフト　ショップ！"
 	done
 
 CeladonDeptStore4F_MapEvents:

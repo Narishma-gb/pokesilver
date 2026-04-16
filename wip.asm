@@ -72,13 +72,6 @@ SECTION "rom37", ROMX[$4000], BANK[37]
 	dr Map_data_end, $65f9
 
 
-SECTION "rom39", ROMX[$4000], BANK[39]
-; ROM $27 : $9C000 - $9FFFF
-
-	dr CardKeySlotScript, $540d
-
-	dr
-
 SECTION "rom40", ROMX[$4000], BANK[40]
 ; ROM $28 : $A0000 - $A3FFF
 

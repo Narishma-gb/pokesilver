@@ -79,9 +79,9 @@ GoldenrodVendingMachine:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "おいしいみず　　２００円@"
-	db "サイコソーダ　　３００円@"
-	db "ミックスオレ　　３５０円@"
+	db "おいしいみず　　{d:GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE}円@"
+	db "サイコソーダ　　{d:GOLDENRODDEPTSTORE6F_SODA_POP_PRICE}円@"
+	db "ミックスオレ　　{d:GOLDENRODDEPTSTORE6F_LEMONADE_PRICE}円@"
 	db "やめる@"
 
 GoldenrodDeptStore6FLassScript:

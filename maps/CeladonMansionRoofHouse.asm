@@ -34,84 +34,59 @@ CeladonMansionRoofHousePharmacistScript:
 	end
 
 CeladonMansionRoofHousePharmacistIntroText:
-	text "Let me recount a"
-	line "terrifying tale…"
+	text "<WATASHI><GA>と<TTE>おきの"
+	line "こわーい　はなし<WO>きかせよう<⋯>"
 	done
 
 CeladonMansionRoofHousePharmacistNotNightText:
-	text "Then again, it's"
-	line "not as scary while"
+	text "<⋯>　おっと！"
+	line "あかるいとき<NI>はなしても"
+	cont "ぜんぜん　おもしろく　ないね！"
 
-	para "it's still light"
-	line "outside."
-
-	para "Come back after"
-	line "sunset, OK?"
+	para "たいよう<GA>しずんだら　きてよ！"
 	done
 
 CeladonMansionRoofHousePharmacistStoryText:
-	text "Once upon a time,"
-	line "there was a little"
+	text "ある　おとこのこ<GA>しんぴんの"
+	line "じてんしゃ<WO>か<TTE>もらった<⋯>"
 
-	para "boy who was given"
-	line "a new BICYCLE…"
+	para "おとこのこ<WA>うれしくて　さっそく"
+	line "じてんしゃで　あそびにいった<⋯>"
 
-	para "He wanted to try"
-	line "it right away…"
+	para "きがついたら　ひ<GA>しずんでいた"
+	line "あたり<WA>まっくら　やみのなか<⋯>"
+	cont "うれしくて　きづかなかったのだ<⋯>"
 
-	para "He was having so"
-	line "much fun that he"
+	para "とつぜん　じてんしゃ<NO>スピードが"
+	line "がくん　と　おそくなっ<TA!>"
+	cont "ペダル<GA>おもくなっ<TA!>"
+	cont "こぐの<WO>やめると　じてんしゃは"
+	cont "ずるずると　うしろへ　さが<TTE>いく！"
 
-	para "didn't notice the"
-	line "sun had set…"
+	para "のろい<NO>じてんしゃ<GA>おとこのこを"
+	line "じごくへ　つれていくかのように<⋯>"
 
-	para "While riding home"
-	line "in the pitch-black"
+	para "<⋯>　<⋯>　<⋯>"
 
-	para "night, the bike"
-	line "suddenly slowed!"
+	para "<⋯>　<⋯>　<⋯>"
 
-	para "The pedals became"
-	line "heavy!"
+	para "ぎゃーーーーーっ！！"
 
-	para "When he stopped"
-	line "pedaling, the bike"
+	para "そこ<WA>サイクリング　ロードの"
+	line "のぼりざか　だっ<TA!>"
 
-	para "began slipping"
-	line "backwards!"
+	para "<⋯>　<⋯>　<⋯>"
+	line "おあと<GA>よろしい　ようで<⋯>"
 
-	para "It was as if the"
-	line "bike were cursed"
-
-	para "and trying to drag"
-	line "him into oblivion!"
-
-	para "…"
-
-	para "…"
-
-	para "SHRIEEEEK!"
-
-	para "The boy had been"
-	line "riding uphill on"
-	cont "CYCLING ROAD!"
-
-	para "…"
-	line "Ba-dum ba-dum!"
-
-	para "For listening so"
-	line "patiently, you may"
-	cont "take this--TM03!"
+	para "はなし<WO>きいてくれた　きみには"
+	line "はい　これ　<TM>０３！"
 	done
 
 CeladonMansionRoofHousePharmacistCurseText:
-	text "TM03 is CURSE."
-
-	para "It's a terrifying"
-	line "move that slowly"
-
-	para "whittles down the"
-	line "victim's HP."
+	text "<TM>０３<WA>のろい！"
+	line "あいて<NO>たいりょくを"
+	cont "じわじわ　けず<TTE>いく"
+	cont "おそろしい　わざ　だよ！"
 	done
 
 CeladonMansionRoofHouse_MapEvents:

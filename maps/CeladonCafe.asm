@@ -117,92 +117,78 @@ CeladonCafeTrashcan:
 	jumpstd TrashCanScript
 
 ChefText_Eatathon:
-	text "Hi!"
+	text "らっしゃい！"
 
-	para "We're holding an"
-	line "eatathon contest."
-
-	para "We can't serve you"
-	line "right now. Sorry."
+	para "おおぐい　コンテストの"
+	line "さいちゅう　なんだ！"
+	cont "わるいね！"
 	done
 
 Fisher1Text_Snarfle:
-	text "…Snarfle, chew…"
+	text "もぐもぐ<⋯>！"
 	done
 
 Fisher1Text_Concentration:
-	text "Don't talk to me!"
-
-	para "You'll break my"
-	line "concentration!"
+	text "はなし　かけないで　くれ！"
+	line "き<GA>ちっちゃうよ！"
 	done
 
 Fisher2Text_GulpChew:
-	text "…Gulp… Chew…"
+	text "むしゃむしゃ<⋯>！"
 	done
 
 Fisher2Text_Quantity:
-	text "I take quantity"
-	line "over quality!"
-
-	para "I'm happy when I'm"
-	line "full!"
+	text "ゴハン<WA>あじ　よりも　りょう！"
+	line "まんぷく<NI>なれば　まんぞく！"
 	done
 
 Fisher3Text_MunchMunch:
-	text "Munch, munch…"
+	text "がつがつ<⋯>！"
 	done
 
 Fisher3Text_GoldenrodIsBest:
-	text "The food is good"
-	line "here, but GOLDEN-"
-	cont "ROD has the best"
-	cont "food anywhere."
+	text "ここも　おいしいけど"
+	line "やっぱ　たべものは"
+	cont "コガネ<GA>いちばん　だな！"
 	done
 
 TeacherText_CrunchCrunch:
-	text "Crunch… Crunch…"
+	text "ばりばり<⋯>！"
 	done
 
 TeacherText_NoCoinCase:
-	text "Nobody here will"
-	line "give you a COIN"
-
-	para "CASE. You should"
-	line "look in JOHTO."
+	text "こ<NO>おみせ<NI>コインケースを"
+	line "くれる　ひと<WA>いないわよ"
+	cont "ジョウトで　さがして　みてよ"
 	done
 
 TeacherText_KeepEating:
-	text "Crunch… Crunch…"
+	text "ばりばり<⋯>！"
 
-	para "I can keep eating!"
+	para "まだまだ　たべられるわ！"
 	done
 
 TeacherText_MoreChef:
-	text "More, CHEF!"
+	text "おかわり！　マスター！"
 	done
 
 EatathonContestPosterText:
-	text "Eatathon Contest!"
-	line "No time limit!"
-
-	para "A battle without"
-	line "end! The biggest"
-
-	para "muncher gets it"
-	line "all for free!"
+	text "おおぐい　コンテスト！"
+	line "じかん　むせいげん！"
+	cont "おわり<NO>ない　バトル！"
+	cont "１ばんのひと<WA>タダになります！"
 	done
 
 FoundLeftoversText:
-	text "<PLAYER> found a"
+	text "<PLAYER>は"
 	line "@"
 	text_ram wStringBuffer3
-	text "."
+	text "<WO>みつけ<TA!>"
 	done
 
 NoRoomForLeftoversText:
-	text "But <PLAYER> can't"
-	line "hold another item…"
+	text "しかし　<PLAYER>は"
+	line "これ　いじょう　どうぐ<WO>もてない！"
 	done
 
 CeladonCafe_MapEvents:

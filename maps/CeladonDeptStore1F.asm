@@ -24,51 +24,33 @@ CeladonDeptStore1FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 CeladonDeptStore1FReceptionistText:
-	text "Hello! Welcome to"
-	line "CELADON DEPT."
-	cont "STORE!"
+	text "いらっしゃいませ！"
+	line "タマムシ　デパート<NI>ようこそ！"
 
-	para "The directory is"
-	line "on the wall."
+	para "かく　フロア<NO>あんないは"
+	line "みぎ<NO>ボード<WO>ごらん　ください"
 	done
 
 CeladonDeptStore1FGentlemanText:
-	text "This DEPT.STORE is"
-	line "part of the same"
-
-	para "chain as the one"
-	line "in GOLDENROD CITY."
-
-	para "They were both"
-	line "renovated at the"
-	cont "same time."
+	text "しまいてんの"
+	line "コガネ　ひゃっかてん　<NI>あわせて"
+	cont "こ<NO>デパートも"
+	cont "かいそう　した　らしいよ"
 	done
 
 CeladonDeptStore1FTeacherText:
-	text "This is my first"
-	line "time here."
-
-	para "It's so big…"
-
-	para "I'm afraid I'll"
-	line "get lost."
+	text "はじめて　きたけど<⋯>"
+	line "すごく　おおきくて"
+	cont "まよっちゃいそうだわ！"
 	done
 
 CeladonDeptStore1FDirectoryText:
-	text "1F: SERVICE"
-	line "    COUNTER"
-
-	para "2F: TRAINER'S"
-	line "    MARKET"
-
-	para "3F: TM SHOP"
-
-	para "4F: WISEMAN GIFTS"
-
-	para "5F: DRUG STORE"
-
-	para "6F: VENDING"
-	line "    MACHINES"
+	text "１かい　<⋯>　サービス·カウンター"
+	line "２かい　<⋯>　<TRAINER>ズ·ショップ"
+	cont "３かい　<⋯>　<TM>·ショップ"
+	cont "４かい　<⋯>　ワイズマン·ギフト"
+	cont "５かい　<⋯>　ドラッグ·ストア"
+	cont "６かい　<⋯>　じどう　はんばいき"
 	done
 
 CeladonDeptStore1F_MapEvents:

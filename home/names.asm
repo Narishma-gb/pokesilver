@@ -53,7 +53,7 @@ GetName::
 	call GetNthString
 
 	ld de, wStringBuffer1
-	ld bc, TRAINER_CLASS_NAME_LENGTH
+	ld bc, STRING_BUFFER_LENGTH
 	call CopyBytes
 
 .done
@@ -120,7 +120,7 @@ GetPokemonName::
 	ld a, BANK(PokemonNames)
 	rst Bankswitch
 
-; Each name is ten characters
+; Each name is 5 characters
 	ld a, [wNamedObjectIndex]
 	dec a
 	ld hl, PokemonNames

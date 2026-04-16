@@ -276,203 +276,160 @@ NationalParkHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
 
 NationalParkLassText:
-	text "Look! Check out my"
-	line "bag!"
+	text "みて　みて！"
+	line "<WATASHI><NO>バッグ！"
 
-	para "I printed out my"
-	line "favorites from my"
-
-	para "#DEX and stuck"
-	line "them on my bag."
+	para "だいすきな　#<NO>ずかんを"
+	line "プリントして　は<TTE>るの！"
 	done
 
 NationalParkPokefanFText:
-	text "This is MAIL I got"
-	line "from my daughter."
-	cont "It cheers me up."
+	text "こ<NO>ちいさな　かみはね"
+	line "むすめ<NI>もらった　メールなの"
+	cont "うれしいわ"
 	done
 
 NationalParkTeacher1Text:
-	text "Pay attention,"
-	line "please!"
+	text "はい　ちゅうもーく！"
 
-	para "…Oops, I have to"
-	line "quit thinking like"
+	para "<⋯>あら　いけない"
+	line "きょうし　してる　クセ<GA>でちゃった"
 
-	para "a teacher all the"
-	line "time."
+	para "あなた　#　<TRAINER>ね"
 
-	para "You must be a"
-	line "#MON trainer."
-
-	para "Since you're work-"
-	line "ing so hard, I"
-
-	para "want you to have"
-	line "this."
+	para "いっしょうけんめい　がんば<TTE>る"
+	line "みたいだから　これ<WO>あげるわ！"
 	done
 
 NationalParkTeacher1Text_GotQuickClaw:
-	text "Let a #MON hold"
-	line "that QUICK CLAW."
-
-	para "Sometimes it will"
-	line "strike first"
-	cont "during battle."
+	text "そ<NO>せんせいのツメ　は"
+	line "#<NI>もたせると"
+	cont "たま<NI>せんせい　<KOUGEKI>　を"
+	cont "するよう<NI>なるのよ！"
 	done
 
 NationalParkYoungster1Text:
-	text "I'm playing with"
-	line "stickers I printed"
-	cont "from my #DEX."
+	text "プリントした　#　ずかんで"
+	line "ともだちと　あそんでるんだ！"
 	done
 
 NationalParkYoungster2Text:
-	text "I get the other"
-	line "guy's #DEX"
-	cont "sticker if I win."
+	text "かてば　あいて<NO>ずかんシールを"
+	line "もらえるのさ！"
 	done
 
 NationalParkTeacher2Text:
-	text "I take walks in"
-	line "the PARK, but I"
+	text "いつも　こうえん<WO>さんぽ　してるの"
+	line "くさ<NO>なかに<WA>はいらないけどね"
 
-	para "never go into the"
-	line "grass."
-
-	para "Trainers always"
-	line "want to battle…"
+	para "だ<TTE>　#　<TRAINER>が"
+	line "しょうぶ<WO>しかけて　くる　からよ！"
 	done
 
 NationalParkPersianText:
-	text "PERSIAN: Fufushaa!"
+	text "ペルシアン『フ　フシャーッ！"
 	done
 
 NationalParkGameboyKidText:
-	text "I'm printing out"
-	line "my #DEX."
+	text "#ずかんを"
+	line "プリンタで　プリント　してるんだ！"
 
-	para "You can also print"
-	line "out stuff like"
-
-	para "MAIL and your PC"
-	line "BOXES."
+	para "メールや　<PC><NO>ボックスも"
+	line "プリントできるんだよ！"
 	done
 
 SchoolboyJack1SeenText:
-	text "The world of"
-	line "#MON is deep."
+	text "#<WA>おく<GA>ふかい"
+	line "まだまだ　しらないこと<GA>いっぱい"
 
-	para "There are still"
-	line "lots of things we"
-	cont "don't know."
-
-	para "But I know more"
-	line "than you do!"
+	para "でもね　ぼく<NO>ちしきは"
+	line "きみ　より　たくさん　あるよ！"
 	done
 
 SchoolboyJack1BeatenText:
-	text "Wha-wha-what?"
+	text "むむむ？"
 	done
 
 SchoolboyJackTradeMonText:
-	text "There is a lot"
-	line "to learn."
+	text "おぼえること　いっぱい　あるよ"
 
-	para "For example…"
-
-	para "There are {d:NUM_TMS} kinds"
-	line "of TM."
-
-	para "Traded #MON"
-	line "level up faster."
+	para "たとえば<⋯>"
+	line "<TM><WA>{d:NUM_TMS}しゅるい　とか"
+	cont "ひとと　こうかん　した"
+	cont "#<WA>そだち<GA>はやいとか"
 	done
 
 PokefanfBeverly1SeenText:
-	text "My #MON are so"
-	line "cute. Let me show"
-	cont "them off to you."
+	text "あたし<NO>#　かわいいわよ"
+	line "ちょっと　じまん　させてもらうわ"
 	done
 
 PokefanfBeverly1BeatenText:
-	text "Maybe I can't beat"
-	line "you in battle…"
-
-	para "But mine look a"
-	line "lot nicer."
+	text "しょうぶ　じゃ　かなわないわね"
+	line "みせっこなら　じまん　できたのに"
 	done
 
 PokefanBeverlyCuteMonText:
-	text "My friend has a"
-	line "MARILL. It's so"
-
-	para "cute! I wish I had"
-	line "a MARILL."
+	text "おともだち　マリル　も<TTE>るの"
+	line "マリル　かわいいわよね！"
+	cont "いいわね　マリル　あたしも　ほしいわ"
 	done
 
 PokefanmWilliamSeenText:
-	text "We adore our #-"
-	line "MON, even if they"
-	cont "dislike us."
-
-	para "That's what being"
-	line "a FAN is about."
+	text "ひたすら<NI>#<WO>かわいがる！"
+	line "きらわれても　かわいがる！"
+	cont "それ<GA>だいすきクラブ<NO>きまり！"
 	done
 
 PokefanmWilliamBeatenText:
-	text "M-my #MON!"
+	text "ポ　#ちゃん！"
 	done
 
 PokefanmWilliamAfterBattleText:
-	text "I lost the battle,"
-	line "but my #MON win"
-
-	para "the prize for"
-	line "being most lovely."
+	text "しょうぶに<WA>まけた　けど"
+	line "わし<NO>#<NO>ほうが"
+	cont "ラブリーだから　わし<NO>かち！"
 	done
 
 LassKriseSeenText:
-	text "Hello? Why are you"
-	line "staring at me?"
+	text "なあに？"
+	line "ひとのかお　じろじろ　みて"
 
-	para "Oh, a battle?"
+	para "えっ　しょうぶ　なの"
 	done
 
 LassKriseBeatenText:
-	text "…Hmmm…"
+	text "<⋯>　うーん"
 	done
 
 LassKriseAfterBattleText:
-	text "The way you were"
-	line "looking, I thought"
-	cont "you liked me."
+	text "じっと　みてるから"
+	line "き<GA>あるのかと　おもっちゃっ<TA!>"
 
-	para "After all, I am"
-	line "cute!"
+	para "だ<TTE>　あたし　かわいいもん！"
 	done
 
 NationalParkRelaxationSquareText:
-	text "RELAXATION SQUARE"
-	line "NATIONAL PARK"
+	text "いこい<NO>ひろば"
+	line "しぜん　こうえん"
 	done
 
 NationalParkBattleNoticeText:
-	text "What is this"
-	line "notice?"
+	text "チラシ<GA>は<TTE>　ある！"
 
-	para "Please battle only"
-	line "in the grass."
+	para "#　しょうぶは"
+	line "くさむら　だけで　おねがいします"
 
-	para "NATIONAL PARK"
-	line "WARDEN'S OFFICE"
+	para "<⋯>しぜん　こうえん"
+	line "かんり　じむしょ　より<⋯>"
 	done
 
 NationalParkTrainerTipsText:
-	text "TRAINER TIPS"
+	text "おとくな　けいじばん！"
 
-	para "Print out MAIL by"
-	line "opening it then"
-	cont "pressing START."
+	para "メールのがめんで"
+	line "スタートボタン<WO>プッシュ！"
+	cont "メール<WO>プリントできます！"
 	done
 
 NationalPark_MapEvents:

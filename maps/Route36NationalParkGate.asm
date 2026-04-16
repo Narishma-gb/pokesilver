@@ -494,14 +494,14 @@ Route36NationalParkGateOfficer1GiveParkBallsText:
 
 Route36NationalParkGatePlayerReceivedParkBallsText:
 	text "<PLAYER>は"
-	line "パークボール<WO>２０こ　もらっ<TA!>"
+	line "パークボール<WO>{d:BUG_CONTEST_BALLS}こ　もらっ<TA!>"
 	done
 
 Route36NationalParkGateOfficer1ExplainsRulesText:
 	text "いちばん　つよそうな　#を"
 	line "つかまえたひと<GA>ゆうしょうです！"
 
-	para "せいげん　じかん<WA>２０ぷん！"
+	para "せいげん　じかん<WA>{d:BUG_CONTEST_MINUTES}ぷん！"
 
 	para "また　パークボール<GA>なくなると"
 	line "しゅうりょう　です！"

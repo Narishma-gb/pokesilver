@@ -111,163 +111,133 @@ CeladonGymStatue:
 	jumpstd GymStatue2Script
 
 ErikaBeforeBattleText:
-	text "ERIKA: Hello…"
-	line "Lovely weather,"
+	text "エリカ『はあーい<⋯>"
+	line "よい　おてんき　ですね"
+	cont "<⋯>　つい　ウトウト"
+	cont "ねむ<TTE>　しまい　そうだわ<⋯>"
 
-	para "isn't it?"
-	line "It's so pleasant…"
+	para "わたくし　タマムシ　ジムの"
+	line "エリカと　もうします"
 
-	para "…I'm afraid I may"
-	line "doze off…"
+	para "<⋯>　<⋯>まあ！"
+	line "ジョウトから　はるばると"
 
-	para "My name is ERIKA."
-	line "I am the LEADER of"
-	cont "CELADON GYM."
+	para "<⋯>　えっ"
+	line "しあい<NO>もうしこみ　ですの？"
 
-	para "…Oh? All the way"
-	line "from JOHTO, you"
-	cont "say? How nice…"
-
-	para "Oh. I'm sorry, I"
-	line "didn't realize"
-
-	para "that you wished to"
-	line "challenge me."
-
-	para "Very well, but I"
-	line "shall not lose."
+	para "そんな<⋯>"
+	line "わたくし　まけませんわよ"
 	done
 
 ErikaBeatenText:
-	text "ERIKA: Oh!"
-	line "I concede defeat…"
+	text "エリカ『<⋯>！"
+	line "まいり　ましたわ"
 
-	para "You are remarkably"
-	line "strong…"
+	para "おつよい　ですのね<⋯>"
 
-	para "I shall give you"
-	line "RAINBOWBADGE…"
+	para "こ<NO>レインボーバッジ"
+	line "さしあげますわ"
 	done
 
 PlayerReceivedRainbowBadgeText:
-	text "<PLAYER> received"
-	line "RAINBOWBADGE."
+	text "<PLAYER>は"
+	line "レインボーバッジ<WO>もらっ<TA!>"
 	done
 
 ErikaExplainTMText:
-	text "ERIKA: That was a"
-	line "delightful match."
+	text "エリカ『すばらしい　しあい　でしたわ"
+	line "わたくし　かんどう　いたしました"
+	cont "こ<NO><TM><WO>さしあげますわ"
 
-	para "I felt inspired."
-	line "Please, I wish you"
-	cont "to have this TM."
+	para "ギガドレイン　とい<TTE>"
+	line "あたえた　ダメージ<NO>はんぶんが"
+	cont "#<NO>えいよう<NI>なる"
+	cont "すばらしい　わざ　です"
 
-	para "It is GIGA DRAIN."
-
-	para "It is a wonderful"
-	line "move that drains"
-
-	para "half the damage it"
-	line "inflicts to heal"
-	cont "your #MON."
-
-	para "Please use it if"
-	line "it pleases you…"
+	para "よろしかったら"
+	line "おつかい<NI>な<TTE>"
 	done
 
 ErikaAfterBattleText:
-	text "ERIKA: Losing"
-	line "leaves a bitter"
-	cont "aftertaste…"
+	text "エリカ『まける　というのは"
+	line "くやしい　も<NO>ですね<⋯>"
 
-	para "But knowing that"
-	line "there are strong"
-
-	para "trainers spurs me"
-	line "to do better…"
+	para "しかし　つよい　かた<GA>いらっしゃる"
+	line "こと<WA>はげみにも　なりますわ"
 	done
 
 LassMichelleSeenText:
-	text "Wait! Only girls"
-	line "are allowed here!"
+	text "<KOKO_WA>ねー！"
+	line "おんなのこ　しか"
+	cont "はいっちゃ　いけないの！"
 	done
 
 LassMichelleBeatenText:
-	text "Oh, bleah!"
+	text "ああん　くやしい！"
 	done
 
 LassMichelleAfterBattleText:
-	text "We don't dislike"
-	line "boys or anything."
+	text "べつ<NI>おとこのこが"
+	line "きらい<TTE>　わけ　じゃないの"
 
-	para "But there are"
-	line "certain subjects"
-
-	para "that only girls"
-	line "can talk about."
+	para "おんなのこ　どうし　でしか"
+	line "できない　はなしも　あるでしょ"
 	done
 
 PicnickerTanyaSeenText:
-	text "Oh, a battle?"
-	line "That's kind of"
-	cont "scary, but OK!"
+	text "えーっ　#しょうぶ　なの？"
+	line "どきどき　するけど　や<TTE>みようかな"
 	done
 
 PicnickerTanyaBeatenText:
-	text "Oh, that's it?"
+	text "えーっ　ウソでしょー"
 	done
 
 PicnickerTanyaAfterBattleText:
-	text "Oh, look at all"
-	line "your BADGES. No"
-
-	para "wonder I couldn't"
-	line "win!"
+	text "えーっ　そんな<NI>バッジも<TTE>るの"
+	line "だったら　かてないよお"
 	done
 
 BeautyJuliaSeenText:
-	text "Were you looking"
-	line "at these flowers"
-	cont "or at me?"
+	text "あら？　おはなと　<WATASHI>"
+	line "どっち<NI>みとれたの？"
 	done
 
 BeautyJuliaBeatenText:
-	text "How annoying!"
+	text "やあねえ　もう！"
 	done
 
 BeautyJuliaAfterBattleText:
-	text "How do I go about"
-	line "becoming ladylike"
-	cont "like ERIKA?"
+	text "どうしたら　エリカさん　みたいに"
+	line "おしとやか<NI>なれるのかしら？"
 	done
 
 TwinsJoAndZoe1SeenText:
-	text "We'll show you"
-	line "#MON moves that"
-	cont "ERIKA taught us!"
+	text "エリカおねえちゃん<NI>おそわった"
+	line "#のわざ　みせる　でしゅ！"
 	done
 
 TwinsJoAndZoe1BeatenText:
-	text "Oh… We lost…"
+	text "まけちった　でしゅ<⋯>"
 	done
 
 TwinsJoAndZoe1AfterBattleText:
-	text "ERIKA will get you"
-	line "back for us!"
+	text "エリカおねえちゃんに"
+	line "しかえし　して　もらう　でしゅ！"
 	done
 
 TwinsJoAndZoe2SeenText:
-	text "We're going to"
-	line "protect ERIKA!"
+	text "エリカおねえちゃんは"
+	line "わたちたち<GA>まもる　でしゅ！"
 	done
 
 TwinsJoAndZoe2BeatenText:
-	text "We couldn't win…"
+	text "かてなかった　でしゅ<⋯>"
 	done
 
 TwinsJoAndZoe2AfterBattleText:
-	text "ERIKA is much,"
-	line "much stronger!"
+	text "エリカおねえちゃんは"
+	line "もっと　つよい　でしゅ！"
 	done
 
 CeladonGym_MapEvents:

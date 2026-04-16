@@ -23,24 +23,17 @@ Route7SaffronGuardScript:
 	end
 
 Route7SaffronGuardPowerPlantText:
-	text "Did you hear about"
-	line "the accident at"
-	cont "the POWER PLANT?"
+	text "はつでんしょで　じこが"
+	line "あったみたいだね"
 
-	para "It's located in"
-	line "the East, close to"
-	cont "LAVENDER TOWN."
+	para "はつでんしょ<WA>はんたいがわ"
+	line "シオン<NO>ほう<NI>あるよ"
 	done
 
 Route7SaffronGuardSeriousText:
-	text "I take my GUARD"
-	line "job seriously."
-
-	para "Hey! You have a"
-	line "#DEX."
-
-	para "OK. You can go"
-	line "through."
+	text "<WATASHI><WA>まじめな　けいびいん"
+	line "それ<WA>#ずかん　だね！"
+	cont "とお<TTE>　よしっ！"
 	done
 
 Route7SaffronGate_MapEvents:

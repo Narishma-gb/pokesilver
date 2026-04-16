@@ -255,7 +255,7 @@ RuinsOfAlphResearchCenterComputerText:
 RuinsOfAlphResearchCenterComputerText_GotAllUnown:
 	text "ナゾの#"
 	line "なまえ<⋯>アンノーン"
-	cont "ぜんぶで　２６しゅるい　はっけん"
+	cont "ぜんぶで　{d:NUM_UNOWN}しゅるい　はっけん"
 	done
 
 RuinsOfAlphResearchCenterPrinterText_DoesntWork:

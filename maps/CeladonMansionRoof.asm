@@ -9,7 +9,7 @@ CeladonMansionRoofSign: ; unreferenced
 	jumptext CeladonMansionRoofSignText
 
 CeladonMansionRoofSignText:
-	text "I KNOW EVERYTHING!"
+	text "わし<WA>なんでも　おみとおし！"
 	done
 
 CeladonMansionRoof_MapEvents:

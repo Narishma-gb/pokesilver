@@ -104,143 +104,114 @@ RadioTower4FStudio2Sign:
 	jumptext RadioTower4FStudio2SignText
 
 RadioTower4FFisherText:
-	text "I listened to the"
-	line "radio while I was"
-	cont "at the RUINS."
-
-	para "I heard a strange"
-	line "broadcast there."
+	text "いせき<NI>あそび<NI>いったとき"
+	line "ラジオ<WO>きいたら"
+	cont "しらない　ほうそう<GA>きこえてきたよ"
 	done
 
 RadioTower4FDJMaryText:
-	text "MARY: Why? Why do"
-	line "I have to suffer"
-	cont "through this?"
+	text "クルミ『どうして<⋯>"
+	line "こんな　め<NI>あうの<⋯>？"
 
-	para "MEOWTH, help me!"
+	para "ニャースちゃん　たすけてー！"
 	done
 
 RadioTower4FDJMaryText_ClearedRockets:
-	text "MARY: Oh! You're"
-	line "my little savior!"
+	text "クルミ『あっ　きみー"
+	line "あたし<WO>たすけてくれた　ひとだー"
 
-	para "Will you take this"
-	line "as my thanks?"
+	para "じゃあ　これ"
+	line "あたし<NO>きもち！"
 	done
 
 RadioTower4FDJMaryText_GivePinkBow:
-	text "MARY: It's just"
-	line "right for #MON"
-
-	para "that know normal-"
-	line "type moves."
+	text "クルミ『それ<TTE>"
+	line "ノーマルタイプ<NO>わざ<WO>つかう"
+	cont "#<NI>ぴったり<TTE>　かんじ！"
 	done
 
 RadioTower4FDJMaryText_After:
-	text "MARY: Please tune"
-	line "into me on PROF."
-
-	para "OAK'S #MON TALK"
-	line "show."
+	text "クルミ『<WATASHI>と　オーキドはかせの"
+	line "#こうざ　きいてねー！"
 	done
 
 RadioTowerMeowthText:
-	text "MEOWTH: Meowth…"
+	text "ニャース『<⋯>　にゃあ"
 	done
 
 GruntM10SeenText:
-	text "You plan to rescue"
-	line "the DIRECTOR?"
-
-	para "That won't be pos-"
-	line "sible because I'm"
-	cont "going to beat you!"
+	text "きょくちょう<WO>たすけだす　つもりか"
+	line "それ<WA>むり　<TTE>もんだ"
+	cont "ここで　おれ<NI>たおされちまうからな"
 	done
 
 GruntM10BeatenText:
-	text "No! Unbelievable!"
+	text "オー　マイガッ！"
 	done
 
 GruntM10AfterBattleText:
-	text "I don't believe"
-	line "it! I was beaten!"
+	text "なんてこったい！"
+	line "おれ<GA>たおされちまう　とは"
 	done
 
 Executivem2SeenText:
-	text "Stop! I'm known as"
-	line "the TEAM ROCKET"
-	cont "fortress!"
-
-	para "You're not taking"
-	line "another step!"
+	text "まちな！　<ROCKET>の"
+	line "とりで　といわれた　こ<NO>オレだ！"
+	cont "これいじょう　さきに<WA>いかせない！"
 	done
 
 Executivem2BeatenText:
-	text "The fortress came"
-	line "down!"
+	text "とりで<GA>くずれた<⋯>"
 	done
 
 Executivem2AfterBattleText:
-	text "You've earned my"
-	line "respect, so here's"
-	cont "some advice."
+	text "おまえ<WO>そんけい　して"
+	line "ちゅうこく　してやろう"
 
-	para "It's not too late."
-	line "You can still turn"
-	cont "back."
+	para "いまからでも　おそくはない"
+	line "ひきかえした　ほう<GA>いいぞ<⋯>"
 	done
 
 GruntF4SeenText:
-	text "Don't I think"
-	line "#MON are cute?"
-
-	para "I'll think my"
-	line "#MON are cute--"
-
-	para "after they beat"
-	line "yours!"
+	text "#<GA>かわいくないのか　<TTE>？"
+	line "そうねえ　ここで　あんた<NO>#"
+	cont "たおしたら　かわいいわねえ"
 	done
 
 GruntF4BeatenText:
-	text "Oh, no! They're so"
-	line "useless!"
+	text "もう！"
+	line "やく<NI>たたないんだから！"
 	done
 
 GruntF4AfterBattleText:
-	text "I love my"
-	line "beautiful self!"
-
-	para "Who cares about"
-	line "#MON?"
+	text "あたし<WA>あたし<GA>かわいいの！"
+	line "#なんて　どうでも　いいわ！"
 	done
 
 ScientistRichSeenText:
-	text "Most excellent."
+	text "すばらしい！"
 
-	para "This RADIO TOWER"
-	line "will fulfill our"
-	cont "grand design."
+	para "こ<NO>ラジオとう<NO>しせつ　なら"
+	line "<WATASHI>たち<NO>やぼう<WO>かなえられる"
 	done
 
 ScientistRichBeatenText:
-	text "Hmmm…"
-
-	para "All grand plans"
-	line "come with snags."
+	text "ふむふむ"
+	line "いだいな　けいかく<NO>まえに"
+	cont "じゃま<WA>つきものと　いうわけか"
 	done
 
 ScientistRichAfterBattleText:
-	text "Do you honestly"
-	line "believe you can"
-	cont "stop TEAM ROCKET?"
+	text "きみ　なんか<NI>じゃま　される"
+	line "<ROCKET>　だと　おも<TTE>るのか？"
 	done
 
 RadioTower4FProductionSignText:
-	text "4F PRODUCTION"
+	text "４かい　<⋯>　せいさくしつ"
 	done
 
 RadioTower4FStudio2SignText:
-	text "4F STUDIO 2"
+	text "４かい　<⋯>　だい２スタジオ"
 	done
 
 RadioTower4F_MapEvents:

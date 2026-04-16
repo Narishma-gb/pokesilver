@@ -155,175 +155,134 @@ RadioTower3FPokemonMusicSign:
 	jumptext RadioTower3FPokemonMusicSignText
 
 RadioTower3FSuperNerdText:
-	text "We have recordings"
-	line "of the cries of"
-
-	para "all #MON that"
-	line "have been found."
-
-	para "We must have about"
-	line "200 kinds."
+	text "いままで<NI>みつかった　#の"
+	line "なきごえ<WA>ぜんぶ　そろえているよ！"
+	cont "２００しゅるい　くらい　あるね！"
 	done
 
 RadioTower3FGymGuideText_Rockets:
-	text "To trainers, #-"
-	line "MON are their"
-	cont "beloved partners."
+	text "#<TTE>の<WA><TRAINER>にと<TTE>"
+	line "だいじな　パートナーだろ"
 
-	para "It's terrible how"
-	line "TEAM ROCKET is"
-
-	para "trying to control"
-	line "#MON."
+	para "なの<NI>あんな　めいれい　するなんて"
+	line "#<GA>かわいそう　すぎるよ！"
 	done
 
 RadioTower3FGymGuideText:
-	text "We run 24 hours a"
-	line "day to broadcast"
+	text "うち<WA>２４じかん　えいぎょう！"
 
-	para "entertaining pro-"
-	line "grams."
-
-	para "I'll do my best to"
-	line "run around the"
-	cont "clock too!"
+	para "いつでも　たのしい　ばんぐみを"
+	line "きいて　もらえるように"
+	cont "ぼくも　２４じかん　がんばるぞ！"
 	done
 
 RadioTower3FCooltrainerFPleaseSaveDirectorText:
-	text "The TEAM ROCKET"
-	line "boss has locked"
-	cont "himself in."
+	text "こいつら<NO>ボスが"
+	line "とびら<NO>むこう<NI>たてこもったの"
 
-	para "But the DIRECTOR"
-	line "can open it."
+	para "なかから　カギ<WO>かけられたけど"
+	line "きょくちょう　なら　あけられるわ！"
 
-	para "He's up on the"
-	line "fifth floor."
-
-	para "Please save him!"
+	para "きょくちょう<WA>５かいよ！"
+	line "おねがい　たすけて　あげて！"
 	done
 
 RadioTower3FCooltrainerFIsDirectorSafeText:
-	text "Is the DIRECTOR"
-	line "safe?"
+	text "きょくちょう<WA>だいじょうぶ　なの？"
 	done
 
 RadioTower3FCooltrainerFYoureMyHeroText:
-	text "Thank you!"
-	line "You're my hero!"
-
-	para "This is a token of"
-	line "my appreciation."
+	text "ありがとね　ちいさな　えいゆうさん！"
+	line "これ<WA><WATASHI>から<NO>おれいよ！"
 	done
 
 RadioTower3FCooltrainerFItsSunnyDayText:
-	text "It's SUNNY DAY."
-	line "It powers up fire-"
-	cont "type moves for a"
-	cont "while."
+	text "なかみ<WA>にほんばれ"
+	line "いちど　つかうと　しばらく"
+	cont "ほのおタイプ<NO>いりょく<GA>あがるわ"
 	done
 
 RadioTower3FCooltrainerFYouWereMarvelousText:
-	text "You were simply"
-	line "marvelous!"
+	text "だいかつやく　だったわね！"
 	done
 
 GruntM7SeenText:
-	text "I've been given"
-	line "strict orders."
+	text "<⋯>　おれ<NO>にんむ"
 
-	para "I'm to crush any-"
-	line "one who challenges"
-	cont "TEAM ROCKET!"
+	para "<ROCKET><NO>じゃまする　やつを"
+	line "さいきふのう<NI>すること！"
 	done
 
 GruntM7BeatenText:
-	text "What?!"
+	text "！！！"
 	done
 
 GruntM7AfterBattleText:
-	text "I failed in my"
-	line "duties…"
-
-	para "I'll be docked pay"
-	line "for this…"
+	text "<⋯>　にんむ　しっぱい"
+	line "<⋯>　きゅうりょう　へらされちまう"
 	done
 
 GruntM8SeenText:
-	text "It feels great"
-	line "ordering #MON"
-	cont "to commit crimes."
+	text "#<NI>わるいこと"
+	line "めいれい　するの<WA>きぶん　いいぜ！"
 	done
 
 GruntM8BeatenText:
-	text "You're kidding!"
+	text "<⋯>　なにい！"
 	done
 
 GruntM8AfterBattleText:
-	text "I feel lousy over"
-	line "losing!"
-
-	para "Darn it! I hate"
-	line "useless #MON!"
+	text "まけると　きぶんわるい　じゃねーか！"
+	line "ちくしょう！"
+	cont "やくたたず<NO>#め！"
 	done
 
 GruntM9SeenText:
-	text "Why did the shut-"
-	line "ter open? Did you"
-
-	para "have something to"
-	line "do with this?"
+	text "シャッター<GA>あいた？　どうしてだ？"
+	line "おまえと　なんか　かんけいあるのか？"
 	done
 
 GruntM9BeatenText:
-	text "I'm done for!"
+	text "やられたあ"
 	done
 
 GruntM9AfterBattleText:
-	text "What?! You made it"
-	line "past our men in"
-	cont "the UNDERGROUND?"
-
-	para "How could you?"
+	text "なにい！"
+	line "ちかつうろ<WO>とっぱ　し<TA!>？"
+	cont "なんて　やつ！"
 	done
 
 ScientistMarcSeenText:
-	text "An unknown child"
-	line "wandering here?"
-
-	para "Who are you?"
+	text "みなれぬ　こども<GA>うろちょろと<⋯>"
+	line "なんなんだ　きみは！？"
 	done
 
 ScientistMarcBeatenText:
-	text "Tch! I took you"
-	line "too lightly!"
+	text "ちっ"
+	line "みくびったか"
 	done
 
 ScientistMarcAfterBattleText:
-	text "Bwahahaha…"
-
-	para "I can transmit as"
-	line "strong a signal as"
-	cont "I need from here."
+	text "くくく<⋯>　ここから　なら"
+	line "おもうぞんぶん　でんぱ<WO>ながせる"
 	done
 
 RadioTower3FCardKeySlotText:
-	text "It's the CARD KEY"
-	line "slot."
+	text "カードキー<NO>さしこみぐちだ！"
 	done
 
 InsertedTheCardKeyText:
-	text "<PLAYER> inserted"
-	line "the CARD KEY."
+	text "<PLAYER>は"
+	line "カードキー<WO>さしこんだ！"
 	done
 
 RadioTower3FPersonnelSignText:
-	text "3F PERSONNEL"
+	text "３かい　<⋯>　そうむぶ"
 	done
 
 RadioTower3FPokemonMusicSignText:
-	text "#MON MUSIC with"
-	line "Host DJ BEN"
+	text "#　ミュージック"
+	line "おあいて<WA>セージで　ごじゃる"
 	done
 
 RadioTower3F_MapEvents:

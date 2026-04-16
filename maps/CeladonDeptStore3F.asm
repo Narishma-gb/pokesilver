@@ -48,48 +48,38 @@ CeladonDeptStore3FDirectory:
 	jumptext CeladonDeptStore3FDirectoryText
 
 CeladonDeptStore3FYoungsterText:
-	text "I can't decide"
-	line "which #MON I"
-
-	para "should use this TM"
-	line "on…"
+	text "ど<NO>#に"
+	line "<TM><WO>つかおうか<⋯>"
+	cont "うー　まようなー"
 	done
 
 CeladonDeptStore3FGameboyKid1Text:
-	text "Uh-oh! I traded my"
-	line "#MON without"
-
-	para "removing the UP-"
-	line "GRADE from it."
+	text "あれ！"
+	line "アップグレード<WO>もたせたまま"
+	cont "こうかん<NI>だしちゃっ<TA!>"
 	done
 
 CeladonDeptStore3FGameboyKid2Text:
-	text "Yeah! I'm finally"
-	line "getting a PORYGON!"
+	text "やったー！"
+	line "とうとう　ポリゴン<GA>もらえる！"
 
-	para "I'm no good at the"
-	line "slots, so I could"
+	para "ぼく　スロット<GA>ヘタだから"
+	line "コイン<GA>たまらなかったんだ<⋯>"
 
-	para "never get enough"
-	line "coins…"
+	para "<⋯>　あー？"
 
-	para "…Huh?"
-
-	para "The traded PORYGON"
-	line "turned into a dif-"
-	cont "ferent #MON!"
+	para "てんそう　されて　きた　ポリゴンが"
+	line "べつ<NO>#に！？"
 	done
 
 CeladonDeptStore3FSuperNerdText:
-	text "The TM SHOP sells"
-	line "some rare moves."
+	text "<TM>·ショップには"
+	line "めずらしい　<TM><GA>う<TTE>るよ"
 	done
 
 CeladonDeptStore3FDirectoryText:
-	text "3F: TM SHOP"
-
-	para "Make Your #MON"
-	line "Stronger!"
+	text "３かい　<⋯>　<TM>·ショップ"
+	line "あなた<NO>#<WO>つよくする！"
 	done
 
 CeladonDeptStore3F_MapEvents:

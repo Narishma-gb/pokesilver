@@ -74,7 +74,7 @@ CeladonGameCornerFisherScript:
 	end
 
 .coinname
-	db "COIN@"
+	db "コイン@"
 
 .NoCoinCase:
 	writetext CeladonGameCornerFisherNoCoinCaseText
@@ -147,135 +147,106 @@ CeladonGameCornerUnusedMovementData: ; unreferenced
 	step_end
 
 CeladonGameCornerReceptionistText:
-	text "Welcome!"
+	text "いらっしゃいませ！"
 
-	para "You may exchange"
-	line "your coins for"
-
-	para "fabulous prizes"
-	line "next door."
+	para "ゲームで　ためた　コインは"
+	line "となり<NO>こうかんじょで"
+	cont "すきな　けいひん<NI>してくださいね！"
 	done
 
 CeladonGameCornerPokefanMText:
-	text "The slot machines"
-	line "are all state of"
-	cont "the art."
+	text "ここ<NO>スロット　ぜーんぶ"
+	line "さいしんがた　なんだよ！"
+	cont "もー　おもしろくて　たまらんわい！"
 	done
 
 CeladonGameCornerTeacherText:
-	text "It's this machine"
-	line "I want."
+	text "これよ　こ<NO>だい　よ！"
 
-	para "It cleaned me out"
-	line "yesterday, so it"
-
-	para "should pay out"
-	line "today."
+	para "きのう　ぜんぜん　コインを"
+	line "だして　なかったから"
+	cont "きょう<WA>ぜったい　でるわよ！"
 	done
 
 CeladonGameCornerFishingGuruText:
-	text "I think this slot"
-	line "machine will pay"
-	cont "out…"
+	text "こ<NO>だい<WA>でそうな"
+	line "き<GA>するんだけどな<⋯>"
 
-	para "The odds vary"
-	line "among machines."
+	para "よく　でる　スロットと"
+	line "でない　スロット<GA>あるらしいよ"
 	done
 
 CeladonGameCornerFisherText1:
-	text "Gahahaha!"
+	text "がっはっは！"
+	line "コイン<GA>どんどん　でてくる！"
+	cont "わらい<GA>とまらねー！"
 
-	para "The coins just"
-	line "keep popping out!"
+	para "<⋯>　お？　ぼうず！"
+	line "ゲームで　あそびたい　のか？"
 
-	para "Hm? What, kid? You"
-	line "want to play?"
-
-	para "I'll share my luck"
-	line "with you!"
+	para "よし　オレ<NO>ツキを"
+	line "わけて　やろう！"
 	done
 
 CeladonGameCornerFisherText2:
-	text "Gahahaha!"
+	text "がっはっは！"
 
-	para "It makes me feel"
-	line "good to do nice"
-
-	para "things for other"
-	line "people!"
+	para "ひと<NI>しんせつ<WO>すると"
+	line "きもち<GA>いい　のーっ！"
 	done
 
 CeladonGameCornerFisherNoCoinCaseText:
-	text "Hey, you don't"
-	line "have a COIN CASE."
-
-	para "How am I supposed"
-	line "to give you any"
-	cont "coins, kid?"
+	text "おっと　ぼうず！"
+	line "コインケース<WO>も<TTE>ないな"
+	cont "それじゃ　コイン<WA>ゆずれんなあ"
 	done
 
 CeladonGameCornerFisherFullCoinCaseText:
-	text "Hey, your COIN"
-	line "CASE is full, kid."
-
-	para "You must be riding"
-	line "a winning streak"
-	cont "too."
+	text "おっと　ぼうず！"
+	line "コインケース<GA>まんたんだ！"
+	cont "ぼうずも　ツキ<GA>あるみたいだな！"
 	done
 
 CeladonGymGuideText:
-	text "Hey! CHAMP in"
-	line "making!"
+	text "おお！"
+	line "みらい<NO>チャンピオン！"
+	cont "スロットで　あそぶのかい？"
 
-	para "Are you playing"
-	line "the slots too?"
-
-	para "I'm trying to get"
-	line "enough coins for a"
-	cont "prize #MON."
-
-	para "But I don't have"
-	line "enough coins yet…"
+	para "オレも　けいひん<NO>#を"
+	line "ねら<TTE>るんだけどよー<⋯>"
+	cont "なかなか　コイン<GA>たまらなくて"
 	done
 
 CeladonGameCornerGrampsText:
-	text "Hmmm… The odds are"
-	line "surely better for"
-
-	para "PIKACHU's line,"
-	line "but… What to do?"
+	text "うむむ<⋯>　かくりつでは"
+	line "ピカチュウ<NO>ライン<GA>いいが<⋯>"
+	cont "ええい　まようのう<⋯>！"
 	done
 
 CeladonGameCornerPoster1Text:
-	text "Hey!"
+	text "あ！"
 
-	para "Underneath this"
-	line "poster…"
+	para "ポスター<NO>うらに<⋯>"
 
-	para "There's nothing!"
+	para "なにも　なかっ<TA!>"
 	done
 
 CeladonGameCornerPoster2Text:
-	text "Hey!"
+	text "あ！"
 
-	para "Underneath this"
-	line "poster…"
+	para "ポスター<NO>うらに<⋯>"
 
-	para "There's nothing!"
+	para "なにも　なかっ<TA!>"
 	done
 
 CeladonGameCornerLighterText:
-	text "There's a lighter"
-	line "here."
+	text "ライター<GA>おいてある！"
 	done
 
 CeladonGameCornerSodaCanText:
-	text "A can of soda…"
-
-	para "Someone must be"
-	line "coming back…"
-
-	para "Huh? It's empty!"
+	text "ジュース<NO>カン<GA>おいてある"
+	line "だれか<NO>だい　なんだろう<⋯>"
+	cont "あれ<⋯>？　からっぽだ！"
 	done
 
 CeladonGameCorner_MapEvents:

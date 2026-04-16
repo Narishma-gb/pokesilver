@@ -13,11 +13,9 @@ Route16FuchsiaSpeechHouseBookshelf:
 	jumpstd PictureBookshelfScript
 
 Route16FuchsiaSpeechHouseSuperNerdText:
-	text "If you cruise down"
-	line "CYCLING ROAD, you"
-
-	para "will end up in"
-	line "FUCHSIA CITY."
+	text "サイクリング　ロードを"
+	line "くだ<TTE>　いくと"
+	cont "セキチクシティへ　いけるよ"
 	done
 
 Route16FuchsiaSpeechHouse_MapEvents:

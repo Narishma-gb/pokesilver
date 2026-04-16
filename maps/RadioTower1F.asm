@@ -158,7 +158,7 @@ RadioTower1FRadioCardWomanScript:
 	end
 
 .RadioCardText:
-	db "RADIO CARD@"
+	db "ラジオカード@"
 
 .ReceiveItem:
 	jumpstd ReceiveItemScript
@@ -211,259 +211,208 @@ RadioTower1FLuckyNumberManReturnToPlayerMovement:
 	step_end
 
 RadioTower1FReceptionistWelcomeText:
-	text "Welcome!"
+	text "ようこそ！"
 	done
 
 RadioTower1FReceptionistNoToursText:
-	text "Hello. I'm sorry,"
-	line "but we're not"
-	cont "offering any tours"
-	cont "today."
+	text "<⋯>　ようこそ"
+	line "もうしわけ　ありませんが"
+	cont "いま<WA>けんがく　できないんです"
 	done
 
 RadioTower1FLuckyNumberManAskToPlayText:
-	text "Hi, are you here"
-	line "for the LUCKY NUM-"
-	cont "BER SHOW?"
+	text "はい　こちら　ひきかえじょです"
 
-	para "Want me to check"
-	line "the ID numbers of"
-	cont "your #MON?"
-
-	para "If you get lucky,"
-	line "you win a prize."
+	para "あなた<NO>#の"
+	line "アイディナンバーで"
+	cont "うんがよければ　しょうひんゲット！"
 	done
 
 RadioTower1FLuckyNumberManThisWeeksIdIsText:
-	text "This week's ID"
-	line "number is @"
+	text "こんかい<NO>アイディナンバーは"
+	line "@"
 	text_ram wStringBuffer3
-	text "."
+	text "　です"
 	done
 
 RadioTower1FLuckyNumberManCheckIfMatchText:
-	text "Let's see if you"
-	line "have a match."
+	text "それで<WA>さっそく　チェック"
+	line "してみましょう"
 	done
 
 RadioTower1FLuckyNumberManDotDotDotText:
-	text "<……>"
-	line "<……>"
+	text "<⋯>　<⋯>　<⋯>　<⋯>　<⋯>"
+	line "　<⋯>　<⋯>　<⋯>　<⋯>　<⋯>"
 	done
 
 RadioTower1FLuckyNumberManComeAgainText:
-	text "Please come back"
-	line "next week for the"
-	cont "next LUCKY NUMBER."
+	text "つぎ<NO>はっぴょうを"
+	line "おたのしみ<NI>おまちください"
 	done
 
 RadioTower1FLuckyNumberManPerfectMatchText:
-	text "Wow! You have a"
-	line "perfect match of"
-	cont "all five numbers!"
+	text "な　なんと　５ケタあ<TTE>ます！"
+	line "１とう！　１とうです！"
 
-	para "We have a grand"
-	line "prize winner!"
-
-	para "You have won a"
-	line "MASTER BALL!"
+	para "１とう　しょうひんは"
+	line "マスターボール　です！"
 	done
 
 RadioTower1FLuckyNumberManOkayMatchText:
-	text "Hey! You've"
-	line "matched the last"
-	cont "three numbers!"
+	text "なんと　しも３ケタあ<TTE>ます！"
+	line "２とう　です！"
 
-	para "You've won second"
-	line "prize, an EXP."
-	cont "SHARE!"
+	para "２とう　しょうひんは"
+	line "がくしゅうそうち　です！"
 	done
 
 RadioTower1FLuckyNumberManWeakMatchText:
-	text "Ooh, you've"
-	line "matched the last"
-	cont "two numbers."
+	text "しも２ケタ　あ<TTE>まし<TA!>"
+	line "３とう　<GA>あたりまし<TA!>"
 
-	para "You've won third"
-	line "prize, a PP UP."
+	para "３とう　しょうひんは"
+	line "ポイントアップ　です！"
 	done
 
 RadioTower1FLuckyNumberManNoneOfYourIDNumbersMatchText:
-	text "Nope, none of your"
-	line "ID numbers match."
+	text "ざんねんながら"
+	line "すべて　はずれでした"
 	done
 
 RadioTower1FLuckyNumberManNoRoomForYourPrizeText:
-	text "You've got no room"
-	line "for your prize."
-
-	para "Make room and come"
-	line "back right away."
+	text "にもつ<GA>いっぱい<NO>ようですね"
+	line "にもつ<WO>へらして　はやめに"
+	cont "おこしください"
 	done
 
 RadioTower1FRadioCardWomanOfferQuizText:
-	text "We have a special"
-	line "quiz campaign on"
-	cont "right now."
+	text "ただいま　キャンペーンちゅう！"
 
-	para "Answer five ques-"
-	line "tions correctly to"
-	cont "win a RADIO CARD."
+	para "クイズ<NI>５もん　つづけて"
+	line "せいかい　すると"
+	cont "ラジオカード<WO>プレゼント！"
 
-	para "Slide it into your"
-	line "#GEAR to play"
-
-	para "the radio anytime,"
-	line "anywhere."
-
-	para "Would you like to"
-	line "take the quiz?"
+	para "ポケギア<NI>させば"
+	line "いつでも　どこでも　ラジオがきけます"
+	cont "クイズ<NI>ちょうせん　しますか？"
 	done
 
 RadioTower1FRadioCardWomanQuestion1Text:
-	text "Question 1:"
+	text "で<WA>だい１もん！"
 
-	para "Can the TOWN MAP"
-	line "be displayed on a"
-	cont "#GEAR?"
+	para "#ギアで　タウンマップを"
+	line "みられるよう<NI>できる？"
 	done
 
 RadioTower1FRadioCardWomanQuestion2Text:
-	text "Correct!"
-	line "Question 2:"
+	text "せいかい　です"
+	line "じゃあ　だい２もん！"
 
-	para "Can NIDORINA be"
-	line "female only?"
+	para "#<NO>ニドリーナは"
+	line "♀しか　いない？"
 	done
 
 RadioTower1FRadioCardWomanQuestion3Text:
-	text "Bull's-eye!"
-	line "Question 3:"
+	text "せいかい　です"
+	line "つづいて　だい３もん！"
 
-	para "Does KURT, the"
-	line "# BALL crafts-"
-	cont "man, use APRIKORN?"
+	para "ボールしょくにん<NO>ガンテツさん"
+	line "ざいりょう<NI>つかうの<WA>ボンゴレ？"
 	done
 
 RadioTower1FRadioCardWomanQuestion4Text:
-	text "So far so good!"
-	line "Question 4:"
+	text "またまた　せいかい"
+	line "で<WA>だい４もん！"
 
-	para "MAGIKARP won't"
-	line "learn any TM move?"
+	para "#　コイキングに"
+	line "<TM><WA>つかえない？"
 	done
 
 RadioTower1FRadioCardWomanQuestion5Text:
-	text "Wow! Right again!"
-	line "Here's the final"
-	cont "question:"
+	text "すごーい！"
+	line "いよいよ　さいご<NO>もんだいよ"
 
-	para "PROF.OAK'S #MON"
-	line "TALK is a very"
-	cont "popular program."
-
-	para "Is MARIE the co-"
-	line "host of the show?"
+	para "にんき　ばんぐみ"
+	line "オーキドはかせ<NO>#こうざ"
+	cont "おあいて<WA>ミルクちゃん？"
 	done
 
 RadioTower1FRadioCardWomanYouWinText:
-	text "Bingo! You got it!"
-	line "Congratulations!"
-
-	para "Here's your prize,"
-	line "a RADIO CARD!"
+	text "ぜんもん　せいかい"
+	line "おめでとう　ございます！"
+	cont "しょうひん<NO>ラジオカードです！"
 	done
 
 RadioTower1FPokegearIsARadioText:
-	text "<PLAYER>'s #GEAR"
-	line "can now double as"
-	cont "a radio!"
+	text "<PLAYER><NO>#ギアで"
+	line "ラジオ<GA>きけるよう<NI>なっ<TA!>"
 	done
 
 RadioTower1FRadioCardWomanTuneInText:
-	text "Please tune in to"
-	line "our radio shows."
+	text "<WATASHI>たち<NO>ばんぐみ"
+	line "いつでも　きいて　たのしんでね！"
 	done
 
 RadioTower1FRadioCardWomanWrongAnswerText:
-	text "Oh, dear."
-	line "Sorry, but you"
-
-	para "got it wrong."
-	line "Please try again!"
+	text "あらあら　まちがっちゃいましたね"
+	line "ざんねん"
+	cont "また<NO>ちょうせん<WO>どうぞ！"
 	done
 
 RadioTower1FRadioCardWomanNotTakingQuizText:
-	text "Oh. I see. Please"
-	line "try if you change"
-	cont "your mind."
+	text "そうですか"
+	line "き<GA>むいたら　いらしてくださいね"
 	done
 
 RadioTower1FLassText:
-	text "BEN is a fabulous"
-	line "DJ."
+	text "ディージェイといったら　セージよね！"
+	line "あ<NO>あまいこえ　といったら<⋯>"
 
-	para "His sweet voice"
-	line "makes me melt!"
+	para "もう　メロメロ"
 	done
 
 RadioTower1FYoungsterText:
-	text "I love MARY, from"
-	line "#MON TALK."
+	text "ぼく<WA>#こうざの"
+	line "クルミちゃん<GA>すき　だな！"
 
-	para "I only know what"
-	line "she sounds like,"
-	cont "though."
+	para "<⋯>　こえ　しか　しらない　けど"
 	done
 
 GruntM3SeenText:
-	text "We've finally"
-	line "taken over the"
-	cont "RADIO TOWER!"
+	text "つい<NI>ラジオとう<WO>のっとっ<TA!>"
+	line "<ROCKET><NO>おそろしさを"
+	cont "ぜんこく<NI>しらせてやるのだ！"
 
-	para "Now everyone will"
-	line "get to experience"
-
-	para "the true terror of"
-	line "TEAM ROCKET!"
-
-	para "We'll show you"
-	line "how scary we are!"
+	para "まず<WA>おまえ<NI>おれたちの"
+	line "おそろしさ<WO>おもいしらせてやる！"
 	done
 
 GruntM3BeatenText:
-	text "Too strong! We"
-	line "must watch you…"
+	text "こ　こいつ<WA>つよい<⋯>"
+	line "ようちゅうい　だな"
 	done
 
 GruntM3AfterBattleText:
-	text "You're too strong."
+	text "おまえ　つよすぎる"
 
-	para "Our plan could be"
-	line "ruined. I must"
-	cont "warn the others…"
+	para "このままで<WA>けいかく<GA>だいなしだ"
+	line "なかま<NI>しらせないと<⋯>"
 	done
 
 RadioTower1FDirectoryText:
-	text "1F RECEPTION"
-	line "2F SALES"
-
-	para "3F PERSONNEL"
-	line "4F PRODUCTION"
-
-	para "5F DIRECTOR'S"
-	line "   OFFICE"
+	text "１かい　<⋯>　うけつけ"
+	line "２かい　<⋯>　えいぎょうぶ"
+	cont "３かい　<⋯>　そうむぶ"
+	cont "４かい　<⋯>　せいさくしつ"
+	cont "５かい　<⋯>　きょくちょうしつ"
 	done
 
 RadioTower1FLuckyChannelSignText:
-	text "LUCKY CHANNEL!"
+	text "ラッキー　チャンネル！"
+	line "あなた<NO>#　なんばん？"
 
-	para "Win with #MON"
-	line "ID numbers!"
-
-	para "Trade your #MON"
-	line "to collect differ-"
-	cont "ent ID numbers!"
+	para "#こうかん　して"
+	line "いろんな　ばんごう　あつめよう！"
 	done
 
 RadioTower1F_MapEvents:

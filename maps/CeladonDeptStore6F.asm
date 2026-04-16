@@ -78,17 +78,17 @@ CeladonDeptStore6FVendingMachine:
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 0, 2, 15, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "FRESH WATER  ¥{d:CELADONDEPTSTORE6F_FRESH_WATER_PRICE}@"
-	db "SODA POP     ¥{d:CELADONDEPTSTORE6F_SODA_POP_PRICE}@"
-	db "LEMONADE     ¥{d:CELADONDEPTSTORE6F_LEMONADE_PRICE}@"
-	db "CANCEL@"
+	db "おいしいみず　　{d:CELADONDEPTSTORE6F_FRESH_WATER_PRICE}円@"
+	db "サイコソーダ　　{d:CELADONDEPTSTORE6F_SODA_POP_PRICE}円@"
+	db "ミックスオレ　　{d:CELADONDEPTSTORE6F_LEMONADE_PRICE}円@"
+	db "やめる@"
 
 CeladonDeptStore6FDirectory:
 	jumptext CeladonDeptStore6FDirectoryText
@@ -97,48 +97,41 @@ CeladonDeptStore6FElevatorButton: ; unreferenced
 	jumpstd ElevatorButtonScript
 
 CeladonVendingText:
-	text "A vending machine!"
-	line "Here's the menu."
+	text "じどう　はんばいき　だ！"
+	line "ほしい　のみものは<⋯>　<⋯>"
 	done
 
 CeladonClangText:
-	text "Clang!"
+	text "ガゴン！"
 
 	para "@"
 	text_ram wStringBuffer3
-	text_start
-	line "popped out."
+	text "<GA>でてき<TA!>"
 	done
 
 CeladonVendingNoMoneyText:
-	text "Oops, not enough"
-	line "money…"
+	text "おかね<GA>たりないぞ！"
 	done
 
 CeladonVendingNoSpaceText:
-	text "There's no more"
-	line "room for stuff…"
+	text "これ　いじょう　もてない！"
 	done
 
 CeladonDeptStore6FSuperNerdText:
-	text "A vending machine"
-	line "with a prize rou-"
-	cont "lette…"
-
-	para "You never see"
-	line "those anymore."
+	text "あたり　クジ　つきの"
+	line "じどうはんばいき<⋯>"
+	cont "さいきん　みかけないね"
 	done
 
 CeladonDeptStore6FYoungsterText:
-	text "Aww! There's no"
-	line "games here!"
-
-	para "I wanted to play…"
+	text "ねー　おにいちゃーん！"
+	line "ここ　ゲーム<GA>ないよー"
+	cont "ボク　ゲームで　あそびたいよー"
 	done
 
 CeladonDeptStore6FDirectoryText:
-	text "6F: ROOFTOP SQUARE"
-	line "VENDING MACHINES"
+	text "６かい　<⋯>　いこい<NO>ひろば"
+	line "　　　　　　<⋯>　じどう　はんばいき"
 	done
 
 CeladonDeptStore6F_MapEvents:

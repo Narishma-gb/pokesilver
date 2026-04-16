@@ -34,28 +34,21 @@ Route16GateCannotPassMovement:
 	step_end
 
 Route16GateOfficerText:
-	text "CYCLING ROAD"
-	line "starts here."
+	text "ここから　サイクリング　ロード"
 
-	para "It's all downhill,"
-	line "so it's totally"
-	cont "exhilarating."
+	para "じてんしゃで　はしると"
+	line "サイコー<NI>きもち　いい！"
 
-	para "It's a great sort"
-	line "of feeling that"
-
-	para "you can't get from"
-	line "a ship or train."
+	para "リニアや　ふね　じゃ"
+	line "あじわえない　ここちよさ　だよ"
 	done
 
 Route16GateCannotPassText:
-	text "Hey! Whoa! Stop!"
+	text "はい！　キミ！　ストップ！"
 
-	para "You can't go out"
-	line "on the CYCLING"
-
-	para "ROAD without a"
-	line "BICYCLE."
+	para "じてんしゃ<WO>も<TTE>ない　ひとは"
+	line "サイクリング　ロードに"
+	cont "はいっちゃ　ダメ　だよ！"
 	done
 
 Route16Gate_MapEvents:

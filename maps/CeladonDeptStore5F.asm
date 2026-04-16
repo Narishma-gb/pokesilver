@@ -40,33 +40,26 @@ CeladonDeptStore5FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 CeladonDeptStore5FGentlemanText:
-	text "I want to buy some"
-	line "items that raise"
-
-	para "#MON stats, but"
-	line "I don't have"
-	cont "enough money…"
+	text "#<NO>のうりょく<WO>あげる"
+	line "どうぐ<WO>かいたいのだが<⋯>"
+	cont "むむ<⋯>　おかね<GA>たりない！"
 	done
 
 CeladonDeptStore5FSailorText:
-	text "I want PP UP, so I"
-	line "can raise the PP"
-
-	para "of moves. But you"
-	line "can't buy it…"
+	text "わざポイント<NO>さいだいち<WO>ふやす"
+	line "ポイントアップ<GA>ほしいんだけど"
+	cont "みせで<WA>う<TTE>いない"
+	cont "どうぐ　なんだ<TTE>！"
 	done
 
 CeladonDeptStore5FTeacherText:
-	text "Using items on"
-	line "them makes #-"
-	cont "MON happy."
-
-	para "They hate certain"
-	line "items, though…"
+	text "どうぐ<WO>つか<TTE>　あげると"
+	line "#<WA>よろこぶのよ！"
+	cont "いやがる　どうぐも　あるけど<⋯>"
 	done
 
 CeladonDeptStore5FDirectoryText:
-	text "5F: DRUG STORE"
+	text "５かい<⋯>ドラッグ·ストア"
 	done
 
 CeladonDeptStore5F_MapEvents:

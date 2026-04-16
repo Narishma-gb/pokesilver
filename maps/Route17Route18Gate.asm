@@ -34,19 +34,17 @@ Route17Route18GateCannotPassMovement:
 	step_end
 
 Route17Route18GateOfficerText:
-	text "CYCLING ROAD"
-	line "Uphill Starts Here"
+	text "サイクリング　ロード"
+	line "こちら　から<WA>のぼり　ざか　です"
 	done
 
 Route17Route18GateCannotPassText:
-	text "Hang on! Don't you"
-	line "have a BICYCLE?"
+	text "あー　キミ　キミ！"
+	line "じてんしゃ　も<TTE>ないの？"
 
-	para "The CYCLING ROAD"
-	line "is beyond here."
-
-	para "You have to have a"
-	line "BICYCLE to go on."
+	para "ここから　さきは"
+	line "サイクリング　ロード！"
+	cont "じてんしゃ<GA>ないと　はいれないよ！"
 	done
 
 Route17Route18Gate_MapEvents:

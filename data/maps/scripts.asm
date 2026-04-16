@@ -102,6 +102,40 @@ INCLUDE "maps/Route2Gate.asm"
 INCLUDE "maps/VictoryRoadGate.asm"
 
 
+SECTION "Map Scripts 4", ROMX
+
+INCLUDE "maps/Route10North.asm"
+INCLUDE "maps/NationalPark.asm"
+INCLUDE "maps/NationalParkBugContest.asm"
+INCLUDE "maps/RadioTower1F.asm"
+INCLUDE "maps/RadioTower2F.asm"
+INCLUDE "maps/RadioTower3F.asm"
+INCLUDE "maps/RadioTower4F.asm"
+INCLUDE "maps/RadioTower5F.asm"
+INCLUDE "maps/CeladonDeptStore1F.asm"
+INCLUDE "maps/CeladonDeptStore2F.asm"
+INCLUDE "maps/CeladonDeptStore3F.asm"
+INCLUDE "maps/CeladonDeptStore4F.asm"
+INCLUDE "maps/CeladonDeptStore5F.asm"
+INCLUDE "maps/CeladonDeptStore6F.asm"
+INCLUDE "maps/CeladonDeptStoreElevator.asm"
+INCLUDE "maps/CeladonMansion1F.asm"
+INCLUDE "maps/CeladonMansion2F.asm"
+INCLUDE "maps/CeladonMansion3F.asm"
+INCLUDE "maps/CeladonMansionRoof.asm"
+INCLUDE "maps/CeladonMansionRoofHouse.asm"
+INCLUDE "maps/CeladonPokecenter1F.asm"
+INCLUDE "maps/CeladonPokecenter2FBeta.asm"
+INCLUDE "maps/CeladonGameCorner.asm"
+INCLUDE "maps/CeladonGameCornerPrizeRoom.asm"
+INCLUDE "maps/CeladonGym.asm"
+INCLUDE "maps/CeladonCafe.asm"
+INCLUDE "maps/Route16FuchsiaSpeechHouse.asm"
+INCLUDE "maps/Route16Gate.asm"
+INCLUDE "maps/Route7SaffronGate.asm"
+INCLUDE "maps/Route17Route18Gate.asm"
+
+
 SECTION "Map Scripts 12", ROMX
 
 INCLUDE "maps/Route28.asm"
@@ -150,17 +184,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 ;INCLUDE "maps/SafariZoneFuchsiaGateBeta.asm"
 ;INCLUDE "maps/SafariZoneBeta.asm"
 ;INCLUDE "maps/VictoryRoad.asm"
-
-;INCLUDE "maps/NationalPark.asm"
-;INCLUDE "maps/NationalParkBugContest.asm"
-;INCLUDE "maps/RadioTower1F.asm"
-;INCLUDE "maps/RadioTower2F.asm"
-;INCLUDE "maps/RadioTower3F.asm"
-;INCLUDE "maps/RadioTower4F.asm"
-;INCLUDE "maps/RadioTower5F.asm"
-
-
-;SECTION "Map Scripts 4", ROMX
 
 ;INCLUDE "maps/MahoganyMart1F.asm"
 ;INCLUDE "maps/TeamRocketBaseB1F.asm"
@@ -271,7 +294,7 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 ;INCLUDE "maps/Route24.asm"
 ;INCLUDE "maps/Route25.asm"
 ;INCLUDE "maps/Route8.asm"
-;INCLUDE "maps/Route10North.asm"
+
 
 
 ;SECTION "Map Scripts 16", ROMX
@@ -421,32 +444,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 ;INCLUDE "maps/CianwoodPharmacy.asm"
 ;INCLUDE "maps/CianwoodPhotoStudio.asm"
 ;INCLUDE "maps/CianwoodLugiaSpeechHouse.asm"
-
-
-;SECTION "Map Scripts 28", ROMX
-
-;INCLUDE "maps/CeladonDeptStore1F.asm"
-;INCLUDE "maps/CeladonDeptStore2F.asm"
-;INCLUDE "maps/CeladonDeptStore3F.asm"
-;INCLUDE "maps/CeladonDeptStore4F.asm"
-;INCLUDE "maps/CeladonDeptStore5F.asm"
-;INCLUDE "maps/CeladonDeptStore6F.asm"
-;INCLUDE "maps/CeladonDeptStoreElevator.asm"
-;INCLUDE "maps/CeladonMansion1F.asm"
-;INCLUDE "maps/CeladonMansion2F.asm"
-;INCLUDE "maps/CeladonMansion3F.asm"
-;INCLUDE "maps/CeladonMansionRoof.asm"
-;INCLUDE "maps/CeladonMansionRoofHouse.asm"
-;INCLUDE "maps/CeladonPokecenter1F.asm"
-;INCLUDE "maps/CeladonPokecenter2FBeta.asm"
-;INCLUDE "maps/CeladonGameCorner.asm"
-;INCLUDE "maps/CeladonGameCornerPrizeRoom.asm"
-;INCLUDE "maps/CeladonGym.asm"
-;INCLUDE "maps/CeladonCafe.asm"
-;INCLUDE "maps/Route16FuchsiaSpeechHouse.asm"
-;INCLUDE "maps/Route16Gate.asm"
-;INCLUDE "maps/Route7SaffronGate.asm"
-;INCLUDE "maps/Route17Route18Gate.asm"
 
 
 ;SECTION "Map Scripts 31", ROMX

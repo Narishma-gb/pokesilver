@@ -107,146 +107,119 @@ RadioTower2FBookshelf:
 	jumpstd MagazineBookshelfScript
 
 RadioTower2FSuperNerdText:
-	text "You can listen to"
-	line "the radio any-"
-	cont "where. Tune in!"
+	text "どこでも　ラジオ<WA>きけるからね！"
+	line "どこでも　ラジオ<WO>きいてくれよ！"
 	done
 
 RadioTower2FTeacherText:
-	text "Lullabies on the"
-	line "radio may make"
-	cont "#MON sleep."
+	text "ラジオから　ながれる　こもりうたでも"
+	line "#<WA>ねむっちゃうのよ"
 	done
 
 RadioTower2FTeacherText_Rockets:
-	text "Why would they"
-	line "want to take over"
-	cont "the RADIO TOWER?"
+	text "ラジオきょく<WO>せんりょう　して"
+	line "どうする　つもり　なのかしら<⋯>？"
 	done
 
 RadioTowerJigglypuffText:
-	text "JIGGLYPUFF:"
-	line "Jiggly…"
+	text "プリンちゃん『ぷう<⋯>　ぷぷう<⋯>"
 	done
 
 RadioTower2FBlackBelt1Text:
-	text "Sorry. Authorized"
-	line "personnel only"
-	cont "beyond this point."
+	text "ここからうえ<WA>かんけいしゃ　いがい"
+	line "たちいりきんし　なんだ<⋯>"
 
-	para "It wasn't that way"
-	line "before."
-
-	para "There's something"
-	line "wrong with the"
-	cont "DIRECTOR…"
+	para "むかし<WA>そんなこと　なかったのに"
+	line "いま<NO>きょくちょう　おかしいよ"
 	done
 
 RadioTower2FBlackBelt2Text:
-	text "Feel free to look"
-	line "around anywhere."
-
-	para "The DIRECTOR is"
-	line "nice again, just"
-	cont "as he was before."
+	text "どこでも　けんがく　じゆう　だよ"
+	line "むかし<NO>よう<NI>やさしい"
+	cont "きょくちょう<NI>もどったんだよ！"
 	done
 
 GruntM4SeenText:
-	text "Three years ago,"
-	line "TEAM ROCKET was"
-	cont "forced to disband."
+	text "３ねんまえ　<ROCKET>は"
+	line "かいさん<NI>おいこまれた<⋯>"
 
-	para "But we're making a"
-	line "comeback here!"
+	para "だ<GA>われわれは"
+	line "ここで　ふっかつ　するのだ！"
 	done
 
 GruntM4BeatenText:
-	text "Gwah! Don't get"
-	line "cute!"
+	text "ぐう"
+	line "かわいくない　やつ"
 	done
 
 GruntM4AfterBattleText:
-	text "We won't let you"
-	line "ruin our plans"
-	cont "for our comeback!"
+	text "おまえ　なんかに"
+	line "ふっかつ<NO>じゃま<WA>させないぞ！"
 	done
 
 GruntM5SeenText:
-	text "We're TEAM ROCKET,"
-	line "the exploiters of"
-	cont "#MON!"
+	text "おれたちは"
+	line "#　マフィア　<ROCKET>！"
+	cont "わるいこと　だいすき　なのさ"
 
-	para "We love being"
-	line "evil! Scared?"
+	para "おっと　おじけづいたか？"
 	done
 
 GruntM5BeatenText:
-	text "You think you're a"
-	line "hero?"
+	text "せいぎ<NO>みかた<NO>つもりか？"
 	done
 
 GruntM5AfterBattleText:
-	text "We're not always"
-	line "evil. We just do"
-	cont "whatever we like."
+	text "べつ<NI>おれたちは"
+	line "わるいこと　してるわけ　じゃない！"
+	cont "ただ　すきなこと<WO>してるだけさ"
 	done
 
 GruntM6SeenText:
-	text "Hey, hey! Keep out"
-	line "of our way!"
+	text "おいおい！"
+	line "おれたち<NO>じゃま<WO>するんじゃねえ"
 	done
 
 GruntM6BeatenText:
-	text "Arggh. I give up."
+	text "うう<⋯>　まいった"
 	done
 
 GruntM6AfterBattleText:
-	text "Our EXECUTIVES are"
-	line "trying to take"
-	cont "this place over."
-
-	para "They have some big"
-	line "plan. I wonder"
-	cont "what that is?"
+	text "かんぶたち<WA>ここ<WO>のっとり"
+	line "でかいこと<WO>する　つもりらしい"
+	cont "さーて　なに<WO>するのかな？"
 	done
 
 GruntF2SeenText:
-	text "Hahaha!"
+	text "ほほほ！"
+	line "かんたん<NI>せんりょう　できて"
+	cont "たいくつ　だったの！"
 
-	para "How boring."
-	line "It was far too"
-
-	para "easy to take over"
-	line "this place!"
-
-	para "Come on, keep me"
-	line "amused!"
+	para "あなた　たのしませて　くれる？"
 	done
 
 GruntF2BeatenText:
-	text "Wh-who are you?"
+	text "あなた　なにもの！？"
 	done
 
 GruntF2AfterBattleText:
-	text "You beat me, and"
-	line "I won't forget it!"
+	text "<WATASHI>より　つよいなんて<⋯>"
+
+	para "ゆるせない！"
 	done
 
 RadioTower2FSalesSignText:
-	text "2F SALES"
+	text "２かい　<⋯>　えいぎょうぶ"
 	done
 
 RadioTower2FOaksPKMNTalkSignText:
-	text "PROF.OAK'S #MON"
-	line "TALK"
-
-	para "The Hottest Show"
-	line "on the Air!"
+	text "オーキドはかせ<NO>#こうざ"
+	line "こうひょう　ほうそうちゅう！"
 	done
 
 RadioTower2FPokemonRadioSignText:
-	text "Anywhere, Anytime"
-	line "#MON Radio"
+	text "２４じかん　いつでも"
+	line "どこでも　#ラジオ"
 	done
 
 RadioTower2F_MapEvents:

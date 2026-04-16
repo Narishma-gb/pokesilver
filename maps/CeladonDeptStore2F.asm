@@ -36,34 +36,23 @@ CeladonDeptStore2FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 CeladonDeptStore2FPokefanMText:
-	text "I just recently"
-	line "became a trainer."
+	text "こ<NO>とし<NI>な<TTE>"
+	line "むすこ<NI>えいきょうされて"
+	cont "<TRAINER><NI>なったんだが<⋯>"
 
-	para "My son encouraged"
-	line "me to do it."
-
-	para "I'm impressed by"
-	line "the selection of"
-	cont "convenient items."
+	para "べんりな　どうぐが"
+	line "いっぱい　そろ<TTE>るのー"
 	done
 
 CeladonDeptStore2FYoungsterText:
-	text "My Dad's having a"
-	line "hard time learning"
-
-	para "the names of items"
-	line "and how they are"
-
-	para "supposed to be"
-	line "used…"
+	text "おとうさん　なかなか"
+	line "どうぐ<NO>なまえや　つかいかたを"
+	cont "おぼえて　くれないんだよなー"
 	done
 
 CeladonDeptStore2FDirectoryText:
-	text "Top Grade Items"
-	line "for Trainers!"
-
-	para "2F: TRAINER'S"
-	line "    MARKET"
+	text "<TRAINER>グッズ<GA>いっぱい！"
+	line "２かい<⋯><TRAINER>ズ·ショップ"
 	done
 
 CeladonDeptStore2F_MapEvents:

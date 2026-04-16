@@ -116,108 +116,80 @@ NationalParkBugContestHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
 
 BugCatchingContestant1AText:
-	text "DON: I'm going to"
-	line "win! Don't bother"
-	cont "me."
+	text "ミキヤス『ゆうしょう<WA>このボク！"
+	line "じゃま　するなよな！"
 	done
 
 BugCatchingContestant2AText:
-	text "ED: My PARASECT"
-	line "puts #MON to"
-	cont "sleep with SPORE."
+	text "ヨウジ『オレ<NO>パラセクト"
+	line "キノコのほうし　つか<TTE>"
+	cont "でてきた　#<WO>ねむらせるぜ"
 	done
 
 BugCatchingContestant3AText:
-	text "NICK: I'm raising"
-	line "fast #MON for"
-	cont "battles."
+	text "ケン『たいかい<NO>ために"
+	line "すばやい　#　そだててる！"
 	done
 
 BugCatchingContestant4AText:
-	text "WILLIAM: I'm not"
-	line "concerned about"
-	cont "winning."
-
-	para "I'm just looking"
-	line "for rare #MON."
+	text "アキヒト『ゆうしょう<WA>いいから"
+	line "めずらしい　#　さがしとるよ"
 	done
 
 BugCatchingContestant5AText:
-	text "BENNY: Ssh! You'll"
-	line "scare off SCYTHER."
-
-	para "I'll talk to you"
-	line "later."
+	text "サダオ『<⋯>　しー"
+	line "ストライク<GA>にげるだろ　あとでな"
 	done
 
 BugCatchingContestant6AText:
-	text "BARRY: You should"
-	line "weaken bug #MON"
-
-	para "first, then throw"
-	line "a # BALL."
+	text "ユウイチ『むし#を"
+	line "つかまえるときも　よわらせてから"
+	cont "ボール<WO>なげるの<GA>だいじだね"
 	done
 
 BugCatchingContestant7AText:
-	text "CINDY: What is it?"
-
-	para "Do you find it"
-	line "funny that a girl"
-
-	para "is catching bug"
-	line "#MON?"
+	text "サトミ『なあに？　おんなのこが"
+	line "むし#　あつめる<NO>おかしい？"
 	done
 
 BugCatchingContestant8AText:
-	text "JOSH: I've been"
-	line "collecting bug"
-
-	para "#MON since I"
-	line "was just a baby."
-
-	para "There's no way I'm"
-	line "going to lose!"
+	text "トモミチ『うまれてから　ずっと"
+	line "むし#だけ　つかまえてる！"
+	cont "そんな　ぼく<GA>まけるわけないだろ！"
 	done
 
 BugCatchingContestant9AText:
-	text "SAMUEL: If you've"
-	line "got the time to"
-
-	para "chat, go find some"
-	line "bug #MON."
+	text "コウタ『はなしてる　ひま<GA>あったら"
+	line "#　さがしたら？"
 	done
 
 BugCatchingContestant10AText:
-	text "KIPP: I've studied"
-	line "about bug #MON"
-	cont "a lot."
-
-	para "I'm going to win"
-	line "for sure."
+	text "トモユキ『むし#<NO>こと"
+	line "たくさん　べんきょう　したからね"
+	cont "かならず　ゆうしょう　するよ！"
 	done
 
 NationalParkBugContestRelaxationSquareText:
-	text "RELAXATION SQUARE"
-	line "NATIONAL PARK"
+	text "いこい<NO>ひろば"
+	line "しぜん　こうえん"
 	done
 
 NationalParkBugContestBattleNoticeText:
-	text "What is this"
-	line "notice?"
+	text "チラシ<GA>は<TTE>　ある！"
 
-	para "Please battle only"
-	line "in the grass."
+	para "#　しょうぶは"
+	line "くさむら　だけで　おねがいします"
 
-	para "NATIONAL PARK"
-	line "WARDEN'S OFFICE"
+	para "<⋯>しぜん　こうえん"
+	line "かんり　じむしょ　より<⋯>"
 	done
 
 NationalParkBugContestTrainerTipsText:
-	text "TRAINER TIPS"
+	text "おとくな　けいじばん！"
 
-	para "Print out MAIL by"
-	line "opening it then"
-	cont "pressing START."
+	para "メールのがめんで"
+	line "スタートボタン<WO>プッシュ！"
+	cont "メール<WO>プリントできます！"
 	done
 
 NationalParkBugContest_MapEvents:

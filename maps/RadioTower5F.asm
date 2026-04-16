@@ -195,252 +195,178 @@ RadioTower5FPlayerTwoStepsLeftMovement:
 	step_end
 
 FakeDirectorTextBefore1:
-	text "Y-you! You came to"
-	line "rescue me?"
+	text "き　きみは！"
+	line "たすけ<NI>きてくれたのか<⋯>"
 	done
 
 FakeDirectorTextBefore2:
-	text "Is that what you"
-	line "were expecting?"
+	text "なんて　いわれるとでも　おもったか！"
+	line "おれさま<WA>にせものだ！"
 
-	para "Wrong!"
-	line "I'm an imposter!"
+	para "ほんもの<NO>ふり<WO>して"
+	line "のっとる　じゅんび<WO>していたのだ"
 
-	para "I pretended to be"
-	line "the real thing to"
+	para "はーは<WA>きょくちょうの"
+	line "いばしょ<WO>しりたいか！"
 
-	para "prepare for our"
-	line "takeover."
-
-	para "Do you want to"
-	line "know where we hid"
-	cont "the real DIRECTOR?"
-
-	para "Sure, I'll tell"
-	line "you. But only if"
-	cont "you can beat me!"
+	para "いいぜ　おしえてやろう"
+	line "ただし　おれさま<NI>かてたらな！"
 	done
 
 FakeDirectorWinText:
-	text "OK, OK. I'll tell"
-	line "you where he is."
+	text "わ　わかった<⋯>"
+	line "きょくちょう<NO>いばしょ　おしえる"
 	done
 
 FakeDirectorTextAfter:
-	text "We stashed the"
-	line "real DIRECTOR in"
+	text "ほんもの<NO>きょくちょうは<⋯>"
 
-	para "the UNDERGROUND"
-	line "WAREHOUSE."
+	para "ちかそうこ<NI>とじこめている！"
 
-	para "It's at the far"
-	line "end of the UNDER-"
-	cont "GROUND."
-
-	para "But I doubt you'll"
-	line "get that far."
+	para "ちかそうこ　わかるか？"
+	line "ちかつうろ<NO>おく<NO>さら<NI>おく"
+	cont "そこまで　たどりつけるかな<⋯>"
 	done
 
 Executivef1SeenText:
-	text "Hi, little boy."
-	line "Remember me from"
+	text "あら　ぼうや？"
+	line "チョウジ<NO>アジトで　あったわね"
 
-	para "the HIDEOUT in"
-	line "MAHOGANY TOWN?"
-
-	para "I lost then, but I"
-	line "won't this time."
+	para "あのとき<WA>まけたけど"
+	line "こんど<WA>そう<WA>いかないわよ"
 	done
 
 Executivef1BeatenText:
-	text "This can't be"
-	line "happening!"
+	text "<⋯>！"
 
-	para "I fought hard, but"
-	line "I still lost…"
+	para "ぜんりょくで　たたかったのに<⋯>"
+	line "まさか　まけるだ　なんて<⋯>"
 	done
 
 Executivef1AfterBattleText:
-	text "<PLAYER>, isn't it?"
+	text "<PLAYER><TTE>　いったわね"
 
-	para "A brat like you"
-	line "won't appreciate"
+	para "あなたのような　ぼうや　には"
+	line "わたくしたち<NO>すばらしさ"
+	cont "りかい　できないようね"
 
-	para "the magnificence"
-	line "of TEAM ROCKET."
-
-	para "That's too bad."
-	line "I really admire"
-	cont "your power."
+	para "ざんねんだわ"
+	line "あなた<NO>つよさ　きにい<TTE>たのに"
 	done
 
 RadioTower5FRocketBossBeforeText:
-	text "Oh? You managed to"
-	line "get this far?"
+	text "おやおや　ここまで　きましたか"
 
-	para "You must be quite"
-	line "the trainer."
+	para "なかなか　ゆうしゅうな"
+	line "<TRAINER><NO>ようですね"
 
-	para "We intend to take"
-	line "over this RADIO"
+	para "われわれ<WA>ラジオきょくを"
+	line "のっとり　ぜんこくに"
+	cont "ふっかつ　せんげん<WO>するのです"
 
-	para "STATION and an-"
-	line "nounce our come-"
-	cont "back."
+	para "そうすれば　どこかで"
+	line "しゅぎょうちゅう<NO>サカキさまも"
+	cont "もどられる<NI>ちがいない"
 
-	para "That should bring"
-	line "our boss GIOVANNI"
-
-	para "back from his solo"
-	line "training."
-
-	para "We are going to"
-	line "regain our former"
-	cont "glory."
-
-	para "I won't allow you"
-	line "to interfere with"
-	cont "our plans."
+	para "あ<NO>むかし<NO>えいこうを"
+	line "とりもどすのです<⋯>"
+	cont "そ<NO>じゃま<WA>させませんよ！"
 	done
 
 RadioTower5FRocketBossWinText:
-	text "No! Forgive me,"
-	line "GIOVANNI!"
+	text "<⋯>　ぐう"
+	line "サカキさま　おゆるしください<⋯>"
 	done
 
 RadioTower5FRocketBossAfterText:
-	text "How could this be?"
+	text "<⋯>　ああ　なんという　ことだ"
 
-	para "Our dreams have"
-	line "come to naught."
+	para "すべて<NO>ゆめが"
+	line "いま　おわりましたよ"
+	cont "　"
+	line "やはり　<WATASHI>で<WA>むり　でしたか"
 
-	para "I wasn't up to the"
-	line "task after all."
+	para "わかりました"
+	line "サカキさま<GA>そうしたように"
+	cont "<WATASHI>たち　<ROCKET>は"
+	cont "ここで　かいさん　しましょう"
 
-	para "Like GIOVANNI did"
-	line "before me, I will"
-
-	para "disband TEAM"
-	line "ROCKET here today."
-
-	para "Farewell."
+	para "さらばです"
 	done
 
 RadioTower5FDirectorThankYouText:
-	text "DIRECTOR: <PLAYER>,"
-	line "thank you!"
+	text "きょくちょう『おお　<PLAYER>くん"
+	line "ほんと　ありがとう　れいをいうよ"
 
-	para "Your courageous"
-	line "actions have saved"
+	para "きみ<NO>ゆうきある　こうどうが"
+	line "ぜんこくの#<WO>すくったんだ"
 
-	para "#MON nation-"
-	line "wide."
-
-	para "I know it's not"
-	line "much, but please"
-	cont "take this."
+	para "これ<WA>わずかばかりだけど"
+	line "<WATASHI><NO>きもちだよ"
 	done
 
 RadioTower5FDirectorDescribeRainbowWingText:
-	text "There used to be a"
-	line "tower right here"
-	cont "in GOLDENROD CITY."
+	text "コガネにも　とう<GA>あったが"
+	line "ふるくて　たおれそう　だったから"
+	cont "ラジオとう<NI>したんだよ"
 
-	para "But it was old and"
-	line "creaky."
+	para "そ<NO>こうじ<NO>とき"
+	line "とう<NO>いちばん　うえで"
+	cont "みつかったの<GA>そのハネ　なんだ"
 
-	para "So we replaced it"
-	line "with our RADIO"
-	cont "TOWER."
+	para "むかし<WA>コガネでも"
+	line "おおきな　#が"
+	cont "とんでいた　というからね"
 
-	para "During the tear-"
-	line "down, we found"
-	cont "that at the top."
+	para "ひょっとしたら　エンジュにある"
+	line "スズのとう<NI>あらわれる　という"
+	cont "#<GA>おとしたモノ　かもね"
 
-	para "I heard that giant"
-	line "#MON used to"
-
-	para "fly over GOLDENROD"
-	line "in the past."
-
-	para "Maybe that fell"
-	line "off a #MON."
-
-	para "Maybe like the one"
-	line "that appears at"
-
-	para "TIN TOWER in"
-	line "ECRUTEAK CITY."
-
-	para "OK, I better go to"
-	line "my OFFICE."
+	para "で<WA><WATASHI>は"
+	line "きょくちょうしつ<NI>もどるよ"
 	done
 
 RadioTower5FDirectorDescribeSilverWingText:
-	text "There used to be a"
-	line "tower right here"
-	cont "in GOLDENROD CITY."
+	text "コガネにも　とう<GA>あったが"
+	line "ふるくて　たおれそう　だったから"
+	cont "ラジオとう<NI>したんだよ"
 
-	para "But it was old and"
-	line "creaky."
+	para "そ<NO>こうじ<NO>とき"
+	line "とう<NO>いちばん　うえで"
+	cont "みつかったの<GA>そのハネ　なんだ"
 
-	para "So we replaced it"
-	line "with our RADIO"
-	cont "TOWER."
+	para "むかし<WA>コガネでも"
+	line "おおきな　#が"
+	cont "とんでいた　というからね"
 
-	para "During the tear-"
-	line "down, we found"
-	cont "that at the top."
+	para "ひょっとしたら　タンバ<NO>ちかく"
+	line "うずまきじま<NI>あらわれる　という"
+	cont "#<GA>おとしたモノ　かもね"
 
-	para "I heard that giant"
-	line "#MON used to"
-
-	para "fly over GOLDENROD"
-	line "in the past."
-
-	para "Maybe that fell"
-	line "off a #MON."
-
-	para "Maybe like the one"
-	line "that appears at"
-
-	para "WHIRL ISLANDS near"
-	line "CIANWOOD."
-
-	para "OK, I better go to"
-	line "my OFFICE."
+	para "で<WA><WATASHI>は"
+	line "きょくちょうしつ<NI>もどるよ"
 	done
 
 RadioTower5FDirectorText:
-	text "DIRECTOR: Hello,"
-	line "<PLAYER>!"
+	text "きょくちょう『<PLAYER>くん"
+	line "<WATASHI><WA>#<GA>すきで　すきで"
+	cont "そ<NO>きもち<WO>つたえたくて"
+	cont "ラジオほうそう<WO>はじめたんだ！"
 
-	para "You know, I love"
-	line "#MON."
-
-	para "I built this RADIO"
-	line "TOWER so I could"
-
-	para "express my love"
-	line "of #MON."
-
-	para "It would be nice"
-	line "if people enjoyed"
-	cont "our programs."
+	para "みんな<GA>ばんぐみを"
+	line "たのしんでくれると　うれしいね"
 	done
 
 BenText:
-	text "BEN: Do you listen"
-	line "to our music?"
+	text "セージ『おんがく　きいてる？"
 	done
 
 RadioTower5FDirectorsOfficeSignText:
-	text "5F DIRECTOR'S"
-	line "   OFFICE"
+	text "５かい　<⋯>　きょくちょうしつ"
 	done
 
 RadioTower5FStudio1SignText:
-	text "5F STUDIO 1"
+	text "５かい　<⋯>　だい１スタジオ"
 	done
 
 RadioTower5F_MapEvents:

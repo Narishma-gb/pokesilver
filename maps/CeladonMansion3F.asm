@@ -82,109 +82,86 @@ CeladonMansion3FReferenceMaterial:
 	jumptext CeladonMansion3FReferenceMaterialText
 
 GameFreakGameDesignerText:
-	text "Is that right?"
+	text "そーですかー！"
 
-	para "I'm the GAME"
-	line "DESIGNER!"
+	para "ぼく<WA>ゲーム　デザイナー"
 
-	para "Filling up your"
-	line "#DEX is tough,"
-	cont "but don't give up!"
+	para "#ずかん　ぜんぶ　あつめるの"
+	line "たいへん　だけど　がんば<TTE>！"
 	done
 
 GameFreakGameDesignerCompletedPokedexText:
-	text "Wow! Excellent!"
-	line "You completed your"
-	cont "#DEX!"
+	text "わあ　すごい！"
+	line "とうとう　#ずかん"
+	cont "ぜんぶ<NO>ページ<WO>かきこんだね！"
 
-	para "Congratulations!"
+	para "おめでとう！"
 	done
 
 GameFreakGameDesignerPauseForDiplomaText:
-	text "…"
+	text "<⋯>　<⋯>"
 	done
 
 GameFreakGameDesignerAfterDiplomaText:
-	text "The GRAPHIC ARTIST"
-	line "will print out a"
-	cont "DIPLOMA for you."
-
-	para "You should go show"
-	line "it off."
+	text "グラフィッカーが"
+	line "ひょうしょうじょうを"
+	cont "プリントして　くれるよ！"
+	cont "みんな<NI>みせて　あげて！"
 	done
 
 GameFreakGraphicArtistText:
-	text "I'm the GRAPHIC"
-	line "ARTIST."
-
-	para "I drew you!"
+	text "おれ　グラフィッカー！"
+	line "おまえ<WO>かいた<NO>おれさ！"
 	done
 
 GameFreakGraphicArtistPrintDiplomaText:
-	text "I'm the GRAPHIC"
-	line "ARTIST."
+	text "おれ　グラフィッカー！"
 
-	para "Oh, you completed"
-	line "your #DEX?"
-
-	para "Want me to print"
-	line "out your DIPLOMA?"
+	para "おっ　ずかん　かんせい　したんだ！"
+	line "きねん<NI>ひょうしょうじょうを"
+	cont "プリント　して　あげようか？"
 	done
 
 GameFreakGraphicArtistRefusedText:
-	text "Give me a shout if"
-	line "you want your"
-	cont "DIPLOMA printed."
+	text "プリント　したく　なったら"
+	line "こえ<WO>かけてね！"
 	done
 
 GameFreakGraphicArtistErrorText:
-	text "Something's wrong."
-	line "I'll have to can-"
-	cont "cel printing."
+	text "なんとなく　ちょうし<GA>わるいね"
+	line "プリント<WA>ちゅうし　するよ！"
 	done
 
 GameFreakProgrammerText:
-	text "Who, me? I'm the"
-	line "PROGRAMMER."
-
-	para "Play the slot"
-	line "machines!"
+	text "おれさま？"
+	line "プログラマーだ！　スロット　やれよ！"
 	done
 
 GameFreakCharacterDesignerText:
-	text "Aren't the TWINS"
-	line "adorable?"
+	text "ふたごちゃん　かわいい　でしょ！"
 
-	para "JASMINE's pretty"
-	line "too."
+	para "ミカンちゃんも　くー！"
 
-	para "Oh, I love them!"
+	para "たまらんー！"
 	done
 
 CeladonMansion3FDevRoomSignText:
-	text "GAME FREAK"
-	line "DEVELOPMENT ROOM"
+	text "ゲームフリーク　かいはつ　しつ"
 	done
 
 CeladonMansion3FDrawingText:
-	text "It's a detailed"
-	line "drawing of a"
-	cont "pretty girl."
+	text "きれいな　え　<GA>かいてある"
+	line "<⋯>みりょくてきな　おんなのこだ！"
 	done
 
 CeladonMansion3FGameProgramText:
-	text "It's the game"
-	line "program. Messing"
-
-	para "with it could put"
-	line "a bug in the game!"
+	text "ゲーム<NO>プログラムだ！"
+	line "これ　かえたら　バグる　かも！"
 	done
 
 CeladonMansion3FReferenceMaterialText:
-	text "It's crammed with"
-	line "reference materi-"
-	cont "als. There's even"
-	cont "a # DOLL."
+	text "いろんな　しりょう<GA>いっぱい"
+	line "<⋯>ピッピにんぎょう　だ！"
 	done
 
 CeladonMansion3F_MapEvents:
