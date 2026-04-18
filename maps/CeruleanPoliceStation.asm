@@ -23,22 +23,20 @@ CeruleanDiglett:
 	end
 
 CeruleanPoliceStationFishingGuruText:
-	text "I heard that some"
-	line "shady character is"
-	cont "skulking about."
+	text "あやしい　ヤツが"
+	line "ウロウロ　してる<TTE>　はなしだ！"
 
-	para "I won't stand for"
-	line "it if he turns out"
-	cont "to be a thief."
+	para "ドロボー　だったら"
+	line "ワシ<GA>ゆるさーん！"
 	done
 
 CeruleanPoliceStationPokefanFText:
-	text "We were held up by"
-	line "robbers before."
+	text "むかしね"
+	line "ドロボー<NI>はいられたこと<GA>あるの"
 	done
 
 CeruleanDiglettText:
-	text "DIGLETT: Dug dug."
+	text "ディグダ『だぐ　だぐ"
 	done
 
 CeruleanPoliceStation_MapEvents:

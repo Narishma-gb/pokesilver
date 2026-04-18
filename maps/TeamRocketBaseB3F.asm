@@ -313,250 +313,193 @@ RocketBaseRivalShovesPlayerMovement:
 	step_end
 
 LanceGetPasswordText:
-	text "LANCE: It takes"
-	line "two passwords to"
+	text "ワタル『ボス<NO>へや<NI>はいるには"
+	line "とびら<NO>パスワードが"
+	cont "２つ　ひつよう　らしいな"
 
-	para "get into the"
-	line "boss's quarters."
+	para "そ<NO>パスワードは"
+	line "いちぶ<NO><ROCKET>いん　だけに"
+	cont "しらされてるらしい"
 
-	para "Those passwords"
-	line "are known only to"
-	cont "a few ROCKETS."
+	para "そこ<NO><ROCKET>いんが"
+	line "ていねい<NI>おしえてくれたよ"
 
-	para "That ROCKET there"
-	line "very graciously"
-	cont "told me so."
-
-	para "<PLAYER>, let's go"
-	line "get the passwords."
+	para "<PLAYER>くん！　がんば<TTE>"
+	line "ききだすと　しよう！"
 	done
 
 TeamRocketBaseB3FRocketText:
-	text "Urrggh… The guy"
-	line "in the cape is"
-	cont "incredibly tough…"
+	text "ううう<⋯>"
+	line "マント<NO>おとこ　つよすぎるぜ<⋯>"
 	done
 
 RocketBaseRivalText:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "Didn't I tell you"
-	line "that I was going"
+	para "<ROCKET><WO>つぶすのは"
+	line "オレだ　<TTE>　いっただろ"
 
-	para "to destroy TEAM"
-	line "ROCKET?"
+	para "<⋯>　それよりも"
+	line "あ<NO>マント<NO>ドラゴンつかい"
+	cont "あいつ<WA>いったい　なにも<NO>だ？"
 
-	para "…Tell me, who was"
-	line "the guy in the"
+	para "オレ<NO>#が"
+	line "まったく　は<GA>たたなかった<⋯>"
 
-	para "cape who used"
-	line "dragon #MON?"
+	para "まけたの<WA>どうでも　いい"
+	line "もっと　もっと"
+	cont "つよい　#　て<NI>いれれば"
+	cont "あいつ<NI>だ<TTE>　かてる"
 
-	para "My #MON were no"
-	line "match at all."
+	para "それよりも　き<NI>いらないのは"
+	line "あ<NO>セリフ<⋯>"
 
-	para "I don't care that"
-	line "I lost. I can beat"
+	para "きみ<WA>#への"
+	line "あいと　しんらい<GA>たりない　だと"
 
-	para "him by getting"
-	line "stronger #MON."
+	para "あんな　あまいこと　いう　やつに"
+	line "まけたかと　おもうと　はらがたつ！"
 
-	para "It's what he said"
-	line "that bothers me…"
-
-	para "He told me that"
-	line "I don't love and"
-
-	para "trust my #MON"
-	line "enough."
-
-	para "I'm furious that I"
-	line "lost to a bleeding"
-	cont "heart like him."
-
-	para "…Humph! I don't"
-	line "have the time for"
-	cont "the likes of you!"
+	para "<⋯>　フン！　おまえの"
+	line "あいて　なんか　してられるかよ！"
 	done
 
 ExecutiveM4BeforeText:
-	text "What? Who are you?"
-	line "This is the office"
+	text "なんだ　おまえは？"
+	line "<KOKO_WA>おれら<NO>ボス"
+	cont "サカキさま<NO>へや"
 
-	para "of our leader,"
-	line "GIOVANNI."
+	para "サカキさま<WA>３ねんまえ"
+	line "かいさんせんげん<WO>したまま"
+	cont "いまも　しゅぎょうちゅう<⋯>"
 
-	para "Since disbanding"
-	line "TEAM ROCKET three"
+	para "だ<GA>いつ<NO>ひか"
+	line "おもどり<NI>なられるの<WO>しんじて"
+	cont "こうして　るす<WO>まも<TTE>るのだ"
 
-	para "years ago, he has"
-	line "been in training."
-
-	para "But we're certain"
-	line "he will be back"
-
-	para "some day to assume"
-	line "command again."
-
-	para "That's why we're"
-	line "standing guard."
-
-	para "I won't let any-"
-	line "one disturb this"
-	cont "place!"
+	para "どんな　やつ<NI>だ<TTE>"
+	line "ここ<WO>あらされて　たまるか！"
 	done
 
 ExecutiveM4BeatenText:
-	text "I… I couldn't do a"
-	line "thing…"
+	text "ぐうう<⋯>"
+	line "まったく　は<GA>たたない"
 
-	para "GIOVANNI, please"
-	line "forgive me…"
+	para "サカキさま"
+	line "おゆるし　ください<⋯>"
 	done
 
 ExecutiveM4AfterText:
-	text "No, I can't let"
-	line "this affect me."
-
-	para "I have to inform"
-	line "the others…"
+	text "いかん"
+	line "まけて　おちこんでる　ばあいじゃない"
+	cont "なかま<NI>しらせなくては<⋯>"
 	done
 
 RocketBaseMurkrowText:
-	text "MURKROW: The"
-	line "password is…"
+	text "ヤミカラス『パスワード　ハ<⋯>"
 
-	para "HAIL GIOVANNI."
+	para "サカキさま　ばんざい"
 	done
 
 GruntF5SeenText:
-	text "Do I know the"
-	line "password?"
+	text "パスワード<WO>し<TTE>いるのか<TTE>？"
+	line "そうね　し<TTE>るかもよ"
 
-	para "Maybe."
-
-	para "But no weakling's"
-	line "going to get it!"
+	para "でもね　よわい　やつには"
+	line "おしえてなんか　あげないわよ！"
 	done
 
 GruntF5BeatenText:
-	text "All right. Stop."
-	line "I'll tell you."
+	text "わかったわよ"
+	line "おしえれば　いいんでしょ"
 	done
 
 GruntF5AfterBattleText:
-	text "The password to"
-	line "the boss's room is"
+	text "ボス<NO>とびら<NO>パスワードは<⋯>"
 
-	para "SLOWPOKETAIL."
+	para "ヤドンのシッポ"
 
-	para "But it's useless"
-	line "unless you have"
-	cont "two passwords."
+	para "ただし　２つ　そろわないと"
+	line "ぜーんぜん　いみ　ないけどね"
 	done
 
 GruntM28SeenText:
-	text "Hyuck-hyuck-hyuck!"
+	text "ひゃひゃひゃ！"
 
-	para "You're challenging"
-	line "me to a battle?"
+	para "おれさま<WO>たおそう　<TTE>のか？"
+	line "いい　どきょう　だな"
 
-	para "Hah! You're nuts,"
-	line "but you have guts!"
-
-	para "I like that!"
-
-	para "If you can beat"
-	line "me, I'll tell you"
-
-	para "a password to the"
-	line "boss's room!"
+	para "きにいっ<TA!>"
+	line "おれ<NI>かったら"
+	cont "ボス<NO>とびら<NO>パスワード"
+	cont "おしえてやるぜ！"
 	done
 
 GruntM28BeatenText:
-	text "Hyuck-hyuck-hyuck!"
-	line "You're good!"
+	text "ひゃひゃひゃ！"
+	line "やるじゃねーか！"
 	done
 
 GruntM28AfterBattleText:
-	text "Hyuck-hyuck-hyuck!"
+	text "ひゃひゃひゃ！"
 
-	para "The password to"
-	line "the boss's room…"
-
-	para "Uh…, I think it is"
-	line "RATICATE TAIL."
+	para "ボス<NO>とびら<NO>パスワード"
+	line "おしえてやるよ"
+	cont "たしか　ラッタのシッポ　だぜ"
 	done
 
 ScientistRossSeenText:
-	text "I used to work for"
-	line "SILPH, but now I"
+	text "むかし<WA>シルフで"
+	line "いま<WA><ROCKET>で"
+	cont "こうして　じっけん<WO>している"
 
-	para "run research for"
-	line "TEAM ROCKET."
-
-	para "A meddlesome child"
-	line "like you needs to"
-	cont "be punished."
+	para "じゃま　する　こども<WA>おしおきだね"
 	done
 
 ScientistRossBeatenText:
-	text "A mere tactical"
-	line "error cost me…"
+	text "いけない<⋯>"
+	line "さくせん　ミス　だな"
 	done
 
 ScientistRossAfterBattleText:
-	text "A radio signal"
-	line "that drives #-"
-	cont "MON mad…"
+	text "#<WO>くるわせる　でんぱ<⋯>"
 
-	para "My experiment is a"
-	line "complete success."
-
-	para "My promotion is"
-	line "assured. This loss"
-
-	para "means absolutely"
-	line "nothing."
+	para "じっけん<WA>せいこう"
+	line "<WATASHI>も　しゅっせ　まちがいなし"
+	cont "まけたくらい　どうでも　いいか"
 	done
 
 ScientistMitchSeenText:
-	text "I don't care that"
-	line "#MON are hurt"
-	cont "by our experiment."
+	text "じっけんで　#<GA>くるしんでも"
+	line "<WATASHI>に<WA>かんけい　ない"
 	done
 
 ScientistMitchBeatenText:
-	text "Thinking is my"
-	line "strong suit, not"
-	cont "battling."
+	text "かんがえるの<WA>とくい　だが"
+	line "たたかうの<WA>にがて　だ"
 	done
 
 ScientistMitchAfterBattleText:
-	text "If we turn up the"
-	line "power of our radio"
+	text "おかしな　でんぱ<WO>パワーアップして"
+	line "ぜんこく<NI>ながせば<⋯>"
 
-	para "signal for broad-"
-	line "cast nationwide…"
-
-	para "The very thought"
-	line "excites me!"
+	para "そうぞう　しただけで　わくわくする"
 	done
 
 TeamRocketBaseB3FLockedDoorNeedsPasswordText:
-	text "The door's closed…"
+	text "とびら<GA>しま<TTE>いる<⋯>"
 
-	para "It needs two"
-	line "passwords to open."
+	para "あけるに<WA>"
+	line "パスワード<GA>２つ　ひつようだ"
 	done
 
 TeamRocketBaseB3FLockedDoorOpenSesameText:
-	text "The door's closed…"
+	text "とびら<GA>しま<TTE>いる<⋯>"
 
-	para "<PLAYER> entered"
-	line "the two passwords."
+	para "<PLAYER><WA>２つの"
+	line "パスワード<WO>にゅうりょくした"
 
-	para "The door opened!"
+	para "とびら<GA>ひらい<TA!>"
 	done
 
 TeamRocketBaseB3F_MapEvents:

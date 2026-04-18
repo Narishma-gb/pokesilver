@@ -20,21 +20,16 @@ OlivinePunishmentSpeechHouseBookshelf1:
 	jumpstd MagazineBookshelfScript
 
 OlivinePunishmentSpeechHouseDadText:
-	text "Along the way to"
-	line "CIANWOOD, there"
+	text "タンバへ　いく　とちゅうに"
+	line "４つ<NO>むじんとう<GA>あるんだ"
 
-	para "are four deserted"
-	line "islands."
-
-	para "Bad kids are taken"
-	line "to the islands as"
-	cont "punishment!"
+	para "わるい　こども<WA>おしおきに"
+	line "そ<NO>しまへ　つれてくのさ！"
 	done
 
 OlivinePunishmentSpeechHouseDaughterText:
-	text "Whenever I get in"
-	line "trouble, Daddy"
-	cont "always scares me."
+	text "あたし<GA>イタズラすると"
+	line "おとうさん　すぐ<NI>おどかすのよ⋯"
 	done
 
 OlivinePunishmentSpeechHouse_MapEvents:

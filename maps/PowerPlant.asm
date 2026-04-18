@@ -204,177 +204,125 @@ PowerPlantOfficer1ReturnToPostMovement:
 	step_end
 
 PowerPlantOfficer1AThiefBrokeInText:
-	text "A thief broke into"
-	line "the POWER PLANT…"
-
-	para "What is the world"
-	line "coming to?"
+	text "はつでんしょに"
+	line "ドロボー<GA>はいるなんて"
+	cont "ぜんだいみもん　だよ<⋯>"
 	done
 
 PowerPlantOfficer1CeruleanShadyCharacterText:
-	text "I just got word"
-	line "from CERULEAN."
+	text "ハナダ　シティから"
+	line "れんらく<GA>ありまし<TA!>"
 
-	para "It appears that a"
-	line "shady character"
-
-	para "has been loitering"
-	line "around."
+	para "あやしい　おとこ<GA>まちなかを"
+	line "ウロウロ　している　とのことです！"
 	done
 
 PowerPlantOfficer1CouldIAskForYourCooperationText:
-	text "Could I ask for"
-	line "your cooperation?"
+	text "よかったら　きみも"
+	line "きょうりょく　してくれないか？"
 	done
 
 PowerPlantOfficer1HaveToBeefUpSecurityText:
-	text "We'll have to beef"
-	line "up our security"
-	cont "presence."
+	text "これから<WA>けいびを"
+	line "きょうか　しないと！"
 	done
 
 PowerPlantGymGuide1SomeoneStoleAPartText:
-	text "Someone made off"
-	line "with a part that's"
+	text "はつでんき<NO>ぶひんが"
+	line "なにものか<NI>ぬすまれ<TA!>"
 
-	para "essential for the"
-	line "generator."
-
-	para "Without it, the"
-	line "new generator's"
-	cont "useless!"
+	para "ぶひん<GA>ないと　しんがたの"
+	line "はつでんき<WO>うごかせないんだよ！"
 	done
 
 PowerPlantGymGuide1GeneratorUpAndRunningText:
-	text "The generator's up"
-	line "and running. It's"
-
-	para "making electricity"
-	line "to spare."
+	text "まいにち　たくさん<NO>でんきを"
+	line "つくれるよう<NI>なったよ！"
 	done
 
 PowerPlantGymGuide2PowerPlantUpAndRunningText:
-	text "This POWER PLANT"
-	line "had been abandoned"
-	cont "in the past."
+	text "<KOKO_WA>かつて　むじんの"
+	line "はつでんしょ　だったんだ"
 
-	para "We got it back up"
-	line "and running to"
-
-	para "provide power to"
-	line "the MAGNET TRAIN."
+	para "でも　リニア　モーターカーの"
+	line "でんりょく<WO>つくるために"
+	cont "さいけん　されたのさ"
 	done
 
 PowerPlantGymGuide2GeneratorIsRunningAgainText:
-	text "The generator's"
-	line "running again!"
+	text "ぶじ<NI>はつでんきが"
+	line "うごくよう<NI>なったよ！"
 	done
 
 PowerPlantOfficer2ManagerHasBeenSadAndFuriousText:
-	text "The POWER PLANT's"
-	line "MANAGER is up"
-	cont "ahead."
-
-	para "But since someone"
-	line "wrecked the gener-"
-	cont "ator, he's been"
-	cont "both sad and"
-	cont "furious…"
+	text "このさき<WA>はつでんしつ"
+	line "しょちょう<GA>いるけど"
+	cont "きかい<WO>こわされて"
+	cont "おこったり　かなしんだり<⋯>"
 	done
 
 PowerPlantOfficer2ManagerHasBeenCheerfulText:
-	text "Since the gener-"
-	line "ator's been fixed,"
-
-	para "the MANAGER has"
-	line "been cheerful."
+	text "きかい<GA>なお<TTE>"
+	line "しょちょうも　ゴキゲンだ！"
 	done
 
 PowerPlantGymGuide4MagnetTrainConsumesElectricityText:
-	text "The MAGNET TRAIN"
-	line "consumes a lot of"
-	cont "electricity."
+	text "リニア<WA>たくさん　でんきを"
+	line "つかう　のりも<NO>だからね"
 
-	para "It can't move if"
-	line "the new generator"
-	cont "isn't operating."
+	para "しんがた　はつでんき<GA>うごかないと"
+	line "リニア<WA>とまった　まま　だよ"
 	done
 
 PowerPlantGymGuide4WeCanGetMagnetTrainRunningText:
-	text "All right! We can"
-	line "finally get the"
-
-	para "MAGNET TRAIN"
-	line "running again."
+	text "これで　やっと"
+	line "リニア<WO>うごかすこと<GA>できる！"
 	done
 
 PowerPlantManagerWhoWouldRuinMyGeneratorText:
-	text "MANAGER: I, I, I'm"
-	line "ready to blast"
-	cont "someone!"
+	text "しょちょう『ゆ　ゆ　ゆるせーん！"
 
-	para "Who would dare"
-	line "ruin my generator?"
+	para "<WATASHI><GA>ながい　じかん　かけた"
+	line "はつでんき<WO>こわすなんて！"
 
-	para "I spent so much"
-	line "time on it!"
-
-	para "If I catch him,"
-	line "he's going to get"
-
-	para "a taste of my ZAP"
-	line "CANNON!"
+	para "とっつかまえたら"
+	line "ひっさつ<NO>でんじほうで"
+	cont "おしおきだー！！"
 	done
 
 PowerPlantManagerIWontForgiveCulpritText:
-	text "MANAGER: I won't"
-	line "forgive him!"
-
-	para "The culprit can"
-	line "cry and apologize,"
-
-	para "but I'll still"
-	line "hammer him!"
-
-	para "Gahahahah!"
+	text "しょちょう『<WATASHI><WA>ゆるさんぞ！"
+	line "はんにん<GA>ないて　あやま<TTE>もな！"
+	cont "ぐふっ　ぐふっ　ぐふふっ<⋯>！"
 	done
 
 PowerPlantManagerThatsThePartText:
-	text "MANAGER: Ah! Yeah!"
+	text "しょちょう『お　お　お　おおっ！！"
 
-	para "That's the missing"
-	line "PART from my be-"
-	cont "loved generator!"
-	cont "You found it?"
+	para "それ<WA><WATASHI><NO>かわいい"
+	line "はつでんき<NO>ぶひんじゃ　ないか！"
+	cont "キミ<GA>みつけて　くれたのか！"
 	done
 
 PowerPlantManagerTakeThisTMText:
-	text "Wahah! Thanks!"
-
-	para "Here! Take this TM"
-	line "as a reward!"
+	text "キミ！！"
+	line "ありがとう！"
+	cont "かんしゃ<NO>しるしに"
+	cont "こ<NO><TM><WO>あげよう！"
 	done
 
 PowerPlantManagerTM07IsZapCannonText:
-	text "MANAGER: TM07 is"
-	line "my ZAP CANNON."
+	text "しょちょう『<TM>０７　は"
+	line "<WATASHI><NO>ひっさつ　でんじほう！"
+	cont "きょうりょくな　わざ　だよ！"
 
-	para "It's a powerful"
-	line "technique!"
-
-	para "It's not what any-"
-	line "one would consider"
-
-	para "accurate, but it"
-	line "packs a wallop!"
+	para "ちょっと　あたりにくい　けど<⋯>"
+	line "いりょく<WA>おおきい　のだ！"
 	done
 
 PowerPlantManagerMyBelovedGeneratorText:
-	text "MANAGER: My be-"
-	line "loved generator!"
-
-	para "Keep pumping the"
-	line "electricity out!"
+	text "しょちょう『<WATASHI><NO>はつでんき！"
+	line "どんどん　でんき<WO>つくるのだ！"
 	done
 
 PowerPlant_MapEvents:

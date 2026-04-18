@@ -39,44 +39,34 @@ GoodRodHouseBookshelf: ; unreferenced
 	jumpstd PictureBookshelfScript
 
 OfferGoodRodText:
-	text "OLIVINE is on the"
-	line "sea!"
+	text "アサギと　いえば　うみ！"
+	line "うみと　いえば　つり！"
 
-	para "And if it's on the"
-	line "sea, there are"
-	cont "bound to be fish!"
+	para "わし<WA>ここで　３０ねん"
+	line "つり<WO>しとるんだ"
 
-	para "I've fished here"
-	line "for 30 years."
-
-	para "Would you like to"
-	line "face the sea and"
-	cont "fish?"
+	para "きみも　うみ<NI>むか<TTE>"
+	line "つりで　ちょうせん　してみるかね？"
 	done
 
 GiveGoodRodText:
-	text "Ah, hahah!"
-	line "We have ourselves"
-	cont "a new angler!"
+	text "おっほっほう！"
+	line "つりびと　たんじょうだ！"
 	done
 
 GaveGoodRodText:
-	text "Fish aren't found"
-	line "in the sea alone."
-
-	para "They go wherever"
-	line "there is water."
+	text "うみ　だけじゃなく"
+	line "みず<NO>ある　ところなら"
+	cont "どこでも　つりざお　つかうといいぞ"
 	done
 
 DontWantGoodRodText:
-	text "Whaaat? You don't"
-	line "like to fish!?"
-	cont "Incomprehensible!"
+	text "なんじゃと！"
+	line "つり<GA>きらい！　しんじられんのお"
 	done
 
 HaveGoodRodText:
-	text "How are things?"
-	line "Land the big one?"
+	text "どう？　おおも<NO>つれたかね？"
 	done
 
 OlivineGoodRodHouse_MapEvents:

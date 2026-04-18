@@ -196,168 +196,138 @@ CeruleanGymGruntBacksAwayMovement:
 	step_end
 
 CeruleanGymGruntIntroText:
-	text "Oops! I so sorry!"
-	line "You not hurt,"
-	cont "okay?"
-
-	para "I very busy."
-	line "No time for talk-"
-	cont "ing with you. Not"
-	cont "good for me if"
-	cont "seen by somebody."
+	text "オー！　ソーリー！"
+	line "ユー　け<GA>ナッシング　ですかー？"
+	cont "<WATASHI>　ベリー　ビジーね！"
+	cont "ユーと　ゆっくり　トーキング"
+	cont "できませーん！"
+	cont "だれか<NI>みられたら"
+	cont "<WATASHI>　こまりまーす！"
 	done
 
 CeruleanGymGruntBigMistakeText:
-	text "Oh no! You seen"
-	line "me already! I make"
-	cont "big mistake!"
+	text "<⋯>オー　ノー！"
+	line "すで<NI>ユー<NI>みられまし<TA!>"
+	cont "ビッグ　マイ　ミステイク！"
 	done
 
 CeruleanGymGruntByeText:
-	text "Hey, you! Forget"
-	line "you see me, okay?"
+	text "ヘイ　ユー！"
+	line "このこと　フォーゲットするね！"
+	cont "ユー<WA>なにも　みない"
+	cont "きかない　しらないね！"
 
-	para "You see, hear,"
-	line "know nothing,"
-
-	para "okay?"
-	line "Bye, kid! Nothing!"
-
-	para "Bye-bye a go-go!"
+	para "バイ　キッド！"
+	line "ロング　グッドバイ！！"
 	done
 
 CeruleanGymNote1Text:
-	text "Sorry, I'll be out"
-	line "for a while."
-	cont "MISTY, GYM LEADER"
+	text "ちょっと　でかけてます"
+	line "<⋯>　ジム　リーダー　カスミ"
 	done
 
 CeruleanGymNote2Text:
-	text "Since MISTY's out,"
-	line "we'll be away too."
-	cont "GYM TRAINERS"
+	text "カスミさん<GA>いないので"
+	line "あそび<NI>い<TTE>ます"
+	cont "<⋯>　ジム　<TRAINER>　いちどう"
 	done
 
 MistyIntroText:
-	text "MISTY: I was ex-"
-	line "pecting you, you"
-	cont "pest!"
+	text "カスミ『きたわね！"
+	line "オジャマムシくん！"
 
-	para "You may have a"
-	line "lot of JOHTO GYM"
+	para "ジョウト<NO>ジム　バッジを"
+	line "たくさん　も<TTE>る　みたいだけど"
+	cont "なめて　もらっちゃ　こまるわ！"
 
-	para "BADGES, but you'd"
-	line "better not take me"
-	cont "too lightly."
-
-	para "My water-type"
-	line "#MON are tough!"
+	para "<WATASHI><NO>みずタイプ<NO>#は"
+	line "つよいわよっ！"
 	done
 
 MistyWinLossText:
-	text "MISTY: You really"
-	line "are good…"
+	text "カスミ『やるじゃない<⋯>"
 
-	para "I'll admit that"
-	line "you are skilled…"
+	para "あんた<NO>じつりょく"
+	line "すなお<NI>みとめるわ<⋯>"
 
-	para "Here you go. It's"
-	line "CASCADEBADGE."
+	para "はい　これ"
+	line "ブルーバッジよ！"
 	done
 
 ReceivedCascadeBadgeText:
-	text "<PLAYER> received"
-	line "CASCADEBADGE."
+	text "<PLAYER><WA>カスミから"
+	line "ブルーバッジ<WO>もらっ<TA!>"
 	done
 
 MistyFightDoneText:
-	text "MISTY: Are there"
-	line "many strong train-"
-	cont "ers in JOHTO? Like"
-	cont "you, I mean."
+	text "カスミ『つよい　<TRAINER>が"
+	line "ジョウトに<WA>たくさん　いるの？"
+	cont "あんた　みたいに"
 
-	para "I'm going to"
-	line "travel one day, so"
-
-	para "I can battle some"
-	line "skilled trainers."
+	para "あたしも　いつか　たび<NI>でて"
+	line "つよい　<TRAINER>と　たたかうわ！"
 	done
 
 SwimmerfDianaSeenText:
-	text "Sorry about being"
-	line "away. Let's get on"
-	cont "with it!"
+	text "ゴメンねー　るす　しちゃ<TTE>！"
+	line "さっそく　しょうぶ　しましょうか！"
 	done
 
 SwimmerfDianaBeatenText:
-	text "I give up! You're"
-	line "the winner!"
+	text "まいったわ！"
+	line "<WATASHI><NO>まけ！"
 	done
 
 SwimmerfDianaAfterBattleText:
-	text "I'll be swimming"
-	line "quietly."
+	text "おとなしく　およいでまーす"
 	done
 
 SwimmerfBrianaSeenText:
-	text "Don't let my ele-"
-	line "gant swimming un-"
-	cont "nerve you."
+	text "わたくし<NO>かれいな"
+	line "およぎ<WO>みても　びびらないでよ！"
 	done
 
 SwimmerfBrianaBeatenText:
-	text "Ooh, you calmly"
-	line "disposed of me…"
+	text "ぜんぜん　びび<TTE>ない<⋯>"
+	line "すごく　れいせい　だわ<⋯>！"
 	done
 
 SwimmerfBrianaAfterBattleText:
-	text "Don't be too smug"
-	line "about beating me."
-
-	para "MISTY will destroy"
-	line "you if you get"
-	cont "complacent."
+	text "わたくし<WO>たおした　から<TTE>"
+	line "あんしんしない　ことね！"
+	cont "カスミ<WA>ほんと　つよいわよ！"
 	done
 
 SwimmermParkerSeenText:
-	text "Glub…"
+	text "おわっぷ！"
 
-	para "I'm first! Come"
-	line "and get me!"
+	para "まず<WA>おれ<GA>あいてだ！"
+	line "かか<TTE>　こい！"
 	done
 
 SwimmermParkerBeatenText:
-	text "This can't be…"
+	text "こんな　はず<WA>ない"
 	done
 
 SwimmermParkerAfterBattleText:
-	text "MISTY has gotten"
-	line "much better in the"
-	cont "past few years."
-
-	para "Don't let your"
-	line "guard down, or"
-	cont "you'll be crushed!"
+	text "カスミ<WA>ここ　すうねんで"
+	line "どんどん　つよく　な<TTE>るんだ！"
+	cont "ゆだん　しない　ことだな！"
+	cont "いたい　め　<NI>あうぜ！"
 	done
 
 CeruleanGymGuideText:
-	text "Yo! CHAMP in"
-	line "making!"
+	text "おーす！"
+	line "みらい<NO>チャンピオン！"
 
-	para "Since MISTY was"
-	line "away, I went out"
-
-	para "for some fun too."
-	line "He-he-he."
+	para "カスミたち<GA>いないもんだから"
+	line "オレっちも　あそび<NI>いっちゃっ<TA!>"
+	cont "わははははっ！"
 	done
 
 CeruleanGymGuideWinText:
-	text "Hoo, you showed me"
-	line "how tough you are."
-
-	para "As always, that"
-	line "was one heck of a"
-	cont "great battle!"
+	text "さすが<NI>つよいな！"
+	line "いい　たたかい　だったぜ！"
 	done
 
 CeruleanGym_MapEvents:

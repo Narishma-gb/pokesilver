@@ -210,145 +210,110 @@ BillsGrandpa:
 	end
 
 BillsGrandpaIntroText:
-	text "Hm? You know BILL?"
-	line "He's my grandson."
+	text "おや？　あんた"
+	line "マサキ<NO>こと<WO>しっとるのかね？"
+	cont "マサキ<WA>わし<NO>まごじゃ！"
 
-	para "He's in JOHTO. He"
-	line "does something"
-
-	para "with PCs, so I'm"
-	line "house-sitting."
+	para "ジョウトで　<PC><⋯>　なんとかの"
+	line "しごと<WO>しているのでな"
+	cont "わし<GA>るすばん　しているのじゃ！"
 	done
 
 BillsGrandpaAskToSeeMonText:
-	text "If you have that"
-	line "#MON, may I see"
-	cont "it, please?"
+	text "そ<NO>#<WO>も<TTE>いたら"
+	line "ぜひ　みせて　ほしいのじゃが<⋯>"
 	done
 
 BillsGrandpaExcitedToSeeText:
-	text "You will show me?"
-	line "How good of you!"
+	text "おお　みせて　くれるか！"
+	line "ありがたいのう！"
 	done
 
 BillsGrandpaYouDontHaveItTextText:
-	text "You don't have it?"
-	line "That's too bad…"
+	text "も<TTE>いないのかい？"
+	line "ざんねん　じゃのう<⋯>"
 	done
 
 BillsGrandpaShownPokemonText:
-	text "Ah, so that is"
-	line "@"
+	text "おお　それ<GA>@"
 	text_ram wStringBuffer3
-	text "?"
+	text "か！"
+	line "かわいい　#　じゃのう！"
 
-	para "Isn't it cute!"
-	line "That's so kind of"
-	cont "you."
+	para "いいもの<WO>みせて　もらった"
 	done
 
 BillsGrandpaTokenOfAppreciationText:
-	text "Thanks!"
+	text "ありがとう！"
 
-	para "This is a token of"
-	line "my appreciation."
+	para "おれい<NI>これ<WO>あげよう！"
 	done
 
 BillsGrandpaComeAgainText:
-	text "Come visit again"
-	line "sometime."
+	text "また　あそび<NI>おいで"
 	done
 
 BillsGrandpaShownAllThePokemonText:
-	text "Thanks for showing"
-	line "me so many cute"
-	cont "#MON."
+	text "かわいい　#を"
+	line "たくさん　みせて　もらったね"
+	cont "ありがとう！"
 
-	para "I really enjoyed"
-	line "myself. I'm glad"
-
-	para "I've lived such a"
-	line "long life."
+	para "すごく　たのしかったよ！"
+	line "いやあ　ながいき<WA>するもんじゃ！"
 	done
 
 BillsGrandpaWrongPokemonText:
-	text "Hm?"
+	text "うーむ<⋯>"
 
-	para "That's not the"
-	line "#MON that I was"
-	cont "told about."
+	para "はなし<NI>きいた　#は"
+	line "それで<WA>ないみたい　じゃのう<⋯>"
 	done
 
 BillsGrandpaLickitungText:
-	text "My grandson BILL"
-	line "told me about a"
-
-	para "#MON that has a"
-	line "long tongue."
+	text "まご<NO>マサキ<GA>い<TTE>いたが"
+	line "ながーい　したで　ぺろり！　と"
+	cont "なめる　#<GA>いるそうじゃの"
 	done
 
 BillsGrandpaOddishText:
-	text "Ah, my grandson"
-	line "mentioned a round,"
-
-	para "green #MON that"
-	line "has leaves growing"
-	cont "on its head."
+	text "そうそう　まご<NI>きいたんじゃが"
+	line "まるくて　みどりいろで"
+	cont "あたま<NI>はっぱ<GA>はえている"
+	cont "#<GA>いるそうじゃの"
 	done
 
 BillsGrandpaStaryuText:
-	text "Do you know of a"
-	line "sea #MON that"
+	text "からだ<NI>あかい　たまのある"
+	line "うみ<NO>#<GA>いるじゃろ？"
+	cont "ほし<NO>かたちをした　やつじゃ"
 
-	para "has a red sphere"
-	line "in its body?"
-
-	para "You know, the one"
-	line "that's shaped like"
-	cont "a star?"
-
-	para "I heard that it"
-	line "appears at night."
-
-	para "I would surely"
-	line "like to see it."
+	para "よるになると　あらわれる　そうじゃが"
+	line "わしゃあ　みて　みたいのー！"
 	done
 
 BillsGrandpaGrowlitheText:
-	text "BILL told me about"
-	line "a #MON that is"
-
-	para "very loyal to its"
-	line "trainer."
-
-	para "It's supposed to"
-	line "ROAR well."
+	text "おや<NO><TRAINER><NI>ちゅうじつで"
+	line "ほえること<GA>とくいな　#が"
+	cont "いると　マサキ<NI>きいたぞ"
 	done
 
 BillsGrandpaVulpixText:
-	text "I heard about a"
-	line "cute #MON that"
-	cont "has six tails."
+	text "６ぽん<NO>しっぽ<WO>もった"
+	line "キュートな　#<GA>いるそうじゃ"
 
-	para "I would love to"
-	line "hug a cute #MON"
-	cont "like that."
+	para "わしも　いちど　その#を"
+	line "だきしめてみたい　ものじゃー"
 	done
 
 BillsGrandpaPichuText:
-	text "Do you know that"
-	line "hugely popular"
-	cont "#MON?"
+	text "だいにんき<NO>#が"
+	line "いるじゃろう！"
 
-	para "The #MON that"
-	line "has a yellow body"
-	cont "and red cheeks."
+	para "ほれ！　きいろい　からだで"
+	line "あかい　ほっぺた<NO>#じゃ！"
 
-	para "I would love to"
-	line "see what it looks"
-
-	para "like before it"
-	line "evolves."
+	para "それ<GA>しんかする　まえのすがた"
+	line "いちど　みてみたい　ものじゃー！"
 	done
 
 BillsHouse_MapEvents:

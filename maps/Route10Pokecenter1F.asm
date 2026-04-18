@@ -35,47 +35,30 @@ Route10Pokecenter1FCooltrainerFScript:
 	jumptextfaceplayer Route10Pokecenter1FCooltrainerFText
 
 Route10Pokecenter1FGentlemanText:
-	text "A #MON CENTER"
-	line "near a cave?"
-
-	para "That's mighty"
-	line "convenient."
+	text "どうくつ<NO>ちかく<NI>ある"
+	line "#　センター<WA>うれしいね"
 	done
 
 Route10Pokecenter1FGymGuideText:
-	text "The POWER PLANT's"
-	line "MANAGER is looking"
+	text "はつでんしょ<NO>しょちょうが"
+	line "つよい　<TRAINER><WO>さがしてるよ"
 
-	para "for a strong #-"
-	line "MON trainer."
-
-	para "He needs help"
-	line "getting back"
-
-	para "something that"
-	line "was stolen."
+	para "ドロボー<NI>ぬすまれた　ものを"
+	line "とりかえして　ほしい　らしい"
 	done
 
 Route10Pokecenter1FGymGuideText_ReturnedMachinePart:
-	text "I hear TEAM ROCKET"
-	line "got back together"
+	text "そういえば　<ROCKET>が"
+	line "ジョウトで　ふっかつした　らしいね"
+	cont "もう　つぶれたみたい　だけど"
 
-	para "in JOHTO but fell"
-	line "apart right away."
-
-	para "I didn't know any-"
-	line "thing about that."
+	para "ぜんぜん　しらなかったよ！"
 	done
 
 Route10Pokecenter1FCooltrainerFText:
-	text "When you go out-"
-	line "side, you can see"
-
-	para "the roof of a big"
-	line "building."
-
-	para "That's the POWER"
-	line "PLANT."
+	text "たてもの<NO>やね<GA>あるのが"
+	line "そと<NI>でると　みえるでしょ？"
+	cont "あれ<GA>はつでんしょ　よ！"
 	done
 
 Route10Pokecenter1F_MapEvents:

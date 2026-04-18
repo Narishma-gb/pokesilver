@@ -629,99 +629,75 @@ SecurityCameraMovement9:
 	step_end
 
 CameraGrunt1SeenText:
-	text "Hey!"
-	line "Intruder alert!"
+	text "おっと！"
+	line "しんにゅうしゃ　はっけん！"
 	done
 
 CameraGrunt1BeatenText:
-	text "Dang… I failed…"
+	text "くそう"
+	line "かえりうち　か<⋯>"
 	done
 
 CameraGrunt2SeenText:
-	text "It's my turn!"
-	line "There's no escape!"
+	text "つぎ<WA>おれ<NO>ばん！"
+	line "にがし<WA>しないぜ！"
 	done
 
 CameraGrunt2BeatenText:
-	text "Surveillance cams"
-	line "are in the #MON"
-	cont "statues."
+	text "#<NO>ぞう<GA>みは<TTE>いる"
 
-	para "We'll keep appear-"
-	line "ing until you trip"
-	cont "a secret switch."
+	para "ひみつ<NO>スイッチ<WO>きらないかぎり"
+	line "おまえ<NO>まえ<NI>でてきてやる！"
 	done
 
 ScientistJedSeenText:
-	text "This was once a"
-	line "ninja hideout."
+	text "<KOKO_WA>もともと　にんじゃやしき"
 
-	para "There are traps to"
-	line "confound intruders"
-	cont "like you."
+	para "いろんな　しかけで"
+	line "しんにゅうしゃ<NO>じゃま<WO>する！"
 	done
 
 ScientistJedBeatenText:
-	text "I get it…"
+	text "なるほどね<⋯>"
 	done
 
 ScientistJedAfterBattleText:
-	text "All right. I'll"
-	line "divulge a secret"
-	cont "about our hideout."
+	text "<⋯>　わかった"
+	line "アジト<NO>ひみつ　おしえてやろう"
 
-	para "That thing on the"
-	line "floor up ahead is"
-	cont "a warp panel."
-
-	para "If you step on it,"
-	line "you'll be warped"
-
-	para "back to the en-"
-	line "trance."
+	para "このさき<NI>あるの<WA>ワープパネル！"
+	line "うっかり　の<TTE>しまうと"
+	cont "いりぐちまで　もどされるぞ！"
 	done
 
 GruntM16SeenText:
-	text "Heheh. Feeling"
-	line "lucky, punk?"
-
-	para "Go ahead, take"
-	line "another step."
-
-	para "We've got traps"
-	line "set in the floor!"
+	text "おっと　それいじょう　すすめるのか？"
+	line "ばくだん<GA>しかけて　あるから"
+	cont "ふむと　ドカンと　いくぜ！"
 	done
 
 GruntM16BeatenText:
-	text "Kaboom!"
+	text "ドカーン！！"
 	done
 
 GruntM16AfterBattleText:
-	text "I don't even know"
-	line "where the traps"
-	cont "are planted."
-
-	para "You'll just have"
-	line "to collect your"
-	cont "courage and walk."
+	text "おれだ<TTE>　どこが"
+	line "ばくはつ　するのか　おぼえてねえ"
+	cont "どきょう　だして　すすむしか　ねえよ"
 	done
 
 TeamRocketBaseB1FSecurityCameraText:
-	text "It's a PERSIAN"
-	line "statue…"
-
-	para "Its eyes are oddly"
-	line "shiny."
+	text "ペルシアン<NO>#ぞう<⋯>"
+	line "なんだか　め<GA>ひか<TTE>いるようだ"
 	done
 
 TeamRocketBaseB1FSecretSwitchText:
-	text "A secret switch!"
-	line "Better press it."
+	text "ひみつ<NO>スイッチ<WO>はっけん！"
+	line "おしてみよう！　<⋯>ポチッとな！"
 	done
 
 TeamRocketBaseB1FSwitchOffText:
-	text "The switch is"
-	line "turned off."
+	text "スイッチ<WA>きられている<⋯>"
 	done
 
 TeamRocketBaseB1F_MapEvents:

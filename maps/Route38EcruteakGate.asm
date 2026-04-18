@@ -10,16 +10,13 @@ Route38EcruteakGateOfficerScript:
 	jumptextfaceplayer Route38EcruteakGateOfficerText
 
 Route38EcruteakGateOfficerText:
-	text "Where did you say"
-	line "you're from?"
+	text "きみ<WA>どこから　きたんだい？"
 
-	para "NEW BARK TOWN?"
+	para "えっ　ワカバタウン！？"
 
-	para "PROF.ELM lives"
-	line "over there, right?"
-
-	para "You've come a long"
-	line "way to get here."
+	para "ああ　ウツギはかせ<GA>"
+	line "いらっしゃる　まち　でしょ"
+	cont "ずいぶんと　とおくから　きたんだね"
 	done
 
 Route38EcruteakGate_MapEvents:

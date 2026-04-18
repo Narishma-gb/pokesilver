@@ -22,24 +22,17 @@ OlivinePokecenter1FTeacherScript:
 	jumptextfaceplayer OlivinePokecenter1FTeacherText
 
 OlivinePokecenter1FFisherText:
-	text "Sailors are really"
-	line "generous."
+	text "うみのおとこ<WA>きまえ<GA>いいな"
 
-	para "One taught my"
-	line "#MON STRENGTH."
-
-	para "Now it can move"
-	line "big boulders."
+	para "おおきな　いわ<WO>おしまくる"
+	line "かいりき<NO>わざ"
+	cont "ただで　おしえてくれたよ"
 	done
 
 OlivinePokecenter1FTeacherText:
-	text "There's a person"
-	line "in CIANWOOD CITY"
-	cont "across the sea."
-
-	para "I heard him brag-"
-	line "ging about his"
-	cont "rare #MON."
+	text "うみ<NO>むこう　タンバシティには"
+	line "めずらしい　#　も<TTE>る<TTE>"
+	cont "じまん　してる　ひと<GA>いるよ"
 	done
 
 OlivinePokecenter1F_MapEvents:

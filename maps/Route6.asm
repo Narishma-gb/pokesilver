@@ -13,18 +13,14 @@ Route6UndergroundPathSign:
 	jumptext Route6UndergroundPathSignText
 
 Route6PokefanMText:
-	text "The road is closed"
-	line "until the problem"
-
-	para "at the POWER PLANT"
-	line "is solved."
+	text "はつでんしょ<NO>じこが"
+	line "かいけつ　するまで"
+	cont "つうこうきんし　なんだ<TTE>！"
 	done
 
 Route6UndergroundPathSignText:
-	text "UNDERGROUND PATH"
-
-	para "CERULEAN CITY -"
-	line "VERMILION CITY"
+	text "ここから　ちかつうろ"
+	line "ハナダシティ　<⋯>　クチバシティ"
 	done
 
 Route6_MapEvents:

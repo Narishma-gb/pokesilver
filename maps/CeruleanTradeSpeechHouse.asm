@@ -32,23 +32,24 @@ CeruleanTradeSpeechHouseZubatScript:
 	end
 
 CeruleanTradeSpeechHouseGrannyText:
-	text "My husband lives"
-	line "happily with #-"
-	cont "MON he got through"
-	cont "trades."
+	text "うち<NO>じいさま"
+
+	para "いろんな　ひとと　こうかんした"
+	line "#たちと"
+	cont "しあわせ<NI>くらしとる"
 	done
 
 CeruleanTradeSpeechHouseGrampsText:
-	text "Ah… I'm so happy…"
+	text "あー<⋯>"
+	line "わしゃー　しあわせじゃー"
 	done
 
 CeruleanTradeSpeechHouseRhydonText:
-	text "KANGASKHAN: Garu"
-	line "garuu."
+	text "ガルーラ『がる　がる！"
 	done
 
 CeruleanTradeSpeechHouseZubatText:
-	text "ZUBAT: Zuba zubaa."
+	text "ズバット『すば　すばー！"
 	done
 
 CeruleanTradeSpeechHouse_MapEvents:

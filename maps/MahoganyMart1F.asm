@@ -155,67 +155,52 @@ MahoganyMart1FLanceGoDownStairsMovement:
 	step_end
 
 MahoganyMart1FRageCandyBarText: ; unreferenced
-	text "Hello, youngster!"
+	text "いらっしゃい　ぼっちゃん！"
+	line "ささ！　どうです？"
 
-	para "How would you like"
-	line "some RAGECANDYBAR?"
-
-	para "It's the thing to"
-	line "eat in MAHOGANY!"
+	para "「いかりまんじゅう」！"
+	line "チョウジ<NO>めいぶつ　ですよー！"
 	done
 
 MahoganyMart1FPharmacistText_LanceEntered:
-	text "Arrgh… You found"
-	line "the secret stair-"
-	cont "way…"
+	text "ちか　へ<NO>かいだん"
+	line "ばれちまった<⋯>"
 	done
 
 MahoganyMart1FBlackBeltText:
-	text "Heheh! The experi-"
-	line "ment worked like a"
-	cont "charm."
+	text "へっへっへ！"
+	line "じっけん<WA>だいせいこう！"
 
-	para "MAGIKARP are just"
-	line "worthless, but"
-
-	para "GYARADOS are big"
-	line "moneymakers."
+	para "コイキングじゃ　うれないが"
+	line "ギャラドスなら　うりもの<NI>なるぜ"
 	done
 
 MahoganyMart1FBlackBeltText_LanceEntered:
-	text "Urrgh…"
+	text "うう<⋯>"
 
-	para "That guy's dragon"
-	line "#MON are tough…"
+	para "あいつ<NO>ドラゴン　#<⋯>"
+	line "つよすぎる<⋯>"
 	done
 
 MahoganyMart1FLanceDragoniteHyperBeamText:
-	text "LANCE: DRAGONITE,"
-	line "HYPER BEAM."
+	text "ワタル『カイリュー　はかいこうせん"
 	done
 
 MahoganyMart1FLanceRadioText:
-	text "What took you,"
-	line "<PLAYER>?"
+	text "おそかったね　<PLAYER>くん！"
 
-	para "Just as I thought,"
-	line "that strange radio"
-
-	para "signal is coming"
-	line "from here."
+	para "やはり　ここ　から"
+	line "おかしな　でんぱ<GA>ながされてる"
 	done
 
 MahoganyMart1FLanceStairsText:
-	text "The stairs are"
-	line "right here."
+	text "かいだん<WA>ここだ！"
 	done
 
 MahoganyMart1FLanceSplitUpText:
-	text "LANCE: <PLAYER>, we"
-	line "should split up to"
-
-	para "check this place."
-	line "I'll go first."
+	text "ワタル『<PLAYER>くん！"
+	line "てわけして　なか<WO>さぐろう！"
+	cont "おれから　さき<NI>いくよ！"
 	done
 
 MahoganyMart1F_MapEvents:

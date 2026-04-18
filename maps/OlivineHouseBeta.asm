@@ -25,16 +25,14 @@ OlivineHouseBetaBookshelf2:
 	jumpstd MagazineBookshelfScript
 
 OlivineHouseBetaTeacherText:
-	text "When my #MON"
-	line "got sick, the"
-
-	para "PHARMACIST in"
-	line "ECRUTEAK made some"
-	cont "medicine for me."
+	text "あたし<NO>#が"
+	line "びょうき<NI>なったときは"
+	cont "エンジュ<NO>クスリやさんに"
+	cont "クスリ<WO>つく<TTE>　もらったの"
 	done
 
 OlivineHouseBetaRhydonText:
-	text "RHYDON: Gugooh!"
+	text "サイドン『ぐごーおお！"
 	done
 
 OlivineHouseBeta_MapEvents:

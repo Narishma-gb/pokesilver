@@ -94,102 +94,78 @@ FarmhouseBookshelf:
 	jumpstd PictureBookshelfScript
 
 FarmerMText_SickCow:
-	text "My MILTANK ain't"
-	line "givin' me milk"
-	cont "nomore."
+	text "オラ<NO>ミルタンク"
+	line "ミルク<WO>ださなくな<TTE>んだー"
 
-	para "This here FARM's"
-	line "got famous milk."
+	para "オラんち<NO>ミルク<WA>ゆうめいだ"
+	line "みんな　のみてえ　い<TTE>るのにのー"
 
-	para "Most everyone"
-	line "wants a drink."
-
-	para "It'll give me lots"
-	line "o' milk if'n I"
-
-	para "feed it lots o'"
-	line "BERRIES, I reckon."
+	para "きのみ<WO>いっぱい　たべさせりゃ"
+	line "げんき<NI>な<TTE>"
+	cont "おいしい　ミルク<WO>たくさん"
+	cont "だしてくれるんだけどもな"
 	done
 
 FarmerMText_BuyMilk:
-	text "How'd you like my"
-	line "MOOMOO MILK?"
+	text "ぼくじょう　じまんの"
+	line "モーモーミルク<WA>いらんかー？"
 
-	para "It's my pride and"
-	line "joy, son."
+	para "#<NI>のませりゃ"
+	line "たいりょく　かいふく　<TTE>もんだ！"
 
-	para "Give it to #MON"
-	line "to restore HP!"
-
-	para "I'll give it to ya"
-	line "fer just ¥{d:ROUTE39FARMHOUSE_MILK_PRICE}."
+	para "いまなら　{d:ROUTE39FARMHOUSE_MILK_PRICE}円だー"
 	done
 
 FarmerMText_GotMilk:
-	text "Here ya go!"
-	line "Drink up'n enjoy!"
+	text "たっぷり　のんでくれー！"
 	done
 
 FarmerMText_NoMoney:
-	text "Sorry, son."
-	line "No cash, no sale!"
+	text "あやや　おかね<GA>たりないねー！"
 	done
 
 FarmerMText_NoRoom:
-	text "I reckon yer"
-	line "PACK's full, son."
+	text "あやや　にもつ<GA>いっぱいだなー！"
 	done
 
 FarmerMText_NoSale:
-	text "You don't want it?"
-	line "Come again, hear?"
+	text "いらんかー？"
+	line "じゃ　また　きてくれなー"
 	done
 
 FarmerMText_Milking:
-	text "I best go do my"
-	line "milkin'."
+	text "んじゃ　ちちしぼりでも　はじめっかー"
 	done
 
 FarmerFText_InTrouble:
-	text "Our milk even goes"
-	line "out to KANTO."
+	text "うち<NO>ミルクは"
+	line "カントーにも　しゅっか　してるんだ"
 
-	para "So if our own"
-	line "MILTANK won't give"
-
-	para "us any milk, we're"
-	line "in trouble."
+	para "でも　ミルタンクが"
+	line "おいしい　ミルク　だしてくれんと"
+	cont "オラたちも　こまるんだー"
 	done
 
 FarmerFText_HealedMiltank:
-	text "You fixed our"
-	line "MILTANK, hon. Now"
+	text "ミルタンクが"
+	line "おいしい　ミルク　だしはじめたのは"
+	cont "あんた<NO>おかげだー"
 
-	para "it gives MOOMOO"
-	line "MILK again."
-
-	para "Here's somethin'"
-	line "fer your trouble."
+	para "これ　あんた<NI>やるよ"
+	line "うけと<TTE>くれー"
 	done
 
 Text_ReceivedTM13: ; unreferenced
-	text "<PLAYER> received"
-	line "TM13."
+	text "<PLAYER>は"
+	line "<TM>１３<WO>もらっ<TA!>"
 	done
 
 FarmerFText_SnoreSpeech:
-	text "That there's"
-	line "SNORE."
+	text "それ<WA>いびき　<TTE>　わざ　だぁ"
 
-	para "It's a rare move"
-	line "that only works"
-
-	para "while the #MON"
-	line "is asleep."
-
-	para "You best think how"
-	line "you ought to use"
-	cont "it, hon."
+	para "ねむ<TTE>いる　ときしか　つかえない"
+	line "めずらしい　わざ　だからなぁ"
+	cont "よく　かんがえて　つかえよぉ"
 	done
 
 Route39Farmhouse_MapEvents:

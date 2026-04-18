@@ -93,106 +93,88 @@ OlivineGymStatue:
 	jumpstd GymStatue2Script
 
 Jasmine_SteelTypeIntro:
-	text "…Thank you for"
-	line "your help at the"
-	cont "LIGHTHOUSE…"
+	text "<⋯>　とうだい　では"
+	line "ありがとう　ございました"
 
-	para "But this is dif-"
-	line "ferent. Please"
+	para "<⋯>　でも　しょうぶ<WA>べつですね"
+	line "あらためて　じこしょうかい　します"
 
-	para "allow me to intro-"
-	line "duce myself."
+	para "<WATASHI><WA>ジムリーダー<NO>ミカン"
+	line "つかう　#は"
+	cont "はがねタイプ　です"
 
-	para "I am JASMINE, a"
-	line "GYM LEADER. I use"
-	cont "the steel-type."
+	para "<⋯>　はがねタイプ<TTE>"
+	line "ごぞんじ　ですか？"
 
-	para "…Do you know about"
-	line "the steel-type?"
+	para "さいきん　みつかったばかりの"
+	line "#<NO>タイプ　なんですの"
 
-	para "It's a type that"
-	line "was only recently"
-	cont "discovered."
-
-	para "…Um… May I begin?"
+	para "<⋯>　あ　あのう"
+	line "で<WA>はじめますね"
 	done
 
 Jasmine_BetterTrainer:
-	text "…You are a better"
-	line "trainer than me,"
+	text "<⋯>　#　<TRAINER>として"
+	line "あなたのほう<GA>うわて　みたい"
+	cont "つよさも　やさしさも　ね"
 
-	para "in both skill and"
-	line "kindness."
-
-	para "In accordance with"
-	line "LEAGUE rules, I"
-
-	para "confer upon you"
-	line "this BADGE."
+	para "<⋯>　で<WA>リーグ<NO>きまりどおり"
+	line "バッジ<WO><WATASHI>ます"
 	done
 
 Text_ReceivedMineralBadge:
-	text "<PLAYER> received"
-	line "MINERALBADGE."
+	text "<PLAYER><WA>ミカンから"
+	line "スチールバッジ<WO>もらっ<TA!>"
 	done
 
 Jasmine_BadgeSpeech:
-	text "MINERALBADGE"
-	line "raises #MON's"
-	cont "DEFENSE."
+	text "<⋯>　スチールバッジには"
+	line "#<NO>ぼうぎょ　りょくを"
+	cont "あげる　こうか<GA>あるの"
 
-	para "…Um… Please take"
-	line "this too…"
+	para "<⋯>　あのう　あと　これも　どうぞ"
 	done
 
 Text_ReceivedTM09: ; unreferenced
-	text "<PLAYER> received"
-	line "TM09."
+	text "<PLAYER><WA>ミカンから"
+	line "<TM>０９<WO>もらっ<TA!>"
 	done
 
 Jasmine_IronTailSpeech:
-	text "…You could use"
-	line "that TM to teach"
-	cont "IRON TAIL."
+	text "<⋯>　そ<NO><TM><WO>つかうと"
+	line "アイアンテール<WO>おしえられます"
 	done
 
 Jasmine_GoodLuck:
-	text "Um… I don't know"
-	line "how to say this,"
-	cont "but good luck…"
+	text "あ　あの<⋯>"
+	line "あんまり　うまく　いえないけど"
+
+	para "<⋯>　がんば<TTE>　くださいね"
 	done
 
 OlivineGymGuideText:
-	text "JASMINE uses the"
-	line "newly discovered"
-	cont "steel-type."
+	text "ミカン<GA>つかう　#は"
+	line "はっけん　されたばかりの"
+	cont "はがね<TTE>　タイプ<WO>も<TTE>る"
 
-	para "I don't know very"
-	line "much about it."
+	para "どんな　とくちょうか　"
+	line "おれにも　よく　わか<TTE>ないんだ"
 	done
 
 OlivineGymGuideWinText:
-	text "That was awesome."
-
-	para "The steel-type,"
-	line "huh?"
-
-	para "That was a close"
-	line "encounter of an"
-	cont "unknown kind!"
+	text "いやあ　すごかったな"
+	line "はがねタイプ<⋯>"
+	cont "まさ<NI>みちとのそうぐう　だったな！"
 	done
 
 OlivineGymGuidePreText:
-	text "JASMINE, the GYM"
-	line "LEADER, is at the"
-	cont "LIGHTHOUSE."
+	text "ジムリーダー<NO>ミカン"
+	line "とうだい<NO>#の"
+	cont "ぐあい　わるいから<TTE>"
+	cont "ずっと　かんびょう　しているぜ"
 
-	para "She's been tending"
-	line "to a sick #MON."
-
-	para "A strong trainer"
-	line "has to be compas-"
-	cont "sionate."
+	para "つよい　<TRAINER>というのは"
+	line "やさしさも　も<TTE>いるんだな"
 	done
 
 OlivineGym_MapEvents:

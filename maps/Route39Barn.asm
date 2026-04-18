@@ -126,64 +126,59 @@ MoomooScript:
 	end
 
 Route39BarnTwinMoomooIsSickText:
-	text "MOOMOO is sick…"
-
-	para "She needs lots of"
-	line "BERRIES."
+	text "モーモー　げんき<GA>ないの<⋯>"
+	line "たくさん　きのみ<WO>あげないと<⋯>"
 	done
 
 Route39BarnTwinWereFeedingMoomooText:
-	text "We're feeding"
-	line "MOOMOO!"
+	text "モーモー<NI>えさ<WO>あげてるの！"
 	done
 
 MoomooWeakMooText:
-	text "MILTANK: …Moo…"
+	text "ミルタンク『<⋯>　ンモ"
 	done
 
 Route39BarnItsCryIsWeakText:
-	text "Its cry is weak…"
+	text "なきごえ<NI>げんき<GA>ない<⋯>"
 	done
 
 MoomooHappyMooText:
-	text "MILTANK: MOO!"
+	text "ミルタンク『ン　モー！"
 	done
 
 Route39BarnAskGiveBerryText:
-	text "Give a BERRY to"
-	line "MILTANK?"
+	text "ミルタンク<NI>きのみ<WO>あげますか？"
 	done
 
 Route39BarnGaveBerryText:
-	text "<PLAYER> gave a"
-	line "BERRY to MILTANK."
+	text "<PLAYER>は"
+	line "きのみ<WO>あげ<TA!>"
 	done
 
 Route39BarnLittleHealthierText:
-	text "MILTANK became a"
-	line "little healthier!"
+	text "ミルタンクは"
+	line "ちょっぴり　げんき<NI>なっ<TA!>"
 	done
 
 Route39BarnQuiteHealthyText:
-	text "MILTANK became"
-	line "quite healthy!"
+	text "ミルタンクは"
+	line "かなり　げんき<NI>なっ<TA!>"
 	done
 
 Route39BarnTotallyHealthyText:
-	text "MILTANK became"
-	line "totally healthy!"
+	text "ミルタンクは"
+	line "と<TTE>も　げんき<NI>なっ<TA!>"
 	done
 
 Route39BarnNoBerriesText:
-	text "<PLAYER> has no"
-	line "BERRIES…"
+	text "<PLAYER>は"
+	line "きのみ<WO>も<TTE>いない"
 	done
 
 Route39BarnRefusedBerryText:
-	text "<PLAYER> wouldn't"
-	line "give a BERRY."
-
-	para "MILTANK looks sad."
+	text "<PLAYER><WA>きのみ<WO>あげなかった"
+	line "ミルタンクは"
+	cont "かなしい　めをしてる<⋯>"
 	done
 
 Route39Barn_MapEvents:

@@ -26,49 +26,35 @@ OlivineCafeFishingGuruScript:
 	jumptextfaceplayer OlivineCafeFishingGuruText
 
 OlivineCafeStrengthSailorText:
-	text "Hah! Your #MON"
-	line "sure look like"
-	cont "lightweights!"
+	text "なんだあ？　ずいぶんと"
+	line "ひよわそうな　#だな"
 
-	para "They don't have"
-	line "the power to move"
-	cont "boulders aside."
+	para "そんなんじゃあ"
+	line "おっきな　いわも　おせないだろう"
 
-	para "Here, use this"
-	line "and teach them"
-	cont "STRENGTH!"
+	para "こいつ<WO>つか<TTE>"
+	line "かいりき<NO>わざ　おしえてやれ！"
 
-	para "You'll need"
-	line "GOLDENROD's GYM"
-
-	para "BADGE to use that"
-	line "outside battles."
+	para "ただし　たたか<TTE>ないときに"
+	line "つかうなら　コガネ<NO>ジムバッジが"
+	cont "ひつよう　だからな！"
 	done
 
 OlivineCafeStrengthSailorText_GotStrength:
-	text "On the sea, the"
-	line "only thing you can"
-
-	para "count on is your"
-	line "own good self!"
-
-	para "I'm so proud of my"
-	line "buff bod!"
+	text "うみ<NO>うえで　たよれるのは"
+	line "おのれ<NO>にくたい　のみ！"
+	cont "ちからづよさ<GA>じまん　なんだ！"
 	done
 
 OlivineCafeFishingGuruText:
-	text "Crossing the sea?"
-	line "Then listen up!"
+	text "うみ<WO>わたる　つもりか"
+	line "なら　はなし<WO>きけ！"
 
-	para "There are whirl-"
-	line "pools on the way"
-	cont "to CIANWOOD."
+	para "いいか　ここから　タンバまで"
+	line "ところどころ　うず<WO>まいている"
 
-	para "Your #MON must"
-	line "know a special"
-
-	para "move to get over"
-	line "the whirlpools."
+	para "とくべつな　わざ<WO>おしえないと"
+	line "うず<NO>うえ<WA>すすめんぞ！"
 	done
 
 OlivineCafe_MapEvents:

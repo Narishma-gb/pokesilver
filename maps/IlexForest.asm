@@ -535,125 +535,86 @@ MovementData_Farfetched_Pos9_Pos8_Down:
 	step_end
 
 IlexForestApprenticeIntroText:
-	text "Oh, man… My boss"
-	line "is going to be"
-	cont "steaming…"
+	text "どうしよう！"
+	line "おやかた<NI>おこられる！"
 
-	para "The FARFETCH'D"
-	line "that CUTS trees"
+	para "スミ<NO>ざいりょうになる"
+	line "き<WO>きる　カモネギが"
+	cont "ゆくえふめい<NI>なっちゃっ<TA!>"
 
-	para "for charcoal took"
-	line "off on me."
-
-	para "I can't go looking"
-	line "for it here in the"
-	cont "ILEX FOREST."
-
-	para "It's too big, dark"
-	line "and scary for me…"
+	para "くらくて　ひろい　ウバメのもりに"
+	line "ひとりじゃ　こわくて　すすめないよ"
 	done
 
 IlexForestApprenticeAfterText:
-	text "Wow! Thanks a"
-	line "whole bunch!"
+	text "きみ　ありがとな！"
 
-	para "My boss's #MON"
-	line "won't obey me be-"
-	cont "cause I don't have"
-	cont "a BADGE."
+	para "おれ　バッジ　も<TTE>ないから"
+	line "おやかた<NO>#"
+	cont "おれ<NO>いうこと　きかないんだよ"
 	done
 
 Text_ItsTheMissingPokemon:
-	text "It's the missing"
-	line "#MON!"
+	text "まいご<NO>#だ！"
 	done
 
 Text_Kwaaaa:
-	text "FARFETCH'D: Kwaa!"
+	text "カモネギ『くわー"
 	done
 
 Text_CharcoalMasterIntro:
-	text "Ah! My FARFETCH'D!"
+	text "おお！　カモネギ！"
+	line "ぼうず<GA>みつけてくれたか！"
 
-	para "You found it for"
-	line "us, kid?"
+	para "き<WO>きる　こいつ<GA>いないと"
+	line "オレたち　スミ<GA>つくれねえ！"
 
-	para "Without it, we"
-	line "wouldn't be able"
+	para "ありがとうよ！"
+	line "れい<WO>しないと　いけねえな<⋯>"
 
-	para "to CUT trees for"
-	line "charcoal."
-
-	para "Thanks, kid!"
-
-	para "Now, how can I"
-	line "thank you…"
-
-	para "I know! Here, take"
-	line "this."
+	para "そうだ！　こいつ<WO>も<TTE>きな！"
 	done
 
 Text_CharcoalMasterOutro:
-	text "That's the CUT HM."
-	line "Teach that to a"
+	text "そいつ<WA>ひでん　いあいぎり！！"
+	line "#<NI>おぼえさせて"
+	cont "ほそい　き<WO>きるんだ！"
 
-	para "#MON to clear"
-	line "small trees."
-
-	para "Of course, you"
-	line "have to have the"
-
-	para "GYM BADGE from"
-	line "AZALEA to use it."
+	para "もっとも　ヒワダ<NO>ジムバッジを"
+	line "も<TTE>ないと　つかえないけどな"
 	done
 
 Text_CharcoalMasterTalkAfter:
-	text "Do you want to"
-	line "apprentice as a"
-
-	para "charcoal maker"
-	line "with me?"
-
-	para "You'll be first-"
-	line "rate in ten years!"
+	text "オレのところで　しゅぎょう　するか？"
+	line "１０ねんで　いちにんまえだ！"
 	done
 
 Text_HeadbuttIntro:
-	text "What am I doing?"
+	text "なにしてるか<TTE>？"
 
-	para "I'm shaking trees"
-	line "using HEADBUTT."
-
-	para "It's fun. Here,"
-	line "you try it too!"
+	para "ずつきで　き<WO>ゆらしてんだよ"
+	line "おもしろいから"
+	cont "おまえさんも　や<TTE>みるぜよ！"
 	done
 
 Text_HeadbuttOutro:
-	text "Rattle trees with"
-	line "HEADBUTT. Some-"
-	cont "times, sleeping"
-	cont "#MON fall out."
+	text "き<WO>ずつきで　ゆらすとだな"
+	line "たまー<NI>ねている"
+	cont "#<GA>おちてくるぜよ"
 	done
 
 IlexForestSignpostText:
-	text "ILEX FOREST is"
-	line "so overgrown with"
+	text "こ<NO>ウバメのもりは"
+	line "き<GA>うっそうと　おいしげり"
+	cont "そらも　みえないほどです"
 
-	para "trees that you"
-	line "can't see the sky."
-
-	para "Please watch out"
-	line "for items that may"
-	cont "have been dropped."
+	para "うすぐらいので　あしもとの"
+	line "おとしもの<NI>ちゅうい　してください"
 	done
 
 Text_IlexForestShrine:
-	text "ILEX FOREST"
-	line "SHRINE…"
-
-	para "It's in honor of"
-	line "the forest's"
-	cont "protector…"
+	text "ウバメのもり<NO>ほこら<⋯>"
+	line "もりのかみさま<WO>まつ<TTE>ある"
 	done
 
 IlexForest_MapEvents:

@@ -18,25 +18,18 @@ CeruleanPokecenter1FGymGuideScript:
 	jumptextfaceplayer CeruleanPokecenter1FGymGuideText
 
 CeruleanPokecenter1FSuperNerdText:
-	text "ROUTE 9 stretches"
-	line "to the east. The"
-
-	para "POWER PLANT is at"
-	line "the end."
+	text "ひがし<NI>のびている"
+	line "９<ROUTE><NO>さきに"
+	cont "はつでんしょ<GA>あるんだ"
 	done
 
 CeruleanPokecenter1FGymGuideText:
-	text "The MAGNET TRAIN"
-	line "travels at over"
+	text "リニア<WA>じそく　５５０キロ！"
+	line "カントーと　ジョウトを"
+	cont "あっ　というま<NI>おうふくさ！"
 
-	para "340 mph. It goes"
-	line "between KANTO and"
-
-	para "JOHTO in almost no"
-	line "time at all."
-
-	para "It really makes"
-	line "JOHTO accessible."
+	para "これで　ジョウトにも"
+	line "いきやすく　なったね！"
 	done
 
 CeruleanPokecenter1F_MapEvents:

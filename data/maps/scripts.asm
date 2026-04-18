@@ -136,6 +136,38 @@ INCLUDE "maps/Route7SaffronGate.asm"
 INCLUDE "maps/Route17Route18Gate.asm"
 
 
+SECTION "Map Scripts 5", ROMX
+
+INCLUDE "maps/Route6.asm"
+INCLUDE "maps/MahoganyMart1F.asm"
+INCLUDE "maps/TeamRocketBaseB1F.asm"
+INCLUDE "maps/TeamRocketBaseB2F.asm"
+INCLUDE "maps/TeamRocketBaseB3F.asm"
+INCLUDE "maps/IlexForest.asm"
+INCLUDE "maps/OlivinePokecenter1F.asm"
+INCLUDE "maps/OlivineGym.asm"
+INCLUDE "maps/OlivineTimsHouse.asm"
+INCLUDE "maps/OlivineHouseBeta.asm"
+INCLUDE "maps/OlivinePunishmentSpeechHouse.asm"
+INCLUDE "maps/OlivineGoodRodHouse.asm"
+INCLUDE "maps/OlivineCafe.asm"
+INCLUDE "maps/OlivineMart.asm"
+INCLUDE "maps/Route38EcruteakGate.asm"
+INCLUDE "maps/Route39Barn.asm"
+INCLUDE "maps/Route39Farmhouse.asm"
+INCLUDE "maps/CeruleanGymBadgeSpeechHouse.asm"
+INCLUDE "maps/CeruleanPoliceStation.asm"
+INCLUDE "maps/CeruleanTradeSpeechHouse.asm"
+INCLUDE "maps/CeruleanPokecenter1F.asm"
+INCLUDE "maps/CeruleanPokecenter2FBeta.asm"
+INCLUDE "maps/CeruleanGym.asm"
+INCLUDE "maps/CeruleanMart.asm"
+INCLUDE "maps/Route10Pokecenter1F.asm"
+INCLUDE "maps/Route10Pokecenter2FBeta.asm"
+INCLUDE "maps/PowerPlant.asm"
+INCLUDE "maps/BillsHouse.asm"
+
+
 SECTION "Map Scripts 12", ROMX
 
 INCLUDE "maps/Route28.asm"
@@ -184,15 +216,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 ;INCLUDE "maps/SafariZoneFuchsiaGateBeta.asm"
 ;INCLUDE "maps/SafariZoneBeta.asm"
 ;INCLUDE "maps/VictoryRoad.asm"
-
-;INCLUDE "maps/MahoganyMart1F.asm"
-;INCLUDE "maps/TeamRocketBaseB1F.asm"
-;INCLUDE "maps/TeamRocketBaseB2F.asm"
-;INCLUDE "maps/TeamRocketBaseB3F.asm"
-;INCLUDE "maps/IlexForest.asm"
-
-
-;SECTION "Map Scripts 5", ROMX
 
 
 ;SECTION "Map Scripts 6", ROMX
@@ -283,7 +306,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 ;INCLUDE "maps/Route13.asm"
 ;INCLUDE "maps/Route11.asm"
 ;INCLUDE "maps/VermilionCity.asm"
-;INCLUDE "maps/Route6.asm"
 ;INCLUDE "maps/SaffronCity.asm"
 ;INCLUDE "maps/CeruleanCity.asm"
 
@@ -296,20 +318,8 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 ;INCLUDE "maps/Route8.asm"
 
 
-
 ;SECTION "Map Scripts 16", ROMX
 
-;INCLUDE "maps/OlivinePokecenter1F.asm"
-;INCLUDE "maps/OlivineGym.asm"
-;INCLUDE "maps/OlivineTimsHouse.asm"
-;INCLUDE "maps/OlivineHouseBeta.asm"
-;INCLUDE "maps/OlivinePunishmentSpeechHouse.asm"
-;INCLUDE "maps/OlivineGoodRodHouse.asm"
-;INCLUDE "maps/OlivineCafe.asm"
-;INCLUDE "maps/OlivineMart.asm"
-;INCLUDE "maps/Route38EcruteakGate.asm"
-;INCLUDE "maps/Route39Barn.asm"
-;INCLUDE "maps/Route39Farmhouse.asm"
 ;INCLUDE "maps/MahoganyRedGyaradosSpeechHouse.asm"
 ;INCLUDE "maps/MahoganyGym.asm"
 ;INCLUDE "maps/MahoganyPokecenter1F.asm"
@@ -333,21 +343,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 ;INCLUDE "maps/LakeOfRageMagikarpHouse.asm"
 ;INCLUDE "maps/Route43MahoganyGate.asm"
 ;INCLUDE "maps/Route43Gate.asm"
-
-
-;SECTION "Map Scripts 19", ROMX
-
-;INCLUDE "maps/CeruleanGymBadgeSpeechHouse.asm"
-;INCLUDE "maps/CeruleanPoliceStation.asm"
-;INCLUDE "maps/CeruleanTradeSpeechHouse.asm"
-;INCLUDE "maps/CeruleanPokecenter1F.asm"
-;INCLUDE "maps/CeruleanPokecenter2FBeta.asm"
-;INCLUDE "maps/CeruleanGym.asm"
-;INCLUDE "maps/CeruleanMart.asm"
-;INCLUDE "maps/Route10Pokecenter1F.asm"
-;INCLUDE "maps/Route10Pokecenter2FBeta.asm"
-;INCLUDE "maps/PowerPlant.asm"
-;INCLUDE "maps/BillsHouse.asm"
 
 
 ;SECTION "Map Scripts 20", ROMX

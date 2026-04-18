@@ -21,26 +21,20 @@ OlivineMartLassScript:
 	jumptextfaceplayer OlivineMartLassText
 
 OlivineMartCooltrainerFText:
-	text "Do your #MON"
-	line "already know the"
-
-	para "move for carrying"
-	line "people on water?"
+	text "あなた<NO>#"
+	line "ひとをのせて　うみをすすむ　わざは"
+	cont "もう　おぼえてる<NO>かしら？"
 	done
 
 OlivineMartLassText:
-	text "My BUTTERFREE came"
-	line "from my boyfriend"
-	cont "overseas."
+	text "がいこく<NI>いる"
+	line "かれ　から　もらった　バタフリー"
+	cont "メール　も<TTE>たの！"
 
-	para "It carried some"
-	line "MAIL from him."
+	para "なんて　かかれてたか　しりたい？"
+	line "えーとね<⋯>"
 
-	para "Want to know what"
-	line "it says?"
-
-	para "Let's see… Nope!"
-	line "It's a secret!"
+	para "やっぱり　ひ·み·つ！"
 	done
 
 OlivineMart_MapEvents:

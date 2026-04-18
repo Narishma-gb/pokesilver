@@ -557,352 +557,243 @@ RocketBasePlayerLeavesElectrodesMovement3:
 	step_end
 
 RocketBaseExecutiveFHoldItText:
-	text "Hold it right"
-	line "there!"
+	text "そこまでよ！"
 	done
 
 RocketBaseBossFThrashText:
-	text "We can't have a"
-	line "brat like you on"
-	cont "the loose."
+	text "ぼうや<NI>なめられてちゃ"
+	line "<ROCKET>の"
+	cont "プライド<GA>きずつくのよ"
 
-	para "It's harmful to"
-	line "TEAM ROCKET's"
-	cont "pride, you see."
+	para "いくら　あなた<GA>つよくても"
+	line "わたくしたち　ふたり　どうじに"
+	cont "あいて<WA>できないでしょ？"
 
-	para "However strong you"
-	line "may be, you can't"
-
-	para "take both of us at"
-	line "the same time."
-
-	para "Sorry, baby. Now"
-	line "get ready to be"
-	cont "thrashed."
+	para "わるいけど"
+	line "かくご　してもらうわよ"
 	done
 
 RocketBaseLanceShareFunText:
-	text "Hey! Don't be so"
-	line "selfish. Spread"
-	cont "the fun around."
+	text "そんなこと　いわずに"
+	line "どっちか　あそんでくれないか？"
 	done
 
 RocketBaseBossDontMeddleText:
-	text "What? You had an"
-	line "accomplice?"
+	text "なかま<GA>いたのね"
+	line "き<NI>いらないわね"
 
-	para "Where is your"
-	line "sense of honor?"
+	para "サカキさま<NO>るす<WO>あずかる"
+	line "わたくし<GA>おしえて　あげるわ"
 
-	para "As the interim"
-	line "boss in place of"
-
-	para "GIOVANNI, I'll"
-	line "show you how wrong"
-
-	para "it is to meddle"
-	line "with TEAM ROCKET!"
+	para "<ROCKET><NI>はむかうと"
+	line "どうなるか　<TTE>　ことを！"
 	done
 
 RocketBaseBossWinText:
-	text "Tch, you really"
-	line "are strong."
+	text "あら　つよいのね"
 
-	para "It's too bad."
-
-	para "If you were to"
-	line "join TEAM ROCKET,"
-
-	para "you could become"
-	line "an EXECUTIVE."
+	para "ざんねんね"
+	line "あなたなら　<ROCKET><NI>くれば"
+	cont "かんぶ<NI>だ<TTE>　なれるかもよ"
 	done
 
 RocketBaseBossRetreatText:
-	text "…This hideout is"
-	line "done for…"
+	text "<⋯>　こ<NO>アジトも　おわりね"
 
-	para "But that's fine."
-	line "The broadcast ex-"
-	cont "periment was a"
-	cont "total success."
+	para "まあ　いいわ"
+	line "でんぱ<NO>じっけんも"
+	cont "うまく　いったようだし"
+	cont "こんな　アジト　どうな<TTE>もいいわ"
 
-	para "It doesn't matter"
-	line "what happens to"
-	cont "this hideout now."
+	para "わたくしたちの"
+	line "ねらい<WA>もっと　おおきいの"
 
-	para "We have much big-"
-	line "ger plans."
+	para "<ROCKET><NO>おそろしさ"
+	line "いずれ　わからせて　あげるわよ"
 
-	para "You'll come to"
-	line "appreciate TEAM"
-
-	para "ROCKET's true"
-	line "power soon enough."
-
-	para "Enjoy yourself"
-	line "while you can…"
-
-	para "Fufufufu…"
+	para "そのとき<WO>たのしみにね<⋯>"
+	line "フフフ"
 	done
 
 RocketBaseLancePostBattleText:
-	text "LANCE: That did"
-	line "it. We defeated"
+	text "ワタル『ふう　これで"
+	line "アジト<NO>なか<NO><ROCKET>いん"
+	cont "すべて　たおしただろ"
 
-	para "all the ROCKETS"
-	line "here."
-
-	para "But I'm concerned"
-	line "about the young"
-
-	para "guy I battled in"
-	line "the process…"
+	para "とちゅうで　たたかった"
+	line "しょうねん<GA>き<NI>なるが<⋯>"
 	done
 
 RocketBaseLancePowerOffText:
-	text "Sorry, <PLAYER>."
-	line "I saw how well you"
+	text "わるかったね　<PLAYER>くん"
+	line "きみ<GA>がんば<TTE>いるの<WO>みて"
+	cont "ちょっと　でばん<WO>ま<TTE>みたのさ"
 
-	para "were doing, so I"
-	line "just hung back."
-
-	para "Now all there is"
-	line "left to do is to"
-
-	para "turn off that odd"
-	line "radio signal."
+	para "さて　あとは"
+	line "おかしな　でんぱ<WO>とめるだけか<⋯>"
 	done
 
 RockerBaseLanceElectrodeFaintText:
-	text "It's this machine"
-	line "that's causing all"
-	cont "the problems."
+	text "これ<GA>そうち<⋯>"
+	line "スイッチ<WA>みあたらないな"
 
-	para "I don't see a"
-	line "switch on it…"
+	para "しかたない"
+	line "マルマイン<WO>きぜつ　させよう"
 
-	para "We have no choice."
-	line "We have to make"
+	para "そうすれば　おかしな"
+	line "でんぱも　でなくなるだろう"
 
-	para "all the ELECTRODE"
-	line "faint."
+	para "#<GA>わるいわけ　じゃないから"
+	line "ちょっと　き<NI>なるけどね"
 
-	para "That should stop"
-	line "this machine from"
-
-	para "transmitting that"
-	line "strange signal."
-
-	para "It's no fault of"
-	line "the #MON, so it"
-
-	para "makes me feel"
-	line "guilty."
-
-	para "<PLAYER>, let's"
-	line "split the job."
+	para "<PLAYER>くん"
+	line "はんぶん　ずつと　いこう"
 	done
 
 RocketBaseLancesSideText:
-	text "LANCE: Leave this"
-	line "side to me."
+	text "ワタル『こっち<WA>まかせてくれよ"
 	done
 
 RocketBaseLanceElectrodeDoneText:
-	text "LANCE: That odd"
-	line "signal has finally"
-	cont "stopped."
+	text "ワタル『ようやく"
+	line "おかしな　でんぱも　とまった"
 
-	para "The LAKE should be"
-	line "back to normal."
+	para "これで　みずうみも"
+	line "もと<NO>すがた<NI>もどっただろう"
+	cont "きみ<NO>おかげさ"
 
-	para "You're the hero!"
-	line "Let me thank you"
+	para "#<NI>かわ<TTE>"
+	line "れい<WO>いうよ！"
 
-	para "on behalf of all"
-	line "the #MON."
+	para "そうだ！"
+	line "これ<WO>も<TTE>いきなよ！"
 
-	para "Oh, yes. You"
-	line "should take this."
-
-	para "I found it here,"
-	line "but I don't have"
-	cont "any need for it."
+	para "さっき　みつけたんだが"
+	line "おれに<WA>ひつよう　ないからさ"
 	done
 
 RocketBaseReceivedHM06Text: ; unreferenced
-	text "<PLAYER> received"
-	line "HM06."
+	text "<PLAYER><WA>ワタルから"
+	line "ひでんマシン０６<WO>もらっ<TA!>"
 	done
 
 RocketBaseLanceWhirlpoolText:
-	text "That's WHIRLPOOL."
-	line "Teach it to a"
+	text "そいつ<WA>うずしお！"
 
-	para "#MON to get"
-	line "across wild water."
+	para "#<NI>おしえれば"
+	line "あれた　みず<NO>うえも　すすめる！"
 
-	para "But keep this in"
-	line "mind."
-
-	para "You can use that"
-	line "out of battle only"
-
-	para "with the BADGE"
-	line "from MAHOGANY GYM."
+	para "ただし　チョウジの"
+	line "ジムバッジ<WO>も<TTE>いないと"
+	cont "つかえないから　き<WO>つけなよ"
 	done
 
 RocketBaseLanceMonMasterText:
-	text "<PLAYER>…"
+	text "<PLAYER>くん！"
 
-	para "The journey to be-"
-	line "coming the #MON"
+	para "#マスターへの"
+	line "みち<WA>ながく　けわしい　という<⋯>"
+	cont "それでも　めざすのか？"
 
-	para "MASTER is long and"
-	line "difficult."
+	para "<⋯>　<⋯>　<⋯>　<⋯>"
+	line "そうか"
+	cont "そうだよな"
 
-	para "Knowing that, will"
-	line "you keep going?"
+	para "あきらめる　くらい　なら"
+	line "さいしょ　から　ゆめ　みないよな"
 
-	para "…"
-
-	para "I see. No, you're"
-	line "right."
-
-	para "If you would give"
-	line "up that easily,"
-
-	para "you would have"
-	line "never chased that"
-
-	para "dream in the first"
-	line "place."
-
-	para "I look forward to"
-	line "seeing you again!"
+	para "じゃあ　また　あおう！"
 	done
 
 LanceHealsText1:
-	text "LANCE: Are you all"
-	line "right?"
+	text "ワタル『だいじょうぶかい？"
 
-	para "Your #MON are"
-	line "hurt and tired."
-
-	para "Here, give them"
-	line "some of my medi-"
-	cont "cine."
+	para "きみ<NO>#"
+	line "だいぶ　きずついてるな"
+	cont "おれ<NO>くすり<WO>わけてやるよ"
 	done
 
 LanceHealsText2:
-	text "LANCE: <PLAYER>,"
-	line "let's give it our"
-	cont "best for #MON."
+	text "ワタル『さあ　<PLAYER>くん"
+	line "#のため　がんばろう！"
 	done
 
 GruntM17SeenText:
-	text "The door won't"
-	line "open?"
+	text "とびら<GA>ひらかない？"
 
-	para "Well, duh."
-	line "It has to have a"
-
-	para "password that only"
-	line "TEAM ROCKET knows."
+	para "そりゃ　そうだ"
+	line "<ROCKET>　だけ<GA>し<TTE>いる"
+	cont "パスワード<GA>ひつよう　だからな"
 	done
 
 GruntM17BeatenText:
-	text "What? I lost?"
+	text "ま　まけた？"
 	done
 
 GruntM17AfterBattleText:
-	text "Heh, I'm just a"
-	line "GRUNT."
-
-	para "I don't know the"
-	line "password. Too bad"
-	cont "for you."
+	text "おれ　したっぱ　なんでね"
+	line "パスワード<WA>おしえてもら<TTE>ねえよ"
+	cont "ざんねん　だったな"
 	done
 
 GruntM18SeenText:
-	text "Oh, a kid? I don't"
-	line "really like this,"
-
-	para "but eliminate you"
-	line "I must."
+	text "うう　こどもか<⋯>"
+	line "なんとなく　イヤな　かんじだが"
+	cont "じゃまもの<WA>たおさねば！"
 	done
 
 GruntM18BeatenText:
-	text "I knew I'd lose…"
+	text "うう　やっぱり　まけた"
 	done
 
 GruntM18AfterBattleText:
-	text "I got wiped out on"
-	line "the last mission"
-	cont "by a kid too."
-
-	para "When we were ab-"
-	line "ducting #MON,"
-
-	para "this kid with long"
-	line "red hair and mean-"
-
-	para "looking eyes just"
-	line "creamed me…"
+	text "うう　このまえ<NO>にんむで"
+	line "#　ぬすんでる　ときも"
+	cont "めつき<GA>するどくて"
+	cont "あかくて　ながい　かみ<NO>こどもに"
+	cont "コテンパン<NI>されたしよお<⋯>"
 	done
 
 GruntM19SeenText:
-	text "You rotten little"
-	line "pest!"
+	text "ウロチョロと　めざわり　なんだよ！"
 	done
 
 GruntM19BeatenText:
-	text "Grrrr…"
+	text "ぐがぎぎ<⋯>"
 	done
 
 GruntM19AfterBattleText:
-	text "Heh, only the boss"
-	line "knows the password"
-	cont "for that door."
+	text "そこ<NO>とびら<NO>パスワードを"
+	line "し<TTE>いるの<WA>ボス　だけさ"
 
-	para "Where's the boss?"
-	line "Who knows? Go look"
-	cont "for yourself."
+	para "ボス<NO>いばしょ？"
+	line "さあね　じぶんで　さがしなよ"
 	done
 
 RocketBaseDoorNoPasswordText:
-	text "The door's closed…"
+	text "とびら<GA>しま<TTE>いる<⋯>"
 
-	para "It needs a pass-"
-	line "word to open."
+	para "あけるには"
+	line "パスワード<GA>１つ　ひつようだ"
 	done
 
 RocketBaseDoorKnowPasswordText:
-	text "The door's closed…"
+	text "とびら<GA>しま<TTE>いる<⋯>"
 
-	para "<PLAYER> entered"
-	line "the password."
+	para "<PLAYER>は"
+	line "パスワード<WO>にゅうりょくした"
 
-	para "The door opened!"
+	para "とびら<GA>ひらい<TA!>"
 	done
 
 RocketBaseB2FTransmitterText:
-	text "It's the radio"
-	line "transmitter that's"
-
-	para "sending the"
-	line "sinister signal."
-
-	para "It's working at"
-	line "full capacity."
+	text "かいでんぱ　はっせい　そうち"
+	line "がんがん　どうさ　している"
 	done
 
 RocketBaseB2FDeactivateTransmitterText:
-	text "The radio trans-"
-	line "mitter has finally"
-
-	para "stopped its evil"
-	line "broadcast."
+	text "かいでんぱ　はっせい　そうち"
+	line "どうやら　とまったようだ"
 	done
 
 TeamRocketBaseB2F_MapEvents:

@@ -21,26 +21,18 @@ CeruleanMart_CooltrainerF:
 	jumptextfaceplayer CeruleanMart_CooltrainerFText
 
 CeruleanMart_CooltrainerMText:
-	text "You'll run into"
-	line "many trainers on"
+	text "ハナダのみさき<NI>いく　とちゅうに"
+	line "たくさん　<TRAINER><GA>いるんだ"
 
-	para "the way to CERU-"
-	line "LEAN's CAPE."
-
-	para "They want to see"
-	line "how they stack"
-
-	para "up against other"
-	line "trainers."
+	para "とおりかかった　<TRAINER>の"
+	line "じつりょく<WO>ためしているのさ"
 	done
 
 CeruleanMart_CooltrainerFText:
-	text "MISTY is about the"
-	line "only person in"
-
-	para "town who can beat"
-	line "the trainers at"
-	cont "CERULEAN's CAPE."
+	text "ハナダのみさき<NI>いる"
+	line "<TRAINER>たち<NI>かてる　ひと<TTE>"
+	cont "こ<NO>まちじゃ　ジムリーダーの"
+	cont "カスミちゃん　くらいね！"
 	done
 
 CeruleanMart_MapEvents:
