@@ -152,179 +152,145 @@ SproutTower3FRivalLeavesElderMovement:
 	step_end
 
 SproutTowerElderLecturesRivalText:
-	text "ELDER: You are in-"
-	line "deed skilled as a"
-	cont "trainer."
+	text "ちょうろう『そなた<NO>じつりょく"
+	line "まさ<NI>ほんもの"
 
-	para "As promised, here"
-	line "is your HM."
+	para "やくそく　どおり"
+	line "こ<NO>ひでんマシン<WO>わたそう"
 
-	para "But let me say"
-	line "this: You should"
+	para "だ<GA>もうちっと"
+	line "#<WO>いたわるべき　ですぞ"
 
-	para "treat your"
-	line "#MON better."
-
-	para "The way you battle"
-	line "is far too harsh."
-
-	para "#MON are not"
-	line "tools of war…"
+	para "そなた<NO>たたかいかた　きびしすぎる"
+	line "#<WA>たたかいの"
+	cont "どうぐ　で<WA>ない<⋯>"
 	done
 
 SproutTowerRivalOnlyCareAboutStrongText:
-	text "…"
-	line "…Humph!"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "He claims to be"
-	line "the ELDER but"
-	cont "he's weak."
+	para "<⋯>　フン！"
+	line "ちょうろう　<TTE>　いうわりには"
+	cont "ぜんぜん　てごたえ　なかった"
 
-	para "It stands to"
-	line "reason."
+	para "<⋯>　とうぜん　だな"
+	line "#<NI>やさしくとか"
+	cont "あまいこと　い<TTE>る　やつには"
+	cont "オレ<WA>まけない"
 
-	para "I'd never lose to"
-	line "fools who babble"
+	para "オレ<GA>だいじ<NI>するのは"
+	line "つよくて　かてる　#　だけ"
 
-	para "about being nice"
-	line "to #MON."
-
-	para "I only care about"
-	line "strong #MON"
-	cont "that can win."
-
-	para "I really couldn't"
-	line "care less about"
-	cont "weak #MON."
+	para "それいがい<NO>#なんか"
+	line "どうでも　いいのさ"
 	done
 
 SproutTowerRivalUsedEscapeRopeText:
-	text "<RIVAL> used an"
-	line "ESCAPE ROPE!"
+	text "<RIVAL>は"
+	line "あなぬけのヒモ<WO>つかっ<TA!>"
 	done
 
 SageLiSeenText:
-	text "So good of you to"
-	line "come here!"
+	text "よくぞ　ここまで　まいられ<TA!>"
 
-	para "SPROUT TOWER is a"
-	line "place of training."
+	para "こ<NO>マダツボミのとうは"
+	line "#と　ひとが"
+	cont "あかるい　みらい<WO>きずけるか"
+	cont "しゅぎょうで　たしかめる　ばしょ"
 
-	para "People and #MON"
-	line "test their bonds"
+	para "そして　さいご<NO>しれんは"
+	line "こ<NO><WATASHI>"
 
-	para "to build a bright"
-	line "future together."
-
-	para "I am the final"
-	line "test."
-
-	para "Allow me to check"
-	line "the ties between"
-
-	para "your #MON and"
-	line "you!"
+	para "で<WA>そなたと　#<NO>きずな"
+	line "たしかめさせて　もらいますぞ！"
 	done
 
 SageLiBeatenText:
-	text "Ah, excellent!"
+	text "ううむ"
+	line "おみごと"
 	done
 
 SageLiTakeThisFlashText:
-	text "You and your #-"
-	line "MON should have"
+	text "そなたと"
+	line "#なら　こ<NO>ひでんも"
+	cont "つかいこなせるだろう"
 
-	para "no problem using"
-	line "this move."
-
-	para "Take this FLASH"
-	line "HM."
+	para "フラッシュ<NO>ひでんマシン"
+	line "も<TTE>　いきなさい！"
 	done
 
 SageLiFlashExplanationText:
-	text "FLASH illuminates"
-	line "even the darkest"
-	cont "of all places."
+	text "フラッシュ<WO>おぼえさせると"
+	line "どんな<NI>くらい　ところも"
+	cont "あかるく　できますぞ！"
 
-	para "But to use it out"
-	line "of battle, you"
-
-	para "need the BADGE"
-	line "from VIOLET's GYM."
+	para "ただし　たたか<TTE>いないとき"
+	line "つかうに<WA>キキョウ<NO>ジムで"
+	cont "もらえる　バッジ<GA>ひつようですぞ"
 	done
 
 SageLiAfterBattleText:
-	text "I hope you learn"
-	line "and grow from your"
-	cont "journey."
+	text "そなた<NO>たびが"
+	line "みのりおおい　もので　ありますように"
 	done
 
 SageJinSeenText:
-	text "I train to find"
-	line "enlightenment in"
-	cont "#MON!"
+	text "#<NO>みち<WO>きわめるべく"
+	line "しゅぎょう　しておる！"
 	done
 
 SageJinBeatenText:
-	text "Beaten by a mere"
-	line "child!"
+	text "ぼうず<GA>ぼうず<NI>まけよった<⋯>"
 	done
 
 SageJinAfterBattleText:
-	text "As #MON grow"
-	line "stronger, so does"
-	cont "the trainer."
+	text "#<GA>つよくなるたび"
+	line "<TRAINER>も　つよくなる"
 
-	para "No, wait. As the"
-	line "trainer grows"
-
-	para "stronger, so do"
-	line "the #MON."
+	para "いや　<TRAINER><GA>つよくなれば"
+	line "#も　つよくなる"
 	done
 
 SageTroySeenText:
-	text "Let me see how"
-	line "much you trust"
-	cont "your #MON."
+	text "あなた<GA>#を"
+	line "どれだけ　しんらい　しているか"
+	cont "<WATASHI><GA>ためしましょう！"
 	done
 
 SageTroyBeatenText:
-	text "Yes, your trust is"
-	line "real!"
+	text "うむ！"
+	line "しんらい　しているな！"
 	done
 
 SageTroyAfterBattleText:
-	text "It is not far to"
-	line "the ELDER."
+	text "ちょうろうさま<NO>ところまで"
+	line "もうすこし　ですぞ！"
 	done
 
 SageNealSeenText:
-	text "The ELDER's HM"
-	line "lights even pitch-"
-	cont "black darkness."
+	text "ちょうろうさま<GA>くださる"
+	line "ひでんマシンは"
+	cont "どんな　やみも　あかるく　てらす"
 	done
 
 SageNealBeatenText:
-	text "It is my head that"
-	line "is bright!"
+	text "あかるいのは"
+	line "<WATASHI><NO>あたまー！"
 	done
 
 SageNealAfterBattleText:
-	text "Let there be light"
-	line "on your journey."
+	text "あなた<NO>すすむ　みちが"
+	line "かがやき<NI>みちて　いますように"
 	done
 
 SproutTower3FPaintingText:
-	text "It's a powerful"
-	line "painting of a"
-	cont "BELLSPROUT."
+	text "ちからづよい　タッチで"
+	line "マダツボミ<GA>えがかれている<⋯>"
 	done
 
 SproutTower3FStatueText:
-	text "A #MON statue…"
-
-	para "It looks very"
-	line "distinguished."
+	text "#<GA>まつられている<⋯>"
+	line "どこか　こうごうしい　かんじ"
 	done
 
 SproutTower3F_MapEvents:

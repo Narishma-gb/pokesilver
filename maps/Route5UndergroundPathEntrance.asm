@@ -10,11 +10,9 @@ Route5UndergroundPathEntranceTeacherScript:
 	jumptextfaceplayer Route5UndergroundPathEntranceTeacherText
 
 Route5UndergroundPathEntranceTeacherText:
-	text "Many cities in"
-	line "JOHTO have long"
-
-	para "histories. I'd"
-	line "love to visit!"
+	text "ジョウト　<TTE>　れきし<NO>ふるい"
+	line "まち<GA>おおいんです<TTE>"
+	cont "いちど　くらい　い<TTE>　みたいわ！"
 	done
 
 Route5UndergroundPathEntrance_MapEvents:

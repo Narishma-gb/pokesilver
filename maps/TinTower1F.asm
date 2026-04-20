@@ -10,34 +10,25 @@ TinTowerSageScript:
 	jumptextfaceplayer TinTowerSageText
 
 TinTowerSageText:
-	text "I'm trying to un-"
-	line "cover the secret"
+	text "<WATASHI><WA>ここ<NI>まいおりるという"
+	line "でんせつ<NO>#の"
+	cont "ひみつ<WO>さぐ<TTE>いるのです"
 
-	para "of the legendary"
-	line "#MON that is"
-	cont "said to land here."
+	para "にしがわ<NO>とう<GA>やけてから"
+	line "ここにいた　#は"
+	cont "ずっと　そら<WO>とんでいるそうです"
 
-	para "They say that the"
-	line "#MON has flown"
+	para "そこで　かんがえました"
+	line "とんでいる　#と"
+	cont "おなじ　モノ<WO>も<TTE>いれば"
+	cont "さそわれて　や<TTE>くる　はず！"
 
-	para "continuously ever"
-	line "since the TOWER in"
-	cont "the West burned."
+	para "そ<NO>おなじ　モノと<WA>おそらく<⋯>"
 
-	para "So, I thought that"
-	line "if I had what the"
+	para "にじいろのはね！"
 
-	para "#MON has, it"
-	line "would be attracted"
-	cont "by that item."
-
-	para "I think that item"
-	line "is probably…"
-
-	para "A RAINBOW WING!"
-
-	para "But, where would"
-	line "I find one?"
+	para "だ<GA>そんなもの"
+	line "どこ<NI>あるんでしょう？"
 	done
 
 TinTower1F_MapEvents:

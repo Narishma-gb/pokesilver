@@ -10,12 +10,9 @@ Route5SaffronGateOfficerScript:
 	jumptextfaceplayer Route5SaffronGateOfficerText
 
 Route5SaffronGateOfficerText:
-	text "You're from JOHTO,"
-	line "aren't you?"
-
-	para "How do you like"
-	line "KANTO? It's nice,"
-	cont "don't you agree?"
+	text "きみ<WA>ジョウト<NO>ひと　でしょ？"
+	line "はじめて<NO>カントー<WA>どうだい？"
+	cont "いい　ところ　でしょ"
 	done
 
 Route5SaffronGate_MapEvents:

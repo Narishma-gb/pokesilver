@@ -35,45 +35,34 @@ SaffronPokecenter1FYoungsterScript:
 	jumptextfaceplayer SaffronPokecenter1FYoungsterText
 
 SaffronPokecenter1FTeacherText:
-	text "There's a huge"
-	line "POWER PLANT north"
-	cont "of LAVENDER TOWN."
+	text "おおきな　はつでんしょが"
+	line "シオン　タウン<NO>きた<NI>あるわ！"
 	done
 
 SaffronPokecenter1FFisherText:
-	text "I just happened to"
-	line "come through ROCK"
-
-	para "TUNNEL. There was"
-	line "some commotion at"
-	cont "the POWER PLANT."
+	text "さっき　イワヤマ　トンネルを"
+	line "とお<TTE>　きたんだけど"
+	cont "なんだか　はつでんしょが"
+	cont "さわがしかったな<⋯>"
 	done
 
 SaffronPokecenter1FFisherReturnedMachinePartText:
-	text "Caves collapse"
-	line "easily."
+	text "どうくつ<WA>くずれやすい！"
 
-	para "Several caves have"
-	line "disappeared in the"
+	para "ハナダ<NO>どうくつ　みたいに"
+	line "くずれちゃった　どうくつが"
+	cont "いくつも　あるんだよ！"
 
-	para "past few years,"
-	line "like the one out-"
-	cont "side CERULEAN."
-
-	para "As a pro HIKER,"
-	line "that's common"
-	cont "knowledge."
+	para "やまのぼり<NO>プロとしての"
+	line "じょうしき　だね！"
 	done
 
 SaffronPokecenter1FYoungsterText:
-	text "SILPH CO.'s HEAD"
-	line "OFFICE and the"
+	text "シルフ　カンパニー　ほんしゃと"
+	line "リニア　ステーション！"
 
-	para "MAGNET TRAIN STA-"
-	line "TION--they're the"
-
-	para "places to see in"
-	line "SAFFRON."
+	para "こ<NO>２つが"
+	line "ヤマブキ<NO>めいしょ　だね！"
 	done
 
 SaffronPokecenter1F_MapEvents:

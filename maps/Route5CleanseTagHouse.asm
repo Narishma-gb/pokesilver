@@ -31,31 +31,22 @@ HouseForSaleBookshelf:
 	jumpstd DifficultBookshelfScript
 
 Route5CleanseTagHouseGrannyText1:
-	text "Eeyaaaah!"
+	text "きえーーーいっ！"
 
-	para "I sense a sinister"
-	line "shadow hovering"
-	cont "over you."
-
-	para "Take this to ward"
-	line "it off!"
+	para "おぬし<NI>ふきつな　カゲが"
+	line "とりついて　おるうっ！"
+	cont "これ<WO>も<TTE>いく<GA>よい！"
 	done
 
 Route5CleanseTagHouseGrannyText2:
-	text "You were in mortal"
-	line "danger, but you"
-	cont "are protected now."
+	text "あぶないところ　じゃっ<TA!>"
+	line "これで　あんしんじゃ！"
 	done
 
 Route5CleanseTagHouseTeacherText:
-	text "My Grandma is into"
-	line "warding off what"
-
-	para "she believes to be"
-	line "evil spirits."
-
-	para "I'm sorry that she"
-	line "startled you."
+	text "うち<NO>おばあちゃん"
+	line "おはらい<NI>こ<TTE>るのよ"
+	cont "ごめんね　おどろかせちゃ<TTE>"
 	done
 
 Route5CleanseTagHouse_MapEvents:

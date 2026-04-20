@@ -126,8 +126,9 @@ ClefairyFleeMovement:
 	step_end
 
 DontLitterSignText:
-	text "MT.MOON SQUARE"
-	line "Don't Litter"
+	text "おつきみやま　ひろば"
+	line "<⋯>ゴミ<NO>なげすては"
+	cont "やめましょう！"
 	done
 
 MountMoonSquare_MapEvents:

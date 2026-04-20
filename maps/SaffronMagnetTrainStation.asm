@@ -119,92 +119,70 @@ SaffronMagnetTrainStationPlayerLeaveTrainAndEnterStationMovement:
 	step_end
 
 SaffronMagnetTrainStationOfficerTrainIsntOperatingText:
-	text "I'm sorry, but the"
-	line "MAGNET TRAIN isn't"
-	cont "operating now."
+	text "もうしわけ　ありません"
+	line "リニア　モーターカーは"
+	cont "げんざい　うんこうして　いません"
 	done
 
 SaffronMagnetTrainStationOfficerAreYouComingOnBoardText:
-	text "We'll soon depart"
-	line "for GOLDENROD."
-
-	para "Are you coming on"
-	line "board?"
+	text "コガネ　いき"
+	line "まもなく　しゅっぱつ　です"
+	cont "おのり<NI>なられますか？"
 	done
 
 SaffronMagnetTrainStationOfficerRightThisWayText:
-	text "May I see your"
-	line "rail PASS, please?"
+	text "じょうしゃけん<WO>かくにん　します！"
 
-	para "OK. Right this"
-	line "way, sir."
+	para "はい！"
+	line "こちら<NI>どうぞ！"
 	done
 
 SaffronMagnetTrainStationOfficerYouDontHaveAPassText:
-	text "Sorry, but you"
-	line "don't have a PASS."
+	text "あっと　おきゃくさん"
+	line "じょうしゃけん<WO>おもちでないですね"
 	done
 
 SaffronMagnetTrainStationOfficerHopeToSeeYouAgainText:
-	text "We hope to see you"
-	line "again."
+	text "また<NO>ごりようを"
+	line "よろしく　おねがい　しまーす！"
 	done
 
 SaffronMagnetTrainStationOfficerArrivedInSaffronText:
-	text "We have arrived in"
-	line "SAFFRON."
+	text "おつかれさま　でした"
+	line "ヤマブキ　とうちゃくです"
 
-	para "We hope to see you"
-	line "again."
+	para "また<NO>ごりようを"
+	line "よろしく　おねがい　しまーす！"
 	done
 
 SaffronMagnetTrainStationGymGuideText:
-	text "The MAGNET TRAIN"
-	line "is a super-modern"
+	text "リニア　モーターカーは"
+	line "でんきと　じしゃく<NO>ちからで"
+	cont "はしる　ゆめ<NO>ちょうとっきゅう！"
 
-	para "rail liner that"
-	line "uses electricity"
-
-	para "and magnets to"
-	line "attain incredible"
-	cont "speed."
-
-	para "However, if there"
-	line "isn't any elec-"
-	cont "tricity…"
+	para "でも　でんき<GA>なければ<⋯>"
 	done
 
 SaffronMagnetTrainStationGymGuideText_ReturnedMachinePart:
-	text "Whew…"
+	text "ふうー<⋯>"
 
-	para "How many times"
-	line "have I gone back"
-
-	para "and forth between"
-	line "KANTO and JOHTO?"
+	para "カントーと　ジョウトを"
+	line "なんおうふく　したのかな？"
 	done
 
 SaffronMagnetTrainStationTeacherText:
-	text "Before the MAGNET"
-	line "TRAIN STATION was"
-
-	para "built, there was a"
-	line "house there."
-
-	para "A little girl"
-	line "named COPYCAT used"
-	cont "to live there."
+	text "リニアのえき<GA>できる　まえ"
+	line "こ<NO>ばしょに<WA>モノマネむすめ<TTE>"
+	cont "おんなのこ<NO>いえ<GA>あったのよ"
 	done
 
 SaffronMagnetTrainStationLassText:
-	text "Hi. Do you have a"
-	line "rail PASS? I have"
+	text "おにいちゃん　ていきけん　も<TTE>る？"
+	line "あたし　も<TTE>るよー！"
 
-	para "one. All the peo-"
-	line "ple in SAFFRON who"
-
-	para "ride the MAGNET"
-	line "TRAIN have PASSES."
+	para "ヤマブキ<NO>ひと<WA>みんな"
+	line "ていきけんで"
+	cont "リニア<NI>のるんだもーん！"
 	done
 
 SaffronMagnetTrainStation_MapEvents:

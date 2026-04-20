@@ -28,29 +28,24 @@ SilphCoOfficerScript:
 	end
 
 SilphCoReceptionistText:
-	text "Welcome. This is"
-	line "SILPH CO.'s HEAD"
-	cont "OFFICE BUILDING."
+	text "いらっしゃいませ！"
+	line "シルフ　カンパニー"
+	cont "ほんしゃ　ビルで　ございます！"
 	done
 
 SilphCoOfficerText:
-	text "Only employees are"
-	line "permitted to go"
-	cont "upstairs."
+	text "２かい　より　うえには"
+	line "しゃいん　しか　はいれないよ"
 
-	para "But since you came"
-	line "such a long way,"
-
-	para "have this neat"
-	line "little souvenir."
+	para "でも　とおい　ところから"
+	line "はるばる　や<TTE>きた　キミには"
+	cont "これ<WO>あげよう！"
 	done
 
 SilphCoOfficerText_GotUpGrade:
-	text "It's SILPH CO.'s"
-	line "latest product."
-
-	para "It's not for sale"
-	line "anywhere yet."
+	text "シルフ　カンパニーの"
+	line "しんせいひん　なんだ！"
+	cont "まだ　どこにも　う<TTE>ないよ！"
 	done
 
 SilphCo1F_MapEvents:

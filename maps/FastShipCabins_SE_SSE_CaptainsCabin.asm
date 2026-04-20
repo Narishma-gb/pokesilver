@@ -229,219 +229,180 @@ SSAquaGrandpaApproachesPlayerMovement:
 	step_end
 
 SSAquaCaptainExhaustingText:
-	text "Whew! Thanks for"
-	line "coming along."
+	text "いやー　たすかったよ！"
 
-	para "Keeping that lit-"
-	line "tle girl amused"
-	cont "was exhausting."
+	para "あ<NO>おんなのこの"
+	line "あそびあいて<WO>するの<NI>つかれて"
+	cont "こま<TTE>いた　ところなんだ"
 	done
 
 SSAquaCaptainHowDoYouLikeText:
-	text "How do you like"
-	line "S.S.AQUA's ride?"
+	text "わ<GA>アクアごうの"
+	line "のりごこち<WA>どうだい！？"
+	cont "うみのうえ<WO>すべるように"
 
-	para "She practically"
-	line "skates across the"
-	cont "waves."
+	para "はし<TTE>いくだろう！"
 	done
 
 SSAquaCantFindGranddaughterText:
-	text "Hello, son…"
-	line "I can't find my"
-	cont "granddaughter."
+	text "やあ　ぼうや<⋯>"
+	line "まご<GA>みつからないんだよ<⋯>"
 
-	para "If she's on the"
-	line "ship, that's OK."
-
-	para "But what if she"
-	line "fell overboard?"
-
-	para "She's an energetic"
-	line "child, so she may"
-
-	para "be bugging some-"
-	line "one. I'm worried…"
+	para "ふね<NO>どこか<NI>いるなら"
+	line "そんな<NI>しんぱいじゃ　ないが"
+	cont "げんき<NO>いい　おんなのこ　だから"
+	cont "だれか<NI>めいわく<WO>かけているかも"
+	cont "そう　おもうと　しんぱいだ<⋯>"
 	done
 
 SSAquaEntertainedGranddaughterText:
-	text "<PLAYER>, was it? I"
-	line "heard you enter-"
-	cont "tained my grand-"
-	cont "daughter."
-
-	para "I want to thank"
-	line "you for that."
+	text "ええと　<PLAYER>くん　だったかね"
+	line "まごと　あそんで　くれた　そうだね"
+	cont "ありがとう！"
+	cont "<WATASHI>からも　おれい<WO>いわせてくれ"
 	done
 
 SSAquaGrandpaHaveThisText:
-	text "I know! I'd like"
-	line "you to have this!"
+	text "そうだ！　もしよかったら"
+	line "これ<WO>もら<TTE>　くれないか！"
 	done
 
 SSAquaGrandpaTravellingText:
-	text "We're traveling"
-	line "around the world."
+	text "<WATASHI>たち<WA>せかいじゅうを"
+	line "たびして　まわ<TTE>いるんだよ"
 	done
 
 SSAquaGranddaughterCaptainPlayWithMeText:
-	text "CAPTAIN, play with"
-	line "me, please?"
+	text "せんちょうさん"
+	line "あたしと　あそんでー！"
 
-	para "I'm bored! I want"
-	line "to play more!"
+	para "つまんなーい！"
+	line "もっと　あそびたいよー！"
 	done
 
 SSAquaGranddaughterHasToFindGrandpaText:
-	text "Hi! Will you play"
-	line "with me?"
-
-	para "…Oh!"
-
-	para "Grandpa's worried"
-	line "about me?"
-
-	para "I have to go!"
-
-	para "I have to go find"
-	line "Grandpa!"
+	text "おにいちゃん"
+	line "あたしと　あそんでくれる？"
+	cont "<⋯>えっ！"
+	cont "おじいちゃん<GA>しんぱい　してる？"
+	cont "じゃあ　あたし　かえる！"
+	cont "おじいちゃんとこ　かえる！"
 	done
 
 SSAquaGranddaughterWasPlayingMText:
-	text "Grandpa, here I"
-	line "am! I was playing"
-
-	para "with the CAPTAIN"
-	line "and this guy!"
+	text "おじいちゃん　ただいまー！"
+	line "せんちょうさんとー"
+	cont "おにいちゃんとー"
+	cont "あそんでたのー！"
 	done
 
 SSAquaGranddaughterHadFunText:
-	text "I had lots of fun"
-	line "playing!"
+	text "みんなと　あそべて"
+	line "すっごく　たのしかっ<TA!>"
 	done
 
 PokefanmColinSeenText:
-	text "Hey, son! Want to"
-	line "battle with me?"
+	text "おじさんと　しょうぶ　しよう！"
 	done
 
 PokefanmColinBeatenText:
-	text "You're strong!"
+	text "つよいなあ！"
 	done
 
 PokefanmColinAfterBattleText:
-	text "You're traveling"
-	line "all alone?"
-
-	para "Isn't your mom"
-	line "worried?"
+	text "きみ<WA>ひとりたび　かい？"
+	line "おかあさん　しんぱい　してない？"
 	done
 
 TwinsMegandpeg1SeenText:
-	text "You think I'm a"
-	line "baby?"
-	cont "That's not fair!"
+	text "ちびっこ　だと　おも<TTE>るですか？"
+	line "そんなこと　ないんだからあ"
 	done
 
 TwinsMegandpeg1BeatenText:
-	text "Oh! We lost!"
+	text "あら　まけちゃっ<TA!>"
 	done
 
 TwinsMegandpeg1AfterBattleText:
-	text "Baby is a rude"
-	line "name to call us"
-	cont "girls!"
+	text "ちびっこ　<TTE>　よびかた"
+	line "こどもにたいして　しつれい　だもん！"
 	done
 
 TwinsMegandpeg2SeenText:
-	text "I'm not a baby!"
-
-	para "That's not nice to"
-	line "say to a lady!"
+	text "あたしたち　ちびっこ　じゃないですう"
+	line "そんな<NO>レディ<NI>しつれい　ですう"
 	done
 
 TwinsMegandpeg2BeatenText:
-	text "Oh! We lost!"
+	text "あら　まけちゃっ<TA!>"
 	done
 
 TwinsMegandpeg2AfterBattleText:
-	text "Sometimes, kids"
-	line "are smarter than"
-	cont "grown-ups!"
+	text "ぜったい　こども<NO>ほうが"
+	line "かしこいとき<GA>あるんだもん！"
 	done
 
 PsychicRodneySeenText:
-	text "Ssh! My brain is"
-	line "picking up radio"
-	cont "signals!"
+	text "むむ！　ボク<NO>ずのうが"
+	line "でんぱ<WO>キャッチし<TA!>"
 	done
 
 PsychicRodneyBeatenText:
-	text "…I hear some-"
-	line "thing!"
+	text "<⋯>なにか　きこえる！"
 	done
 
 PsychicRodneyAfterBattleText:
-	text "I get it. You can"
-	line "hear JOHTO's radio"
-	cont "on the FAST SHIP."
+	text "そうか　こうそくせん<NO>なかは"
+	line "ジョウト<NO>ラジオ<GA>きけるんだ！"
 	done
 
 PokefanmJeremySeenText:
-	text "What do you think?"
-	line "My #MON are"
-	cont "beautiful, yes?"
+	text "どう？　わがはい<NO>#"
+	line "と<TTE>も　キレイ　だろう？"
 	done
 
 PokefanmJeremyBeatenText:
-	text "Oh, no! My beauti-"
-	line "ful #MON!"
+	text "ああ<⋯>！"
+	line "せっかく　キレイ<NI>したのに！"
 	done
 
 PokefanmJeremyAfterBattleText:
-	text "I must go to the"
-	line "#MON SALON and"
-	cont "fix them up nice!"
+	text "#　びようしつで"
+	line "また　キレイ<NI>してもらおう！"
 	done
 
 PokefanfGeorgiaSeenText:
-	text "I'm going to shop"
-	line "at the DEPT.STORE"
-	cont "and then…"
+	text "ひゃっかてんで　おかいもの！"
+	line "それからね<⋯>"
 	done
 
 PokefanfGeorgiaBeatenText:
-	text "What was I going"
-	line "to do?"
+	text "なんだったかしら<⋯>？"
 	done
 
 PokefanfGeorgiaAfterBattleText:
-	text "Oh, yes! I have to"
-	line "get my #MON out"
-	cont "of DAY-CARE!"
+	text "そうそう　そだてやさん<NI>あずけた"
+	line "#　ひきとり<NI>いかなくちゃ！"
 	done
 
 SupernerdShawnSeenText:
-	text "What kinds of #"
-	line "BALLS do you have"
-	cont "with you?"
+	text "キミ　モンスターボールを"
+	line "なんしゅるい　も<TTE>る？"
 	done
 
 SupernerdShawnBeatenText:
-	text "Wait! Stop! Don't!"
-	line "Please!"
+	text "いや　ちょっと"
+	line "キミ　やめてっ！"
 	done
 
 SupernerdShawnAfterBattleText:
-	text "You should use the"
-	line "right BALLS to fit"
-	cont "the situation."
+	text "ボール<WA>じょうきょうによ<TTE>"
+	line "つかいわけた　ほう<GA>いいですよ"
 	done
 
 SSAquaHasArrivedVermilionText:
-	text "FAST SHIP S.S.AQUA"
-	line "has arrived in"
-	cont "VERMILION CITY."
+	text "こうそくせん　アクアごうは"
+	line "クチバこう<NI>とうちゃくしまし<TA!>"
 	done
 
 FastShipCabins_SE_SSE_CaptainsCabin_MapEvents:

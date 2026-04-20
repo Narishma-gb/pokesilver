@@ -135,10 +135,12 @@ ROMX $27
 	"Map Scripts 4"
 ROMX $28
 	"Map Scripts 5"
+ROMX $29
+	"Map Scripts 6"
 ROMX $2a
-	; "Map Blocks 1"
+	"Map Blocks 1"
 ROMX $2b
-	; "Map Blocks 2"
+	"Map Blocks 2"
 ROMX $2e
 	"Pics 14"
 	; org $6300
@@ -160,8 +162,7 @@ ROMX $36
 	"Phone Scripts"
 	"Map Scripts 12"
 ROMX $37
-	; "Map Blocks 3"
-	org $5773
+	"Map Blocks 3"
 	"Tileset Data 5"
 ROMX $38
 	; "bank38"
@@ -189,7 +190,6 @@ ROMX $3f
 ; ROMX $40
 	; "Title Screen"
 	; "Font Inversed"
-	; "Map Scripts 6"
 	; "Map Scripts 7"
 	; "Map Scripts 8"
 	; "Map Scripts 9"

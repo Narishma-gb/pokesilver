@@ -219,231 +219,194 @@ FastShipB1FSailorBlocksLeftMovement:
 	step_end
 
 FastShipB1FOnDutySailorText:
-	text "Hey, guy. Could I"
-	line "get you to look"
-	cont "for my buddy?"
+	text "ねえ　ねえ　きみ　きみ"
+	line "ともだち<WO>さがしてくれないか？"
 
-	para "He's goofing off"
-	line "somewhere, that"
-	cont "lazy bum!"
+	para "しごと　さぼ<TTE>　どこにいったんだか"
+	line "まったく　もう<⋯>！"
 
-	para "I want to go find"
-	line "him, but I'm on"
-	cont "duty right now."
+	para "ぼくも　さがしにいきたいんだけど"
+	line "しごと<WO>しなきゃ　ダメだし<⋯>"
 	done
 
 FastShipB1FOnDutySailorRefusedText:
-	text "Oh, gee…"
-
-	para "The CAPTAIN will"
-	line "be furious…"
+	text "こまったなあ<⋯>"
+	line "せんちょう<NI>おおめだま　だよ"
 	done
 
 FastShipB1FOnDutySailorThanksText:
-	text "Thanks, guy!"
-	line "I chewed him out"
-
-	para "good so he'll quit"
-	line "slacking off!"
+	text "ありがとう！"
+	line "しごと<WO>さぼらないように"
+	cont "しっかり　クギ<WO>さしておいたよ！"
 	done
 
 FastShipB1FOnDutySailorSawLittleGirlText:
-	text "A little girl?"
+	text "えっ　おんなのこ？"
 
-	para "I may have seen"
-	line "her go by here."
+	para "そういえば"
+	line "ここをとおった　きもするなぁ"
 	done
 
 FastShipB1FOnDutySailorDirectionsText:
-	text "The dining room is"
-	line "up ahead."
+	text "このさき<WA>しょくどう　だよ"
 
-	para "The stairs at the"
-	line "end lead to the"
-	cont "CAPTAIN's cabin."
+	para "おく<NO>かいだん<WA>せんちょうしつに"
+	line "つづいて　いるよ"
 	done
 
 SailorJeffSeenText:
-	text "Nothing beats a"
-	line "battle when I'm"
-	cont "on my break."
+	text "しごと<NO>あいま<NO>きゅうけいは"
+	line "#しょうぶ<GA>いちばん！"
 	done
 
 SailorJeffBeatenText:
-	text "Win or lose, my"
-	line "break's over!"
+	text "か<TTE>も　まけても"
+	line "きゅうけい　しゅうりょうーっ！"
 	done
 
 SailorJeffAfterBattleText:
-	text "I guess I can't"
-	line "win if I don't get"
-	cont "serious."
+	text "ほんごし　いれないと"
+	line "つよく　なれないのか<⋯>！？"
 	done
 
 PicnickerDebraSeenText:
-	text "I'm so bored."
-	line "Want to battle?"
+	text "ちょっと　タイクツね！"
+	line "あたしと　しょうぶ　しようよ！"
 	done
 
 PicnickerDebraBeatenText:
-	text "Yow! You're too"
-	line "strong!"
+	text "いやん　つよいわね！"
 	done
 
 PicnickerDebraAfterBattleText:
-	text "SAFFRON, CELADON…"
-	line "I hear there are"
-
-	para "many big cities"
-	line "in KANTO."
+	text "ヤマブキ<⋯>"
+	line "タマムシ<⋯>"
+	cont "カントーにも　おおきな　まちが"
+	cont "たくさん　ある<TTE>　はなしよ！"
 	done
 
 JugglerFritzSeenText:
-	text "Urrf…"
-	line "I'm seasick!"
+	text "うっぷ！"
+	line "ふなよい　しちゃいまし<TA!>"
 	done
 
 JugglerFritzBeatenText:
-	text "I can't move any-"
-	line "more…"
+	text "もう　うごけません<⋯>"
 	done
 
 JugglerFritzAfterBattleText:
-	text "No more ships for"
-	line "me. Next time,"
-
-	para "I'm taking the"
-	line "MAGNET TRAIN."
+	text "ふね<WA>ダメだ<⋯>"
+	line "こんど<WA>リニア<NI>のろう<⋯>"
 	done
 
 SailorGarrettSeenText:
-	text "This is where we"
-	line "sailors work!"
+	text "<KOKO_WA>オレたち　ふなのりの"
+	line "しんせいな　しごとばだ！"
 	done
 
 SailorGarrettBeatenText:
-	text "I lost on my home"
-	line "field…"
+	text "ホームグラウンドで"
+	line "まけてしまっ<TA!>"
 	done
 
 SailorGarrettAfterBattleText:
-	text "We get different"
-	line "passengers from"
-
-	para "VERMILION CITY to"
-	line "OLIVINE CITY."
+	text "クチバから　アサギ<NI>いくときは"
+	line "おきゃくさん<NO>かおぶれが"
+	cont "かわ<TTE>るんだよ！"
 	done
 
 FisherJonahSeenText:
-	text "Even though we're"
-	line "out on the sea, I"
-	cont "can't fish!"
-
-	para "This is boring!"
-	line "Let's battle!"
+	text "ふね<NI>の<TTE>も　つり<WA>できず"
+	line "たいくつだ　しょうぶしろ！"
 	done
 
 FisherJonahBeatenText:
-	text "I… I'm not bored"
-	line "anymore…"
+	text "た"
+	line "たいくつ<WA>まぎれた<⋯>"
 	done
 
 FisherJonahAfterBattleText:
-	text "I plan to fish off"
-	line "VERMILION's pier."
+	text "クチバ<NO>さんばしで"
+	line "つり<WO>たのしもうと　おも<TTE>ね！"
 	done
 
 BlackbeltWaiSeenText:
-	text "I'm building up my"
-	line "legs by bracing"
-
-	para "against the ship's"
-	line "rocking!"
+	text "うおーすっ！"
+	line "ふね<NO>ゆれ<NI>たえることで"
+	cont "あしこし<WO>きたえるっす！"
 	done
 
 BlackbeltWaiBeatenText:
-	text "Rocked and rolled"
-	line "over!"
+	text "うおーすっ！"
+	line "ごろごろーっ！"
 	done
 
 BlackbeltWaiAfterBattleText:
-	text "I couldn't find"
-	line "the KARATE KING in"
-	cont "JOHTO."
+	text "ジョウトで　しゅぎょうする"
+	line "カラテだいおう<NI>あえなかったっす"
 
-	para "He's supposed to"
-	line "be training in a"
-	cont "cave somewhere."
+	para "どこか<NO>どうくつで"
+	line "しゅぎょう　してる　はずなのに<⋯>"
 	done
 
 SailorKennethSeenText:
-	text "I'm a sailor man!"
+	text "おれ　ふなのり！"
 
-	para "But I'm training"
-	line "#MON, so I can"
-	cont "become the CHAMP!"
+	para "だけど　チャンピオンめざして"
+	line "#<NO>とっくんちゅう！"
 	done
 
 SailorKennethBeatenText:
-	text "My lack of train-"
-	line "ing is obvious…"
+	text "れんしゅうぶそく<WA>かくせない！"
 	done
 
 SailorKennethAfterBattleText:
-	text "Eight BADGES!"
-	line "They must prove"
+	text "<⋯>もしかして　８つ<NO>バッジは"
+	line "ジムリーダー　たおした　しょうこ？"
 
-	para "that you've beaten"
-	line "GYM LEADERS."
-
-	para "No wonder you're"
-	line "so good!"
+	para "どうりで　つよい　わけだ！"
 	done
 
 TeacherShirleySeenText:
-	text "Don't lay a finger"
-	line "on my students!"
+	text "<WATASHI><NO>せいと　たちに"
+	line "て<WO>ださないでっ！"
 	done
 
 TeacherShirleyBeatenText:
-	text "Aaack!"
+	text "きゃあっ！"
 	done
 
 TeacherShirleyAfterBattleText:
-	text "We're on a field"
-	line "trip to the RUINS"
-	cont "outside VIOLET."
+	text "キキョウ　シティの"
+	line "いせき　けんがく<NI>いくのよ"
 	done
 
 SchoolboyNateSeenText:
-	text "Do you know the"
-	line "RUINS OF ALPH?"
+	text "ねえ"
+	line "アルフのいせき　<TTE>　し<TTE>る？"
 	done
 
 SchoolboyNateBeatenText:
-	text "Yaargh!"
+	text "うきゃーっ！"
 	done
 
 SchoolboyNateAfterBattleText:
-	text "Radios pick up"
-	line "strange signals"
-	cont "inside the RUINS."
+	text "いせき<NO>なかで　ラジオ<WO>きくと"
+	line "ふしぎな　おと<GA>きこえる　らしいよ"
 	done
 
 SchoolboyRickySeenText:
-	text "There are some odd"
-	line "stone panels in"
-	cont "the RUINS OF ALPH."
+	text "アルフ<NO>いせきに"
+	line "ふしぎな　せきばん<GA>あるんだ<TTE>！"
 	done
 
 SchoolboyRickyBeatenText:
-	text "I was done in!"
+	text "やられたーっ！"
 	done
 
 SchoolboyRickyAfterBattleText:
-	text "I read that there"
-	line "are four of those"
-	cont "stone panels."
+	text "ほんで　よんだんだけど"
+	line "せきばん<WA>４つ　あるみたいだね！"
 	done
 
 FastShipB1F_MapEvents:

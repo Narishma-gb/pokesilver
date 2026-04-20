@@ -4,11 +4,11 @@ TinTower9F_MapScripts:
 	def_callbacks
 
 TinTower9FUnusedHoOhText: ; unreferenced
-	text "HO-OH: Shaoooh!"
+	text "ホウオウ『ショオーッ！！"
 	done
 
 TinTower9FUnusedLugiaText: ; unreferenced
-	text "LUGIA: Gyaaan!"
+	text "ルギア『ギャーンッ！！"
 	done
 
 TinTower9F_MapEvents:

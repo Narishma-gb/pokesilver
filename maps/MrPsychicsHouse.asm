@@ -27,23 +27,24 @@ MrPsychicsHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
 MrPsychicText1:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "…"
+	para "<⋯>　<⋯>　<⋯>"
 
-	para "…"
+	para "<⋯>　<⋯>　<⋯>"
 
-	para "…I got it!"
+	para "<⋯>　<⋯>　わかっ<TA!>"
 
-	para "You wanted this!"
+	para "これ<GA>ほしい　のか！"
 	done
 
 MrPsychicText2:
-	text "TM29 is PSYCHIC."
+	text "<⋯>　わか<TTE>るな？"
+	line "<TM>２９<WA>サイコキネシス"
 
-	para "It may lower the"
-	line "target's SPECIAL"
-	cont "abilities."
+	para "<⋯>　うまく　いけば"
+	line "あいて<NO>とくしゅ　のうりょくを"
+	cont "さげられる　かも　しれない！"
 	done
 
 MrPsychicsHouse_MapEvents:

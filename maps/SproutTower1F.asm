@@ -41,63 +41,55 @@ SproutTower1FStatue:
 	jumptext SproutTower1FStatueText
 
 SageChowSeenText:
-	text "We stand guard in"
-	line "this tower."
+	text "<WATASHI>たち<GA>こ<NO>とうを"
+	line "おまもり　しているのは"
 
-	para "Here, we express"
-	line "our gratitude to"
-	cont "honor all #MON."
+	para "#へ<NO>かんしゃ<NO>きもちを"
+	line "つね<NI>わすれぬよう<NI>するため！"
 	done
 
 SageChowBeatenText:
-	text "Th-Thank you!"
+	text "あ　ありがとー！"
 	done
 
 SageChowAfterBattleText:
-	text "All living beings"
-	line "coexist through"
-	cont "cooperation."
+	text "すべて<NO>いのち"
+	line "たすけあい　いきてゆく<⋯>"
 
-	para "We must always be"
-	line "thankful for this."
+	para "かんしゃ<NO>きもちを"
+	line "わすれて<WA>いけません"
 	done
 
 SproutTower1FSage1Text:
-	text "Only if you reach"
-	line "the top will you"
-	cont "obtain an HM."
+	text "いちばん　うえまで"
+	line "のぼれた　ものだけが"
+	cont "ひでん<NO>わざ<WO>もらえるのです"
 	done
 
 SproutTower1FSage2Text:
-	text "SPROUT TOWER was"
-	line "built long ago"
-
-	para "as a place for"
-	line "#MON training."
+	text "ここ　マダツボミのとうは"
+	line "#　しゅぎょう<NO>ため"
+	cont "むかし　たてられました"
 	done
 
 SproutTower1FGrannyText:
-	text "A BELLSPROUT over"
-	line "100 feet tall…"
+	text "３０メートルもの"
+	line "きょだいな　マダツボミ"
 
-	para "People say that it"
-	line "became the center"
-	cont "pillar here."
+	para "そ<NO>からだが"
+	line "とう<NO>ちゅうしん<NO>はしらに"
+	cont "なったと　いわれてるんじゃ"
 	done
 
 SproutTower1FTeacherText:
-	text "See the pillar"
-	line "shaking?"
-
-	para "People are train-"
-	line "ing upstairs."
+	text "はしら<GA>びみょう<NI>ゆれてるでしょ"
+	line "うえで　おぼうさんたちが"
+	cont "しゅぎょう<WO>しているのね"
 	done
 
 SproutTower1FStatueText:
-	text "A #MON statue…"
-
-	para "It looks very"
-	line "distinguished."
+	text "#<GA>まつられている<⋯>"
+	line "どこか　こうごうしい　かんじ"
 	done
 
 SproutTower1F_MapEvents:

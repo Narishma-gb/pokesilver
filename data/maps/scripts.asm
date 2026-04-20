@@ -168,6 +168,49 @@ INCLUDE "maps/PowerPlant.asm"
 INCLUDE "maps/BillsHouse.asm"
 
 
+SECTION "Map Scripts 6", ROMX
+
+INCLUDE "maps/SproutTower1F.asm"
+INCLUDE "maps/SproutTower2F.asm"
+INCLUDE "maps/SproutTower3F.asm"
+INCLUDE "maps/TinTower1F.asm"
+INCLUDE "maps/TinTower2F.asm"
+INCLUDE "maps/TinTower3F.asm"
+INCLUDE "maps/TinTower4F.asm"
+INCLUDE "maps/TinTower5F.asm"
+INCLUDE "maps/TinTower6F.asm"
+INCLUDE "maps/TinTower7F.asm"
+INCLUDE "maps/TinTower8F.asm"
+INCLUDE "maps/TinTower9F.asm"
+INCLUDE "maps/BurnedTower1F.asm"
+INCLUDE "maps/BurnedTowerB1F.asm"
+INCLUDE "maps/OlivinePort.asm"
+INCLUDE "maps/VermilionPort.asm"
+INCLUDE "maps/FastShip1F.asm"
+INCLUDE "maps/FastShipCabins_NNW_NNE_NE.asm"
+INCLUDE "maps/FastShipCabins_SW_SSW_NW.asm"
+INCLUDE "maps/FastShipCabins_SE_SSE_CaptainsCabin.asm"
+INCLUDE "maps/FastShipB1F.asm"
+INCLUDE "maps/OlivinePortPassage.asm"
+INCLUDE "maps/VermilionPortPassage.asm"
+INCLUDE "maps/MountMoonSquare.asm"
+INCLUDE "maps/MountMoonGiftShop.asm"
+INCLUDE "maps/TinTowerRoof.asm"
+INCLUDE "maps/FightingDojo.asm"
+INCLUDE "maps/SaffronGym.asm"
+INCLUDE "maps/SaffronMart.asm"
+INCLUDE "maps/SaffronPokecenter1F.asm"
+INCLUDE "maps/SaffronPokecenter2FBeta.asm"
+INCLUDE "maps/MrPsychicsHouse.asm"
+INCLUDE "maps/SaffronMagnetTrainStation.asm"
+INCLUDE "maps/SilphCo1F.asm"
+INCLUDE "maps/CopycatsHouse1F.asm"
+INCLUDE "maps/CopycatsHouse2F.asm"
+INCLUDE "maps/Route5UndergroundPathEntrance.asm"
+INCLUDE "maps/Route5SaffronGate.asm"
+INCLUDE "maps/Route5CleanseTagHouse.asm"
+
+
 SECTION "Map Scripts 12", ROMX
 
 INCLUDE "maps/Route28.asm"
@@ -194,20 +237,6 @@ INCLUDE "maps/SilverCavePokecenter1F.asm"
 INCLUDE "maps/Route28SteelWingHouse.asm"
 
 
-;INCLUDE "maps/SproutTower1F.asm"
-;INCLUDE "maps/SproutTower2F.asm"
-;INCLUDE "maps/SproutTower3F.asm"
-;INCLUDE "maps/TinTower1F.asm"
-;INCLUDE "maps/TinTower2F.asm"
-;INCLUDE "maps/TinTower3F.asm"
-;INCLUDE "maps/TinTower4F.asm"
-;INCLUDE "maps/TinTower5F.asm"
-;INCLUDE "maps/TinTower6F.asm"
-;INCLUDE "maps/TinTower7F.asm"
-;INCLUDE "maps/TinTower8F.asm"
-;INCLUDE "maps/TinTower9F.asm"
-;INCLUDE "maps/BurnedTower1F.asm"
-;INCLUDE "maps/BurnedTowerB1F.asm"
 ;INCLUDE "maps/DiglettsCave.asm"
 ;INCLUDE "maps/MountMoon.asm"
 ;INCLUDE "maps/UndergroundPath.asm"
@@ -216,9 +245,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 ;INCLUDE "maps/SafariZoneFuchsiaGateBeta.asm"
 ;INCLUDE "maps/SafariZoneBeta.asm"
 ;INCLUDE "maps/VictoryRoad.asm"
-
-
-;SECTION "Map Scripts 6", ROMX
 
 ;INCLUDE "maps/WhirlIslandNW.asm"
 ;INCLUDE "maps/WhirlIslandNE.asm"
@@ -389,22 +415,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 ;INCLUDE "maps/HallOfFame.asm"
 
 
-;SECTION "Map Scripts 25", ROMX
-
-;INCLUDE "maps/OlivinePort.asm"
-;INCLUDE "maps/VermilionPort.asm"
-;INCLUDE "maps/FastShip1F.asm"
-;INCLUDE "maps/FastShipCabins_NNW_NNE_NE.asm"
-;INCLUDE "maps/FastShipCabins_SW_SSW_NW.asm"
-;INCLUDE "maps/FastShipCabins_SE_SSE_CaptainsCabin.asm"
-;INCLUDE "maps/FastShipB1F.asm"
-;INCLUDE "maps/OlivinePortPassage.asm"
-;INCLUDE "maps/VermilionPortPassage.asm"
-;INCLUDE "maps/MountMoonSquare.asm"
-;INCLUDE "maps/MountMoonGiftShop.asm"
-;INCLUDE "maps/TinTowerRoof.asm"
-
-
 ;SECTION "Map Scripts 26", ROMX
 
 ;INCLUDE "maps/FuchsiaMart.asm"
@@ -439,23 +449,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 ;INCLUDE "maps/CianwoodPharmacy.asm"
 ;INCLUDE "maps/CianwoodPhotoStudio.asm"
 ;INCLUDE "maps/CianwoodLugiaSpeechHouse.asm"
-
-
-;SECTION "Map Scripts 31", ROMX
-
-;INCLUDE "maps/FightingDojo.asm"
-;INCLUDE "maps/SaffronGym.asm"
-;INCLUDE "maps/SaffronMart.asm"
-;INCLUDE "maps/SaffronPokecenter1F.asm"
-;INCLUDE "maps/SaffronPokecenter2FBeta.asm"
-;INCLUDE "maps/MrPsychicsHouse.asm"
-;INCLUDE "maps/SaffronMagnetTrainStation.asm"
-;INCLUDE "maps/SilphCo1F.asm"
-;INCLUDE "maps/CopycatsHouse1F.asm"
-;INCLUDE "maps/CopycatsHouse2F.asm"
-;INCLUDE "maps/Route5UndergroundPathEntrance.asm"
-;INCLUDE "maps/Route5SaffronGate.asm"
-;INCLUDE "maps/Route5CleanseTagHouse.asm"
 
 
 ;SECTION "Map Scripts 32", ROMX

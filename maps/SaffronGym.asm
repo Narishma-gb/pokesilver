@@ -113,179 +113,147 @@ SaffronGymStatue:
 	jumpstd GymStatue2Script
 
 SabrinaIntroText:
-	text "SABRINA: I knew"
-	line "you were coming…"
+	text "ナツメ『<⋯>　やっぱり　きたわね！"
 
-	para "Three years ago I"
-	line "had a vision of"
-	cont "your arrival."
+	para "あなた<GA>くる　よかんは"
+	line "３ねんまえ　から　あったのよ"
 
-	para "You're after my"
-	line "BADGE."
+	para "あなた<NO>もくてきは"
+	line "ズバリ　<WATASHI><NO>もつ　バッジ！"
 
-	para "I don't enjoy bat-"
-	line "tling, but it's my"
+	para "<WATASHI>　たたかいは"
+	line "すきじゃ　ないけど<⋯>"
+	cont "バッジ<WO>ふさわしい　あいてに"
+	cont "わたすこと<GA>リーダー<NO>つとめ"
 
-	para "duty as a LEADER"
-	line "to confer BADGES"
-
-	para "on anyone who has"
-	line "proven him- or"
-	cont "herself worthy."
-
-	para "Since you wish it,"
-	line "I will show you my"
-	cont "psychic powers!"
+	para "あなた<GA>のぞむ<NO>なら"
+	line "<WATASHI><NO>エスパー　のうりょく"
+	cont "みせて　あげるわ！"
 	done
 
 SabrinaWinLossText:
-	text "SABRINA: Your"
-	line "power…"
+	text "ナツメ『こ<NO>つよさ<⋯>！"
+	line "よそく　いじょう　だわ<⋯>！"
+	cont "かんぜんな　みらい　よちは"
+	cont "できないのかも<⋯>"
 
-	para "It far exceeds"
-	line "what I foresaw…"
-
-	para "Maybe it isn't"
-	line "possible to fully"
-
-	para "predict what the"
-	line "future holds…"
-
-	para "OK, you win. You"
-	line "earned yourself"
-	cont "MARSHBADGE."
+	para "わかったわ　<WATASHI>の"
+	line "ゴールドバッジを"
+	cont "あなた<NI>さしあげ　ましょう"
 	done
 
 ReceivedMarshBadgeText:
-	text "<PLAYER> received"
-	line "MARSHBADGE."
+	text "<PLAYER>は"
+	line "ゴールドバッジ<WO>もらっ<TA!>"
 	done
 
 SabrinaMarshBadgeText:
-	text "SABRINA: MARSH-"
-	line "BADGE draws out"
+	text "ナツメ『そ<NO>ゴールドバッジは"
+	line "あなた<NO>せんざいてき　ちからを"
+	cont "ひきだして　くれる　もの<⋯>"
 
-	para "your subliminal"
-	line "powers…"
+	para "あなた<NO>つよさを"
+	line "せいかく<NI>よち　できなかったけど"
+	cont "これだけ<WA>はっきり　わかる<⋯>"
 
-	para "Although I failed"
-	line "to accurately pre-"
-	cont "dict your power,"
-	cont "this much I know"
-	cont "to be true."
-
-	para "You will become a"
-	line "celebrated and"
-	cont "beloved CHAMPION!"
+	para "あなた<NO>みらい<WA>あかるい"
+	line "すばらしい　チャンピオン　として"
+	cont "みんな<NI>かんげい　されるわ！"
 	done
 
 SabrinaFightDoneText:
-	text "SABRINA: Your love"
-	line "for your #MON"
+	text "ナツメ『<⋯>あなたの"
+	line "#へ<NO>あいじょうが"
+	cont "<WATASHI><NO>ちょうのうりょくに"
+	cont "まさった　ようね<⋯>"
 
-	para "overwhelmed my"
-	line "psychic power…"
-
-	para "The power of love,"
-	line "I think, is also a"
-
-	para "kind of psychic"
-	line "power…"
+	para "そ<NO>あいじょう<NO>ちからも"
+	line "ちょうのうりょく<NO>ひとつ"
+	cont "<WATASHI>　そう　おもうの<⋯>"
 	done
 
 MediumRebeccaSeenText:
-	text "The power of all"
-	line "those you defeated"
-	cont "comes to me!"
+	text "おぬし<GA>たおしてきた"
+	line "も<NO>たち<NO>ちからが"
+	cont "<WATASHI><NO>からだ<NI>ながれこむ！"
 	done
 
 MediumRebeccaBeatenText:
-	text "Strong…"
-	line "Far too strong…"
+	text "つよい　つよすぎる！"
 	done
 
 MediumRebeccaAfterBattleText:
-	text "What is the source"
-	line "of your power?"
+	text "おぬし<NO>ちから<NO>みなもとは"
+	line "なんなのじゃー！"
 	done
 
 PsychicFranklinSeenText:
-	text "Psychic power is"
-	line "the power of your"
-	cont "soul."
+	text "ちょうのうりょくは"
+	line "こころ<NO>ちから！"
 	done
 
 PsychicFranklinBeatenText:
-	text "Your soul has more"
-	line "power than mine!"
+	text "こころ<NO>つよさで"
+	line "まけたーっ！"
 	done
 
 PsychicFranklinAfterBattleText:
-	text "You made your soul"
-	line "stronger, not just"
-	cont "your abilities."
+	text "わざ　だけでなく"
+	line "こころも　きたえられている！"
 	done
 
 MediumDorisSeenText:
-	text "Fufufufu…"
-	line "I see it clearly."
+	text "ふふふ<⋯>"
+	line "みえる　みえるぞ<⋯>！"
 
-	para "I can see into"
-	line "your soul!"
+	para "おぬし<NO>こころのなか"
+	line "はっきりと　みえるのじゃ！"
 	done
 
 MediumDorisBeatenText:
-	text "Though I read you,"
-	line "I still lost…"
+	text "てのうち　わか<TTE>も"
+	line "まけ<WA>まけーっ！"
 	done
 
 MediumDorisAfterBattleText:
-	text "Darn! I forgot"
-	line "that I predicted I"
-	cont "would lose to you."
+	text "しまっ<TA!>"
+	line "おぬし<NI>まけること"
+	cont "よち　していたのに"
+	cont "わすれていたっ！"
 	done
 
 PsychicJaredSeenText:
-	text "The FIGHTING DOJO"
-	line "next door was once"
-	cont "this city's GYM."
+	text "となり<NO>かくとう　どうじょうは"
+	line "かつて<WA>こ<NO>まちの"
+	cont "ジム　だったのだ！"
 	done
 
 PsychicJaredBeatenText:
-	text "I was no match…"
+	text "かなわぬ<⋯>"
 	done
 
 PsychicJaredAfterBattleText:
-	text "KARATE KING, the"
-	line "master of the"
+	text "どうじょう<NO>しはん"
+	line "カラテ　だいおうも"
 
-	para "FIGHTING DOJO, was"
-	line "just destroyed by"
-	cont "SABRINA."
+	para "ナツメさん<NI>こてんぱんに"
+	line "やられたのさ！"
 	done
 
 SaffronGymGuideText:
-	text "Yo, CHAMP in"
-	line "making!"
+	text "おーす！"
+	line "みらい<NO>チャンピオン！"
 
-	para "A trainer as"
-	line "skilled as you"
+	para "あんた　ほど<NO><TRAINER>なら"
+	line "エスパー　タイプ<NO>こうりゃくほうは"
+	cont "もちろん　し<TTE>るよな！"
 
-	para "doesn't need to be"
-	line "told how to deal"
-
-	para "with psychic-type"
-	line "#MON, right?"
-
-	para "I expect great"
-	line "things from you!"
-
-	para "Good luck!"
+	para "きたい　してるぜ！"
+	line "グッド　ラック！"
 	done
 
 SaffronGymGuideWinText:
-	text "That was another"
-	line "fantastic battle!"
+	text "すばらしい　たたかい　だったぜ！"
 	done
 
 SaffronGym_MapEvents:

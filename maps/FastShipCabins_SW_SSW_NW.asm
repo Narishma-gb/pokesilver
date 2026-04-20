@@ -102,102 +102,89 @@ FastShipCabinsNorthwestCabinTrashcan:
 	jumpstd TrashCanScript
 
 FirebreatherLyleSeenText:
-	text "I'm going to KANTO"
-	line "to put on fire-"
-	cont "breathing shows!"
+	text "カントーへ　い<TTE>"
+	line "ほのお<NO>パフォーマンスを"
+	cont "ひろう　するのだ！"
 	done
 
 FirebreatherLyleBeatenText:
-	text "Fizzle… The"
-	line "flame's tiny…"
+	text "ぶす　ぶす<⋯>"
+	line "ほのお<GA>ちいさい<⋯>"
 	done
 
 FirebreatherLyleAfterBattleText:
-	text "I guess fire is"
-	line "weak on the sea."
+	text "やっぱり　うみ<NO>うえじゃ"
+	line "ほのお<WA>よわいのか<⋯>"
 
-	para "It doesn't matter?"
-	line "Really?"
+	para "かんけいない？"
+	line "そうなの？"
 	done
 
 BugCatcherKenSeenText:
-	text "I'm visiting my"
-	line "Grandma to catch"
-	cont "me some bugs!"
+	text "おばあちゃんち<NI>い<TTE>"
+	line "むしとり　するんだ！"
 	done
 
 BugCatcherKenBeatenText:
-	text "Ooh, wow. You're"
-	line "tough, dude!"
+	text "うひゃー！"
+	line "つよいね　おにいちゃん！"
 	done
 
 BugCatcherKenAfterBattleText:
-	text "You can find lots"
-	line "of #MON in the"
-	cont "trees of JOHTO!"
+	text "ジョウト<NO>き　には"
+	line "たくさん　#<GA>いるんだよ！"
 	done
 
 BeautyCassieSeenText:
-	text "I'm trying to"
-	line "forget my woes."
-	cont "Let's battle!"
+	text "#しょうぶで"
+	line "かなしみ<WO>まぎらわすのよ"
+	cont "つきあ<TTE>もらうわ！"
 	done
 
 BeautyCassieBeatenText:
-	text "My heart weeps…"
+	text "<WATASHI><NO>こころ<GA>ないてる<⋯>"
 	done
 
 BeautyCassieAfterBattleText:
-	text "A voyage is best"
-	line "for getting over"
-	cont "a broken heart."
+	text "しつれん<NO>かなしみ<WO>いやすには"
+	line "ふなたび<GA>いちばん　だけど<⋯>"
 
-	para "But a FAST SHIP"
-	line "trip is too short"
-	cont "for grieving."
+	para "こうそくせんじゃ　はやすぎて"
+	line "じょうちょ　<GA>ないわね"
 	done
 
 GuitaristClydeSeenText:
-	text "I'm going to audi-"
-	line "tion my songs at"
-
-	para "GOLDENROD's RADIO"
-	line "STATION."
+	text "コガネ<NO>ラジオきょくへ"
+	line "うた<WO>うりこみ<NI>いくのだ！"
 	done
 
 GuitaristClydeBeatenText:
-	text "Yowza!"
-	line "Total distortion!"
+	text "ぎゅいいいんっ！"
 	done
 
 GuitaristClydeAfterBattleText:
-	text "Speaking of the"
-	line "RADIO STATION,"
-
-	para "what's this week's"
-	line "lucky number?"
+	text "ラジオきょくと　いえば"
+	line "きょう<NO>ラッキーチャンネルの"
+	cont "あたり　ばんごう<WA>なにかな<⋯>"
 	done
 
 FastShipBedText1:
-	text "A comfy bed!"
-	line "Time to sleep…"
+	text "ふかふか　<NO>ベッドだ！"
+	line "ゆっくり　やすもう<⋯>"
 	done
 
 FastShipBedText2:
-	text "Ah, refreshed and"
-	line "restored!"
+	text "すっかり　げんき<NI>なっ<TA!>"
 	done
 
 FastShipArrivedOlivineText:
-	text "FAST SHIP S.S.AQUA"
-	line "has arrived in"
-	cont "OLIVINE CITY."
+	text "こうそくせん　アクアごうは"
+	line "アサギこう<NI>とうちゃくしまし<TA!>"
 	done
 
 FastShipArrivedVermilionText:
-	text "FAST SHIP S.S.AQUA"
-	line "has arrived in"
-	cont "VERMILION CITY."
+	text "こうそくせん　アクアごうは"
+	line "クチバこう<NI>とうちゃくしまし<TA!>"
 	done
 
 FastShipCabins_SW_SSW_NW_MapEvents:

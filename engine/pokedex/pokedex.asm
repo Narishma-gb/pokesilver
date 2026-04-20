@@ -945,7 +945,7 @@ Pokedex_DrawMainScreenBG:
 	call Pokedex_PlaceBorder
 	ld a, [wCurDexMode]
 	cp DEXMODE_OLD
-	jr z, Pokedex_DrawMainScreenOldDex
+	jr z, .OldDex
 
 ; New Dex / AIUEO Dex
 	hlcoord 9, 0
@@ -959,18 +959,19 @@ Pokedex_DrawMainScreenBG:
 	ld [hl], $3f
 	hlcoord 13, 16
 	ld [hl], $40
-	jr Pokedex_DrawMainScreenCommon
+	jr .common
 
-Pokedex_DrawMainScreenOldDex:
+.OldDex
 	hlcoord 9, 0
 	lb bc, 15, 9
 	call Pokedex_PlaceBorder
+
 	hlcoord 14, 0
 	ld [hl], $3f
 	hlcoord 14, 16
 	ld [hl], $40
 
-Pokedex_DrawMainScreenCommon:
+.common
 	hlcoord 0, 10
 	lb bc, 5, 7
 	call Pokedex_PlaceBorder
@@ -985,6 +986,7 @@ Pokedex_DrawMainScreenCommon:
 	hlcoord 5, 12
 	lb bc, 1, 3
 	call PrintNum
+
 	hlcoord 1, 14
 	ld de, String_OWN
 	call Pokedex_PlaceString
@@ -995,6 +997,7 @@ Pokedex_DrawMainScreenCommon:
 	hlcoord 5, 15
 	lb bc, 1, 3
 	call PrintNum
+
 	hlcoord 1, 17
 	ld de, String_OPTION_SEARCH
 	call Pokedex_PlaceString
@@ -1015,11 +1018,11 @@ Pokedex_DrawDexEntryScreenBG:
 	lb bc, 15, 18
 	call Pokedex_PlaceBorder
 	hlcoord 1, 9
-	ld bc, 18
+	ld bc, SCREEN_WIDTH - 2
 	ld a, $61
 	call ByteFill
 	hlcoord 1, 17
-	ld bc, 18
+	ld bc, SCREEN_WIDTH - 2
 	ld a, '　'
 	call ByteFill
 	hlcoord 2, 8
@@ -1104,7 +1107,7 @@ Pokedex_DrawSearchScreenBG:
 	ret
 
 .Title:
-	db $3b, $4b, $4c, $4d, $4e, $3c, -1
+	db $3b, $4b, $4c, $4d, $4e, $3c, -1 ; けんさく
 
 .TypeLeftRightArrows:
 	db $3d, "　　　　", $3e, -1
@@ -1532,34 +1535,34 @@ Pokedex_AIUEOMode:
 	ld hl, wPokedexOrder
 	ld de, GojuonPokedexOrder
 	ld c, NUM_POKEMON
-.loop1abc
+.loop1_aiueo
 	push bc
 	ld a, [de]
 	ld [wTempSpecies], a
 	call Pokedex_CheckSeen
-	jr z, .skipabc
+	jr z, .skip_aiueo
 	ld a, [wTempSpecies]
 	ld [hli], a
 	ld a, [wDexListingEnd]
 	inc a
 	ld [wDexListingEnd], a
 
-.skipabc
+.skip_aiueo
 	inc de
 	pop bc
 	dec c
-	jr nz, .loop1abc
+	jr nz, .loop1_aiueo
 	ld a, [wDexListingEnd]
 	ld c, 0
-.loop2abc
+.loop2_aiueo
 	cp NUM_POKEMON
-	jr z, .doneabc
+	jr z, .done_aiueo
 	ld [hl], c
 	inc hl
 	inc a
-	jr .loop2abc
+	jr .loop2_aiueo
 
-.doneabc
+.done_aiueo
 	ret
 
 INCLUDE "data/pokemon/dex_order_alpha.asm"

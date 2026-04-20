@@ -227,73 +227,61 @@ VermilionPortApproachFastShipRightMovement:
 	step_end
 
 VermilionPortDepartingText:
-	text "We're departing"
-	line "soon. Please get"
-	cont "on board."
+	text "まもなく　しゅっこう　です"
+	line "じょうせん　してください"
 	done
 
 VermilionPortCantBoardText:
-	text "Sorry. You can't"
-	line "board now."
+	text "ふねに<WA>のれません！"
 	done
 
 VermilionPortAskBoardingText:
-	text "Welcome to FAST"
-	line "SHIP S.S.AQUA."
-
-	para "Will you be board-"
-	line "ing today?"
+	text "ようこそ！"
+	line "こうそくせん　アクアごうへ！"
+	cont "じょうせん　しますか？"
 	done
 
 VermilionPortAskTicketText:
-	text "May I see your"
-	line "S.S.TICKET, sir?"
+	text "それでは　チケットを　はいけんします"
 	done
 
 VermilionPortComeAgainText:
-	text "We hope to see you"
-	line "again!"
+	text "また<NO>ごりようを"
+	line "よろしく　おねがいします"
 	done
 
 VermilionPortSSTicketText:
-	text "<PLAYER> flashed"
-	line "the S.S.TICKET."
+	text "<PLAYER><WA>せんいんに"
+	line "ふねのチケット<WO>みせ<TA!>"
 
-	para "That's it."
-	line "Thank you, sir!"
+	para "はい！　けっこう　です！"
 	done
 
 VermilionPortNoTicketText:
-	text "<PLAYER> tried to"
-	line "show the S.S."
-	cont "TICKET…"
+	text "<PLAYER><WA>せんいんに"
+	line "チケット<WO>みせようとした<⋯>"
+	cont "チケットが<⋯>　ない<⋯>！"
 
-	para "…But no TICKET!"
+	para "<⋯>もうしわけ　ありません！"
 
-	para "Sorry!"
-	line "You may board only"
-
-	para "if you have an"
-	line "S.S.TICKET."
+	para "はいれる　のは"
+	line "チケット<NO>ある　かた　だけです"
 	done
 
 VermilionPortSailWednesdayText:
-	text "The FAST SHIP will"
-	line "sail on Wednesday."
+	text "こうそくせん<NO>しゅっこうは"
+	line "つぎ<NO>すいようび　です"
 	done
 
 VermilionPortSailSundayText:
-	text "The FAST SHIP will"
-	line "sail next Sunday."
+	text "こうそくせん<NO>しゅっこうは"
+	line "つぎ<NO>にちようび　です"
 	done
 
 VermilionPortSuperNerdText:
-	text "You came from"
-	line "JOHTO?"
-
-	para "I hear many rare"
-	line "#MON live over"
-	cont "there."
+	text "きみ<WA>ジョウトから　きたの？"
+	line "あそこに<WA>めずらしい　#が"
+	cont "たくさん　いるらしいね"
 	done
 
 VermilionPort_MapEvents:

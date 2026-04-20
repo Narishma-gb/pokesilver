@@ -37,49 +37,38 @@ SproutTower2FXDefend:
 	itemball X_DEFEND
 
 SageNicoSeenText:
-	text "However hard we"
-	line "battle, the TOWER"
-	cont "will stand strong."
+	text "われわれ<GA>おおあばれ　しても"
+	line "こ<NO>とう<WA>びくとも　しません！"
 	done
 
 SageNicoBeatenText:
-	text "I fought hard but"
-	line "I'm too weak."
+	text "あばれた　わりに<WA>よわかった<⋯>！"
 	done
 
 SageNicoAfterBattleText:
-	text "The flexible pil-"
-	line "lar protects the"
-
-	para "TOWER, even from"
-	line "earthquakes."
+	text "おおきな　じしん　でも"
+	line "ゆれる　はしら<NO>おかげで"
+	cont "たおれないのです<⋯>！"
 	done
 
 SageEdmondSeenText:
-	text "…Sway like leaves"
-	line "in the wind…"
+	text "かぜ<NI>ゆれている"
+	line "はっぱ<NO>ように<⋯>！"
 	done
 
 SageEdmondBeatenText:
-	text "Oh, I'm weak!"
+	text "なんじゃくものーっ！"
 	done
 
 SageEdmondAfterBattleText:
-	text "I tried to copy"
-	line "BELLSPROUT's"
-
-	para "gentle movements"
-	line "for battle…"
-
-	para "But I didn't train"
-	line "well enough."
+	text "マダツボミ<NO>しなやかな　うごきを"
+	line "たたかい<NI>とりいれたのですが<⋯>"
+	cont "しゅぎょう<GA>たりぬ　ようです"
 	done
 
 SproutTower2FStatueText:
-	text "A #MON statue…"
-
-	para "It looks very"
-	line "distinguished."
+	text "#<GA>まつられている<⋯>"
+	line "どこか　こうごうしい　かんじ"
 	done
 
 SproutTower2F_MapEvents:

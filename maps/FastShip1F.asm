@@ -206,83 +206,65 @@ FastShip1F_PlayerLeavesShipRightMovement:
 	step_end
 
 FastShip1FSailor1Text_ToVermilion:
-	text "FAST SHIP S.S.AQUA"
-	line "is en route to"
-	cont "VERMILION CITY."
+	text "こうそくせん　アクアごうは"
+	line "クチバシティ<NI>むかいます"
 
-	para "We will make an"
-	line "announcement when"
-	cont "we arrive."
+	para "クチバ<NO>みなと<NI>つきましたら"
+	line "ほうそうで　おしらせします"
 	done
 
 FastShip1FSailor1Text_ToOlivine:
-	text "FAST SHIP S.S.AQUA"
-	line "is en route to"
-	cont "OLIVINE CITY."
+	text "こうそくせん　アクアごうは"
+	line "アサギシティ<NI>むかいます"
 
-	para "We will make an"
-	line "announcement when"
-	cont "we arrive."
+	para "アサギ<NO>みなと<NI>つきましたら"
+	line "ほうそうで　おしらせします"
 	done
 
 FastShip1FSailor2Text_FirstTime:
-	text "Here's your cabin."
+	text "きみ<NO>へや<WA>ここだよ"
 
-	para "If your #MON"
-	line "are hurt, take a"
-	cont "nap in the bed."
-
-	para "That will heal"
-	line "them."
+	para "#たち<GA>きずついたら"
+	line "ベッドで　やすむと　いいよ"
+	cont "みんな　げんき<NI>なるからね"
 	done
 
 FastShip1FSailor2Text:
-	text "Here's your cabin."
+	text "きみ<NO>へや<WA>ここだよ"
 
-	para "You can heal your"
-	line "#MON by taking"
-	cont "a nap in the bed."
+	para "ベッドで　やすめば"
+	line "#も　げんき<NI>なるからね"
 
-	para "The ship will"
-	line "arrive while"
-	cont "you're sleeping."
+	para "ねている　あいだに"
+	line "みなと<NI>とうちゃく　するよ"
 	done
 
 FastShip1FSailor3Text:
-	text "The passengers are"
-	line "all trainers."
+	text "ふね<NI>の<TTE>る　きゃくは"
+	line "みんな　<TRAINER>　なんだ"
 
-	para "They're all itch-"
-	line "ing to battle in"
-	cont "their cabins."
+	para "へやで　たいせん　あいてを"
+	line "まちかまえているよ"
 	done
 
 FastShip1FGrandpaText:
-	text "Whoa!"
+	text "ごめんよ　ぼうや！"
+	line "おじさん　あわててたから<⋯>！"
 
-	para "Excuse me, son."
-	line "I was in a hurry!"
-
-	para "My granddaughter"
-	line "is missing!"
-
-	para "She's just a wee"
-	line "girl. If you see"
-
-	para "her, please let me"
-	line "know!"
+	para "まごむすめ<GA>いなくな<TTE>ね"
+	line "さがしているんだよ！"
+	cont "ちいさい　おんなのこ　なんだが"
+	cont "みかけたら　おしえてくれ！"
 	done
 
 FastShip1FSailor1Text_InOlivine:
-	text "FAST SHIP S.S.AQUA"
-	line "has arrived in"
-	cont "OLIVINE CITY."
+	text "こうそくせん　アクアごうは"
+	line "アサギこう<NI>とうちゃくしまし<TA!>"
 	done
 
 FastShip1FSailor1Text_InVermilion:
-	text "FAST SHIP S.S.AQUA"
-	line "has arrived in"
-	cont "VERMILION CITY."
+	text "こうそくせん　アクアごうは"
+	line "クチバこう<NI>とうちゃくしまし<TA!>"
 	done
 
 FastShip1F_MapEvents:

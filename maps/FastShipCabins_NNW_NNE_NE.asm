@@ -132,136 +132,118 @@ FastShipLazySailorLeavesMovement2:
 	step_end
 
 CooltrainermSeanSeenText:
-	text "I'm going to KANTO"
-	line "to test my skills."
+	text "カントーへ　い<TTE>"
+	line "うでだめし　<WO>するんだよ！"
 	done
 
 CooltrainermSeanBeatenText:
-	text "I wanted to win!"
+	text "かちたかった<⋯>！"
 	done
 
 CooltrainermSeanAfterBattleText:
-	text "Trainers from"
-	line "JOHTO can battle"
-
-	para "with KANTO GYM"
-	line "LEADERS."
+	text "ジョウト<NO><TRAINER>でも"
+	line "カントー<NO>ジムリーダーと"
+	cont "たたかうこと<GA>できるのさ！"
 	done
 
 CooltrainerfCarolSeenText:
-	text "I'm training to"
-	line "become the CHAMP!"
+	text "あたしも　チャンピオンを"
+	line "めざして　がんば<TTE>るの！"
 	done
 
 CooltrainerfCarolBeatenText:
-	text "What's so differ-"
-	line "ent between us?"
+	text "あたしと　あなた"
+	line "なに<GA>ちがうの<⋯>！？"
 	done
 
 CooltrainerfCarolAfterBattleText:
-	text "I'm going to beat"
-	line "you someday!"
+	text "いつか　きっと"
+	line "あなた<NI>か<TTE>　みせるわ！"
 	done
 
 PokemaniacEthanSeenText:
-	text "Do you know LILY?"
-	line "She's a hot DJ in"
-	cont "KANTO."
+	text "カントー<NO>にんき　ディージェイ"
+	line "リリスちゃん<WO>し<TTE>る？"
 	done
 
 PokemaniacEthanBeatenText:
-	text "Gyaaaah!"
+	text "うぎゃーっ！"
 	done
 
 PokemaniacEthanAfterBattleText:
-	text "LILY's nice, but"
-	line "MARY's the best!"
-
-	para "I want to check"
-	line "out JOHTO's radio"
-	cont "stations!"
+	text "リリスちゃんも　いいけど"
+	line "クルミちゃん　サイコー！"
+	cont "ジョウトのラジオ<WO>ききたい！"
 	done
 
 HikerNolandSeenText:
-	text "Are you alone?"
-	line "Then let's battle!"
+	text "キミ<WA>ひとりか！？"
+	line "じゃあ　#しょうぶだ！"
 	done
 
 HikerNolandBeatenText:
-	text "That's too much to"
-	line "handle!"
+	text "つよすぎーっ！"
 	done
 
 HikerNolandAfterBattleText:
-	text "I wonder if there"
-	line "are any mountains"
-
-	para "worth climbing in"
-	line "KANTO?"
+	text "<WATASHI><WO>まんぞく　させるような"
+	line "けわしい　やまが"
+	cont "カントーにも　あるんだろうか？"
 	done
 
 SailorStanlySeenText:
-	text "Yeah, I'm a sail-"
-	line "or, all right."
+	text "いかにも　オレ<WA>ふなのりだ！"
+	line "しかし　サボ<TTE>いた　わけじゃない！"
+	cont "だれも　いない　へやだったから"
+	cont "ちょっと　ひるね　してただけだ<⋯>！"
 
-	para "I wasn't goofing"
-	line "off!"
-
-	para "This cabin was"
-	line "vacant, so I just"
-	cont "took a quick nap!"
-
-	para "Ah, forget it!"
-	line "Let's battle!"
+	para "ええい！"
+	line "#　しょうぶだ！"
 	done
 
 SailorStanlyBeatenText:
-	text "Sorry! It's all my"
-	line "fault!"
+	text "すまん！"
+	line "オレ<GA>わるかっ<TA!>"
 	done
 
 SailorStanlyAfterBattleText:
-	text "Being a sailor, I"
-	line "have to do phys-"
-	cont "ical labor. It's"
-	cont "exhausting!"
+	text "ふなのり<WA>ちからしごと"
+	line "ほんと<NI>つかれるんだよ<⋯>"
 	done
 
 GentlemanEdwardSeenText:
-	text "Oh, no. I've lost"
-	line "something that's"
-	cont "very important."
+	text "うーむ　こまった"
+	line "だいじなもの<WO>なくして　しまった"
 	done
 
 GentlemanEdwardBeatenText:
-	text "I… I can't find"
-	line "it…"
+	text "み<⋯>"
+	line "みつからない<⋯>！"
 	done
 
 GentlemanEdwardAfterBattleText:
-	text "I give up. Son,"
-	line "you don't have to"
-
-	para "look. Just forget"
-	line "about it!"
+	text "しょうがない　あきらめるか"
+	line "あー　キミ　キミ！"
+	cont "さがさなくて　いいからね"
+	cont "わすれて　くれたまえ！"
 	done
 
 BurglarCoreySeenText:
-	text "Yeehaw!"
-	line "Lucky!"
+	text "いえーいっ！"
+	line "ラッキー！"
 	done
 
 BurglarCoreyBeatenText:
-	text "How unlucky!"
-	line "I lost!"
+	text "まけたのは"
+	line "アンラッキー！"
 	done
 
 BurglarCoreyAfterBattleText:
-	text "I found a pretty"
-	line "coin here."
+	text "キレイな　コインを"
+	line "へやで　ひろっちゃったよ"
 
-	para "Someone must have"
-	line "lost it…"
+	para "まえ<NI>このへや<WO>つか<TTE>た"
+	line "きゃく<GA>おとしたのかな<⋯>？"
 	done
 
 FastShipCabins_NNW_NNE_NE_MapEvents:

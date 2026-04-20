@@ -161,119 +161,85 @@ FirebreatherDickMovement:
 	step_end
 
 BurnedTowerRival_BeforeText:
-	text "<……> <……> <……>"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "…Oh, it's you."
+	para "<⋯>　なんだ　おまえ　か"
 
-	para "You wanted to get"
-	line "stronger, so you"
+	para "ちょっと<WA>つよくなりたくて"
+	line "ここ<NI>ねむると　いわれる"
+	cont "でんせつ<NO>#　さがしにきた"
+	cont "そんな　かんじ　だな"
 
-	para "came for the leg-"
-	line "endary #MON"
+	para "だ<GA>それ<WA>むりさ"
 
-	para "that's supposed to"
-	line "be here. That's"
-	cont "your story, right?"
+	para "でんせつ<NO>#は"
+	line "オレ<GA>つかまえる<⋯>"
 
-	para "Well, that's not"
-	line "going to happen."
+	para "なんた<TTE>　オレ<WA>さいきょうの"
+	line "<TRAINER><NI>なるからな"
+	cont "でんせつ<NO>#<GA>にあうのさ"
 
-	para "Because I'm going"
-	line "to get it!"
-
-	para "I'm going to be"
-	line "the world's great-"
-	cont "est trainer, so a"
-	cont "legendary #MON"
-	cont "would be perfect"
-	cont "for me."
-
-	para "…Well, anyway,"
-	line "I'm getting tired"
-
-	para "of having a wimp"
-	line "like you always"
-	cont "showing up."
+	para "<⋯>　それよりも　おまえ"
+	line "よわいくせ<NI>あちこち"
+	cont "うろついて　めざわり　だぜ"
 	done
 
 BurnedTowerRival_WinText:
-	text "…Humph!"
+	text "<⋯>　フン！"
 
-	para "This is why I hate"
-	line "battling wimps."
-
-	para "There's no"
-	line "challenge in it."
+	para "これだから　よわい　やつと"
+	line "たたかう<NO>イヤ　なんだ"
+	cont "つい　あそびすぎてしまう"
 	done
 
 BurnedTowerRival_AfterText1:
-	text "…Aw, whatever."
+	text "<⋯>　まあ　いいさ"
 
-	para "You would never be"
-	line "able to catch a"
-
-	para "legendary #MON"
-	line "anyway."
+	para "おまえ　なんかに"
+	line "でんせつ<NO>#"
+	cont "つかまえられる　わけ　ないさ"
 	done
 
 BurnedTowerRival_LossText:
-	text "…Humph!"
+	text "<⋯>　フン！"
 
-	para "This is why I hate"
-	line "battling wimps."
-
-	para "It's just a waste"
-	line "of my time."
+	para "これだから　よわい　やつと"
+	line "たたかう<NO>イヤ　なんだ"
+	cont "じかん<NO>むだでしか　ないぜ"
 	done
 
 FirebreatherDickBeforeText:
-	text "Hey, I'm training"
-	line "secretly here!"
-
-	para "Don't embarrass me"
-	line "by looking!"
+	text "こっそり　れんしゅう　してるのを"
+	line "みられたら　はずかしいじゃねーか！"
 	done
 
 FirebreatherDickBeatenText:
-	text "I burned down to"
-	line "white ashes…"
+	text "もえつきた<⋯>"
+	line "まっしろ<NI>なっちまったよ<⋯>"
 	done
 
 FirebreatherDickAfterText:
-	text "I was so into my"
-	line "training that I"
-
-	para "fell down this"
-	line "hole."
+	text "れんしゅう<NI>むちゅうで"
+	line "あなから　おっこちまったよ　わはは"
 	done
 
 FirebreatherNedSeenText:
-	text "My soul is on"
-	line "fire. I'll show"
-
-	para "you how hot it"
-	line "burns!"
+	text "おれ<NO>たましい<GA>もえている"
+	line "そ<NO>あつさ　おしえてやる"
 	done
 
 FirebreatherNedBeatenText:
-	text "Still not hot"
-	line "enough…"
+	text "まだ　おんど<GA>ひくかったか"
 	done
 
 FirebreatherNedAfterText:
-	text "In the past, there"
-	line "were these #MON"
+	text "むかし　ものすごい　はやさで"
+	line "あちこち<NO>みち<WO>はしりまわ<TTE>た"
+	cont "#<GA>いたらしい"
 
-	para "that ran through"
-	line "grass at super-"
-	cont "high speed."
-
-	para "They say that they"
-	line "run like the wind."
-
-	para "If you run into"
-	line "one in grass, it"
-	cont "will likely bolt."
+	para "かぜのよう<NI>はやい　らしいからな"
+	line "ぐうぜん　くさむらで　であ<TTE>も"
+	cont "すぐ<NI>にげてしまう　だろうな"
 	done
 
 BurnedTower1F_MapEvents:

@@ -125,120 +125,97 @@ CopycatSpinAroundMovementData:
 	step_end
 
 CopycatText_Male_1:
-	text "<PLAYER>: Hi! Do"
-	line "you like #MON?"
+	text "<PLAYER>『やあ！　こんにちは！"
+	line "きみ　#　すきかい？"
 
-	para "<PLAYER>: Uh, no, I"
-	line "just asked you."
+	para "<PLAYER>『ぼく　じゃなく<TTE>"
+	line "きみ<NI>きいてるんだ　けど"
 
-	para "<PLAYER>: Huh?"
-	line "You're strange!"
+	para "<PLAYER>『<⋯>　えー　なんだよ！"
+	line "ヘンな　やつ　だなあ！"
 	done
 
 CopycatText_QuickMimicking:
-	text "COPYCAT: Hmm?"
-	line "Quit mimicking?"
+	text "モノマネむすめ『<⋯>　なに？"
+	line "ひと<NO>マネ　すんな<TTE>？"
 
-	para "But that's my"
-	line "favorite hobby!"
+	para "だ<TTE>　あたし"
+	line "ものまね　しゅみ　なんだ　もん！"
 	done
 
 CopycatText_Male_2:
-	text "<PLAYER>: Hi!"
-	line "I heard that you"
+	text "<PLAYER>『やあ！　こんにちは！"
+	line "ピッピにんぎょう<WO>なくして"
+	cont "こま<TTE>る　みたいだね！"
 
-	para "lost your favorite"
-	line "# DOLL."
+	para "<PLAYER>『みつけて　くれたら"
+	line "ていきけん<WO>もらえるの？"
 
-	para "<PLAYER>: If I find"
-	line "it, you'll give me"
-	cont "a rail PASS?"
+	para "<PLAYER>『じゃあ　ぼくが"
+	line "さがして　あげよう！"
 
-	para "<PLAYER>: I'll go"
-	line "find it for you."
-
-	para "You think you lost"
-	line "it when you went"
-	cont "to VERMILION CITY?"
+	para "クチバ　シティ<NI>いったとき"
+	line "おとしたかも　しれないんだね！"
 	done
 
 CopycatText_Worried:
-	text "COPYCAT: Pardon?"
+	text "モノマネむすめ『<⋯>　なに？"
+	line "か<TTE><NI>きめるな<TTE>？"
 
-	para "I shouldn't decide"
-	line "what you should"
-	cont "do?"
-
-	para "But I'm really"
-	line "worried… What if"
-	cont "someone finds it?"
+	para "だ<TTE>　こま<TTE>るんだもん<⋯>"
+	line "だれか<NI>ひろわれたのかな<⋯>？"
 	done
 
 CopycatText_GiveDoll:
-	text "COPYCAT: Yay!"
-	line "That's my CLEFAIRY"
-	cont "# DOLL!"
-
-	para "See the tear where"
-	line "the right leg is"
-
-	para "sewn on? That's"
-	line "proof!"
+	text "モノマネむすめ『わあー！"
+	line "<WATASHI><NO>ピッピにんぎょう！"
+	cont "ほら　みぎあし<NO>つけね<NO>キズ！"
+	cont "これ<GA>しょうこ　なの！"
 	done
 
 CopycatText_GivePass:
-	text "OK. Here's the"
-	line "MAGNET TRAIN PASS"
-	cont "like I promised!"
+	text "やくそくどおり　はい　これ！"
+	line "リニア<NO>ていきけんよ！"
 	done
 
 CopycatText_ExplainPass:
-	text "COPYCAT: That's"
-	line "the PASS for the"
-	cont "MAGNET TRAIN."
+	text "モノマネむすめ『リニア<NI>のるとき"
+	line "つかう　ていきけん　なの！"
 
-	para "The rail company"
-	line "man gave me that"
-
-	para "when they tore"
-	line "down our old house"
-	cont "for the STATION."
+	para "まえ<NI>すんでいた　いえが"
+	line "リニアのえき<NI>なるとき"
+	cont "てつどうがいしゃ<NO>ひとが"
+	cont "くれた　も<NO>なのよ"
 	done
 
 CopycatText_Male_3:
-	text "<PLAYER>: Hi!"
-	line "Thanks a lot for"
-	cont "the rail PASS!"
+	text "<PLAYER>『やあ！　さっきは"
+	line "リニア<NO>ていきけん　ありがと！"
 
-	para "<PLAYER>: Pardon?"
+	para "<PLAYER>『<⋯>　なーに？"
 
-	para "<PLAYER>: Is it"
-	line "that fun to mimic"
-	cont "my every move?"
+	para "<PLAYER>『ぼく<NO>まね　して"
+	line "そんな<NI>たのしい　かい？"
 	done
 
 CopycatText_ItsAScream:
-	text "COPYCAT: You bet!"
-	line "It's a scream!"
+	text "モノマネむすめ『うん<⋯>！"
+	line "と<TTE>も　たのしいー！"
 	done
 
 CopycatsDodrioText1:
-	text "DODRIO: Gii giii!"
+	text "ドードリオ『ギー　ギーッ！"
 	done
 
 CopycatsDodrioText2:
-	text "MIRROR, MIRROR ON"
-	line "THE WALL, WHO'S"
-
-	para "THE FAIREST ONE OF"
-	line "ALL?"
+	text "<⋯>　カガミ　ヨ　カガミ！"
+	line "セカイデ　イチバン　キレイナ"
+	cont "オンナノコハ　ダーレ？"
 	done
 
 CopycatsHouse2FDollText:
-	text "This is a rare"
-	line "#MON! Huh?"
-
-	para "It's only a doll…"
+	text "これ<WA>めずらしい　#！？"
+	line "<⋯>　あれ？　ぬいぐるみ　だった"
 	done
 
 CopycatsHouse2F_MapEvents:

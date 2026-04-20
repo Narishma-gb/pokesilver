@@ -284,102 +284,86 @@ OlivinePortApproachFastShipAfterHOFRightMovement:
 	step_end
 
 OlivinePortSailorGetOnBoardText:
-	text "We're departing"
-	line "soon. Please get"
-	cont "on board."
+	text "まもなく　しゅっこう　です"
+	line "じょうせん　してください"
 	done
 
 OlivinePortCantBoardText:
-	text "Sorry. You can't"
-	line "board now."
+	text "ふねに<WA>のれません！"
 	done
 
 OlivinePortAskBoardText:
-	text "Welcome to FAST"
-	line "SHIP S.S.AQUA."
-
-	para "Will you be board-"
-	line "ing today?"
+	text "ようこそ！"
+	line "こうそくせん　アクアごうへ！"
+	cont "じょうせん　しますか？"
 	done
 
 OlivinePortAskTicketText:
-	text "May I see your"
-	line "S.S.TICKET, sir?"
+	text "それでは　チケットを　はいけんします"
 	done
 
 OlivinePortComeAgainText:
-	text "We hope to see you"
-	line "again!"
+	text "また<NO>ごりようを"
+	line "よろしく　おねがいします"
 	done
 
 OlivinePortFlashTicketText:
-	text "<PLAYER> flashed"
-	line "the S.S.TICKET."
+	text "<PLAYER><WA>せんいんに"
+	line "ふねのチケット<WO>みせ<TA!>"
 
-	para "That's it."
-	line "Thank you, sir!"
+	para "はい！　けっこう　です！"
 	done
 
 OlivinePortNoTicketText:
-	text "<PLAYER> tried to"
-	line "show the S.S."
-	cont "TICKET…"
+	text "<PLAYER><WA>せんいんに"
+	line "チケット<WO>みせようとした<⋯>"
+	cont "チケットが<⋯>　ない<⋯>！"
 
-	para "…But no TICKET!"
+	para "<⋯>もうしわけ　ありません！"
 
-	para "Sorry!"
-	line "You may board only"
-
-	para "if you have an"
-	line "S.S.TICKET."
+	para "はいれる　のは"
+	line "チケット<NO>ある　かた　だけです"
 	done
 
 OlivinePortMondayShipText:
-	text "The FAST SHIP will"
-	line "sail next Monday."
+	text "こうそくせん<NO>しゅっこうは"
+	line "つぎ<NO>げつようび　です"
 	done
 
 OlivinePortFridayShipText:
-	text "The FAST SHIP will"
-	line "sail next Friday."
+	text "こうそくせん<NO>しゅっこうは"
+	line "つぎ<NO>きんようび　です"
 	done
 
 OlivinePortFishingGuru1Text:
-	text "SHELLDER are easy"
-	line "to catch here."
-
-	para "They're kind of"
-	line "rare elsewhere."
+	text "ほかで<WA>なかなか　つれない"
+	line "シェルダー<GA>よく　つれるんだ！"
 	done
 
 OlivinePortFishingGuru2Text:
-	text "How many RODS do"
-	line "you have?"
+	text "キミ　つりざおを"
+	line "なんぼん　も<TTE>る？"
 
-	para "Different RODS"
-	line "catch different"
-	cont "#MON."
+	para "つりざお<NO>しゅるいによ<TTE>"
+	line "つりやすい　#<GA>かわるんだ！"
 	done
 
 OlivinePortYoungsterText:
-	text "S.S.AQUA uses jets"
-	line "to skim over the"
-	cont "waves!"
+	text "こうそくせん　アクアごうは"
+	line "ジェットのちからで　すこし　ういて"
+	cont "うみのうえ<WO>はしるんだぜ！"
 	done
 
 OlivinePortCooltrainerFText:
-	text "There are lots of"
-	line "#MON in KANTO."
-
-	para "I wish I could go…"
+	text "カントーにも　たくさん"
+	line "#<GA>いるのよね！"
+	cont "<WATASHI>も　いきたいな"
 	done
 
 OlivinePortSailorBeforeHOFText:
-	text "We don't want you"
-	line "to fall into the"
-
-	para "sea, so you're not"
-	line "allowed in."
+	text "うみ<NI>おっこちたら"
+	line "あぶない　からね"
+	cont "このさき<WA>いっちゃ　ダメだよ"
 	done
 
 OlivinePort_MapEvents:

@@ -36,38 +36,30 @@ CopycatsHouse1FBlisseyScript:
 	end
 
 CopycatsHouse1FPokefanMText:
-	text "My daughter likes"
-	line "to mimic people."
+	text "<⋯>　こまった　こと<NI>むすめは"
+	line "ひと<NO>まね<GA>すきでな！"
 
-	para "Her mimicry has"
-	line "earned her the"
-
-	para "nickname COPYCAT"
-	line "around here."
+	para "しょっちゅう　ひと<WO>からかう　ので"
+	line "きんじょ　じゃ"
+	cont "モノマネ　むすめと　よばれとる！"
 	done
 
 CopycatsHouse1FPokefanFText:
-	text "My daughter is so"
-	line "self-centered…"
-
-	para "She only has a few"
-	line "friends."
+	text "たく<NO>むすめは"
+	line "ほんと　わがまま<NI>そだ<TTE><⋯>"
+	cont "おともだちも　あまり　おりませんの"
 	done
 
 CopycatsHouse1FPokefanFText_ReturnedMachinePart:
-	text "She recently lost"
-	line "the # DOLL that"
+	text "３ねんまえ　おとこのこ<NI>もらった"
+	line "ピッピにんぎょう<WO>なくしてから"
 
-	para "a boy gave her"
-	line "three years ago."
-
-	para "Ever since then,"
-	line "she's gotten even"
-	cont "better at mimicry…"
+	para "ますます　ものまねに"
+	line "みがき<GA>かか<TTE>　しま<TTE><⋯>"
 	done
 
 CopycatsHouse1FBlisseyText:
-	text "BLISSEY: Bliisii!"
+	text "ハピナス『はっぴーっ！"
 	done
 
 CopycatsHouse1F_MapEvents:

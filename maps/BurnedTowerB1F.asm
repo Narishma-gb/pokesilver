@@ -125,7 +125,7 @@ BurnedTowerSuicuneMovement:
 	step_end
 
 UnusedEnteiText:
-	text "ENTEI: Bufuu!"
+	text "エン『ブフウ！！"
 	done
 
 BurnedTowerB1F_MapEvents:

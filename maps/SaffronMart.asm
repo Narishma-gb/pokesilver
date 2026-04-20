@@ -21,18 +21,16 @@ SaffronMartCooltrainerFScript:
 	jumptextfaceplayer SaffronMartCooltrainerFText
 
 SaffronMartCooltrainerMText:
-	text "There's a big"
-	line "RADIO TOWER in"
-	cont "LAVENDER."
+	text "シオン　タウンには"
+	line "おおきな　ラジオとう<GA>あるんだ"
 	done
 
 SaffronMartCooltrainerFText:
-	text "I want to become"
-	line "stronger, but I'm"
-	cont "not good yet…"
+	text "もっと　つよく　なりたいけど"
+	line "まだまだ　なの<⋯>"
 
-	para "Could you show me"
-	line "how sometime?"
+	para "こんど　つよくなる　コツを"
+	line "おしえて　ほしいわね"
 	done
 
 SaffronMart_MapEvents:
