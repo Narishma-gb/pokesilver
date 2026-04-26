@@ -21,28 +21,20 @@ LavenderMartRockerScript:
 	jumptextfaceplayer LavenderMartRockerText
 
 LavenderMartPokefanMText:
-	text "REPEL is a neces-"
-	line "sity if you are"
+	text "どうくつ　たんけん<NO>ときは"
+	line "むしよけスプレー<GA>だいかつやく！"
 
-	para "going to explore a"
-	line "cave."
-
-	para "Even though I like"
-	line "exploring, I still"
-
-	para "haven't made it to"
-	line "all the caves."
+	para "たんけん　だいすきな　わしでも"
+	line "どうくつ<NO>ぜんぶ<NO>ばしょには"
+	cont "まだ　いったこと<GA>ないんだよ"
 	done
 
 LavenderMartRockerText:
-	text "I heard about a"
-	line "craftsman who"
+	text "ジョウト<NO>ヒワダ<TTE>　ところに"
+	line "とくせい<NO>ボール<WO>つくる"
+	cont "しょくにん<GA>いるらしいね！"
 
-	para "makes custom #"
-	line "BALLS in the JOHTO"
-
-	para "town of AZALEA. I"
-	line "wish I had some."
+	para "ぼくも　ほしいなあ！"
 	done
 
 LavenderMart_MapEvents:

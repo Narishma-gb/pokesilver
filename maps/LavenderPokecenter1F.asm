@@ -35,43 +35,29 @@ LavenderPokecenter1FYoungsterScript:
 	end
 
 LavenderPokecenter1FGentlemanText:
-	text "To the north of"
-	line "LAVENDER is ROCK"
-
-	para "TUNNEL. Go through"
-	line "it to get to the"
-	cont "POWER PLANT."
+	text "シオン　タウン<NO>きた<NI>ある"
+	line "イワヤマ　トンネル<WO>こえると"
+	cont "はつでんしょ<GA>あるよ"
 	done
 
 LavenderPokecenter1FTeacherText:
-	text "There's a radio"
-	line "program that plays"
-	cont "# FLUTE music."
+	text "#のふえ　<NO>ねいろを"
+	line "ながしてる　チャンネル<GA>あるのよ"
 
-	para "Oh? Ah, your radio"
-	line "needs an EXPN CARD"
-	cont "to tune into it."
+	para "かくちょうカード<GA>ないと"
+	line "じゅしん　できないけどね"
 	done
 
 LavenderPokecenter1FYoungsterText:
-	text "The RADIO STATION"
-	line "can't broadcast"
-
-	para "because the POWER"
-	line "PLANT is down."
+	text "はつでんしょ<GA>うごかないと"
+	line "ラジオ<NO>ほうそうが"
+	cont "できなくなる　らしいね"
 	done
 
 LavenderPokecenter1FYoungsterText_ReturnedMachinePart:
-	text "The DIRECTOR of"
-	line "the RADIO STATION"
-	cont "sure was happy."
-
-	para "He said they're"
-	line "back on the air"
-
-	para "because the POWER"
-	line "PLANT is running"
-	cont "smoothly again."
+	text "はつでんしょ<GA>なおったから"
+	line "ラジオ<NO>ほうそう<GA>できる<TTE>"
+	cont "きょくちょう<GA>よろこんでたよ"
 	done
 
 LavenderPokecenter1F_MapEvents:

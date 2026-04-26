@@ -86,134 +86,89 @@ CianwoodCityHiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_CIANWOOD_CITY_HIDDEN_MAX_ETHER
 
 ChucksWifeEasierToFlyText:
-	text "You crossed the"
-	line "sea to get here?"
+	text "あ<NO>うみ<WO>わた<TTE>きたの？"
+	line "それ<WA>たいへん　だったでしょ"
 
-	para "That must have"
-	line "been hard."
-
-	para "It would be much"
-	line "easier if your"
-
-	para "#MON knew how"
-	line "to FLY…"
+	para "#<GA>そら<WO>とぶ　わざを"
+	line "おぼえていれば　らく　なんだけど<⋯>"
 	done
 
 ChucksWifeBeatChuckText:
-	text "But you can't use"
-	line "FLY without this"
-	cont "city's GYM BADGE."
-
-	para "If you beat the"
-	line "GYM LEADER here,"
-	cont "come see me."
-
-	para "I'll have a nice"
-	line "gift for you."
+	text "ジムバッジ<GA>ないと　つかえないのよ"
+	line "あなた　このまち<NO>ジムリーダーに"
+	cont "かったら　また　いらっしゃい"
+	cont "いいもの<WO>あげるから"
 	done
 
 ChucksWifeGiveHMText:
-	text "That's CIANWOOD's"
-	line "GYM BADGE!"
+	text "それ<WA>タンバ<NO>ジムバッジ！"
 
-	para "Then you should"
-	line "take this HM."
+	para "じゃあ　こ<NO>ひでんマシンを"
+	line "も<TTE>いくと　いいわ"
 	done
 
 ChucksWifeFlySpeechText:
-	text "Teach FLY to your"
-	line "#MON."
-
-	para "You will be able"
-	line "to FLY instantly"
-
-	para "to anywhere you "
-	line "have visited."
+	text "そらをとぶ<WO>おぼえさせると"
+	line "いままで　いった　ばしょに"
+	cont "いっしゅんで　いけるよう<NI>なるわ"
 	done
 
 ChucksWifeChubbyText:
-	text "My husband lost to"
-	line "you, so he needs"
-	cont "to train harder."
+	text "ふふふ　うち<NO>だんなったら"
+	line "あなた<NI>まけたから　とっくんね"
 
-	para "That's good, since"
-	line "he was getting a"
-	cont "little chubby."
+	para "いいのよ　さいきん"
+	line "おなか　たるんできたから"
 	done
 
 CianwoodCityYoungsterText:
-	text "If you use FLY,"
-	line "you can get back"
-
-	para "to OLIVINE in-"
-	line "stantly."
+	text "そらをとぶ　わざ<GA>つかえると"
+	line "アサギシティにも　すぐ　いけるよね！"
 	done
 
 CianwoodCityPokefanMText:
-	text "Boulders to the"
-	line "north of town can"
-	cont "be crushed."
+	text "まち<NO>きたにある　いわ<WO>くだくと"
+	line "いろんな　もの<GA>でてくるんだわ"
 
-	para "They may be hiding"
-	line "something."
-
-	para "Your #MON could"
-	line "use ROCK SMASH to"
-	cont "break them."
+	para "いわ<WO>こわしたきゃ"
+	line "#<NI>いわくだきを"
+	cont "させりゃあ　いいんだわ"
 	done
 
 CianwoodCityLassText:
-	text "CHUCK, the GYM"
-	line "LEADER, spars with"
-
-	para "his fighting #-"
-	line "MON."
+	text "ジムリーダー<NO>シジマさん"
+	line "かくとう#　きたえるのに"
+	cont "じぶん<GA>あいて　してあげるのよ"
 	done
 
 CianwoodCityUnusedText:
-	text "There are several"
-	line "islands between"
-	cont "here and OLIVINE."
+	text "ここと　アサギ<NO>あいだに"
+	line "いくつか　しま<GA>あったでしょ"
 
-	para "A mythical sea"
-	line "creature supposed-"
-	cont "ly lives there."
+	para "なかに<WA>うみのかみさまが"
+	line "すんでいる<TTE>　はなし　なの"
 	done
 
 CianwoodCitySignText:
-	text "CIANWOOD CITY"
-
-	para "A Port Surrounded"
-	line "by Rough Seas"
+	text "<KOKO_WA>タンバ　シティ"
+	line "あらなみ<NI>かこまれた　うみのまち"
 	done
 
 CianwoodGymSignText:
-	text "CIANWOOD CITY"
-	line "#MON GYM"
-
-	para "LEADER: CHUCK"
-
-	para "His Roaring Fists"
-	line "Do the Talking"
+	text "タンバ　シティ　#ジム"
+	line "リーダー　シジマ"
+	cont "うなる　こぶしで　かたる　おとこ"
 	done
 
 CianwoodPharmacySignText:
-	text "500 Years of"
-	line "Tradition"
-
-	para "CIANWOOD CITY"
-	line "PHARMACY"
-
-	para "We Await Your"
-	line "Medicinal Queries"
+	text "そうぎょう　５００ねん"
+	line "タンバ　くすりや"
+	cont "くすり<NO>そうだん　ま<TTE>おります"
 	done
 
 CianwoodPhotoStudioSignText:
-	text "CIANWOOD CITY"
-	line "PHOTO STUDIO"
-
-	para "Take a Snapshot as"
-	line "a Keepsake!"
+	text "タンバ　しゃしんオヤジ"
+	line "たび<NO>きねん<NI>１まい　どうぞ"
 	done
 
 CianwoodCity_MapEvents:

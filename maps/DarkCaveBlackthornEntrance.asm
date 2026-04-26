@@ -32,31 +32,22 @@ DarkCaveBlackthornEntranceTMSnore:
 	itemball TM_SNORE
 
 DarkCaveBlackthornEntrancePharmacistText1:
-	text "Whoa! You startled"
-	line "me there!"
+	text "うわ！　びっくりし<TA!>"
 
-	para "I had my BLACK-"
-	line "GLASSES on, so I"
+	para "くろいメガネ<WO>かけてるから"
+	line "ぜんぜん　きづかなかっ<TA!>"
 
-	para "didn't notice you"
-	line "at all."
+	para "ここで　なにしてるか<TTE>？"
 
-	para "What am I doing"
-	line "here?"
-
-	para "Hey, don't you"
-	line "worry about it."
-
-	para "I'll give you a"
-	line "pair of BLACK-"
-	cont "GLASSES, so forget"
-	cont "you saw me, OK?"
+	para "まあ　いいじゃないか"
+	line "きみにも　くろいメガネ<WO>あげるから"
+	cont "き<NI>しないでよ"
 	done
 
 DarkCaveBlackthornEntrancePharmacistText2:
-	text "BLACKGLASSES ups"
-	line "the power of dark-"
-	cont "type moves."
+	text "くろいメガネ<⋯>"
+	line "#<NI>もたせると　あくタイプの"
+	cont "わざ<NO><KOUGEKI>りょく<GA>あがるんだ"
 	done
 
 DarkCaveBlackthornEntrance_MapEvents:

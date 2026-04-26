@@ -25,7 +25,6 @@ CianwoodGymChuckScript:
 	turnobject CIANWOODGYM_CHUCK, RIGHT
 	opentext
 	writetext ChuckIntroText2
-	waitbutton
 	closetext
 	applymovement CIANWOODGYM_BOULDER1, CianwoodGymMovement_ChuckChucksBoulder
 	playsound SFX_STRENGTH
@@ -148,159 +147,130 @@ CianwoodGymMovement_ChuckChucksBoulder:
 	step_end
 
 ChuckIntroText1:
-	text "WAHAHAH!"
+	text "おっしゃ！"
+	line "ここまで　きたかーっ！"
+	cont "いっとく<GA>わし<WA>つよいぞ！"
 
-	para "So you've come"
-	line "this far!"
+	para "きたえた　#は"
+	line "いわ<WO>くだき"
+	cont "ホネをも　こなみじん　にする！"
 
-	para "Let me tell you,"
-	line "I'm tough!"
-
-	para "My #MON will"
-	line "crush stones and"
-	cont "shatter bones!"
-
-	para "Watch this!"
+	para "ちょっと　みておれ"
 	done
 
 ChuckIntroText2:
-	text "CHUCK: Urggh!"
-	line "…"
+	text "シジマ『ううー"
+	line "<⋯>　<⋯>　<⋯>"
 
-	para "Oooarrgh!"
+	para "どりゃああ！！"
 	done
 
 ChuckIntroText3:
-	text "There! Scared now,"
-	line "are you?"
+	text "どうだ！　おじけづいたろ！"
 
-	para "What?"
-	line "It has nothing to"
-
-	para "do with #MON?"
-	line "That's true!"
-
-	para "Come on. We shall"
-	line "do battle!"
+	para "な<NI>#と<WA>かんけい　ない？"
+	line "それも　そうだ！"
+	cont "で<WA>しょうぶと　いくかあ！"
 	done
 
 ChuckLossText:
-	text "Wha? Huh?"
-	line "I lost?"
+	text "おりょ？"
+	line "わし<GA>まけるとは<⋯>"
 
-	para "How about that!"
-	line "You're worthy of"
-	cont "STORMBADGE!"
+	para "こりゃ　まいっ<TA!>"
+	line "よーしっ！　こ<NO>ショックバッジは"
+	cont "おまえ<NI>ふさわしい！"
 	done
 
 GetStormBadgeText:
-	text "<PLAYER> received"
-	line "STORMBADGE."
+	text "<PLAYER><WA>シジマから"
+	line "ショックバッジ<WO>もらっ<TA!>"
 	done
 
 ChuckExplainBadgeText:
-	text "STORMBADGE makes"
-	line "all #MON up to"
+	text "ショックバッジ<GA>あれば"
+	line "ひとから　もらった　#でも"
+	cont "レベル７０までなら　いうことをきく"
 
-	para "L70 obey, even"
-	line "traded ones."
+	para "#<NO>わざで　そらをとべる！"
 
-	para "It also lets your"
-	line "#MON use FLY"
-
-	para "when you're not in"
-	line "a battle."
-
-	para "Here, take this"
-	line "too!"
+	para "うむっ　ついでだ"
+	line "こいつも　も<TTE>け！"
 	done
 
 ChuckExplainTMText:
-	text "That is DYNAMIC-"
-	line "PUNCH."
+	text "<TM>０１<NO>なかみは"
+	line "ばくれつパンチ！！"
 
-	para "It doesn't always"
-	line "hit, but when it"
-
-	para "does, it causes"
-	line "confusion!"
+	para "あたるかどうか　いちか　ばちか　だが"
+	line "あたれば　ぜったいに"
+	cont "こんらん　させるほどの"
+	cont "いちげき<WO>おみまい　するぞ！"
 	done
 
 ChuckAfterText:
-	text "WAHAHAH! I enjoyed"
-	line "battling you!"
+	text "わはは！"
+	line "わし　たのしかったよ！"
 
-	para "But a loss is a"
-	line "loss!"
-
-	para "From now on, I'm"
-	line "going to train 24"
-	cont "hours a day!"
+	para "でも　まけ<WA>まけ　だからなあ"
+	line "あしたから　２４じかん　とっくんだ！"
 	done
 
 BlackbeltYoshiSeenText:
-	text "My #MON and I"
-	line "are bound togeth-"
-	cont "er by friendship."
-
-	para "Our bond will"
-	line "never be broken!"
+	text "わしと　#は"
+	line "あつい　ゆうじょうで　むすばれとる！"
+	cont "だれにも　やぶること<WA>できんぞ！"
 	done
 
 BlackbeltYoshiBeatenText:
-	text "This isn't real!"
+	text "ほんと　かー！？"
 	done
 
 BlackbeltYoshiAfterText:
-	text "You seem to have a"
-	line "strong bond with"
-	cont "your #MON too!"
+	text "おまえと　#も　なかなか"
+	line "つよい　むすびつき<NO>ようだな！"
 	done
 
 BlackbeltLaoSeenText:
-	text "We martial artists"
-	line "fear nothing!"
+	text "おれたち　かくとうかに"
+	line "こわいも<NO>なんて　ないぞ！"
 	done
 
 BlackbeltLaoBeatenText:
-	text "That's shocking!"
+	text "ががーん！"
 	done
 
 BlackbeltLaoAfterText:
-	text "Fighting #MON"
-	line "are afraid of psy-"
-	cont "chics…"
+	text "かくとう　#は"
+	line "ちょうのうりょく<GA>こわいんだよな"
 	done
 
 BlackbeltNobSeenText:
-	text "Words are useless."
-	line "Let your fists do"
-	cont "the talking!"
+	text "はだか　いっかん！"
+	line "ことば<WA>いらない"
+	cont "こぶしで　かたろう！"
 	done
 
 BlackbeltNobBeatenText:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 	done
 
 BlackbeltNobAfterText:
-	text "I lost! "
-	line "I'm speechless!"
+	text "まけたら　はなすこと<WA>ない！"
 	done
 
 BlackbeltLungSeenText:
-	text "My raging fists"
-	line "will shatter your"
-	cont "#MON!"
+	text "うなる　こぶしで　おまえ<NO>"
+	line "#<WO>こなごな<NI>してやろう！"
 	done
 
 BlackbeltLungBeatenText:
-	text "I got shattered!"
+	text "こ　こなごな　だ<⋯>"
 	done
 
 BlackbeltLungAfterText:
-	text "My #MON lost…"
-	line "My pride is shat-"
-	cont "tered…"
+	text "じまん<NO>#<GA>まけるなんて"
+	line "プライド　こなごな　だな<⋯>"
 	done
 
 CianwoodGym_MapEvents:

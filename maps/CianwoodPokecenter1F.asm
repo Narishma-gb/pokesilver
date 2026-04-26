@@ -32,44 +32,32 @@ CianwoodGymGuideScript:
 	end
 
 CianwoodPokecenter1FLassText:
-	text "Did you meet the"
-	line "#MANIAC?"
+	text "こ<NO>まち<NO>マニア<NI>あった？"
 
-	para "He's always brag-"
-	line "ging about his"
-	cont "rare #MON."
+	para "めずらしい　#　も<TTE>る<TTE>"
+	line "いつも　じまん　してるんだから"
 	done
 
 CianwoodGymGuideText:
-	text "The #MON GYM"
-	line "trainers here are"
-	cont "macho bullies."
+	text "こ<NO>まち<NO>#ジムは"
+	line "あらくれも<NO>ばかり！"
 
-	para "If I stick around,"
-	line "they might come"
-	cont "after me."
+	para "そば<NI>いると　オレまで"
+	line "ふっとばされそうだ"
 
-	para "Here's some ad-"
-	line "vice: the GYM"
+	para "すまん<GA>ここで　アドバイス"
+	line "ジムリーダー<GA>つかうのは"
+	cont "かくとう#！"
 
-	para "LEADER uses the"
-	line "fighting-type."
-
-	para "So you should"
-	line "confound him with"
-	cont "psychic #MON."
-
-	para "Wipe out his #-"
-	line "MON before they"
-
-	para "can use their"
-	line "physical strength."
+	para "だったら　こっちは"
+	line "エスパー#で　まどわしてやれ！"
+	cont "あいて<GA>パワー<WO>はっきするまえに"
+	cont "たおして　やるんだ！"
 	done
 
 CianwoodGymGuideWinText:
-	text "<PLAYER>! You won!"
-	line "I could tell by"
-	cont "looking at you!"
+	text "<PLAYER>！　かったんだろ？"
+	line "そ<NO>かお<WO>みりゃ　わかるぜ！"
 	done
 
 CianwoodPokecenter1F_MapEvents:

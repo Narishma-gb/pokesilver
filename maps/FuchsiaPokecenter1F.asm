@@ -59,31 +59,24 @@ FuchsiaPokecenter1FJanineImpersonatorSpinMovement:
 	step_end
 
 FuchsiaPokecenter1FCooltrainerMText:
-	text "Hey! You have a"
-	line "brand new kind of"
-	cont "#DEX."
-
-	para "Did PROF.OAK give"
-	line "that to you?"
+	text "お！"
+	line "さいしんがた<NO>#ずかん！"
+	cont "オーキドはかせ<NI>もらったのかい？"
 	done
 
 FuchsiaPokecenter1FCooltrainerFText:
-	text "I got quite a"
-	line "shock at the GYM."
-
-	para "There were all"
-	line "these girls who"
-	cont "looked identical."
+	text "ジム<NI>いったら　ビックリ！"
+	line "おなじ　かお<NO>おんなのこが"
+	cont "たくさん　いたのよ！"
 	done
 
 FuchsiaPokecenter1FJanineImpersonatorText1:
-	text "I'm JANINE! Hocus-"
-	line "pocus… Poof!"
+	text "アンズ　おねえちゃんだぞ！"
+	line "どろろん！"
 	done
 
 FuchsiaPokecenter1FJanineImpersonatorText2:
-	text "See? I look just"
-	line "like her now!"
+	text "ほら　ソックリでしょ？"
 	done
 
 FuchsiaPokecenter1F_MapEvents:

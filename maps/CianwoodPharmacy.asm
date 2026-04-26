@@ -39,35 +39,29 @@ CianwoodPharmacyBookshelf:
 	jumpstd DifficultBookshelfScript
 
 PharmacistGiveSecretpotionText:
-	text "Your #MON ap-"
-	line "pear to be fine."
+	text "きみ<NO>#"
+	line "そない　じゅうしょうと<WA>おもえんが"
+	cont "なにごとか　こまっとるのかね？"
 
-	para "Is something wor- "
-	line "rying you?"
+	para "<⋯>　<⋯>　<⋯>"
 
-	para "…"
+	para "ふーむ"
+	line "とうだい<NO>#がな"
 
-	para "The LIGHTHOUSE"
-	line "#MON is in"
-	cont "trouble?"
-
-	para "I got it!"
-
-	para "This ought to do"
-	line "the trick."
+	para "わかっ<TA!>"
+	line "それなら　こ<NO>くすりやな"
+	cont "も<TTE>いきよし"
 	done
 
 ReceivedSecretpotionText:
-	text "<PLAYER> received"
-	line "SECRETPOTION."
+	text "<PLAYER>は"
+	line "ひでんのくすり<WO>あずかっ<TA!>"
 	done
 
 PharmacistDescribeSecretpotionText:
-	text "My SECRETPOTION is"
-	line "a tad too strong."
-
-	para "I only offer it in"
-	line "an emergency."
+	text "わし<NO>ひでんのくすりは"
+	line "ききめ　つよすぎるからな"
+	cont "よほどのことでないと　あげないのや"
 	done
 
 CianwoodPharmacy_MapEvents:

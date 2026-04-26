@@ -22,29 +22,18 @@ BlackthornPokecenter1FCooltrainerMScript:
 	jumpstd HappinessCheckScript
 
 BlackthornPokecenter1FGentlemanText:
-	text "Deep inside far-"
-	line "off INDIGO PLATEAU"
+	text "とおく　はなれた　セキエイこうげんの"
+	line "おくち<NI>あるという　#リーグ"
 
-	para "is the #MON"
-	line "LEAGUE."
-
-	para "I hear the best"
-	line "trainers gather"
-
-	para "there from around"
-	line "the country."
+	para "ぜんこくから　うで<NO>たつ"
+	line "<TRAINER><GA>あつまる　そうだ"
 	done
 
 BlackthornPokecenter1FTwinText:
-	text "There was this"
-	line "move I just had"
-
-	para "to teach my #-"
-	line "MON."
-
-	para "So I got the MOVE"
-	line "DELETER to make it"
-	cont "forget an HM move."
+	text "どうしても　おぼえさせたい"
+	line "わざ<GA>あったから"
+	cont "わすれオヤジ<NI>たのんで"
+	cont "ひでん<WO>わすれさせて　もらったの！"
 	done
 
 BlackthornPokecenter1F_MapEvents:

@@ -234,148 +234,125 @@ Movement_NinjaSpin:
 	step_end
 
 JanineText_DisappointYou:
-	text "Fufufufu…"
+	text "ふふふ<⋯>"
+	line "ざんねんだったわね<⋯>"
 
-	para "I'm sorry to dis-"
-	line "appoint you…"
+	para "<TTE>　いうの<WA>ウソー！"
 
-	para "I'm only joking!"
-
-	para "I'm the real deal!"
-
-	para "JANINE of FUCHSIA"
-	line "GYM, that's me!"
+	para "あたい<GA>ホンモノ！"
+	line "セキチク　ジム<NO>アンズよ！"
 	done
 
 JanineText_ToughOne:
-	text "JANINE: You're a"
-	line "tough one. You"
-	cont "definitely won…"
+	text "アンズ『つよいね　あん<TA!>"
+	line "まけたよ　かんぺきに<⋯>"
 
-	para "Here's SOULBADGE."
-	line "Take it."
+	para "ほら　これ　も<TTE><TTE>！"
+	line "ピンク　バッジよ！"
 	done
 
 Text_ReceivedSoulBadge:
-	text "<PLAYER> received"
-	line "SOULBADGE."
+	text "<PLAYER><WA>アンズから"
+	line "ピンクバッジ<WO>もらっ<TA!>"
 	done
 
 JanineText_ToxicSpeech:
-	text "JANINE: You're so"
-	line "tough! I have a"
-	cont "special gift!"
+	text "アンズ『あんた　つよいね！"
+	line "とくべつ<NI>これ　あげるわ！"
 
-	para "It's TOXIC, a pow-"
-	line "erful poison that"
-
-	para "steadily saps the"
-	line "victim's HP."
+	para "つよい　どくで"
+	line "あいて<NO>たいりょく<WO>うばう"
+	cont "どくどく　<TTE>　わざよ！"
 	done
 
 JanineText_ApplyMyself:
-	text "JANINE: I'm going"
-	line "to really apply"
+	text "アンズ『もっと　しゅぎょうして"
+	line "もっと　もっと　つよくなるわ！"
 
-	para "myself and improve"
-	line "my skills."
-
-	para "I want to become"
-	line "better than both"
-	cont "Father and you!"
+	para "あたい<NO>ちちうえにも"
+	line "あんたにも　まけない　ようにね！"
 	done
 
 LassAliceBeforeText:
-	text "Fufufu!"
-
-	para "I'm JANINE, the"
-	line "GYM LEADER!"
-
-	para "No, I'm not!"
-	line "Gotcha, sucker!"
+	text "ふふっ！"
+	line "<WATASHI><GA>リーダー<NO>アンズ<⋯>"
+	cont "なーんて！"
+	cont "ひっかかったわね！"
 	done
 
 LassAliceBeatenText:
-	text "I had you fooled…"
+	text "うまく　だませたのに<⋯>！"
 	done
 
 LassAliceAfterText:
-	text "How will you dis-"
-	line "tinguish our real"
-	cont "LEADER?"
+	text "だれ<GA>ほんもの<NO>リーダーか"
+	line "みわけられるかしら？"
 	done
 
 LassLindaBeforeText:
-	text "Fooled you!"
-	line "Hahaha!"
+	text "だまされたわね！"
+	line "あははははっ！"
 	done
 
 LassLindaBeatenText:
-	text "Ooh… I lost…"
-	line "You're not weak…"
+	text "まけた<⋯>！"
+	line "つよいわ　このひと！"
 	done
 
 LassLindaAfterText:
-	text "Well? Wasn't my"
-	line "disguise perfect?"
+	text "どう？"
+	line "<WATASHI><NO>へんそう"
+	cont "そっくり　だったでしょ！"
 	done
 
 PicnickerCindyBeforeText:
-	text "I'm JANINE!"
-
-	para "How did you know I"
-	line "was real?"
-
-	para "Let's battle!"
+	text "<WATASHI><GA>アンズ！"
+	line "よく　わかったわねっ！"
+	cont "しょうぶよっ！"
 	done
 
 PicnickerCindyBeatenText:
-	text "Darn it!"
-	line "I wanted to win!"
+	text "<⋯>くやしい！"
+	line "かちたかったわっ！"
 	done
 
 PicnickerCindyAfterText:
-	text "You must be"
-	line "getting tired."
+	text "もう　そろそろ"
+	line "つかれて　きたようね！"
 	done
 
 CamperBarryBeforeText:
-	text "Wahahaha!"
+	text "わっはっはっ！"
 
-	para "You betcha, dude."
-	line "I'm JANINE!"
+	para "そうだよ！"
+	line "ボク<GA>アンズだよ！"
 	done
 
 CamperBarryBeatenText:
-	text "My disguise was"
-	line "right on! Dang!"
+	text "かんぺきな　へんそう　だったのに！"
+	line "くやしいっ！"
 	done
 
 CamperBarryAfterText:
-	text "Hey, dude. Was my"
-	line "disguise cute or"
-	cont "what, huh?"
+	text "けっこう　かわいく"
+	line "へんそう　してたでしょ！"
 	done
 
 FuchsiaGymGuideText:
-	text "Yo, CHAMP in"
-	line "making!"
+	text "おーす！"
+	line "みらい<NO>チャンピオン！"
 
-	para "Whoops! Take a"
-	line "good look around"
+	para "<⋯>おっと！"
+	line "よく　みまわして　みなよ！"
+	cont "リーダー<NO>アンズが"
+	cont "たくさん　いるぜ！"
 
-	para "you. The trainers"
-	line "all look like the"
-	cont "LEADER, JANINE."
-
-	para "Which of them is"
-	line "the real JANINE?"
+	para "ほんもの<WA>だれかな！？"
 	done
 
 FuchsiaGymGuideWinText:
-	text "That was a great"
-	line "battle, trainer"
-	cont "from JOHTO!"
+	text "すばらしい　たたかい　だったぜ"
+	line "ジョウト<NO><TRAINER>！"
 	done
 
 FuchsiaGym_MapEvents:

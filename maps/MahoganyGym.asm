@@ -148,226 +148,171 @@ MahoganyGymStatue:
 	jumpstd GymStatue2Script
 
 PryceText_Intro:
-	text "#MON have many"
-	line "experiences in"
+	text "#も　ひとも"
+	line "いきていると　いろいろ　ある"
 
-	para "their lives, just "
-	line "like we do. "
+	para "<WATASHI>も　いろいろ"
+	line "つらいこと<WO>あじわった"
 
-	para "I, too, have seen"
-	line "and suffered much"
-	cont "in my life."
+	para "じんせい<NO>せんぱい　として"
+	line "それ<WO>おしえて　やろう"
 
-	para "Since I am your"
-	line "elder, let me show"
-	cont "you what I mean."
+	para "きみ<GA>うまれるまえから"
+	line "#と　いっしょ<NI>いる"
+	cont "おいそれと　まけたり<WA>せん"
 
-	para "I have been with"
-	line "#MON since"
-
-	para "before you were"
-	line "born."
-
-	para "I do not lose"
-	line "easily."
-
-	para "I, PRYCE--the"
-	line "winter trainer--"
-
-	para "shall demonstrate"
-	line "my power!"
+	para "ふゆ<NO>ヤナギと　よばれる"
+	line "そ<NO>じつりょく　みせてやろうかの"
 	done
 
 PryceText_Impressed:
-	text "Ah, I am impressed"
-	line "by your prowess."
+	text "うんうん"
+	line "みごとな　たたかいっぷり"
 
-	para "With your strong"
-	line "will, I know you"
+	para "そ<NO>つよい　きもち<GA>あれば"
+	line "なに<GA>あ<TTE>も"
+	cont "のりこえて　いけるだろうよ"
 
-	para "will overcome all"
-	line "life's obstacles."
-
-	para "You are worthy of"
-	line "this BADGE!"
+	para "うむ！"
+	line "こ<NO>バッジ<WO>も<TTE>いきなさい"
 	done
 
 Text_ReceivedGlacierBadge:
-	text "<PLAYER> received"
-	line "GLACIERBADGE."
+	text "<PLAYER><WA>ヤナギから"
+	line "アイスバッジ<WO>もらっ<TA!>"
 	done
 
 PryceText_GlacierBadgeSpeech:
-	text "That BADGE will"
-	line "raise the SPECIAL"
-	cont "stats of #MON."
+	text "それ<WO>も<TTE>おると"
+	line "とくしゅのうりょく<GA>たかくなる"
 
-	para "It also lets your"
-	line "#MON use WHIRL-"
-	cont "POOL to get across"
-	cont "real whirlpools."
+	para "それから"
+	line "あれくるう　うず<NO>うえ<WO>すすめる"
+	cont "うずしお　なる　わざも　つかえる"
 
-	para "And this… This is"
-	line "a gift from me!"
+	para "それから　こいつは"
+	line "わしから<NO>せんべつ　だよ"
 	done
 
 PryceText_IcyWindSpeech:
-	text "That TM contains"
-	line "ICY WIND."
+	text "そいつ<WA>こごえるかぜ"
 
-	para "It inflicts damage"
-	line "and lowers speed."
+	para "ダメージ<WO>あたえつつ"
+	line "すばやさ<WO>さげる<⋯>"
 
-	para "It demonstrates"
-	line "the harshness of"
-	cont "winter."
+	para "まさ<NI>ふゆ<NO>きびしさを"
+	line "かんじさせる　わざ　よ"
 	done
 
 PryceText_CherishYourPokemon:
-	text "When the ice and"
-	line "snow melt, spring"
-	cont "arrives."
+	text "こおりと　ゆき<GA>とければ<⋯>"
+	line "はる<NI>なる"
 
-	para "You and your #-"
-	line "MON will be to-"
-
-	para "gether for many"
-	line "years to come."
-
-	para "Cherish your time"
-	line "together!"
+	para "きみ<WA>これから　ながいじかん"
+	line "#と　いっしょ<NI>いられる"
+	cont "それ<WO>たいせつ　にな"
 	done
 
 BoarderRonaldSeenText:
-	text "I'll freeze your"
-	line "#MON, so you"
-	cont "can't do a thing!"
+	text "きみ<NO>#　こおらせて"
+	line "なにも　できなく　してやるぜ！"
 	done
 
 BoarderRonaldBeatenText:
-	text "Darn. I couldn't"
-	line "do a thing."
+	text "こっち<GA>なにも　できなかったか"
 	done
 
 BoarderRonaldAfterBattleText:
-	text "I think there's a"
-	line "move a #MON"
-
-	para "can use while it's"
-	line "frozen."
+	text "そういえば<⋯>　こおらされても"
+	line "つかえる　わざも　あるらしいな"
 	done
 
 BoarderBradSeenText:
-	text "This GYM has a"
-	line "slippery floor."
+	text "こ<NO>チョウジジムは"
+	line "つるつる　すべ<TTE>　たのしいだろ？"
 
-	para "It's fun, isn't"
-	line "it?"
-
-	para "But hey--we're"
-	line "not playing games"
-	cont "here!"
+	para "だから<TTE>　オレたち"
+	line "あそんでるわけじゃ　ないぜ！"
 	done
 
 BoarderBradBeatenText:
-	text "Do you see how"
-	line "serious we are?"
+	text "すこし<WA>オレたち<NO>ほんき"
+	line "わか<TTE>くれたか？"
 	done
 
 BoarderBradAfterBattleText:
-	text "This GYM is great."
-	line "I love boarding"
-	cont "with my #MON!"
+	text "こ<NO>ジム<WA>いいぜ"
+	line "いつだ<TTE>　#と　いっしょに"
+	cont "すべ<TTE>　いられるもんな！"
 	done
 
 BoarderDouglasSeenText:
-	text "I know PRYCE's"
-	line "secret."
+	text "おれ<WA>ヤナギさん<NO>つよさ"
+	line "そ<NO>ひみつ<WO>し<TTE>いるぜ！"
 	done
 
 BoarderDouglasBeatenText:
-	text "OK. I'll tell you"
-	line "PRYCE's secret."
+	text "しょうがない"
+	line "ひみつ<WO>おしえて　やろう"
 	done
 
 BoarderDouglasAfterBattleText:
-	text "The secret behind"
-	line "PRYCE's power…"
+	text "ヤナギさん<GA>つよい　りゆう<⋯>"
 
-	para "He meditates under"
-	line "a waterfall daily"
-
-	para "to strengthen his"
-	line "mind and body."
+	para "それ<WA>まいにち"
+	line "つめたい　たき<NI>うたれて"
+	cont "みも　こころも　きたえてるからだ！"
 	done
 
 SkierRoxanneSeenText:
-	text "To get to PRYCE,"
-	line "our GYM LEADER,"
-
-	para "you need to think"
-	line "before you skate."
+	text "ジムリーダー<NO>ヤナギさんに"
+	line "あいたいなら　かんがえて"
+	cont "すべる　ひつよう<GA>あるわよ！"
 	done
 
 SkierRoxanneBeatenText:
-	text "I wouldn't lose to"
-	line "you in skiing!"
+	text "もおー"
+	line "スキーだったら　まけてないのに<⋯>"
 	done
 
 SkierRoxanneAfterBattleText:
-	text "If you don't skate"
-	line "with precision,"
-
-	para "you won't get far"
-	line "in this GYM."
+	text "きちんと　すべらないと"
+	line "いきたいところへ　いけないのが"
+	cont "このジム<NO>だいごみ　なのよね"
 	done
 
 SkierClarissaSeenText:
-	text "Check out my"
-	line "parallel turn!"
+	text "みてよ！　かれいな　シュプール！！"
 	done
 
 SkierClarissaBeatenText:
-	text "No! You made me"
-	line "wipe out!"
+	text "いやん！"
+	line "びっくりして　しりもち　ついちゃった"
 	done
 
 SkierClarissaAfterBattleText:
-	text "I shouldn't have"
-	line "been bragging"
-	cont "about my skiing…"
+	text "#しょうぶ　なのに"
+	line "スキーのうでまえ　じまん　しちゃった"
 	done
 
 MahoganyGymGuideText:
-	text "PRYCE is a veteran"
-	line "who has trained"
+	text "ヤナギさん<WA>#と　５０ねんも"
+	line "つきあ<TTE>いる　つわもの！"
 
-	para "#MON for some"
-	line "50 years."
+	para "こおりタイプ<NO>わざで"
+	line "あいて<NO>#を"
+	cont "こおらせるの<GA>とくい　という！"
 
-	para "He's said to be"
-	line "good at freezing"
-
-	para "opponents with"
-	line "ice-type moves."
-
-	para "That means you"
-	line "should melt him"
-
-	para "with your burning"
-	line "ambition!"
+	para "だったら　こっちは"
+	line "もえる　じょうねつで　とかしてやれ！"
 	done
 
 MahoganyGymGuideWinText:
-	text "PRYCE is some-"
-	line "thing, but you're"
-	cont "something else!"
+	text "ヤナギさんも　すごいが"
+	line "かった　おまえも　すごかったぞ！"
 
-	para "That was a hot"
-	line "battle that"
-
-	para "bridged the gen-"
-	line "eration gap!"
+	para "ねんれい<WO>こえた"
+	line "あつい　バトル　だったぜ！"
 	done
 
 MahoganyGym_MapEvents:

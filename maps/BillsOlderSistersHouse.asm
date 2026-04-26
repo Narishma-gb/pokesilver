@@ -14,15 +14,16 @@ BillsOlderSistersHouseYoungsterScript:
 	jumptextfaceplayer BillsOlderSistersHouseYoungsterText
 
 BillsOlderSisterText:
-	text "My grandpa is at "
-	line "my brother BILL's"
-	cont "on CERULEAN CAPE."
+	text "うち<NO>おじいさん"
+	line "ハナダのみさき<NI>ある"
+	cont "マサキちゃん<NO>いえに"
+	cont "あそび<NI>い<TTE>るの"
 	done
 
 BillsOlderSistersHouseYoungsterText:
-	text "I saw these weird,"
-	line "slow #MON on"
-	cont "CYCLING ROAD."
+	text "サイクリング　ロードで"
+	line "のろのろ　うごきまわる"
+	cont "へんな　#<WO>みたよ！"
 	done
 
 BillsOlderSistersHouse_MapEvents:

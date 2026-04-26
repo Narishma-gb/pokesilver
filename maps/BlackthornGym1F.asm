@@ -148,257 +148,183 @@ BlackthornGymStatue:
 	jumpstd GymStatue2Script
 
 ClairIntroText:
-	text "I am CLAIR. I'm"
-	line "the world's best"
-	cont "dragon master."
+	text "<WATASHI><GA>イブキ！"
+	line "せかいで　いちばんの"
+	cont "ドラゴンつかい　よ"
 
-	para "I can hold my own"
-	line "against even the"
+	para "じつりょくも　#リーグ"
+	line "してんのう<NI>だ<TTE>"
+	cont "まけてなんか　ないわよ！"
+	cont "どう　それでも　たたかうの？"
 
-	para "#MON LEAGUE's"
-	line "ELITE FOUR."
+	para "<⋯>　そう　わかったわ"
+	line "じゃ　はじめましょう！"
 
-	para "Do you still want"
-	line "to take me on?"
-
-	para "…Fine."
-	line "Let's do it!"
-
-	para "As a trainer, I"
-	line "will use my full"
-
-	para "power against any"
-	line "opponent!"
+	para "<WATASHI>も　<TRAINER>"
+	line "どんな　あいて　だ<TTE>"
+	cont "ぜんりょくで　あいて　してあげる！"
 	done
 
 ClairWinText:
-	text "I lost?"
+	text "こ<NO><WATASHI><GA>まけるなんて<⋯>"
 
-	para "I don't believe"
-	line "it. There must be"
-	cont "some mistake…"
+	para "しんじられない"
+	line "なにか<NO>まちがいよ<⋯>"
 	done
 
 ClairText_GoToDragonsDen:
-	text "I won't admit"
-	line "this."
+	text "<WATASHI><WA>みとめないわ"
 
-	para "I may have lost,"
-	line "but you're still"
+	para "まけて　いうのも　なんだけど"
+	line "あなた<NO>じつりょく　じゃ"
+	cont "#リーグ<NI>ちょうせん　なんて"
+	cont "むり　よ"
 
-	para "not ready for the"
-	line "#MON LEAGUE."
+	para "<⋯>　そうだわ！"
 
-	para "I know. You should"
-	line "take the dragon"
-	cont "user challenge."
+	para "こ<NO>#ジム<NO>うらに"
+	line "りゅうのあな　とよばれる"
+	cont "ばしょ<GA>あるの"
 
-	para "Behind this GYM is"
-	line "a place called"
-	cont "DRAGON'S DEN."
+	para "そこ<NO>おく<NI>おかれた"
+	line "りゅうのキバ<WO>と<TTE>くることが"
+	cont "ドラゴンつかい<GA>いちにんまえとして"
+	cont "みとめられるため<NO>ぎしき"
 
-	para "Go and bring me"
-	line "the DRAGON FANG"
-
-	para "from deep inside"
-	line "the DEN."
-
-	para "That is the test"
-	line "to be accepted as"
-
-	para "a true dragon"
-	line "user."
-
-	para "If you can do"
-	line "that, I will ac-"
-	cont "cept you as a"
-	cont "worthy trainer."
-
-	para "Until then, I"
-	line "won't give you a"
-	cont "BADGE."
+	para "あなたも　それ<GA>できれば"
+	line "ジムバッジ<WO>わたす<NI>ふさわしい"
+	cont "<TRAINER>として　みとめるわ！"
 	done
 
 ClairText_WhatsTheMatter:
-	text "CLAIR: What's"
-	line "the matter?"
+	text "イブキ『どうしたの？"
 
-	para "This errand won't"
-	line "be hard for you,"
-
-	para "unless your vic-"
-	line "tory was a fluke."
+	para "<WATASHI><NI>かてたのが"
+	line "まぐれ　じゃないなら"
+	cont "と<TTE>くるくらい　かんたん　でしょ？"
 	done
 
 BlackthornGymClairText_Cheat:
-	text "CLAIR: You did"
-	line "not get that at"
-	cont "DRAGON'S DEN."
+	text "イブキ『それ<WA>りゅうのあなで"
+	line "と<TTE>きた　も<NO>じゃ　ないでしょ"
 
-	para "Trying to cheat"
-	line "like that…"
-
-	para "I'm disappointed"
-	line "in you."
+	para "そんな　まね<WO>するなんてね<⋯>"
+	line "がっかりだわ"
 	done
 
 BlackthornGymClairText_YouKeptMeWaiting:
-	text "CLAIR: You have"
-	line "proven yourself to"
-	cont "me."
+	text "イブキ『あなた<NO>じつりょく"
+	line "すなお<NI>みとめるわ"
 
-	para "I want you to have"
-	line "this TM."
+	para "こ<NO><TM>　も<TTE>いきなさい"
 	done
 
 BlackthornGymText_ReceivedTM24: ; unreferenced
-	text "<PLAYER> received"
-	line "TM24."
+	text "<PLAYER><WA>イブキから"
+	line "<TM>２４<WO>もらっ<TA!>"
 	done
 
 BlackthornGymClairText_DescribeTM24:
-	text "That contains"
-	line "DRAGONBREATH."
+	text "なか<NI>はい<TTE>いるのは"
+	line "りゅうのいぶき"
 
-	para "No, it doesn't"
-	line "have anything to"
-	cont "do with my breath."
-
-	para "If you don't want"
-	line "it, you don't have"
-	cont "to take it."
+	para "<⋯>　べつ<NI>シャレじゃ　ないわよ"
+	line "いらないなら　むりして"
+	cont "も<TTE>いかなくても　いいのよ"
 	done
 
 BlackthornGymClairText_League:
-	text "So you've col-"
-	line "lected all the"
-	cont "BADGES."
+	text "すべて<NO>バッジ<GA>そろったようね"
 
-	para "Your destination"
-	line "is the #MON"
+	para "むかう<WA>セキエイこうげん"
+	line "#リーグね"
 
-	para "LEAGUE in INDIGO"
-	line "PLATEAU."
+	para "ばしょ<WA>し<TTE>る？"
+	line "そうね　ここからだと"
+	cont "まず<WA>ワカバタウン<NI>いくことね"
 
-	para "Do you know how to"
-	line "get there?"
+	para "そこから　なみのりで"
+	line "ずっと　ひがし<NI>いくと　いいわ"
+	cont "ただし　きびしい　みちのりよ"
 
-	para "From here, go to"
-	line "NEW BARK TOWN."
+	para "#リーグでも"
+	line "まけたら　ゆるさないからね！"
 
-	para "Then SURF east."
-	line "The route there is"
-	cont "very tough."
-
-	para "Don't you dare"
-	line "lose at the #-"
-	cont "MON LEAGUE!"
-
-	para "If you do, I'll"
-	line "feel even worse"
-
-	para "about having lost"
-	line "to you!"
+	para "そうでないと　まけた"
+	line "<WATASHI><GA>みじめ<NI>なるでしょ！"
 	done
 
 CooltrainermPaulSeenText:
-	text "Your first battle"
-	line "against dragons?"
-
-	para "I'll show you how"
-	line "tough they are!"
+	text "はじめて　たたかう　ドラゴンつかいの"
+	line "つよさ　おもいしる<GA>いい！"
 	done
 
 CooltrainermPaulBeatenText:
-	text "I'm disappointed."
+	text "ざんねん　だなあ"
 	done
 
 CooltrainermPaulAfterBattleText:
-	text "You've met LANCE,"
-	line "the dragon master?"
-
-	para "That just can't be"
-	line "true."
+	text "ドラゴンつかい<NO>ワタルさんに"
+	line "あったこと<GA>ある<TTE><⋯>？"
+	cont "まさか　そんな　はず　ないよ"
 	done
 
 CooltrainermMikeSeenText:
-	text "My chance of"
-	line "losing? Not even"
-	cont "one percent!"
+	text "ぼく<GA>まける　ようそ　なんて"
+	line "１パーセントも　ないね！"
 	done
 
 CooltrainermMikeBeatenText:
-	text "That's odd."
+	text "おかしいなあ"
 	done
 
 CooltrainermMikeAfterBattleText:
-	text "I know my short-"
-	line "comings now."
-
-	para "Thanks for showing"
-	line "me!"
+	text "じぶん<NO>みじゅくさ<WO>おもいしった"
+	line "それ<WO>おしえてくれた"
+	cont "きみ<NI>かんしゃ　するぜ！"
 	done
 
 CooltrainerfLolaSeenText:
-	text "Dragons are sacred"
-	line "#MON."
-
-	para "They are full of"
-	line "life energy."
-
-	para "If you're not"
-	line "serious, you won't"
-
-	para "be able to beat"
-	line "them."
+	text "ドラゴン<WA>せいなる　いきもの"
+	line "せいめいりょく　あふれた　#"
+	cont "ほんきで　こないと　たおせないわよ！"
 	done
 
 CooltrainerfLolaBeatenText:
-	text "Way to go!"
+	text "なかなか　やるじゃない"
 	done
 
 CooltrainerfLolaAfterBattleText:
-	text "Dragons are weak"
-	line "against dragon-"
-	cont "type moves."
+	text "そうね　ドラゴン<GA>にがて　なのは"
+	line "ドラゴンタイプ<NO>わざ　なの"
 	done
 
 BlackthornGymGuideText:
-	text "Yo! CHAMP in"
-	line "making!"
+	text "おーす！"
+	line "みらい<NO>チャンピオン！"
 
-	para "It's been a long"
-	line "journey, but we"
+	para "ようやく　ここまで　きたな"
+	line "もう　ひといきだ！"
+	cont "おれも　きょうりょく　するぜ！"
 
-	para "are almost done!"
-	line "Count on me!"
+	para "イブキ<GA>つかう　#は"
+	line "でんせつ<NO>いきもの"
+	cont "せいなる　ドラゴン　#！"
 
-	para "CLAIR uses the"
-	line "mythical and sac-"
-	cont "red dragon-type"
-	cont "#MON."
+	para "ちょっとや　そっとじゃ"
+	line "ダメージ<WO>あたえられない！"
 
-	para "You can't damage"
-	line "them very easily."
-
-	para "But you know,"
-	line "they're supposed"
-
-	para "to be weak against"
-	line "ice-type moves."
+	para "<⋯>　だがな"
+	line "こおりタイプ<NO>わざには"
+	cont "よわい<TTE>　はなし　だぜ！"
 	done
 
 BlackthornGymGuideWinText:
-	text "You were great to"
-	line "beat CLAIR!"
+	text "イブキ<NI>かつなんて"
+	line "たいした　もんだぜ！"
 
-	para "All that's left is"
-	line "the #MON LEAGUE"
-	cont "challenge."
-
-	para "You're on the way"
-	line "to becoming the"
-	cont "#MON CHAMPION!"
+	para "あとは#リーグ<NI>ちょうせん！"
+	line "めざせ　チャンピオン！　だな"
 	done
 
 BlackthornGym1F_MapEvents:

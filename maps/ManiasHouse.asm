@@ -99,102 +99,78 @@ ManiasHouseUnusedBookshelf: ; unreferenced
 	jumpstd PictureBookshelfScript
 
 ManiaText_AskLookAfterShuckle:
-	text "I, I'm in shock!"
+	text "な　なんてことだ<⋯>"
 
-	para "A guy about your"
-	line "age with piercing"
+	para "きみと　おなじくらい<NO>としごろで"
+	line "めつき<GA>するどくて"
+	cont "かみのけ　ながくて"
+	cont "なんだか　こわそうな　しょうねんに"
+	cont "だいじな　#<WO>とられたよ！"
 
-	para "eyes and long hair"
-	line "came in."
+	para "てもと<NI>１ぴき　のこ<TTE>いるけど"
+	line "また　おそわれたら　どうしよう<⋯>"
 
-	para "He scared me into"
-	line "giving him my"
-	cont "prized #MON!"
-
-	para "I still have one"
-	line "left, but what if"
-	cont "he comes back?"
-
-	para "You look strong."
-	line "Could you look"
-
-	para "after my #MON"
-	line "for a while?"
+	para "きみ　つよそうだな"
+	line "しばらく　#　あずか<TTE>よ！"
 	done
 
 ManiaText_TakeCareOfShuckle:
-	text "Oh, thank you!"
-
-	para "Take good care of"
-	line "it, please!"
+	text "じゃ　じゃあ　たのむ！"
+	line "だいじ<NI>してや<TTE>くれよ"
 	done
 
 ManiaText_GotShuckle:
-	text "<PLAYER> received a"
-	line "#MON."
+	text "<PLAYER><WA>マニアから"
+	line "#<WO>あずかっ<TA!>"
 	done
 
 ManiaText_PartyFull:
-	text "Your #MON party"
-	line "is full."
+	text "#　いっぱいだよ"
 	done
 
 ManiaText_IfHeComesBack:
-	text "Oh, no… What'll"
-	line "I do if he comes"
-	cont "back?"
+	text "そ　そんなあ"
+	line "また　おそわれたら　どうしよう"
 	done
 
 ManiaText_CanIHaveMyMonBack:
-	text "Hi! How's my #-"
-	line "MON?"
+	text "ぼく<NO>#　げんき？"
 
-	para "I think I'm safe"
-	line "now, so may I have"
-	cont "it back?"
+	para "もう　おそわれそう<NI>ないし"
+	line "#　かえしてほしいんだ"
 	done
 
 ManiaText_ThankYou:
-	text "Thank you!"
+	text "ありがとう！"
 	done
 
 ManiaText_ShuckleNotThere:
-	text "Hey, you don't"
-	line "have my #MON"
-	cont "with you."
+	text "ぼく<NO>#　いないじゃん"
 	done
 
 ManiaText_ShuckleLikesYou:
-	text "My #MON has"
-	line "come to like you."
+	text "ぼく<NO>#"
+	line "きみ<NI>なついちゃ<TTE>るな"
 
-	para "All right, you"
-	line "should keep it."
-
-	para "But promise to"
-	line "be good to it!"
+	para "わかっ<TA!>　#<WA>ゆずる！"
+	line "そのかわり　だいじ<NI>してくれよ"
 	done
 
 ManiaText_SameAsBeingRobbed:
-	text "Oh, no, no… That's"
-	line "the same as being"
-	cont "robbed."
+	text "そ　そんなあ"
+	line "だったら　おそわれたのと　おなじだ"
 	done
 
 ManiaText_HappinessSpeech:
-	text "For #MON, hap-"
-	line "piness is being"
-
-	para "with a person who"
-	line "treats them well."
+	text "#にと<TTE>　しあわせ　なのは"
+	line "だいじ<NI>してくれる　ひとと"
+	cont "いっしょ<NI>いること　じゃないかな"
 	done
 
 ManiaText_ShuckleIsYourLastMon:
-	text "If I take my #-"
-	line "MON back, what are"
-
-	para "you going to use"
-	line "in battle?"
+	text "ボク<GA>そ<NO>#<WO>うけとると"
+	; bug: missing "line" character
+	db   "キミ<WA>たたかえなく　なっちゃうね！"
 	done
 
 ManiasHouse_MapEvents:

@@ -60,11 +60,6 @@ SECTION "rom37", ROMX[$4000], BANK[37]
 	dr Map_data_end, $65f9
 
 
-SECTION "rom45", ROMX[$4000], BANK[45]
-; ROM $2d : $B4000 - $B7FFF
-
-	dr
-
 SECTION "rom46", ROMX[$6300], BANK[46]
 ; ROM $2e : $B8000 - $BBFFF
 

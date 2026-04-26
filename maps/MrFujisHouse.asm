@@ -44,37 +44,32 @@ MrFujisHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
 MrFujisHouseSuperNerdText:
-	text "MR.FUJI does live"
-	line "here, but he's not"
+	text "フジろうじん<NO>いえ<WA>ここですが"
+	line "おじいさん<WA>ここ<NI>いませんよ"
 
-	para "home now."
-
-	para "He should be at"
-	line "the SOUL HOUSE."
+	para "たましいのいえ　に"
+	line "い<TTE>みて　ください"
 	done
 
 MrFujisHouseLassText:
-	text "Some cold-hearted"
-	line "people stop caring"
-	cont "for their #MON."
+	text "#<NO>せわを"
+	line "しなくなる　ひと<GA>いるのよ"
 
-	para "Grandpa takes in"
-	line "the poor homeless"
-
-	para "#MON and takes"
-	line "care of them."
+	para "かわいそうな　#たちを"
+	line "おじいちゃん<WA>あずか<TTE>"
+	cont "そだてて　いるの"
 	done
 
 MrFujisPsyduckText:
-	text "PSYDUCK: Gu-guwa?"
+	text "コダック『ぐ　ぐわ？"
 	done
 
 MrFujisNidorinoText:
-	text "NIDORINO: Gyun!"
+	text "ニドリーノ『ギュン！！"
 	done
 
 MrFujisPidgeyText:
-	text "PIDGEY: Pijji!"
+	text "ポッポ『ぽっぽー！"
 	done
 
 MrFujisHouse_MapEvents:

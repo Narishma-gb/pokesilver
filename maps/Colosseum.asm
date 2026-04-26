@@ -47,8 +47,7 @@ CableClubFriendScript:
 	end
 
 .FriendReadyText:
-	text "Your friend is"
-	line "ready."
+	text "あいて<NO>じゅんびはバッチリだ！"
 	done
 
 Colosseum_MapEvents:

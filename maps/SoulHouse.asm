@@ -22,52 +22,35 @@ SoulHouseGrannyScript:
 	jumptextfaceplayer SoulHouseGrannyText
 
 MrFujiText:
-	text "MR.FUJI: Welcome."
+	text "フジ『やあ　よく　きたね"
 
-	para "Hmm… You appear to"
-	line "be raising your"
+	para "ふむふむ<⋯>　きみ<WA>#を"
+	line "だいじ<NI>そだてている　ようじゃね"
 
-	para "#MON in a kind"
-	line "and loving manner."
+	para "<KOKO_WA>#<WO>あいする　ひとが"
+	line "あつまる　ばしょ"
 
-	para "#MON lovers"
-	line "come here to pay"
-
-	para "their respects to"
-	line "departed #MON."
-
-	para "Please offer con-"
-	line "dolences for the"
-
-	para "souls of the de-"
-	line "parted #MON."
-
-	para "I'm sure that will"
-	line "make them happy."
+	para "どうか　きみも　いの<TTE>　くれんか"
+	line "#たち<WA>よろこぶじゃろう"
 	done
 
 SoulHouseTeacherText:
-	text "There are other"
-	line "graves of #MON"
-	cont "here, I think."
+	text "#<NO>おはかは"
+	line "これだけじゃ　ないみたいよ"
 
-	para "There are many"
-	line "chambers that only"
-	cont "MR.FUJI may enter."
+	para "フジろうじんしか　はいれない"
+	line "へや<NI>たくさん　あるらしいわ"
 	done
 
 SoulHouseLassText:
-	text "I came with my Mom"
-	line "to visit #MON"
-	cont "graves…"
+	text "おかあさんと　いっしょに"
+	line "おはかまいり<NI>きたの<⋯>"
 	done
 
 SoulHouseGrannyText:
-	text "The #MON that"
-	line "lived with me…"
-
-	para "I loved them like"
-	line "my grandchildren…"
+	text "いっしょ<NI>くらしてた"
+	line "#は"
+	cont "まご　みたいな　もんじゃ<⋯>"
 	done
 
 SoulHouse_MapEvents:

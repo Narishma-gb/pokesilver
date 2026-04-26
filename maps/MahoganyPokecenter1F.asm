@@ -22,33 +22,23 @@ MahoganyPokecenter1FCooltrainerFScript:
 	jumptextfaceplayer MahoganyPokecenter1FCooltrainerFText
 
 MahoganyPokecenter1FPokefanMText:
-	text "What's this? TEAM"
-	line "ROCKET has come"
-	cont "back?"
+	text "なんだ　なんだ"
+	line "<ROCKET>　ふっかつ　したのか？"
 
-	para "I saw some men in"
-	line "black at LAKE OF"
-	cont "RAGE…"
+	para "いかり<NO>みずうみで"
+	line "くろずくめ<NO>やつ<WO>みかけたんだが"
 	done
 
 MahoganyPokecenter1FYoungsterText:
-	text "I stop my #MON"
-	line "from evolving too"
-	cont "early."
-
-	para "I make them learn"
-	line "certain moves be-"
-	cont "fore I let them"
-	cont "evolve."
+	text "ぼく<WA>しんかキャンセル　つか<TTE>"
+	line "さき<NI>わざ<WO>おぼえさせてから"
+	cont "#　そだててるよ"
 	done
 
 MahoganyPokecenter1FCooltrainerFText:
-	text "#MON do become"
-	line "stronger when they"
-
-	para "evolve, but they"
-	line "also learn moves"
-	cont "more slowly."
+	text "#<WA>しんか　するとね"
+	line "ちからづよく　なるけど"
+	cont "わざ<WO>おぼえるの<WA>おそくなるの"
 	done
 
 MahoganyPokecenter1F_MapEvents:

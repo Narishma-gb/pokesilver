@@ -21,27 +21,20 @@ BlackthornMartBlackBeltScript:
 	jumptextfaceplayer BlackthornMartBlackBeltText
 
 BlackthornMartCooltrainerMText:
-	text "You can't buy MAX"
-	line "REVIVE, but it"
+	text "フレンドリィショップで　かえないけど"
+	line "げんきのかたまり<WO>あたえると"
+	cont "ひんし<NO>#も　ふっかつだ！"
 
-	para "fully restores a"
-	line "fainted #MON."
-
-	para "Beware--it won't"
-	line "restore PP, the"
-
-	para "POWER POINTS"
-	line "needed for moves."
+	para "ただし　パワーポイントは"
+	line "かいふく　しないから　ようちゅうい！"
 	done
 
 BlackthornMartBlackBeltText:
-	text "MAX REPEL keeps"
-	line "weak #MON away"
-	cont "from you."
+	text "ゴールドスプレーは"
+	line "よわい　#<WO>よせつけない"
 
-	para "It's the longest"
-	line "lasting of the"
-	cont "REPEL sprays."
+	para "かずある　スプレー<NO>なかで"
+	line "いちばん　ながもち　するんだ！"
 	done
 
 BlackthornMart_MapEvents:

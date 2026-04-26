@@ -35,17 +35,17 @@ Red:
 	end
 
 RedSeenText:
-	text "…"
-	line "…"
+	text "<⋯>　<⋯>　<⋯>　<⋯>　<⋯>"
+	line "　<⋯>　<⋯>　<⋯>　<⋯>　<⋯>"
 	done
 
 RedWinLossText:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>　<⋯>　<⋯>"
 	done
 
 RedLeavesText:
-	text "…"
-	line "…"
+	text "<⋯>　<⋯>　<⋯>　<⋯>　<⋯>"
+	line "　<⋯>　<⋯>　<⋯>　<⋯>　<⋯>"
 	done
 
 SilverCaveRoom3_MapEvents:

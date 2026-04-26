@@ -405,171 +405,154 @@ Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight:
 	step_end
 
 Text_BattleReceptionistIntro:
-	text "Welcome to CABLE"
-	line "CLUB COLOSSEUM."
+	text "つうしん　ケーブル　クラブ"
+	line "コロシアム<NI>ようこそ！"
 
-	para "You may battle a"
-	line "friend here."
+	para "こちらで<WA>ともだちと"
+	line "#<NO>たいせんが　たのしめます"
 
-	para "Would you like to"
-	line "battle?"
+	para "たいせん<WO>しますか？"
 	done
 
 Text_TradeReceptionistIntro:
-	text "Welcome to CABLE"
-	line "CLUB TRADE CENTER."
+	text "つうしん　ケーブル　クラブ"
+	line "トレードセンター<NI>ようこそ！"
 
-	para "You may trade your"
-	line "#MON here with"
-	cont "a friend."
+	para "こちらで<WA>ともだちと"
+	line "#<NO>こうかんが　たのしめます"
 
-	para "Would you like to"
-	line "trade?"
+	para "こうかん<WO>しますか？"
 	done
 
 Text_TimeCapsuleReceptionistIntro:
-	text "Welcome to CABLE"
-	line "CLUB TIME CAPSULE."
+	text "つうしん　ケーブル　クラブ"
+	line "タイムカプセル<NI>ようこそ！"
 
-	para "You can travel to"
-	line "the past and trade"
-	cont "your #MON."
+	para "こちらで<WA>かこ<NO>せかい<NI>い<TTE>"
+	line "#<NO>こうかんが　たのしめます"
 
-	para "Would you like to"
-	line "trade across time?"
+	para "タイムカプセル<WO>ごりように"
+	line "なりますか？"
 	done
 
 YourFriendIsNotReadyText:
-	text "Your friend is not"
-	line "ready."
+	text "おともだち<NO>じゅんびが"
+	line "できていないようです"
 	prompt
 
 Text_MustSaveGame:
-	text "Before opening the"
-	line "link, you must"
-	cont "save your game."
+	text "つうしん<WO>はじめるまえに"
+	line "レポート<WO>かきます"
 	done
 
 Text_PleaseWait:
-	text "Please wait."
+	text "しょうしょう　おまち　ください"
 	done
 
 Text_LinkTimedOut:
-	text "The link has been"
-	line "closed because of"
-	cont "inactivity."
+	text "まち　じかんが　ながいので"
+	line "うけつけ<WO>ちゅうし　いたします！"
 
-	para "Please contact"
-	line "your friend and"
-	cont "come again."
+	para "ともだちと　れんらく<WO>と<TTE>"
+	line "もういちど　おこし　ください！"
 	prompt
 
 Text_PleaseComeAgain:
-	text "Please come again."
+	text "それで<WA>また　おこしください"
 	prompt
 
 Text_PleaseComeInDuplicate: ; unreferenced
-	text "Please come in."
+	text "それで<WA>これより"
+	line "ごあんない　いたします"
 	prompt
 
 Text_TemporaryStagingInLinkRoom: ; unreferenced
-	text "We'll put you in"
-	line "the link room for"
-	cont "the time being."
+	text "とりあえず　つうしんべやに"
+	line "いったこと<NI>します"
 	done
 
 Text_CantLinkToThePast:
-	text "You can't link to"
-	line "the past here."
+	text "こちらで<WA>かことの"
+	line "つうしん<WA>できません"
 	prompt
 
 Text_IncompatibleRooms:
-	text "Your friend chose"
-	line "a different room."
+	text "おともだちと　えらんだ　へやが"
+	line "ちがうようです"
 	prompt
 
 Text_PleaseComeIn:
-	text "Please come in."
+	text "それで<WA>へやへ"
+	line "どうぞ"
 	done
 
 Text_PleaseEnter: ; unreferenced
-	text "Please enter."
+	text "それで<WA>なかへ　どうぞ"
 	prompt
 
 Text_RejectNewMon:
-	text "Sorry--@"
 	text_ram wStringBuffer1
-	text_start
-	line "can't be taken."
+	text "は"
+	line "つれていけません！"
 	prompt
 
 Text_RejectMonWithNewMove:
-	text "You can't take the"
+	text_ram wStringBuffer2
+	text "<WO>も<TTE>いる"
 	line "@"
 	text_ram wStringBuffer1
-	text " with a"
-	cont "@"
-	text_ram wStringBuffer2
-	text "."
+	text "<WA>つれていけません！"
 	prompt
 
 Text_RejectMonWithMail:
-	text "You can't take the"
+	text "メール<WO>も<TTE>いる"
 	line "@"
 	text_ram wStringBuffer1
-	text " that"
-	cont "has MAIL with you."
+	text "<WA>つれていけません！"
 	prompt
 
 Text_TimeCapsuleClosed:
-	text "I'm sorry--the"
-	line "TIME CAPSULE is"
-	cont "being adjusted."
+	text "もうしわけ　ございません"
+	line "ただいま　こちら<NO>タイムカプセルは"
+	cont "ちょうせいちゅう　です"
 	done
 
 Text_TradeRoomClosed:
-	text "I'm sorry--the"
-	line "TRADE MACHINE is"
-	cont "being adjusted."
+	text "もうしわけ　ございません"
+	line "ただいま　こちら<NO>こうかんマシンは"
+	cont "ちょうせいちゅう　です"
 	done
 
 Text_BattleRoomClosed:
-	text "I'm sorry--the"
-	line "BATTLE MACHINE is"
-	cont "being adjusted."
+	text "もうしわけ　ございません"
+	line "ただいま　こちら<NO>たいせんマシンは"
+	cont "ちょうせいちゅう　です"
 	done
 
 Text_MysteryGiftDeliveryGuy_Intro:
-	text "Hello! You're"
-	line "<PLAYER>, right?"
-
-	para "I have some-"
-	line "thing for you."
+	text "<PLAYER>さま　ですね？"
+	line "おとどけもの<GA>あります"
 	done
 
 Text_MysteryGiftDeliveryGuy_HereYouGo:
-	text "Here you go!"
+	text "これ<WO>どうぞ！"
 	done
 
 Text_MysteryGiftDeliveryGuy_Outro:
-	text "We hope to serve"
-	line "you again."
+	text "えーと　はんこ<WA>いいです"
+	line "また<NO>ごりよう　おねがいします"
 	done
 
 Text_MysteryGiftDeliveryGuy_NoRoom:
-	text "Oh, you have no"
-	line "space for this."
+	text "それいじょう　もてないようですね"
 
-	para "Stop in at any"
-	line "#MON CENTER"
-
-	para "across the country"
-	line "to pick it up."
+	para "<WATASHI>たち　ぜんこくの"
+	line "#センター<NI>いますので"
+	cont "いつでも　うけとり<NI>きてください"
 	done
 
 Text_MysteryGiftDeliveryGuy_SaidNo:
-	text "No? That's very"
-	line "strange…"
+	text "あれ　おかしいなあ"
 	done
 
 Pokecenter2F_MapEvents:

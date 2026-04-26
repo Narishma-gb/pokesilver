@@ -10,11 +10,9 @@ Route42EcruteakGateOfficerScript:
 	jumptextfaceplayer Route42EcruteakGateOfficerText
 
 Route42EcruteakGateOfficerText:
-	text "MOUNT MORTAR is"
-	line "like a maze."
-
-	para "Be careful. Don't"
-	line "get lost in there."
+	text "スリバチやま<NO>なかは"
+	line "てんねん<NO>めいろ"
+	cont "まよわないよう　ちゅうい　しなよ"
 	done
 
 Route42EcruteakGate_MapEvents:

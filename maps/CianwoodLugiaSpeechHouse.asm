@@ -21,37 +21,23 @@ CianwoodLugiaSpeechHouseBookshelf:
 	jumpstd PictureBookshelfScript
 
 CianwoodLugiaSpeechHouseTeacherText:
-	text "You came from"
-	line "OLIVINE?"
-
-	para "Do you remember"
-	line "the four islands"
-	cont "along the way?"
-
-	para "I heard that a "
-	line "mythical sea crea-"
-	cont "ture is hiding in"
-	cont "them."
+	text "アサギから　きたの？"
+	line "とちゅう　４つのしま<GA>あったでしょ"
+	cont "なか<NI>うみのかみさま<GA>いるそうよ"
 	done
 
 CianwoodLugiaSpeechHouseLassText:
-	text "I heard that you"
-	line "can only see it if"
+	text "ぎんいろのはね<WO>も<TTE>いると"
+	line "あえる<TTE>　いいつたえ　きいたわ"
 
-	para "you have a SILVER"
-	line "WING."
-
-	para "It must have the"
-	line "same scent as the"
-	cont "creature."
+	para "きっと　じぶんと"
+	line "おなじ　かおり<GA>するからね"
 	done
 
 CianwoodLugiaSpeechHouseTwinText:
-	text "The whirlpools"
-	line "around the islands"
-
-	para "must be caused by"
-	line "the sea creature."
+	text "しま<NO>まわり<NO>うずは"
+	line "うみのかみさま<GA>つくりだしてる<TTE>"
+	cont "いいつたえ　きいたこと　あるよ"
 	done
 
 CianwoodLugiaSpeechHouse_MapEvents:

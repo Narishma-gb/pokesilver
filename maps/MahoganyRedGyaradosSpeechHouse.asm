@@ -33,29 +33,22 @@ MahoganyRedGyaradosSpeechHouseUnusedBookshelf2: ; unreferenced
 	jumpstd MagazineBookshelfScript
 
 MahoganyRedGyaradosSpeechHouseBlackBeltText:
-	text "I heard that a red"
-	line "GYARADOS appeared"
-	cont "at the LAKE."
+	text "まっかな　ギャラドスが"
+	line "みずうみ<NI>あらわれたらしいな！"
 
-	para "That's odd, since"
-	line "even ordinary"
-
-	para "GYARADOS are rare"
-	line "in that lake…"
+	para "あ<NO>みずうみ<NI>ギャラドスが"
+	line "いることだ<TTE>　めずらしいのに<⋯>"
 	done
 
 MahoganyRedGyaradosSpeechHouseTeacherText:
-	text "My favorite radio"
-	line "program? I'd say"
-	cont "#MON MUSIC."
+	text "<WATASHI><GA>すきな　ラジオばんぐみ？"
+	line "うーん　#ミュージック　かな"
 	done
 
 MahoganyRedGyaradosSpeechHouseTeacherText_RocketsInRadioTower:
-	text "I've been hearing"
-	line "laughter on the"
-
-	para "radio…"
-	line "It's creepy."
+	text "さいきん　ラジオから"
+	line "わらいごえ<GA>きこえてくるの<⋯>"
+	cont "なんだか　ぶきみ　だわ"
 	done
 
 MahoganyRedGyaradosSpeechHouse_MapEvents:

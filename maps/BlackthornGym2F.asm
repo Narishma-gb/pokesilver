@@ -43,10 +43,14 @@ BlackthornGym2FSetUpStoneTableCallback:
 	pause 30
 	scall .FX
 	opentext
-	writetext BlackthornGym2FBoulderFellText
+	writetext .BoulderFellText
 	waitbutton
 	closetext
 	end
+
+.BoulderFellText:
+	text "いわ<WA>した<NI>おち<TA!>"
+	done
 
 .FX:
 	playsound SFX_STRENGTH
@@ -79,55 +83,38 @@ TrainerCooltrainerfFran:
 	end
 
 CooltrainermCodySeenText:
-	text "It's not as if we"
-	line "all use dragon-"
-	cont "type #MON."
+	text "ジム<NO>だれも<GA>ドラゴンタイプの"
+	line "#<WO>つかうわけ　じゃない！"
 
-	para "My policy is to"
-	line "use #MON that"
-
-	para "are stronger than"
-	line "dragon #MON."
+	para "ドラゴンよりも　つよい　#"
+	line "それ<GA>オレ<NO>テーマだ！"
 	done
 
 CooltrainermCodyBeatenText:
-	text "You are special…"
+	text "さす<GA>だな"
 	done
 
 CooltrainermCodyAfterBattleText:
-	text "But just watch!"
-	line "My #MON will"
+	text "だ<GA>おれ<NO>#は"
+	line "まだまだ　つよくなる！"
 
-	para "become even more"
-	line "powerful."
-
-	para "We'll be tougher"
-	line "as a trainer and"
-	cont "#MON team."
+	para "そうして　<TRAINER>も　#も"
+	line "きたえられるのさ！"
 	done
 
 CooltrainerfFranSeenText:
-	text "We go through rig-"
-	line "orous training un-"
-	cont "der CLAIR. I can't"
-	cont "afford to lose."
+	text "イブキさんと　いっしょに"
+	line "きびしい　しゅぎょう　してるのよ"
+	cont "まけるわけに<WA>いかないわ！"
 	done
 
 CooltrainerfFranBeatenText:
-	text "Arrrgh! I'm so"
-	line "disgusted!"
+	text "<⋯>　ああ　くやしい！"
 	done
 
 CooltrainerfFranAfterBattleText:
-	text "Whew…"
-
-	para "I'll have to re-"
-	line "think my training…"
-	done
-
-BlackthornGym2FBoulderFellText:
-	text "The boulder fell"
-	line "through!"
+	text "ふう<⋯>"
+	line "しゅぎょう　やりなおし　ね"
 	done
 
 BlackthornGym2F_MapEvents:

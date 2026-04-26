@@ -26,24 +26,18 @@ CianwoodPhotoStudioFishingGuruScript:
 	end
 
 CianwoodPhotoStudioFishingGuruText_Question:
-	text "You have magnifi-"
-	line "cent #MON with"
-	cont "you."
-
-	para "How about a photo"
-	line "for a souvenir?"
+	text "すばらしい　#　つれてるね"
+	line "どうだい　きねん<NI>１まい"
+	cont "#<NO>しゃしん　とらない？"
 	done
 
 CianwoodPhotoStudioFishingGuruText_Yes:
-	text "OK! Big smile now!"
+	text "んじゃ　いきますよ"
 	done
 
 CianwoodPhotoStudioFishingGuruText_No:
-	text "Oh, that's too"
-	line "bad. I thought it"
-
-	para "would be a great"
-	line "memento…"
+	text "そうかい　そりゃ　ざんねん"
+	line "たびのきねん<NI>なると　おもうけど"
 	done
 
 CianwoodPhotoStudio_MapEvents:

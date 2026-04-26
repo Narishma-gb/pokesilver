@@ -32,46 +32,32 @@ WardensHomeBookshelf:
 	jumpstd PictureBookshelfScript
 
 WardensGranddaughterText1:
-	text "My grandpa is the"
-	line "SAFARI ZONE WAR-"
-	cont "DEN."
+	text "あたし<NO>おじいちゃんは"
+	line "サファリゾーン<NO>えんちょうよ！"
 
-	para "At least he was…"
+	para "<⋯>　だったんだけど"
+	line "いま　がいこくへ　りょこうちゅう"
+	cont "「たび<NI>いくぞー！」　<TTE>"
+	cont "ひとりで　いっちゃったわ！"
 
-	para "He decided to go"
-	line "on a vacation and"
-
-	para "took off overseas"
-	line "all by himself."
-
-	para "He quit running"
-	line "SAFARI ZONE just"
-	cont "like that."
+	para "そのとき　サファリゾーンを"
+	line "やめちゃったの！"
 	done
 
 WardensGranddaughterText2:
-	text "Many people were"
-	line "disappointed that"
-
-	para "SAFARI ZONE closed"
-	line "down, but Grandpa"
-	cont "is so stubborn…"
+	text "サファリゾーン<GA>なくな<TTE>"
+	line "ざんねんが<TTE>る　ひと<GA>いるけど"
+	cont "おじいちゃん　ガンコ　だったから！"
 	done
 
 WardenPhotoText:
-	text "It's a photo of a"
-	line "grinning old man"
-
-	para "who's surrounded"
-	line "by #MON."
+	text "たくさん<NO>#<NI>かこまれて"
+	line "えがお<NO>おじいさん<GA>うつ<TTE>る！"
 	done
 
 SafariZonePhotoText:
-	text "It's a photo of a"
-	line "huge grassy plain"
-
-	para "with rare #MON"
-	line "frolicking in it."
+	text "どこか<NO>だいそうげん"
+	line "めずらしい　#<GA>うつ<TTE>る！"
 	done
 
 SafariZoneWardensHome_MapEvents:

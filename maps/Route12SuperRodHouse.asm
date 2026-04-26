@@ -36,44 +36,33 @@ SuperRodHouseBookshelf: ; unreferenced
 	jumpstd PictureBookshelfScript
 
 OfferSuperRodText:
-	text "I'm the FISHING"
-	line "GURU's younger"
-	cont "brother."
+	text "わし<WA>つりオヤジ　おとうと！"
+	line "キミ<WA>つり<GA>すきそうな"
+	cont "かお<WO>しておるな！"
+	cont "わし<NO>め　<NI>くるい<WA>ない！"
 
-	para "I can see that you"
-	line "like fishing."
-
-	para "There's no doubt"
-	line "in my mind at all!"
-
-	para "So? I know I'm"
-	line "right."
+	para "どうじゃ？"
+	line "あたりだろう？"
 	done
 
 GiveSuperRodText:
-	text "Yes, yes. Just as"
-	line "I thought!"
-
-	para "Here, fishing fan!"
-	line "Take this--it's a"
-	cont "SUPER ROD."
+	text "うむ　うむ！"
+	line "おもった　とおりじゃ！"
+	cont "つりずき<NO>キミ<NI>これ<WO>やろう！"
+	cont "すごいつりざお　じゃ！"
 	done
 
 GaveSuperRodText:
-	text "Try your hand at"
-	line "fishing wherever"
-	cont "there is water."
+	text "いろんな　ところで"
+	line "つり<WO>たのしんでくれ！"
 
-	para "Remember--you can"
-	line "catch different"
-
-	para "#MON using"
-	line "different RODS."
+	para "つかう　つりざおで"
+	line "つれる　#<GA>ちがうぞ！"
 	done
 
 DontWantSuperRodText:
-	text "Huh? My own eyes"
-	line "deceived me?"
+	text "ありゃ？"
+	line "わし<NO>よそう<GA>はずれたな<⋯>"
 	done
 
 Route12SuperRodHouse_MapEvents:

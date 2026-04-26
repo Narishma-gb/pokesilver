@@ -47,8 +47,7 @@ TradeCenterFriendScript: ; unreferenced
 	end
 
 TradeCenterFriendReadyText:
-	text "Your friend is"
-	line "ready."
+	text "あいて<NO>じゅんびはバッチリだ！"
 	done
 
 TradeCenter_MapEvents:

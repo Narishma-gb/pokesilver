@@ -143,6 +143,8 @@ ROMX $2b
 	"Map Blocks 2"
 ROMX $2c
 	"Map Scripts 7"
+ROMX $2d
+	"Map Scripts 8"
 ROMX $2e
 	"Pics 14"
 	; org $6300
@@ -192,7 +194,6 @@ ROMX $3f
 ; ROMX $40
 	; "Title Screen"
 	; "Font Inversed"
-	; "Map Scripts 8"
 	; "Map Scripts 9"
 	; "Map Scripts 10"
 	; "Map Scripts 11"

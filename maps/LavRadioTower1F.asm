@@ -48,7 +48,7 @@ LavRadioTower1FGentlemanScript:
 	end
 
 .expncardname
-	db "EXPN CARD@"
+	db "かくちょうカード@"
 
 LavRadioTower1FSuperNerd2Script:
 	faceplayer
@@ -76,145 +76,100 @@ LavRadioTower1FReferenceLibrary: ; unreferenced
 	jumptext LavRadioTower1FReferenceLibraryText
 
 LavRadioTower1FReceptionistText:
-	text "Welcome!"
-	line "Feel free to look"
+	text "ようこそ！"
 
-	para "around anywhere on"
-	line "this floor."
+	para "１かい　フロアは"
+	line "けんがく　じゆう　です！"
 	done
 
 LavRadioTower1FOfficerText:
-	text "Sorry, but you can"
-	line "only tour the"
-	cont "ground floor."
+	text "けんがく<WA>１かい　フロア　だけです"
 
-	para "Ever since JOHTO's"
-	line "RADIO TOWER was"
-
-	para "taken over by a"
-	line "criminal gang, we"
-
-	para "have had to step"
-	line "up our security."
+	para "ジョウト<NO>ラジオとうが"
+	line "あくにん<NI>せんりょう　されたので"
+	cont "けいび<WO>きょうか　したのです！"
 	done
 
 LavRadioTower1FSuperNerd1Text:
-	text "Many people are"
-	line "hard at work here"
+	text "たくさん<NO>ひとが"
+	line "ラジオとうで　はたらいてるんだ<TTE>！"
 
-	para "in the RADIO"
-	line "TOWER."
-
-	para "They must be doing"
-	line "their best to put"
-	cont "on good shows."
+	para "おもしろい　ばんぐみ<WO>つくるために"
+	line "みんな　がんば<TTE>るんだね！"
 	done
 
 LavRadioTower1FGentlemanText:
-	text "Oh, no, no, no!"
+	text "ああ　エライこっちゃー！"
 
-	para "We've been off the"
-	line "air ever since the"
+	para "はつでんしょ<GA>うごかないと"
+	line "ラジオほうそうも　できなくなる！"
 
-	para "POWER PLANT shut"
-	line "down."
-
-	para "All my efforts to"
-	line "start this station"
-
-	para "would be wasted if"
-	line "I can't broadcast."
-
-	para "I'll be ruined!"
+	para "せっかく　ラジオ<WO>はじめたのに"
+	line "ほうそう　できなく　なったら"
+	cont "ワシゃあ　はめつ　じゃあー！"
 	done
 
 LavRadioTower1FGentlemanText_ReturnedMachinePart:
-	text "Ah! So you're the"
-	line "<PLAYER> who solved"
+	text "おお！"
+	line "キミ<GA>はつでんしょ　じけんを"
+	cont "かいけつした　<PLAYER>くんか！"
 
-	para "the POWER PLANT's"
-	line "problem?"
+	para "キミ<NO>おかげで　ワシゃあ"
+	line "クビ<NI>ならず<NI>すんだわい！"
+	cont "ほんと<NI>たすかったよっ！"
 
-	para "Thanks to you, I"
-	line "never lost my job."
-
-	para "I tell you, you're"
-	line "a real lifesaver!"
-
-	para "Please take this"
-	line "as my thanks."
+	para "ワシ<NO>きもちだ！"
+	line "これ<WO>うけと<TTE>　くれたまえ！"
 	done
 
 LavRadioTower1FGentlemanText_GotExpnCard:
-	text "With that thing,"
-	line "you can tune into"
-
-	para "the radio programs"
-	line "here in KANTO."
-
-	para "Gahahahaha!"
+	text "それ<GA>あれば"
+	line "あたらしい　ラジオばんぐみを"
+	cont "きくこと<GA>できるよう<NI>なるぞ！"
+	cont "がっはっはっはっはっはっ！"
 	done
 
 LavRadioTower1FSuperNerd2Text:
-	text "Hey there, fellow!"
+	text "はあーい！"
+	line "ボク<WA>おんがく　ばんぐみの"
+	cont "スーパー　ディレクター！"
 
-	para "I am the super"
-	line "MUSIC DIRECTOR!"
+	para "<⋯>おや　キミ<NO>ポケギアじゃ"
+	line "ざんねんだけど　ボク<NO>ばんぐみを"
+	cont "じゅしん　できないね！"
 
-	para "Huh? Your #GEAR"
-	line "can't tune into my"
-
-	para "music programs."
-	line "How unfortunate!"
-
-	para "If you get an EXPN"
-	line "CARD upgrade, you"
-
-	para "can tune in. You'd"
-	line "better get one!"
+	para "グレードアップした　ラジオカードを"
+	line "つければ　きけるよう<NI>なるよ！"
 	done
 
 LavRadioTower1FSuperNerd2Text_GotExpnCard:
-	text "Hey there, fellow!"
+	text "はあーい！"
+	line "ボク<WA>おんがく　ばんぐみの"
+	cont "スーパー　ディレクター！"
 
-	para "I am the super"
-	line "MUSIC DIRECTOR!"
-
-	para "I'm responsible"
-	line "for the gorgeous"
-
-	para "melodies that go"
-	line "out over the air."
-
-	para "Don't be square."
-	line "Grab your music"
-	cont "off the air!"
+	para "うつくしい　メロディを"
+	line "ながしてるのよ！"
+	cont "ヨロシクねっ！"
 	done
 
 LavRadioTower1FDirectoryText:
-	text "1F RECEPTION"
-	line "2F SALES"
-	cont "3F PERSONNEL"
-	cont "4F PRODUCTION"
-	cont "5F DIRECTOR'S"
-	cont "   OFFICE"
+	text "１かい　<⋯>　うけつけ"
+	line "２かい　<⋯>　えいぎょうぶ"
+	cont "３かい　<⋯>　そうむぶ"
+	cont "４かい　<⋯>　せいさくしつ"
+	cont "５かい　<⋯>　きょくちょうしつ"
 	done
 
 LavRadioTower1FPokeFluteSignText:
-	text "Perk Up #MON"
-	line "with Mellow Sounds"
-
-	para "of the # FLUTE"
-	line "on CHANNEL 20"
+	text "きよらかな　ふえ<NO>ねいろで"
+	line "#も　うきうき！"
+	cont "チャンネル　２０！"
 	done
 
 LavRadioTower1FReferenceLibraryText:
-	text "Wow! A full rack"
-	line "of #MON CDs and"
-	cont "videos."
-
-	para "This must be the"
-	line "reference library."
+	text "#<NO>シーディーと"
+	line "ビデオ<GA>たくさん　ならんでる！"
+	cont "ばんぐみ<NO>しりょう　かな？"
 	done
 
 LavRadioTower1F_MapEvents:

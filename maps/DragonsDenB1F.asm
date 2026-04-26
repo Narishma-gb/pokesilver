@@ -81,6 +81,18 @@ DragonsDenB1FDragonFangScript:
 	closetext
 	end
 
+Text_FoundDragonFang:
+	text "<PLAYER>は"
+	line "@"
+	text_ram wStringBuffer3
+	text "<WO>みつけ<TA!>"
+	done
+
+Text_NoRoomForDragonFang:
+	text "しかし　<PLAYER>は"
+	line "これ　いじょう　どうぐ<WO>もてない！"
+	done
+
 DragonsDenB1FRivalScript:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	faceplayer
@@ -128,139 +140,92 @@ MovementDragonsDen_ClairWalksAway:
 	step_end
 
 ClairText_GiveDragonbreathDragonDen:
-	text "CLAIR: All right."
-	line "I recognize your"
-
-	para "true power. This"
-	line "BADGE is yours."
+	text "イブキ『わかったわ！"
+	line "あなた<NO>じつりょく　みとめます"
+	cont "このバッジ<WO>も<TTE>　いきなさい"
 	done
 
 DragonShrinePlayerReceivedRisingBadgeText:
-	text "<PLAYER> received"
-	line "RISINGBADGE."
+	text "<PLAYER><WA>イブキから"
+	line "ライジングバッジ<WO>もらっ<TA!>"
 	done
 
 DragonShrineRisingBadgeExplanationText:
-	text "RISINGBADGE will"
-	line "enable your"
+	text "ライジングバッジ<WO>も<TTE>いれば"
+	line "どんな　たきも"
+	cont "のぼれるよう<NI>なるわ"
 
-	para "#MON to use the"
-	line "move for climbing"
-	cont "waterfalls."
+	para "あと　すべて<NO>#が"
+	line "あなた<WO><TRAINER>として　みとめ"
+	cont "どんな　めいれいにも　したがうわ！"
 
-	para "Also, all #MON"
-	line "will recognize you"
-
-	para "as a trainer and"
-	line "obey your every"
-
-	para "command without"
-	line "question."
-
-	para "I also want you to"
-	line "have this TM."
+	para "それと　こ<NO><TM>も"
+	line "も<TTE>いくと　いいわ"
 	done
 
 Text_ReceivedTM24: ; unreferenced
-	text "<PLAYER> received"
-	line "TM24."
+	text "<PLAYER><WA>イブキから"
+	line "<TM>２４<WO>もらっ<TA!>"
 	done
 
 ClairText_DescribeDragonbreathDragonDen:
-	text "That contains"
-	line "DRAGONBREATH."
+	text "なか<NI>はい<TTE>いるのは"
+	line "りゅうのいぶき"
 
-	para "No, it doesn't"
-	line "have anything to"
-	cont "do with my breath."
-
-	para "If you don't want"
-	line "it, you don't have"
-	cont "to take it."
+	para "<⋯>　べつ<NI>シャレじゃ　ないわよ"
+	line "いらないなら　むりして"
+	cont "も<TTE>いかなくても　いいのよ"
 	done
 
 ClairText_CollectedAllBadges:
-	text "So, you've col-"
-	line "lected all the"
-	cont "BADGES."
+	text "すべて<NO>バッジ<GA>そろったようね"
 
-	para "Your destination"
-	line "is the #MON"
+	para "むかう<WA>セキエイこうげん"
+	line "#リーグね"
 
-	para "LEAGUE in INDIGO"
-	line "PLATEAU."
+	para "ばしょ<WA>し<TTE>る？"
+	line "そうね　ここからだと"
+	cont "まず<WA>ワカバタウン<NI>いくことね"
 
-	para "Do you know how to"
-	line "get there?"
+	para "そこから　なみのりで"
+	line "ずっと　ひがし<NI>いくと　いいわ"
+	cont "ただし　きびしい　みちのりよ"
 
-	para "From here, go to"
-	line "NEW BARK TOWN."
+	para "#リーグでも"
+	line "まけたら　ゆるさないからね！"
 
-	para "Then SURF east."
-	line "The route there is"
-	cont "very tough."
-
-	para "Don't you dare"
-	line "lose at the #-"
-	cont "MON LEAGUE!"
-
-	para "If you do, I'll"
-	line "feel even worse"
-
-	para "about having lost"
-	line "to you!"
+	para "そうでないと　まけた"
+	line "<WATASHI><GA>みじめ<NI>なるでしょ！"
 	done
 
 DragonShrineSignpostText:
-	text "DRAGON SHRINE"
+	text "りゅう<NO>ほこら"
 
-	para "A shrine honoring"
-	line "the dragon #MON"
-
-	para "said to have lived"
-	line "in DRAGON'S DEN."
+	para "りゅうのあな<NI>いたと　いう"
+	line "ドラゴン#<WO>まつる"
 	done
 
 RivalText_Training1:
-	text "…"
-	line "What? <PLAYER>?"
+	text "<⋯>　<⋯>　<⋯>"
+	line "なんだ　<PLAYER>か<⋯>"
 
-	para "…No, I won't"
-	line "battle you now…"
+	para "<⋯>　わるい<GA>おまえの"
+	line "あいて　するつもり<WA>ねーよ"
 
-	para "My #MON aren't"
-	line "ready to beat you."
+	para "いま<NO>こいつらじゃ　"
+	line "おまえ<NI>かてない"
+	cont "そんな　むちゃ<WA>させられないさ"
 
-	para "I can't push them"
-	line "too hard now."
-
-	para "I have to be dis-"
-	line "ciplined to become"
-
-	para "the greatest #-"
-	line "MON trainer…"
+	para "そうでなきゃ"
+	line "さいきょう<NO><TRAINER>には"
+	cont "なれないからな<⋯>"
 	done
 
 RivalText_Training2:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "Whew…"
-
-	para "Learn to stay out"
-	line "of my way…"
-	done
-
-Text_FoundDragonFang:
-	text "<PLAYER> found a"
-	line "@"
-	text_ram wStringBuffer3
-	text "!"
-	done
-
-Text_NoRoomForDragonFang:
-	text "But <PLAYER> can't"
-	line "carry any more"
-	cont "items."
+	para "ふう<⋯>"
+	line "ひと<NO>じゃま　してんじゃねーよ"
 	done
 
 DragonsDenB1F_MapEvents:

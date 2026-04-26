@@ -25,15 +25,14 @@ BlackthornDragonSpeechHouseMagazineBookshelf: ; unreferenced
 	jumpstd MagazineBookshelfScript
 
 BlackthornDragonSpeechHouseGrannyText:
-	text "CLAIR and LANCE"
-	line "trained here to"
-
-	para "hone their skills"
-	line "as trainers."
+	text "イブキや　ワタルは"
+	line "ここで　しゅぎょう<WO>つんで"
+	cont "#<TRAINER>　としての"
+	cont "じつりょく<WO>みがいたのじゃ！"
 	done
 
 BlackthornDragonSpeechHouseDratiniText:
-	text "DRATINI: Draa!"
+	text "ミニリュウ『リュー"
 	done
 
 BlackthornDragonSpeechHouse_MapEvents:
