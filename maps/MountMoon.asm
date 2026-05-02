@@ -88,76 +88,58 @@ MountMoonRivalMovementAfter:
 	step_end
 
 MountMoonRivalTextBefore:
-	text "<……> <……> <……>"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "It's been a while,"
-	line "<PLAYER>."
+	para "ひさしぶりだな　<PLAYER>"
 
-	para "…Since I lost to"
-	line "you, I thought"
+	para "<⋯>　オレ<WA>おまえ<NI>まけてから"
+	line "じぶん<NI>なに<GA>たりないのか"
+	cont "こいつらと　いっしょに"
+	cont "ずっと　かんがえてた<⋯>"
 
-	para "about what I was"
-	line "lacking with my"
-	cont "#MON…"
-
-	para "And we came up"
-	line "with an answer."
-
-	para "<PLAYER>, now we'll"
-	line "show you!"
+	para "そして　みつけだした　こたえ"
+	line "<PLAYER>！"
+	cont "おまえ<NI>みせてやるよ"
 	done
 
 MountMoonRivalTextWin:
-	text "<……> <……> <……>"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "I thought I raised"
-	line "my #MON to be"
+	para "こいつら<NO>もてる　ちから"
+	line "さいだいげん<NI>だせるよう"
+	cont "そだてた　つもり　なのに<⋯>"
 
-	para "the best they"
-	line "could be…"
-
-	para "…But it still "
-	line "wasn't enough…"
+	para "<⋯>　まだ　たりないのか"
 	done
 
 MountMoonRivalTextAfter:
-	text "<……> <……> <……>"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "…You won, fair"
-	line "and square."
+	para "<⋯>　たしか<NI>オレ<NO>まけだ"
 
-	para "I admit it. But"
-	line "this isn't the"
-	cont "end."
+	para "それ<WA>みとめるよ"
+	line "だけど　これで　おわり　じゃない"
 
-	para "I'm going to be"
-	line "the greatest #-"
-	cont "MON trainer ever."
+	para "いつか　さいきょうの"
+	line "#<TRAINER><NI>な<TTE>みせる"
 
-	para "Because these guys"
-	line "are behind me."
+	para "<⋯>　こいつらも"
+	line "オレ<NI>ついてきて　くれるからな"
 
-	para "…Listen, <PLAYER>."
-
-	para "One of these days"
-	line "I'm going to prove"
-
-	para "how good I am by"
-	line "beating you."
+	para "<⋯>　いいか　<PLAYER>"
+	line "いつか　おまえ<WO>たおして"
+	cont "オレ<NO>つよさ　おしえてやるからな"
 	done
 
 MountMoonRivalTextLoss:
-	text "<……> <……> <……>"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "I've repaid my"
-	line "debt to you."
+	para "これで　かり<WA>かえした"
 
-	para "With my #MON,"
-	line "I'm going to beat"
-
-	para "the CHAMPION and"
-	line "become the world's"
-	cont "greatest trainer."
+	para "<⋯>　あと<WA>こいつらと　いっしょに"
+	line "チャンピオン<WO>たおして"
+	cont "せかい　さいきょうの"
+	cont "#<TRAINER><NI>なるぜ"
 	done
 
 MountMoon_MapEvents:

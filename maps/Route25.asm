@@ -236,195 +236,174 @@ Route25MistyLeavesMovement:
 	step_end
 
 Route25MistyDateText:
-	text "MISTY: Aww! Why"
-	line "did you have to"
+	text "カスミ『もう！"
+	line "なによ　いきなり　あらわれてっ！"
 
-	para "show up and bug us"
-	line "now?"
+	para "あんたのこと　なんていうか"
+	line "し<TTE>る！？"
+	cont "オジャマムシ　<TTE>　いうのよ！"
 
-	para "Do you know what"
-	line "they call people"
-	cont "like you?"
+	para "<⋯>　<⋯>　<⋯>"
+	line "<⋯>あら？　あんた<NO>バッジ<TTE>"
+	cont "もしかして　ジョウトのジムバッジ？"
 
-	para "Pests! You heard"
-	line "me right, pest!"
+	para "８つ　も<TTE>る<TTE>　ことは"
+	line "けっこう　やる　みたいね<⋯>！"
 
-	para "…"
+	para "いいわ！"
+	line "ハナダのジム<NI>きなさいよ！"
+	cont "あいて<WO>して　あげるから！"
 
-	para "…Oh? Those BADGES"
-	line "you have… Are they"
-	cont "JOHTO GYM BADGES?"
-
-	para "If you have eight,"
-	line "you must be good."
-
-	para "OK, then. Come to"
-	line "CERULEAN GYM."
-
-	para "I'll be happy to"
-	line "take you on."
-
-	para "I'm MISTY, the"
-	line "GYM LEADER in"
-	cont "CERULEAN."
+	para "<WATASHI><WA>カスミ！"
+	line "ハナダ<NO>ジムリーダーよ！"
 	done
 
 SchoolboyDudleySeenText:
-	text "Beat the six of us"
-	line "trainers to win a"
-	cont "fabulous prize!"
+	text "６にん　かちぬけば"
+	line "ごうかな　しょうひん<GA>もらえる！"
 
-	para "Think you've got"
-	line "what it takes?"
+	para "さて！"
+	line "おまえ<NI>ぬけられるかな？"
 	done
 
 SchoolboyDudleyBeatenText:
-	text "Whoo! Good stuff."
+	text "なかなか　やるじゃん"
 	done
 
 SchoolboyDudleyAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
+	text "ベスト<WO>つくしたんだ"
+	line "くい<WA>ない！"
 	done
 
 LassEllenSeenText:
-	text "I'm second."
-	line "Now it's serious!"
+	text "ふたりめ<WA><WATASHI>！"
+	line "これから<GA>ほんばん　よ！"
 	done
 
 LassEllenBeatenText:
-	text "How could I lose?"
+	text "しんじらんなーい"
 	done
 
 LassEllenAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
+	text "ベスト<WO>つくしたんだから"
+	line "くい<WA>ないわ！"
 	done
 
 SchoolboyJoeSeenText:
-	text "Here's No. 3!"
-	line "I won't be easy."
+	text "３にんめ　とうじょう！"
+	line "そう　かんたんに<WA>いかないぜ！"
 	done
 
 SchoolboyJoeBeatenText:
-	text "Ow! Stomped flat!"
+	text "へろへろ　もう　ダメ"
 	done
 
 SchoolboyJoeAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
+	text "ベスト<WO>つくしたんだ"
+	line "くい<WA>ない！"
 	done
 
 LassLauraSeenText:
-	text "I'm No. 4!"
-	line "Getting tired?"
+	text "４にんめ<WA><WATASHI>よ！"
+	line "そろそろ　ばてて"
+	cont "きたんじゃない？"
 	done
 
 LassLauraBeatenText:
-	text "I lost too…"
+	text "<WATASHI>も　まけたのね"
 	done
 
 LassLauraAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
+	text "ベスト<WO>つくしたんだから"
+	line "くい<WA>ないわ！"
 	done
 
 CamperLloydSeenText:
-	text "OK! I'm No. 5."
-	line "I'll stomp you!"
+	text "きえーいッ！　５にんめ！"
+	line "おれ<GA>あいてだあ！"
 	done
 
 CamperLloydBeatenText:
-	text "Whoa! Too much."
+	text "たいした　もんだ！"
 	done
 
 CamperLloydAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
+	text "ベスト<WO>つくしたんだ"
+	line "くい<WA>ない！"
 	done
 
 LassShannonSeenText:
-	text "I'm the last in"
-	line "line, but I tell"
-	cont "you, I'm tough!"
+	text "６にんめ<WA><WATASHI>！"
+	line "さいご　だけど　てごわいわよ！"
 	done
 
 LassShannonBeatenText:
-	text "You're kidding."
+	text "こんな<NO>うそよッ！"
 	done
 
 LassShannonAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
+	text "ベスト<WO>つくしたんだから"
+	line "くい<WA>ないわ！"
 	done
 
 SupernerdPatSeenText:
-	text "Mufufufu…"
+	text "ふっふっふ<⋯>"
 
-	para "I have nothing to"
-	line "do with the six-"
-	cont "pack trainers."
+	para "ボク<WA>６にんぬきとは"
+	line "まったく　かんけいのない　おとこ"
 
-	para "I waited here to"
-	line "beat you when you"
-
-	para "were tired out by"
-	line "all the battles."
+	para "たたかい<WO>かちぬいて"
+	line "つかれた　きみ<WO>たおすため"
+	cont "ここで　ま<TTE>いたのだ！"
 	done
 
 SupernerdPatBeatenText:
-	text "Aren't you tired"
-	line "at all?"
+	text "つかれ<WO>しらない"
+	line "ふじみ<NO>おとこか　きみは！？"
 	done
 
 SupernerdPatAfterBattleText:
-	text "I'm sorry… I won't"
-	line "cheat anymore…"
+	text "ごめんなさい<⋯>"
+	line "もう　ズルいこと　しません！"
 	done
 
 CooltrainermKevinNuggetText:
-	text "You took on one"
-	line "more battle than"
+	text "なんか　ひとり　おおく"
+	line "たたかう　ハメ<NI>なったけど"
+	cont "キミ<WA>みごと　かちぬい<TA!>"
 
-	para "you expected, but"
-	line "you won anyway."
-
-	para "As promised, you"
-	line "win a prize."
+	para "やくそく　どおり"
+	line "しょうひん<WO>あげよう！"
 	done
 
 CooltrainermKevinSeenText:
-	text "But after seeing"
-	line "how you battle, I"
+	text "<⋯>さて"
+	line "きみ<NO>たたかい<WO>みていたら"
+	cont "ぼくも　たたか<TTE>　みたくなったよ"
 
-	para "want to see how"
-	line "I'll fare."
-
-	para "How about it? Let"
-	line "me take you on."
+	para "ぜひ　ぼくと　しょうぶしてくれ！"
+	line "いくぞ！"
 	done
 
 CooltrainermKevinBeatenText:
-	text "I've never had a"
-	line "battle this good!"
+	text "こんな<NI>いい　しょうぶは"
+	line "はじめてだ！"
 	done
 
 CooltrainermKevinAfterBattleText:
-	text "That was a great"
-	line "battle!"
+	text "すばらしい　たたかいだっ<TA!>"
 
-	para "You and your #-"
-	line "MON are truly out-"
-	cont "standing!"
+	para "きみと　きみ<NO>#たちは"
+	line "ほんとう<NI>つよい！"
 	done
 
 BillsHouseSignText:
-	text "SEA COTTAGE"
-	line "BILL'S HOUSE"
+	text "<KOKO_WA>みさき<NO>こや"
+	line "マサキ<NO>いえ"
 	done
 
 UnusedBillsHouseSignText: ; unreferenced
-	text "BILL'S HOUSE"
+	text "マサキ<NO>いえ"
 	done
 
 Route25_MapEvents:

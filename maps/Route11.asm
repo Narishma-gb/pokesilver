@@ -64,83 +64,69 @@ Route11HiddenRevive:
 	hiddenitem REVIVE, EVENT_ROUTE_11_HIDDEN_REVIVE
 
 YoungsterOwenSeenText:
-	text "There's no cheat-"
-	line "ing in #MON."
-
-	para "Let's keep it fair"
-	line "and square!"
+	text "#<NI>ずる<WA>なし　だよ！"
+	line "せいせい　どうどう　やろう！"
 	done
 
 YoungsterOwenBeatenText:
-	text "Huh? How did this"
-	line "happen?"
+	text "ありゃ？"
+	line "こんな　はずじゃ<⋯>"
 	done
 
 YoungsterOwenAfterBattleText:
-	text "I fought fair and"
-	line "square with honor."
-
-	para "I don't regret"
-	line "this at all."
+	text "せいせい　どうどう　たたかっ<TA!>"
+	line "だから　ぼく　こうかい　しないよ！"
 	done
 
 YoungsterJasonSeenText:
-	text "It itches and"
-	line "tickles a bit when"
-
-	para "I wear shorts in"
-	line "the grass."
+	text "たんパンで　くさむら　あるくと"
+	line "はっぱ<GA>ちくちく　くすぐったい！"
 	done
 
 YoungsterJasonBeatenText:
-	text "Aiyaaah!"
-	line "I got stomped!"
+	text "うひゃーっ"
+	line "まけたーっ！"
 	done
 
 YoungsterJasonAfterBattleText:
-	text "I'm going to catch"
-	line "more #MON in"
-	cont "the grass."
+	text "くさむらで　もっと　#"
+	line "つかまえようっと！"
 	done
 
 PsychicHermanSeenText:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 	done
 
 PsychicHermanBeatenText:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 	done
 
 PsychicHermanAfterBattleText:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "I lost while I had"
-	line "my eyes closed…"
+	para "め<WO>とじてる　あいだに"
+	line "まけちゃった<⋯>"
 	done
 
 PsychicFidelSeenText:
-	text "I can see it…"
-
-	para "Everything to see"
-	line "about you…"
+	text "ボクに<WA>みえる<⋯>"
+	line "キミ<NO>すべてが<⋯>"
 	done
 
 PsychicFidelBeatenText:
-	text "I couldn't foresee"
-	line "your power…"
+	text "キミ<NO>つよさは"
+	line "よち　できなかった<⋯>"
 	done
 
 PsychicFidelAfterBattleText:
-	text "Strength in con-"
-	line "viction…"
+	text "しんじる　ちから<⋯>"
 
-	para "You're strong be-"
-	line "cause you believe"
-	cont "in your #MON."
+	para "#たち<WO>しんじてるから"
+	line "キミ<WA>つよいんだね<⋯>"
 	done
 
 Route11SignText:
-	text "ROUTE 11"
+	text "<KOKO_WA>１１<ROUTE>"
 	done
 
 Route11_MapEvents:

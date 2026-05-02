@@ -243,252 +243,195 @@ LakeOfRageLanceTeleportIntoSkyMovement:
 	step_end
 
 LakeOfRageLanceForcedToEvolveText:
-	text "This lake is full"
-	line "of GYARADOS but"
-	cont "nothing else…"
+	text "こ<NO>みずうみ"
+	line "ギャラドス　ばかりだな<⋯>"
 
-	para "So the MAGIKARP"
-	line "are being forced"
-	cont "to evolve…"
+	para "やはり　コイキングは"
+	line "だれか<NO>しわざで　むりやり"
+	cont "しんか　させられてるのか<⋯>"
 	done
 
 LakeOfRageLanceIntroText:
-	text "Did you come here"
-	line "because of the"
-	cont "rumors?"
+	text "きみも　うわさ<WO>ききつけて"
+	line "や<TTE>きたのかい？"
 
-	para "You're <PLAYER>?"
-	line "I'm LANCE, a"
-	cont "trainer like you."
+	para "そう　<PLAYER>　というのか"
+	line "おれ<WA>ワタル"
+	cont "きみと　おなじ　<TRAINER>さ"
 
-	para "I heard some ru-"
-	line "mors, so I came to"
-	cont "investigate…"
+	para "ここ<NO>うわさ<WO>ききつけ"
+	line "しんそう<WO>しらべていたんだが<⋯>"
 
-	para "I saw the way you"
-	line "battled earlier,"
-	cont "<PLAYER>."
+	para "<PLAYER>くん！"
+	line "さっき<NO>たたかい<WO>みれば"
+	cont "きみ<GA>そうとうな　じつりょくの"
+	cont "<TRAINER>だと　わかる"
 
-	para "I can tell that"
-	line "you're a trainer"
-
-	para "with considerable"
-	line "skill."
-
-	para "If you don't mind,"
-	line "could you help me"
-	cont "investigate?"
+	para "よかったら　おれと　いっしょに"
+	line "しらべて　くれないか？"
 	done
 
 LakeOfRageLanceRadioSignalText:
-	text "LANCE: Excellent!"
+	text "ワタル『そうか　たすかるよ！"
 
-	para "It seems that the"
-	line "LAKE's MAGIKARP"
+	para "みずうみ<NO>コイキングは"
+	line "チョウジから　ながされている"
+	cont "なぞ<NO>でんぱで　むりやり"
+	cont "しんか　させられている　ようなんだ"
 
-	para "are being forced"
-	line "to evolve."
-
-	para "A mysterious radio"
-	line "broadcast coming"
-
-	para "from MAHOGANY is"
-	line "the cause."
-
-	para "I'll be waiting"
-	line "for you, <PLAYER>."
+	para "<PLAYER>くん！"
+	line "さき<NI>い<TTE>　ま<TTE>るよ！"
 	done
 
 LakeOfRageLanceRefusedText:
-	text "Oh… Well, if you"
-	line "change your mind,"
-	cont "please help me."
+	text "そうか<⋯>"
+	line "き<GA>かわったら　きてくれよ"
 	done
 
 LakeOfRageLanceAskHelpText:
-	text "LANCE: Hm? Are you"
-	line "going to help me?"
+	text "ワタル『ん？"
+	line "てつだ<TTE>　くれるのかい？"
 	done
 
 LakeOfRageGyaradosCryText:
-	text "GYARADOS: Gyashaa!"
+	text "ギャラドス『ギャシャーッ！！"
 	done
 
 LakeOfRageGotRedScaleText:
-	text "<PLAYER> obtained a"
-	line "RED SCALE."
+	text "<PLAYER>は"
+	line "あかいウロコ<WO>てにいれ<TA!>"
 	done
 
 LakeOfRageGrampsText:
-	text "The GYARADOS are"
-	line "angry!"
-
-	para "It's a bad omen!"
+	text "ギャラドス<GA>おいかり　じゃ！"
+	line "なんか　よくないこと<GA>おきるんじゃ"
 	done
 
 LakeOfRageGrampsText_ClearedRocketHideout:
-	text "Hahah! The MAGI-"
-	line "KARP are biting!"
+	text "ほっほ！"
+	line "いい　コイキング<GA>つれるんじゃよ"
 	done
 
 LakeOfRageSuperNerdText:
-	text "I heard this lake"
-	line "was made by ram-"
-	cont "paging GYARADOS."
+	text "<KOKO_WA>むかし　ギャラドスが"
+	line "あばれまわ<TTE>　できたんだ<TTE>"
 
-	para "I wonder if there"
-	line "is any connection"
-
-	para "to their mass out-"
-	line "break now?"
+	para "こんかい<NO>たいりょうはっせいと"
+	line "なにか　かんけい　あるのかな？"
 	done
 
 LakeOfRageCooltrainerFText:
-	text "Did my eyes de-"
-	line "ceive me? I saw a"
+	text "<WATASHI>　みまちがい　かしら"
+	line "みずうみ<NO>まんなかに"
+	cont "あかい　ギャラドス<GA>いたの<⋯>"
 
-	para "red GYARADOS in"
-	line "the LAKE…"
-
-	para "But I thought"
-	line "GYARADOS were"
-	cont "usually blue?"
+	para "でも　ギャラドス<TTE>"
+	line "ふつう　あおいろ　でしょ？"
 	done
 
 FisherAndreSeenText:
-	text "Let me battle with"
-	line "the #MON I just"
-	cont "caught!"
+	text "さっき　つりあげた"
+	line "じまん<NO>#で　しょうぶや！"
 	done
 
 FisherAndreBeatenText:
-	text "I might be an ex-"
-	line "pert angler, but"
-
-	para "I stink as a #-"
-	line "MON trainer…"
+	text "つり<WA>１にんまえ　でも"
+	line "#<WA>はんにんまえ　か<⋯>"
 	done
 
 FisherAndreAfterBattleText:
-	text "I won't lose as an"
-	line "angler! I catch"
-	cont "#MON all day."
+	text "つり<NO>うでまえなら　まけへんで！"
+	line "なんた<TTE>　１にちじゅう"
+	cont "#<WO>つっとるからな！"
 	done
 
 FisherRaymondSeenText:
-	text "No matter what I"
-	line "do, all I catch"
-
-	para "are the same #-"
-	line "MON…"
+	text "どんな<NI>がんば<TTE>も"
+	line "おなじ　#しか　つれねーぞ！"
 	done
 
 FisherRaymondBeatenText:
-	text "My line's all"
-	line "tangled up…"
+	text "<⋯>　つりいと　こんがらがった"
 	done
 
 FisherRaymondAfterBattleText:
-	text "Why can't I catch"
-	line "any good #MON?"
+	text "なんで　いい　#"
+	line "つれねーんだよ　もう！"
 	done
 
 CooltrainermAaronSeenText:
-	text "If a trainer spots"
-	line "another trainer,"
-
-	para "he has to make a"
-	line "challenge."
-
-	para "That is our"
-	line "destiny."
+	text "<TRAINER><WO>みかけたら"
+	line "かならず　ちょうせん　する！"
+	cont "それ<WA><TRAINER><NO>しゅくめい！"
 	done
 
 CooltrainermAaronBeatenText:
-	text "Whew…"
-	line "Good battle."
+	text "ふう<⋯>"
+	line "いい　たたかい　だった"
 	done
 
 CooltrainermAaronAfterBattleText:
-	text "#MON and their"
-	line "trainer become"
-
-	para "powerful through"
-	line "constant battling."
+	text "#と　<TRAINER>は"
+	line "たたか<TTE>　たたかい　ぬいて"
+	cont "じぶん<WO>きたえるんだ！"
 	done
 
 CooltrainerfLoisSeenText:
-	text "What happened to"
-	line "the red GYARADOS?"
+	text "あかい　ギャラドス<WA>どうしたの？"
 
-	para "It's gone?"
+	para "えっ　もう　いないの？"
+	line "そんな　せっかく　きたのに<⋯>"
 
-	para "Oh, darn. I came"
-	line "here for nothing?"
-
-	para "I know--let's"
-	line "battle!"
+	para "いいわ　あなた　しょうぶしましょ！"
 	done
 
 CooltrainerfLoisBeatenText:
-	text "Good going!"
+	text "みごとね"
 	done
 
 CooltrainerfLoisAfterBattleText:
-	text "Come to think of"
-	line "it, I've seen a"
-	cont "pink BUTTERFREE."
+	text "そういえば　あたし"
+	line "ピンク<NO>バタフリー　みたことある！"
 	done
 
 MeetWesleyText:
-	text "WESLEY: Well, how"
-	line "do you do?"
+	text "ミズオ『やあ　はじめまして！"
 
-	para "Seeing as how it's"
-	line "Wednesday today,"
-
-	para "I'm WESLEY of"
-	line "Wednesday."
+	para "ぼく<WA>すいようび<NO>ミズオ！"
 	done
 
 WesleyGivesGiftText:
-	text "Pleased to meet"
-	line "you. Please take a"
-	cont "souvenir."
+	text "せっかく　であったんだ"
+	line "これ　うけと<TTE>　くれよ！"
 	done
 
 WesleyGaveGiftText:
-	text "WESLEY: BLACKBELT"
-	line "beefs up the power"
-	cont "of fighting moves."
+	text "ミズオ『そ<NO>くろおびは"
+	line "かくとうタイプ<NO>わざの"
+	cont "いりょく<WO>たかめる　どうぐさ！"
 	done
 
 WesleyWednesdayText:
-	text "WESLEY: Since you"
-	line "found me, you must"
+	text "ミズオ『ぼく<WO>みつけられたなら"
+	line "ほか<NO>ねえさん　たちとは"
+	cont "もう　あったんじゃ　ないかい？"
 
-	para "have met my broth-"
-	line "ers and sisters."
-
-	para "Or did you just"
-	line "get lucky?"
+	para "それとも　ラッキー　だったのかな？"
 	done
 
 WesleyNotWednesdayText:
-	text "WESLEY: Today's"
-	line "not Wednesday."
-	cont "That's too bad."
+	text "ミズオ『きょう<WA>すいようびじゃ"
+	line "ないみたいだな！"
+	cont "おしいなー"
 	done
 
 LakeOfRageSignText:
-	text "LAKE OF RAGE,"
-	line "also known as"
-	cont "GYARADOS LAKE."
+	text "<KOKO_WA>いかり<NO>みずうみ"
+	line "べつめい　ギャラドスこ"
 	done
 
 FishingGurusHouseSignText:
-	text "FISHING GURU'S"
-	line "HOUSE"
+	text "つり　めいじん　<NO>いえ"
 	done
 
 LakeOfRage_MapEvents:

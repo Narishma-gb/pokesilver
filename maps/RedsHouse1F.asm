@@ -33,43 +33,26 @@ RedsHouse1FBookshelf:
 	jumpstd PictureBookshelfScript
 
 RedsMomText1:
-	text "Hi!"
+	text "こんにちは！"
 
-	para "RED's been away"
-	line "for a long time."
+	para "レッド<WA>ずっと　たび<NI>い<TTE>るの"
+	line "もう　ずっと　れんらくを"
+	cont "よこさないのよ"
+	cont "どこで　なに<WO>してるのやら<⋯>"
 
-	para "He hasn't called"
-	line "either, so I have"
-
-	para "no idea where he"
-	line "is or what he's"
-	cont "been doing."
-
-	para "They say that no"
-	line "word is proof that"
-
-	para "he's doing fine,"
-	line "but I do worry"
-	cont "about him."
+	para "たより<GA>ないのは"
+	line "げんきな　しょうこ　<TTE>　いうけど"
+	cont "やっぱり　しんぱい　よね"
 	done
 
 RedsMomText2:
-	text "I worry about RED"
-	line "getting hurt or"
-
-	para "sick, but he's a"
-	line "boy. I'm proud"
-
-	para "that he is doing"
-	line "what he wants to"
-
-	para "do."
+	text "ケガや　びょうき<GA>しんぱい　だけど"
+	line "おとこのこ<WA>ゲンキ<GA>いちばん！"
 	done
 
 RedsHouse1FTVText:
-	text "They have programs"
-	line "that aren't shown"
-	cont "in JOHTO…"
+	text "ジョウトで<WA>みたこと　ない"
+	line "ばんぐみ<WO>ほうそう　してる<⋯>！"
 	done
 
 RedsHouse1F_MapEvents:

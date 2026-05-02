@@ -307,6 +307,34 @@ INCLUDE "maps/CianwoodPhotoStudio.asm"
 INCLUDE "maps/CianwoodLugiaSpeechHouse.asm"
 
 
+SECTION "Map Scripts 9", ROMX
+
+INCLUDE "maps/CherrygroveCity.asm"
+INCLUDE "maps/AzaleaTown.asm"
+INCLUDE "maps/LakeOfRage.asm"
+INCLUDE "maps/Route34.asm"
+INCLUDE "maps/Route35.asm"
+INCLUDE "maps/Route36.asm"
+INCLUDE "maps/Route11.asm"
+INCLUDE "maps/Route25.asm"
+INCLUDE "maps/DiglettsCave.asm"
+INCLUDE "maps/MountMoon.asm"
+INCLUDE "maps/UndergroundPath.asm"
+INCLUDE "maps/RockTunnel1F.asm"
+INCLUDE "maps/RockTunnelB1F.asm"
+INCLUDE "maps/SafariZoneFuchsiaGateBeta.asm"
+INCLUDE "maps/SafariZoneBeta.asm"
+INCLUDE "maps/VictoryRoad.asm"
+INCLUDE "maps/LakeOfRageHiddenPowerHouse.asm"
+INCLUDE "maps/LakeOfRageMagikarpHouse.asm"
+INCLUDE "maps/Route43MahoganyGate.asm"
+INCLUDE "maps/Route43Gate.asm"
+INCLUDE "maps/RedsHouse1F.asm"
+INCLUDE "maps/RedsHouse2F.asm"
+INCLUDE "maps/BluesHouse.asm"
+INCLUDE "maps/OaksLab.asm"
+
+
 SECTION "Map Scripts 12", ROMX
 
 INCLUDE "maps/Route28.asm"
@@ -333,29 +361,16 @@ INCLUDE "maps/SilverCavePokecenter1F.asm"
 INCLUDE "maps/Route28SteelWingHouse.asm"
 
 
-;INCLUDE "maps/DiglettsCave.asm"
-;INCLUDE "maps/MountMoon.asm"
-;INCLUDE "maps/UndergroundPath.asm"
-;INCLUDE "maps/RockTunnel1F.asm"
-;INCLUDE "maps/RockTunnelB1F.asm"
-;INCLUDE "maps/SafariZoneFuchsiaGateBeta.asm"
-;INCLUDE "maps/SafariZoneBeta.asm"
-;INCLUDE "maps/VictoryRoad.asm"
+
 
 ;INCLUDE "maps/NewBarkTown.asm"
-;INCLUDE "maps/CherrygroveCity.asm"
 ;INCLUDE "maps/VioletCity.asm"
-;INCLUDE "maps/AzaleaTown.asm"
 ;INCLUDE "maps/GoldenrodCity.asm"
 
 ;INCLUDE "maps/OlivineCity.asm"
 ;INCLUDE "maps/EcruteakCity.asm"
 ;INCLUDE "maps/MahoganyTown.asm"
-;INCLUDE "maps/LakeOfRage.asm"
 ;INCLUDE "maps/BlackthornCity.asm"
-
-
-;SECTION "Map Scripts 9", ROMX
 
 ;INCLUDE "maps/Route26.asm"
 ;INCLUDE "maps/Route27.asm"
@@ -365,10 +380,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 
 
 ;SECTION "Map Scripts 10", ROMX
-
-;INCLUDE "maps/Route34.asm"
-;INCLUDE "maps/Route35.asm"
-;INCLUDE "maps/Route36.asm"
 
 
 ;SECTION "Map Scripts 11", ROMX
@@ -399,7 +410,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 
 ;INCLUDE "maps/Route15.asm"
 ;INCLUDE "maps/Route13.asm"
-;INCLUDE "maps/Route11.asm"
 ;INCLUDE "maps/VermilionCity.asm"
 ;INCLUDE "maps/SaffronCity.asm"
 ;INCLUDE "maps/CeruleanCity.asm"
@@ -409,7 +419,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 
 ;INCLUDE "maps/Route9.asm"
 ;INCLUDE "maps/Route24.asm"
-;INCLUDE "maps/Route25.asm"
 ;INCLUDE "maps/Route8.asm"
 
 
@@ -419,18 +428,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 ;INCLUDE "maps/CinnabarPokecenter2FBeta.asm"
 ;INCLUDE "maps/Route19FuchsiaGate.asm"
 ;INCLUDE "maps/SeafoamGym.asm"
-;INCLUDE "maps/LakeOfRageHiddenPowerHouse.asm"
-;INCLUDE "maps/LakeOfRageMagikarpHouse.asm"
-;INCLUDE "maps/Route43MahoganyGate.asm"
-;INCLUDE "maps/Route43Gate.asm"
-
-
-;SECTION "Map Scripts 23", ROMX
-
-;INCLUDE "maps/RedsHouse1F.asm"
-;INCLUDE "maps/RedsHouse2F.asm"
-;INCLUDE "maps/BluesHouse.asm"
-;INCLUDE "maps/OaksLab.asm"
 
 
 ;SECTION "Map Scripts 24", ROMX

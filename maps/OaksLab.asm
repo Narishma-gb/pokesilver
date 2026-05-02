@@ -78,180 +78,125 @@ OaksLabPC:
 	jumptext OaksLabPCText
 
 OakWelcomeKantoText:
-	text "OAK: Ah, <PLAYER>!"
-	line "It's good of you"
+	text "オーキド『おお　<PLAYER>くん！"
+	line "わざわざ　よく　きたね！"
 
-	para "to come all this"
-	line "way to KANTO."
-
-	para "What do you think"
-	line "of the trainers"
-
-	para "out here?"
-	line "Pretty tough, huh?"
+	para "どうじゃ？"
+	line "カントー<NO><TRAINER>たちも"
+	cont "てごわい　だろう！"
 	done
 
 OakLabDexCheckText:
-	text "How is your #-"
-	line "DEX coming?"
+	text "どれどれ　#ずかんは"
+	line "どんな　かんじかな？"
 
-	para "Let's see…"
+	para "ふむふむ<⋯>"
 	done
 
 OakLabGoodbyeText:
-	text "If you're in the"
-	line "area, I hope you"
-	cont "come visit again."
+	text "ちかくまで　きたら"
+	line "また　かお<WO>みせて　くれ"
 	done
 
 OakOpenMtSilverText:
-	text "OAK: Wow! That's"
-	line "excellent!"
+	text "オーキド『おお！　すばらしい！"
+	line "カントー　バッジも　あつめたのか！"
+	cont "わし<NO>みこんだ　とおりじゃ！"
 
-	para "You collected the"
-	line "BADGES of GYMS in"
-	cont "KANTO. Well done!"
+	para "そうじゃ！　<PLAYER>くんが"
+	line "シロガネやま<NI>はいれるよう"
+	cont "てはい　しておこう！"
 
-	para "I was right in my"
-	line "assessment of you."
+	para "シロガネやま<WA>やせい　#が"
+	line "たくさんいる　おおきな　やまじゃ！"
 
-	para "Tell you what,"
-	line "<PLAYER>. I'll make"
+	para "ふつう<NO><TRAINER><WA>キケンだから"
+	line "はいれない　よう<NI>しているが"
+	cont "<PLAYER>くんなら　だいじょうぶ！"
 
-	para "arrangements so"
-	line "that you can go to"
-	cont "MT.SILVER."
-
-	para "MT.SILVER is a big"
-	line "mountain that is"
-
-	para "home to many wild"
-	line "#MON."
-
-	para "It's too dangerous"
-	line "for your average"
-
-	para "trainer, so it's"
-	line "off limits. But"
-
-	para "we can make an"
-	line "exception in your"
-	cont "case, <PLAYER>."
-
-	para "Go up to INDIGO"
-	line "PLATEAU. You can"
-
-	para "reach MT.SILVER"
-	line "from there."
+	para "セキエイこうげん<NI>い<TTE>みなさい"
+	line "そこから　シロガネやまへ　いけるよ"
 	done
 
 OakNoKantoBadgesText:
-	text "OAK: Hmm? You're"
-	line "not collecting"
-	cont "KANTO GYM BADGES?"
+	text "オーキド『おや？"
+	line "カントーのバッジを"
+	cont "あつめていない　みたいじゃな"
 
-	para "The GYM LEADERS in"
-	line "KANTO are as tough"
-
-	para "as any you battled"
-	line "in JOHTO."
-
-	para "I recommend that"
-	line "you challenge"
-	cont "them."
+	para "カントー<NO>ジム　リーダーたちも"
+	line "ジョウト<NI>まけず　おとらず"
+	cont "きょうてき　ぞろい！"
+	cont "ちょうせん　してみて<WA>どうかな？"
 	done
 
 OakYesKantoBadgesText:
-	text "OAK: Ah, you're"
-	line "collecting KANTO"
-	cont "GYM BADGES."
+	text "オーキド『カントー　バッジを"
+	line "あつめている　みたいじゃな！"
 
-	para "I imagine that"
-	line "it's hard, but the"
+	para "たいへん　だろうが"
+	line "けいけん<WA><PLAYER>くんの"
+	cont "ちからと　なる！"
 
-	para "experience is sure"
-	line "to help you."
+	para "すべて　あつめ　おえたら"
+	line "また　あそび<NI>きなさい"
+	cont "わしから　プレゼント<WO>あげよう！"
 
-	para "Come see me when"
-	line "you get them all."
-
-	para "I'll have a gift"
-	line "for you."
-
-	para "Keep trying hard,"
-	line "<PLAYER>!"
+	para "<PLAYER>くん"
+	line "がんばるんじゃ！"
 	done
 
 OaksAssistant1Text:
-	text "The PROF's #MON"
-	line "TALK radio program"
-
-	para "isn't aired here"
-	line "in KANTO."
-
-	para "It's a shame--I'd"
-	line "like to hear it."
+	text "はかせ<NO>#こうざ"
+	line "カントーで<WA>ほうそう　してません"
+	cont "ききたいの<NI>ざんねんです"
 	done
 
 OaksAssistant2Text:
-	text "Thanks to your"
-	line "work on the #-"
-	cont "DEX, the PROF's"
-
-	para "research is coming"
-	line "along great."
+	text "<PLAYER>くんが"
+	line "ずかん<WO>つく<TTE>　くれてるので"
+	cont "はかせ<NO>けんきゅうが"
+	cont "はかど<TTE>ますよ！"
 	done
 
 OaksAssistant3Text:
-	text "Don't tell anyone,"
-	line "but PROF.OAK'S"
+	text "<⋯>ここだけ<NO>はなし　ですよ！"
 
-	para "#MON TALK isn't"
-	line "a live broadcast."
+	para "オーキドはかせ<NO>#こうざは"
+	line "なまほうそう　じゃ　ないのです！"
 	done
 
 OaksLabPoster1Text:
-	text "Press START to"
-	line "open the MENU."
+	text "スタート　ボタン<WO>プシュ！"
+	line "おすと　メニュー<GA>ひらくなり"
 	done
 
 OaksLabPoster2Text:
-	text "The SAVE option is"
-	line "on the MENU."
-
-	para "Use it in a timely"
-	line "manner."
+	text "セーブするに<WA>#　レポート"
+	line "こまめ<NI>かくと　いいなり"
 	done
 
 OaksLabTrashcanText:
-	text "There's nothing in"
-	line "here…"
+	text "なか<WA>からっぽ<⋯>"
 	done
 
 OaksLabPCText:
-	text "There's an e-mail"
-	line "message on the PC."
+	text "<PC><WO>みると"
+	line "なんと　でんしメール<GA>きてい<TA!>"
 
-	para "…"
+	para "<⋯>　<⋯>　<⋯>"
 
-	para "PROF.OAK, how is"
-	line "your research"
-	cont "coming along?"
+	para "オーキドはかせ<NO>けんきゅうは"
+	line "すすんで　いますか？"
 
-	para "I'm still plugging"
-	line "away."
+	para "<WATASHI><NO>ほうは<⋯>"
+	line "がんば<TTE>いる　さいちゅう　です！"
 
-	para "I heard rumors"
-	line "that <PLAYER> is"
+	para "ところで　<PLAYER>くんが"
+	line "がんば<TTE>いると　うわさ<NI>きいて"
+	cont "とても　うれしいです！"
 
-	para "making quite a"
-	line "name for himself."
-
-	para "I'm delighted to"
-	line "hear that."
-
-	para "ELM in NEW BARK"
-	line "TOWN 8-)"
+	para "<⋯>　ワカバタウン　ウツギ　より"
+	line "<⋯>　<⋯>　<⋯>"
 	done
 
 OaksLab_MapEvents:

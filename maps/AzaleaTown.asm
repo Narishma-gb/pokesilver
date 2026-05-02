@@ -204,194 +204,150 @@ AzaleaTownRivalBattleExitMovement:
 	step_end
 
 AzaleaTownRivalBeforeText:
-	text "…Tell me some-"
-	line "thing."
+	text "<⋯>　ききたいこと<GA>ある"
 
-	para "Is it true that"
-	line "TEAM ROCKET has"
-	cont "returned?"
+	para "<⋯>　<ROCKET>が"
+	line "ふっかつ　してる<TTE>　ほんとか？"
 
-	para "What? You beat"
-	line "them? Hah! Quit"
-	cont "lying."
+	para "な<NI>おまえ<GA>たおした　だ<TTE>？"
+	line "ウソ　いうなよな"
 
-	para "You're not joking?"
-	line "Then let's see how"
-	cont "good you are."
+	para "<⋯>　ほんとかよ？"
+	line "じゃあ　そ<NO>じつりょく"
+	cont "オレ<NI>みせてみろ"
 	done
 
 AzaleaTownRivalWinText:
-	text "… Humph! Useless"
-	line "#MON!"
+	text "<⋯>　フン！"
+	line "つかえない　#　だぜ"
 
-	para "Listen, you. You"
-	line "only won because"
-
-	para "my #MON were"
-	line "weak."
+	para "<⋯>　いいか　おまえ<GA>かてたのは"
+	line "オレ<NO>#<GA>よわかったからさ"
 	done
 
 AzaleaTownRivalAfterText:
-	text "I hate the weak."
+	text "<⋯>　オレ<WA>よわい　やつが"
+	line "だいっきらい　なんだよ"
 
-	para "#MON, trainers."
-	line "It doesn't matter"
-	cont "who or what."
+	para "#　だろうが"
+	line "<TRAINER>　だろうが<⋯>"
 
-	para "I'm going to be"
-	line "strong and wipe"
-	cont "out the weak."
+	para "そういう　よわい　やつら"
+	line "ぜんぶ　つぶすため"
+	cont "オレ<WA>つよくなる<⋯>"
 
-	para "That goes for TEAM"
-	line "ROCKET too."
+	para "<ROCKET>も　おなじ"
 
-	para "They act big and"
-	line "tough in a group."
+	para "ひとり　ひとり<WA>よわいくせに"
+	line "あつま<TTE>　えらそう<NI>する　やつら"
+	cont "ぜったい<NI>ゆるせない"
 
-	para "But get them"
-	line "alone, and they're"
-	cont "weak."
-
-	para "I hate them all."
-
-	para "You stay out of my"
-	line "way. A weakling"
-
-	para "like you is only a"
-	line "distraction."
+	para "<⋯>　おまえ<WA>じゃま　するなよ"
+	line "よわい　やつ<GA>うろちょろ　してると"
+	cont "めざわり　だからな"
 	done
 
 AzaleaTownRivalLossText:
-	text "…Humph! I knew"
-	line "you were lying."
+	text "<⋯>　フン！"
+	line "やっぱり　さっき<NO>ウソなんだろ"
 	done
 
 AzaleaTownRocket1Text:
-	text "It's unsafe to go"
-	line "in there, so I'm"
-	cont "standing guard."
+	text "なか<WA>あぶないからな"
+	line "こうして　だれも　はいらないよう"
+	cont "みは<TTE>いるのだよ"
 
-	para "Aren't I a good"
-	line "Samaritan?"
+	para "くー　おれ<TTE>　いいひと？"
 	done
 
 AzaleaTownRocket2Text:
-	text "Do you know about"
-	line "SLOWPOKETAIL? I"
-	cont "heard it's tasty!"
+	text "きみ　ヤドンのシッポ<TTE>　し<TTE>る？"
+	line "ウワサだけど　おいしい　らしいね"
 
-	para "Aren't you glad I"
-	line "told you that?"
+	para "こんな　いいこと　おしえる　なんて"
+	line "くー　おれ<TTE>　いいひと？"
 	done
 
 AzaleaTownGrampsTextBefore:
-	text "The SLOWPOKE have"
-	line "disappeared from"
-	cont "town…"
+	text "まちから　ヤドン<GA>きえた<⋯>"
 
-	para "I heard their"
-	line "TAILS are being"
-	cont "sold somewhere."
+	para "どこぞで<WA>ヤドンのシッポが"
+	line "うられているという　はなし　だし<⋯>"
 	done
 
 AzaleaTownGrampsTextAfter:
-	text "The SLOWPOKE have"
-	line "returned."
-
-	para "Knowing them, they"
-	line "could've just been"
-
-	para "goofing off some-"
-	line "where."
+	text "ヤドン<GA>もど<TTE>きたよ"
+	line "まあ　のんびりや<NO>ヤドンのことだし"
+	cont "どこかで　のんびり　してただけかもな"
 	done
 
 AzaleaTownTeacherText:
-	text "Did you come to"
-	line "get KURT to make"
-	cont "some BALLS?"
-
-	para "A lot of people do"
-	line "just that."
+	text "あなたも　ガンテツさんに"
+	line "ボール<WO>つく<TTE>もらい<NI>きたの？"
+	cont "おおいのよね　そういう　ひと"
 	done
 
 AzaleaTownYoungsterText:
-	text "Cut through AZALEA"
-	line "and you'll be in"
-	cont "ILEX FOREST."
+	text "ヒワダ<NO>まち<WO>ぬけると"
+	line "ウバメ<NO>もり"
 
-	para "But these skinny"
-	line "trees make it"
+	para "でも　ほそい　き<GA>じゃまして"
+	line "さき<NI>すすめない"
 
-	para "impossible to get"
-	line "through."
-
-	para "The CHARCOAL MAN's"
-	line "#MON can CUT"
-	cont "down trees."
+	para "スミしょくにん<NO>#なら"
+	line "き<WO>きる　わざ<WO>おぼえてるけどね"
 	done
 
 AzaleaTownSlowpokeText1:
-	text "SLOWPOKE: …"
+	text "ヤドン『<⋯>　<⋯>　<⋯>"
 
-	para "<……> <……> <……>"
+	para "<⋯>　<⋯>　<⋯>"
 	done
 
 AzaleaTownSlowpokeText2:
-	text "<……> <……>Yawn?"
+	text "<⋯>　<⋯>　やあん？"
 	done
 
 WoosterText:
-	text "WOOSTER: Gugyoo…"
+	text "ミズウオ『<⋯>　グギョ"
 	done
 
 AzaleaTownSignText:
-	text "AZALEA TOWN"
-	line "Where People and"
-
-	para "#MON Live in"
-	line "Happy Harmony"
+	text "<KOKO_WA>ヒワダ　タウン"
+	line "#と　ひとが"
+	cont "とも<NI>なかよく　くらす　まち"
 	done
 
 KurtsHouseSignText:
-	text "KURT'S HOUSE"
+	text "<KOKO_WA>ガンテツ　のいえ"
 	done
 
 AzaleaGymSignText:
-	text "AZALEA TOWN"
-	line "#MON GYM"
-	cont "LEADER: BUGSY"
-
-	para "The Walking"
-	line "Bug #MON"
-	cont "Encyclopedia"
+	text "ヒワダ　タウン　#ジム"
+	line "リーダー　ツクシ"
+	cont "あるく　むしポケ　だいひゃっか"
 	done
 
 SlowpokeWellSignText:
-	text "SLOWPOKE WELL"
+	text "ヤドンのいど"
+	line "べつめい　あめふらし<NO>いど"
 
-	para "Also known as the"
-	line "RAINMAKER WELL."
+	para "こ<NO>ちほうでは"
+	line "ヤドン<GA>あくび<WO>するたびに"
+	cont "あめ<GA>ふると　しんじられています"
 
-	para "Locals believe"
-	line "that a SLOWPOKE's"
-	cont "yawn summons rain."
-
-	para "Records show that"
-	line "a SLOWPOKE's yawn"
-
-	para "ended a drought"
-	line "400 years ago."
+	para "じっさい　４００ねんまえの"
+	line "ひでりのとき　みんな<WO>すくったのは"
+	cont "ヤドン<GA>あくび<WO>したからだと"
+	cont "とうじ<NO>きろく<NI>のこされています"
 	done
 
 CharcoalKilnSignText:
-	text "CHARCOAL KILN"
+	text "<KOKO_WA>スミしょくにん<NO>こや"
 	done
 
 AzaleaTownIlexForestSignText:
-	text "ILEX FOREST"
-
-	para "Enter through the"
-	line "gate."
+	text "ゲート<WO>ぬけると　ウバメのもり"
 	done
 
 AzaleaTown_MapEvents:

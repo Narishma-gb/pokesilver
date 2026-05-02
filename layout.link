@@ -149,6 +149,8 @@ ROMX $2e
 	"Pics 14"
 	org $6300
 	"bank2E"
+ROMX $2f
+	"Map Scripts 9"
 ROMX $30
 	"Sprites 1"
 ROMX $31
@@ -194,7 +196,6 @@ ROMX $3f
 ; ROMX $40
 	; "Title Screen"
 	; "Font Inversed"
-	; "Map Scripts 9"
 	; "Map Scripts 10"
 	; "Map Scripts 11"
 	; "Map Scripts 13"

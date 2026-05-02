@@ -90,122 +90,83 @@ MagikarpHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
 MagikarpLengthRaterText_LakeOfRageHistory:
-	text "LAKE OF RAGE is"
-	line "actually a crater"
+	text "こ<NO>いかりのみずうみ　は"
+	line "ギャラドス<GA>あばれたあと<NO>あなに"
+	cont "あまみず<GA>たま<TTE>　できた<TTE>よ"
 
-	para "made by rampaging"
-	line "GYARADOS."
+	para "じいさん<NO>じいさん<NO>そのまた"
+	line "じいさん<NO>はなし　だけどな"
 
-	para "The crater filled"
-	line "up with rainwater"
+	para "まえ<WA>いき<NO>いい"
+	line "コイキング<GA>つれる"
+	cont "みずうみ　だったのに<⋯>"
 
-	para "and the LAKE was"
-	line "formed."
-
-	para "That's the story"
-	line "passed on from my"
-
-	para "Grandpa's great-"
-	line "great-grandpa."
-
-	para "It used to be that"
-	line "you could catch"
-
-	para "lively MAGIKARP"
-	line "there, but…"
-
-	para "I don't understand"
-	line "what's happening."
+	para "いったいぜんたい　どうしたんだ？"
 	done
 
 MagikarpLengthRaterText_MenInBlack:
-	text "The LAKE hasn't"
-	line "been normal since"
-
-	para "those men wearing"
-	line "black arrived."
+	text "みずうみ<GA>おかしくなったのは"
+	line "くろい　ふく<NO>おとこたちが"
+	cont "ウロウロ　しはじめて　からだな"
 	done
 
 MagikarpLengthRaterText_WorldsLargestMagikarp:
-	text "LAKE OF RAGE is"
-	line "back to normal."
+	text "いやあ　いかりのみずうみ"
+	line "むかしのよう<NI>いき<NO>いい"
+	cont "コイキング<GA>つれるよう<NI>なった"
 
-	para "The MAGIKARP have"
-	line "returned."
+	para "これで　せかいいち"
+	line "おおきな　コイキング<WO>みるという"
+	cont "ゆめ<GA>はたせそうだ"
 
-	para "I may yet realize"
-	line "my dream of see-"
-	cont "ing the world's"
-	cont "largest MAGIKARP."
-
-	para "Do you have a ROD?"
-	line "Please help me if"
-	cont "you do."
+	para "キミ<WA>つりざお　も<TTE>る？"
+	line "よかったら　てつだ<TTE>くれたまえ"
 	done
 
 MagikarpLengthRaterText_YouHaveAMagikarp:
-	text "Ah, you have a"
-	line "MAGIKARP! Let's"
-
-	para "see how big that"
-	line "baby is."
+	text "おっ　コイキング<WO>も<TTE>いるのか"
+	line "で<WA>じまん<NO>コイキング"
+	cont "みせて　もらうよ！"
 	done
 
 MagikarpLengthRaterText_Memento:
-	text "Wow! This one is"
-	line "outstanding!"
+	text "こいつ<WA>みごと！"
 
-	para "I tip my hat to"
-	line "you!"
-
-	para "Take this as a"
-	line "memento!"
+	para "きみ<NO>うでまえ<NI>だつぼう　だな"
+	line "きねん<NI>これ<WO>も<TTE>いきなさい"
 	done
 
 MagikarpLengthRaterText_Bonus:
-	text "The record is the"
-	line "important thing."
-
-	para "Think of that as"
-	line "a bonus!"
+	text "まっ　だいじなの<WA>きろくだから"
+	line "それ<WA>おまけ　みたいなもんだよ"
 	done
 
 MagikarpLengthRaterText_TooShort:
-	text "Wow! This one is"
-	line "outstanding!"
+	text "こいつ<WA>みごと！"
 
-	para "…I wish I could"
-	line "say that, but I've"
-
-	para "seen a bigger one"
-	line "before."
+	para "といいたい<GA>まえ<NI>つったほうが"
+	line "おおも<NO>だったな"
 	done
 
 MagikarpLengthRaterText_NotMagikarp:
-	text "What? That's not a"
-	line "MAGIKARP!"
+	text "なぬっ！"
+	line "そりゃ　コイキング　じゃないよ"
 	done
 
 MagikarpLengthRaterText_Refused:
-	text "Oh… So you didn't"
-	line "get one good"
-
-	para "enough to show me?"
-	line "Maybe next time."
+	text "そうか<⋯>"
+	line "みせるほど<NO>やつ<WA>つれなかったか"
+	cont "まっ　つぎ<WA>すごい<NO>みせてよ"
 	done
 
 LakeOfRageMagikarpHouseUnusedRecordText:
-	text "CURRENT RECORD"
-
-	para "@"
-	text_ram wStringBuffer3
-	text " caught by"
+	text "いま<NO>きろく<⋯>"
 	line "@"
+	text_ram wStringBuffer3
+	text "　@"
 	text_ram wStringBuffer4
-	text_end
-
-LakeOfRageMagikarpHouseUnusedDummyText: ; unreferenced
-	text_end
+	text_start
+	done
 
 LakeOfRageMagikarpHouse_MapEvents:
 	db 0, 0 ; filler

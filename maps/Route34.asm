@@ -405,235 +405,186 @@ Route34MovementData_DayCareManWalksBackInside_WalkAroundPlayer:
 	step_end
 
 YoungsterSamuelSeenText:
-	text "This is where I do"
-	line "my training!"
+	text "こ<NO>あたり<WA>おれの"
+	line "れんしゅう　ばしょ　なんだ！"
 	done
 
 YoungsterSamuelBeatenText:
-	text "What happened?"
+	text "なんと！"
 	done
 
 YoungsterSamuelAfterText:
-	text "I'm going to train"
-	line "even harder."
-
-	para "After all, I'm"
-	line "trying to become"
-	cont "a GYM LEADER."
+	text "れんしゅうで　ダメなら　とっくんだ！"
+	line "なんた<TTE>　おれ<NO>もくひょうは"
+	cont "ジムリーダー　だからな！"
 	done
 
 YoungsterIanSeenText:
-	text "I'm the best in my"
-	line "class at #MON."
+	text "ぼく　クラスで　いちばん"
+	line "#　つよいんだよ！"
 	done
 
 YoungsterIanBeatenText:
-	text "No! There are bet-"
-	line "ter trainers…"
+	text "トホホ<⋯>"
+	line "うえに<WA>うえ<GA>いるのか<⋯>"
 	done
 
 YoungsterIanAfterText:
-	text "I'm trying hard so"
-	line "I can be the star"
-	cont "in my class."
+	text "クラスで　じまん　するため"
+	line "いろいろ　どりょく　してるんだ"
 	done
 
 CamperTodd1SeenText:
-	text "I'm confident in"
-	line "my ability to"
-	cont "raise #MON."
-
-	para "Want to see?"
+	text "#　そだてる<NO>じしん　あるよ"
+	line "ちょっと　しょうぶ　しようよ！"
 	done
 
 CamperTodd1BeatenText:
-	text "I didn't do a good"
-	line "enough job?"
+	text "そだて<GA>たりてないのか？"
 	done
 
 CamperTodd1AfterText:
-	text "Maybe I should"
-	line "leave one in DAY-"
-	cont "CARE."
-	cont "What should I do?"
+	text "うーん　そだてやさんに"
+	line "あずけようかな？　どうしようかな？"
 	done
 
 PicnickerGina1SeenText:
-	text "Are you a trainer?"
-
-	para "Let's have a"
-	line "practice battle."
+	text "あなた　#　<TRAINER>なの？"
+	line "じゃ　れんしゅうあいて<NI>な<TTE>よ！"
 	done
 
 PicnickerGina1BeatenText:
-	text "Oh, no! I just"
-	line "can't win…"
+	text "だめ！"
+	line "ぜんぜん　かてないわ！"
 	done
 
 PicnickerGina1AfterText:
-	text "You're too strong"
-	line "to be a practice"
-	cont "partner."
+	text "あなた　じゃ　つよすぎて"
+	line "れんしゅう<NI>ならないわ！"
 	done
 
 OfficerKeithSeenText:
-	text "Who goes there?"
-	line "What are you up"
-	cont "to?"
+	text "きみ　きみ"
+	line "そこで　な<NI>してるのかね？"
 	done
 
 OfficerKeithWinText:
-	text "You're a tough"
-	line "little guy."
+	text "つよい　おこさま　だね！"
 	done
 
 OfficerKeithAfterText:
-	text "Yep, I see nothing"
-	line "wrong today. You"
-
-	para "be good and stay"
-	line "out of trouble."
+	text "みまわり　いじょう　なし！"
+	line "きみも　き<WO>つけるんだよ"
 	done
 
 OfficerKeithDaytimeText:
-	text "I'm on patrol for"
-	line "suspicious indi-"
-	cont "viduals."
+	text "あやしい　にんげん<GA>いないか"
+	line "みまわ<TTE>　いるのです"
 	done
 
 PokefanmBrandonSeenText:
-	text "I just got my"
-	line "#MON back from"
-	cont "DAY-CARE."
-
-	para "Let's see how much"
-	line "stronger it got!"
+	text "そだてやさん　から"
+	line "ひきとったばかり<NO>#"
+	cont "どれだけ　つよくなったか　みるぞ！"
 	done
 
 PokefanmBrandonBeatenText:
-	text "Why does it end"
-	line "this way?"
+	text "なんで　そーなるの！？"
 	done
 
 PokefanmBrandonAfterText:
-	text "My #MON knew"
-	line "moves I didn't"
-	cont "know it had."
-
-	para "That confounded me"
-	line "to no end!"
+	text "#　いつのまにか"
+	line "しらない　わざ<WO>おぼえてたから"
+	cont "わし<GA>とまど<TTE>　しまった"
 	done
 
 CooltrainerfIreneSeenText:
-	text "IRENE: Kyaaah!"
-	line "A boy found us!"
+	text "マリサ『きゃっ！"
+	line "おとこのこ<GA>きたわっ！"
 	done
 
 CooltrainerfIreneBeatenText:
-	text "IRENE: Ohhhh!"
-	line "He's too strong!"
+	text "マリサ『いやーん　つよいわ！"
 	done
 
 CooltrainerfIreneAfterText1:
-	text "IRENE: My sister"
-	line "KATE will get you"
-	cont "for this!"
+	text "マリサ『マリア　おねえさんに"
+	line "しかえし　してもらうからっ！"
 	done
 
 CooltrainerfIreneAfterText2:
-	text "IRENE: Isn't this"
-	line "beach great?"
-
-	para "It's our secret"
-	line "little getaway!"
+	text "マリサ『きれいな　すなはまでしょ？"
+	line "<WATASHI>たち<NO>ヒミツのばしょ　なの！"
 	done
 
 CooltrainerfJennSeenText:
-	text "JENN: You can't"
-	line "beat IRENE and go"
-	cont "unpunished!"
+	text "マリカ『よくも　やったわね！"
+	line "マリサ<NO>かたきっ！"
 	done
 
 CooltrainerfJennBeatenText:
-	text "JENN: So sorry,"
-	line "IRENE! Sis!"
+	text "マリカ『ごめんなさい"
+	line "マリサ！　ねえさん！"
 	done
 
 CooltrainerfJennAfterText1:
-	text "JENN: Don't get"
-	line "cocky! My sister"
-	cont "KATE is tough!"
+	text "マリカ『ゆだん　しない　ことね！"
+	line "マリアねえさん<WA>つよいわよ！"
 	done
 
 CooltrainerfJennAfterText2:
-	text "JENN: Sunlight"
-	line "makes your body"
-	cont "stronger."
+	text "マリカ『おひさま<NO>ひかりは"
+	line "からだ<WO>じょうぶ<NI>するのよ！"
 	done
 
 CooltrainerfKateSeenText:
-	text "KATE: You sure"
-	line "were mean to my"
-	cont "little sisters!"
+	text "マリア『いもうと　たちを"
+	line "ずいぶん　かわいが<TTE>　くれたわね！"
 	done
 
 CooltrainerfKateBeatenText:
-	text "KATE: No! I can't"
-	line "believe I lost."
+	text "マリア『<WATASHI>が"
+	line "まける　なんてっ！"
 	done
 
 CooltrainerfKateOfferSoftSandText:
-	text "KATE: You're too"
-	line "strong. I didn't"
-	cont "stand a chance."
+	text "マリア『つよいのね"
+	line "まけたわ　かんぺきに<⋯>"
 
-	para "Here. You deserve"
-	line "this."
+	para "これ<WO>あげるわ！"
 	done
 
 CooltrainerfKateAfterText:
-	text "KATE: I'm sorry we"
-	line "jumped you."
+	text "マリア『ごめんなさい"
+	line "いきなり　たたかい<WO>いどんで"
 
-	para "We never expected"
-	line "anyone to find us"
-
-	para "here. You sure"
-	line "startled us."
+	para "だれも　こないと　おも<TTE>たから"
+	line "すこし　びっくり　したの"
 	done
 
 Route34IlexForestSignText:
-	text "ILEX FOREST"
-	line "Through the Gate"
+	text "ゲート<WO>ぬけると　ウバメのもり"
 	done
 
 Route34SignText:
-	text "ROUTE 34"
-
-	para "GOLDENROD CITY -"
-	line "AZALEA TOWN"
-
-	para "ILEX FOREST"
-	line "Somewhere Between"
+	text "<KOKO_WA>３４<ROUTE>"
+	line "コガネシティ　<⋯>　ヒワダタウン"
+	cont "とちゅう　ウバメのもり"
 	done
 
 Route34TrainerTipsText:
-	text "TRAINER TIPS"
+	text "おとくな　けいじばん！"
 
-	para "BERRY trees grow"
-	line "new BERRIES"
-	cont "everyday."
+	para "みのなるき<WA>１にち　たつと"
+	line "あたらしい　きのみ<WO>つけます"
 
-	para "Make a note of"
-	line "which trees bear"
-	cont "which BERRIES."
+	para "どこ<NI>なに<GA>なるか"
+	line "おぼえておいて　また　きましょう！"
 	done
 
 DayCareSignText:
-	text "DAY-CARE"
-
-	para "Let Us Raise Your"
-	line "#MON for You!"
+	text "<KOKO_WA>そだてや"
+	line "あなた<NO>#　そだてます"
 	done
 
 Route34_MapEvents:

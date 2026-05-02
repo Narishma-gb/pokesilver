@@ -25,7 +25,7 @@ CreditsStringsPointers:
 	dw Credits_NobuhiroSeya
 	dw Credits_KazuhitoSekine
 	dw Credits_TetsujiOota
-	dw Credits_NclSuperMarioClub
+	dw Credits_SuperMarioClub
 	dw Credits_Sarugakucho
 	dw Credits_AkitoMori
 	dw Credits_TakahiroHarada
@@ -88,7 +88,7 @@ Credits_SatoruIwata::         db "いわた　さとる@"
 Credits_NobuhiroSeya::        db "せや　のぶひろ@"
 Credits_KazuhitoSekine::      db "せきね　かずひと@"
 Credits_TetsujiOota::         db "おおた　てつじ@"
-Credits_NclSuperMarioClub::   db "スーパーマリオクラブ@"
+Credits_SuperMarioClub::      db "スーパーマリオクラブ@"
 Credits_Sarugakucho::         db "さるがくちょう@"
 Credits_AkitoMori::           db "もり　あきと@"
 Credits_TakahiroHarada::      db "はらだ　たかひろ@"

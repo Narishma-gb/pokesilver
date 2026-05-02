@@ -31,38 +31,30 @@ HiddenPowerHouseBookshelf:
 	jumpstd DifficultBookshelfScript
 
 HiddenPowerGuyText1:
-	text "…You have strayed"
-	line "far…"
+	text "<⋯>　<⋯>　<⋯>"
+	line "わざわざ　こんな　ところまで<⋯>"
 
-	para "Here I have medi-"
-	line "tated. Inside me,"
+	para "わし<WA>ここで　めいそう　することで"
+	line "あらたな　ちから<WO>みにつけ<TA!>"
 
-	para "a new power has"
-	line "been awakened."
-
-	para "Let me share my"
-	line "power with your"
-
-	para "#MON."
-	line "Take this, child."
+	para "そ<NO>ちから"
+	line "きみ<NO>#にも　わけよう"
+	cont "これ<WO>も<TTE>いきなさい"
 	done
 
 HiddenPowerGuyText2:
-	text "Do you see it? It"
-	line "is HIDDEN POWER!"
+	text "<⋯>　わかるか"
+	line "それ<WA>めざめるパワー！"
 
-	para "It draws out the"
-	line "power of #MON"
-	cont "for attacking."
+	para "#<NO>ちから<WO>ひきだし"
+	line "<KOUGEKI>　する　わざ！"
 
-	para "Remember this: its"
-	line "type and power de-"
-	cont "pend on the #-"
-	cont "MON using it."
+	para "ただし　おぼえさせた　#により"
+	line "タイプと　いりょく<WA>ちが<TTE>くる"
 	done
 
 HiddenPowerGuyText3:
-	text "I am meditating…"
+	text "ただいま　めいそうちゅう<⋯>　<⋯>"
 	done
 
 LakeOfRageHiddenPowerHouse_MapEvents:

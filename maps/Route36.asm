@@ -267,200 +267,158 @@ WeirdTreeMovement_Flee:
 	step_end
 
 UseSquirtbottleText:
-	text "It's a weird tree."
-	line "Use SQUIRTBOTTLE?"
+	text "おかしな　き　だ！"
+	line "ゼニガメじょうろ<WO>つかいますか？"
 	done
 
 UsedSquirtbottleText:
-	text "<PLAYER> used the"
-	line "SQUIRTBOTTLE."
+	text "<PLAYER>は"
+	line "ゼニガメじょうろ<WO>つかっ<TA!>"
 	done
 
 SudowoodoAttackedText:
-	text "The weird tree"
-	line "doesn't like the"
-	cont "SQUIRTBOTTLE!"
+	text "おかしな　きは"
+	line "ゼニガメじょうろ<WO>いやが<TTE>る！"
 
-	para "The weird tree"
-	line "attacked!"
+	para "おかしな　き<GA>おそいかか<TTE>き<TA!>"
 	done
 
 RockSmashGuyText1:
-	text "Wa-hey!"
+	text "うっす！"
 
-	para "I was going to"
-	line "snap that tree"
+	para "わい<NO>キョーレツな　ぶちかまし　で"
+	line "き　<NO>１ぽんや　２ほん　ぽっきりと"
+	cont "へしお<TTE>　やろうと　おもったが<⋯>"
 
-	para "with my straight-"
-	line "arm punch."
-
-	para "But I couldn't!"
-	line "I'm a failure!"
+	para "ダメだったで　ごわす！"
+	line "むねんで　ごわす！"
 	done
 
 RockSmashGuyText2:
-	text "Did you clear that"
-	line "wretched tree?"
+	text "おぬし<GA>あ<NO>ジャマな　きを"
+	line "かたづけて　くれたで　ごわすか？"
 
-	para "I'm impressed!"
-	line "I want you to"
-	cont "have this."
+	para "おそれ　いったで　ごわす！"
+	line "これ<WO>あげるで　ごわす！"
 	done
 
 Text_ReceivedTM08: ; unreferenced
-	text "<PLAYER> received"
-	line "TM08."
+	text "<PLAYER>は"
+	line "<TM>０８<WO>もらっ<TA!>"
 	done
 
 RockSmashGuyText3:
-	text "That happens to be"
-	line "ROCK SMASH."
+	text "なかみ<WA>ひっさつ　いわくだき！"
+	line "それ<GA>あれば"
+	cont "いしっコロ　なぞ　いっぱつで　ごわす"
 
-	para "You can shatter"
-	line "rocks with just a"
-
-	para "single well-aimed"
-	line "smack."
-
-	para "If any rocks are"
-	line "in your way, just"
-	cont "smash 'em up!"
+	para "ジャマな　いしっコロは"
+	line "こわす<GA>よろしいで　ごわす！"
 	done
 
 Route36LassText:
-	text "An odd tree is"
-	line "blocking the way"
-	cont "to GOLDENROD CITY."
-
-	para "It's preventing"
-	line "me from shopping."
-
-	para "Something should"
-	line "be done about it."
+	text "おかしな　き<GA>はえちゃ<TTE>"
+	line "コガネ<NI>おかいもの<NI>いけないの"
+	cont "だれか　なんとか　してほしいわ"
 	done
 
 Route36LassText_ClearedSudowoodo:
-	text "That odd tree dis-"
-	line "appeared without a"
-	cont "trace."
+	text "まるで　いなくなったみたいに"
+	line "おかしな　き　きえちゃった<⋯>"
 
-	para "Oh! That tree was"
-	line "really a #MON?"
+	para "えっ！　#だったの？"
 	done
 
 PsychicMarkSeenText:
-	text "I'm going to read"
-	line "your thoughts!"
+	text "きみ<NO>かんがえ　あててみせる！"
 	done
 
 PsychicMarkBeatenText:
-	text "I misread you!"
+	text "あたらなかった"
 	done
 
 PsychicMarkAfterBattleText:
-	text "I'd be strong if"
-	line "only I could tell"
-
-	para "what my opponent"
-	line "was thinking."
+	text "あいて<NO>かんがえ<WO>よんで"
+	line "<KOUGEKI>　できりゃ　つよいんだけどな"
 	done
 
 SchoolboyAlan1SeenText:
-	text "Thanks to my stud-"
-	line "ies, I'm ready for"
-	cont "any #MON!"
+	text "どんな　#あいて　でも"
+	line "ばっちり　よしゅう<WA>できてるよ！"
 	done
 
 SchoolboyAlan1BeatenText:
-	text "Oops! Computation"
-	line "error?"
+	text "あれ<⋯>？"
+	line "けいさん　まちがえた？"
 	done
 
 SchoolboyAlanBooksText:
-	text "Darn. I study five"
-	line "hours a day too."
+	text "むむむむむ　まいにち　５じかん"
+	line "べんきょう　してるのに<⋯>"
 
-	para "There's a lot you"
-	line "can't learn just"
-	cont "by reading books."
+	para "きょうかしょ　だけじゃ"
+	line "わからないこと　いっぱい　あるね"
 	done
 
 MeetArthurText:
-	text "ARTHUR: Who are"
-	line "you?"
+	text "モクオ『キミ　だれ？"
 
-	para "I'm ARTHUR of"
-	line "Thursday."
+	para "オレ<WA>もくようび<NO>モクオ"
 	done
 
 ArthurGivesGiftText:
-	text "Here. You can have"
-	line "this."
+	text "はい　これ　あげるよ！"
 	done
 
 ArthurGaveGiftText:
-	text "ARTHUR: A #MON"
-	line "that uses rock-"
+	text "モクオ『いわタイプ<NO>わざをつかえる"
+	line "#<NI>もたせて　みなよ"
 
-	para "type moves should"
-	line "hold on to that."
-
-	para "It pumps up rock-"
-	line "type attacks."
+	para "いわタイプ<NO>わざの"
+	line "<KOUGEKI>りょく<GA>あがるからさ"
 	done
 
 ArthurThursdayText:
-	text "ARTHUR: I'm ARTHUR"
-	line "of Thursday. I'm"
-
-	para "the second son out"
-	line "of seven children."
+	text "モクオ『オレは"
+	line "もくようび<NO>モクオ！"
+	cont "７にんきょうだい<NO>じなん　さ！"
 	done
 
 ArthurNotThursdayText:
-	text "ARTHUR: Today's"
-	line "not Thursday. How"
-	cont "disappointing."
+	text "モクオ『きょう<WA>もくようびじゃ"
+	line "ないのか<⋯>"
+	cont "ざんねんだな"
 	done
 
 Route36SignText:
-	text "ROUTE 36"
+	text "<KOKO_WA>３６<ROUTE>"
 	done
 
 RuinsOfAlphNorthSignText:
-	text "RUINS OF ALPH"
-	line "NORTH ENTRANCE"
+	text "アルフ<NO>いせき"
+	line "きたがわ　いりぐち"
 	done
 
 Route36TrainerTips1Text:
-	text "TRAINER TIPS"
+	text "おとくな　けいじばん！"
 
-	para "#MON stats"
-	line "vary--even within"
-	cont "the same species."
+	para "おなじ　しゅるい<NO>#でも"
+	line "つよさ<WA>いろいろ"
 
-	para "Their stats may be"
-	line "similar at first."
-
-	para "However, differ-"
-	line "ences will become"
-
-	para "pronounced as the"
-	line "#MON grow."
+	para "さいしょ<WA>ほとんど　おなじでも"
+	line "そだつうち<NI>おおきく　かわります"
 	done
 
 Route36TrainerTips2Text:
-	text "TRAINER TIPS"
+	text "おとくな　けいじばん！"
 
-	para "Use DIG to return"
-	line "to the entrance of"
-	cont "any place."
+	para "あなをほる　という"
+	line "わざ<WO>つかうと　いっしゅんで"
+	cont "いりぐち　まで　もどれます"
 
-	para "It is convenient"
-	line "for exploring"
-
-	para "caves and other"
-	line "landmarks."
+	para "どうくつなど<WO>たんけん　するとき"
+	line "そ<NO>わざ<WO>おぼえた　#が"
+	cont "１ぴき　いると　べんりかも"
 	done
 
 Route36_MapEvents:

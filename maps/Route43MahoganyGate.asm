@@ -23,17 +23,13 @@ Route43MahoganyGateOfficer:
 	end
 
 Route43MahoganyGateOfficerText:
-	text "Only people headed"
-	line "up to LAKE OF RAGE"
-
-	para "have been through"
-	line "here lately."
+	text "さいきん　いかりのみずうみに"
+	line "いく　ひと　ばかりだよ"
 	done
 
 Route43MahoganyGateOfficerRocketsClearedText:
-	text "Nobody goes up to"
-	line "LAKE OF RAGE these"
-	cont "days."
+	text "さいきん　いかりのみずうみに"
+	line "だれも　いかないよ"
 	done
 
 Route43MahoganyGate_MapEvents:

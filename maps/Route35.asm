@@ -261,181 +261,150 @@ Route35FruitTree:
 	fruittree FRUITTREE_ROUTE_35
 
 CamperIvanSeenText:
-	text "I've been getting"
-	line "#MON data off"
-
-	para "my radio. I think"
-	line "I'm good."
+	text "ラジオで　いろいろ　#の"
+	line "じょうほう　あつめてるからね"
+	cont "けっこう　つよいと　おもうよ"
 	done
 
 CamperIvanBeatenText:
-	text "I give!"
+	text "まいっ<TA!>"
 	done
 
 CamperIvanAfterBattleText:
-	text "Music on the radio"
-	line "changes the moods"
-	cont "of wild #MON."
+	text "ラジオばんぐみ<NO>おんがくで"
+	line "やせい<NO>#　げんきになったり"
+	cont "おとなしくなったり　するんだよ！"
 	done
 
 CamperElliotSeenText:
-	text "I'm gonna show my"
-	line "girlfriend I'm hot"
-	cont "stuff!"
+	text "よーし！　かのじょに"
+	line "いいところ　みせようかな！"
 	done
 
 CamperElliotBeatenText:
-	text "I wish you would"
-	line "have lost for me…"
+	text "きみ<⋯>"
+	line "まけて　くれよ<⋯>"
 	done
 
 CamperElliotAfterBattleText:
-	text "I was humiliated"
-	line "in front of my"
-	cont "girlfriend…"
+	text "かのじょ<NI>かっこわるい　ところ"
+	line "みられちゃったなあ<⋯>"
 	done
 
 PicnickerBrookeSeenText:
-	text "My boyfriend's"
-	line "weak, so I can't"
-	cont "rely on him."
+	text "あたし<NO>かれ　よわくて"
+	line "たより<NI>ならないの<⋯>"
 	done
 
 PicnickerBrookeBeatenText:
-	text "Oh, my! You're so"
-	line "strong!"
+	text "あら　つよいんだ！"
 	done
 
 PicnickerBrookeAfterBattleText:
-	text "I can count on my"
-	line "#MON more than"
-	cont "my boyfriend."
+	text "かれ　より　#<NO>ほうが"
+	line "たより<NI>なるのも　こまりものね"
 	done
 
 PicnickerKimSeenText:
-	text "Are you going to"
-	line "the GYM? Me too!"
+	text "あなた　#ジム<NI>い<TTE>るの？"
+	line "あたしも　そうなのよ"
 	done
 
 PicnickerKimBeatenText:
-	text "Oh. I couldn't"
-	line "win…"
+	text "うーん　かてないわ"
 	done
 
 PicnickerKimAfterBattleText:
-	text "The GYM BADGES are"
-	line "pretty. I collect"
-	cont "them."
+	text "ジムで　もらえる　バッジ"
+	line "きれい　だから　あつめてるのよ"
 	done
 
 BirdKeeperBryanSeenText:
-	text "What kinds of #"
-	line "BALL do you use?"
+	text "きみ　#　つかまえるとき"
+	line "どんな　ボール　つか<TTE>る？"
 	done
 
 BirdKeeperBryanBeatenText:
-	text "Yikes! Not fast"
-	line "enough!"
+	text "ひゃあ"
+	line "すばやさ<GA>たりてないかあ"
 	done
 
 BirdKeeperBryanAfterBattleText:
-	text "Some #MON flee"
-	line "right away."
+	text "すぐ　にげる　#　いるだろ？"
+	line "そんなとき　やく<NI>たつのは"
+	cont "ガンテツさん<NO>スピードボール！"
 
-	para "Try catching them"
-	line "with KURT's FAST"
-	cont "BALL."
-
-	para "Whenever I find a"
-	line "WHT APRICORN, I"
-	cont "take it to KURT."
-
-	para "He turns it into a"
-	line "custom # BALL."
+	para "おれ　しろい　ぼんぐり　みつけては"
+	line "ガンテツさん<NO>ところ<NI>も<TTE><TTE>"
+	cont "とくせいボール<NI>してもら<TTE>んだ"
 	done
 
 JugglerIrwin1SeenText:
-	text "Behold my graceful"
-	line "BALL dexterity!"
+	text "みよ！"
+	line "こ<NO>かれいな　ボールさばき！"
 	done
 
 JugglerIrwin1BeatenText:
-	text "Whew! That was a"
-	line "jolt!"
+	text "ひゅー　しびれた"
 	done
 
 JugglerIrwinAfterBattleText:
-	text "I was going to"
-	line "dazzle you with my"
-	cont "prize #MON."
-
-	para "But your prowess"
-	line "electrified me!"
+	text "じまん<NO>#で"
+	line "しびれさせようと　おも<TTE>いたのに"
+	cont "きみ<NO>つよさ<NI>しびれたよ"
 	done
 
 BugCatcherArnieSeenText:
-	text "I'll go anywhere"
-	line "if bug #MON"
-	cont "appear there."
+	text "むし#<GA>いるなら"
+	line "どんな　ところ<NI>だ<TTE>　いくよ"
 	done
 
 BugCatcherArnieBeatenText:
-	text "I see. So you"
-	line "battle that way."
+	text "なるほど"
+	line "そういう　たたかいかた　するんだ"
 	done
 
 BugCatcherArnieAfterBattleText:
-	text "My VENONAT won me"
-	line "the Bug-Catching"
-
-	para "Contest at the"
-	line "NATIONAL PARK."
+	text "おれ<NO>だいじな　コンパン"
+	line "こうえん<NO>むしとりたいかいで"
+	cont "ゆうしょう　したとき<NO>#だぜ"
 	done
 
 FirebreatherWaltSeenText:
-	text "I'm practicing my"
-	line "fire breathing."
+	text "こんな　ところで"
+	line "ひ<WO>ふく　れんしゅうっ！"
 	done
 
 FirebreatherWaltBeatenText:
-	text "Ow! I scorched the"
-	line "tip of my nose!"
+	text "あちちち"
+	line "はな<NO>さきっぽ　こげちゃった"
 	done
 
 FirebreatherWaltAfterBattleText:
-	text "The #MON March"
-	line "on the radio lures"
-	cont "wild #MON."
+	text "ラジオで　#マーチ　きいてると"
+	line "いつもより　#<GA>とびだすぞ！"
 	done
 
 OfficerDirkSeenText:
-	text "Danger lurks in"
-	line "the night!"
+	text "よる<WA>きけん<GA>いっぱいだ！"
 	done
 
 OfficerDirkBeatenText:
-	text "Whoops!"
+	text "おっとっと"
 	done
 
 OfficerDirkAfterBattleText:
-	text "You know, night-"
-	line "time is fun in its"
-	cont "own ways."
-
-	para "But don't overdo"
-	line "it, OK?"
+	text "よる<WA>よるで　たのしいんだよね"
+	line "じゃ　あんまり　むり　しないでね"
 	done
 
 OfficerDirkPrettyToughText:
-	text "Your #MON look"
-	line "pretty tough."
-
-	para "You could go any-"
-	line "where safely."
+	text "つよそうな　#だ"
+	line "それなら　どこへい<TTE>も　あんしんだ"
 	done
 
 Route35SignText:
-	text "ROUTE 35"
+	text "<KOKO_WA>３５<ROUTE>"
 	done
 
 Route35_MapEvents:

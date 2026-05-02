@@ -162,78 +162,58 @@ VictoryRoadRivalBattleExitMovement2:
 	step_end
 
 VictoryRoadRivalBeforeText:
-	text "Hold it."
+	text "まてよ"
 
-	para "…Are you going to"
-	line "take the #MON"
-	cont "LEAGUE challenge?"
+	para "<⋯>　いまから　#　リーグ"
+	line "ちょうせん　か？"
 
-	para "…Don't make me"
-	line "laugh."
+	para "<⋯>　ふざけるなよ"
+	line "オレよりも　よわいくせに"
 
-	para "You're so much"
-	line "weaker than I am."
+	para "いままで<NO>オレと　おもうなよ！"
 
-	para "I'm not like I was"
-	line "before."
+	para "さいこう　さいきょうの"
+	line "#<WO>てにいれ<TA!>"
+	cont "オレに<WA>だれも　かてないぜ！"
 
-	para "I now have the"
-	line "best and strongest"
-
-	para "#MON with me."
-	line "I'm invincible!"
-
-	para "<PLAYER>!"
-	line "I challenge you!"
+	para "<PLAYER>！"
+	line "オレと　しょうぶ　しろ！"
 	done
 
 VictoryRoadRivalDefeatText:
-	text "…I couldn't win…"
+	text "<⋯>　かてなかった"
 
-	para "I gave it every-"
-	line "thing I had…"
+	para "ぜんりょくで　たたかったのに<⋯>"
 
-	para "What you possess,"
-	line "and what I lack…"
+	para "おまえ<GA>も<TTE>いて"
+	line "オレ<NI>ない　もの<⋯>"
 
-	para "I'm beginning to"
-	line "understand what"
-
-	para "that dragon master"
-	line "said to me…"
+	para "あ<NO>ドラゴンつかい<NI>いわれたこと"
+	line "なんとなく　わかったかもな<⋯>"
 	done
 
 VictoryRoadRivalAfterText:
-	text "…I haven't given up"
-	line "on becoming the"
-	cont "greatest trainer…"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "I'm going to find"
-	line "out why I can't"
+	para "オレ<WA>さいきょう<NO><TRAINER>を"
+	line "あきらめた　わけじゃない"
 
-	para "win and become"
-	line "stronger…"
+	para "いま<NO>オレ<GA>かてない　りゆう"
+	line "きっと　みつけだして　つよくなる"
+	cont "そして　おまえ<NI>いどむ"
 
-	para "When I do, I will"
-	line "challenge you."
+	para "そのとき<WA>もてる　ちから"
+	line "すべて　だして　まかしてやるさ"
 
-	para "And I'll beat you"
-	line "down with all my"
-	cont "power."
-
-	para "…Humph! You keep"
-	line "at it until then."
+	para "<⋯>　フン！"
+	line "せいぜい　がんばる<GA>いいさ"
 	done
 
 VictoryRoadRivalVictoryText:
-	text "…Humph!"
+	text "<⋯>　フン！"
 
-	para "When it comes down"
-	line "to it, nothing can"
-	cont "beat power."
-
-	para "I don't need any-"
-	line "thing else."
+	para "やっぱり　だいじ　なの<WA>つよさ"
+	line "ほかに<WA>なんにも　いらないさ"
 	done
 
 VictoryRoad_MapEvents:

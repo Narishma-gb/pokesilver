@@ -10,17 +10,15 @@ RedsHouse2FPCScript:
 	jumptext RedsHouse2FPCText
 
 RedsHouse2FN64Text:
-	text "<PLAYER> played the"
-	line "N64."
-
-	para "Better get going--"
-	line "no time to lose!"
+	text "<PLAYER>は"
+	line "ロクヨン<WO>してる！"
+	cont "<⋯>　<⋯>　よし！"
+	cont "そろそろ　でかけよう！"
 	done
 
 RedsHouse2FPCText:
-	text "It looks like it"
-	line "hasn't been used"
-	cont "in a long time…"
+	text "<⋯>ながい　あいだ"
+	line "つかわれて　いない　みたい"
 	done
 
 RedsHouse2F_MapEvents:

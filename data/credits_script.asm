@@ -172,7 +172,7 @@ CreditsScript:
 	db CREDITS_WAIT, 2
 
 	db      PRODUCT_TESTING, 0
-	db NCL_SUPER_MARIO_CLUB, 1
+	db     SUPER_MARIO_CLUB, 1
 	db          KENJI_SAIKI, 2
 	db         ATSUSHI_TADA, 3
 

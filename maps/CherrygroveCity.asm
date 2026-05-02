@@ -90,7 +90,7 @@ CherrygroveCityGuideGent:
 	end
 
 .mapcardname
-	db "MAP CARD@"
+	db "マップカード@"
 
 .No:
 	writetext GuideGentNoText
@@ -334,214 +334,170 @@ CherrygroveCity_RivalExitsStageLeft:
 	step_end
 
 GuideGentIntroText:
-	text "You're a rookie"
-	line "trainer, aren't"
-	cont "you? I can tell!"
+	text "おまえさん　しんまい<TRAINER>だろ？"
+	line "ずぼし　じゃな！"
 
-	para "That's OK! Every-"
-	line "one is a rookie"
-	cont "at some point!"
+	para "よいよい"
+	line "だれだ<TTE>　はじめてはある"
 
-	para "If you'd like, I"
-	line "can teach you a"
-	cont "few things."
+	para "よければ　わしが"
+	line "いろいろと　おしえて　やろうかの？"
 	done
 
 GuideGentTourText1:
-	text "OK, then!"
-	line "Follow me!"
+	text "よし　ばっちり　あんない　するぞ！"
 	done
 
 GuideGentPokecenterText:
-	text "This is a #MON"
-	line "CENTER. They heal"
+	text "<KOKO_WA>#センター！"
+	line "きずついた　#<WO>あずけると"
+	cont "あっというま<NI>なおしてくれる！"
 
-	para "your #MON in no"
-	line "time at all."
-
-	para "You'll be relying"
-	line "on them a lot, so"
-
-	para "you better learn"
-	line "about them."
+	para "これからさき　なんかいも"
+	line "せわ<NI>なるじゃろう"
+	cont "おぼえておいた　ほう<GA>ええぞ！"
 	done
 
 GuideGentMartText:
-	text "This is a #MON"
-	line "MART."
-
-	para "They sell BALLS"
-	line "for catching wild"
-
-	para "#MON and other"
-	line "useful items."
+	text "<KOKO_WA>フレンドリィショップ！"
+	line "#<WO>つかまえる　ボールとか"
+	cont "いろんな　グッズ<GA>う<TTE>るぞ！"
 	done
 
 GuideGentRoute30Text:
-	text "ROUTE 30 is out"
-	line "this way."
-
-	para "Trainers will be"
-	line "battling their"
-
-	para "prized #MON"
-	line "there."
+	text "このさき<WA>３０<ROUTE>！"
+	line "みんな　じまん<NO>#を"
+	cont "たたかわせて　いるぞ！"
 	done
 
 GuideGentSeaText:
-	text "This is the sea,"
-	line "as you can see."
+	text "<KOKO_WA>ごらんのとおり　うみ！"
 
-	para "Some #MON are"
-	line "found only in"
-	cont "water."
+	para "みず<NO>なかにしか　いない"
+	line "#も　いるんじゃ！"
 	done
 
 GuideGentGiftText:
-	text "Here…"
+	text "ここは<⋯>"
 
-	para "It's my house!"
-	line "Thanks for your"
-	cont "company."
+	para "わし<NO>いえじゃ"
+	line "つきあ<TTE>くれて　ありがとよ"
 
-	para "Let me give you a"
-	line "small gift."
+	para "こいつ<WA>おれい　じゃ"
 	done
 
 GotMapCardText:
-	text "<PLAYER>'s #GEAR"
-	line "now has a MAP!"
+	text "<PLAYER><NO>#ギアで"
+	line "マップ<GA>みられるよう<NI>なっ<TA!>"
 	done
 
 GuideGentPokegearText:
-	text "#GEAR becomes"
-	line "more useful as you"
-	cont "add CARDS."
+	text "#ギアは"
+	line "べんりカード　<WO>とりつけると"
+	cont "どんどん　べんり<NI>なるのじゃ！"
 
-	para "I wish you luck on"
-	line "your journey!"
+	para "それじゃ　がんばるんじゃぞ！"
 	done
 
 GuideGentNoText:
-	text "Oh… It's something"
-	line "I enjoy doing…"
-
-	para "Fine. Come see me"
-	line "when you like."
+	text "そうか<⋯>"
+	line "わし<NO>たのしみ　なんじゃが<⋯>"
+	cont "まあ　ええ　きがむいたら　おいで"
 	done
 
 CherrygroveRivalText_Seen:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "You got a #MON"
-	line "at the LAB."
+	para "おまえ　けんきゅうしょで"
+	line "#　もら<TTE>たな"
+	cont "よわいくせ<NI>もったいないぜ"
 
-	para "What a waste."
-	line "A wimp like you."
+	para "<⋯>　<⋯>　<⋯>"
 
-	para "…"
+	para "なんだよ　な<NI>いわれてるのか"
+	line "わからないのか"
 
-	para "Don't you get what"
-	line "I'm saying?"
-
-	para "Well, I too, have"
-	line "a good #MON."
-
-	para "I'll show you"
-	line "what I mean!"
+	para "<⋯>　だったら　しかたない"
+	line "オレも　いい#　も<TTE>るからな"
+	cont "どういうことか　おしえて　やるよ"
 	done
 
 RivalCherrygroveWinText:
-	text "Humph. Are you"
-	line "happy you won?"
+	text "<⋯>　フン！"
+	line "かてて　うれしいか？"
 	done
 
 CherrygroveRivalText_YouLost:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "My name's ???."
+	para "オレ<NO>なまえ<WA>？？？"
 
-	para "I'm going to be"
-	line "the world's great-"
-	cont "est #MON"
-	cont "trainer."
+	para "せかいで　いちばん　つよい"
+	line "#<TRAINER>になる　おとこ　さ"
 	done
 
 RivalCherrygroveLossText:
-	text "Humph. That was a"
-	line "waste of time."
+	text "<⋯>　フン！"
+	line "じかん<NO>むだ　だったか"
 	done
 
 CherrygroveRivalText_YouWon:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "My name's ???."
+	para "オレ<NO>なまえ<WA>？？？"
 
-	para "I'm going to be"
-	line "the world's great-"
-	cont "est #MON"
-	cont "trainer."
+	para "せかいで　いちばん　つよい"
+	line "#<TRAINER>になる　おとこ　さ"
 	done
 
 CherrygroveTeacherText_NoMapCard:
-	text "Did you talk to"
-	line "the old man by the"
-	cont "#MON CENTER?"
+	text "#センター<NO>そば<NI>いる"
+	line "おじいさん<NO>はなし　きいた？"
 
-	para "He'll put a MAP of"
-	line "JOHTO on your"
-	cont "#GEAR."
+	para "あなた<NO>も<TTE>る　ポケギアで"
+	line "ジョウトちほう<NO>タウンマップが"
+	cont "みられるよう<NI>してもらえるわ"
 	done
 
 CherrygroveTeacherText_HaveMapCard:
-	text "When you're with"
-	line "#MON, going"
-	cont "anywhere is fun."
+	text "#と　いっしょなら"
+	line "どこ<NI>いくのも　たのしいわよね"
 	done
 
 CherrygroveYoungsterText_NoPokedex:
-	text "MR.#MON's house"
-	line "is still farther"
-	cont "up ahead."
+	text "#じいさん<NO>いえ"
+	line "ここから　けっこう　さき　だよ"
 	done
 
 CherrygroveYoungsterText_HavePokedex:
-	text "I battled the"
-	line "trainers on the"
-	cont "road."
+	text "どうろ<NI>た<TTE>る　<TRAINER>と"
+	line "ゆうかん<NI>たたかったんだけど<⋯>"
 
-	para "My #MON lost."
-	line "They're a mess! I"
-
-	para "must take them to"
-	line "a #MON CENTER."
+	para "ぼく<NO>#　まけて　"
+	line "ボロボロ<NI>なっちゃった<⋯>"
+	cont "#センター<NI>いかないと<⋯>"
 	done
 
 MysticWaterGuyTextBefore:
-	text "A #MON I caught"
-	line "had an item."
+	text "このまえ　つった　#が"
+	line "どうぐ<WO>も<TTE>たよ"
 
-	para "I think it's"
-	line "MYSTIC WATER."
-
-	para "I don't need it,"
-	line "so do you want it?"
+	para "しんぴのしずく　<TTE>いうらしいけど"
+	line "わし　#　つるだけだから"
+	cont "よかったら　きみ　も<TTE>いきなよ"
 	done
 
 MysticWaterGuyTextAfter:
-	text "Back to fishing"
-	line "for me, then."
+	text "さてと　んじゃ　つり<WO>つづけるか"
 	done
 
 CherrygroveCitySignText:
-	text "CHERRYGROVE CITY"
-
-	para "The City of Cute,"
-	line "Fragrant Flowers"
+	text "<KOKO_WA>ヨシノ　シティ"
+	line "かわいい　はな<NO>かおる　まち"
 	done
 
 GuideGentsHouseSignText:
-	text "GUIDE GENT'S HOUSE"
+	text "<KOKO_WA>あんない　じいさん　のいえ"
 	done
 
 CherrygroveCity_MapEvents:

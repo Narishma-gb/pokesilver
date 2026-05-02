@@ -193,55 +193,44 @@ Rocket2Script_LetsYouPassNorth:
 	step_end
 
 RocketText_TollFee:
-	text "Hold it there,"
-	line "mister!"
+	text "おっと！"
 
-	para "The toll is ¥{d:ROUTE43GATE_TOLL}"
-	line "to go through."
+	para "こちら<NO>つうこうりょうは"
+	line "{d:ROUTE43GATE_TOLL}円と　な<TTE>いますです"
 	done
 
 RocketText_ThankYou:
-	text "Thank you, sir!"
+	text "へへへ　まいどありぃ！"
 	done
 
 RocketText_AllYouGot:
-	text "Then pay what you"
-	line "have, please."
+	text "じゃあ　あるだけ　もらいますよ"
 	done
 
 RocketText_MakingABundle:
-	text "He-he-he. We're"
-	line "making a bundle."
-
-	para "Everyone wants to"
-	line "see what's going"
-
-	para "on up at LAKE OF"
-	line "RAGE."
+	text "へへへ　いかりのみずうみで"
+	line "おかしな　こと<GA>おきてるから<TTE>"
+	cont "とおる　やつ　ばかりで　もうかるよ！"
 	done
 
 OfficerText_FoundTM:
-	text "I got chased from"
-	line "my post by these"
-	cont "thugs in black."
+	text "いきなり　くろずくめ<NO>やつらに"
+	line "おいだされて　たいへん　だったよ"
 
-	para "They left this"
-	line "behind."
-
-	para "It makes me uncom-"
-	line "fortable. Could"
-	cont "you take it away?"
+	para "こんな<NO>のこ<TTE>いたけど"
+	line "なんだか　きみ<GA>わるいから"
+	cont "きみ　よかったら　も<TTE>い<TTE>よ"
 	done
 
 Text_ReceivedTM30: ; unreferenced
-	text "<PLAYER> received"
-	line "TM30."
+	text "<PLAYER>は"
+	line "<TM>３０<WO>もらっ<TA!>"
 	done
 
 OfficerText_AvoidGrass:
-	text "Use this gate to"
-	line "avoid walking in"
-	cont "the grass."
+	text "こ<NO>ゲートは"
+	line "くさむら<WO>よけて　あるきたい"
+	cont "ひと<NO>ため<NO>ゲートなんだよ"
 	done
 
 Route43Gate_MapEvents:

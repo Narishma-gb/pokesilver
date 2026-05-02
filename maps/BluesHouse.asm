@@ -64,82 +64,61 @@ DaisyScript:
 	end
 
 DaisyHelloText:
-	text "DAISY: Hi! My kid"
-	line "brother is the GYM"
+	text "ナナミ『<WATASHI><NO>おとうと"
+	line "トキワ　シティ<NO>ジムリーダーなの"
 
-	para "LEADER in VIRIDIAN"
-	line "CITY."
-
-	para "But he goes out"
-	line "of town so often,"
-
-	para "it causes problems"
-	line "for the trainers."
+	para "しょっちゅう　ジム<WO>るすにして"
+	line "みんな<WO>こまらせてる　みたい"
 	done
 
 DaisyOfferGroomingText:
-	text "DAISY: Hi! Good"
-	line "timing. I'm about"
-	cont "to have some tea."
+	text "ナナミ『いらっしゃい"
+	line "ちょうど　よかったわ！"
+	cont "これから　おちゃ<NO>じかんなの"
 
-	para "Would you like to"
-	line "join me?"
-
-	para "Oh, your #MON"
-	line "are a bit dirty."
-
-	para "Would you like me"
-	line "to groom one?"
+	para "あら？　あなた<NO>#"
+	line "すこし　よごれちゃ<TTE>る　みたい！"
+	cont "<WATASHI><GA>けづくろい　しましょうか？"
 	done
 
 DaisyWhichMonText:
-	text "DAISY: Which one"
-	line "should I groom?"
+	text "ナナミ『ど<NO>#<NI>する？"
 	done
 
 DaisyAlrightText:
-	text "DAISY: OK, I'll"
-	line "get it looking"
-	cont "nice in no time."
+	text "ナナミ『じゃあ"
+	line "けづくろい　してあげるわね！"
 	done
 
 GroomedMonLooksContentText:
+	text "@"
 	text_ram wStringBuffer3
-	text " looks"
-	line "content."
+	text "は"
+	line "とても　きもちよさそう！"
 	done
 
 DaisyAllDoneText:
-	text "DAISY: There you"
-	line "go! All done."
+	text "ナナミ『はい！"
+	line "と<TTE>も　きれい<NI>なったわ！"
 
-	para "See? Doesn't it"
-	line "look nice?"
-
-	para "It's such a cute"
-	line "#MON."
+	para "うふふ"
+	line "かわいい　#ね！"
 	done
 
 DaisyAlreadyGroomedText:
-	text "DAISY: I always"
-	line "have tea around"
-
-	para "this time. Come"
-	line "join me."
+	text "ナナミ『こ<NO>じかんは"
+	line "まいにち　おちゃ<WO>しているの"
+	cont "また　きてね！"
 	done
 
 DaisyRefusedText:
-	text "DAISY: You don't"
-	line "want to have one"
-
-	para "groomed? OK, we'll"
-	line "just have tea."
+	text "ナナミ『けづくろい　しないの？"
+	line "じゃあ　おちゃ<NI>しましょう"
 	done
 
 DaisyCantGroomEggText:
-	text "DAISY: Oh, sorry."
-	line "I honestly can't"
-	cont "groom an EGG."
+	text "ナナミ『うふふ！"
+	line "タマゴ<WA>けづくろい　できないわ"
 	done
 
 BluesHouse_MapEvents:
