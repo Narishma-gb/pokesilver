@@ -276,13 +276,13 @@ INCLUDE "data/moves/animations.asm"
 INCLUDE "engine/events/poisonstep_pals.asm"
 
 
-;SECTION "Move Animations", ROMX
+SECTION "Move Animations", ROMX
 
-;INCLUDE "engine/events/bug_contest/display_stats.asm"
-;INCLUDE "engine/battle_anims/anim_commands.asm"
-;INCLUDE "engine/battle_anims/core.asm"
-;INCLUDE "engine/battle_anims/functions.asm"
-;INCLUDE "engine/battle_anims/helpers.asm"
+INCLUDE "engine/events/bug_contest/display_stats.asm"
+INCLUDE "engine/battle_anims/anim_commands.asm"
+INCLUDE "engine/battle_anims/core.asm"
+INCLUDE "engine/battle_anims/functions.asm"
+INCLUDE "engine/battle_anims/helpers.asm"
 
 
 ;SECTION "bank38", ROMX

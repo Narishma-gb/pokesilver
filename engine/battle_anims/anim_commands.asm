@@ -84,31 +84,8 @@ RunBattleAnimScript:
 	call BattleAnim_UpdateOAM_All
 	call PushLYOverrides
 	call BattleAnimRequestPals
-
-; Speed up Rollout's animation.
-	ld a, [wFXAnimID + 1]
-	or a
-	jr nz, .not_rollout
-
-	ld a, [wFXAnimID]
-	cp ROLLOUT
-	jr nz, .not_rollout
-
-	ld a, BATTLE_BG_EFFECT_ROLLOUT
-	ld b, NUM_BG_EFFECTS
-	ld de, BG_EFFECT_STRUCT_LENGTH
-	ld hl, wBGEffect1Function
-.find
-	cp [hl]
-	jr z, .done
-	add hl, de
-	dec b
-	jr nz, .find
-
-.not_rollout
 	call BattleAnimDelayFrame
 
-.done
 	ld a, [wBattleAnimFlags]
 	bit BATTLEANIM_STOP_F, a
 	jr z, .playframe
@@ -187,7 +164,7 @@ ClearActorHud:
 
 .player
 	hlcoord 9, 7
-	lb bc, 5, 11
+	lb bc, 5, 10
 	call ClearBox
 	ret
 
@@ -1006,7 +983,7 @@ GetMinimizePic:
 
 CopyMinimizePic:
 	ld hl, MinimizePic
-	ld bc, $10
+	ld bc, 1 tiles
 	ld a, BANK(MinimizePic)
 	call FarCopyBytes
 	ret

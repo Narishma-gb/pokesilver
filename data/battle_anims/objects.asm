@@ -9,7 +9,7 @@ MACRO battleanimobj
 	; bit 0: enable enemy animation coord fixing (x = $b4 - x; see below for y)
 	db \2 ; enemy animation y fix param
 	; if $FF: y = y + 5 tiles
-	; else:   y = -y - (1 tile) * (is_softboiled_animation)
+	; else:   y = -y
 	db \3 ; video sequence
 	db \4 ; callback
 	db \5 ; palette

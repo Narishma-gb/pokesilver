@@ -9,29 +9,29 @@ DisplayCaughtContestMonStats:
 	push af
 	set NO_TEXT_SCROLL, [hl]
 
-	hlcoord 0, 0
-	ld b, 4
-	ld c, 13
+	hlcoord 0, 4
+	ld b, 5
+	ld c, 8
 	call Textbox
 
-	hlcoord 0, 6
-	ld b, 4
-	ld c, 13
+	hlcoord 10, 4
+	ld b, 5
+	ld c, 8
 	call Textbox
 
-	hlcoord 2, 0
+	hlcoord 1, 3
 	ld de, .Stock
 	call PlaceString
 
-	hlcoord 2, 6
+	hlcoord 11, 3
 	ld de, .This
 	call PlaceString
 
-	hlcoord 5, 4
+	hlcoord 1, 8
 	ld de, .Health
 	call PlaceString
 
-	hlcoord 5, 10
+	hlcoord 11, 8
 	ld de, .Health
 	call PlaceString
 
@@ -39,7 +39,7 @@ DisplayCaughtContestMonStats:
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
 	ld de, wStringBuffer1
-	hlcoord 1, 2
+	hlcoord 1, 6
 	call PlaceString
 
 	ld h, b
@@ -49,7 +49,7 @@ DisplayCaughtContestMonStats:
 	call PrintLevel
 
 	ld de, wEnemyMonNickname
-	hlcoord 1, 8
+	hlcoord 11, 6
 	call PlaceString
 
 	ld h, b
@@ -58,12 +58,12 @@ DisplayCaughtContestMonStats:
 	ld [wTempMonLevel], a
 	call PrintLevel
 
-	hlcoord 11, 4
+	hlcoord 6, 8
 	ld de, wContestMonMaxHP
 	lb bc, 2, 3
 	call PrintNum
 
-	hlcoord 11, 10
+	hlcoord 16, 8
 	ld de, wEnemyMonMaxHP
 	call PrintNum
 
@@ -80,15 +80,16 @@ DisplayCaughtContestMonStats:
 	ret
 
 .Health:
-	db "HEALTH@"
+	db   "たいりょく"
+	next "@"
 .Stock:
-	db " STOCK <PK><MN> @"
+	db "てもちの#@"
 .This:
-	db " THIS <PK><MN> @"
+	db "こんどの#@"
 
 ContestAskSwitchText:
-	text_far _ContestAskSwitchText
-	text_end
+	text "#を　いれかえる？"
+	done
 
 DisplayAlreadyCaughtText:
 	call GetPokemonName
@@ -96,9 +97,13 @@ DisplayAlreadyCaughtText:
 	jp PrintText
 
 .ContestAlreadyCaughtText:
-	text_far _ContestAlreadyCaughtText
-	text_end
+	text "すでに　"
+	line "@"
+	text_ram wStringBuffer1
+	text "を　つかまえています"
+	prompt
 
+DummyPredef2F:
 DummyPredef38:
 DummyPredef39:
 	ret

@@ -131,9 +131,9 @@ SECTION "Extra Songs 1", ROMX
 INCLUDE "audio/music/credits.asm"
 
 
-;SECTION "Extra Songs 2", ROMX
+SECTION "Extra Songs 2", ROMX
 
-;INCLUDE "audio/music/postcredits.asm"
+INCLUDE "audio/music/postcredits.asm"
 
 
 ;SECTION "Sound Effects", ROMX

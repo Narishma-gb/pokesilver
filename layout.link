@@ -161,8 +161,8 @@ ROMX $32
 	"bank32"
 	"The End"
 ROMX $33
-	; "Move Animations"
-	; "Extra Songs 2"
+	"Move Animations"
+	"Extra Songs 2"
 ROMX $36
 	"Standard Scripts"
 	"Phone Scripts"
