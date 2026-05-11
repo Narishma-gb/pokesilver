@@ -7,10 +7,8 @@ VictoryRoadEntranceSign:
 	jumptext VictoryRoadEntranceSignText
 
 VictoryRoadEntranceSignText:
-	text "#MON LEAGUE"
-
-	para "VICTORY ROAD"
-	line "ENTRANCE"
+	text "<KOKO_WA>#　リーグ"
+	line "チャンピオンロード　いりぐち"
 	done
 
 Route22_MapEvents:

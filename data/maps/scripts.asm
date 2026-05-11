@@ -335,6 +335,59 @@ INCLUDE "maps/BluesHouse.asm"
 INCLUDE "maps/OaksLab.asm"
 
 
+SECTION "Map Scripts 10", ROMX
+
+INCLUDE "maps/GoldenrodCity.asm"
+INCLUDE "maps/BlackthornCity.asm"
+INCLUDE "maps/Route26.asm"
+INCLUDE "maps/Route27.asm"
+INCLUDE "maps/Route29.asm"
+INCLUDE "maps/Route30.asm"
+INCLUDE "maps/Route31.asm"
+INCLUDE "maps/Route38.asm"
+INCLUDE "maps/Route41.asm"
+INCLUDE "maps/Route43.asm"
+INCLUDE "maps/Route44.asm"
+INCLUDE "maps/Route45.asm"
+INCLUDE "maps/Route22.asm"
+INCLUDE "maps/SaffronCity.asm"
+INCLUDE "maps/PewterNidoranSpeechHouse.asm"
+INCLUDE "maps/PewterGym.asm"
+INCLUDE "maps/PewterMart.asm"
+INCLUDE "maps/PewterPokecenter1F.asm"
+INCLUDE "maps/PewterPokecenter2FBeta.asm"
+INCLUDE "maps/PewterSnoozeSpeechHouse.asm"
+
+
+;SECTION "Map Scripts 11", ROMX
+
+;INCLUDE "maps/NewBarkTown.asm"
+;INCLUDE "maps/VioletCity.asm"
+;INCLUDE "maps/OlivineCity.asm"
+;INCLUDE "maps/EcruteakCity.asm"
+;INCLUDE "maps/MahoganyTown.asm"
+;INCLUDE "maps/Route37.asm"
+;INCLUDE "maps/Route39.asm"
+;INCLUDE "maps/Route40.asm"
+;INCLUDE "maps/Route42.asm"
+;INCLUDE "maps/PewterCity.asm"
+;INCLUDE "maps/ViridianCity.asm"
+;INCLUDE "maps/Route19.asm"
+;INCLUDE "maps/Route16.asm"
+;INCLUDE "maps/CeladonCity.asm"
+;INCLUDE "maps/Route15.asm"
+;INCLUDE "maps/Route13.asm"
+;INCLUDE "maps/VermilionCity.asm"
+;INCLUDE "maps/CeruleanCity.asm"
+;INCLUDE "maps/Route9.asm"
+;INCLUDE "maps/Route24.asm"
+;INCLUDE "maps/Route8.asm"
+;INCLUDE "maps/CinnabarPokecenter1F.asm"
+;INCLUDE "maps/CinnabarPokecenter2FBeta.asm"
+;INCLUDE "maps/Route19FuchsiaGate.asm"
+;INCLUDE "maps/SeafoamGym.asm"
+
+
 SECTION "Map Scripts 12", ROMX
 
 INCLUDE "maps/Route28.asm"
@@ -359,84 +412,5 @@ INCLUDE "maps/Route10South.asm"
 INCLUDE "maps/Route23.asm"
 INCLUDE "maps/SilverCavePokecenter1F.asm"
 INCLUDE "maps/Route28SteelWingHouse.asm"
-
-
-
-
-;INCLUDE "maps/NewBarkTown.asm"
-;INCLUDE "maps/VioletCity.asm"
-;INCLUDE "maps/GoldenrodCity.asm"
-
-;INCLUDE "maps/OlivineCity.asm"
-;INCLUDE "maps/EcruteakCity.asm"
-;INCLUDE "maps/MahoganyTown.asm"
-;INCLUDE "maps/BlackthornCity.asm"
-
-;INCLUDE "maps/Route26.asm"
-;INCLUDE "maps/Route27.asm"
-;INCLUDE "maps/Route29.asm"
-;INCLUDE "maps/Route30.asm"
-;INCLUDE "maps/Route31.asm"
-
-
-;SECTION "Map Scripts 10", ROMX
-
-
-;SECTION "Map Scripts 11", ROMX
-
-;INCLUDE "maps/Route37.asm"
-;INCLUDE "maps/Route38.asm"
-;INCLUDE "maps/Route39.asm"
-;INCLUDE "maps/Route40.asm"
-;INCLUDE "maps/Route41.asm"
-;INCLUDE "maps/Route42.asm"
-
-;INCLUDE "maps/Route43.asm"
-;INCLUDE "maps/Route44.asm"
-;INCLUDE "maps/Route45.asm"
-;INCLUDE "maps/PewterCity.asm"
-
-
-;SECTION "Map Scripts 13", ROMX
-
-;INCLUDE "maps/ViridianCity.asm"
-;INCLUDE "maps/Route22.asm"
-;INCLUDE "maps/Route19.asm"
-;INCLUDE "maps/Route16.asm"
-;INCLUDE "maps/CeladonCity.asm"
-
-
-;SECTION "Map Scripts 14", ROMX
-
-;INCLUDE "maps/Route15.asm"
-;INCLUDE "maps/Route13.asm"
-;INCLUDE "maps/VermilionCity.asm"
-;INCLUDE "maps/SaffronCity.asm"
-;INCLUDE "maps/CeruleanCity.asm"
-
-
-;SECTION "Map Scripts 15", ROMX
-
-;INCLUDE "maps/Route9.asm"
-;INCLUDE "maps/Route24.asm"
-;INCLUDE "maps/Route8.asm"
-
-
-;SECTION "Map Scripts 18", ROMX
-
-;INCLUDE "maps/CinnabarPokecenter1F.asm"
-;INCLUDE "maps/CinnabarPokecenter2FBeta.asm"
-;INCLUDE "maps/Route19FuchsiaGate.asm"
-;INCLUDE "maps/SeafoamGym.asm"
-
-
-;SECTION "Map Scripts 24", ROMX
-
-;INCLUDE "maps/PewterNidoranSpeechHouse.asm"
-;INCLUDE "maps/PewterGym.asm"
-;INCLUDE "maps/PewterMart.asm"
-;INCLUDE "maps/PewterPokecenter1F.asm"
-;INCLUDE "maps/PewterPokecenter2FBeta.asm"
-;INCLUDE "maps/PewterSnoozeSpeechHouse.asm"
 
 ENDSECTION

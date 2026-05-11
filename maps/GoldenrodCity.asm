@@ -135,198 +135,152 @@ GoldenrodCityPokecenterSign:
 	jumpstd PokecenterSignScript
 
 GoldenrodCityPokefanMText:
-	text "They built the new"
-	line "RADIO TOWER to"
-
-	para "replace the old,"
-	line "creaky one."
+	text "<KOKO_WA>とう<GA>ふるくな<TTE>"
+	line "たおれそう<NI>なったのを"
+	cont "さいしん<NO>ラジオきょく<NI>したんだ"
 	done
 
 GoldenrodCityYoungster1Text:
-	text "I know there's a"
-	line "new BIKE SHOP, but"
-
-	para "I can't find it"
-	line "anywhere."
+	text "じてんしゃや<GA>あたらしく　できたが"
+	line "どこ<NI>あるの？"
+	cont "ぜんぜん　みあたらないよ"
 	done
 
 GoldenrodCityCooltrainerF1Text:
-	text "Is that man in"
-	line "black dressed up"
-
-	para "like a TEAM ROCKET"
-	line "member? How silly!"
+	text "あ<NO>くろずくめ<NO>ひと<TTE>"
+	line "<ROCKET><NO>まねしてるのかしら？"
+	cont "おかしな　ひと！"
 	done
 
 GoldenrodCityCooltrainerF1Text_ClearedRadioTower:
-	text "Was that man in"
-	line "black really part"
-
-	para "of TEAM ROCKET? I"
-	line "can't believe it!"
+	text "あ<NO>くろずくめ<NO>ひと<TTE>"
+	line "ほんと<NI><ROCKET>　だったの？"
+	cont "いまでも　しんじられないわ"
 	done
 
 GoldenrodCityCooltrainerF2Text:
-	text "The RADIO TOWER in"
-	line "GOLDENROD CITY is"
-	cont "a landmark."
+	text "コガネといえば　ラジオとう！"
 
-	para "They're running a"
-	line "promotional cam- "
-	cont "paign right now."
-
-	para "They'll modify"
-	line "your #GEAR,"
-
-	para "so it can also"
-	line "serve as a radio."
+	para "いまなら　キャンペーンで"
+	line "ポケギアで　ラジオ<GA>きけるように"
+	cont "してもらえるんです<TTE>！"
 	done
 
 GoldenrodCityCooltrainerF2Text_GotRadioCard:
-	text "Oh, your #GEAR"
-	line "works as a radio!"
+	text "あら　あなた<NO>ポケギア"
+	line "ラジオ<GA>きけるのね！"
 	done
 
 GoldenrodCityYoungster2Text:
-	text "E-he-he-he…"
-
-	para "I got in trouble"
-	line "for playing in the"
-
-	para "basement of the"
-	line "DEPT.STORE."
+	text "へへへ<⋯>"
+	line "ひゃっかてん<NO>ちかそうこで"
+	cont "かくれんぼ　してたら　おこられた"
 	done
 
 GoldenrodCityLassText:
-	text "The man at that"
-	line "house rates your"
-	cont "#MON names."
+	text "そこ<NO>いえで"
+	line "#<NO>ニックネームを"
+	cont "うらな<TTE>　もらえるわ"
 
-	para "He can even rename"
-	line "your #MON."
+	para "#<NI>いい　なまえを"
+	line "つけなおす　ことだ<TTE>　できるのよ"
 	done
 
 GoldenrodCityGrampsText:
-	text "Whew! This is one"
-	line "big town. I don't"
-
-	para "know where any-"
-	line "thing is."
+	text "しかしまあ　でっかい　まち　だな！"
+	line "ひろすぎて　どこ<NI>なにがあるか"
+	cont "ぜんぜん　わからんわい"
 	done
 
 GoldenrodCityRocketScoutText1:
-	text "So this is the"
-	line "RADIO TOWER…"
+	text "ここ<GA>ラジオとうか<⋯>"
 	done
 
 GoldenrodCityRocketScoutText2:
-	text "What do you want,"
-	line "you pest? Scram!"
+	text "なんだよ　おまえ　むこういけ！"
 	done
 
 GoldenrodCityRocket1Text:
-	text "Stay out of the"
-	line "way! Beat it!"
+	text "おら　うろちょろ　してんな！"
+	line "じゃまだ　じゃま！"
 	done
 
 GoldenrodCityRocket2Text:
-	text "Take over the"
-	line "RADIO TOWER…"
+	text "ラジオとう<WO>のっと<TTE><⋯>"
 
-	para "What? It's none of"
-	line "your business!"
+	para "なんだ！"
+	line "こどもに<WA>かんけい　ない！"
 	done
 
 GoldenrodCityRocket3Text:
-	text "#MON? They're"
-	line "nothing more than"
-
-	para "tools for making"
-	line "money!"
+	text "#？"
+	line "かねもうけ<NO>どうぐ　だろ！"
 	done
 
 GoldenrodCityRocket4Text:
-	text "Our dream will"
-	line "soon come true…"
-
-	para "It was such a long"
-	line "struggle…"
+	text "もうすぐ　おれたち<NO>やぼうが<⋯>"
+	line "これまで　ながかったなぁ<⋯>"
 	done
 
 GoldenrodCityRocket5Text:
-	text "Hey, brat! You"
-	line "don't belong here!"
-	cont "Get lost!"
+	text "おらあ！"
+	line "こども<GA>なんのようだ！？"
+	cont "あっち　いけー！"
 	done
 
 GoldenrodCityRocket6Text:
-	text "Come taste the"
-	line "true terror of"
-	cont "TEAM ROCKET!"
+	text "おまえも　<ROCKET>の"
+	line "おそろしさ<WO>おもいしる<GA>いい"
 	done
 
 GoldenrodCityStationSignText:
-	text "GOLDENROD CITY"
-	line "STATION"
+	text "<KOKO_WA>コガネ　えき"
 	done
 
 GoldenrodCityRadioTowerSignText:
-	text "GOLDENROD CITY"
-	line "RADIO TOWER"
+	text "コガネ　ラジオとう"
 	done
 
 GoldenrodDeptStoreSignText:
-	text "Full Selection of"
-	line "#MON Goods!"
-
-	para "GOLDENROD CITY"
-	line "DEPT.STORE"
+	text "#　グッズなら"
+	line "なんでもそろう　コガネ　ひゃっかてん"
 	done
 
 GoldenrodGymSignText:
-	text "GOLDENROD CITY"
-	line "#MON GYM"
-	cont "LEADER: WHITNEY"
-
-	para "The Incredibly"
-	line "Pretty Girl!"
+	text "コガネ　シティ　#ジム"
+	line "リーダー　アカネ"
+	cont "ダイナマイト　プリティ　ギャル！"
 	done
 
 GoldenrodCitySignText:
-	text "GOLDENROD CITY"
-
-	para "The Festive City"
-	line "of Opulent Charm"
+	text "<KOKO_WA>コガネ　シティ"
+	line "ごうか　けんらん"
+	cont "きんぴか　にぎやか　はなやかな　まち"
 	done
 
 GoldenrodCityBikeShopSignText:
-	text "The World is a"
-	line "Cycle Path!"
-	cont "BIKE SHOP"
+	text "どんな　ところも　スイスイ！"
+
+	para "じてんしゃ　<NO>ことなら"
+	line "ここ　ミラクル　サイクルへ！"
 	done
 
 GoldenrodCityGameCornerSignText:
-	text "Your Playground!"
-
-	para "GOLDENROD CITY"
-	line "GAME CORNER"
+	text "みんな<NO>あそびば！"
+	line "<⋯>　コガネ　ゲーム　コーナー"
 	done
 
 GoldenrodCityNameRaterSignText:
-	text "NAME RATER"
-
-	para "Get Your #MON"
-	line "Nicknames Rated"
+	text "<KOKO_WA>せいめいはんだんし　のいえ"
+	line "#<NO>なまえ　うらないます"
 	done
 
 GoldenrodCityUndergroundSignNorthText:
-	text "UNDERGROUND"
-	line "ENTRANCE"
+	text "ここから　ちかつうろ"
 	done
 
 GoldenrodCityUndergroundSignSouthText:
-	text "UNDERGROUND"
-	line "ENTRANCE"
+	text "ここから　ちかつうろ"
 	done
 
 GoldenrodCity_MapEvents:

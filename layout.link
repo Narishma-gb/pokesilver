@@ -163,6 +163,8 @@ ROMX $32
 ROMX $33
 	"Move Animations"
 	"Extra Songs 2"
+ROMX $34
+	"Map Scripts 10"
 ROMX $36
 	"Standard Scripts"
 	"Phone Scripts"
@@ -196,7 +198,6 @@ ROMX $3f
 ; ROMX $40
 	; "Title Screen"
 	; "Font Inversed"
-	; "Map Scripts 10"
 	; "Map Scripts 11"
 	; "Map Scripts 13"
 	; "Map Scripts 14"

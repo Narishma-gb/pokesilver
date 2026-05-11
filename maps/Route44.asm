@@ -227,178 +227,137 @@ Route44HiddenElixer:
 	hiddenitem ELIXER, EVENT_ROUTE_44_HIDDEN_ELIXER
 
 FisherWilton1SeenText:
-	text "Aack! You made me"
-	line "lose a POLIWAG!"
-
-	para "What are you going"
-	line "to do about it?"
+	text "ああ！　きみ<NO>せいで"
+	line "ニョロモ<GA>にげた　じゃないか！"
+	cont "どうして　くれるのかね！"
 	done
 
 FisherWilton1BeatenText:
-	text "Just forget about"
-	line "it."
+	text "もう　いいよ"
 	done
 
 FisherWiltonHugePoliwagText:
-	text "That POLIWAG that"
-	line "got away…"
-	cont "It was huge."
-
-	para "I swear it must've"
-	line "been 16 feet long!"
+	text "にげた　ニョロモ<⋯>"
+	line "あれ<WA>でかかった"
+	cont "５メートルくらい　あったね！"
 	done
 
 FisherEdgarSeenText:
-	text "I fish until I"
-	line "can't anymore."
-
-	para "I also battle"
-	line "until I drop."
-
-	para "That's my"
-	line "relationship"
-	cont "with my #MON."
+	text "つ<TTE>　つ<TTE>　つりまくり"
+	line "か<TTE>　か<TTE>　かちまくる！"
+	cont "それ<GA>わしと　#<NO>かんけい"
 	done
 
 FisherEdgarBeatenText:
-	text "Hmmmm… "
-	line "This isn't right."
+	text "<⋯>　んー　なんだかな"
 	done
 
 FisherEdgarAfterBattleText:
-	text "That's 100 wins"
-	line "to 101 losses."
+	text "これで　１００しょう　１０１ぱい"
 
-	para "I won't battle"
-	line "again for a while."
+	para "まけこし　だ<⋯>"
+	line "しばらく　しょうぶ<WA>やめよう"
 	done
 
 BirdKeeperVance1SeenText:
-	text "Do you know about"
-	line "the legendary bird"
-	cont "#MON?"
+	text "でんせつ<NO>とり#　について"
+	line "なにか　し<TTE>るかい？"
 	done
 
 BirdKeeperVance1BeatenText:
-	text "Whew! You're hot"
-	line "stuff."
+	text "ひゅー　やるなあ"
 	done
 
 BirdKeeperVanceLegendaryBirdsText:
-	text "ARTICUNO, ZAPDOS"
-	line "and MOLTRES are"
+	text "でんせつ<NO>とり#は"
+	line "３しゅるい　いて　ファイヤー"
+	cont "　"
+	line "サンダー　フリーザー　<TTE>いうんだ"
 
-	para "the three legend-"
-	line "ary bird #MON."
-
-	para "I heard there are"
-	line "other legendary"
-	cont "birds, though."
+	para "でも　ほかにも　でんせつの"
+	line "とり#　いるらしいんだよ"
 	done
 
 PsychicPhilSeenText:
-	text "I'm gonna win,"
-	line "for sure!"
+	text "かつぞ！"
+	line "ぜったい<NI>かつぞ！"
 	done
 
 PsychicPhilBeatenText:
-	text "Arrgh… That's a"
-	line "shocking loss…"
+	text "<⋯>　がーん"
+	line "ショック　おおきいよ！"
 	done
 
 PsychicPhilAfterBattleText:
-	text "It's important to"
-	line "have conviction"
-	cont "on your side."
+	text "なにか<WO>やるとき"
+	line "つよく　おもうこと<TTE>　だいじだ！"
 	done
 
 PokemaniacZachSeenText:
-	text "I'll do anything"
-	line "to get my hands on"
-	cont "rare #MON!"
+	text "めずらしい　#は"
+	line "どんなこと　した<TTE>　ほしいよー！"
 	done
 
 PokemaniacZachBeatenText:
-	text "Oooh, your #MON"
-	line "are so appealing."
+	text "あー"
+	line "きみ<NO>#　いいなあ！"
 	done
 
 PokemaniacZachAfterBattleText:
-	text "If a #MON has"
-	line "different colors"
-
-	para "from usual, it's"
-	line "more valuable."
-
-	para "What? You mean"
-	line "that's not true?"
+	text "おなじ　#でも"
+	line "いろ<GA>ちがうと　かち<GA>あがるよ！"
+	cont "えっ　そんなこと　ない？"
 	done
 
 CooltrainermAllenSeenText:
-	text "I can tell you're"
-	line "a good trainer by"
-	cont "looking at you."
+	text "そ<NO>つらがまえ　みのこなし"
+	line "なかなか　できる　<TTE>　かんじだ！"
 
-	para "I'm good at #-"
-	line "MON, and I can see"
-	cont "that you are too."
+	para "ぼくも　#　つよいからね"
+	line "みただけで　じつりょく<GA>わかる！"
 	done
 
 CooltrainermAllenBeatenText:
-	text "Tch! It's a total"
-	line "loss on my part."
+	text "<⋯>！"
+	line "かんぜん<NI>ぼく<NO>まけだよ"
 	done
 
 CooltrainermAllenAfterBattleText:
-	text "Wow. You have a"
-	line "lot of BADGES."
+	text "そんな<NI>バッジ<WO>も<TTE>いるのか！"
+	line "どうりで　つよい　わけ　だよ！"
 
-	para "No wonder you're"
-	line "so tough."
-
-	para "I wonder if"
-	line "ECRUTEAK GYM's"
-
-	para "MORTY is still in"
-	line "training?"
-
-	para "He really hammered"
-	line "me."
+	para "そういえば　エンジュジム<NO>マツバ"
+	line "いまも　しゅぎょう　しているのかな"
+	cont "あいつに<WA>くるしめられたよ"
 	done
 
 CooltrainerfCybilSeenText:
-	text "You look strong."
+	text "あなた　つよそうね<⋯>"
 
-	para "Good trainers seek"
-	line "tough opponents"
-	cont "instinctively."
+	para "つよい　あいて<WO>もとめるのは"
+	line "<TRAINER><NO>ほんのう　よ！"
 	done
 
 CooltrainerfCybilBeatenText:
-	text "Nope! This won't"
-	line "do at all."
+	text "ああ　だめだめ"
 	done
 
 CooltrainerfCybilAfterBattleText:
-	text "We all get better"
-	line "by experiencing"
-	cont "many battles."
+	text "いろんな　たたかい<WO>けいけんして"
+	line "みんな　つよくな<TTE>　いくのよ"
 
-	para "I battled a lot to"
-	line "become what I am"
-	cont "today--an elite."
+	para "エリート<TRAINER><NI>なるまで"
+	line "あたしも　たくさん　たたかったわ"
 	done
 
 Route44Sign1Text:
-	text "ROUTE 44"
-	line "ICE PATH AHEAD"
+	text "<KOKO_WA>４４<ROUTE>"
+	line "このさき　こおり<NO>ぬけみち"
 	done
 
 Route44Sign2Text:
-	text "ROUTE 44"
-
-	para "MAHOGANY TOWN -"
-	line "BLACKTHORN CITY"
+	text "<KOKO_WA>４４<ROUTE>"
+	line "チョウジタウン　<⋯>　フスベシティ"
 	done
 
 Route44_MapEvents:

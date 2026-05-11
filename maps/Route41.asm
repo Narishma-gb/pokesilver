@@ -132,210 +132,158 @@ Route41HiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_ROUTE_41_HIDDEN_MAX_ETHER
 
 SwimmermCharlieSeenText:
-	text "The water's warm"
-	line "here. I'm loose"
-	cont "and limber."
-
-	para "Sure, I'll take"
-	line "you on!"
+	text "ここいら<NO>うみ<WA>あたたかい"
+	line "からだも　ほぐれて　いい　かんじだ"
+	cont "ちょっと　あいて　してやろう！"
 	done
 
 SwimmermCharlieBeatenText:
-	text "Yikes! I've got"
-	line "prune skin!"
+	text "ふ　ふやけた<⋯>"
 	done
 
 SwimmermCharlieAfterBattleText:
-	text "Isn't it relaxing"
-	line "just floating like"
-	cont "this?"
+	text "こうや<TTE>　うかんでると"
+	line "ここち　いい　よな"
 	done
 
 SwimmermGeorgeSeenText:
-	text "I'm a bit tired."
-	line "If I win, lend me"
-	cont "your #MON."
+	text "ちょっと　つかれてきた"
+	line "ぼく<GA>かったら"
+	cont "きみ<NO>#<WO>かしてくれない？"
 	done
 
 SwimmermGeorgeBeatenText:
-	text "Pant, pant…"
+	text "はあ　はあ"
 	done
 
 SwimmermGeorgeAfterBattleText:
-	text "It's so far to"
-	line "CIANWOOD."
-
-	para "But it's no easy"
-	line "return trip to"
-	cont "OLIVINE either."
-
-	para "What should I do?"
+	text "タンバ　まで　とおいなあ"
+	line "アサギ<NI>もどるのも　つらそうだし"
+	cont "どうしようかな？"
 	done
 
 SwimmermBerkeSeenText:
-	text "See those islands"
-	line "that are blocked"
-	cont "by whirlpools?"
-
-	para "There just has to"
-	line "be a secret!"
+	text "うずで　かこまれた　しま"
+	line "ひみつ<GA>あると　おもわんか？"
 	done
 
 SwimmermBerkeBeatenText:
-	text "What's the secret"
-	line "to your strength?"
+	text "きみ<NO>つよさ"
+	line "きっと　ひみつ<GA>あるー！"
 	done
 
 SwimmermBerkeAfterBattleText:
-	text "It was a dark and"
-	line "stormy night…"
+	text "あらし<NO>よる<NO>はなしだ"
 
-	para "I saw this giant"
-	line "#MON flying"
-	cont "from the islands."
-
-	para "It was scattering"
-	line "feathers from its"
-	cont "silver wings."
+	para "うずまきじま　から"
+	line "おおきな　#が"
+	cont "ぎんいろのはね<WO>ちらしながら"
+	cont "とんでいった<NO>みたことあるよ"
 	done
 
 SwimmermKirkSeenText:
-	text "The waves are wild"
-	line "here."
-
-	para "They tire you out"
-	line "while you swim."
+	text "こ<NO>うみ<WA>なみ<GA>はげしくて"
+	line "およいでても　つかれちゃうよ"
 	done
 
 SwimmermKirkBeatenText:
-	text "I'm beat!"
+	text "ば　ばてた"
 	done
 
 SwimmermKirkAfterBattleText:
-	text "The currents keep"
-	line "me from reaching"
-	cont "that island."
+	text "しお<NO>ながれ<NI>じゃま　されて"
+	line "あ<NO>しま<NI>たどりつけないんだ"
 	done
 
 SwimmermMathewSeenText:
-	text "Are you seeking"
-	line "the secrets of"
-	cont "WHIRL ISLANDS?"
+	text "きみも　うずまきじま<NO>ひみつを"
+	line "さぐり<NI>きたのか？"
 	done
 
 SwimmermMathewBeatenText:
-	text "Ooh, you've got"
-	line "great endurance!"
+	text "うう　てごわい"
 	done
 
 SwimmermMathewAfterBattleText:
-	text "A secret about"
-	line "WHIRL ISLANDS…"
-
-	para "It's pitch-black"
-	line "inside!"
+	text "うずまきじま<NO>ひみつ<⋯>"
+	line "とりあえず　なか<WA>まっくらだ！"
 	done
 
 SwimmerfKayleeSeenText:
-	text "I'm on my way to"
-	line "WHIRL ISLANDS."
-
-	para "I'm going explor-"
-	line "ing with friends."
+	text "ともだちと　いっしょに"
+	line "うずまきじま<WO>たんけん　するの！"
 	done
 
 SwimmerfKayleeBeatenText:
-	text "Is that how you do"
-	line "it?"
+	text "ふーん　そうなんだ"
 	done
 
 SwimmerfKayleeAfterBattleText:
-	text "There's supposed"
-	line "to be a big #-"
-	cont "MON deep beneath"
-	cont "WHIRL ISLANDS."
-
-	para "I wonder what it"
-	line "could be?"
+	text "うずまきじま<NO>ちか　には"
+	line "おっきな　#<GA>いるらしいけど"
+	cont "どんな　#　かしら？"
 	done
 
 SwimmerfSusieSeenText:
-	text "You look so ele-"
-	line "gant, riding your"
-	cont "#MON."
+	text "あら？　#<NI>の<TTE>"
+	line "なんだか　ゆう<GA>ですわね"
 	done
 
 SwimmerfSusieBeatenText:
-	text "I'm crushed…"
+	text "がっかり　ですわ"
 	done
 
 SwimmerfSusieAfterBattleText:
-	text "Wasn't there a hit"
-	line "song about a boy"
-	cont "riding a LAPRAS?"
+	text "ラプラス<NI>のった　しょうねん"
+	line "そんな　うた　なかったかしら？"
 	done
 
 SwimmerfDeniseSeenText:
-	text "The weather is so"
-	line "beautiful, I'm in"
-	cont "a daze!"
+	text "いい　てんき　なのよね<⋯>"
+	line "うっとり　しちゃう"
 	done
 
 SwimmerfDeniseBeatenText:
-	text "Ohhh!"
+	text "やーん"
 	done
 
 SwimmerfDeniseAfterBattleText:
-	text "A sunburn is the"
-	line "worst for skin."
+	text "ひやけ<WA>おはだ<NO>てんてき"
 
-	para "But I don't use a"
-	line "sunblock."
-
-	para "I won't pollute"
-	line "the water."
+	para "だから<TTE>　クリーム<WA>ぬ<TTE>ないわ"
+	line "うみ<GA>よごれちゃうもの"
 	done
 
 SwimmerfKaraSeenText:
-	text "If you need to"
-	line "rest, just tread"
-	cont "water."
-
-	para "You'll get your"
-	line "wind back, so you"
-
-	para "can keep on going"
-	line "strong."
+	text "およぎながら　やすむときは"
+	line "たちおよぎ　<WO>すればいいのよ"
+	cont "つかれも　とれて　げんきいっぱい！"
 	done
 
 SwimmerfKaraBeatenText:
-	text "Oh! You have more"
-	line "energy than I do."
+	text "もう！　あなた<NO>ほうが"
+	line "げんき　いっぱいね！"
 	done
 
 SwimmerfKaraAfterBattleText:
-	text "I heard roars from"
-	line "deep inside the"
-	cont "ISLANDS."
+	text "そういえば　しま<NO>おく　から"
+	line "なにか<NO>なきごえ<GA>きこえてきたわ"
 	done
 
 SwimmerfWendySeenText:
-	text "At night, STARYU"
-	line "gather near the"
-	cont "water's surface."
+	text "よる<NI>なるとね"
+	line "ヒトデマン<GA>すいめん　ちかくに"
+	cont "あつま<TTE>　くるのよ"
 	done
 
 SwimmerfWendyBeatenText:
-	text "Oh, dear…"
+	text "<⋯>　あらあら"
 	done
 
 SwimmerfWendyAfterBattleText:
-	text "The clusters of"
-	line "STARYU light up"
-	cont "at the same time."
-
-	para "It's so beautiful,"
-	line "it's scary."
+	text "あつまった　ヒトデマン"
+	line "いっせい<NI>ひかりだすの！"
+	cont "こわいくらい<NI>きれい　だったわ！"
 	done
 
 Route41_MapEvents:

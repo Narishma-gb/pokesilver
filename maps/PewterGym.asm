@@ -74,136 +74,90 @@ PewterGymStatue:
 	jumpstd GymStatue2Script
 
 BrockIntroText:
-	text "BROCK: Wow, it's"
-	line "not often that we"
+	text "タケシ『ジョウトから"
+	line "ちょうせんと<WA>めずらしい！"
 
-	para "get a challenger"
-	line "from JOHTO."
+	para "おれ<WA>ニビ　#　ジム"
+	line "リーダー<NO>タケシ！"
+	cont "いわ　タイプ<NO>エキスパートさ！"
 
-	para "I'm BROCK, the"
-	line "PEWTER GYM LEADER."
+	para "ちょっとや　そっと<NO><KOUGEKI>じゃ"
+	line "おれ<NO>#たち<WA>へいき"
+	cont "いたくも　かゆくも　ないぜ！"
 
-	para "I'm an expert on"
-	line "rock-type #MON."
-
-	para "My #MON are im-"
-	line "pervious to most"
-
-	para "physical attacks."
-	line "You'll have a hard"
-
-	para "time inflicting"
-	line "any damage."
-
-	para "Come on!"
+	para "かか<TTE>こい！"
 	done
 
 BrockWinLossText:
-	text "BROCK: Your #-"
-	line "MON's powerful at-"
-	cont "tacks overcame my"
-	cont "rock-hard defense…"
+	text "タケシ『<⋯>まもり<WO>うわまわる"
+	line "きょうれつな　<KOUGEKI><⋯>"
+	cont "おれ<NO>よそう　いじょうだ<⋯>！"
 
-	para "You're stronger"
-	line "than I expected…"
-
-	para "Go ahead--take"
-	line "this BADGE."
+	para "さあ　こ<NO>バッジを"
+	line "も<TTE>い<TTE>　くれ！"
 	done
 
 ReceivedBoulderBadgeText:
-	text "<PLAYER> received"
-	line "BOULDERBADGE."
+	text "<PLAYER><WA>タケシから"
+	line "グレーバッジ<WO>もらっ<TA!>"
 	done
 
 BrockBoulderBadgeText:
-	text "BROCK: <PLAYER>,"
-	line "thanks. I enjoyed"
+	text "タケシ『ありがとう"
+	line "<PLAYER>くん！"
+	cont "いい　しあい<GA>でき<TA!>"
 
-	para "battling you, even"
-	line "though I am a bit"
-	cont "upset."
-
-	para "That BOULDERBADGE"
-	line "will make your"
-
-	para "#MON even more"
-	line "powerful."
+	para "ぼく<NO>グレーバッジで"
+	line "きみ<NO>#は"
+	cont "さら<NI>つよくなるよ"
+	cont "ちょっと　くやしい　けどね！"
 	done
 
 BrockFightDoneText:
-	text "BROCK: The world"
-	line "is huge. There are"
+	text "タケシ『よのなか<WA>ひろいな<⋯>"
+	line "こんな<NI>つよい　<TRAINER>が"
+	cont "まだまだ　たくさん　いるんだ"
 
-	para "still many strong"
-	line "trainers like you."
-
-	para "Just wait and see."
-	line "I'm going to be-"
-	cont "come a lot strong-"
-	cont "er too."
+	para "おれも　もっと　もっと"
+	line "つよい　<TRAINER><NI>なるよ！"
 	done
 
 CamperJerrySeenText:
-	text "The trainers of"
-	line "this GYM use rock-"
-	cont "type #MON."
+	text "<KOKO_WA>いわ　#を"
+	line "あつかう　<TRAINER><NO>ジム！"
 
-	para "The rock-type has"
-	line "high DEFENSE."
+	para "いわタイプ<WA>ぼうぎょりょくが"
+	line "たかい　からな！"
 
-	para "Battles could end"
-	line "up going a long"
-
-	para "time. Are you"
-	line "ready for this?"
+	para "たたかい<GA>ながびくぜ！"
+	line "かくご　しろよ！"
 	done
 
 CamperJerryBeatenText:
-	text "I have to win"
-	line "these battles…"
+	text "たたかい<WA>かたなくちゃ<⋯>"
 	done
 
 CamperJerryAfterBattleText:
-	text "Hey, you! Trainer"
-	line "from JOHTO! BROCK"
-
-	para "is tough. He'll"
-	line "punish you if you"
-
-	para "don't take him"
-	line "seriously."
+	text "タケシさん<WA>つよいぜ！"
+	line "ゆだん　すると　いたい　め<NI>あうぜ"
+	cont "ジョウト<NO><TRAINER>！"
 	done
 
 PewterGymGuideText:
-	text "Yo! CHAMP in"
-	line "making! You're"
+	text "おーす　みらい<NO>チャンピオン！"
+	line "ちょうし　よさそう　だなあ！"
 
-	para "really rocking."
-	line "Are you battling"
+	para "カントー<NO>ジム　リーダーと"
+	line "たたか<TTE>るかい？"
 
-	para "the GYM LEADERS of"
-	line "KANTO?"
-
-	para "They're strong and"
-	line "dedicated people,"
-
-	para "just like JOHTO's"
-	line "GYM LEADERS."
+	para "ジョウト<NI>まけず　おとらず"
+	line "てごわい　ヤツら　だぜ！"
 	done
 
 PewterGymGuideWinText:
-	text "Yo! CHAMP in"
-	line "making! That GYM"
-
-	para "didn't give you"
-	line "much trouble."
-
-	para "The way you took"
-	line "charge was really"
-
-	para "inspiring. I mean"
-	line "that seriously."
+	text "さす<GA>みらい<NO>チャンピオン！"
+	line "あぶなげない　たたかい　だったぜ！"
+	cont "かんどう　したよ　いや　ホント！"
 	done
 
 PewterGym_MapEvents:

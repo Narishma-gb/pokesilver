@@ -233,161 +233,118 @@ Route26MaxElixer:
 	itemball MAX_ELIXER
 
 CooltrainermJakeSeenText:
-	text "I'm making my"
-	line "final preparations"
-
-	para "for the #MON"
-	line "LEAGUE."
+	text "#リーグ　ちょうせん<NO>ため"
+	line "さいご<NO>ちょうせい<WO>してるんだ"
 	done
 
 CooltrainermJakeBeatenText:
-	text "I blew it!"
+	text "し　しくじっ<TA!>"
 	done
 
 CooltrainermJakeAfterBattleText:
-	text "It's going to be"
-	line "tough to win at"
-	cont "the LEAGUE."
+	text "もっと　#　きたえないと"
+	line "かちぬくの<WA>きびしそうだ"
 
-	para "I need to do some"
-	line "more training."
-
-	para "I hear that the"
-	line "LEAGUE's ELITE"
-
-	para "FOUR are tougher"
-	line "than GYM LEADERS."
+	para "いままで<NO>ジムリーダーより"
+	line "はるか<NI>つよいと　きくからな"
+	cont "#リーグにいる　してんのうは！"
 	done
 
 CooltrainermGaven3SeenText:
-	text "By experiencing"
-	line "tough battles, you"
-	cont "gain power."
+	text "きびしい　たたかい<WO>つづけて"
+	line "ほんとう<NO>つよさ<GA>み<NI>つく！"
 	done
 
 CooltrainermGaven3BeatenText:
-	text "Gaah! Life is even"
-	line "tougher!"
+	text "じんせい<TTE>　もっと　きびしい！"
 	done
 
 CooltrainermGavenAfterText:
-	text "To get to #MON"
-	line "LEAGUE, you have"
+	text "#リーグ<NI>いくには"
+	line "チャンピオンロード<WO>こえないと<⋯>"
 
-	para "to get through"
-	line "VICTORY ROAD."
-
-	para "But VICTORY ROAD"
-	line "is tough."
-
-	para "Practically nobody"
-	line "goes there!"
+	para "でも　チャンピオンロード"
+	line "だれも　いないほど　きびしいんだ"
 	done
 
 CooltrainerfJoyceSeenText:
-	text "Since you've come"
-	line "this far, you must"
-	cont "be good."
+	text "ここにいる　<TTE>ことは"
+	line "それなり<NO>じつりょくしゃ！"
 
-	para "I'm going to give"
-	line "this battle every-"
-	cont "thing I've got!"
+	para "<WATASHI>も　ぜんりょくで"
+	line "おあいて　するわ！"
 	done
 
 CooltrainerfJoyceBeatenText:
-	text "No! I don't"
-	line "believe this!"
+	text "うそ！"
+	line "しんじられない"
 	done
 
 CooltrainerfJoyceAfterBattleText:
-	text "I've defeated"
-	line "eight GYM LEADERS,"
+	text "８にん<NO>ジムリーダー<NI>か<TTE>"
+	line "じしん　あったのに<⋯>"
 
-	para "so I was feeling"
-	line "confident."
-
-	para "I'll have to try"
-	line "harder next time."
+	para "もっと　がんばらなくちゃ！"
 	done
 
 CooltrainerfBeth1SeenText:
-	text "I lost to a train-"
-	line "er named <RIVAL>."
+	text "<RIVAL>　<TTE>いう"
+	line "<TRAINER><NI>まけたの<⋯>"
 
-	para "He was really"
-	line "strong, but…"
-
-	para "It was as if he"
-	line "absolutely had to"
-	cont "win at any cost."
-
-	para "I felt sorry for"
-	line "his #MON."
+	para "すごく　つよかったけど"
+	line "ぜったい<NI>かたなきゃ<TTE>　かんじで"
+	cont "#　かわいそうだったよ"
 	done
 
 CooltrainerfBeth1BeatenText:
-	text "#MON aren't"
-	line "tools of war."
+	text "やっぱり　#は"
+	line "たたかい<NO>どうぐ　じゃないのよね"
 	done
 
 CooltrainerfBethAfterText:
-	text "#MON are in-"
-	line "valuable, lifelong"
-	cont "partners."
+	text "#<WA>いっしょう　いっしょの"
+	line "だいじな　パートナー　なんだから"
 	done
 
 PsychicRichardSeenText:
-	text "Wow, look at all"
-	line "those BADGES!"
-	cont "I'm impressed."
+	text "そ<NO>バッジ<NO>かず"
+	line "たいしたもんだぜ！"
 
-	para "But you're not"
-	line "satisfied by just"
-
-	para "collecting them,"
-	line "right?"
+	para "でも　バッジ<WO>あつめただけで"
+	line "まんぞく　してるんじゃ　ないだろうな"
 	done
 
 PsychicRichardBeatenText:
-	text "Good battle!"
+	text "いい　ファイト　だったぜ！"
 	done
 
 PsychicRichardAfterBattleText:
-	text "People and #MON"
-	line "grow from their"
-	cont "experiences."
+	text "あらゆる　こと<WO>けいけんして"
+	line "ひとも　#も　そだ<TTE>いく"
 
-	para "Don't get lazy and"
-	line "complacent."
+	para "きみ　これからも"
+	line "ゆだん　せず<NI>がんばるんだぜ！"
 	done
 
 FisherScottSeenText:
-	text "I'm feeling great"
-	line "today!"
-
-	para "I feel like I"
-	line "could boot even"
-	cont "the LEAGUE CHAMP!"
+	text "きょう<WA>ぜっこうちょう！"
+	line "いまなら　#リーグの"
+	cont "チャンピオンにだ<TTE>　かてそうだ！"
 	done
 
 FisherScottBeatenText:
-	text "No! Not in this"
-	line "battle!"
+	text "あらら"
+	line "しょうぶ<WA>ダメかあ"
 	done
 
 FisherScottAfterBattleText:
-	text "Just like in fish-"
-	line "ing, it's all over"
-
-	para "in #MON if you"
-	line "give up."
+	text "つりも　#も"
+	line "あきらめたら　そこで　おわり　だな"
 	done
 
 Route26SignText:
-	text "ROUTE 26"
-
-	para "#MON LEAGUE"
-	line "RECEPTION GATE"
+	text "<KOKO_WA>２６<ROUTE>"
+	line "#　リーグ　うけつけゲート"
 	done
 
 Route26_MapEvents:

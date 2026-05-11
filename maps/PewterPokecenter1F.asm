@@ -36,33 +36,24 @@ Chris:
 	end
 
 PewterPokecenter1FTeacherText:
-	text "…Yeah, and the"
-	line "GYM in CINNABAR's"
+	text "でね　でね<⋯>"
+	line "グレン<NO>ジム<GA>なくな<TTE>るの！"
+	cont "あたし　ちょー　おどろいたー！"
 
-	para "gone. I was really"
-	line "amazed."
-
-	para "…Yes? I'm on the"
-	line "phone. Go away!"
+	para "<⋯>　なーに？　でんわちゅう　なの"
+	line "ジャマしないでよ！"
 	done
 
 PewterJigglypuffText:
-	text "JIGGLYPUFF: Puu"
-	line "pupuu."
+	text "プリン『ぷうー　ぷぷうー"
 	done
 
 PewterPokecenter1FBugCatcherText:
-	text "Most #MON get"
-	line "drowsy if they"
+	text "プリン<NO>うたごえ<WO>きくと<⋯>"
+	line "たいてい<NO>#<WA>ねむくなる"
 
-	para "hear a JIGGLYPUFF"
-	line "singing."
-
-	para "There are several"
-	line "moves that can be"
-
-	para "used only while a"
-	line "#MON is asleep."
+	para "ねむ<TTE>いるとき<NI>つかう　わざが"
+	line "いくつか　あるんだよね！"
 	done
 
 PewterPokecenter1F_MapEvents:

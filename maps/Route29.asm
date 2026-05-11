@@ -247,169 +247,121 @@ DudeMovementData2b:
 	step_end
 
 CatchingTutorialBoxFullText:
-	text "#MON hide in"
-	line "the grass. Who"
-
-	para "knows when they'll"
-	line "pop out…"
+	text "くさむらに<WA>#<GA>ひそんでる"
+	line "いつ　とびだすか　わからないね"
 	done
 
 CatchingTutorialIntroText:
-	text "I've seen you a"
-	line "couple times. How"
+	text "きみ　なんども　とお<TTE>るけど"
+	line "どれくらい　#　つかまえた"
 
-	para "many #MON have"
-	line "you caught?"
-
-	para "Would you like me"
-	line "to show you how to"
-	cont "catch #MON?"
+	para "なんだったら　ぼく<GA>#の"
+	line "つかまえかた　おしえて　あげるよ？"
 	done
 
 CatchingTutorialDebriefText:
-	text "That's how you do"
-	line "it."
+	text "とまあ　こんな　かんじ　だね！"
 
-	para "If you weaken them"
-	line "first, #MON are"
-	cont "easier to catch."
+	para "よわらせたりすると"
+	line "もっと　つかまえやすく　なるよ！"
 	done
 
 CatchingTutorialDeclinedText:
-	text "Oh. Fine, then."
+	text "そうかい"
+	line "だったら　いいけど"
 
-	para "Anyway, if you"
-	line "want to catch"
-
-	para "#MON, you have"
-	line "to walk a lot."
+	para "まっ　ほしい　#<GA>いたら"
+	line "ひたすら　あるきまわる　ことだね！"
 	done
 
 CatchingTutorialRepeatText:
-	text "Huh? You want me"
-	line "to show you how to"
-	cont "catch #MON?"
+	text "ん？　#<NO>つかまえかた"
+	line "おしえて　ほしいのかい？"
 	done
 
 Route29YoungsterText:
-	text "Yo. How are your"
-	line "#MON?"
+	text "よお"
+	line "おまえ<NO>#　げんき？"
 
-	para "If they're weak"
-	line "and not ready for"
-
-	para "battle, keep out"
-	line "of the grass."
+	para "#<GA>よわ<TTE>きて"
+	line "たたかわせたくない　ときは"
+	cont "なるべく　くさむら<WO>よけて"
+	cont "あるいたほう<GA>いいよ"
 	done
 
 Route29TeacherText:
-	text "See those ledges?"
-	line "It's scary to jump"
-	cont "off them."
+	text "そこ<NI>だんさ<GA>あるじゃない？"
 
-	para "But you can go to"
-	line "NEW BARK without"
-
-	para "walking through"
-	line "the grass."
+	para "とびおりるの<WA>こわいけど"
+	line "くさむら<WO>あるかずに"
+	cont "ワカバまで　いけるのよね！"
 	done
 
 Route29FisherText:
-	text "I wanted to take a"
-	line "break, so I saved"
-
-	para "to record my"
-	line "progress."
+	text "ちょっと　ひとやすみ　したいから"
+	line "レポート　かいてんだよ"
 	done
 
 Route29CooltrainerMText_WaitingForDay: ; unreferenced
-	text "I'm waiting for"
-	line "#MON that"
-
-	para "appear only in the"
-	line "daytime."
+	text "ひる　しか　でない　#"
+	line "つかまえるため　ここで　ま<TTE>んだ"
 	done
 
 Route29CooltrainerMText_WaitingForNight:
-	text "I'm waiting for"
-	line "#MON that"
-
-	para "appear only at"
-	line "night."
+	text "よる　しか　でない　#"
+	line "つかまえるため　ここで　ま<TTE>んだ"
 	done
 
 Route29CooltrainerMText_WaitingForMorning:
-	text "I'm waiting for"
-	line "#MON that"
-
-	para "appear only in the"
-	line "morning."
+	text "あさ　しか　でない　#"
+	line "つかまえるため　ここで　ま<TTE>んだ"
 	done
 
 MeetTuscanyText:
-	text "TUSCANY: I do be-"
-	line "lieve that this is"
+	text "ヒコ『はじめて　おあい　しますよね？"
 
-	para "the first time"
-	line "we've met?"
-
-	para "Please allow me to"
-	line "introduce myself."
-
-	para "I am TUSCANY of"
-	line "Tuesday."
+	para "わたくし"
+	line "かようび<NO>ヒコ　と　もうします"
 	done
 
 TuscanyGivesGiftText:
-	text "By way of intro-"
-	line "duction, please"
-
-	para "accept this gift,"
-	line "a PINK BOW."
+	text "あいさつ　がわりに"
+	line "これ<WO>うけと<TTE>　ください"
+	cont "ピンクのリボンで　ございます"
 	done
 
 TuscanyGaveGiftText:
-	text "TUSCANY: Wouldn't"
-	line "you agree that it"
-	cont "is most adorable?"
+	text "ヒコ『なんて　かわいらしい"
+	line "リボン　だと　おもいませんこと？"
 
-	para "It strengthens"
-	line "normal-type moves."
-
-	para "I am certain it"
-	line "will be of use."
+	para "それ<WA>ノーマルタイプ<NO>わざを"
+	line "つよくする　どうぐで　ございます"
+	cont "きっと　やく<NI>たつと　おもいますわ"
 	done
 
 TuscanyTuesdayText:
-	text "TUSCANY: Have you"
-	line "met MONICA, my"
-	cont "older sister?"
+	text "ヒコ『ツキコ　おねえさまには"
+	line "もう　あわれました？"
+	cont "ミズオ　さん　には？"
 
-	para "Or my younger"
-	line "brother, WESLEY?"
-
-	para "I am the second of"
-	line "seven children."
+	para "わたくし　７にん　きょうだいの"
+	line "２ばんめ　ですのよ"
 	done
 
 TuscanyNotTuesdayText:
-	text "TUSCANY: Today is"
-	line "not Tuesday. That"
-	cont "is unfortunate…"
+	text "ヒコ『きょう<WA>かようびじゃ"
+	line "ないみたい　ですね"
+	cont "ざんねんですわ⋯"
 	done
 
 Route29Sign1Text:
-	text "ROUTE 29"
-
-	para "CHERRYGROVE CITY -"
-	line "NEW BARK TOWN"
+	text "<KOKO_WA>２９<ROUTE>"
+	line "ヨシノシティ　<⋯>　ワカバタウン"
 	done
 
 Route29Sign2Text:
-	text "ROUTE 29"
-
-	para "CHERRYGROVE CITY -"
-	line "NEW BARK TOWN"
+	text "<KOKO_WA>２９<ROUTE>"
+	line "ヨシノシティ　<⋯>　ワカバタウン"
 	done
 
 Route29_MapEvents:

@@ -220,130 +220,105 @@ Route38FruitTree:
 	fruittree FRUITTREE_ROUTE_38
 
 BirdKeeperTobySeenText:
-	text "Fly high into the"
-	line "sky, my beloved"
-	cont "bird #MON!"
+	text "おおきく　はばたけ"
+	line "ぼく<NO>とり#！"
 	done
 
 BirdKeeperTobyBeatenText:
-	text "I feel like just"
-	line "flying away now."
+	text "このまま　とり#<NI>の<TTE>"
+	line "どこか<NI>いきたい　きぶんだよ"
 	done
 
 BirdKeeperTobyAfterBattleText:
-	text "I plan to train in"
-	line "CIANWOOD CITY to"
-
-	para "teach my #MON"
-	line "how to fly."
+	text "#<NI>そらをとぶ　わざ"
+	line "おぼえさせるため　タンバシティに"
+	cont "しゅぎょうへ　いくつもりなんだ！"
 	done
 
 SchoolboyChad1SeenText:
-	text "Let me try some-"
-	line "thing I learned"
-	cont "today."
+	text "さっそく　きょう　べんきょうしたこと"
+	line "ためさせて　もらおうかな"
 	done
 
 SchoolboyChad1BeatenText:
-	text "I didn't study"
-	line "enough, I guess."
+	text "あれ？　おかしいな"
+	line "まだまだ　べんきょう　たりないのか？"
 	done
 
 SchoolboyChadSoManyTestsText:
-	text "I have to take so"
-	line "many tests, I"
+	text "いつも<WA>テストばかりで"
+	line "あんまり　#　してないんだ"
 
-	para "don't have much"
-	line "time for #MON."
-
-	para "So when I do get"
-	line "to play, I really"
-	cont "concentrate."
+	para "だから　#　できるときは"
+	line "すごく　しゅうちゅう　するよ！"
 	done
 
 LassDana1SeenText:
-	text "Are you good at"
-	line "training?"
+	text "キミ<TTE>さ　#　つよいの？"
 
-	para "If you are, could"
-	line "you show me how?"
+	para "つよいんだったら"
+	line "いろいろ　コツ<WO>おしえてほしいよ"
 	done
 
 LassDana1BeatenText:
-	text "I see. So you can"
-	line "battle that way."
+	text "なるほどねー"
+	line "そーゆー　たたかいかた　あるんだ"
 	done
 
 LassDanaMoomooMilkText:
-	text "I know something"
-	line "good!"
+	text "あたしも　いいこと　おしえてあげる"
 
-	para "MOOMOO FARM's milk"
-	line "is famous for its"
-	cont "flavor."
+	para "モーモーぼくじょう<NO>ミルク"
+	line "おいしい<TTE>　ひょうばん　なんだよ"
 	done
 
 BeautyValerieSeenText:
-	text "Hi! Aren't you a"
-	line "cute trainer!"
+	text "はあーん"
+	line "かわいい　<TRAINER>さん"
 
-	para "May I see your"
-	line "#MON?"
+	para "どんな　#　も<TTE>るか"
+	line "みせて　くださらない？"
 	done
 
 BeautyValerieBeatenText:
-	text "I'm glad I got to"
-	line "see your #MON!"
+	text "いろんな　#"
+	line "みられて　しあわせー"
 	done
 
 BeautyValerieAfterBattleText:
-	text "When I see #-"
-	line "MON, it seems to"
-	cont "soothe my nerves."
+	text "#　みてると"
+	line "なごむ<TTE>　いうか"
+	cont "こころ<GA>おちつくのよね"
 	done
 
 SailorHarrySeenText:
-	text "I've been over-"
-	line "seas, so I know"
-
-	para "about all sorts of"
-	line "#MON!"
+	text "おれ<WA>がいこく<WO>まわ<TTE>"
+	line "いろんな　#　し<TTE>るぞ！"
 	done
 
 SailorHarryBeatenText:
-	text "Your skill is"
-	line "world class!"
+	text "そ<NO>つよさ"
+	line "まさ<NI>ワールドクラス！"
 	done
 
 SailorHarryAfterBattleText:
-	text "All kinds of peo-"
-	line "ple around the"
-
-	para "world live happily"
-	line "with #MON."
+	text "いろんな　くにで"
+	line "いろんな　ひとが"
+	cont "#と　なかよく　くらしてるよ"
 	done
 
 Route38SignText:
-	text "ROUTE 38"
-
-	para "OLIVINE CITY -"
-	line "ECRUTEAK CITY"
+	text "<KOKO_WA>３８<ROUTE>"
+	line "アサギシティ　<⋯>　エンジュシティ"
 	done
 
 Route38TrainerTipsText:
-	text "TRAINER TIPS"
+	text "おとくな　けいじばん！"
 
-	para "If a #MON is"
-	line "trying to evolve,"
-	cont "you can stop it."
-
-	para "Press the B But-"
-	line "ton during evolu-"
-	cont "tion."
-
-	para "That startles the"
-	line "#MON and stops"
-	cont "its evolution."
+	para "#<GA>しんか　しそうなとき"
+	line "ビーボタン<WO>おすと"
+	cont "びっくりして　しんか<WO>やめます"
+	cont "これ<WO>しんかキャンセルと　いいます"
 	done
 
 Route38_MapEvents:

@@ -193,129 +193,112 @@ Route30_MikeysRattataAttacksMovement:
 	step_end
 
 Text_UseTackle:
-	text "Go, RATTATA!"
+	text "いけっ　コラッタ！"
 
-	para "TACKLE!"
+	para "たいあたりっ！！"
 	done
 
 Text_ThisIsABigBattle:
-	text "What? This is a"
-	line "big battle!"
-	cont "Leave me alone!"
+	text "なんだよ？"
+	line "だいじな　しょうぶ　なんだ！"
+	cont "むこう<NI>い<TTE>てよ！"
 	done
 
 YoungsterJoey1SeenText:
-	text "I just lost, so"
-	line "I'm trying to find"
-	cont "more #MON."
+	text "さっき　まけて　くやしいから"
+	line "#　さがしてるんだよ"
 
-	para "Wait! You look"
-	line "weak! Come on,"
-	cont "let's battle!"
+	para "でも　きみ　よわそうだな<⋯>"
+	line "よしっ！　しょうぶ　しようぜ！"
 	done
 
 YoungsterJoey1BeatenText:
-	text "Ugh. I don't have"
-	line "any more #MON."
+	text "ああ"
+	line "もう　たたかえる　#　いないや"
 	done
 
 YoungsterJoey1AfterText:
-	text "I have to have"
-	line "more #MON for"
-	cont "battles."
-
-	para "I'm going to catch"
-	line "some more!"
+	text "やっぱ　もっと　#も<TTE>ないと"
+	line "しょうぶのとき　きびしいな！"
+	cont "もっと　#　つかまえるぞ！"
 	done
 
 YoungsterMikeySeenText:
-	text "You're a #MON"
-	line "trainer, right?"
-
-	para "Then you have to"
-	line "battle!"
+	text "おまえ　#<TRAINER>だろ？"
+	line "だったら　#　しょうぶ　だぜ！"
 	done
 
 YoungsterMikeyBeatenText:
-	text "That's strange."
-	line "I won before."
+	text "おかしいな？"
+	line "さっき<WA>かったのに"
 	done
 
 YoungsterMikeyAfterText:
-	text "Becoming a good"
-	line "trainer is really"
-	cont "tough."
+	text "#<NO>みちは"
+	line "ながく　けわしいんだなあ<⋯>"
 
-	para "I'm going to bat-"
-	line "tle other people"
-	cont "to get better."
+	para "よーし！　いろんな　<TRAINER>と"
+	line "しょうぶして　きたえてくるぜ！"
 	done
 
 BugCatcherDonSeenText:
-	text "Instead of a bug"
-	line "#MON, I found"
-	cont "a trainer!"
+	text "むし#<NO>かわりに"
+	line "<TRAINER>　はっけん！"
 	done
 
 BugCatcherDonBeatenText:
-	text "Argh! You're too"
-	line "strong!"
+	text "あう　つよいなー！"
 	done
 
 BugCatcherDonAfterText:
-	text "I ran out of #"
-	line "BALLS while I was"
-	cont "catching #MON."
+	text "#　つかまえてたら"
+	line "モンスターボール　なくな<TTE><⋯>"
 
-	para "I should've bought"
-	line "some more…"
+	para "もっと　たくさん"
+	line "か<TTE>おけば　よかったよ"
 	done
 
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
-	text "MR.#MON's"
-	line "house? It's a bit"
-	cont "farther ahead."
+	text "#じいさん<NO>いえ？"
+	line "もうすこし　さき　だよ"
 	done
 
 Route30YoungsterText_EveryoneIsBattling:
-	text "Everyone's having"
-	line "fun battling!"
-	cont "You should too!"
+	text "みんな　#　しょうぶを"
+	line "たのしんで　いるよ！"
+	cont "よかったら　きみも　どう？"
 	done
 
 Route30CooltrainerFText:
-	text "I'm not a trainer."
+	text "<WATASHI>　<TRAINER>じゃ　ないわよ"
 
-	para "But if you look"
-	line "one in the eyes,"
-	cont "prepare to battle."
+	para "でも　<TRAINER>どうし"
+	line "しせん<GA>あうのは"
+	cont "しょうぶしよう<TTE>　サイン　なのよね"
 	done
 
 Route30SignText:
-	text "ROUTE 30"
-
-	para "VIOLET CITY -"
-	line "CHERRYGROVE CITY"
+	text "<KOKO_WA>３０<ROUTE>"
+	line "キキョウシティ　<⋯>　ヨシノシティ"
 	done
 
 MrPokemonsHouseDirectionsSignText:
-	text "MR.#MON'S HOUSE"
-	line "Straight Ahead!"
+	text "ここ<WO>まっすぐ！"
+	line "#じいさん　のいえ"
 	done
 
 MrPokemonsHouseSignText:
-	text "MR.#MON'S HOUSE"
+	text "#じいさん　のいえ"
 	done
 
 Route30TrainerTipsText:
-	text "TRAINER TIPS"
+	text "おとくな　けいじばん！"
 
-	para "No stealing other"
-	line "people's #MON!"
+	para "ひと<NO>#"
+	line "とったら　どろぼう！"
 
-	para "# BALLS are to"
-	line "be thrown only at"
-	cont "wild #MON!"
+	para "モンスターボール<WA>やせいの"
+	line "#にだけ　なげつけよう！"
 	done
 
 Route30_MapEvents:

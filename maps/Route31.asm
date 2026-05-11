@@ -167,8 +167,8 @@ Route31MailRecipientScript:
 	end
 
 ReceivedSpearowMailText:
-	db   "DARK CAVE leads"
-	next "to another road@"
+	db   "くらやみ<NO>ほらあな　からは"
+	next "べつ<NO>みち<NI>つづいているよ@"
 
 Route31YoungsterScript:
 	jumptextfaceplayer Route31YoungsterText
@@ -192,153 +192,114 @@ Route31PokeBall:
 	itemball POKE_BALL
 
 Route31CooltrainerMText:
-	text "DARK CAVE…"
-
-	para "If #MON could"
-	line "light it up, I'd"
-	cont "explore it."
+	text "くらやみ<NO>ほらあな<⋯>"
+	line "#<GA>あたりを"
+	cont "あかるくする　わざ<WO>つかえたらなあ"
+	cont "なか<WO>しらべて　やるのに"
 	done
 
 BugCatcherWade1SeenText:
-	text "I caught a bunch"
-	line "of #MON. Let me"
-	cont "battle with you!"
+	text "いっぱい　#　つかまえた"
+	line "ちょっと　しょうぶ　してくれよ！"
 	done
 
 BugCatcherWade1BeatenText:
-	text "Awwwww…"
+	text "なんだかなー"
 	done
 
 BugCatcherWade1AfterText:
-	text "You can catch"
-	line "#MON even if"
-
-	para "you have six with"
-	line "you."
-
-	para "If you catch one,"
-	line "it'll go to your"
-	cont "BOX automatically."
+	text "６ぴき　も<TTE>るときに"
+	line "#　つかまえると"
+	cont "<PC>　つうしんで　じどうてきに"
+	cont "ボックス<NI>おくられるんだ！"
 	done
 
 Text_Route31SleepyMan:
-	text "… Hnuurg… Huh?"
+	text "うーん　ムニャムニャ<⋯>"
 
-	para "I walked too far"
-	line "today looking for"
-	cont "#MON."
+	para "#さがしで　あるき　すぎた"
+	line "あし<WA>いたいし　ねむたいし<⋯>"
 
-	para "My feet hurt and"
-	line "I'm sleepy…"
-
-	para "If I were a wild"
-	line "#MON, I'd be"
-	cont "easy to catch…"
-
-	para "…Zzzz…"
+	para "ぼく<GA>やせいの#　だったら"
+	line "つかまりやすい　じょうたいだ<⋯>"
+	cont "ぐー<⋯>　スヤスヤ<⋯>"
 	done
 
 Text_Route31SleepyManGotMail:
-	text "…Zzzz… Huh?"
+	text "ぐー<⋯>　ムニャムニャ<⋯>"
 
-	para "What's that? You"
-	line "have MAIL for me?"
+	para "え？　なに？"
+	line "ぼく<NI>メール<WO>も<TTE>きたの？"
 	done
 
 Text_Route31HandOverMailMon:
-	text "<PLAYER> handed"
-	line "over the #MON"
-	cont "holding the MAIL."
+	text "<PLAYER><WA>メール<WO>もった"
+	line "#<WO><WATASHI><TA!>"
 	done
 
 Text_Route31ReadingMail:
-	text "Let's see…"
+	text "な<NI>なに<⋯>"
 
-	para "…DARK CAVE leads"
-	line "to another road…"
+	para "「くらやみ<NO>ほらあな　からは"
+	line "べつ<NO>みち<NI>つづいているよ」"
+	cont "だ<TTE>"
 
-	para "That's good to"
-	line "know."
+	para "わざわざ　ありがとう！"
 
-	para "Thanks for bring-"
-	line "ing this to me."
+	para "ともだちも　しんせつ　だけど"
+	line "キミも　しんせつ　だな！"
 
-	para "My friend's a good"
-	line "guy, and you're a"
-	cont "swell guy too!"
+	para "ひと<NO>しんせつ<NI>ふれて"
+	line "ボクも　なにか　したくなったよ！"
 
-	para "I'd like to do"
-	line "something good in"
-	cont "return too!"
-
-	para "I know! I want you"
-	line "to have this!"
+	para "そうだ！"
+	line "これ<WO>あげるよ！"
 	done
 
 Text_Route31DescribeNightmare:
-	text "TM50 is NIGHTMARE."
+	text "<TM>５０<WA>あくむ"
 
-	para "It's a wicked move"
-	line "that steadily cuts"
+	para "ねむ<TTE>いる　あいて<NO>たいりょく"
+	line "じわじわ　へらす　おそろしい　わざ"
 
-	para "the HP of a sleep-"
-	line "ing enemy."
-
-	para "Ooooh…"
-	line "That's scary…"
-
-	para "I don't want to"
-	line "have bad dreams."
+	para "うー　ぶるぶる<⋯>"
+	line "こわい　ゆめ<WA>みたく　ないよ<⋯>"
 	done
 
 Text_Route31WrongMail:
-	text "This MAIL isn't"
-	line "for me."
+	text "これ　ボクあて<NO>メールじゃ　ないよ"
 	done
 
 Text_Route31MissingMail:
-	text "Why is this #-"
-	line "MON so special?"
-
-	para "It doesn't have"
-	line "any MAIL."
+	text "そ<NO>#<GA>どうかしたの？"
+	line "メール　も<TTE>ないよ"
 	done
 
 Text_Route31DeclinedToHandOverMail:
-	text "What? You don't"
-	line "want anything?"
+	text "なに？　なんでもないの？"
 	done
 
 Text_Route31CantTakeLastMon:
-	text "If I take that"
-	line "#MON from you,"
-
-	para "what are you going"
-	line "to use in battle?"
+	text "ボク<GA>そ<NO>#<WO>うけとると"
+	line "キミ<WA>たたかえなく　なっちゃうね！"
 	done
 
 Route31YoungsterText:
-	text "I found a good"
-	line "#MON in DARK"
-	cont "CAVE."
+	text "くらやみ<NO>ほらあなで"
+	line "いい　#　つかまえ<TA!>"
 
-	para "I'm going to raise"
-	line "it to take on"
-	cont "FALKNER."
-
-	para "He's the leader of"
-	line "VIOLET CITY's GYM."
+	para "こいつ<WO>きたえて"
+	line "キキョウ<NO>ジムリーダー"
+	cont "ハヤト<NI>しょうぶ<WO>いどむぜ！"
 	done
 
 Route31SignText:
-	text "ROUTE 31"
-
-	para "VIOLET CITY -"
-	line "CHERRYGROVE CITY"
+	text "<KOKO_WA>３１<ROUTE>"
+	line "キキョウシティ　<⋯>　ヨシノシティ"
 	done
 
 DarkCaveSignText:
-	text "DARK CAVE"
+	text "<KOKO_WA>くらやみ<NO>ほらあな"
 	done
 
 Route31_MapEvents:

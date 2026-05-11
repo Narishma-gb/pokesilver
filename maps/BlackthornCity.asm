@@ -143,166 +143,132 @@ BlackthornCityMartSign:
 	jumpstd MartSignScript
 
 Text_ClairIsOut:
-	text "I am sorry."
+	text "もうしわけ　ございません"
 
-	para "Our GYM LEADER is"
-	line "training in the"
-	cont "cave behind here."
+	para "ジムリーダー<WA>うら<NO>どうくつにて"
+	line "しゅぎょうちゅう　です"
 
-	para "I have no idea"
-	line "when our LEADER"
-	cont "will return."
+	para "もどられるの<WA>いつ<NI>なるやら<⋯>"
 	done
 
 Text_ClairIsIn:
-	text "Our GYM LEADER is"
-	line "waiting for you."
+	text "ジムリーダー<GA>おまちかねです"
 
-	para "However, it would"
-	line "be impossible for"
-
-	para "a run-of-the-mill"
-	line "trainer to win."
+	para "です<GA>なみたいていの"
+	line "じつりょく　で<WA>かてませんよ"
 	done
 
 Text_ClairIsBeaten:
-	text "You defeated our"
-	line "GYM LEADER?"
-	cont "That's amazing!"
+	text "ジムリーダー<NI>かてたのですか！"
+	line "それ<WA>すごい<⋯>"
 
-	para "With your power,"
-	line "you should succeed"
-
-	para "in the #MON"
-	line "LEAGUE."
+	para "それほど<NO>じつりょく　ならば"
+	line "#リーグでも　かてるでしょう"
 	done
 
 BlackthornGrampsRefusesEntryText:
-	text "Only dragon users"
-	line "are permitted to"
-
-	para "train here."
-	line "Please leave."
+	text "<KOKO_WA>ドラゴンつかい　だけが"
+	line "しゅぎょう<WO>ゆるされた　ばしょ"
+	cont "おひきとり　くださいまし"
 	done
 
 BlackthornGrampsGrantsEntryText:
-	text "Since CLAIR, the"
-	line "dragon master, has"
-
-	para "allowed it, you"
-	line "may enter."
+	text "ドラゴンつかい<NO>おさ"
+	line "イブキさま<GA>みとめられたのなら"
+	cont "とおられる<GA>よい"
 	done
 
 BlackBeltText_WeirdRadio:
-	text "My radio's busted?"
-	line "Lately, I only get"
-	cont "this weird signal."
+	text "ラジオ　こわれたのか？"
+	line "なんだか　さいきん　おかしな"
+	cont "ほうそう　しか　きこえないんだ"
 	done
 
 BlackBeltText_VoicesInMyHead:
-	text "Arooo! Voices in"
-	line "my head!"
+	text "うおーっ"
+	line "でんぱ　ビリビリ　だぜーっ！"
 
-	para "Huh? I'm listening"
-	line "to my radio!"
+	para "んっ？"
+	line "ラジオ　きいてるんだよ"
 	done
 
 BlackthornCooltrainerF1Text:
-	text "Are you going to"
-	line "make your #MON"
-	cont "forget some moves?"
+	text "あら　あなたも"
+	line "#<NO>わざ　わすれさせるの？"
 	done
 
 BlackthornYoungsterText:
-	text "I'm going to be a"
-	line "dragon user like"
-	cont "CLAIR."
+	text "おれも　イブキさんのような"
+	line "ドラゴンつかい<NI>なるんだ！"
 	done
 
 MeetSantosText:
-	text "SANTOS: …"
+	text "ツチオ『<⋯>　<⋯>　<⋯>"
 
-	para "It's Saturday…"
-
-	para "I'm SANTOS of"
-	line "Saturday…"
+	para "ぼく　どようび<NO>ツチオ<⋯>"
 	done
 
 SantosGivesGiftText:
-	text "You can have this…"
+	text "これ　あげるよ<⋯>"
 	done
 
 SantosGaveGiftText:
-	text "SANTOS: …"
+	text "ツチオ『<⋯>　<⋯>　<⋯>"
 
-	para "SPELL TAG…"
+	para "のろいのおふだ<⋯>"
 
-	para "Ghost-type moves"
-	line "get stronger…"
-
-	para "It will frighten"
-	line "you…"
+	para "ゴーストタイプ<NO>わざ<GA>つよくなる"
+	line "キミ<GA>おどろく　くらい　ね<⋯>"
 	done
 
 SantosSaturdayText:
-	text "SANTOS: …"
+	text "ツチオ『<⋯>　<⋯>　<⋯>"
 
-	para "See you again on"
-	line "another Saturday…"
+	para "こんど<NO>どようびに"
+	line "また　あおうね<⋯>"
 
-	para "I won't have any"
-	line "more gifts…"
+	para "もう　あげるもの<WA>ないけど<⋯>"
 	done
 
 SantosNotSaturdayText:
-	text "SANTOS: Today's"
-	line "not Saturday…"
+	text "ツチオ『きょう<WA>どようびじゃ"
+	line "ないよ<⋯>"
+	cont "<⋯>　<⋯>　<⋯>　<⋯>　<⋯>"
 	done
 
 BlackthornCooltrainerF2Text:
-	text "Wow, you came"
-	line "through the ICE"
-	cont "PATH?"
+	text "へえ！"
+	line "こおりのぬけみち<WO>ぬけてきたの！"
 
-	para "You must be a real"
-	line "hotshot trainer!"
+	para "あなた　#<TRAINER>として"
+	line "けっこう　すごうで　なのね！！"
 	done
 
 BlackthornCitySignText:
-	text "BLACKTHORN CITY"
-
-	para "A Quiet Mountain"
-	line "Retreat"
+	text "<KOKO_WA>フスベ　シティ"
+	line "やまあい<NI>たたずむ　しずかな　まち"
 	done
 
 BlackthornGymSignText:
-	text "BLACKTHORN CITY"
-	line "#MON GYM"
-	cont "LEADER: CLAIR"
-
-	para "The Blessed User"
-	line "of Dragon #MON"
+	text "フスベ　シティ　#ジム"
+	line "リーダー　イブキ"
+	cont "せいなる　ドラゴン#　つかい！"
 	done
 
 MoveDeletersHouseSignText:
-	text "MOVE DELETER'S"
-	line "HOUSE"
+	text "なんでも　わすれる？　オヤジ　のいえ"
 	done
 
 DragonDensSignText:
-	text "DRAGON'S DEN"
-	line "AHEAD"
+	text "このさき　りゅうのあな"
 	done
 
 BlackthornCityTrainerTipsText:
-	text "TRAINER TIPS"
+	text "おとくな　けいじばん！"
 
-	para "A #MON holding"
-	line "a MIRACLEBERRY"
-
-	para "will cure itself"
-	line "of any status"
-	cont "problem."
+	para "きせきのみ　<WO>もたせていると"
+	line "どんな　とくしゅ　じょうたいも"
+	cont "かいふく　します！"
 	done
 
 BlackthornCity_MapEvents:

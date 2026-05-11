@@ -275,154 +275,118 @@ Route27FisherStepLeftOnceMovement:
 	step_end
 
 Route27FisherHeyText:
-	text "Hey!"
+	text "おいっ！"
 	done
 
 Route27FisherText:
-	text "Do you know what"
-	line "you just did?"
+	text "きみ<WA>いま！"
 
-	para "You've taken your"
-	line "first step into"
-	cont "KANTO."
+	para "カントーちほう　への"
+	line "だいいっぽ<WO>ふみだし<TA!>"
 
-	para "Check your #-"
-	line "GEAR MAP and see."
+	para "なんだったら　タウンマップで"
+	line "かくにんして　ごらん！"
 	done
 
 CooltrainermBlakeSeenText:
-	text "You look pretty"
-	line "strong."
-	cont "Let me battle you!"
+	text "なかなか　つよそうだな"
+	line "ひとつ　おてあわせ　ねがおうか！"
 	done
 
 CooltrainermBlakeBeatenText:
-	text "Yow!"
+	text "<⋯>！"
 	done
 
 CooltrainermBlakeAfterBattleText:
-	text "If you prevail on"
-	line "this harsh trek,"
+	text "こ<NO>ながい　みちのり　こえたとき"
+	line "きっと　なにか<GA>わかるはず"
 
-	para "the truth will be"
-	line "revealed!"
-
-	para "Heh, sorry, I just"
-	line "wanted to say"
-	cont "something cool."
+	para "ごめん　なんとなく"
+	line "かっこいいこと　い<TTE>みただけ"
 	done
 
 CooltrainermBrianSeenText:
-	text "Hm? You're good,"
-	line "aren't you?"
+	text "むむ　きさま　できるな！"
 	done
 
 CooltrainermBrianBeatenText:
-	text "Just as I thought!"
+	text "おもった　とおりだ！"
 	done
 
 CooltrainermBrianAfterBattleText:
-	text "A good trainer can"
-	line "recognize other"
-	cont "good trainers."
+	text "つよい　おとこ　には"
+	line "つよい　おとこ<GA>わかるのだよ！"
 	done
 
 CooltrainerfReenaSeenText:
-	text "You shouldn't"
-	line "underestimate the"
-
-	para "wild #MON in"
-	line "these parts."
+	text "このあたり<NO>#"
+	line "やせい　とはいえ　あなどれないわ！"
 	done
 
 CooltrainerfReenaBeatenText:
-	text "Oh! You're much"
-	line "too strong!"
+	text "ああ　つよい！"
 	done
 
 CooltrainerfReenaAfterBattleText:
-	text "You're just a kid,"
-	line "but you're not to"
-
-	para "be underestimated"
-	line "either."
+	text "あなたも　こども　とはいえ"
+	line "あなどれなかった　ようね！"
 	done
 
 CooltrainerfMeganSeenText:
-	text "It's rare to see"
-	line "anyone come here."
-
-	para "Are you training"
-	line "on your own?"
+	text "あら　めずらしい"
+	line "ひと<GA>とおる　なんて"
+	cont "むしゃしゅぎょう<NO>とちゅう？"
 	done
 
 CooltrainerfMeganBeatenText:
-	text "Oh! You're really"
-	line "strong!"
+	text "えー　つよいんだ"
 	done
 
 CooltrainerfMeganAfterBattleText:
-	text "I'm checking out"
-	line "pre- and post-"
-	cont "evolution #MON."
+	text "しんか　させたり　させなかったりで"
+	line "#<NO>とくちょうを"
+	cont "みきわめようと　してるの"
 
-	para "Evolution really"
-	line "does make #MON"
-	cont "stronger."
-
-	para "But evolved forms"
-	line "also learn moves"
-	cont "later on."
+	para "しんか　させると　つよくなるけど"
+	line "わざ<WO>おぼえるの<WA>おそくなるわね"
 	done
 
 PsychicGilbertSeenText:
-	text "Don't say a thing!"
+	text "きみ<NO>かんがえ　あててみせよう"
 
-	para "Let me guess what"
-	line "you're thinking."
+	para "<⋯>　んんん"
 
-	para "Mmmmmmm…"
-
-	para "I got it! You're"
-	line "on the #MON"
-	cont "LEAGUE challenge!"
+	para "わかっ<TA!>"
+	line "#リーグ　ちょうせん　だろ！"
 	done
 
 PsychicGilbertBeatenText:
-	text "You're too much!"
+	text "<⋯>　つよい！"
 	done
 
 PsychicGilbertAfterBattleText:
-	text "With your skills,"
-	line "you'll do well at"
-	cont "the LEAGUE."
-
-	para "That's what my"
-	line "premonition says."
+	text "きみ<NO>つよさ　なら"
+	line "#リーグでも　やれそうだ"
+	cont "そんな　よかん<GA>するんだ"
 	done
 
 BirdKeeperJose2SeenText:
-	text "Tweet! Tweet!"
-	line "Tetweet!"
+	text "ピーッ　ピューッ　ピヒイィ！"
 	done
 
 BirdKeeperJose2BeatenText:
-	text "Tweet!"
+	text "ピィーッ！"
 	done
 
 BirdKeeperJose2AfterBattleText:
-	text "BIRD KEEPERS like"
-	line "me mimic bird"
-
-	para "whistles to com-"
-	line "mand #MON."
+	text "おれたち　とりつかいは"
+	line "くちぶえで　#<NO>なきごえを"
+	cont "まね　して　めいれい　するんだ"
 	done
 
 TohjoFallsSignText:
-	text "TOHJO FALLS"
-
-	para "The Link Between"
-	line "KANTO and JOHTO"
+	text "<KOKO_WA>トージョウのたき"
+	line "カントーと　ジョウト<NO>さかいめ"
 	done
 
 Route27_MapEvents:

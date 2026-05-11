@@ -232,168 +232,131 @@ Route45HiddenPpUp:
 	hiddenitem PP_UP, EVENT_ROUTE_45_HIDDEN_PP_UP
 
 HikerErikSeenText:
-	text "Be prepared for"
-	line "anything!"
-
-	para "Let me see if your"
-	line "#MON have been"
-	cont "raised properly!"
+	text "そなえ　あれば　うれい　なし！"
+	line "#　きたえてるか　みせてみろ！"
 	done
 
 HikerErikBeatenText:
-	text "Oh, I lost that!"
+	text "おうっ　まけた"
 	done
 
 HikerErikAfterBattleText:
-	text "I'll head back to"
-	line "BLACKTHORN's ICE"
-
-	para "PATH and train"
-	line "some more."
+	text "フスベ<NO>こおりのぬけみち　に"
+	line "もど<TTE>　きたえなおすと　するか"
 	done
 
 HikerMichaelSeenText:
-	text "Yo! You're spunky!"
-	line "But you know what?"
-
-	para "When it comes to"
-	line "sheer spunkiness,"
-	cont "I'm the man!"
+	text "おう！　げんき　そうだな"
+	line "だ<GA>げんき　なら"
+	cont "おじさん　だ<TTE>　まけてないぞ！"
 	done
 
 HikerMichaelBeatenText:
-	text "My #MON weren't"
-	line "spunky enough!"
+	text "おじさん<WA>まけてないが"
+	line "#<NO>げんき<GA>なかったな"
 	done
 
 HikerMichaelAfterBattleText:
-	text "Boy, do I love"
-	line "HP UP! Mmmm, yum!"
+	text "おじさん<NO>だいこうぶつは"
+	line "マックスアップ！"
 
-	para "I keep drinking my"
-	line "#MON's!"
-
-	para "I can't help it!"
+	para "おいしいから　ついつい"
+	line "#のぶんも　のんじゃうんだ"
 	done
 
 HikerParry3SeenText:
-	text "My #MON are"
-	line "power packed!"
+	text "わし<NO>#は"
+	line "ちから　じまん　だぞ！"
 	done
 
 HikerParry3BeatenText:
-	text "Wahahah! I'm the"
-	line "big loser!"
+	text "わっはっは"
+	line "おじさん<NO>まけだ！"
 	done
 
 HikerParryAfterBattleText:
-	text "I'm not much good"
-	line "at thinking, see?"
-
-	para "So, I just plow"
-	line "ahead with power!"
+	text "かんがえる<NO>にがて　でな"
+	line "とにかく　がんがん　せめるんだよ"
 	done
 
 HikerTimothySeenText:
-	text "Why do I climb"
-	line "mountains?"
+	text "どうして　やま<NI>のぼるのか"
+	line "<⋯>　そこ<NI>やま<GA>あるからだ"
 
-	para "Because they're"
-	line "there."
-
-	para "Why do I train"
-	line "#MON?"
-
-	para "Because they're"
-	line "there!"
+	para "どうして　#　するのか"
+	line "そりゃ　#<GA>いるからだ！"
 	done
 
 HikerTimothyBeatenText:
-	text "Losses…"
-	line "They're there too!"
+	text "そこ<NI>まけ<GA>あったー！"
 	done
 
 HikerTimothyAfterBattleText:
-	text "The best thing to"
-	line "ever happen to me"
-
-	para "was discovering"
-	line "#MON."
+	text "じんせい<NO>いちばん<NO>よろこび"
+	line "そりゃ　#と　であえたことだ！"
 	done
 
 BlackbeltKenjiSeenText:
-	text "I was training"
-	line "here alone."
+	text "ここで　ひとり"
+	line "しゅぎょう<WO>していた<⋯>"
 
-	para "Behold the fruits"
-	line "of my labor!"
+	para "そ<NO>せいか　みせてやろう！"
 	done
 
 BlackbeltKenjiBeatenText:
-	text "Waaaargh!"
+	text "どっひゃーっ！"
 	done
 
 BlackbeltKenjiAfterBattleText:
-	text "This calls for"
-	line "extreme measures."
-
-	para "I must take to the"
-	line "hills and train in"
-	cont "solitude."
+	text "まゆげ<WO>そ<TTE>"
+	line "やまごもりでも　せねば　ならぬか<⋯>"
 	done
 
 CooltrainermRyanSeenText:
-	text "What are your"
-	line "thoughts on rais-"
-	cont "ing #MON?"
+	text "きみ<WA>どんな　かんがえで"
+	line "#<WO>そだてて　いるんだい？"
 	done
 
 CooltrainermRyanBeatenText:
-	text "You've won my"
-	line "respect."
+	text "さす<GA>だね"
 	done
 
 CooltrainermRyanAfterBattleText:
-	text "I see you're rais-"
-	line "ing your #MON"
-	cont "with care."
+	text "だいじ<NI>#　そだててるね"
 
-	para "The bond you build"
-	line "will save you in"
-	cont "tough situations."
+	para "そういう　きずな　<TTE>"
+	line "いざ　というとき　だいじ<NI>なるよ！"
 	done
 
 CooltrainerfKellySeenText:
-	text "What is your"
-	line "battle strategy?"
+	text "#で　たたかうとき"
+	line "あなた　なにか　かんがえてる？"
 
-	para "It is foolish to"
-	line "use strong moves"
-	cont "indiscriminately."
+	para "むやみ<NI>つよい　わざを"
+	line "めいれいする　だけじゃ　ダメなのよ"
 	done
 
 CooltrainerfKellyBeatenText:
-	text "Fine. I lost."
+	text "<⋯>　<WATASHI><NO>まけね"
 	done
 
 CooltrainerfKellyAfterBattleText:
-	text "I'm not in favor"
-	line "of overly power-"
-	cont "ful moves."
+	text "そうね　あまり　つよすぎる"
+	line "わざ<WA>このみ　じゃないわ"
 
-	para "I want to win, but"
-	line "I also don't want"
-	cont "to harm #MON."
+	para "しょうぶ<WA>かちたいけど"
+	line "べつ<NI>#　きずつけたい"
+	cont "わけじゃないもの"
 	done
 
 Route45DummyText: ; unreferenced
-	text "I'm pretty good at"
-	line "#MON too."
+	text "ぼくも　#"
+	line "それなり<NI>じしん　あるよ！"
 	done
 
 Route45SignText:
-	text "ROUTE 45"
-	line "MOUNTAIN RD. AHEAD"
+	text "<KOKO_WA>４５<ROUTE>"
+	line "このさき　マウンテン　ロード"
 	done
 
 Route45_MapEvents:

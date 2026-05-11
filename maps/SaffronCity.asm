@@ -106,161 +106,113 @@ SaffronCityMartSign:
 	jumpstd MartSignScript
 
 SaffronCityLass1Text:
-	text "A little girl who"
-	line "is an expert at"
+	text "<KOKO_WA>モノマネ<GA>じょうずな"
+	line "おんなのこ<NO>おうち　なの"
 
-	para "mimicking people"
-	line "lives here."
-
-	para "She even mimics"
-	line "the people she's"
-
-	para "conversing with."
-	line "It's confusing."
+	para "ひと<NO>マネして　しゃべるから"
+	line "はなしをすると　こんらん　しちゃうわ"
 	done
 
 SaffronCityLass1Text_ReturnedMachinePart:
-	text "The COPYCAT girl"
-	line "looked unhappy."
-
-	para "She said she lost"
-	line "her favorite #"
-	cont "DOLL--CLEFAIRY."
+	text "モノマネ　じょうず<NO>おんなのこ"
+	line "たいせつ<NI>していた"
+	cont "ピッピにんぎょう<WO>なくして"
+	cont "こま<TTE>　いたわ"
 	done
 
 SaffronCityPokefanMText:
-	text "You came out from"
-	line "JOHTO?"
+	text "ジョウトから　きたのかい？"
 
-	para "You can zip back"
-	line "home if the MAGNET"
-	cont "TRAIN's running."
+	para "リニア<GA>うごけば"
+	line "すぐ　ジョウト<NI>かえれるのにね！"
 	done
 
 SaffronCityPokefanMText_ReturnedMachinePart:
-	text "You came out from"
-	line "JOHTO?"
+	text "ジョウトから　きたのかい？"
 
-	para "You can zip back"
-	line "home by hopping on"
-	cont "the MAGNET TRAIN."
+	para "リニア<NI>のれば　あっというまに"
+	line "ジョウトへ　かえれるね！"
 	done
 
 SaffronCityCooltrainerMText:
-	text "I went to the GYM,"
-	line "raring for battles"
-	cont "against trainers…"
+	text "さあ　ジム<TRAINER>と　たたかうぞ！"
+	line "<TTE>　ジム<NI>はいったら<⋯>"
 
-	para "It turns out, I"
-	line "stumbled into the"
-
-	para "unused GYM next"
-	line "door."
-
-	para "Boy, I was pretty"
-	line "embarrassed."
+	para "いま<WA>や<TTE>いない　"
+	line "となりのジム<NI>はいっちゃった<⋯>"
+	cont "ちょっと　はずかしかったよ<⋯>"
 	done
 
 SaffronCityCooltrainerFText:
-	text "This is SILPH CO.,"
-	line "famous for #MON"
-	cont "merchandise."
+	text "<KOKO_WA>#　グッズで　"
+	line "ゆうめいな　シルフ　カンパニー！"
 
-	para "In the past, TEAM"
-	line "ROCKET wanted the"
-
-	para "company because of"
-	line "that."
+	para "だから　むかし"
+	line "<ROCKET><NI>ねらわれたの"
 	done
 
 SaffronCityFisherText:
-	text "Chew… Chew…"
+	text "もぐ　もぐ<⋯>"
 
-	para "I hear there's big"
-	line "trouble brewing at"
-	cont "the POWER PLANT."
-
-	para "Chew… Chew…"
+	para "はつでんしょ　タイヘン　らしいねえ"
+	line "もぐ　もぐ<⋯>"
 	done
 
 SaffronCityFisherText_ReturnedMachinePart:
-	text "Chew… Chew…"
+	text "もぐ　もぐ<⋯>"
 
-	para "I hear there was"
-	line "big trouble at the"
-	cont "POWER PLANT."
-
-	para "Chew… Chew…"
-	line "Haaah, I'm full!"
+	para "はつでんしょ　タイヘン　だった"
+	line "らしいねえー　もぐ　もぐ<⋯>"
+	cont "おなか　いっぱい<⋯>！"
 	done
 
 SaffronCityYoungster1Text:
-	text "Going into an"
-	line "alley for the"
-
-	para "first time makes"
-	line "me sorta anxious."
+	text "はじめて　はいる　ろじうら<TTE>"
+	line "ちょっと　ワクワク　するよね！"
 	done
 
 SaffronCityYoungster2Text:
-	text "There's a place"
-	line "called TRAINER"
-
-	para "HOUSE in VIRIDIAN"
-	line "where trainers"
-
-	para "gather from all"
-	line "over the place."
+	text "<TRAINER><GA>たくさん　あつまる"
+	line "<TRAINER>ハウス<TTE>　たてものが"
+	cont "トキワシティ<NI>あるんだ<TTE>！"
 	done
 
 SaffronCityLass2Text:
-	text "Our city was"
-	line "featured on a"
-	cont "radio program."
+	text "ラジオばんぐみで　こ<NO>まちが"
+	line "しょうかい　されたのよ！"
 
-	para "It's nice to hear"
-	line "praise for your"
-
-	para "city, but it's a"
-	line "bit embarrassing"
-	cont "too."
+	para "すんでる　まち<WO>ほめられる<TTE>"
+	line "ちょっと　くすぐったいね！"
 	done
 
 SaffronCitySignText:
-	text "SAFFRON CITY"
-
-	para "Shining, Golden"
-	line "Land of Commerce"
+	text "<KOKO_WA>ヤマブキ　シティ"
+	line "ヤマブキ　きんいろ　かがやきのいろ"
 	done
 
 SaffronGymSignText:
-	text "SAFFRON CITY"
-	line "#MON GYM"
-	cont "LEADER: SABRINA"
-
-	para "The Master of"
-	line "Psychic #MON!"
+	text "ヤマブキ　シティ　#ジム"
+	line "リーダー　ナツメ"
+	cont "エスパー　レディ"
 	done
 
 FightingDojoSignText:
-	text "Everyone Welcome!"
-	line "FIGHTING DOJO"
+	text "どなたでも　どーじょー"
+	line "かくとう　どうじょう！"
 	done
 
 SilphCoSignText:
-	text "SILPH CO."
-	line "OFFICE BUILDING"
+	text "シルフ　カンパニー"
+	line "ほんしゃ　ビル"
 	done
 
 MrPsychicsHouseSignText:
-	text "MR.PSYCHIC'S"
-	line "HOUSE"
+	text "エスパー　おやじ<NO>いえ"
 	done
 
 SaffronCityMagnetTrainStationSignText:
-	text "SAFFRON CITY"
-	line "MAGNET TRAIN"
-	cont "STATION"
+	text "<KOKO_WA>ヤマブキ"
+	line "リニア<NO>えき"
 	done
 
 SaffronCity_MapEvents:

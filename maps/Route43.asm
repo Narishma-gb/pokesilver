@@ -250,173 +250,135 @@ Route43MaxEther:
 	itemball MAX_ETHER
 
 PokemaniacBenSeenText:
-	text "I love #MON!"
+	text "ぼく<WA>#<GA>だいすきだ！"
 
-	para "That's why I"
-	line "started--and why"
-
-	para "I'll keep on col-"
-	line "lecting #MON!"
+	para "だから　ずっと　ずーっと"
+	line "#と　いっしょ<NI>いるのだ！"
 	done
 
 PokemaniacBenBeatenText:
-	text "How could you do"
-	line "this to me?"
+	text "なんてことを！"
 	done
 
 PokemaniacBenAfterBattleText:
-	text "What else do I"
-	line "like besides"
-	cont "#MON?"
+	text "#<NO>ほか<NI>すきなもの？"
 
-	para "MARY on the radio."
-	line "I bet she's cute!"
+	para "<⋯>　ラジオ<NO>クルミちゃん"
+	line "きっと　かわいいよ"
 	done
 
 PokemaniacBrentSeenText:
-	text "Hey! Do you have"
-	line "any rare #MON?"
+	text "おたく　なにか　めずらしい"
+	line "#　も<TTE>ない？"
 	done
 
 PokemaniacBrentBeatenText:
-	text "Oh, my poor #-"
-	line "MON! Darlings!"
+	text "ぼく<NO>#ちゃーん！"
 	done
 
 PokemaniacBrentAfterBattleText:
-	text "I'd be happy just"
-	line "to own a single"
-	cont "rare #MON."
+	text "ぼくなら　めずらしい　#"
+	line "も<TTE>いるだけで　しあわせ　だなあ"
 	done
 
 PokemaniacRonSeenText:
-	text "Would you get"
-	line "this?"
+	text "きいてくれよ！"
 
-	para "Some <RIVAL> guy"
-	line "made fun of my"
-	cont "#MON!"
+	para "<RIVAL>　<TTE>　やつが"
+	line "ぼく<NO>だいじな　#を"
+	cont "バカ<NI>したんだよ！"
 
-	para "Darn it! My #-"
-	line "MON's great!"
+	para "ちくしょー"
+	line "ぼく<NO>#　すごいんだぞ！"
 	done
 
 PokemaniacRonBeatenText:
-	text "My NIDOKING did"
-	line "pretty right on!"
+	text "どう　ぼく<NO>ニドキング"
+	line "けっこう　やるだろ？"
 	done
 
 PokemaniacRonAfterBattleText:
-	text "It's okay for"
-	line "people to like"
+	text "どーゆー　#<GA>すき　なんて"
+	line "ひとそれぞれで　いーと　おもうんだ"
 
-	para "different types"
-	line "of #MON."
-
-	para "#MON isn't just"
-	line "about having the"
-	cont "most powerful one."
+	para "つよーい　#だけが"
+	line "#<TTE>　わけじゃ　ないからね"
 	done
 
 FisherMarvinSeenText:
-	text "I'm in a slump."
+	text "さいきん　スランプ　なんだよな"
+	line "つか<TTE>る　どうぐ<GA>わるいのか"
 
-	para "Maybe it's the"
-	line "gear I'm using."
-
-	para "Let's battle for a"
-	line "change of pace!"
+	para "まあいい　きぶん<WO>かえよう"
+	line "#　しょうぶだ！"
 	done
 
 FisherMarvinBeatenText:
-	text "I lost, but I feel"
-	line "better anyway."
+	text "まけたが"
+	line "いい　きぶんてんかん　になったよ"
 	done
 
 FisherMarvinAfterBattleText:
-	text "KURT's LURE BALL"
-	line "is the best for"
+	text "ふむう<⋯>　やはり　つりあげた"
+	line "#　つかまえるなら"
+	cont "ガンテツさん<NO>ルアーボールだな！"
 
-	para "catching hooked"
-	line "#MON."
-
-	para "It's much more"
-	line "effective than a"
-	cont "ULTRA BALL."
+	para "ハイパーボールよりも"
+	line "だんぜん　つかまえやすいわい！"
 	done
 
 CamperSpencerSeenText:
-	text "I can do so much"
-	line "with my #MON--"
-	cont "it's super-fun!"
+	text "#と　いっしょ<NI>いると"
+	line "いろんなこと　できて　たのしいよ！"
 	done
 
 CamperSpencerBeatenText:
-	text "Losing isn't fun"
-	line "at all…"
+	text "まけると　たのしくないね"
 	done
 
 CamperSpencerAfterBattleText:
-	text "What is going on"
-	line "at LAKE OF RAGE?"
-
-	para "We were planning"
-	line "to camp there."
+	text "いかりのみずうみで　なに<GA>あるの？"
+	line "ぼくたち　キャンプする　つもりだけど"
 	done
 
 PicnickerTiffanySeenText:
-	text "Are you going to"
-	line "LAKE OF RAGE too?"
-
-	para "Let's play for a "
-	line "little while!"
+	text "きみも　いかりのみずうみ<NI>いくの？"
+	line "そのまえ<NI>ちょっと　あそぼうよ！"
 	done
 
 PicnickerTiffanyBeatenText:
-	text "I played too much!"
+	text "あそびすぎちゃった"
 	done
 
 PicnickerTiffanyWantsPicnicText:
-	text "I'm having a pic-"
-	line "nic with #MON."
-
-	para "Won't you join us?"
+	text "#と　いっしょ<NI>ピクニック"
+	line "きみも　いっしょ<NI>どう？"
 	done
 
 Route43Sign1Text:
-	text "ROUTE 43"
-
-	para "LAKE OF RAGE -"
-	line "MAHOGANY TOWN"
+	text "<KOKO_WA>４３<ROUTE>"
+	line "いかり<NO>みずうみ"
+	cont "<⋯>　チョウジタウン"
 	done
 
 Route43Sign2Text:
-	text "ROUTE 43"
-
-	para "LAKE OF RAGE -"
-	line "MAHOGANY TOWN"
+	text "<KOKO_WA>４３<ROUTE>"
+	line "いかり<NO>みずうみ"
+	cont "<⋯>　チョウジタウン"
 	done
 
 Route43TrainerTipsText:
-	text "TRAINER TIPS"
+	text "おとくな　けいじばん！"
 
-	para "All #MON have"
-	line "pros and cons"
+	para "#に<WA>タイプの"
+	line "あいしょう<GA>あります"
 
-	para "depending on their"
-	line "types."
+	para "レベル<GA>たかくても　それだけで"
+	line "かてる　わけで<WA>ありません"
 
-	para "If their types"
-	line "differ, a higher-"
-
-	para "level #MON may"
-	line "lose in battle."
-
-	para "Learn which types"
-	line "are strong and"
-
-	para "weak against your"
-	line "#MON's type."
+	para "じぶん<NO>#<NO>タイプは"
+	line "なに<GA>とくいで　なに<GA>にがてか"
+	cont "はあく　しておきましょう"
 	done
 
 Route43_MapEvents:
