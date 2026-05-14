@@ -141,106 +141,78 @@ MahoganyTownRageCandyBarMerchantReturnsMovement:
 	step_end
 
 RageCandyBarMerchantTryOneText:
-	text "Hi, sonny boy! I"
-	line "see you're new in"
-	cont "MAHOGANY TOWN."
+	text "ちょっと　ちょっと　ぼうや！"
 
-	para "Since you're new,"
-	line "you should try a"
+	para "チョウジタウン<NI>きたなら"
+	line "いかりまんじゅう<WO>かうのが"
+	cont "たび<NO>じょうしき　<TTE>もんだ"
 
-	para "yummy RAGECANDY-"
-	line "BAR!"
-
-	para "Right now, it can"
-	line "be yours for just"
-	cont "¥300! Want one?"
+	para "いまなら　たった<NO>３００円"
+	line "どう　かうでしょ？"
 	done
 
 RageCandyBarMerchantSavorItText:
-	text "Good! Savor it!"
+	text "おう　じっくり　あじわいな！"
 	done
 
 RageCandyBarMerchantNotEnoughMoneyText:
-	text "You don't have"
-	line "enough money."
+	text "おかね<GA>たりないよ"
 	done
 
 RageCandyBarMerchantRefusedText:
-	text "Oh, fine then…"
+	text "あっ　そう<⋯>"
 	done
 
 RageCandyBarMerchantNoRoomText:
-	text "You don't have"
-	line "room for this."
+	text "それ　いじょう　もてないよ"
 	done
 
 RageCandyBarMerchantSoldOutText:
-	text "RAGECANDYBAR's"
-	line "sold out."
-
-	para "I'm packing up."
-	line "Don't bother me,"
-	cont "sonny boy."
+	text "いかりまんじゅう<WA>うりきれ"
+	line "あとかたづけ<WO>してるんだ"
+	cont "さあ　じゃま　しないでおくれ"
 	done
 
 MahoganyTownGrampsText:
-	text "Are you off to see"
-	line "the GYARADOS ram-"
-	cont "page at the LAKE?"
+	text "おまえさんも　みずうみ<NI>い<TTE>"
+	line "ギャラドス<NO>おどり<WO>みるのかね"
 	done
 
 MahoganyTownGrampsText_ClearedRocketHideout:
-	text "MAGIKARP have"
-	line "returned to LAKE"
-	cont "OF RAGE."
+	text "いかりのみずうみ　じゃがな"
+	line "コイキング<GA>もど<TTE>きたらしいの"
 
-	para "That should be"
-	line "good news for the"
-	cont "anglers there."
+	para "これで　みずうみ<NO>ほとりの"
+	line "つりびとも　よろこんでるじゃろ"
 	done
 
 MahoganyTownFisherText:
-	text "Since you came"
-	line "this far, take the"
+	text "ほらほら　せっかく　きたんだ"
+	line "ゆっくり　かんこう　しなよ"
 
-	para "time to do some"
-	line "sightseeing."
-
-	para "You should head"
-	line "north and check"
-
-	para "out LAKE OF RAGE"
-	line "right now."
+	para "いま　きたにある"
+	line "いかりのみずうみ<GA>みも<NO>だぜ"
 	done
 
 MahoganyTownLassText:
-	text "Visit Grandma's"
-	line "shop. She sells"
-
-	para "stuff that nobody"
-	line "else has."
+	text "おばあちゃん<NO>おみせ<NI>よ<TTE><TTE>"
+	line "ここでしか　かえないものも　あるのよ"
 	done
 
 MahoganyTownSignText:
-	text "MAHOGANY TOWN"
-
-	para "Welcome to the"
-	line "Home of the Ninja"
+	text "<KOKO_WA>チョウジ　タウン"
+	line "ようこそ　にんじゃ<NO>さとへ"
 	done
 
 MahoganyTownRagecandybarSignText:
-	text "While Visiting"
-	line "MAHOGANY TOWN, Try"
-	cont "a RAGECANDYBAR!"
+	text "チョウジ　タウン<NI>きたなら"
+	line "めいぶつ　「いかりまんじゅう」！！"
 	done
 
 MahoganyGymSignText:
-	text "MAHOGANY TOWN"
-	line "#MON GYM"
-	cont "LEADER: PRYCE"
-
-	para "The Teacher of"
-	line "Winter's Harshness"
+	text "チョウジ　タウン　#ジム"
+	line "リーダー　ヤナギ"
+	cont "ふゆ<NO>きびしさ<WO>おしえるもの"
 	done
 
 MahoganyTown_MapEvents:

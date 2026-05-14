@@ -178,102 +178,77 @@ VioletCitySpinningEarl_MovementData:
 	step_end
 
 Text_EarlAsksIfYouBeatFalkner:
-	text "Hello!"
-	line "You are trainer?"
-
-	para "Battle GYM LEADER,"
-	line "win you did?"
+	text "はーい　あなた　<TRAINER>ですね"
+	line "ジムリーダーに<WA>かてましたかあ？"
 	done
 
 Text_VeryNiceIndeed:
-	text "Ooh, la la!"
-	line "Very indeed nice!"
+	text "それ<WA>すーごい　ですねー！"
 	done
 
 Text_FollowEarl:
-	text "Is that so? Then"
-	line "study shall you!"
-	cont "Follow me!"
+	text "そーですかー"
+	line "それで<WA>べんきょー　するですよ"
+	cont "で<WA>ついてくる　ですよー"
 	done
 
 Text_HereTeacherIAm:
-	text "Here, teacher I"
-	line "am. Good it is"
-	cont "you study here!"
+	text "ワタシ　ここ<NO>せんせー！"
+
+	para "あなた　ここで"
+	line "べんきょー　すると　いいねー"
 	done
 
 VioletCityLassText:
-	text "Ghosts are rumored"
-	line "to appear in"
-	cont "SPROUT TOWER."
+	text "マダツボミのとう　よる<NI>なると"
+	line "おばけ<GA>でる<TTE>　うわさよ"
 
-	para "They said normal-"
-	line "type #MON moves"
-
-	para "had no effect on"
-	line "ghosts."
+	para "でね　#<WO>たたかわせても"
+	line "ノーマルタイプ<NO>わざじゃ"
+	cont "ぜんぜん　きかなかったんです<TTE>"
 	done
 
 VioletCitySuperNerdText:
-	text "Hey, you're a"
-	line "#MON trainer?"
+	text "おっ　#<TRAINER>か？"
 
-	para "If you beat the"
-	line "GYM LEADER here,"
-
-	para "you'll be ready"
-	line "for prime time!"
+	para "このまち<NO>ジムリーダー<NI>かてたら"
+	line "<TRAINER>としても"
+	cont "いちにんまえ　だろうなあ"
 	done
 
 VioletCityGrampsText:
-	text "FALKNER, from the"
-	line "VIOLET #MON"
+	text "キキョウ　#ジムの"
+	line "ハヤト<WA>すごうで<NO><TRAINER>！"
 
-	para "GYM, is a fine"
-	line "trainer!"
-
-	para "He inherited his"
-	line "father's gym and"
-
-	para "has done a great"
-	line "job with it."
+	para "ちちおや<NO>あと<WO>うけて"
+	line "りっぱ<NI>ジム<WO>まもっとるぞ！"
 	done
 
 VioletCityYoungsterText:
-	text "I saw a wiggly"
-	line "tree up ahead!"
+	text "このさきで　うごく　き　み<TA!>"
 
-	para "If you touch it,"
-	line "it squirms and"
-	cont "dances! Cool!"
+	para "さわると　ふらふら　おどりだすんだ"
+	line "すんごい　おもしろいぜ"
 	done
 
 VioletCitySignText:
-	text "VIOLET CITY"
-
-	para "The City of"
-	line "Nostalgic Scents"
+	text "<KOKO_WA>キキョウ　シティ"
+	line "なつかしい　かおりのする　まち"
 	done
 
 VioletGymSignText:
-	text "VIOLET CITY"
-	line "#MON GYM"
-	cont "LEADER: FALKNER"
-
-	para "The Elegant Master"
-	line "of Flying #MON"
+	text "キキョウ　シティ　#ジム"
+	line "リーダー　ハヤト"
+	cont "かれいなる　ひこう#　つかい！"
 	done
 
 SproutTowerSignText:
-	text "SPROUT TOWER"
-
-	para "Experience the"
-	line "Way of #MON"
+	text "<KOKO_WA>マダツボミのとう"
+	line "#<NO>しゅぎょう<WO>なされよ"
 	done
 
 EarlsPokemonAcademySignText:
-	text "EARL'S #MON"
-	line "ACADEMY"
+	text "ジョバンニせんせい<NO>#じゅく"
 	done
 
 VioletCity_MapEvents:

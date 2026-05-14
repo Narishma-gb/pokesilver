@@ -149,96 +149,72 @@ Route42HiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_ROUTE_42_HIDDEN_MAX_POTION
 
 FisherChrisSeenText:
-	text "Let me demonstrate"
-	line "the power of the"
-	cont "#MON I caught!"
+	text "わし<GA>つりあげた　#"
+	line "そ<NO>つよさ　みせてやるぞ！"
 	done
 
 FisherChrisBeatenText:
-	text "What? That's not"
-	line "right."
+	text "おろ？　おかしいなあ"
 	done
 
 FisherChrisAfterBattleText:
-	text "I want to become"
-	line "the trainer CHAMP"
-
-	para "using the #MON"
-	line "I caught."
-
-	para "That's the best"
-	line "part of fishing!"
+	text "ほっほっほ　つりあげた　#で"
+	line "さいきょう<NO><TRAINER><WO>めざす！"
+	cont "これぞ　つりびと<NO>だいごみ"
 	done
 
 HikerBenjaminSeenText:
-	text "Ah, it's good to"
-	line "be outside!"
-	cont "I feel so free!"
+	text "やはり　そら<NO>した<WA>いいなあ！"
+	line "きもち　まで　おおきく　なるわい！"
 	done
 
 HikerBenjaminBeatenText:
-	text "Gahahah!"
+	text "がっはっは！"
 	done
 
 HikerBenjaminAfterBattleText:
-	text "Losing feels in-"
-	line "significant if you"
-
-	para "look up at the big"
-	line "sky!"
+	text "そら<NO>おおきさ<NI>くらべりゃ"
+	line "まけたのなんて　ちいさい　ちいさい！"
 	done
 
 PokemaniacShaneSeenText:
-	text "HEY!"
+	text "おい！"
 
-	para "This is my secret"
-	line "place! Get lost,"
-	cont "you outsider!"
+	para "ここら<WA>ひみつ<NO>あなば　なんだ"
+	line "よそもの<GA>あらさないでくれよ！"
 	done
 
 PokemaniacShaneBeatenText:
-	text "I should have used"
-	line "my MOON STONE…"
+	text "ああ　つきのいしを"
+	line "つかっとけば　よかったかなあ"
 	done
 
 PokemaniacShaneAfterBattleText:
-	text "You're working on"
-	line "a #DEX?"
+	text "へえ　#ずかん　つく<TTE>るの？"
+	line "じゃあ　めずらしい　#とか"
+	cont "いろいろ　し<TTE>るんだ？"
 
-	para "Wow, you must know"
-	line "some pretty rare"
-	cont "#MON!"
-
-	para "May I please see"
-	line "it. Please?"
+	para "ねえ　ぼくにも　ずかん　みせてよ"
 	done
 
 Route42Sign1Text:
-	text "ROUTE 42"
-
-	para "ECRUTEAK CITY -"
-	line "MAHOGANY TOWN"
+	text "<KOKO_WA>４２<ROUTE>"
+	line "エンジュシティ　<⋯>　チョウジタウン"
 	done
 
 MtMortarSign1Text:
-	text "MOUNT MORTAR"
-
-	para "WATERFALL CAVE"
-	line "Inside"
+	text "スリバチやま"
+	line "なか<WA>おおたき<NO>どうくつ"
 	done
 
 MtMortarSign2Text:
-	text "MOUNT MORTAR"
-
-	para "WATERFALL CAVE"
-	line "Inside"
+	text "スリバチやま"
+	line "なか<WA>おおたき<NO>どうくつ"
 	done
 
 Route42Sign2Text:
-	text "ROUTE 42"
-
-	para "ECRUTEAK CITY -"
-	line "MAHOGANY TOWN"
+	text "<KOKO_WA>４２<ROUTE>"
+	line "エンジュシティ　<⋯>　チョウジタウン"
 	done
 
 Route42_MapEvents:

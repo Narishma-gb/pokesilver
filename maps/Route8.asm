@@ -76,104 +76,92 @@ Route8FruitTree:
 	fruittree FRUITTREE_ROUTE_8
 
 BikerDwayneSeenText:
-	text "We're the KANTO"
-	line "#MON FEDERATION"
-	cont "trainer group."
-
-	para "We'll drive you"
-	line "under our wheels!"
+	text "オレら　<TRAINER>　グループ"
+	line "「カントー　#　れんごう」！"
+	cont "おまえ　なんか　こうだ！"
 	done
 
 BikerDwayneBeatenText:
-	text "S-sorry!"
+	text "ご　ごめんなさーい！"
 	done
 
 BikerDwayneAfterBattleText:
-	text "The KANTO #MON"
-	line "FEDERATION will"
-	cont "never fall!"
+	text "「カントー　#　れんごう」は"
+	line "えいえん<NI>ふめつだっ！"
 	done
 
 BikerHarrisSeenText:
-	text "The cops shut down"
-	line "our UNDERGROUND"
-
-	para "PATH! That really"
-	line "fries me!"
+	text "オレたち<NO>なわばり"
+	line "ちかつうろ<WO>へいさ　しやがっ<TA!>"
+	cont "むかつくーっ！"
 	done
 
 BikerHarrisBeatenText:
-	text "F-forgive me!"
+	text "ゆ　ゆるして　くださーい！"
 	done
 
 BikerHarrisAfterBattleText:
-	text "Wiped out by some"
-	line "punk from JOHTO…"
+	text "ジョウト<NO>ヤツに"
+	line "まけて　しまった<⋯>！"
 	done
 
 BikerZekeSeenText:
-	text "We're the KANTO"
-	line "#MON FEDERA-"
-	cont "TION!"
-	cont "Right on, dude!"
+	text "「カントー　#　れんごう」"
+	line "ヨロシクっ！"
 	done
 
 BikerZekeBeatenText:
-	text "Yikes! Sorry!"
+	text "す　すみませーん！"
 	done
 
 BikerZekeAfterBattleText:
-	text "We'll try not to"
-	line "disturb anyone"
-	cont "from now on…"
+	text "これから<WA>あまり"
+	line "ひと<NI>めいわくを"
+	cont "かけない　よう<NI>します<⋯>ハイ"
 	done
 
 SupernerdSamSeenText:
-	text "How does the MAG-"
-	line "NET TRAIN work?"
+	text "リニア<NO>メカニズム　<TTE>"
+	line "どう　な<TTE>るのかなー？"
 	done
 
 SupernerdSamBeatenText:
-	text "I just want to see"
-	line "the MAGNET TRAIN…"
+	text "リニア<WO>ひとめ　だけでも"
+	line "みたかった　<⋯>　<⋯>"
 	done
 
 SupernerdSamAfterBattleText:
-	text "The power of mag-"
-	line "nets is awesome!"
+	text "じしゃく<NO>ちから<TTE>"
+	line "すげー！"
 	done
 
 SupernerdTomSeenText:
-	text "We can't do with-"
-	line "out electricity."
+	text "ボクたち<NO>くらしに"
+	line "でんき<WA>ひつよう"
 
-	para "The POWER PLANT"
-	line "supplies us with"
-	cont "electricity."
+	para "はつでんしょ<GA>がんば<TTE>"
+	line "でんき<WO>つく<TTE>います"
 	done
 
 SupernerdTomBeatenText:
-	text "Don't waste"
-	line "electricity!"
+	text "でんき<WA>たいせつに<⋯>！"
 	done
 
 SupernerdTomAfterBattleText:
-	text "The POWER PLANT"
-	line "north of LAVENDER"
-
-	para "supplies power to"
-	line "the MAGNET TRAIN."
+	text "シオン　タウン<NO>きた<NI>ある"
+	line "はつでんしょで"
+	cont "リニアで　つかう　でんきを"
+	cont "つく<TTE>るんだ<TTE>"
 	done
 
 Route8LockedDoorText:
-	text "It's locked…"
+	text "カギ<GA>かか<TTE>いる！"
+	line "<⋯>あけられない！"
 	done
 
 Route8UndergroundPathSignText:
-	text "The flyer's torn."
-
-	para "It's impossible to"
-	line "read…"
+	text "<⋯>　チラシ<GA>はがされてる"
+	line "よめない　<⋯>！"
 	done
 
 Route8_MapEvents:

@@ -137,14 +137,6 @@ NewBarkTownElmsLabSign:
 NewBarkTownElmsHouseSign:
 	jumptext NewBarkTownElmsHouseSignText
 
-MrChronoScript: ; unreferenced
-	faceplayer
-	opentext
-	writetext MrChronoText
-	special MrChrono
-	closetext
-	end
-
 NewBarkTown_TeacherRunsToYouMovement1:
 	step LEFT
 	step LEFT
@@ -195,101 +187,83 @@ NewBarkTown_RivalReturnsToTheShadowsMovement:
 	step_end
 
 Text_GearIsImpressive:
-	text "Wow, your #GEAR"
-	line "is impressive!"
-
-	para "Did your mom get"
-	line "it for you?"
+	text "あら　かっこいい　ポケギアね！"
+	line "おかあさん<NI>か<TTE>もらったの？"
 	done
 
 Text_WaitPlayer:
-	text "Wait, <PLAYER>!"
+	text "あっ！　<PLAYER>くん"
 	done
 
 Text_WhatDoYouThinkYoureDoing:
-	text "What do you think"
-	line "you're doing?"
+	text "ひとりで　どこいくの！？"
 	done
 
 Text_ItsDangerousToGoAlone:
-	text "It's dangerous to"
-	line "go out without a"
-	cont "#MON!"
+	text "もう！　#　もたずに"
+	line "どうろ<NI>いくなんて　あぶないよ！"
 
-	para "Wild #MON"
-	line "jump out of the"
-
-	para "grass on the way"
-	line "to the next town."
+	para "となりまち　までは"
+	line "やせい<NO>#<GA>とびだす"
+	cont "くさむら　ばかり　なんだから"
 	done
 
 Text_YourMonIsAdorable:
-	text "Oh! Your #MON"
-	line "is adorable!"
-	cont "I wish I had one!"
+	text "あら！　かわいい　#！"
+	line "あたしも　ほしいなあ"
 	done
 
 Text_TellMomIfLeaving:
-	text "Hi, <PLAYER>!"
-	line "Leaving again?"
+	text "あら　<PLAYER>くん"
+	line "また　でかけるの？"
 
-	para "You should tell"
-	line "your mom if you"
-	cont "are leaving."
+	para "でかけるとき<WA>おかあさんに"
+	line "ちゃんと　いわないと　ね！"
 	done
 
 Text_CallMomOnGear:
-	text "Call your mom on"
-	line "your #GEAR to"
+	text "ポケギア<GA>あれば"
+	line "いつでも　おかあさんに"
 
-	para "let her know how"
-	line "you're doing."
+	para "げんきな　こえを"
+	line "きかせて　あげられるね"
 	done
 
 Text_ElmDiscoveredNewMon:
-	text "Yo, <PLAYER>!"
+	text "よっ！　<PLAYER>"
 
-	para "I hear PROF.ELM"
-	line "discovered some"
-	cont "new #MON."
+	para "ウツギはかせ<GA>あたらしい"
+	line "#　みつけたんだ<TTE>な"
 	done
 
 NewBarkTownRivalText1:
-	text "<……>"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "So this is the"
-	line "famous ELM #MON"
-	cont "LAB…"
+	para "ここ<GA>ゆうめいな"
+	line "ウツギ　#　けんきゅうしょ<⋯>"
 	done
 
 NewBarkTownRivalText2:
-	text "…What are you"
-	line "staring at?"
+	text "<⋯>　なんだよ"
+	line "ひとのこと　じろじろ　みてんなよ"
 	done
 
 NewBarkTownSignText:
-	text "NEW BARK TOWN"
-
-	para "The Town Where the"
-	line "Winds of a New"
-	cont "Beginning Blow"
+	text "<KOKO_WA>ワカバ　タウン"
+	line "はじまり<WO>つげる　かぜがふく　まち"
 	done
 
 NewBarkTownPlayersHouseSignText:
-	text "<PLAYER>'s House"
+	text "<KOKO_WA><PLAYER>　のいえ"
 	done
 
 NewBarkTownElmsLabSignText:
-	text "ELM #MON LAB"
+	text "ウツギ　#　けんきゅうしょ"
 	done
 
 NewBarkTownElmsHouseSignText:
-	text "ELM'S HOUSE"
+	text "<KOKO_WA>ウツギ　のいえ"
 	done
-
-MrChronoText:
-	text "I'm MR.CHRONO."
-	prompt
 
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler

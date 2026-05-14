@@ -84,123 +84,98 @@ Route9HiddenEther:
 	hiddenitem ETHER, EVENT_ROUTE_9_HIDDEN_ETHER
 
 CamperDeanSeenText:
-	text "I came to explore"
-	line "ROCK TUNNEL."
+	text "イワヤマ　トンネルを"
+	line "たんけんし<NI>きたのさ！"
 	done
 
 CamperDeanBeatenText:
-	text "Whoa! Danger, man."
+	text "や　やばい！"
 	done
 
 CamperDeanAfterBattleText:
-	text "My #MON were"
-	line "hurt before even"
-
-	para "entering ROCK"
-	line "TUNNEL."
-
-	para "I'd better take"
-	line "them to a #MON"
-	cont "CENTER right away."
+	text "トンネル　はいるまえに"
+	line "#　キズついちゃった"
+	cont "#　センター　いこうっと！"
 	done
 
 PicnickerHeidiSeenText:
-	text "Have you ever been"
-	line "to a picnic?"
-
-	para "They're so much"
-	line "fun!"
+	text "あなた　ピクニック　したこと　ある？"
+	line "と<TTE>も　おもしろいのよ！"
 	done
 
 PicnickerHeidiBeatenText:
-	text "Ohhhh!"
+	text "いやーん！"
 	done
 
 PicnickerHeidiAfterBattleText:
-	text "We bake lots of"
-	line "goodies and share"
-
-	para "them all around."
-	line "They're delicious!"
+	text "たくさん　おかし<WO>つく<TTE>"
+	line "みんなで　たべるの！"
+	cont "おいしいわよ！"
 	done
 
 CamperSidSeenText:
-	text "Hey, you!"
-	line "Don't litter!"
+	text "おい　おまえ！"
+	line "タバコ<NO>ポイすて　きんしだよ！"
 	done
 
 CamperSidBeatenText:
-	text "I was just point-"
-	line "ing out…"
+	text "ちゅういした　だけ　なのに<⋯>"
 	done
 
 CamperSidAfterBattleText:
-	text "Sorry. You weren't"
-	line "littering. It was"
-	cont "my mistake."
+	text "タバコなんて　す<TTE>　ないね"
+	line "ボク<NO>みまちがえ　だった"
 	done
 
 PicnickerEdnaSeenText:
-	text "People shouldn't"
-	line "leave any litter"
-	cont "behind."
+	text "ゴミ<WA>きちんと　じぶんで"
+	line "もちかえらなくちゃ　いけないのよ！"
 	done
 
 PicnickerEdnaBeatenText:
-	text "Ohh… I lost…"
+	text "ああ<⋯>"
+	line "まけちゃった<⋯>"
 	done
 
 PicnickerEdnaAfterBattleText:
-	text "Conserving energy"
-	line "is important, but"
-
-	para "the environment is"
-	line "even more vital."
+	text "でんきも　たいせつ　だけど"
+	line "しぜんも　たいせつ<NI>してね"
 	done
 
 HikerTimSeenText:
-	text "She'll be coming"
-	line "'round MT.SILVER"
-	cont "when she comes…"
+	text "やーまー<WA>しろーがねー<⋯>"
 
-	para "MT.SILVER is in"
-	line "JOHTO, right?"
+	para "シロガネ<TTE>　やまが"
+	line "ジョウト<NI>あるでしょ？"
 	done
 
 HikerTimBeatenText:
-	text "I was too busy"
-	line "singing…"
+	text "うた<NI>むちゅうで"
+	line "#　おろそか<⋯>"
 	done
 
 HikerTimAfterBattleText:
-	text "Battles are about"
-	line "concentration."
+	text "たたかい<WA>しゅうちゅうりょく！"
 	done
 
 HikerSidneySeenText:
-	text "I'll tell you a"
-	line "secret."
-
-	para "But first, we"
-	line "battle!"
+	text "ヒミツ<WO>おしえて　あげよう！"
+	line "でも　そのまえ<NI>#だ！"
 	done
 
 HikerSidneyBeatenText:
-	text "Oh, dang!"
-	line "I lost that…"
+	text "くそ！"
+	line "まけたか！"
 	done
 
 HikerSidneyAfterBattleText:
-	text "The POWER PLANT is"
-	line "across a small"
-	cont "river."
+	text "ほそい　かわ<WO>わたると"
+	line "おおきな　はつでんしょ<GA>あるぜ"
 	done
 
 Route9SignText:
-	text "ROUTE 9"
-
-	para "CERULEAN CITY -"
-	line "ROCK TUNNEL"
+	text "<KOKO_WA>９<ROUTE>"
+	line "ハナダ　<⋯>　イワヤマ　トンネル"
 	done
 
 Route9_MapEvents:

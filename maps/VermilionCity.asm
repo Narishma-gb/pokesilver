@@ -124,145 +124,113 @@ VermilionCityHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_VERMILION_CITY_HIDDEN_FULL_HEAL
 
 VermilionCityTeacherText:
-	text "VERMILION PORT is"
-	line "KANTO's seaside"
-	cont "gateway."
+	text "ここ　クチバ<NO>みなとは"
+	line "カントー<NO>うみ<NO>げんかんなの"
 
-	para "Luxury liners from"
-	line "around the world"
-	cont "dock here."
+	para "がいこくから"
+	line "ごうかきゃくせんも　きてたのよ"
 	done
 
 VermilionMachopOwnerText:
-	text "My #MON is"
-	line "preparing the land"
-	cont "for construction."
-
-	para "But I have no"
-	line "money to start the"
-	cont "project…"
+	text "#<NI>じならし　させとるが"
+	line "ビル<WO>たてる　おかね<GA>ないのじゃ"
 	done
 
 VermilionMachopText1:
-	text "MACHOP: Guooh"
-	line "gogogoh!"
+	text "ワンリキー『ごおーっ　ごごごー"
 	done
 
 VermilionMachopText2:
-	text "A MACHOP is growl-"
-	line "ing while stomping"
-	cont "the ground flat."
+	text "ワンリキー<WA>うなり　ながら"
+	line "じめん<WO>ならしてる！"
 	done
 
 VermilionCitySuperNerdText:
-	text "There are eight"
-	line "GYMS in KANTO."
+	text "カントーにも"
+	line "８つ<NO>ジム<GA>あるんだ"
 
-	para "That big building"
-	line "is VERMILION's"
-	cont "#MON GYM."
+	para "ほら　そこ<NO>おおきな　たてものが"
+	line "クチバ<NO>#　ジムさ！"
 	done
 
 VermilionCitySnorlaxSleepingText:
-	text "SNORLAX is snoring"
-	line "peacefully…"
+	text "カビゴン<WA>きもちよさそうに"
+	line "いびき<WO>かいている<⋯>"
 	done
 
 VermilionCityRadioNearSnorlaxText:
-	text "The #GEAR was"
-	line "placed near the"
-	cont "sleeping SNORLAX…"
+	text "カビゴンに"
+	line "ポケギア<WO>ちかづけた<⋯>"
 
-	para "…"
+	para "<⋯>　<⋯>　<⋯>　<⋯>　<⋯>"
+	line "　<⋯>　<⋯>　<⋯>　<⋯>　<⋯>"
 
-	para "SNORLAX woke up!"
+	para "カビゴン<GA>めをさまし<TA!>"
 	done
 
 VermilionCityBadgeGuyTrainerText:
-	text "Skilled trainers"
-	line "gather in KANTO."
+	text "カントー<NO>ジムには"
+	line "つよい　<TRAINER><GA>あつま<TTE>る"
 
-	para "GYM LEADERS are"
-	line "especially strong."
-
-	para "They won't be easy"
-	line "to defeat."
+	para "とく<NI>ジムリーダー<WA>きょうてき"
+	line "かんたんに<WA>かてないと　おもうよ"
 	done
 
 VermilionCityBadgeGuySomeBadgesText:
-	text "You've started to"
-	line "collect KANTO GYM"
-	cont "BADGES?"
+	text "カントー<NO>ジム　バッジを"
+	line "あつめはじめたんだね！"
 
-	para "Don't you agree"
-	line "that the trainers"
-	cont "here are tough?"
+	para "てごわい　<TRAINER>が"
+	line "いっぱい　いるだろう！"
 	done
 
 VermilionCityBadgeGuyMostBadgesText:
-	text "I guess you'll be"
-	line "finished with your"
+	text "あと　ひといきで"
+	line "カントー　ジムも　せい<WA>だね！"
 
-	para "conquest of KANTO"
-	line "GYMS soon."
-
-	para "Let me know if"
-	line "you get all eight"
-	cont "BADGES."
+	para "８こ　ぜんぶ　あつめたら"
+	line "ぼく<NI>おしえてくれ！"
 	done
 
 VermilionCityBadgeGuyAllBadgesText:
-	text "Congratulations!"
+	text "おめでとう！　カントー<NO>バッジを"
+	line "ぜんぶ　あつめたね！"
 
-	para "You got all the"
-	line "KANTO GYM BADGES."
-
-	para "I've got a reward"
-	line "for your efforts."
+	para "がんばった　きみには"
+	line "これ<WO>あげよう！"
 	done
 
 VermilionCityBadgeGuyBattleEdgeText:
-	text "Having a variety"
-	line "of #MON types"
+	text "ともだちと　たたかう　ときは"
+	line "いろんな　タイプ<WO>も<TTE>ると"
+	cont "ゆうり　だからね"
 
-	para "should give you an"
-	line "edge in battle."
-
-	para "I'm sure the KANTO"
-	line "GYM BADGES will"
-	cont "help you."
+	para "きっと　カントー<NO>バッジが"
+	line "やくにたつと　おもうよ！"
 	done
 
 VermilionCitySignText:
-	text "VERMILION CITY"
-
-	para "The Port of"
-	line "Exquisite Sunsets"
+	text "<KOKO_WA>クチバ　シティ"
+	line "クチバ<WA>オレンジ　ゆうやけのいろ"
 	done
 
 VermilionGymSignText:
-	text "VERMILION CITY"
-	line "#MON GYM"
-	cont "LEADER: LT.SURGE"
-
-	para "The Lightning"
-	line "American"
+	text "クチバ　シティ　#ジム"
+	line "リーダー　マチス"
+	cont "イナズマ　アメリカン！"
 	done
 
 PokemonFanClubSignText:
-	text "#MON FAN CLUB"
-
-	para "All #MON Fans"
-	line "Welcome!"
+	text "こちら　#　だいすき　クラブ"
+	line "#ずき　だれでも　かんげい！"
 	done
 
 VermilionCityDiglettsCaveSignText:
-	text "DIGLETT'S CAVE"
+	text "ディグダ<NO>あな"
 	done
 
 VermilionCityPortSignText:
-	text "VERMILION PORT"
-	line "ENTRANCE"
+	text "クチバ　みなと　いりぐち"
 	done
 
 VermilionCity_MapEvents:

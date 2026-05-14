@@ -108,118 +108,99 @@ Route37HiddenEther:
 	hiddenitem ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
 
 TwinsAnnandanne1SeenText:
-	text "ANN: ANNE and I"
-	line "are in this to-"
-	cont "gether!"
+	text "マナ『カナと　ふたり"
+	line "ちから　あわせて　がんばるです！"
 	done
 
 TwinsAnnandanne1BeatenText:
-	text "ANN & ANNE: You're"
-	line "mean!"
+	text "マナとカナ『むう"
+	line "おにいちゃん　いじわる　です"
 	done
 
 TwinsAnnandanne1AfterBattleText:
-	text "ANN: I can tell"
-	line "what my sister and"
-
-	para "my #MON are"
-	line "thinking."
+	text "マナ『おねえちゃんと　#の"
+	line "かんがえてること　わかるですの"
 	done
 
 TwinsAnnandanne2SeenText:
-	text "ANNE: ANN and I"
-	line "are in this to-"
-	cont "gether!"
+	text "カナ『マナと　ふたり"
+	line "ちから　あわせて　がんばるです！"
 	done
 
 TwinsAnnandanne2BeatenText:
-	text "ANN & ANNE: You're"
-	line "mean!"
+	text "マナとカナ『むう"
+	line "おにいちゃん　いじわる　です"
 	done
 
 TwinsAnnandanne2AfterBattleText:
-	text "ANNE: We share the"
-	line "same feelings as"
-	cont "our #MON."
+	text "カナ『あたしたち　ふたりと"
+	line "#<WA>おなじ　きもち　なの"
 	done
 
 PsychicGregSeenText:
-	text "#MON can't do a"
-	line "thing if they are"
-	cont "asleep."
-
-	para "I'll show you how"
-	line "scary that is!"
+	text "#　ねむらされると"
+	line "なにも　できなくなる"
+	cont "そ<NO>こわさ　おしえてやる！"
 	done
 
 PsychicGregBeatenText:
-	text "I lost. That's"
-	line "pretty sad…"
+	text "まけた<⋯>"
+	line "かなり　かなしいなあ"
 	done
 
 PsychicGregAfterBattleText:
-	text "Putting #MON to"
-	line "sleep or paralyz-"
-	cont "ing them are good"
-	cont "battle techniques."
+	text "ねむらせたり　まひさせたり"
+	line "あいて<NO>じゆう<WO>うばうのは"
+	cont "じゅうような　テクニック　だね"
 	done
 
 MeetSunnyText:
-	text "SUNNY: Hi!"
-
-	para "I'm SUNNY of Sun-"
-	line "day, meaning it's"
-	cont "Sunday today!"
+	text "ニチオ『ぼくねー"
+	line "にちようび<NO>ニチオ　だよ！"
 	done
 
 SunnyGivesGiftText1:
-	text "I was told to give"
-	line "you this if I saw"
-	cont "you!"
+	text "おにいちゃん<NI>あったらね"
+	line "これ　わたせ<TTE>　いわれてんの！"
 	done
 
 SunnyGaveGiftText:
-	text "SUNNY: That thing…"
+	text "ニチオ『それはねー"
 
-	para "Um…"
+	para "えっとねー"
 
-	para "… What was it now…"
+	para "<⋯>　なんだったかなあ？"
 
-	para "…"
+	para "<⋯>　<⋯>　<⋯>"
 
-	para "Oh! I remember"
-	line "now!"
+	para "あ！"
+	line "おもいだしたあ！"
 
-	para "A #MON that"
-	line "knows electric"
-
-	para "moves should hold"
-	line "it."
-
-	para "My sis MONICA said"
-	line "it powers up"
-	cont "electric moves!"
+	para "でんきタイプ<NO>わざ<WO>おぼえた"
+	line "#<NI>もたせると"
+	cont "わざ<NO>いりょく<GA>つよくなる<TTE>！"
+	cont "ツキコ　おねえちゃん<GA>い<TTE>たよ！"
 	done
 
 SunnySundayText:
-	text "SUNNY: My sisters"
-	line "and brothers are"
-	cont "MONICA, TUSCANY,"
-	cont "WESLEY, ARTHUR,"
-	cont "FRIEDA and SANTOS."
+	text "ニチオ『ツキコ　おねえちゃんとー"
+	line "ヒコ　おねえちゃんとー"
+	cont "ミズオ　おにいちゃんとー"
+	cont "モクオ　おにいちゃんとー"
+	cont "カネコ　おねえちゃんとー"
+	cont "ツチオ　おにいちゃん！"
 
-	para "They're all older"
-	line "than me!"
+	para "ぼく　すえっこ　なんだ！"
 	done
 
 SunnyNotSundayText:
-	text "SUNNY: Isn't today"
-	line "Sunday?"
-	cont "Um… I forgot!"
+	text "ニチオ『きょう<WA>にちようびじゃ"
+	line "ないのー？"
+	cont "えっとねー　わすれちゃっ<TA!>"
 	done
 
 Route37SignText:
-	text "ROUTE 37"
+	text "<KOKO_WA>３７<ROUTE>"
 	done
 
 Route37_MapEvents:

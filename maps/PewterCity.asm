@@ -80,87 +80,66 @@ PewterCityFruitTree2:
 	fruittree FRUITTREE_PEWTER_CITY_2
 
 PewterCityCooltrainerFText:
-	text "Have you visited"
-	line "PEWTER GYM?"
+	text "ニビ<NO>ジムに<WA>いった？"
 
-	para "The LEADER uses"
-	line "rock-type #MON."
+	para "いわタイプ<NO>#<WO>つかう"
+	line "ジムリーダー<GA>いるわよ！"
 	done
 
 PewterCityBugCatcherText:
-	text "At night, CLEFAIRY"
-	line "come out to play"
-	cont "at MT.MOON."
+	text "よる<NI>なると"
+	line "おつきみやま<NI>ピッピが"
+	cont "や<TTE>くる　らしいよ"
 
-	para "But not every"
-	line "night."
+	para "まいにちじゃ　ない　みたいだけど"
 	done
 
 PewterCityGrampsText:
-	text "Ah, you came all"
-	line "the way out here"
-	cont "from JOHTO?"
+	text "ほう！"
+	line "ジョウトから　はるばる　きたのか！"
 
-	para "That brings back"
-	line "memories. When I"
+	para "うむ　なつかしいの"
+	line "わしも　わかいころ　ジョウトで"
+	cont "<TRAINER>しゅぎょう<WO>してたのだ"
 
-	para "was young, I went"
-	line "to JOHTO to train."
-
-	para "You remind me so"
-	line "much of what I was"
-
-	para "like as a young"
-	line "man."
-
-	para "Here. I want you"
-	line "to have this item"
-	cont "I found in JOHTO."
+	para "きみに<WA>したしみ<GA>わくよ"
+	line "ジョウトで　みつけた　こ<NO>はね"
+	cont "きみ<NI>おゆずりしようぞ！"
 	done
 
 PewterCityGrampsText_GotSilverWing:
-	text "Going to new, un-"
-	line "known places and"
-	cont "seeing new people…"
-
-	para "Those are the joys"
-	line "of travel."
+	text "いろんな　ところへ　いき"
+	line "いろんな　はっけん<WO>する"
+	cont "それ<GA>たび<NO>だいごみ　なんだ"
 	done
 
 PewterCitySignText:
-	text "PEWTER CITY"
-	line "A Stone Gray City"
+	text "<KOKO_WA>ニビ　シティ"
+	line "ニビ<WA>はいいろ　いし<NO>いろ"
 	done
 
 PewterGymSignText:
-	text "PEWTER CITY"
-	line "#MON GYM"
-	cont "LEADER: BROCK"
-
-	para "The Rock Solid"
-	line "#MON Trainer"
+	text "ニビ　シティ　#ジム"
+	line "リーダー　タケシ"
+	cont "つよくて　かたい　いし<NO>おとこ"
 	done
 
 PewterMuseumSignText:
-	text "There's a notice"
-	line "here…"
+	text "<⋯>　チラシ<GA>は<TTE>　ある！"
 
-	para "PEWTER MUSEUM OF"
-	line "SCIENCE is closed"
-	cont "for renovations…"
+	para "ニビ　かがく　はくぶつかんは"
+	line "かいそう　こうじのため　へいさちゅう"
 	done
 
 PewterCityMtMoonGiftShopSignText:
-	text "There's a notice"
-	line "here…"
+	text "<⋯>　チラシ<GA>は<TTE>　ある！"
 
-	para "MT.MOON GIFT SHOP"
-	line "now open!"
+	para "おつきみやま　みやげものやが"
+	line "オープン　しまし<TA!>"
 	done
 
 PewterCityWelcomeSignText:
-	text "Welcome to"
-	line "PEWTER CITY!"
+	text "ようこそ　ニビ　シティへ！"
 	done
 
 PewterCity_MapEvents:

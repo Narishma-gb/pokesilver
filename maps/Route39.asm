@@ -154,124 +154,89 @@ Route39HiddenNugget:
 	hiddenitem NUGGET, EVENT_ROUTE_39_HIDDEN_NUGGET
 
 Route39MiltankText:
-	text "MILTANK: Mooo!"
+	text "ミルタンク『ン　モー！"
 	done
 
 SailorEugeneSeenText:
-	text "I just got back to"
-	line "OLIVINE."
-
-	para "So how about a"
-	line "#MON battle?"
+	text "ひさしぶり<NI>アサギ<NI>もど<TTE>きた"
+	line "どれ　#　たたかわせてみるか！"
 	done
 
 SailorEugeneBeatenText:
-	text "Awaaargh!"
+	text "がーん！"
 	done
 
 SailorEugeneAfterBattleText:
-	text "My #MON were"
-	line "caught and raised"
-	cont "overseas."
-
-	para "They're my compan-"
-	line "ions on those long"
-	cont "voyages."
+	text "おれ<NO>#"
+	line "がいこくで　つかまえ　そだてたんだ"
+	cont "ながい　ふなたび<NO>あいぼう　だよ！"
 	done
 
 PokefanmDerekSeenText:
-	text "Would you mind if"
-	line "I bragged about"
-	cont "my #MON?"
+	text "わし<NO>#　じまん　していい？"
 	done
 
 PokefanmDerekBeatenText:
-	text "I couldn't begin"
-	line "to brag…"
+	text "じまん　できんかった<⋯>"
 	done
 
 PokefanMDerekText_NotBragging:
-	text "I'm not listening"
-	line "to your bragging!"
-
-	para "We # FANS have"
-	line "a policy of not"
-
-	para "listening to other"
-	line "people brag!"
+	text "ひと<NO>じまんばなし<WA>きかないぞ！"
+	line "だ<TTE>　それが"
+	cont "だいすきクラブ<NO>きまりごと！"
 	done
 
 PokefanfRuthSeenText:
-	text "Such darling"
-	line "#MON."
-
-	para "Let's show our"
-	line "#MON together"
-	cont "at the same time."
+	text "あなた　かわいい　#"
+	line "みせっこ　しませんこと？"
 	done
 
 PokefanfRuthBeatenText:
-	text "I don't mind"
-	line "losing."
+	text "まけた<TTE>　いいですわ"
 	done
 
 PokefanfRuthAfterBattleText:
-	text "Do you know about"
-	line "baby #MON?"
-
-	para "I bet they're just"
-	line "adorable!"
+	text "あなた　#の"
+	line "あかちゃん<TTE>　ごぞんじ？"
+	cont "きっと　とても　かわいいですのよ"
 	done
 
 PsychicNormanSeenText:
-	text "Let me see what"
-	line "your #MON are"
-	cont "capable of."
+	text "きみ<NO>#"
+	line "どんなこと<GA>できるか　みせてくれ！"
 	done
 
 PsychicNormanBeatenText:
-	text "Ooh, your #MON"
-	line "have potential."
+	text "いいねえ　きみ<NO>#"
+	line "いい　かのうせい<WO>も<TTE>るよ"
 	done
 
 PsychicNormanAfterBattleText:
-	text "You know how #-"
-	line "MON have different"
-	cont "abilities?"
+	text "#　いろんな"
+	line "のうりょく　も<TTE>るだろ"
 
-	para "People are like"
-	line "that too. Every-"
-	cont "one has different"
-	cont "potential."
+	para "それと　おなじで　ひとも"
+	line "いろんな　かのうせい<WO>も<TTE>るのさ"
 	done
 
 Route39SignText:
-	text "ROUTE 39"
-
-	para "OLIVINE CITY -"
-	line "ECRUTEAK CITY"
+	text "<KOKO_WA>３９<ROUTE>"
+	line "アサギシティ　<⋯>　エンジュシティ"
 	done
 
 MoomooFarmSignText:
-	text "MOOMOO FARM"
-
-	para "Enjoy Our Fresh"
-	line "and Tasty Milk"
+	text "モーモー　ぼくじょう"
+	line "うまい　しぼりたてミルク<WO>どうぞ！"
 	done
 
 Route39TrainerTipsText:
-	text "TRAINER TIPS"
+	text "おとくな　けいじばん！"
 
-	para "Use HEADBUTT on"
-	line "trees to shake"
-	cont "#MON out."
+	para "ずつきで　き<WO>ゆらしたとき"
+	line "おちてくる　#は"
+	cont "きによ<TTE>　いろいろ　です"
 
-	para "Different kinds of"
-	line "#MON drop out"
-	cont "of trees."
-
-	para "Use HEADBUTT on"
-	line "any tree you see!"
+	para "いろんな　き<NI>ずつき<WO>しよう！"
 	done
 
 Route39_MapEvents:

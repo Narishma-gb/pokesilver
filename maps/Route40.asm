@@ -143,133 +143,106 @@ Route40_StepUp4Movement: ; unreferenced
 	step_end
 
 SwimmermSimonSeenText:
-	text "You have to warm"
-	line "up before going"
-	cont "into the water."
+	text "みず<NI>はいる　まえには"
+	line "じゅんび　うんどう！"
 
-	para "That's basic."
+	para "これ<WA>きほん　だからな！"
 	done
 
 SwimmermSimonBeatenText:
-	text "OK! Uncle! I give!"
+	text "うー　まいっ<TA!>"
 	done
 
 SwimmermSimonAfterBattleText:
-	text "CIANWOOD CITY is"
-	line "a good distance"
-	cont "away from here."
+	text "ここから　タンバまで"
+	line "けっこう　きょり<GA>あるぞ！"
 	done
 
 SwimmermRandallSeenText:
-	text "A young guy like"
-	line "you should swim."
-
-	para "Don't SURF on your"
-	line "#MON."
+	text "しょうねん"
+	line "#<NI>のらず　およぎなさい！"
 	done
 
 SwimmermRandallBeatenText:
-	text "Uh-oh. I lost…"
+	text "まけちゃった"
 	done
 
 SwimmermRandallAfterBattleText:
-	text "Swimming exercises"
-	line "your entire body."
-	cont "It's healthy."
+	text "およぐの<WA>ぜんしん<WO>つかうから"
+	line "けんこう<NI>いいこと　なのだ！"
 	done
 
 SwimmerfElaineSeenText:
-	text "Are you going to"
-	line "CIANWOOD?"
+	text "タンバまで　およぎきる　つもり？"
 
-	para "How about a quick"
-	line "battle first?"
+	para "そのまえ<NI>ちょっと"
+	line "ひとしょうぶ　しない？"
 	done
 
 SwimmerfElaineBeatenText:
-	text "I lost that one!"
+	text "<WATASHI><NO>まけね"
 	done
 
 SwimmerfElaineAfterBattleText:
-	text "I'd say I'm a bet-"
-	line "ter swimmer than"
-	cont "you. Yeah!"
+	text "およぎじゃ　<WATASHI><NO>ほうが"
+	line "うえ　だと　おもうんだけどな"
 	done
 
 SwimmerfPaulaSeenText:
-	text "No inner tube for"
-	line "me."
-
-	para "I'm hanging on to"
-	line "a sea #MON!"
+	text "うきわ<NO>かわりに"
+	line "うみ<NO>#<NI>つかま<TTE>るの"
 	done
 
 SwimmerfPaulaBeatenText:
-	text "Ooh, I'm feeling"
-	line "dizzy!"
+	text "うーん"
+	line "くらくら　しちゃう"
 	done
 
 SwimmerfPaulaAfterBattleText:
-	text "While I float like"
-	line "this, the waves"
-	cont "carry me along."
+	text "こうや<TTE>　ぷかぷか　うかんでると"
+	line "なみ<NI>ながされちゃうのよ"
 	done
 
 Route40Lass1Text:
-	text "Although you can't"
-	line "see it from here,"
-
-	para "CIANWOOD is across"
-	line "the sea."
+	text "ここからじゃ　みえないけど"
+	line "おおきな　うみ<WO>こえていくと"
+	cont "タンバ<TTE>　まち<GA>あるのよ"
 	done
 
 MeetMonicaText:
-	text "MONICA: Glad to"
-	line "meet you. I'm"
-
-	para "MONICA of Monday."
+	text "ツキコ『はじめまして！"
+	line "<WATASHI>　げつようび<NO>ツキコ　です"
 	done
 
 MonicaGivesGiftText:
-	text "As a token of our"
-	line "friendship, I have"
-	cont "a gift for you!"
+	text "おちかづき<NO>しるし<NI>はい　これ！"
 	done
 
 MonicaGaveGiftText:
-	text "MONICA: It's an"
-	line "item that raises"
+	text "ツキコ『それ<WA>ひこうタイプの"
+	line "<KOUGEKI>りょく<WO>あげる　どうぐ"
 
-	para "the power of fly-"
-	line "ing-type moves."
-
-	para "You should equip a"
-	line "bird #MON with"
-	cont "that item."
+	para "あなた<NO>とり#に"
+	line "もたせると　いいわよ！"
 	done
 
 MonicaMondayText:
-	text "MONICA: My broth-"
-	line "ers and sisters"
+	text "ツキコ『<WATASHI>の"
+	line "おとうと　や　いもうと　たちが"
+	cont "いろんな　ばしょ<NI>いるわ"
 
-	para "are all over the"
-	line "place."
-
-	para "See if you could"
-	line "find them all!"
+	para "さがして　みてね！"
 	done
 
 MonicaNotMondayText:
-	text "MONICA: I don't"
-	line "think today is"
-	cont "Monday. How sad…"
+	text "ツキコ『きょう<WA>げつようびじゃ"
+	line "ないみたいね<⋯>"
+	cont "ざんねんだわ"
 	done
 
 Route40SignText:
-	text "ROUTE 40"
-
-	para "CIANWOOD CITY -"
-	line "OLIVINE CITY"
+	text "<KOKO_WA>４０ばん　すいどう"
+	line "タンバシティ　<⋯>　アサギシティ"
 	done
 
 Route40_MapEvents:

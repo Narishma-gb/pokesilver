@@ -107,129 +107,97 @@ CarefulSwimmingSign:
 	jumptext CarefulSwimmingSignText
 
 SwimmermHaroldSeenText:
-	text "Have you ever gone"
-	line "swimming in the"
-	cont "sea at night?"
+	text "くらく　な<TTE>　から"
+	line "うみで　およいだこと　ある？"
 	done
 
 SwimmermHaroldBeatenText:
-	text "Glub…"
+	text "ざっぷーんっ！"
 	done
 
 SwimmermHaroldAfterBattleText:
-	text "At night, the sea"
-	line "turns black. It"
-
-	para "feels like it will"
-	line "swallow you up."
+	text "よる<NI>なると　うみ<GA>まっくろで"
+	line "すいこまれそうな　きぶん<NI>なるよ"
 	done
 
 SwimmermTuckerSeenText:
-	text "Pant, pant…"
-	line "Just… a little…"
-
-	para "farther… to…"
-	line "FUCHSIA…"
+	text "ぜえぜえ<⋯>"
+	line "セキチク　シティまで<⋯>"
+	cont "ぜえぜえ<⋯>　もう　すこし<⋯>"
 	done
 
 SwimmermTuckerBeatenText:
-	text "I'm drowning!"
+	text "お　おぼれるー！"
 	done
 
 SwimmermTuckerAfterBattleText:
-	text "I… asked my girl-"
-	line "friend to swim to"
-	cont "FUCHSIA… Gasp…"
+	text "かのじょ<NI>セキチクまで"
+	line "およごう<TTE>　いったんだよ<⋯>"
+	cont "ぜえぜえ<⋯>"
 	done
 
 SwimmerfDawnSeenText:
-	text "I'm disgusted by"
-	line "wimpy people!"
+	text "<WATASHI>　だらしのない　ひと"
+	line "キライよ！"
 	done
 
 SwimmerfDawnBeatenText:
-	text "I could beat you"
-	line "at swimming…"
+	text "およぎなら　かてるのに<⋯>"
 	done
 
 SwimmerfDawnAfterBattleText:
-	text "It's a quick swim"
-	line "between FUCHSIA"
-
-	para "and SEAFOAM IS-"
-	line "LANDS…"
-
-	para "Sheesh, some big"
-	line "man my boyfriend"
-
-	para "is! What a wimp!"
+	text "セキチクと　ふたごじまの"
+	line "おうふく　ぐらいで<⋯>"
+	cont "がんばりなさいよ！　おとこでしょ！"
 	done
 
 SwimmermJeromeSeenText:
-	text "Swimming?"
-	line "I'm lousy at it."
-
-	para "I'm just splashing"
-	line "around in these"
-	cont "shallow waters."
+	text "およぎ<⋯>？"
+	line "とくいじゃ　ないよ"
+	cont "あさせで　みずあび　してるんだ"
 	done
 
 SwimmermJeromeBeatenText:
-	text "I thought I could"
-	line "win."
+	text "かてると　おもったのに<⋯>！"
 	done
 
 SwimmermJeromeAfterBattleText:
-	text "I might be bad at"
-	line "swimming, but I"
-	cont "love the sea."
+	text "およぎ<GA>にがて　でも"
+	line "うみ<WA>だいすき　なのさ！"
 	done
 
 Route19Fisher1Text:
-	text "Sorry. This road"
-	line "is closed for"
-	cont "construction."
-
-	para "If you want to get"
-	line "to CINNABAR, you'd"
-
-	para "better go south"
-	line "from PALLET TOWN."
+	text "<KOKO_WA>こうじちゅうで　すすめないよ"
+	line "グレンタウンに<WA>マサラタウンの"
+	cont "ほうから　まわりみち　してくれ"
 	done
 
 Route19Fisher1Text_RocksCleared:
-	text "I'm all sweaty."
-	line "Time for a swim!"
+	text "あせ<WO>いっぱい　かいたから"
+	line "ひとおよぎでも　するか！"
 	done
 
 Route19Fisher2Text:
-	text "Who knows how long"
-	line "it would take to"
-	cont "move this boulder…"
+	text "こ<NO>いわ<WO>どかすのに"
+	line "どれくらい　かかるかなぁ<⋯>"
 	done
 
 Route19Fisher2Text_RocksCleared:
-	text "The roadwork is"
-	line "finally finished."
+	text "やっと　こうじ<GA>おわったよ！"
 
-	para "Now I can go"
-	line "fishing again."
+	para "これで　つり<NI>いける<TTE>　もんだ！"
 	done
 
 Route19SignText:
-	text "ROUTE 19"
-
-	para "FUCHSIA CITY -"
-	line "SEAFOAM ISLANDS"
+	text "<KOKO_WA>１９ばん　すいどう"
+	line "セキチクシティ　<⋯>　ふたごじま"
 	done
 
 CarefulSwimmingSignText:
-	text "Please be careful"
-	line "if you are swim-"
-	cont "ming to SEAFOAM"
-	cont "ISLANDS."
+	text "およいで　ふたごじまへ　いく　ひとは"
+	line "じゅうぶん　ちゅういして　ください！"
 
-	para "FUCHSIA POLICE"
+	para "<⋯>　セキチク　けいさつ　より"
 	done
 
 Route19_MapEvents:

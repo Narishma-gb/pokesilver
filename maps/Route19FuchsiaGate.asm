@@ -23,24 +23,18 @@ Route19FuchsiaGateOfficerScript:
 	end
 
 Route19FuchsiaGateOfficerText:
-	text "CINNABAR's volcano"
-	line "erupted."
+	text "グレン<NO>ふんかで"
+	line "１９ばん　すいどう<NO>みちが"
+	cont "いわで　とおれなく　な<TTE>るよ"
 
-	para "It hurled boulders"
-	line "that cut off ROUTE"
-	cont "19 indefinitely."
-
-	para "I wonder if the"
-	line "people of CINNABAR"
-	cont "are safe…"
+	para "グレンタウン<NO>ひとたち<TTE>"
+	line "だいじょうぶかなぁ？"
 	done
 
 Route19FuchsiaGateOfficerText_RocksCleared:
-	text "No CINNABAR citi-"
-	line "zens were injured"
-
-	para "by the eruption."
-	line "That's great!"
+	text "グレンタウン<NO>ひと<TTE>"
+	line "みんな　ぶじだった　みたいだね"
+	cont "よかった　よかった"
 	done
 
 Route19FuchsiaGate_MapEvents:

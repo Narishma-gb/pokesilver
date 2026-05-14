@@ -86,131 +86,88 @@ ViridianCityMartSign:
 	jumpstd MartSignScript
 
 ViridianCityCoffeeGrampsQuestionText:
-	text "Hey, kid! I just"
-	line "had a double shot"
+	text "ういーっ！　ひっく<⋯>　まちやがれ！"
+	line "わし<NO>はなし<WO>きけ！"
 
-	para "of espresso, and"
-	line "I am wired!"
+	para "こうみえても　むかしは"
+	line "#<WO>つかまえるのが"
+	cont "うまかったんじゃ！"
 
-	para "I need to talk to"
-	line "someone, so you'll"
-	cont "have to do!"
-
-	para "I might not look"
-	line "like much now, but"
-
-	para "I was an expert at"
-	line "catching #MON."
-
-	para "Do you believe me?"
+	para "しんじて　くれるかの？"
 	done
 
 ViridianCityCoffeeGrampsBelievedText:
-	text "Good, good. Yes, I"
-	line "was something out"
-
-	para "of the ordinary,"
-	line "let me tell you!"
+	text "そうじゃろ　そうじゃろ"
+	line "うんうん"
 	done
 
 ViridianCityCoffeeGrampsDoubtedText:
-	text "What? You little"
-	line "whelp!"
+	text "なに<WO>こわっぱ　が！"
 
-	para "If I were just a"
-	line "bit younger, I'd"
-
-	para "show you a thing"
-	line "or two. Humph!"
+	para "わし<GA>もうすこし　わかけりゃ"
+	line "おてほん<WO>みせて　やったのにな"
 	done
 
 ViridianCityGrampsNearGymText:
-	text "This GYM didn't"
-	line "have a LEADER"
-	cont "until recently."
+	text "さいきんまで　こ<NO>ジムには"
+	line "リーダー<GA>いなかったのじゃ"
 
-	para "A young man from"
-	line "PALLET became the"
-
-	para "LEADER, but he's"
-	line "often away."
+	para "さいきん　マサラ<NO>わかものが"
+	line "リーダー<NI>なった　そうじゃが"
+	cont "<⋯>はて　いま　るす　じゃの"
 	done
 
 ViridianCityGrampsNearGymBlueReturnedText:
-	text "Are you going to"
-	line "battle the LEADER?"
-
-	para "Good luck to you."
-	line "You'll need it."
+	text "リーダーと　たたかうのかい？"
+	line "がんばりなさいよ"
 	done
 
 ViridianCityDreamEaterFisherText:
-	text "Yawn!"
+	text "ふあー！"
+	line "ひなたぼっこ　してて"
+	cont "ねむ<TTE>　しまっ<TA!>"
 
-	para "I must have dozed"
-	line "off in the sun."
+	para "<⋯>　へんな　ゆめ<WO>みた"
+	line "スリープ<GA>ゆめ<WO>く<TTE>い<TA!>"
+	cont "<⋯>およ？　ぼく　いつのまに"
+	cont "<TM>　も<TTE>るけど？"
 
-	para "…I had this dream"
-	line "about a DROWZEE"
-
-	para "eating my dream."
-	line "Weird, huh?"
-
-	para "Huh?"
-	line "What's this?"
-
-	para "Where did this TM"
-	line "come from?"
-
-	para "This is spooky!"
-	line "Here, you can have"
-	cont "this TM."
+	para "うーん"
+	line "きみ<GA>わるい！"
+	cont "これ　きみ<NI>あげる！"
 	done
 
 ViridianCityDreamEaterFisherGotDreamEaterText:
-	text "TM42 contains"
-	line "DREAM EATER…"
-
-	para "…Zzzzz…"
+	text "<TM>４２<NO>なかみは<⋯>"
+	line "ゆめくい　だよ<⋯>"
+	cont "<⋯>　ぐー<⋯>"
 	done
 
 ViridianCityYoungsterText:
-	text "I heard that there"
-	line "are many items on"
-
-	para "the ground in"
-	line "VIRIDIAN FOREST."
+	text "トキワのもりには"
+	line "みえない　どうぐ<GA>いっぱい"
+	cont "おちている<TTE>　はなし　だよ！"
 	done
 
 ViridianCitySignText:
-	text "VIRIDIAN CITY"
-
-	para "The Eternally"
-	line "Green Paradise"
+	text "<KOKO_WA>トキワ　シティ"
+	line "トキワ<WA>みどり　えいえんのいろ"
 	done
 
 ViridianGymSignText:
-	text "VIRIDIAN CITY"
-	line "#MON GYM"
-	cont "LEADER: …"
-
-	para "The rest of the"
-	line "text is illegible…"
+	text "トキワ　シティ　#ジム"
+	line "リーダー　<⋯>"
+	cont "あと<WA>もじ<GA>よめない！"
 	done
 
 ViridianCityWelcomeSignText:
-	text "Welcome to"
-	line "VIRIDIAN CITY,"
-
-	para "the Gateway to"
-	line "INDIGO PLATEAU"
+	text "セキエイこうげん　いりぐち　<NO>まち"
+	line "トキワ　シティへ　ようこそ！"
 	done
 
 TrainerHouseSignText:
-	text "TRAINER HOUSE"
-
-	para "The Club for Top"
-	line "Trainer Battles"
+	text "<TRAINER>　ハウス"
+	line "つわもの<NO>つどう　ばしょ"
 	done
 
 ViridianCity_MapEvents:

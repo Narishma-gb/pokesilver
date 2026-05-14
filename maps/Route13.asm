@@ -78,115 +78,96 @@ Route13HiddenCalcium:
 	hiddenitem CALCIUM, EVENT_ROUTE_13_HIDDEN_CALCIUM
 
 PokefanmAlexSeenText:
-	text "Bow down before my"
-	line "regal #MON!"
+	text "わがはい<NO>いげん　たっぷりの"
+	line "#たち<NI>ひれふす<GA>よい！"
 	done
 
 PokefanmAlexBeatenText:
-	text "How… How dare you"
-	line "mock royalty!"
+	text "むっ　むねん　<⋯>"
 	done
 
 PokefanmAlexAfterBattleText:
-	text "Doesn't everyone"
-	line "wish to someday be"
-	cont "a king?"
+	text "おとこ　として　うまれたからには"
+	line "おうさま<NI>な<TTE>みたいだろ"
 	done
 
 PokefanmJoshuaSeenText:
-	text "Nihihi! Would you"
-	line "like to battle my"
-	cont "PIKACHU gang?"
+	text "うふふふふっ！"
+	line "ピカチュウたちと　しょうぶ　しない？"
 	done
 
 PokefanmJoshuaBeatenText:
-	text "PI-PIKACHU!"
+	text "ピッ　ピカチュウがっ！"
 	done
 
 PokefanmJoshuaAfterBattleText:
-	text "You look like you"
-	line "have many #MON,"
-
-	para "but PIKACHU is"
-	line "still the best."
+	text "キミ<WA>たくさん　#を"
+	line "も<TTE>いる　みたいだけど"
+	cont "やっぱり　ピカチュウ<GA>さいこう！"
 	done
 
 BirdKeeperPerrySeenText:
-	text "Agility is the key"
-	line "attribute of bird"
-	cont "#MON."
+	text "すばやい　うごきが"
+	line "とり#<NO>とくちょうさ！"
 	done
 
 BirdKeeperPerryBeatenText:
-	text "You beat me with"
-	line "your speed…"
+	text "すばやさで　まけている！？"
+	line "こ<NO>オレがっ！？"
 	done
 
 BirdKeeperPerryAfterBattleText:
-	text "Your #MON are"
-	line "remarkably well-"
-	cont "trained."
+	text "すばらしく　きたえられてるね"
+	line "キミ<NO>#たちは！"
 	done
 
 BirdKeeperBretSeenText:
-	text "Check out my #-"
-	line "MON. Just look at"
-
-	para "their coloring and"
-	line "their plumage."
+	text "みろよ　ボク<NO>#！"
+	line "すばらしい　いろと　ツヤだろう！"
 	done
 
 BirdKeeperBretBeatenText:
-	text "Shoot!"
-	line "Not good enough!"
+	text "くそーっ！"
+	line "かなわないのかっ！"
 	done
 
 BirdKeeperBretAfterBattleText:
-	text "If you groom them,"
-	line "#MON get happy."
+	text "ていれをして　キレイ<NI>すると"
+	line "#も　よろこぶよね！"
 	done
 
 HikerKennySeenText:
-	text "I should go to"
-	line "ROCK TUNNEL to get"
-	cont "myself an ONIX."
+	text "イワヤマトンネルへ　いこう　かな"
+	line "イワーク<WO>つかまえにね！"
 	done
 
 HikerKennyBeatenText:
-	text "I lost…"
+	text "まけたっ！"
 	done
 
 HikerKennyAfterBattleText:
-	text "Geological fea-"
-	line "tures don't appear"
-	cont "to change."
+	text "しぜん<NO>ちけい　<TTE>　いつも"
+	line "おなじ　みたいだけど"
 
-	para "But they actually"
-	line "change, little by"
-	cont "little."
+	para "じつ<WA>すこしずつ"
+	line "かたち<GA>かわ<TTE>るんだよ"
 	done
 
 Route13TrainerTipsText:
-	text "TRAINER TIPS"
+	text "<⋯>　おとくな　けいじばん！"
 
-	para "Look! Right there,"
-	line "at the left side"
-	cont "of the post."
+	para "そこ　そこ！"
+	line "くい<WO>はさんで　ひだり　がわ"
 	done
 
 Route13SignText:
-	text "ROUTE 13"
-
-	para "North to SILENCE"
-	line "BRIDGE"
+	text "<KOKO_WA>１３<ROUTE>"
+	line "きた　<⋯>　サイレンズ　ブリッジ"
 	done
 
 Route13DirectionsSignText:
-	text "North to LAVENDER"
-	line "TOWN"
-
-	para "West to FUCHSIA"
-	line "CITY"
+	text "きた　<⋯>　シオンタウン"
+	line "にし　<⋯>　セキチクシティ"
 	done
 
 Route13_MapEvents:

@@ -85,141 +85,98 @@ EcruteakCityHiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_ECRUTEAK_CITY_HIDDEN_HYPER_POTION
 
 UnusedMissingDaughterText: ; unreferenced
-	text "Oh, no. Oh, no…"
+	text "おろおろ<⋯>"
+	line "わし<NO>むすめ<GA>いなくなった"
 
-	para "My daughter is"
-	line "missing."
+	para "まさか"
+	line "やけた　とう<NI>いったのか？"
 
-	para "No… She couldn't"
-	line "have gone to the"
-	cont "BURNED TOWER."
-
-	para "I told her not to"
-	line "go near it…"
-
-	para "People seem to"
-	line "disappear there…"
-
-	para "Oh, what should I"
-	line "do…?"
+	para "あそこ<WA>かみかくし<NI>あうから"
+	line "ちかづくな<TTE>　いったあったのに"
+	cont "どうしたら　いいものか<⋯>"
 	done
 
 EcruteakCityGramps1Text:
-	text "ECRUTEAK used to"
-	line "have two towers:"
-
-	para "one each in the"
-	line "east and west."
+	text "エンジュに<WA>にしと　ひがしに"
+	line "２つ<NO>とう<GA>あったらしいが<⋯>"
 	done
 
 EcruteakCityGramps2Text:
-	text "Ah, youngster."
-	line "Have you learned"
+	text "ほっほう　おわかいの"
+	line "まいこさん<NO>おどり<WA>おぼえたか"
 
-	para "to dance like the"
-	line "KIMONO GIRLS?"
-
-	para "If you go to their"
-	line "DANCE THEATER, an"
-
-	para "odd old man will"
-	line "give you something"
-	cont "nice, I hear."
+	para "いま　おどりば<NI>いくと"
+	line "へんな　だんなさんから"
+	cont "いいもの<GA>もらえる　らしいぞ"
 	done
 
 EcruteakCityLass1Text:
-	text "I'm going to prac-"
-	line "tice at the DANCE"
-
-	para "THEATER. Care to"
-	line "join me?"
+	text "これから　おどりばで"
+	line "おどり<NO>れんしゅう　するの"
+	cont "よかったら　あなたも　どう？"
 	done
 
 EcruteakCityLass2Text:
-	text "That used to be a"
-	line "much taller tower,"
-
-	para "but it burned down"
-	line "in a fire."
+	text "ここ<NI>あった　とう<⋯>"
+	line "ほんとう<WA>もっと　たかかったけど"
+	cont "かじで　やけて　しまったんだ<TTE>"
 	done
 
 EcruteakCityLass2Text_ReleasedBeasts:
-	text "Three big #MON"
-	line "ran off in differ-"
-	cont "ent directions."
-	cont "What were they?"
+	text "３びき<NO>おおきな　#"
+	line "あちこち<NI>はしりさ<TTE>いったわ"
+	cont "なんだったのかしら？"
 	done
 
 EcruteakCityFisherText:
-	text "I heard a rumor"
-	line "about OLIVINE"
-	cont "LIGHTHOUSE."
+	text "きいた　はなし　だけど"
+	line "アサギシティ<NO>とうだい<⋯>"
 
-	para "The #MON that"
-	line "serves as the"
-
-	para "beacon fell ill."
-	line "Sounds like they"
-	cont "are in trouble."
+	para "くらやみ<WO>てらす　#が"
+	line "ばてちゃ<TTE>　たいへん　らしいな"
 	done
 
 EcruteakCityFisherText_JasmineReturned:
-	text "The #MON at"
-	line "OLIVINE LIGHTHOUSE"
-	cont "has been cured."
-
-	para "Boats can safely"
-	line "sail out to sea at"
-	cont "night again."
+	text "アサギ<NO>とうだい#"
+	line "びょうき　なおったんだ<TTE>"
+	cont "これで　よるも　ふね<GA>だせる<TTE>よ"
 	done
 
 EcruteakCityYoungsterText:
-	text "I hear #MON are"
-	line "rampaging at the"
-
-	para "LAKE OF RAGE. I'd"
-	line "like to see that."
+	text "いかりのみずうみで"
+	line "#<GA>あばれまわ<TTE>るんだ<TTE>"
+	cont "い<TTE>みたいなあ"
 	done
 
 EcruteakCitySignText:
-	text "ECRUTEAK CITY"
-	line "A Historical City"
-
-	para "Where the Past"
-	line "Meets the Present"
+	text "<KOKO_WA>エンジュ　シティ"
+	line "むかしと　いまが"
+	cont "どうじ<NI>ながれる　れきし<NO>まち"
 	done
 
 TinTowerSignText:
-	text "TIN TOWER"
+	text "スズ<NO>とう"
 
-	para "A legendary #-"
-	line "MON is said to"
-	cont "roost here."
+	para "でんせつ<NO>#<GA>まいおりると"
+	line "つたえられて　います"
 	done
 
 EcruteakGymSignText:
-	text "ECRUTEAK CITY"
-	line "#MON GYM"
-	cont "LEADER: MORTY"
-
-	para "The Mystic Seer of"
-	line "the Future"
+	text "エンジュ　シティ　#ジム"
+	line "リーダー　マツバ"
+	cont "せんりがん<WO>もつ　しゅげんじゃ"
 	done
 
 EcruteakDanceTheaterSignText:
-	text "ECRUTEAK DANCE"
-	line "THEATER"
+	text "エンジュ　おどりば"
+	line "ただしい　よびかた<WA>かぶれんじょう"
 	done
 
 BurnedTowerSignText:
-	text "BURNED TOWER"
+	text "やけた　とう"
 
-	para "It was destroyed"
-	line "by a mysterious"
-	cont "fire."
-
-	para "Please stay away,"
-	line "as it is unsafe."
+	para "なぞ<NO>おおかじで　やけました"
+	line "きけんなので　ちかよらないでください"
 	done
 
 EcruteakCity_MapEvents:

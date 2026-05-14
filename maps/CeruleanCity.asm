@@ -148,125 +148,99 @@ CeruleanCityHiddenBerserkGene:
 	hiddenitem BERSERK_GENE, EVENT_FOUND_BERSERK_GENE_IN_CERULEAN_CITY
 
 CeruleanCityCooltrainerMText1:
-	text "KANTO's POWER"
-	line "PLANT is toward"
-
-	para "the end of ROUTE"
-	line "9. There was an"
-
-	para "accident of some"
-	line "sort there."
+	text "カントー<NO>はつでんしょなら"
+	line "９<ROUTE><NO>さき　だよ"
+	cont "じこ<GA>あったらしい　けどね"
 	done
 
 CeruleanCityCooltrainerMText2:
-	text "You're collecting"
-	line "every single kind"
-	cont "of #MON?"
+	text "ほほう！"
+	line "すべて<NO>#<WO>あつめてる？"
 
-	para "That must be quite"
-	line "a challenge, but"
-	cont "it sounds fun too."
+	para "たいへん　だろうが"
+	line "やりがいも　あるんだろうな"
 	done
 
 CeruleanCitySuperNerdText:
-	text "The CAPE in the"
-	line "north is a good"
-
-	para "place for dates."
-	line "Girls like it!"
+	text "きた<NI>ある　みさきは"
+	line "おんなのこ<NI>にんきの"
+	cont "デートスポットさ！"
 	done
 
 CeruleanCitySlowbroText:
-	text "SLOWBRO: Yarah?"
+	text "ヤドラン『やーあ？"
 	done
 
 CeruleanCityCooltrainerFText1:
-	text "My SLOWBRO and I"
-	line "make an awesome"
-	cont "combination!"
+	text "<WATASHI>と　ヤドラン<NO>コンビ"
+	line "すごいんだから！"
 	done
 
 CeruleanCityCooltrainerFText2:
-	text "SLOWBRO, show me"
-	line "your CONFUSION!"
+	text "さあ　ヤドラン"
+	line "ねんりき　だすのよ！"
 	done
 
 CeruleanCityCooltrainerFText3:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>　<⋯>"
+	line "　<⋯>　<⋯>　<⋯>　<⋯>"
 	done
 
 CeruleanCityFisherText:
-	text "I'm a huge fan of"
-	line "CERULEAN GYM's"
-	cont "MISTY."
+	text "ハナダ　ジム<NO>カスミちゃん！"
+	line "ぼく　ファンなんです！"
 	done
 
 CeruleanCityFisherRocketTipText:
-	text "I saw this shady"
-	line "guy go off toward"
-	cont "CERULEAN's CAPE."
+	text "すごく　あやしい　ひとが"
+	line "ハナダのみさきへ　いったよ！"
 	done
 
 CeruleanCityYoungsterText1:
-	text "There used to be a"
-	line "cave here that had"
-
-	para "horribly powerful"
-	line "#MON in it."
+	text "すっごく　つよい　#のいる"
+	line "どうくつ<GA>あったんだよ！"
 	done
 
 CeruleanCityYoungsterText2:
-	text "Ayuh?"
+	text "あれ<⋯>？"
 
-	para "My ITEMFINDER is"
-	line "responding…"
+	para "ぼく<NO>ダウジングマシンが"
+	line "はんのう　してるぞ<⋯>？"
 	done
 
 CeruleanCitySignText:
-	text "CERULEAN CITY"
-
-	para "A Mysterious Blue"
-	line "Aura Surrounds It"
+	text "<KOKO_WA>ハナダ　シティ"
+	line "ハナダ<WA>みずいろ　しんぴのいろ"
 	done
 
 CeruleanGymSignText:
-	text "CERULEAN CITY"
-	line "#MON GYM"
-	cont "LEADER: MISTY"
-
-	para "The Tomboyish"
-	line "Mermaid"
+	text "ハナダ　シティ　#ジム"
+	line "リーダー　カスミ"
+	cont "おてんば　にんぎょ"
 	done
 
 CeruleanBikeShopSignText:
-	text "There's a notice"
-	line "here…"
+	text "<⋯>チラシ<GA>は<TTE>ある！"
 
-	para "The BIKE SHOP has"
-	line "moved to GOLDENROD"
-	cont "CITY in JOHTO…"
+	para "<⋯>ミラクル　サイクルは"
+	line "ジョウト　コガネ　シティへ"
+	cont "ひっこし　ました<⋯>"
 	done
 
 CeruleanPoliceSignText:
-	text "There's a notice"
-	line "here…"
+	text "<⋯>チラシ<GA>は<TTE>ある！"
 
-	para "Stamp out thievery"
-	line "and make the city"
-
-	para "a friendlier, more"
-	line "cheerful place!"
-
-	para "CERULEAN POLICE"
+	para "ドロボー<WA>やめましょう"
+	line "みんな　なかよく　あかるい　まち"
+	cont "<⋯>　ハナダ　けいさつ　より"
 	done
 
 CeruleanCapeSignText:
-	text "CERULEAN CAPE"
-	line "Ahead"
+	text "このさき　ハナダのみさき"
 	done
 
 CeruleanLockedDoorText:
-	text "It's locked…"
+	text "<⋯>　カギ<GA>かか<TTE>いる！"
 	done
 
 CeruleanCity_MapEvents:

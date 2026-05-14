@@ -125,8 +125,7 @@ ROMX $23
 ROMX $24
 	"bank24"
 ROMX $25
-	; "Maps"
-	org $65f9
+	"Maps"
 	"Events"
 	; "Garbage 37"
 ROMX $26
@@ -165,6 +164,8 @@ ROMX $33
 	"Extra Songs 2"
 ROMX $34
 	"Map Scripts 10"
+ROMX $35
+	"Map Scripts 11"
 ROMX $36
 	"Standard Scripts"
 	"Phone Scripts"
@@ -198,10 +199,6 @@ ROMX $3f
 ; ROMX $40
 	; "Title Screen"
 	; "Font Inversed"
-	; "Map Scripts 11"
-	; "Map Scripts 13"
-	; "Map Scripts 14"
-	; "Map Scripts 15"
 ; ROMX $64
 ; 	"Text 1"
 ; ROMX $65

@@ -85,119 +85,95 @@ Route15PPUp:
 	itemball PP_UP
 
 TeacherColetteSeenText:
-	text "Have you forgotten"
-	line "anything?"
+	text "わすれもの<WA>ないかしら？"
 	done
 
 TeacherColetteBeatenText:
-	text "Kyaaah!"
+	text "きゃーっ！"
 	done
 
 TeacherColetteAfterBattleText:
-	text "Before I became a"
-	line "teacher, I used to"
-
-	para "forget a lot of"
-	line "things."
+	text "せんせいも　こどものころ"
+	line "よく　わすれも<NO>しちゃったわ"
 	done
 
 TeacherHillarySeenText:
-	text "On sunny days, I"
-	line "think that the"
-
-	para "kids would rather"
-	line "be playing in the"
-
-	para "schoolyard than"
-	line "studying in class."
+	text "おてんき<NO>いい　ひは"
+	line "きょうしつで　べんきょう　するより"
+	cont "こうていで　うんどう　したいわね！"
 	done
 
 TeacherHillaryBeatenText:
-	text "I didn't want to"
-	line "lose…"
+	text "まけちゃった<⋯>"
 	done
 
 TeacherHillaryAfterBattleText:
-	text "Studying is impor-"
-	line "tant, but exercise"
-	cont "is just as vital."
+	text "べんきょう<WA>だいじ　だけど"
+	line "うんどうも　たいせつ　なのよ！"
 	done
 
 SchoolboyKippSeenText:
-	text "Hang on. I have to"
-	line "phone my Mom."
+	text "ちょっと　ま<TTE>"
+	line "おかあさん<NI>でんわ　するから"
 	done
 
 SchoolboyKippBeatenText:
-	text "Sorry, Mom!"
-	line "I was beaten!"
+	text "ごめんね　おかあさん！"
+	line "ボク　まけちゃっ<TA!>"
 	done
 
 SchoolboyKippAfterBattleText:
-	text "My Mom worries so"
-	line "much about me, I"
-
-	para "have to phone her"
-	line "all the time."
+	text "すごく　しんぱいするからね"
+	line "よく　おかあさん<NI>でんわ　するよ"
 	done
 
 SchoolboyTommySeenText:
-	text "Let's battle."
-	line "I won't lose!"
+	text "たいせん　しようよ！"
+	line "ぼく　まけないよ！"
 	done
 
 SchoolboyTommyBeatenText:
-	text "I forgot to do my"
-	line "homework!"
+	text "じゅく<NO>しゅくだい"
+	line "わすれてたー！"
 	done
 
 SchoolboyTommyAfterBattleText:
-	text "Sayonara! I just"
-	line "learned that in my"
-	cont "Japanese class."
+	text "ハウ　ドゥー　ユー　ドゥー！"
+	line "きのう　ならった　ばっかり！"
 	done
 
 SchoolboyJohnnySeenText:
-	text "We're on a field"
-	line "trip to LAVENDER"
-
-	para "RADIO TOWER for"
-	line "social studies."
+	text "シオン　タウン<NO>ラジオとうに"
+	line "しゃかいか　けんがく<NI>いくんだ！"
 	done
 
 SchoolboyJohnnyBeatenText:
-	text "You're wickedly"
-	line "tough!"
+	text "すごく　つよいなあ！"
 	done
 
 SchoolboyJohnnyAfterBattleText:
-	text "I'm tired of walk-"
-	line "ing. I need to"
-	cont "take a break."
+	text "あるく<NO>つかれちゃった<⋯>"
+	line "やすみたいよ"
 	done
 
 SchoolboyBillySeenText:
-	text "My favorite class"
-	line "is gym!"
+	text "ボク<NO>とくい　かもくは"
+	line "たいいく　だよ！"
 	done
 
 SchoolboyBillyBeatenText:
-	text "Oh, no!"
-	line "How could I lose?"
+	text "やべーっ！"
+	line "まけたーっ！"
 	done
 
 SchoolboyBillyAfterBattleText:
-	text "If #MON were a"
-	line "subject at school,"
-	cont "I'd be the best!"
+	text "じゅぎょう<NI>#<GA>あったら"
+	line "ボク<GA>いちばん　なのに！"
 	done
 
 Route15SignText:
-; BUG: "Route 15" is not capitalized in a signpost (see docs/bugs_and_glitches.md)
-	text "Route 15"
-
-	para "FUCHSIA CITY -"
-	line "LAVENDER TOWN"
+	text "<KOKO_WA>１５<ROUTE>"
+	line "セキチクシティ　<⋯>　シオンタウン"
 	done
 
 Route15_MapEvents:

@@ -76,141 +76,106 @@ CeladonCityHiddenPpUp:
 	hiddenitem PP_UP, EVENT_CELADON_CITY_HIDDEN_PP_UP
 
 CeladonCityFisherText:
-	text "This POLIWRATH is"
-	line "my partner."
+	text "こいつ　おれ<NO>あいか<TA!>"
+	line "ニョロボン！"
 
-	para "I wonder if it'll"
-	line "ever evolve into a"
-	cont "frog #MON."
+	para "こいつも　いつかは"
+	line "かえる#<NI>なるのかな？"
 	done
 
 CeladonCityPoliwrathText:
-	text "POLIWRATH: Croak!"
+	text "ニョロボン『ゲロゲーロ！"
 	done
 
 CeladonCityTeacher1Text:
-	text "I lost at the slot"
-	line "machines again…"
+	text "あーん！"
+	line "スロットで　また　まけちゃった"
 
-	para "We girls also play"
-	line "the slots now."
-
-	para "You should check"
-	line "them out too."
+	para "さいきん　おんなのこも"
+	line "スロット<NI>むちゅう　なのよ！"
+	cont "あなたも　あそんで　みたら？"
 	done
 
 CeladonCityGramps1Text:
-	text "GRIMER have been"
-	line "appearing lately."
+	text "ちかごろ　ベトベターが"
+	line "しゅつぼつ　するよう<NI>な<TTE>な"
 
-	para "See that pond out"
-	line "in front of the"
+	para "ほれ　いえのまえ<NO>いけ　にも"
+	line "ベトベター<GA>いるのじゃ！"
 
-	para "house? GRIMER live"
-	line "there now."
-
-	para "Where did they"
-	line "come from? This is"
-	cont "a serious problem…"
+	para "どこから　や<TTE>きたのじゃろう？"
+	line "こまったのう<⋯>"
 	done
 
 CeladonCityGramps2Text:
-	text "Nihihi! This GYM"
-	line "is great! Only"
-
-	para "girls are allowed"
-	line "here!"
+	text "にひひ！　こ<NO>ジム<WA>ええ！"
+	line "おんなのこ　ばっかし　じゃ！"
 	done
 
 CeladonCityYoungster1Text:
-	text "Want to know a"
-	line "secret?"
+	text "ボク<NO>ヒミツ　おしえてあげる！"
 
-	para "CELADON MANSION"
-	line "has a hidden back"
-	cont "door."
+	para "じつはね　タマムシ　マンションには"
+	line "ひみつ<NO>うらぐち<GA>あるんだよ！"
 	done
 
 CeladonCityYoungster2Text:
-	text "They're holding an"
-	line "eating contest at"
-	cont "the restaurant."
-
-	para "Just watching them"
-	line "go at it makes me"
-	cont "feel bloated…"
+	text "そこ<NO>しょくどうで"
+	line "おおぐいコンテスト　してんだけど<⋯>"
+	cont "みてるだけで　おなか　いっぱい<⋯>！"
 	done
 
 CeladonCityTeacher2Text:
-	text "CELADON DEPT.STORE"
-	line "has the biggest"
+	text "タマムシ　デパートは"
+	line "しなぞろえ　ナンバー　ワン！"
+	cont "ほしい　もの<GA>なんでも　かえるわ！"
 
-	para "and best selection"
-	line "of merchandise."
-
-	para "If you can't get"
-	line "it there, you"
-
-	para "can't get it any-"
-	line "where."
-
-	para "Gee… I sound like"
-	line "a sales clerk."
+	para "<⋯>　<TTE>　<WATASHI>"
+	line "うりこみ<NO>ひと　みたいね！"
 	done
 
 CeladonCityLassText:
-	text "Looking at the"
-	line "ground while I was"
-
-	para "walking made me"
-	line "dizzy."
+	text "<⋯>　どうろ<NO>もようを"
+	line "じっと　みながら　あるいてたら"
+	cont "め<GA>チカチカ　しちゃっ<TA!>"
 	done
 
 CeladonCitySignText:
-	text "CELADON CITY"
-
-	para "The City of"
-	line "Rainbow Dreams"
+	text "<KOKO_WA>タマムシ　シティ"
+	line "タマムシ　にじいろ　ゆめ<NO>いろ"
 	done
 
 CeladonGymSignText:
-	text "CELADON CITY"
-	line "#MON GYM"
-	cont "LEADER: ERIKA"
-
-	para "The Nature-Loving"
-	line "Princess"
+	text "タマムシ　シティ　#ジム"
+	line "リーダー　エリカ"
+	cont "しぜん<WO>あいする　おじょうさま"
 	done
 
 CeladonCityDeptStoreSignText:
-	text "Find What You"
-	line "Need at CELADON"
-	cont "DEPT.STORE!"
+	text "ほしいも<NO>きっと　みつかる！"
+	line "タマムシ　デパート"
 	done
 
 CeladonCityMansionSignText:
-	text "CELADON MANSION"
+	text "タマムシ　マンション"
 	done
 
 CeladonCityGameCornerSignText:
-	text "The Playground for"
-	line "Everybody--CELADON"
-	cont "GAME CORNER"
+	text "<KOKO_WA>みんな<NO>あそびば"
+	line "タマムシ　ゲームコーナー"
 	done
 
 CeladonCityTrainerTipsText:
-	text "TRAINER TIPS"
+	text "<⋯>　おとくな　けいじばん！"
 
-	para "GUARD SPEC."
-	line "protects #MON"
+	para "エフェクトガードは"
+	line "ほのお　や　みず　でんき　など"
 
-	para "against SPECIAL"
-	line "attacks such as"
-	cont "fire and water."
+	para "とくしゅな　<KOUGEKI>　から"
+	line "#<WO>まも<TTE>　くれる！"
 
-	para "Get your items at"
-	line "CELADON DEPT."
-	cont "STORE!"
+	para "どうぐ<NO>おかいもとめは"
+	line "タマムシ　デパートで　どうぞ！"
 	done
 
 CeladonCity_MapEvents:

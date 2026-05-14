@@ -20,10 +20,8 @@ CyclingRoadSign:
 	jumptext CyclingRoadSignText
 
 CyclingRoadSignText:
-	text "CYCLING ROAD"
-
-	para "Downhill Coasting"
-	line "All the Way!"
+	text "さかみち<WO>たのしもう！"
+	line "サイクリング　ロード！"
 	done
 
 Route16_MapEvents:

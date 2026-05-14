@@ -163,112 +163,82 @@ OlivineCityPlayerStepsAsideBottomMovement:
 	step_end
 
 OlivineCityRivalText:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
 
-	para "You again?"
+	para "<⋯>　また　おまえか"
 
-	para "There's no need to"
-	line "panic. I don't"
+	para "な<NI>みがまえてんだ？"
+	line "オレ<WA>おまえ　みたいな"
+	cont "よわい　やつ　あいて<NI>しない"
 
-	para "bother with wimps"
-	line "like you."
+	para "よわいと　いえば"
+	line "ここ<NO>ジムリーダーも　いないぜ"
 
-	para "Speaking of weak-"
-	line "lings, the city's"
+	para "とうだいで　よわった"
+	line "#<NO>せわ　してる<TTE>よ"
 
-	para "GYM LEADER isn't"
-	line "here."
+	para "<⋯>　フン！　ばかばかしい"
+	line "よわった　#なんか"
+	cont "ほっときゃ　いいのさ"
 
-	para "Supposedly taking"
-	line "care of a sick"
+	para "たたかえない　#に"
+	line "なん<NO>かちも　ないからな"
 
-	para "#MON at the"
-	line "LIGHTHOUSE."
+	para "おまえ　とうだいで"
+	line "しゅぎょう　したら　どうだ？"
 
-	para "Humph! Boo-hoo!"
-	line "Just let sick"
-	cont "#MON go!"
-
-	para "A #MON that"
-	line "can't battle is"
-	cont "worthless!"
-
-	para "Why don't you go"
-	line "train at the"
-	cont "LIGHTHOUSE?"
-
-	para "Who knows. It may"
-	line "make you a bit"
-	cont "less weak!"
+	para "ちょっとは"
+	line "つよくなれるかも　しれないぜ"
 	done
 
 OlivineCitySailor1Text:
-	text "Dark roads are"
-	line "dangerous at"
-	cont "night."
+	text "くらい　よみち<WA>きけん！"
+	line "くらい　うみも　きけん<GA>いっぱい！"
 
-	para "But in the pitch-"
-	line "black of night,"
-
-	para "the sea is even"
-	line "more treacherous!"
-
-	para "Without the beacon"
-	line "of the LIGHTHOUSE"
-
-	para "to guide it, no"
-	line "ship can sail."
+	para "とうだい<NO>あかり<GA>ないと"
+	line "ふね<WA>うごけないんだ"
 	done
 
 OlivineCityStandingYoungsterPokegearText:
-	text "That thing you"
-	line "have--it's a #-"
-	cont "GEAR, right? Wow,"
-	cont "that's cool."
+	text "きみ<NO>も<TTE>る　それ<TTE>"
+	line "ポケギア　だろ？"
+	cont "いいなあ　かっこいいなあ"
 	done
 
 OlivineCityStandingYoungsterPokedexText:
-	text "Wow, you have a"
-	line "#DEX!"
-
-	para "That is just so"
-	line "awesome."
+	text "きみ<NO>も<TTE>る　それ<TTE>"
+	line "#ずかん　だろ？"
+	cont "いいなあ　かっこいいなあ"
 	done
 
 OlivineCitySailor2Text:
-	text "Hello, laddie!"
-	line "The sea is sweet!"
+	text "おお　しょうねんよ！"
+	line "うみ<WA>いいぞー！"
 
-	para "Sing with me! "
-	line "Yo-ho! Blow the"
-	cont "man down!…"
+	para "うーみーはー　ひろいーなー"
+	line "おーきーなー　っと！"
 	done
 
 OlivineCitySignText:
-	text "OLIVINE CITY"
-
-	para "The Port Closest"
-	line "to Foreign Lands"
+	text "<KOKO_WA>アサギ　シティ"
+	line "とおく　はなれた　いこくに"
+	cont "もっとも　ちかい　みなとまち"
 	done
 
 OlivineCityPortSignText:
-	text "OLIVINE PORT"
-	line "FAST SHIP PIER"
+	text "<KOKO_WA>アサギ　みなと"
+	line "こうそくせん　のりば"
 	done
 
 OlivineGymSignText:
-	text "OLIVINE CITY"
-	line "#MON GYM"
-	cont "LEADER: JASMINE"
-
-	para "The Steel-Clad"
-	line "Defense Girl"
+	text "アサギ　シティ　#ジム"
+	line "リーダー　ミカン"
+	cont "てっぺき　ガード<NO>おんなのこ"
 	done
 
 OlivineLighthouseSignText:
-	text "OLIVINE LIGHTHOUSE"
-	line "Also Known as the"
-	cont "GLITTER LIGHTHOUSE"
+	text "アサギ<NO>とうだい"
+	line "べつめい　かがやき<NO>とうだい"
 	done
 
 OlivineCity_MapEvents:

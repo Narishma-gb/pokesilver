@@ -35,85 +35,69 @@ Route24RocketScript:
 	end
 
 Route24RocketSeenText:
-	text "Hey, kid! Me am a"
-	line "TEAM ROCKET member"
-	cont "kind of guy!"
+	text "ヘーイ　キッド！"
+	line "<WATASHI>　<ROCKET>　メンバーね！"
 
-	para "Come from another"
-	line "country, a trainer"
-	cont "number one, me!"
+	para "いこく<NO>カントリーから　カミング"
+	line "ナンバーワン　<TRAINER>よ！"
 
-	para "Think I did, if"
-	line "stop the energy,"
+	para "<WATASHI>　ひとりで　シンキング"
+	line "ストップ　ザ　エネルギーで"
+	cont "ピープル　おどろき　もものき！"
+	cont "パニック<NI>なるね！"
 
-	para "be big panic for"
-	line "here people!"
+	para "マイ　オペレーション"
+	line "ユー<NI>おしえる　できませーん！"
 
-	para "Secret it is my"
-	line "mission, so tell"
-	cont "you I not!"
+	para "しかーし！"
+	line "<WATASHI><NI>ウイン　できたなら"
+	cont "<WATASHI>　おとこらしく　シークレット"
+	cont "ユー<NI>おしえまーす！"
 
-	para "But! If win you do"
-	line "versus me, a man I"
-
-	para "be and mine secret"
-	line "to you I tell."
-
-	para "Hey, kid! Battle"
-	line "begin we do!"
+	para "ヘイ！　キッド！"
+	line "レッツ　バトル　ビギンよ！"
 	done
 
 Route24RocketBeatenText:
-	text "Ayieeeh! No, no,"
-	line "no, believe it I"
-	cont "can't!"
+	text "オー　ノー！"
+	line "キャント　ビリーブ！"
 
-	para "Strong very much"
-	line "be you! Match I am"
-	cont "not to you!"
+	para "ユー<WA>ブルーベリー　ストロベリー！"
+	line "<⋯>ソーリー　ミステイク！"
+	cont "ユー<WA>ベリー　ストロング！"
+	cont "は<GA>たちませーん！"
 	done
 
 Route24RocketAfterBattleText:
-	text "OK. Tell you mine"
-	line "secret will I."
+	text "わかりました<⋯>"
+	line "マイ　シークレット　おしえまーす"
 
-	para "MACHINE PART steal"
-	line "by me, hide it I"
+	para "マシンのぶひん　ぬすんで　かくした"
+	line "イン　ザ　ジム　オブ　ハナダ！"
 
-	para "did in GYM of the"
-	line "CERULEAN."
+	para "みずのなか　ルック　フォー　すれば"
+	line "ユー<WA>きっと　みつけるでしょう"
+	cont "ジャスト　センター　あたり　でーす！"
 
-	para "Inside water put"
-	line "it I did. Look for"
+	para "しかーし！"
+	line "ドント　フォーゲット！"
 
-	para "in water center of"
-	line "GYM at."
-
-	para "Boy, but you"
-	line "forget me not!"
-
-	para "Beat you for sure"
-	line "will TEAM ROCKET."
-
-	para "Come from JOHTO"
-	line "will they, mine"
-
-	para "friends, yes. Will"
-	line "revenge they are."
+	para "<ROCKET>　ユー<WO>かならず"
+	line "たおしてごらんにいれまーす！"
+	cont "ジョウト<NO>マイ　フレンド"
+	cont "みんな　ここ<NI>や<TTE>きまーす！"
 	done
 
 Route24RocketDisappearsText:
-	text "…"
+	text "<⋯>　<⋯>　<⋯>"
+	line "<⋯>　<⋯>　<⋯>"
+	cont "フォワット？"
+	cont "<ROCKET>　ブロークン？"
+	cont "きえて　なくなった　ですかー？"
 
-	para "You say what? TEAM"
-	line "ROCKET bye-bye a"
-
-	para "go-go? Broken it"
-	line "is says you?"
-
-	para "Oh, no! Should I"
-	line "do what now on"
-	cont "from, me?"
+	para "オー！　ノー！"
+	line "<WATASHI>　これから"
+	cont "どーすれば　いい　ですかー！？"
 	done
 
 Route24_MapEvents:

@@ -41,25 +41,9 @@ MACRO drd
 ENDM
 
 
-EXPORT DEF SCENE_NEWBARKTOWN_NOOP EQU 1
-EXPORT DEF SCENE_MAHOGANYTOWN_NOOP EQU 1
-
 INCLUDE "main.asm"
 	set_gs_diff 0
 
-
-SECTION "rom37", ROMX[$4000], BANK[37]
-; ROM $25 : $94000 - $97FFF
-
-	dr MapScenes, $4000
-	dr MapGroupPointers, $40ed
-	dr Map_data_end, $65f9
-
-
-SECTION "rom53", ROMX[$4000], BANK[53]
-; ROM $35 : $D4000 - $D7FFF
-
-	dr
 
 SECTION "rom56", ROMX[$4000], BANK[56]
 ; ROM $38 : $E0000 - $E3FFF
