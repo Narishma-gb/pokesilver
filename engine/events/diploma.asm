@@ -22,16 +22,19 @@ PlaceDiplomaOnScreen:
 	ld bc, SCREEN_AREA
 	call CopyBytes
 	ld de, .Player
-	hlcoord 2, 5
+	hlcoord 3, 5
 	call PlaceString
-	ld de, .EmptyString
+	ld de, .Sama
 	hlcoord 15, 5
 	call PlaceString
 	ld de, wPlayerName
 	hlcoord 9, 5
 	call PlaceString
 	ld de, .Certification
-	hlcoord 2, 8
+	hlcoord 3, 8
+	call PlaceString
+	ld de, .GameFreak
+	hlcoord 11, 16
 	call PlaceString
 	call EnableLCD
 	call WaitBGMap
@@ -42,31 +45,30 @@ PlaceDiplomaOnScreen:
 	ret
 
 .Player:
-	db "PLAYER@"
+	db "プレイヤー@"
 
-.EmptyString:
-	db "@"
+.Sama:
+	db "さま@"
 
 .Certification:
-	db   "This certifies"
-	next "that you have"
-	next "completed the"
-	next "new #DEX."
-	next "Congratulations!"
+	db   "しんがた　#ずかんを"
+	next "みごと　かんせい　させた"
+	next "いだいな　こうせきを　たたえ"
+	next "ここに　しょうめい　します"
 	db   "@"
+
+.GameFreak:
+	db "ゲームフリーク@"
 
 PrintDiplomaPage2:
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	ld hl, DiplomaPage2Tilemap
 	decoord 0, 0
 	ld bc, SCREEN_AREA
 	call CopyBytes
-	ld de, .GameFreak
-	hlcoord 8, 0
-	call PlaceString
 	ld de, .PlayTime
 	hlcoord 3, 15
 	call PlaceString
@@ -81,8 +83,8 @@ PrintDiplomaPage2:
 	call PrintNum
 	ret
 
-.PlayTime: db "PLAY TIME@"
-.GameFreak: db "GAME FREAK@"
+.PlayTime:
+	db "プレイじかん@"
 
 DiplomaGFX:
 INCBIN "gfx/diploma/diploma.2bpp.lz"

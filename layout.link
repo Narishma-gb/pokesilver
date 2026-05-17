@@ -174,7 +174,7 @@ ROMX $37
 	"Map Blocks 3"
 	"Tileset Data 5"
 ROMX $38
-	; "bank38"
+	"bank38"
 ROMX $39
 	; "Copyright"
 	; "Title Screen 2"

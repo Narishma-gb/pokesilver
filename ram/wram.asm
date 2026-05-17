@@ -446,12 +446,12 @@ wPrinterExposureTime:: db
 	ds 16
 wGameboyPrinterRAMEnd::
 
-/*
+
 SECTION UNION "Overworld Map", WRAM0
 
 ; bill's pc data
 wBillsPCData::
-wBillsPCPokemonList:: ds BOXLIST_SIZE * MONS_PER_BOX_JP
+wBillsPCPokemonList:: ds BOXLIST_SIZE * MONS_PER_BOX
 	ds 720
 wBillsPC_ScrollPosition:: db
 wBillsPC_CursorPosition:: db
@@ -464,7 +464,7 @@ wBillsPC_BackupLoadedBox:: db
 wBillsPC_MonHasMail:: db
 	ds 5
 wBillsPCDataEnd::
-*/
+
 
 SECTION UNION "Overworld Map", WRAM0
 
@@ -1471,7 +1471,7 @@ ENDU
 NEXTU
 ; giving pokemon mail
 wMonMailMessageBuffer:: ds MAIL_MSG_LENGTH + 1
-/*
+
 NEXTU
 ; bill's pc
 UNION
@@ -1481,7 +1481,7 @@ NEXTU
 wBillsPCTempListIndex:: db
 wBillsPCTempBoxCount:: db
 ENDU
-*/
+
 NEXTU
 ; prof. oak's pc
 wTempPokedexSeenCount:: db

@@ -39,6 +39,7 @@ _CardFlip:
 	ld bc, 1 tiles
 	call CopyBytes
 
+	call CardFlip_ShiftDigitsUpOnePixel
 	call CardFlip_InitTilemap
 	call CardFlip_InitAttrPals
 	call EnableLCD
@@ -104,8 +105,9 @@ _CardFlip:
 	ret
 
 .CardFlipPlayWithThreeCoinsText:
-	text_far _CardFlipPlayWithThreeCoinsText
-	text_end
+	text "コイン３まいで　ちょうせんできます"
+	line "あそびますか？"
+	done
 
 .DeductCoins:
 	ld a, [wCoins]
@@ -143,8 +145,8 @@ _CardFlip:
 	ret
 
 .CardFlipNotEnoughCoinsText:
-	text_far _CardFlipNotEnoughCoinsText
-	text_end
+	text "コインが　たりないや⋯⋯"
+	prompt
 
 .ChooseACard:
 	xor a
@@ -219,8 +221,8 @@ _CardFlip:
 	ret
 
 .CardFlipChooseACardText:
-	text_far _CardFlipChooseACardText
-	text_end
+	text "カードを　えらんでください"
+	done
 
 .PlaceYourBet:
 	ld hl, .CardFlipPlaceYourBetText
@@ -240,8 +242,8 @@ _CardFlip:
 	ret
 
 .CardFlipPlaceYourBetText:
-	text_far _CardFlipPlaceYourBetText
-	text_end
+	text "どこに　かけますか？"
+	done
 
 .CheckTheCard:
 	xor a
@@ -310,12 +312,12 @@ _CardFlip:
 	ret
 
 .CardFlipPlayAgainText:
-	text_far _CardFlipPlayAgainText
-	text_end
+	text "もういちど　あそびますか？"
+	done
 
 .CardFlipShuffledText:
-	text_far _CardFlipShuffledText
-	text_end
+	text "カードを　きります"
+	prompt
 
 .Quit:
 	ld hl, wJumptableIndex
@@ -464,12 +466,12 @@ CardFlip_DisplayCardFaceUp:
 
 .Deck:
 	; level, pic anchor (3x3)
-	db "1", $4e, "1", $57, "1", $69, "1", $60
-	db "2", $4e, "2", $57, "2", $69, "2", $60
-	db "3", $4e, "3", $57, "3", $69, "3", $60
-	db "4", $4e, "4", $57, "4", $69, "4", $60
-	db "5", $4e, "5", $57, "5", $69, "5", $60
-	db "6", $4e, "6", $57, "6", $69, "6", $60
+	db "１", $4e, "１", $57, "１", $69, "１", $60
+	db "２", $4e, "２", $57, "２", $69, "２", $60
+	db "３", $4e, "３", $57, "３", $69, "３", $60
+	db "４", $4e, "４", $57, "４", $69, "４", $60
+	db "５", $4e, "５", $57, "５", $69, "５", $60
+	db "６", $4e, "６", $57, "６", $69, "６", $60
 
 CardFlip_UpdateCoinBalanceDisplay:
 	push hl
@@ -483,10 +485,10 @@ CardFlip_UpdateCoinBalanceDisplay:
 	ret
 
 CardFlip_PrintCoinBalance:
-	hlcoord 9, 15
-	lb bc, 1, 9
+	hlcoord 10, 15
+	lb bc, 1, 8
 	call Textbox
-	hlcoord 10, 16
+	hlcoord 11, 16
 	ld de, .CoinStr
 	call PlaceString
 	hlcoord 15, 16
@@ -496,7 +498,7 @@ CardFlip_PrintCoinBalance:
 	ret
 
 .CoinStr:
-	db "COIN@"
+	db "コイン@"
 
 CardFlip_InitTilemap:
 	xor a
@@ -575,14 +577,14 @@ CardFlip_CopyOAM:
 	jr nz, .loop
 	ret
 
-CardFlip_ShiftDigitsUpOnePixel: ; unreferenced
+CardFlip_ShiftDigitsUpOnePixel:
 ; The top rows of digits 1-9 become the bottom rows of 0-8,
 ; so this routine relies on the top rows being blank.
-	ld de, vTiles0 tile '0'
-	ld hl, vTiles0 tile '0' + 2
+	ld de, vTiles0 tile '０'
+	ld hl, vTiles0 tile '０' + 2
 	ld bc, 10 tiles - 2
 	call CopyBytes
-	ld hl, vTiles0 tile '9' + 1 tiles - 2
+	ld hl, vTiles0 tile '９' + 1 tiles - 2
 	xor a
 	ld [hli], a
 	ld [hl], a
@@ -1096,12 +1098,12 @@ CardFlip_CheckWinCondition:
 	ret
 
 .CardFlipYeahText:
-	text_far _CardFlipYeahText
-	text_end
+	text "あたりー"
+	done
 
 .CardFlipDarnText:
-	text_far _CardFlipDarnText
-	text_end
+	text "はずれー"
+	done
 
 .AddCoinPlaySFX:
 	ld a, [wCoins]

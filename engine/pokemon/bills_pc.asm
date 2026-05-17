@@ -190,7 +190,7 @@ BillsPCDepositFuncRelease:
 	ld de, PCString_ReleasePKMN
 	call BillsPC_PlaceString
 	call LoadStandardMenuHeader
-	lb bc, 14, 11
+	lb bc, 14, 13
 	call PlaceYesNoBox
 	ld a, [wMenuCursorY]
 	dec a
@@ -234,10 +234,10 @@ BillsPCDepositMenuHeader:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "DEPOSIT@"
-	db "STATS@"
-	db "RELEASE@"
-	db "CANCEL@"
+	db "あずける@"
+	db "ようすを　みる@"
+	db "にがす@"
+	db "やめる@"
 
 _WithdrawPKMN:
 	ld hl, wOptions
@@ -429,7 +429,7 @@ BillsPC_Withdraw:
 	ld de, PCString_ReleasePKMN
 	call BillsPC_PlaceString
 	call LoadStandardMenuHeader
-	lb bc, 14, 11
+	lb bc, 14, 13
 	call PlaceYesNoBox
 	ld a, [wMenuCursorY]
 	dec a
@@ -472,10 +472,10 @@ BillsPC_Withdraw:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "WITHDRAW@"
-	db "STATS@"
-	db "RELEASE@"
-	db "CANCEL@"
+	db "ひきとる@"
+	db "ようすを　みる@"
+	db "にがす@"
+	db "やめる@"
 
 _MovePKMNWithoutMail:
 	ld hl, wOptions
@@ -537,12 +537,12 @@ _MovePKMNWithoutMail:
 	ldh [hBGMapMode], a
 	call ClearSprites
 	call CopyBoxmonSpecies
+	call BillsPC_MoveMonWOMail_BoxNameAndArrows
 	ld de, PCString_ChooseaPKMN
 	call BillsPC_PlaceString
 	ld a, 5
 	ld [wBillsPC_NumMonsOnScreen], a
 	call BillsPC_RefreshTextboxes
-	call BillsPC_MoveMonWOMail_BoxNameAndArrows
 	call PCMonInfo
 	ld a, $ff
 	ld [wCurPartySpecies], a
@@ -682,20 +682,20 @@ _MovePKMNWithoutMail:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 3 ; items
-	db "MOVE@"
-	db "STATS@"
-	db "CANCEL@"
+	db "いどう　する@"
+	db "ようすを　みる@"
+	db "やめる@"
 
 .PrepInsertCursor:
 	xor a
 	ldh [hBGMapMode], a
 	call CopyBoxmonSpecies
+	call BillsPC_MoveMonWOMail_BoxNameAndArrows
 	ld de, PCString_MoveToWhere
 	call BillsPC_PlaceString
 	ld a, $5
 	ld [wBillsPC_NumMonsOnScreen], a
 	call BillsPC_RefreshTextboxes
-	call BillsPC_MoveMonWOMail_BoxNameAndArrows
 	call ClearSprites
 	call BillsPC_UpdateInsertCursor
 	call WaitBGMap
@@ -768,8 +768,8 @@ BillsPC_InitRAM:
 	xor a
 	ld [wJumptableIndex], a
 	ld [wUnusedBillsPCData], a
-	ld [wUnusedBillsPCData+1], a
-	ld [wUnusedBillsPCData+2], a
+	ld [wUnusedBillsPCData + 1], a
+	ld [wUnusedBillsPCData + 2], a
 	ld [wBillsPC_CursorPosition], a
 	ld [wBillsPC_ScrollPosition], a
 	ret
@@ -946,8 +946,8 @@ BillsPC_LeftRightDidSomething:
 
 BillsPC_PlaceString:
 	push de
-	hlcoord 0, 15
-	lb bc, 1, 18
+	hlcoord 0, 14
+	lb bc, 2, 18
 	call Textbox
 	pop de
 	hlcoord 1, 16
@@ -956,15 +956,15 @@ BillsPC_PlaceString:
 
 BillsPC_MoveMonWOMail_BoxNameAndArrows:
 	call BillsPC_BoxName
-	hlcoord 8, 1
+	hlcoord 9, 2
 	ld [hl], $5f
-	hlcoord 19, 1
+	hlcoord 19, 2
 	ld [hl], $5e
 	ret
 
 BillsPC_BoxName:
-	hlcoord 8, 0
-	lb bc, 1, 10
+	hlcoord 9, 0
+	lb bc, 2, 9
 	call Textbox
 
 	ld a, [wBillsPC_LoadedBox]
@@ -988,12 +988,12 @@ BillsPC_BoxName:
 .party
 	ld de, .PartyPKMN
 .print
-	hlcoord 10, 1
+	hlcoord 10, 2
 	call PlaceString
 	ret
 
 .PartyPKMN:
-	db "PARTY <PK><MN>@"
+	db "てもち#@"
 
 PCMonInfo:
 ; Display a monster's pic and
@@ -1007,12 +1007,8 @@ PCMonInfo:
 ; whether it's holding an item.
 
 	hlcoord 0, 0
-	lb bc, 15, 8
-	call ClearBox
-
-	hlcoord 8, 14
-	lb bc, 1, 3
-	call ClearBox
+	lb bc, 12, 7
+	call Textbox
 
 	call BillsPC_GetSelectedPokemonSpecies
 	and a
@@ -1021,7 +1017,7 @@ PCMonInfo:
 	ret z
 
 	ld [wTempSpecies], a
-	hlcoord 1, 4
+	hlcoord 1, 1
 	xor a
 	ld b, 7
 .row
@@ -1058,10 +1054,10 @@ PCMonInfo:
 	ret z
 
 	call GetBasePokemonName
-	hlcoord 1, 14
+	hlcoord 1, 11
 	call PlaceString
 
-	hlcoord 1, 12
+	hlcoord 2, 9
 	call PrintLevel
 
 	ld a, TEMPMON
@@ -1072,7 +1068,7 @@ PCMonInfo:
 	jr nz, .printgender
 	ld a, '♀'
 .printgender
-	hlcoord 5, 12
+	hlcoord 7, 11
 	ld [hl], a
 .skip_gender
 
@@ -1090,7 +1086,7 @@ PCMonInfo:
 	ld [wBillsPC_MonHasMail], a
 	ld a, $5c ; mail icon
 .printitem
-	hlcoord 7, 12
+	hlcoord 7, 9
 	ld [hl], a
 	ret
 
@@ -1202,14 +1198,10 @@ endr
 	ret
 
 BillsPC_RefreshTextboxes:
-	hlcoord 8, 2
-	lb bc, 10, 10
-	call Textbox
-
-	hlcoord 8, 2
-	ld [hl], '└'
-	hlcoord 19, 2
-	ld [hl], '┘'
+	hlcoord 9, 4
+	lb bc, 10, 11
+	ld a , '　'
+	call BillsPC_FillBox
 
 	ld a, [wBillsPC_ScrollPosition]
 	ld e, a
@@ -1220,7 +1212,7 @@ rept BOXLIST_SIZE
 endr
 	ld e, l
 	ld d, h
-	hlcoord 9, 4
+	hlcoord 10, 5
 	ld a, [wBillsPC_NumMonsOnScreen]
 .loop
 	push af
@@ -1240,7 +1232,7 @@ endr
 	ret
 
 .CancelString:
-	db "CANCEL@"
+	db "やめる@"
 
 .PlaceNickname:
 	ld a, [de]
@@ -1280,11 +1272,11 @@ endr
 	jr z, .boxfail
 	ld bc, sBoxMonNicknames - sBox
 	add hl, bc
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	ld a, e
 	call AddNTimes
 	ld de, wStringBuffer1
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	call CloseSRAM
 	pop hl
@@ -1306,11 +1298,11 @@ endr
 	and a
 	jr z, .partyfail
 	ld hl, wPartyMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	ld a, e
 	call AddNTimes
 	ld de, wStringBuffer1
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	pop hl
 	ld de, wStringBuffer1
@@ -1332,11 +1324,11 @@ endr
 	and a
 	jr z, .sBoxFail
 	ld hl, sBoxMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	ld a, e
 	call AddNTimes
 	ld de, wStringBuffer1
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	call CloseSRAM
 	pop hl
@@ -1353,7 +1345,7 @@ endr
 	ret
 
 .Placeholder:
-	db "-----@"
+	db "ーーーーー@"
 
 MACRO copy_box_data
 .loop\@
@@ -1392,7 +1384,7 @@ ENDM
 CopyBoxmonSpecies:
 	xor a
 	ld hl, wBillsPCPokemonList
-	ld bc, BOXLIST_SIZE * MONS_PER_BOX_JP
+	ld bc, BOXLIST_SIZE * MONS_PER_BOX
 	call ByteFill
 	ld de, wBillsPCPokemonList
 	xor a
@@ -1465,26 +1457,24 @@ endr
 	jr .loop
 
 .OAM:
-	dbsprite  9, 5, 7, 1, $00, 0
-	dbsprite 10, 5, 7, 1, $01, 0
-	dbsprite 11, 5, 7, 1, $01, 0
-	dbsprite 12, 5, 7, 1, $01, 0
-	dbsprite 13, 5, 7, 1, $01, 0
-	dbsprite 14, 5, 7, 1, $01, 0
-	dbsprite 15, 5, 7, 1, $01, 0
-	dbsprite 16, 5, 7, 1, $01, 0
-	dbsprite 17, 5, 7, 1, $01, 0
-	dbsprite 18, 5, 7, 1, $02, 0
-	dbsprite  9, 6, 7, 1, $03, 0
-	dbsprite 10, 6, 7, 1, $04, 0
-	dbsprite 11, 6, 7, 1, $04, 0
-	dbsprite 12, 6, 7, 1, $04, 0
-	dbsprite 13, 6, 7, 1, $04, 0
-	dbsprite 14, 6, 7, 1, $04, 0
-	dbsprite 15, 6, 7, 1, $04, 0
-	dbsprite 16, 6, 7, 1, $04, 0
-	dbsprite 17, 6, 7, 1, $04, 0
-	dbsprite 18, 6, 7, 1, $05, 0
+	dbsprite 10, 6, 6, 2, $00, 0
+	dbsprite 11, 6, 6, 2, $01, 0
+	dbsprite 12, 6, 6, 2, $01, 0
+	dbsprite 13, 6, 6, 2, $01, 0
+	dbsprite 14, 6, 6, 2, $01, 0
+	dbsprite 15, 6, 6, 2, $01, 0
+	dbsprite 16, 6, 6, 2, $01, 0
+	dbsprite 17, 6, 6, 2, $01, 0
+	dbsprite 18, 6, 6, 2, $02, 0
+	dbsprite 10, 7, 6, 2, $03, 0
+	dbsprite 11, 7, 6, 2, $04, 0
+	dbsprite 12, 7, 6, 2, $04, 0
+	dbsprite 13, 7, 6, 2, $04, 0
+	dbsprite 14, 7, 6, 2, $04, 0
+	dbsprite 15, 7, 6, 2, $04, 0
+	dbsprite 16, 7, 6, 2, $04, 0
+	dbsprite 17, 7, 6, 2, $04, 0
+	dbsprite 18, 7, 6, 2, $05, 0
 	db -1
 
 BillsPC_UpdateInsertCursor:
@@ -1509,19 +1499,19 @@ endr
 	jr .loop
 
 .OAM:
-	dbsprite 10, 4, 0, 7, $06, 0
-	dbsprite 11, 5, 0, 3, $01, 0
-	dbsprite 12, 5, 0, 3, $01, 0
-	dbsprite 13, 5, 0, 3, $01, 0
-	dbsprite 14, 5, 0, 3, $01, 0
-	dbsprite 15, 5, 0, 3, $01, 0
-	dbsprite 16, 5, 0, 3, $01, 0
-	dbsprite 17, 5, 0, 3, $01, 0
-	dbsprite 18, 5, 0, 3, $01, 0
-	dbsprite 19, 4, 0, 7, $07, 0
+	dbsprite 10, 5, 0, 7, $06, 0
+	dbsprite 11, 6, 0, 3, $01, 0
+	dbsprite 12, 6, 0, 3, $01, 0
+	dbsprite 13, 6, 0, 3, $01, 0
+	dbsprite 14, 6, 0, 3, $01, 0
+	dbsprite 15, 6, 0, 3, $01, 0
+	dbsprite 16, 6, 0, 3, $01, 0
+	dbsprite 17, 6, 0, 3, $01, 0
+	dbsprite 18, 6, 0, 3, $01, 0
+	dbsprite 19, 5, 0, 7, $07, 0
 	db -1
 
-BillsPC_FillBox: ; unreferenced
+BillsPC_FillBox:
 .row
 	push bc
 	push hl
@@ -1761,24 +1751,18 @@ DepositPokemon:
 	ld a, [wCurPartySpecies]
 	call PlayMonCry
 	hlcoord 0, 0
-	lb bc, 15, 8
-	call ClearBox
-	hlcoord 8, 14
-	lb bc, 1, 3
-	call ClearBox
-	hlcoord 0, 15
-	lb bc, 1, 18
+	lb bc, 12, 7
+	call Textbox
+	hlcoord 0, 14
+	lb bc, 2, 18
 	call Textbox
 	call WaitBGMap
 	hlcoord 1, 16
-	ld de, PCString_Stored
-	call PlaceString
-	ld l, c
-	ld h, b
 	ld de, wStringBuffer1
 	call PlaceString
-	ld a, '!'
-	ld [bc], a
+	hlcoord 6, 16
+	ld de, PCString_Stored
+	call PlaceString
 	ld c, 50
 	call DelayFrames
 	and a
@@ -1816,24 +1800,18 @@ TryWithdrawPokemon:
 	ld a, [wCurPartySpecies]
 	call PlayMonCry
 	hlcoord 0, 0
-	lb bc, 15, 8
-	call ClearBox
-	hlcoord 8, 14
-	lb bc, 1, 3
-	call ClearBox
-	hlcoord 0, 15
-	lb bc, 1, 18
+	lb bc, 12, 7
+	call Textbox
+	hlcoord 0, 14
+	lb bc, 2, 18
 	call Textbox
 	call WaitBGMap
 	hlcoord 1, 16
-	ld de, PCString_Got
-	call PlaceString
-	ld l, c
-	ld h, b
 	ld de, wStringBuffer1
 	call PlaceString
-	ld a, '!'
-	ld [bc], a
+	hlcoord 6, 16
+	ld de, PCString_Got
+	call PlaceString
 	ld c, 50
 	call DelayFrames
 	and a
@@ -1852,13 +1830,10 @@ TryWithdrawPokemon:
 
 ReleasePKMN_ByePKMN:
 	hlcoord 0, 0
-	lb bc, 15, 8
-	call ClearBox
-	hlcoord 8, 14
-	lb bc, 1, 3
-	call ClearBox
-	hlcoord 0, 15
-	lb bc, 1, 18
+	lb bc, 12, 7
+	call Textbox
+	hlcoord 0, 14
+	lb bc, 2, 18
 	call Textbox
 
 	call WaitBGMap
@@ -1874,12 +1849,16 @@ ReleasePKMN_ByePKMN:
 	ld [wTempSpecies], a
 	call GetPokemonName
 	hlcoord 1, 16
+	ld de, wStringBuffer1
+	call PlaceString
+	ld l, c
+	ld h, b
 	ld de, PCString_ReleasedPKMN
 	call PlaceString
 	ld c, 80
 	call DelayFrames
-	hlcoord 0, 15
-	lb bc, 1, 18
+	hlcoord 0, 14
+	lb bc, 2, 18
 	call Textbox
 	hlcoord 1, 16
 	ld de, PCString_Bye
@@ -1891,7 +1870,7 @@ ReleasePKMN_ByePKMN:
 	call PlaceString
 	ld l, c
 	ld h, b
-	ld [hl], '!'
+	ld [hl], '！'
 	ld c, 50
 	call DelayFrames
 	ret
@@ -1905,8 +1884,8 @@ MovePKMNWithoutMail_InsertMon:
 	push de
 	push bc
 	push af
-	hlcoord 0, 15
-	lb bc, 1, 18
+	hlcoord 0, 14
+	lb bc, 2, 18
 	call Textbox
 	hlcoord 1, 16
 	ld de, .Saving_LeaveOn
@@ -1949,7 +1928,7 @@ MovePKMNWithoutMail_InsertMon:
 	ret
 
 .Saving_LeaveOn:
-	db "Saving… Leave ON!@"
+	db "セーブちゅう⋯でんげんを　きらないで@"
 
 .Jumptable:
 	dw .BoxToBox
@@ -2094,11 +2073,11 @@ CopySpeciesToTemp:
 	ret
 
 CopyNicknameToTemp:
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	ld a, [wCurPartyMon]
 	call AddNTimes
 	ld de, wBufferMonNickname
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	ret
 
@@ -2182,22 +2161,22 @@ BillsPC_InitGFX:
 PCSelectLZ: INCBIN "gfx/pc/pc.2bpp.lz"
 PCMailGFX:  INCBIN "gfx/pc/pc_mail.2bpp"
 
-PCString_ChooseaPKMN: db "Choose a <PK><MN>.@"
-PCString_WhatsUp: db "What's up?@"
-PCString_ReleasePKMN: db "Release <PK><MN>?@"
-PCString_MoveToWhere: db "Move to where?@"
-PCString_ItsYourLastPKMN: db "It's your last <PK><MN>!@"
-PCString_TheresNoRoom: db "There's no room!@"
-PCString_NoMoreUsablePKMN: db "No more usable <PK><MN>!@"
-PCString_RemoveMail: db "Remove MAIL.@"
-PCString_ReleasedPKMN: db "Released <PK><MN>.@"
-PCString_Bye: db "Bye,@"
-PCString_Stored: db "Stored @"
-PCString_Got: db "Got @"
-PCString_Non: db "Non.@" ; unreferenced
-PCString_BoxFull: db "The BOX is full.@"
-PCString_PartyFull: db "The party's full!@"
-PCString_NoReleasingEGGS: db "No releasing EGGS!@"
+PCString_ChooseaPKMN: db "#を　えらんでください@"
+PCString_WhatsUp: db "どうしますか？@"
+PCString_ReleasePKMN: db "ほんとうに　にがしますか？@"
+PCString_MoveToWhere: db "いどうさきを　えらんでください@"
+PCString_ItsYourLastPKMN: db "てもち#が　いなくなります！@"
+PCString_TheresNoRoom: db "ここは　もう　いっぱいです！@"
+PCString_NoMoreUsablePKMN: db "たたかう#が　いなくなります！@"
+PCString_RemoveMail: db "メールを　はずしてください@"
+PCString_ReleasedPKMN: db "を　そとに　にがしてあげた@"
+PCString_Bye: db "ばいばい　@"
+PCString_Stored: db "を　あずけた！@"
+PCString_Got: db "を　ひきとった！@"
+PCString_Non: db "なし@" ; unreferenced
+PCString_BoxFull: db "ボックスが　いっぱいです！@"
+PCString_PartyFull: db "これいじょう　つれていけません！@"
+PCString_NoReleasingEGGS: db "タマゴを　にがすことは　できません！@"
 
 _ChangeBox:
 	call LoadStandardMenuHeader
@@ -2230,7 +2209,7 @@ BillsPC_ClearTilemap:
 	ldh [hBGMapMode], a
 	hlcoord 0, 0
 	ld bc, SCREEN_AREA
-	ld a, ' '
+	ld a, '　'
 	call ByteFill
 	ret
 
@@ -2289,15 +2268,15 @@ BillsPC_PrintBoxCountAndCapacity:
 	ld de, wTextDecimalByte
 	lb bc, 1, 2
 	call PrintNum
-	ld de, .OutOf20
+	ld de, .OutOf30
 	call PlaceString
 	ret
 
 .Pokemon:
-	db "#MON@"
+	db "#のかず@"
 
-.OutOf20:
-	db "/{d:MONS_PER_BOX}@" ; "/20@"
+.OutOf30:
+	db "／{d:MONS_PER_BOX}@" ; "/30@"
 
 GetBoxCount:
 	ld a, [wCurBox]
@@ -2363,7 +2342,7 @@ BillsPC_PrintBoxName:
 	ret
 
 .Current:
-	db "CURRENT@"
+	db "いまのボックス@"
 
 BillsPC_ChangeBoxSubmenu:
 	ld hl, .MenuHeader
@@ -2443,24 +2422,24 @@ BillsPC_ChangeBoxSubmenu:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "SWITCH@"
-	db "NAME@"
-	db "PRINT@"
-	db "QUIT@"
+	db "きりかえる@"
+	db "なまえ@"
+	db "プリント@"
+	db "もどる@"
 
 BillsPC_PlaceChooseABoxString:
 	ld de, .ChooseABox
 	jr BillsPC_PlaceChangeBoxString
 
 .ChooseABox:
-	db "Choose a BOX.@"
+	db "ボックスを　えらんでください@"
 
 BillsPC_PlaceWhatsUpString:
 	ld de, .WhatsUp
 	jr BillsPC_PlaceChangeBoxString
 
 .WhatsUp:
-	db "What's up?@"
+	db "なに　するん？@"
 
 BillsPC_PlaceEmptyBoxString_SFX:
 	ld de, .NoMonString
@@ -2473,7 +2452,8 @@ BillsPC_PlaceEmptyBoxString_SFX:
 	ret
 
 .NoMonString:
-	db "There's no #MON.@"
+	db "#が　はいっていません！"
+	done
 
 BillsPC_PlaceChangeBoxString:
 	push de
