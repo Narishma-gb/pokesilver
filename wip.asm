@@ -45,26 +45,6 @@ INCLUDE "main.asm"
 	set_gs_diff 0
 
 
-SECTION "rom57", ROMX[$4000], BANK[57]
-; ROM $39 : $E4000 - $E7FFF
-
-	dr CopyrightGFX, $4000
-	dr TitleScreenGFX3, $41a0
-	set_gs_diff $40
-	drd TitleScreenGFX2, $41e0
-	set_gs_diff $1b8
-	drd TitleScreenGFX1, $4410
-	set_gs_diff $180
-	drd TitleScreenTilemap, $497c
-	set_gs_diff $17a
-	drd _Option, $4a35
-	drd FontInversed, $4d96
-	drd SplashScreen, $5196
-	drd GameFreakPresents_UpdateLogoPal, $530e
-	drd GoldSilverIntro, $549f
-
-	dr
-
 SECTION "rom58", ROMX[$4000], BANK[58]
 ; ROM $3a : $E8000 - $EBFFF
 LoadMusicByte::

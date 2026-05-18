@@ -29,19 +29,19 @@ TitleScreen:
 	call FarDecompress
 
 ; Decompress Ho-Oh/Lugia sprite
-	ld hl, TitleScreenGFX2
+	ld hl, TitleScreenGFX3
 	ld de, vTiles0
-	ld a, BANK(TitleScreenGFX2)
+	ld a, BANK(TitleScreenGFX3)
 	call FarDecompress
 
 ; Ho-Oh/Lugia title trail.
 ; This should only copy 4 tiles; there are 4 extra whitespace tiles in Gold
 ; before Ho-Oh gfx, but Silver reads the first 64 bytes of the compressed
 ; Lugia gfx and writes them to VRAM (but never displays them on screen).
-	ld hl, TitleScreenGFX3
+	ld hl, TitleScreenGFX2
 	ld de, vTiles1 tile $78
 	ld bc, 8 tiles
-	ld a, BANK(TitleScreenGFX3)
+	ld a, BANK(TitleScreenGFX2)
 	call FarCopyBytes
 
 	call FillTitleScreenPals

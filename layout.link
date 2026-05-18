@@ -176,9 +176,11 @@ ROMX $37
 ROMX $38
 	"bank38"
 ROMX $39
-	; "Copyright"
-	; "Title Screen 2"
-	; "bank39"
+	"Copyright"
+	"Title Screen"
+	"Options"
+	"Font Inversed"
+	"Intro"
 ROMX $3a
 	; "Audio"
 	; "Songs 1"
@@ -196,9 +198,6 @@ ROMX $3e
 	; "bank3E_2"
 ROMX $3f
 	; "bank3F"
-; ROMX $40
-	; "Title Screen"
-	; "Font Inversed"
 ; ROMX $64
 ; 	"Text 1"
 ; ROMX $65

@@ -21,8 +21,11 @@ _Option:
 	ld b, SCREEN_HEIGHT - 2
 	ld c, SCREEN_WIDTH - 2
 	call Textbox
-	hlcoord 2, 2
+	hlcoord 1, 2
 	ld de, StringOptions
+	call PlaceString
+	hlcoord 11, 14
+	ld de, StringOptions2
 	call PlaceString
 	xor a
 	ld [wJumptableIndex], a
@@ -72,21 +75,17 @@ _Option:
 	ret
 
 StringOptions:
-	db "TEXT SPEED<LF>"
-	db "        :<LF>"
-	db "BATTLE SCENE<LF>"
-	db "        :<LF>"
-	db "BATTLE STYLE<LF>"
-	db "        :<LF>"
-	db "SOUND<LF>"
-	db "        :<LF>"
-	db "PRINT<LF>"
-	db "        :<LF>"
-	db "MENU ACCOUNT<LF>"
-	db "        :<LF>"
-	db "FRAME<LF>"
-	db "        :TYPE<LF>"
-	db "CANCEL@"
+	db   "はなしの　はやさ"
+	next "せんとう　アニメ"
+	next "しあいの　ルール"
+	next "サウンド"
+	next "プリントの　こさ"
+	next "メニューせつめい"
+	next "ウインドウ@"
+
+StringOptions2:
+	db "タイプ"
+	next "おわり@"
 
 GetOptionPointer:
 	jumptable .Pointers, wJumptableIndex
@@ -149,7 +148,7 @@ Options_TextSpeed:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	hlcoord 11, 3
+	hlcoord 11, 2
 	call PlaceString
 	and a
 	ret
@@ -160,9 +159,9 @@ Options_TextSpeed:
 	dw .Mid
 	dw .Slow
 
-.Fast: db "FAST@"
-.Mid:  db "MID @"
-.Slow: db "SLOW@"
+.Fast: db "はやい@"
+.Mid:  db "ふつう@"
+.Slow: db "おそい@"
 
 GetTextSpeed:
 ; converts TEXT_DELAY_* value in a to OPT_TEXT_SPEED_* value in c,
@@ -219,13 +218,17 @@ Options_BattleScene:
 	ld de, .Off
 
 .Display:
-	hlcoord 11, 5
+	hlcoord 11, 3
+	ld a, '　'
+	ld [hli], a
+	ld [hl], a
+	hlcoord 11, 4
 	call PlaceString
 	and a
 	ret
 
-.On:  db "ON @"
-.Off: db "OFF@"
+.On:  db "じっくり　みる@"
+.Off: db "とばして　みる@"
 
 Options_BattleStyle:
 	ld hl, wOptions
@@ -257,13 +260,13 @@ Options_BattleStyle:
 	ld de, .Set
 
 .Display:
-	hlcoord 11, 7
+	hlcoord 11, 6
 	call PlaceString
 	and a
 	ret
 
-.Shift: db "SHIFT@"
-.Set:   db "SET  @"
+.Shift: db "いれかえタイプ@"
+.Set:   db "かちぬきタイプ@"
 
 Options_Sound:
 	ld hl, wOptions
@@ -302,13 +305,13 @@ Options_Sound:
 	ld de, .Stereo
 
 .Display:
-	hlcoord 11, 9
+	hlcoord 11, 8
 	call PlaceString
 	and a
 	ret
 
-.Mono:   db "MONO  @"
-.Stereo: db "STEREO@"
+.Mono:   db "モノラル　@"
+.Stereo: db "ステレオ@"
 
 	const_def
 	const OPT_PRINT_LIGHTEST ; 0
@@ -356,7 +359,7 @@ Options_Print:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	hlcoord 11, 11
+	hlcoord 11, 10
 	call PlaceString
 	and a
 	ret
@@ -369,11 +372,11 @@ Options_Print:
 	dw .Darker
 	dw .Darkest
 
-.Lightest: db "LIGHTEST@"
-.Lighter:  db "LIGHTER @"
-.Normal:   db "NORMAL  @"
-.Darker:   db "DARKER  @"
-.Darkest:  db "DARKEST @"
+.Lightest: db "うすい　　　@"
+.Lighter:  db "やや　うすい@"
+.Normal:   db "ふつう　　　@"
+.Darker:   db "やや　こい　@"
+.Darkest:  db "こい　　　　@"
 
 GetPrinterSetting:
 ; converts GBPRINTER_* value in a to OPT_PRINT_* value in c,
@@ -442,13 +445,13 @@ Options_MenuAccount:
 	ld de, .On
 
 .Display:
-	hlcoord 11, 13
+	hlcoord 11, 12
 	call PlaceString
 	and a
 	ret
 
-.Off: db "OFF@"
-.On:  db "ON @"
+.Off: db "ひょうじ　しない@"
+.On:  db "ひょうじ　する　@"
 
 Options_Frame:
 	ld hl, wTextboxFrame
@@ -474,8 +477,8 @@ Options_Frame:
 	ld [hl], a
 UpdateFrame:
 	ld a, [wTextboxFrame]
-	hlcoord 16, 15 ; where on the screen the number is drawn
-	add '1'
+	hlcoord 15, 14 ; where on the screen the number is drawn
+	add '１'
 	ld [hl], a
 	call LoadFontsExtra
 	and a
@@ -541,15 +544,15 @@ OptionsControl:
 	ret
 
 Options_UpdateCursorPosition:
-	hlcoord 1, 1
+	hlcoord 10, 1
 	ld de, SCREEN_WIDTH
 	ld c, SCREEN_HEIGHT - 2
 .loop
-	ld [hl], ' '
+	ld [hl], '　'
 	add hl, de
 	dec c
 	jr nz, .loop
-	hlcoord 1, 2
+	hlcoord 10, 2
 	ld bc, 2 * SCREEN_WIDTH
 	ld a, [wJumptableIndex]
 	call AddNTimes

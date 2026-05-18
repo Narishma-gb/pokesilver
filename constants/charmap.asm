@@ -180,11 +180,9 @@
 	charmap "▲",  $61 ; gfx/font/up_arrow.png
 	charmap "☎", $62 ; gfx/font/phone_icon.2bpp
 
-;	needed for LoadTownMap_Fly (see engine/items/town_map.asm)
-;	charmap "▲",       $ed ; gfx/town_map/up_arrow.1bpp
-
 ;	needed for PrintAlphabet (see engine/menus/naming_screen.asm)
 	charmap "<ED>", $f0 ; gfx/font/ED.1bpp
+
 
 ; Actual characters (from gfx/font/font.png)
 
@@ -237,7 +235,7 @@
 	charmap "ャ", $ad
 	charmap "ュ", $ae
 	charmap "ョ", $af
-	charmap "ィ", $b0  ; Katakana small "イ"
+	charmap "ィ", $b0 ; Katakana small "イ"
 
 	charmap "あ", $b1
 	charmap "い", $b2

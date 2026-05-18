@@ -4,23 +4,28 @@ EggPic::
 INCBIN "gfx/pokemon/egg/egg.2bpp.lz"
 
 
-;SECTION "Title Screen", ROMX
+SECTION "Title Screen", ROMX
 
-;IF DEF(_GOLD)
-;TitleScreenGFX1::
-;INCBIN "gfx/title/logo_bottom_gold.2bpp.lz"
-;TitleScreenGFX2::
-;INCBIN "gfx/title/logo_top_gold.2bpp.lz"
+IF DEF(_GOLD)
+TitleScreenGFX2::
+INCBIN "gfx/title/title_trail_gold.2bpp"
+TitleScreenGFX3::
+INCBIN "gfx/title/hooh_gold.2bpp.lz"
+TitleScreenGFX1::
+INCBIN "gfx/title/logo_gold.2bpp.lz"
+TitleScreenTilemap::
+INCBIN "gfx/title/logo_gold.tilemap"
 
-;ELIF DEF(_SILVER)
-;TitleScreenGFX1::
-;INCBIN "gfx/title/logo_bottom_silver.2bpp.lz"
-;TitleScreenGFX2::
-;INCBIN "gfx/title/logo_top_silver.2bpp.lz"
-;ENDC
-
-;TitleScreenTilemap::
-;INCBIN "gfx/title/logo.tilemap"
+ELIF DEF(_SILVER)
+TitleScreenGFX2::
+INCBIN "gfx/title/title_trail_silver.2bpp"
+TitleScreenGFX3::
+INCBIN "gfx/title/lugia_silver.2bpp.lz"
+TitleScreenGFX1::
+INCBIN "gfx/title/logo_silver.2bpp.lz"
+TitleScreenTilemap::
+INCBIN "gfx/title/logo_silver.tilemap"
+ENDC
 
 
 SECTION "The End", ROMX
@@ -29,32 +34,16 @@ TheEndGFX::
 INCBIN "gfx/credits/theend.2bpp"
 
 
-;SECTION "Font Inversed", ROMX
+SECTION "Font Inversed", ROMX
 
-;FontInversed::
-;INCBIN "gfx/font/font_inversed.1bpp"
-
-
-;SECTION "Copyright", ROMX
-
-;CopyrightGFX::
-;INCBIN "gfx/splash/copyright.2bpp"
+FontInversed::
+INCBIN "gfx/font/font_inversed.1bpp"
 
 
-;SECTION "Title Screen 2", ROMX
+SECTION "Copyright", ROMX
 
-;IF DEF(_GOLD)
-;TitleScreenGFX3::
-;INCBIN "gfx/title/title_trail_gold.2bpp"
-;TitleScreenGFX4::
-;INCBIN "gfx/title/hooh_gold.2bpp.lz"
-
-;ELIF DEF(_SILVER)
-;TitleScreenGFX3::
-;INCBIN "gfx/title/title_trail_silver.2bpp"
-;TitleScreenGFX4::
-;INCBIN "gfx/title/lugia_silver.2bpp.lz"
-;ENDC
+CopyrightGFX::
+INCBIN "gfx/splash/copyright.2bpp"
 
 
 ;SECTION "Shrink Pics", ROMX

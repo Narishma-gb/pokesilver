@@ -46,10 +46,8 @@ gfx/tilesets/ruins_of_alph.2bpp.lz: LZFLAGS += --method 6 --align 4
 gfx/tilesets/tower.2bpp.lz: LZFLAGS += --method 2 --align 4
 
 gfx/title/hooh_gold.2bpp.lz: LZFLAGS += --align 3
-gfx/title/logo_bottom_gold.2bpp.lz: LZFLAGS += --method 9 --align 1
-gfx/title/logo_bottom_silver.2bpp.lz: LZFLAGS += --method 9 --align 1
-gfx/title/logo_top_gold.2bpp.lz: LZFLAGS += --method 9 --align 1
-gfx/title/logo_top_silver.2bpp.lz: LZFLAGS += --method 9 --align 1
+gfx/title/logo_gold.2bpp.lz: LZFLAGS += --align 1
+gfx/title/logo_silver.2bpp.lz: LZFLAGS += --align 1
 gfx/title/lugia_silver.2bpp.lz: LZFLAGS += --align 4
 
 gfx/unown_puzzle/%.lz: LZFLAGS += --align 4
