@@ -1,9 +1,9 @@
 SUMMARY:
 	ROM0: 15927 bytes used / 457 free
-	ROMX: 1019580 bytes used / 12612 free in 63 banks
+	ROMX: 1011460 bytes used / 20732 free in 63 banks
 	SRAM: 30100 bytes used / 2668 free in 4 banks
 	WRAM0: 4057 bytes used / 39 free
-	WRAMX: 3638 bytes used / 458 free in 1 bank
+	WRAMX: 4096 bytes used / 0 free in 1 bank
 	HRAM: 127 bytes used / 0 free
 
 ROM0 bank #0:
@@ -29156,8 +29156,10 @@ ROMX bank #62:
 	TOTAL EMPTY: $00a8 bytes
 
 ROMX bank #63:
-	SECTION: $4000-$7fff ($4000 bytes) ["rom63"]
+	SECTION: $4000-$6047 ($2048 bytes) ["bank3F"]
+	         $4000 = DummyPredef3A_DummyData
 	         $4001 = DummyPredef3A
+	         $4002 = DummyPredef3A_DummyFunction
 	         $4003 = _AnimateTileset
 	         $401e = Tileset0Anim
 	         $401e = TilesetJohtoModernAnim
@@ -29165,12 +29167,17 @@ ROMX bank #63:
 	         $401e = TilesetParkAnim
 	         $401e = TilesetForestAnim
 	         $404a = TilesetJohtoAnim
+	         $407e = UnusedTilesetAnim1
+	         $40aa = UnusedTilesetAnim2
 	         $40d6 = TilesetPortAnim
 	         $4106 = TilesetEliteFourRoomAnim
+	         $4126 = UnusedTilesetAnim3
+	         $4156 = UnusedTilesetAnim4
 	         $418e = TilesetCaveAnim
 	         $418e = TilesetDarkCaveAnim
 	         $41da = TilesetIcePathAnim
 	         $4226 = TilesetTowerAnim
+	         $4266 = UnusedTilesetAnim5
 	         $428e = TilesetHouseAnim
 	         $428e = TilesetPlayersHouseAnim
 	         $428e = TilesetPokecenterAnim
@@ -29188,11 +29195,295 @@ ROMX bank #63:
 	         $428e = TilesetRuinsOfAlphAnim
 	         $428e = TilesetRadioTowerAnim
 	         $428e = TilesetUndergroundAnim
+	         $42a2 = DoneTileAnimation
+	         $42a5 = WaitTileAnimation
+	         $42a6 = StandingTileFrame8
+	         $42b0 = ScrollTileRightLeft
+	         $42bf = ScrollTileUpDown
+	         $42ce = ScrollTileLeft
+	         $42d2 = ScrollTileLeft.loop
+	         $42e2 = ScrollTileRight
+	         $42e6 = ScrollTileRight.loop
+	         $42f6 = ScrollTileUp
+	         $4301 = ScrollTileUp.loop
+	         $4311 = ScrollTileDown
+	         $431e = ScrollTileDown.loop
+	         $432e = AnimateWaterTile
+	         $4348 = AnimateWaterTile.WaterTileFrames
+	         $4388 = AnimateFlowerTile
+	         $43a7 = AnimateFlowerTile.FlowerTileFrames
+	         $43e7 = AnimateLavaBubbleTile1
+	         $4406 = AnimateLavaBubbleTile2
+	         $4420 = LavaBubbleTileFrames
+	         $4460 = AnimateTowerPillarTile
+	         $4486 = AnimateTowerPillarTile.TowerPillarTileFrameOffsets
+	         $448e = StandingTileFrame
+	         $4493 = AnimateWhirlpoolTile
+	         $44b1 = WriteTileFromAnimBuffer
+	         $44bd = ReadTileToAnimBuffer
+	         $44c7 = WriteTile
+	         $44f2 = AnimateWaterPalette
+	         $4519 = AnimateWaterPalette.color0
+	         $4523 = AnimateWaterPalette.color2
+	         $452d = FlickeringCaveEntrancePalette
+	         $454b = FlickeringCaveEntrancePalette.color1
+	         $454e = FlickeringCaveEntrancePalette.okay
+	         $4555 = TowerPillarTilePointer1
+	         $4559 = TowerPillarTilePointer2
+	         $455d = TowerPillarTilePointer3
+	         $4561 = TowerPillarTilePointer4
+	         $4565 = TowerPillarTilePointer5
+	         $4569 = TowerPillarTilePointer6
+	         $456d = TowerPillarTilePointer7
+	         $4571 = TowerPillarTilePointer8
+	         $4575 = TowerPillarTilePointer9
+	         $4579 = TowerPillarTilePointer10
+	         $457d = TowerPillarTile1
+	         $45cd = TowerPillarTile2
+	         $461d = TowerPillarTile3
+	         $466d = TowerPillarTile4
+	         $46bd = TowerPillarTile5
+	         $470d = TowerPillarTile6
+	         $475d = TowerPillarTile7
+	         $47ad = TowerPillarTile8
+	         $47fd = TowerPillarTile9
+	         $484d = TowerPillarTile10
+	         $489d = WhirlpoolFrames1
+	         $48a1 = WhirlpoolFrames2
+	         $48a5 = WhirlpoolFrames3
+	         $48a9 = WhirlpoolFrames4
+	         $48ad = WhirlpoolTiles1
+	         $48ed = WhirlpoolTiles2
+	         $492d = WhirlpoolTiles3
+	         $496d = WhirlpoolTiles4
+	         $49ad = TilesetAnims_DummyFunction
 	         $49ae = NPCTrade
+	         $4a09 = NPCTrade.done
+	         $4a0d = NPCTrade.TradeAnimation
+	         $4a29 = CheckTradeGender
+	         $4a44 = CheckTradeGender.check_male
+	         $4a4c = CheckTradeGender.matching
+	         $4a4e = CheckTradeGender.not_matching
+	         $4a50 = TradeFlagAction
+	         $4a5f = Trade_GetDialog
+	         $4a69 = DoNPCTrade
+	         $4b8e = GetTradeAttr
+	         $4ba2 = Trade_GetAttributeOfCurrentPartymon
+	         $4ba9 = Trade_GetAttributeOfLastPartymon
+	         $4bb3 = GetTradeMonName
+	         $4bbf = CopyTradeName
+	         $4bc6 = Trade_CopyFourCharString
+	         $4bd0 = Trade_CopyThreeCharString
+	         $4bda = Trade_CopyTwoBytes
+	         $4be0 = Trade_CopyTwoBytesReverseEndian
+	         $4be6 = GetTradeMonNames
+	         $4c07 = GetTradeMonNames.loop
+	         $4c1f = GetTradeMonNames.done
+	         $4c23 = NPCTrades
+	         $4c83 = PrintTradeText
+	         $4ca1 = TradeTexts
+	         $4cbf = NPCTradeCableText
+	         $4cd1 = TradedForText
+	         $4cf9 = TradedForText.done
+	         $4cfc = NPCTradeIntroText1
+	         $4d32 = NPCTradeCancelText1
+	         $4d4d = NPCTradeWrongText1
+	         $4d6c = NPCTradeCompleteText1
+	         $4d88 = NPCTradeAfterText1
+	         $4da3 = NPCTradeIntroText2
+	         $4de1 = NPCTradeCancelText2
+	         $4df8 = NPCTradeWrongText2
+	         $4e14 = NPCTradeCompleteText2
+	         $4e35 = NPCTradeAfterText2
+	         $4e55 = NPCTradeIntroText3
+	         $4e9d = NPCTradeCancelText3
+	         $4eb7 = NPCTradeWrongText3
+	         $4ed5 = NPCTradeCompleteText3
+	         $4ef1 = NPCTradeAfterText3
 	         $4f17 = MomTriesToBuySomething
+	         $4f3a = MomTriesToBuySomething.Script
+	         $4f42 = MomTriesToBuySomething.ASMFunction
+	         $4f52 = MomTriesToBuySomething.ok
+	         $4f6f = CheckBalance_MomItem2
+	         $4f90 = CheckBalance_MomItem2.nope
+	         $4f92 = CheckBalance_MomItem2.have_enough_money
+	         $4f94 = CheckBalance_MomItem2.check_have_2300
+	         $4f9f = CheckBalance_MomItem2.loop
+	         $4fb4 = CheckBalance_MomItem2.less_than
+	         $4fb6 = CheckBalance_MomItem2.exact
+	         $4fc4 = CheckBalance_MomItem2.AddMoney
+	         $4fd1 = MomBuysItem_DeductFunds
+	         $4fee = Mom_GiveItemOrDoll
+	         $5006 = Mom_GiveItemOrDoll.not_doll
+	         $5016 = Mom_GetScriptPointer
+	         $5028 = Mom_GetScriptPointer.ItemScript
+	         $5035 = Mom_GetScriptPointer.DollScript
+	         $5042 = GetItemFromMom
+	         $504e = GetItemFromMom.zero
+	         $5056 = GetItemFromMom.ok
+	         $5059 = GetItemFromMom.GetFromList1
+	         $5061 = MomItems_1
+	         $5089 = MomItems_2
+	         $5089 = MomItems_1.End
+	         $50d9 = MomItems_2.End
+	         $50dc = MomHiHowAreYouText
+	         $50e9 = MomFoundAnItemText
+	         $510c = MomBoughtWithYourMoneyText
+	         $5123 = MomItsInPCText
+	         $5146 = MomFoundADollText
+	         $5170 = MomItsInYourRoomText
 	         $5192 = StagePartyDataForMysteryGift
+	         $51a0 = StagePartyDataForMysteryGift.loop
+	         $51c5 = StagePartyDataForMysteryGift.next
+	         $51cf = StagePartyDataForMysteryGift.party_end
 	         $51da = InitMysteryGiftLayout
-	TOTAL EMPTY: $0000 bytes
+	         $52c7 = InitMysteryGiftLayout.Load3GFX
+	         $52cb = InitMysteryGiftLayout.Load4GFX
+	         $52cf = InitMysteryGiftLayout.Load15GFX
+	         $52d1 = InitMysteryGiftLayout.gfx_loop
+	         $52d7 = InitMysteryGiftLayout.Load9Column
+	         $52db = InitMysteryGiftLayout.Load11Column
+	         $52df = InitMysteryGiftLayout.Load15Column
+	         $52e1 = InitMysteryGiftLayout.col_loop
+	         $52ea = InitMysteryGiftLayout.Load16Row
+	         $52ec = InitMysteryGiftLayout.row_loop
+	         $52f1 = MysteryGiftGFX
+	         $54f1 = DebugColorPicker
+	         $54fa = DebugColorPicker.cgb
+	         $5523 = DebugColorPicker.loop
+	         $5535 = DebugColorPicker.exit
+	         $5539 = DebugColor_InitMonOrTrainerColor
+	         $5542 = DebugColor_InitMonColor
+	         $5547 = DebugColor_InitMonColor.loop
+	         $5556 = DebugColor_InitTrainerColor
+	         $555e = DebugColor_InitTrainerColor.loop
+	         $556d = DebugColor_InitColor
+	         $558d = DebugColor_InitVRAM
+	         $55c1 = DebugColor_LoadGFX
+	         $55e2 = DebugColor_LoadGFX.loop
+	         $55ec = DebugColor_InitPalettes
+	         $5606 = DebugColor_InitPalettes.bg_loop
+	         $5614 = DebugColor_InitPalettes.ob_loop
+	         $562f = Palette_DebugBG
+	         $566f = Palette_DebugOB
+	         $56af = DebugColorMain
+	         $56c6 = DebugColorMain.no_start_select
+	         $56d5 = DebugColorMain.NextMon
+	         $56e6 = DebugColorMain.PreviousMon
+	         $56f5 = DebugColorMain.SwitchMon
+	         $56fe = DebugColorMain.SetMaxNum
+	         $5707 = DebugColorMain.trainer
+	         $570a = DebugColorMain.Jumptable
+	         $5716 = DebugColor_InitScreen
+	         $57a1 = DebugColor_InitScreen.normal
+	         $57a4 = DebugColor_InitScreen.place_text
+	         $57b5 = DebugColor_InitScreen.trainer
+	         $57e4 = DebugColor_InitScreen.done
+	         $57ea = DebugColor_InitScreen.ShinyText
+	         $57ef = DebugColor_InitScreen.NormalText
+	         $57f4 = DebugColor_InitScreen.SwitchText
+	         $57fb = DebugColor_LoadRGBMeter
+	         $5819 = DebugColor_LoadRGBMeter.load_meter
+	         $582f = DebugColor_SetRGBMeter
+	         $5853 = DebugColor_UpdateScreen
+	         $5865 = DebugColor_UpdateScreen.sgb
+	         $586e = DebugColor_UpdatePalettes
+	         $589a = DebugColor_UpdatePalettes.sgb
+	         $58d8 = DebugColor_PrintHexColor
+	         $58ed = DebugColor_PrintHexColor.place_tile
+	         $58f3 = DebugColor_Joypad
+	         $5910 = DebugColor_Joypad.tmhm
+	         $5916 = DebugColor_Joypad.toggle_shiny
+	         $5933 = DebugColor_Joypad.PointerTable
+	         $593b = DebugColor_SelectColorBox
+	         $594e = DebugColor_SelectColorBox.light
+	         $5959 = DebugColor_SelectColorBox.dark
+	         $5965 = DebugColor_ChangeRedValue
+	         $5977 = DebugColor_ChangeGreenValue
+	         $5989 = DebugColor_ChangeBlueValue
+	         $5994 = DebugColor_UpdateRGBColor
+	         $59a1 = DebugColor_UpdateRGBColor.increment
+	         $59a8 = DebugColor_UpdateRGBColor.decrement
+	         $59ac = DebugColor_UpdateRGBColor.done
+	         $59b5 = DebugColor_PreviousRGBColor
+	         $59ba = DebugColor_NextRGBColor
+	         $59bf = DebugColor_InitTMHM
+	         $59e0 = DebugColor_TMHMJoypad
+	         $59ec = DebugColor_TMHMJoypad.cancel
+	         $59f2 = DebugColor_TMHMJoypad.exit
+	         $59f8 = DebugColor_TMHMJoypad.scroll
+	         $5a06 = DebugColor_TMHMJoypad.up
+	         $5a10 = DebugColor_TMHMJoypad.wrap_down
+	         $5a13 = DebugColor_TMHMJoypad.down
+	         $5a1c = DebugColor_TMHMJoypad.wrap_up
+	         $5a1e = DebugColor_TMHMJoypad.done
+	         $5a25 = DebugColor_PrintTMHMMove
+	         $5a70 = DebugColor_PrintTMHMMove.place_string
+	         $5a77 = DebugColor_PrintTMHMMove.AbleText
+	         $5a7e = DebugColor_PrintTMHMMove.NotAbleText
+	         $5a86 = DebugColor_PrintTMHMMove.GetNumberedTMHM
+	         $5a8c = DebugColor_PrintTMHMMove.tm
+	         $5a8f = DebugColor_PrintTMHMMove.ClearRow
+	         $5a98 = DebugColor_CalculatePalette
+	         $5acd = DebugColor_CalculatePalette.light
+	         $5ad6 = DebugColor_CalculateRGB
+	         $5afb = DebugColor_BackupSpriteColors
+	         $5b14 = DebugColor_LoadPalettes_White_Col1_Col2_Black
+	         $5b14 = DebugColor_LoadPalettes_White_Col1_Col2_Black.loop
+	         $5b2d = DebugColor_FillBoxWithByte
+	         $5b2d = DebugColor_FillBoxWithByte.row
+	         $5b2f = DebugColor_FillBoxWithByte.col
+	         $5b3d = DebugColor_PushSGBPals
+	         $5b4e = _DebugColor_PushSGBPals
+	         $5b53 = _DebugColor_PushSGBPals.loop
+	         $5b5d = _DebugColor_PushSGBPals.loop2
+	         $5b61 = _DebugColor_PushSGBPals.loop3
+	         $5b69 = _DebugColor_PushSGBPals.okay
+	         $5b82 = _DebugColor_PushSGBPals.wait
+	         $5b8f = DebugColor_PlaceCursor
+	         $5bbe = DebugColor_PlaceCursor.place_cursor
+	         $5bc9 = DebugColor_PlaceCursor.light
+	         $5bcc = DebugColor_PlaceCursor.place
+	         $5be8 = DebugColor_PlaceCursor.placesprite
+	         $5bfa = DebugColor_PlaceCursor.clearsprites
+	         $5bfe = DebugColor_AreYouFinishedString
+	         $5c14 = DebugColor_UpArrowGFX
+	         $5c24 = DebugColor_GFX
+	         $5d84 = TilesetColorPicker
+	         $5e03 = DebugTileset_DrawColorSwatch
+	         $5e09 = DebugColor_DrawAttributeSwatch
+	         $5e0f = _DebugColor_DrawSwatch
+	         $5e25 = DebugTileset_LoadRGBMeter
+	         $5e34 = DebugTileset_LoadRGBMeter.Place
+	         $5e40 = DebugTileset_LoadPalettes
+	         $5e5d = DebugColorMain2
+	         $5e6e = DebugColorMain2.next_palette
+	         $5e7a = DebugColorMain2.palette_ok
+	         $5eb6 = DebugColorMain2.cancel
+	         $5ec0 = DebugTileset_UpdatePalettes
+	         $5f03 = DebugTileset_Joypad
+	         $5f14 = DebugTileset_Joypad.PointerTable
+	         $5f1c = DebugTileset_SelectColorBox
+	         $5f2f = DebugTileset_SelectColorBox.left
+	         $5f35 = DebugTileset_SelectColorBox.right
+	         $5f39 = DebugTileset_SelectColorBox.done
+	         $5f4c = DebugTileset_ChangeRedValue
+	         $5f5e = DebugTileset_ChangeGreenValue
+	         $5f70 = DebugTileset_ChangeBlueValue
+	         $5f7b = DebugTileset_UpdateRGBColor
+	         $5f88 = DebugTileset_UpdateRGBColor.increment
+	         $5f8f = DebugTileset_UpdateRGBColor.decrement
+	         $5f93 = DebugTileset_UpdateRGBColor.done
+	         $5f9a = DebugTileset_PreviousRGBColor
+	         $5f9f = DebugTileset_NextRGBColor
+	         $5fa4 = DebugTileset_CalculatePalette
+	         $5fd9 = DebugTileset_PlaceCursor
+	         $6009 = DebugTileset_PlaceCursor.place_cursor
+	         $602f = DebugTileset_PlaceCursor.placesprite
+	         $6043 = DebugTileset_PlaceCursor.clearsprites
+	         $6047 = DebugTileset_PlaceCursor.dummy
+	EMPTY: $6048-$7fff ($1fb8 bytes)
+	TOTAL EMPTY: $1fb8 bytes
 
 VRAM bank #0:
 	SECTION: $8000-$9fff ($2000 bytes) ["VRAM0"]
@@ -32096,8 +32387,8 @@ SRAM bank #1:
 	         $bdb0 = sHallOfFame42Mon3Level
 	         $bdb1 = sHallOfFame42Mon3Nickname
 	         $bdb6 = sHallOfFame42Mon4Species
-	         $bdb6 = sHallOfFame42Mon3End
 	         $bdb6 = sHallOfFame42Mon4
+	         $bdb6 = sHallOfFame42Mon3End
 	         $bdb7 = sHallOfFame42Mon4ID
 	         $bdb9 = sHallOfFame42Mon4DVs
 	         $bdbb = sHallOfFame42Mon4Level
@@ -39498,6 +39789,7 @@ WRAM0 bank #0:
 	SECTION: $c700-$cc13 ($0514 bytes) ["Overworld Map"]
 	         $c700 = wBillsPCData
 	         $c700 = wLinkData
+	         $c700 = wDebugOriginalColors
 	         $c700 = wOverworldMapBlocks
 	         $c700 = wDecompressScratch
 	         $c700 = wGameboyPrinterRAM
@@ -40560,6 +40852,7 @@ WRAM0 bank #0:
 	         $ce99 = wTileLeft
 	         $ce9a = wTileRight
 	         $ce9b = wTilePermissions
+	         $cebd = wcebd
 	         $cedc = wWindowStackPointer
 	         $cedc = wMenuMetadata
 	         $cede = wMenuJoypad
@@ -40652,6 +40945,7 @@ WRAM0 bank #0:
 	         $cf21 = wCurBeatUpPartyMon
 	         $cf21 = wKeepSevenBiasChance
 	         $cf21 = wTempRestorePPItem
+	         $cf21 = wDebugColorIsTrainer
 	         $cf21 = wTownMapPlayerIconLandmark
 	         $cf21 = wBugContestFirstPlaceWinnerID
 	         $cf22 = wMagnetTrainInitPosition
@@ -40666,7 +40960,9 @@ WRAM0 bank #0:
 	         $cf22 = wTempPokedexCaughtCount
 	         $cf22 = wOwnedDecoCategories
 	         $cf22 = wCurOTTradePartyMon
+	         $cf22 = wDebugColorIsShiny
 	         $cf22 = wNextRadioLine
+	         $cf23 = wDebugColorCurTMHM
 	         $cf23 = wTrainerHUDTiles
 	         $cf23 = wCreditsTimer
 	         $cf23 = wMagnetTrainHoldPosition
@@ -42666,8 +42962,9 @@ WRAMX bank #1:
 	         $de36 = wOTPartyDataEnd
 	         $de36 = wPokemonDataEnd
 	         $de36 = wGameDataEnd
-	EMPTY: $de36-$dfff ($01ca bytes)
-	TOTAL EMPTY: $01ca bytes
+	SECTION: $de36-$dfff ($01ca bytes) ["Stack"]
+	         $dfff = wStackTop
+	TOTAL EMPTY: $0000 bytes
 
 HRAM bank #0:
 	SECTION: $ff80-$ff89 ($000a bytes) ["OAM DMA"]
