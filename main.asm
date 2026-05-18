@@ -325,13 +325,13 @@ INCLUDE "engine/battle/hidden_power.asm"
 INCLUDE "engine/battle/misc.asm"
 
 
-;SECTION "bank3F", ROMX
+SECTION "bank3F", ROMX
 
-;INCLUDE "engine/tilesets/tileset_anims.asm"
-;INCLUDE "engine/events/npc_trade.asm"
-;INCLUDE "engine/events/mom_phone.asm"
-;INCLUDE "engine/link/mystery_gift_3.asm"
-;INCLUDE "engine/debug/color_picker.asm"
+INCLUDE "engine/tilesets/tileset_anims.asm"
+INCLUDE "engine/events/npc_trade.asm"
+INCLUDE "engine/events/mom_phone.asm"
+INCLUDE "engine/link/mystery_gift_3.asm"
+INCLUDE "engine/debug/color_picker.asm"
 
 
 SECTION "Standard Scripts", ROMX
@@ -352,30 +352,3 @@ INCLUDE "data/phone/text/bill.asm"
 INCLUDE "data/phone/text/elm.asm"
 INCLUDE "data/phone/text/trainers.asm"
 INCLUDE "data/phone/text/bike_shop.asm"
-
-
-;SECTION "bank70", ROMX
-
-;INCLUDE "engine/printer/print_party.asm"
-;IF DEF(_DEBUG)
-;INCLUDE "engine/debug/debug_room.asm"
-;ENDC
-
-
-;SECTION "bank70_2", ROMX
-
-;INCLUDE "engine/rtc/print_hours_mins.asm"
-;INCLUDE "engine/pokedex/pokedex_3.asm"
-;INCLUDE "engine/events/catch_tutorial_input.asm"
-;INCLUDE "engine/pokegear/townmap_convertlinebreakcharacters.asm"
-
-
-;SECTION "Stadium 2 Checksums", ROMX[$7DF8], BANK[$7F]
-
-;; The end of the ROM is taken up by checksums of the content, apparently used
-;; by Pokémon Stadium 2 due to the checksums' "N64PS3" header. (In Japan,
-;; Pokémon Stadium Gold and Silver was the third Stadium release for N64.)
-;; This SECTION reserves space for those checksums.
-;; If it is removed, also remove the "tools/stadium" command in the Makefile.
-
-;	ds $208

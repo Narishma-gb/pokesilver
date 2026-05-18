@@ -214,25 +214,33 @@ endr
 INCLUDE "data/items/mom_phone.asm"
 
 MomHiHowAreYouText:
-	text_far _MomHiHowAreYouText
-	text_end
+	text "もしもし"
+	line "<PLAYER>　げんき？"
+	prompt
 
 MomFoundAnItemText:
-	text_far _MomFoundAnItemText
-	text_end
+	text "きょう　おかいものに　いったら"
+	line "よさそうな　どうぐが　うってたから"
+	prompt
 
 MomBoughtWithYourMoneyText:
-	text_far _MomBoughtWithYourMoneyText
-	text_end
+	text "<PLAYER>の　おかねで"
+	line "かっちゃった！　ごめんね！"
+	prompt
 
 MomItsInPCText:
-	text_far _MomItsInPCText
-	text_end
+	text "でも　<PC>に　いれておいたから"
+	line "つかってね！　きっと　やくにたつわ！"
+	done
 
 MomFoundADollText:
-	text_far _MomFoundADollText
-	text_end
+	text "きょう　おかいものに　いったら"
+
+	para "すっごく　かわいい"
+	line "ぬいぐるみが　うってたから<⋯>"
+	prompt
 
 MomItsInYourRoomText:
-	text_far _MomItsInYourRoomText
-	text_end
+	text "でも　へやにおいたから　みてね！"
+	line "きっと　きにいると　おもうわ！"
+	done

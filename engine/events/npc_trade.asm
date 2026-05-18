@@ -170,10 +170,10 @@ DoNPCTrade:
 	ld e, NPCTRADE_NICKNAME
 	call GetTradeAttr
 	ld de, wOTTrademonNickname
-	call CopyTradeName
+	call Trade_CopyFourCharString
 
 	ld hl, wPartyMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call Trade_GetAttributeOfLastPartymon
 	ld hl, wOTTrademonNickname
 	call CopyTradeName
@@ -182,10 +182,10 @@ DoNPCTrade:
 	call GetTradeAttr
 	push hl
 	ld de, wOTTrademonOTName
-	call CopyTradeName
+	call Trade_CopyThreeCharString
 	pop hl
 	ld de, wOTTrademonSenderName
-	call CopyTradeName
+	call Trade_CopyThreeCharString
 
 	ld hl, wPartyMonOTs
 	ld bc, NAME_LENGTH
@@ -253,7 +253,6 @@ GetTradeAttr:
 	ld d, 0
 	ld hl, NPCTrades
 	add hl, de
-	add hl, de
 	pop de
 	add hl, de
 	ret
@@ -284,14 +283,14 @@ CopyTradeName:
 	call CopyBytes
 	ret
 
-Trade_CopyFourCharString: ; unreferenced
+Trade_CopyFourCharString:
 	ld bc, 4
 	call CopyBytes
 	ld a, '@'
 	ld [de], a
 	ret
 
-Trade_CopyThreeCharString: ; unreferenced
+Trade_CopyThreeCharString:
 	ld bc, 3
 	call CopyBytes
 	ld a, '@'
@@ -403,12 +402,18 @@ TradeTexts:
 	assert_table_length NUM_TRADE_DIALOGS * NUM_TRADE_DIALOGSETS
 
 NPCTradeCableText:
-	text_far _NPCTradeCableText
-	text_end
+	text "じゃあ"
+	line "ケーブルを　つないで<⋯>と"
+	prompt
 
 TradedForText:
 	; traded givemon for getmon
-	text_far Text_NPCTraded
+	text "<PLAYER>は　@"
+	text_ram wMonOrItemNameBuffer
+	text "と"
+	line "@"
+	text_ram wStringBuffer2
+	text "を　こうかんした！@"
 	text_asm
 	ld de, MUSIC_NONE
 	call PlayMusic
@@ -417,65 +422,131 @@ TradedForText:
 	ret
 
 .done
-	text_far _NPCTradeFanfareText
+	sound_dex_fanfare_80_109
+	text_pause
 	text_end
 
 NPCTradeIntroText1:
-	text_far _NPCTradeIntroText1
-	text_end
+	text "ボク　#　あつめてるんだ！"
+	line "キミは　@"
+	text_ram wStringBuffer1
+	text "を　もってる？"
+
+	para "ボクの　@"
+	text_ram wStringBuffer2
+	text "と"
+	line "こうかん　しようよ？"
+	done
 
 NPCTradeCancelText1:
-	text_far _NPCTradeCancelText1
-	text_end
+	text "とりかえて　くれないの？"
+	line "ちぇっ　がっかりだなあ<⋯>"
+	done
 
 NPCTradeWrongText1:
-	text_far _NPCTradeWrongText1
-	text_end
+	text "あれ<⋯>？"
+	line "@"
+	text_ram wStringBuffer1
+	text "じゃ　ないよ"
+	cont "ちぇっ　ざんねんだなあ<⋯>"
+	done
 
 NPCTradeCompleteText1:
-	text_far _NPCTradeCompleteText1
-	text_end
+	text "やったあ！"
+	line "@"
+	text_ram wStringBuffer1
+	text "<GA>てにはいった！"
+	cont "サンキュー！"
+	done
 
 NPCTradeAfterText1:
-	text_far _NPCTradeAfterText1
-	text_end
+	text "やあっ！"
+	line "ボクと　とりかえた　@"
+	text_ram wStringBuffer2
+	text_start
+	cont "げんき？"
+	done
 
 NPCTradeIntroText2:
-	text_far _NPCTradeIntroText2
-	text_end
+	text "なあ　きみ<⋯>"
+	line "さがしてる　#<GA>いるんだ"
+
+	para "もし　@"
+	text_ram wStringBuffer1
+	text "を　もってたら"
+	line "わしの　@"
+	text_ram wStringBuffer2
+	text "と"
+	cont "こうかん　してくれないか？"
+	done
 
 NPCTradeCancelText2:
-	text_far _NPCTradeCancelText2
-	text_end
+	text "キミも　もってないのか<⋯>"
+	line "ざんねんだなあ<⋯>"
+	done
 
 NPCTradeWrongText2:
-	text_far _NPCTradeWrongText2
-	text_end
+	text_ram wStringBuffer1
+	text "を　もってないのか？"
+	line "じゃあ　しょうがないね<⋯>"
+	done
 
 NPCTradeCompleteText2:
-	text_far _NPCTradeCompleteText2
-	text_end
+	text "おお！"
+	line "ありがとう！"
+
+	para "やっと　@"
+	text_ram wStringBuffer1
+	text "が"
+	line "てに　はいったよ！"
+	done
 
 NPCTradeAfterText2:
-	text_far _NPCTradeAfterText2
-	text_end
+	text "おお！"
+
+	para "キミから　もらった@"
+	text_ram wMonOrItemNameBuffer
+	text "は"
+	line "すごく　げんきだよ！"
+	done
 
 NPCTradeIntroText3:
-	text_far _NPCTradeIntroText3
-	text_end
+	text_ram wMonOrItemNameBuffer
+	text "って　かわいいわよね！"
+	line "でも　わたし　もってないの<⋯>"
+	cont "あなた　@"
+	text_ram wStringBuffer1
+	text "　もってる？"
+
+	para "わたしの　@"
+	text_ram wStringBuffer2
+	text "と"
+	line "こうかん　しましょうよ！"
+	done
 
 NPCTradeCancelText3:
-	text_far _NPCTradeCancelText3
-	text_end
+	text "こうかんして　くれないの？"
+	line "えーっ<⋯>　がっかり<⋯>"
+	done
 
 NPCTradeWrongText3:
-	text_far _NPCTradeWrongText3
-	text_end
+	text_ram wStringBuffer1
+	text "じゃ　ないわよ　それ"
+	line "つかまえたら　とりかえてね！"
+	done
 
 NPCTradeCompleteText3:
-	text_far _NPCTradeCompleteText3
-	text_end
+	text "わあ！　ありがとうっ！"
+	line "@"
+	text_ram wMonOrItemNameBuffer
+	text "　ほしかったのっ！"
+	done
 
 NPCTradeAfterText3:
-	text_far _NPCTradeAfterText3
-	text_end
+	text "こうかんした　@"
+	text_ram wStringBuffer2
+	text "　げんき？"
+	line "@"
+	text_ram wMonOrItemNameBuffer
+	text "は　すっごく　かわいいわ！"
+	done

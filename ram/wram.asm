@@ -471,12 +471,12 @@ SECTION UNION "Overworld Map", WRAM0
 ; Hall of Fame data
 wHallOfFamePokemonList:: hall_of_fame wHallOfFamePokemonList
 
-/*
+
 SECTION UNION "Overworld Map", WRAM0
 
 ; debug color picker
 wDebugOriginalColors:: ds 256 * 4
-*/
+
 
 SECTION UNION "Overworld Map", WRAM0
 
@@ -1244,7 +1244,11 @@ wTileRight:: db
 
 wTilePermissions:: db
 
-	ds 64
+	ds 33
+
+wcebd:: db
+
+	ds 30
 
 wMenuMetadata::
 wWindowStackPointer:: dw
@@ -1519,26 +1523,13 @@ wKeepSevenBiasChance::
 wPokeFluteCuredSleep::
 wTempRestorePPItem::
 	db
-/*
+
 NEXTU
 ; debug color picker
 wDebugColorIsTrainer:: db
 wDebugColorIsShiny:: db
 wDebugColorCurTMHM:: db
 
-IF DEF(_DEBUG)
-NEXTU
-; debug room paged values
-wDebugRoomCurPage::        db
-wDebugRoomCurValue::       db
-wDebugRoomAFunction::      dw
-wDebugRoomStartFunction::  dw
-wDebugRoomSelectFunction:: dw
-wDebugRoomAutoFunction::   dw
-wDebugRoomPageCount::      db
-wDebugRoomPagesPointer::   dw
-ENDC
-*/
 NEXTU
 ; Every previous NEXTU takes up 60 or fewer bytes,
 ; except the initial "mon buffer" UNION.
@@ -2760,13 +2751,12 @@ ENDU
 wPokemonDataEnd::
 wGameDataEnd::
 
-/*
+
 SECTION "Stack", WRAMX
 
-	ds 2
-wStackBottom::
-	ds $fc
+	ds $1c9
+
 wStackTop::
 	ds 1
-*/
+
 ENDSECTION

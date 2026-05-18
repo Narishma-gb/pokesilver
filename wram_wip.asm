@@ -1,2 +1,0 @@
-EXPORT DEF wcebd EQU $CEBD
-EXPORT DEF wStackTop EQU $DFFF

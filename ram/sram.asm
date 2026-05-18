@@ -66,12 +66,6 @@ sRTCStatusFlags:: db
 sLuckyNumberDay:: db
 sLuckyIDNumber::  dw
 
-/*
-SECTION "SRAM Stack", SRAM
-
-sStackTop:: dw
-sRTCHaltCheckValue:: dw
-*/
 
 SECTION "SRAM Window Stack", SRAM
 

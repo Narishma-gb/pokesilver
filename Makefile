@@ -11,6 +11,7 @@ rom_obj := \
 	audio.o \
 	garbage.o \
 	home.o \
+	main.o \
 	ram.o \
 	data/maps/map_data.o \
 	data/pokemon/egg_moves.o \
@@ -19,10 +20,7 @@ rom_obj := \
 	engine/overworld/events.o \
 	gfx/misc.o \
 	gfx/sprites.o \
-	gfx/tilesets.o \
-	wip.o
-# 	main.o \
-# 	data/text/common.o \
+	gfx/tilesets.o
 
 # Distinguish asm files which are game-exclusive for building (*_[gold|silver].asm)
 gs_excl_asm := \
@@ -139,8 +137,7 @@ $(pokegold11_vc_obj):   RGBASMFLAGS += -D _GOLD -D _REV1 -D _GOLD_VC
 $(pokesilver11_vc_obj): RGBASMFLAGS += -D _SILVER -D _REV1 -D _SILVER_VC
 
 %.patch: %_vc.gbc %.gbc vc/%.patch.template
-# Ignore the checksums added by tools/stadium at the end of the ROM
-	tools/make_patch --ignore 0x1ffdf8:0x208 $*_vc.sym $^ $@
+	tools/make_patch $*_vc.sym $^ $@
 
 rgbdscheck.o: rgbdscheck.asm
 	$(RGBASM) -o $@ $<
@@ -200,7 +197,6 @@ pokesilver11_vc.gbc: RGBFIXFLAGS += -n 1 -t POKEMON_SLV -i AAXJ
 %.gbc: $$(%_obj) layout.link
 	$(RGBLINK) $(RGBLINKFLAGS) -l layout.link -n $*.sym -m $*.map -o $@ $(filter %.o,$^)
 	$(RGBFIX) $(RGBFIXFLAGS) $@
-# 	tools/stadium $@
 
 
 ### LZ compression rules
@@ -301,7 +297,7 @@ gfx/pokedex/slowpoke.2bpp: tools/gfx += --trim-whitespace
 gfx/pokegear/pokegear.2bpp: tools/gfx += --trim-whitespace
 gfx/pokegear/pokegear_sprites.2bpp: tools/gfx += --trim-whitespace
 
-gfx/mystery_gift/mystery_gift.2bpp: tools/gfx += --remove-whitespace
+gfx/mystery_gift/mystery_gift.2bpp: tools/gfx += --trim-whitespace
 gfx/mystery_gift/mystery_gift_2.2bpp: tools/gfx += --trim-whitespace
 gfx/mystery_gift/question_mark.1bpp: tools/gfx += --remove-whitespace
 

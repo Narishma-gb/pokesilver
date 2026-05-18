@@ -29,5 +29,8 @@ IF DEF(_REV0) && DEF(_SILVER)
 	SECTION "Garbage 62", ROMX, BANK[62]
 	INCBIN "garbage/rev_0/garbage_62.bin"
 
+	SECTION "Garbage 63", ROMX, BANK[63]
+	INCBIN "garbage/rev_0/garbage_63.bin"
+
 	ENDSECTION
 ENDC

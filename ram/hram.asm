@@ -166,12 +166,6 @@ hCGBPalUpdate:: db
 hCGB::          db
 hSGB::          db
 
-IF DEF(_DEBUG)
-hDebugRoomMenuPage:: db
-ELSE
-	ds 1
-ENDC
-
-	ds 20
+	ds 21
 
 ENDSECTION

@@ -198,19 +198,8 @@ ROMX $3e
 	"bank3E_2"
 	; "Garbage 62"
 ROMX $3f
-	; "bank3F"
-; ROMX $64
-; 	"Text 1"
-; ROMX $65
-; 	"Text 2"
-; ROMX $66
-; 	"Text 3"
-; ROMX $70
-; 	"bank70"
-; 	"bank70_2"
-; ROMX $7f
-; 	org $7df8
-; 	"Stadium 2 Checksums"
+	"bank3F"
+	; "Garbage 63"
 WRAM0
 	"Audio RAM"
 	"WRAM"
@@ -228,7 +217,7 @@ WRAMX 1
 	"WRAM 1"
 	"Game Data"
 	"Party"
-; 	"Stack"
+	"Stack"
 VRAM $00
 	"VRAM0"
 VRAM $01
@@ -237,7 +226,6 @@ SRAM $00
 	"Scratch"
 	org $a600
 	"SRAM Bank 0"
-; 	"SRAM Stack"
 	org $b800
 	"SRAM Window Stack"
 SRAM $01
