@@ -33,14 +33,14 @@ CheckMagikarpLength:
 
 	; Did we beat the record?
 	ld hl, wMagikarpLength
-	ld de, wBestMagikarpLengthFeet
+	ld de, wBestMagikarpLength
 	ld c, 2
 	call CompareBytes
 	jr nc, .not_long_enough
 
 	; NEW RECORD!!! Let's save that.
 	ld hl, wMagikarpLength
-	ld de, wBestMagikarpLengthFeet
+	ld de, wBestMagikarpLength
 	ld a, [hli]
 	ld [de], a
 	inc de
@@ -71,37 +71,39 @@ CheckMagikarpLength:
 	ret
 
 .MagikarpGuruMeasureText:
-	text_far _MagikarpGuruMeasureText
-	text_end
+	text "で<WA>キミ<NO>コイキングの"
+	line "サイズを　はからさせて　もらうよ"
 
-Magikarp_LoadFeetInchesChars:
-	ld hl, vTiles2 tile '′' ; $6e
-	ld de, .feetinchchars
-	lb bc, BANK(.feetinchchars), 2
-	call Request2bpp
-	ret
-
-.feetinchchars
-INCBIN "gfx/font/feet_inches.2bpp"
+	para "@"
+	text_dots 3
+	text "うむ　@"
+	text_ram wStringBuffer1
+	text "センチ！"
+	prompt
 
 PrintMagikarpLength:
-	call Magikarp_LoadFeetInchesChars
 	ld hl, wStringBuffer1
 	ld de, wMagikarpLength
-	lb bc, PRINTNUM_LEFTALIGN | 1, 2
+	lb bc, PRINTNUM_LEADINGZEROS | 2, 4
 	call PrintNum
-	ld [hl], '′'
-	inc hl
-	ld de, wMagikarpLength + 1
-	lb bc, PRINTNUM_LEFTALIGN | 1, 2
-	call PrintNum
-	ld [hl], '″'
-	inc hl
-	ld [hl], '@'
-	ret
+	ld a, '@'
+	ld [wStringBuffer1 + 5], a
+	ld a, [wStringBuffer1 + 3]
+	ld [wStringBuffer1 + 4], a
+	ld a, '．'
+	ld [wStringBuffer1 + 3], a
+	ld hl, wStringBuffer1
+.skip_zeros
+	ld a, [hli]
+	cp '０'
+	jr z, .skip_zeros
+	dec hl
+	ld de, wStringBuffer1
+	lD bc, 6
+	jp CopyBytes
 
 CalcMagikarpLength:
-; Return Magikarp's length (in feet and inches) at wMagikarpLength (big endian).
+; Return Magikarp's length (in mm) at wMagikarpLength (big endian).
 ;
 ; input:
 ;   de: wEnemyMonDVs
@@ -239,41 +241,10 @@ CalcMagikarpLength:
 	ld e, l
 
 .done
-	; convert from mm to feet and inches
-	; in = mm / 25.4
-	; ft = in / 12
-
-	; hl = de × 10
-	ld h, d
-	ld l, e
-	add hl, hl
-	add hl, hl
-	add hl, de
-	add hl, hl
-
-	; hl = hl / 254
-	ld de, -254
-	ld a, -1
-.div_254
-	inc a
-	add hl, de
-	jr c, .div_254
-
-	; d, e = hl / 12, hl % 12
-	ld d, 0
-.mod_12
-	cp 12
-	jr c, .ok
-	sub 12
-	inc d
-	jr .mod_12
-.ok
-	ld e, a
-
 	ld hl, wMagikarpLength
-	ld [hl], d ; ft
+	ld [hl], d
 	inc hl
-	ld [hl], e ; in
+	ld [hl], e
 	ret
 
 .BCLessThanDE:
@@ -299,9 +270,9 @@ CalcMagikarpLength:
 INCLUDE "data/events/magikarp_lengths.asm"
 
 MagikarpHouseSign:
-	ld a, [wBestMagikarpLengthFeet]
+	ld a, [wBestMagikarpLength]
 	ld [wMagikarpLength], a
-	ld a, [wBestMagikarpLengthInches]
+	ld a, [wBestMagikarpLength + 1]
 	ld [wMagikarpLength + 1], a
 	call PrintMagikarpLength
 	ld hl, .KarpGuruRecordText
@@ -309,5 +280,10 @@ MagikarpHouseSign:
 	ret
 
 .KarpGuruRecordText:
-	text_far _KarpGuruRecordText
+	text "ただいま<NO>きろく"
+	line "@"
+	text_ram wStringBuffer1
+	text "センチ　@"
+	text_ram wMagikarpRecordHoldersName
+	text_promptbutton
 	text_end

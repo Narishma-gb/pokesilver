@@ -1097,8 +1097,7 @@ wCreditsLYOverride:: db
 NEXTU
 ; pokedex
 wPrevDexEntryJumptableIndex:: db
-wPrevDexEntryBackup::
-wPokedexStatus:: db
+wPrevDexEntryBackup:: db
 wUnusedPokedexByte:: db
 
 NEXTU

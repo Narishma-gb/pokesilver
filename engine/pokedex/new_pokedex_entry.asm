@@ -8,26 +8,10 @@ NewPokedexEntry:
 	call ClearTilemap
 	call UpdateSprites
 	call ClearSprites
-	ld a, [wPokedexStatus]
-	push af
-	ldh a, [hSCX]
-	add POKEDEX_SCX
-	ldh [hSCX], a
-	xor a
-	ld [wPokedexStatus], a
 	farcall _NewPokedexEntry
 	call WaitPressAorB_BlinkCursor
-	ld a, 1 ; page 2
-	ld [wPokedexStatus], a
-	farcall DisplayDexEntry
-	call WaitPressAorB_BlinkCursor
-	pop af
-	ld [wPokedexStatus], a
 	call MaxVolume
 	call RotateThreePalettesRight
-	ldh a, [hSCX]
-	add -POKEDEX_SCX
-	ldh [hSCX], a
 	call .ReturnFromDexRegistration
 	pop af
 	ldh [hMapAnims], a

@@ -338,3 +338,17 @@
 	charmap "7", $fd
 	charmap "8", $fe
 	charmap "9", $ff
+
+
+; Unown charmap, for Unown words (see data/pokemon/unown_words.asm)
+; gfx/font/unown_font.png
+DEF FIRST_UNOWN_CHAR EQU $40
+
+pushc
+	newcharmap dex_unown
+	DEF PRINTABLE_UNOWN EQUS "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	for i, STRLEN(#PRINTABLE_UNOWN)
+		charmap STRSLICE(#PRINTABLE_UNOWN, i, i + 1), FIRST_UNOWN_CHAR + i
+	endr
+	charmap "@", $ff ; string terminator
+popc

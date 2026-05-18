@@ -1,10 +1,3 @@
-MACRO unownword
-for n, CHARLEN(\1)
-	db CHARVAL(STRCHAR(\1, n)) - 'A' + FIRST_UNOWN_CHAR
-endr
-	db -1
-ENDM
-
 UnownWords:
 ; entries correspond to UNOWN_* form constants
 	table_width 2
@@ -37,29 +30,35 @@ UnownWords:
 	dw UnownWordZ
 	assert_table_length NUM_UNOWN + 1
 
-UnownWordA: unownword "ANGRY"
-UnownWordB: unownword "BEAR"
-UnownWordC: unownword "CHASE"
-UnownWordD: unownword "DIRECT"
-UnownWordE: unownword "ENGAGE"
-UnownWordF: unownword "FIND"
-UnownWordG: unownword "GIVE"
-UnownWordH: unownword "HELP"
-UnownWordI: unownword "INCREASE"
-UnownWordJ: unownword "JOIN"
-UnownWordK: unownword "KEEP"
-UnownWordL: unownword "LAUGH"
-UnownWordM: unownword "MAKE"
-UnownWordN: unownword "NUZZLE"
-UnownWordO: unownword "OBSERVE"
-UnownWordP: unownword "PERFORM"
-UnownWordQ: unownword "QUICKEN"
-UnownWordR: unownword "REASSURE"
-UnownWordS: unownword "SEARCH"
-UnownWordT: unownword "TELL"
-UnownWordU: unownword "UNDO"
-UnownWordV: unownword "VANISH"
-UnownWordW: unownword "WANT"
-UnownWordX: unownword "XXXXX"
-UnownWordY: unownword "YIELD"
-UnownWordZ: unownword "ZOOM"
+pushc dex_unown
+
+	list_start
+UnownWordA: li "ANGRY"
+UnownWordB: li "BEAR"
+UnownWordC: li "CHASE"
+UnownWordD: li "DIRECT"
+UnownWordE: li "ENGAGE"
+UnownWordF: li "FIND"
+UnownWordG: li "GIVE"
+UnownWordH: li "HELP"
+UnownWordI: li "INCREASE"
+UnownWordJ: li "JOIN"
+UnownWordK: li "KEEP"
+UnownWordL: li "LAUGH"
+UnownWordM: li "MAKE"
+UnownWordN: li "NUZZLE"
+UnownWordO: li "OBSERVE"
+UnownWordP: li "PERFORM"
+UnownWordQ: li "QUICKEN"
+UnownWordR: li "REASSURE"
+UnownWordS: li "SEARCH"
+UnownWordT: li "TELL"
+UnownWordU: li "UNDO"
+UnownWordV: li "VANISH"
+UnownWordW: li "WANT"
+UnownWordX: li "XXXXX"
+UnownWordY: li "YIELD"
+UnownWordZ: li "ZOOM"
+	assert_list_length NUM_UNOWN
+
+popc

@@ -45,13 +45,13 @@ _NameRater:
 	jr c, .samename
 ; Copy the new name from wStringBuffer2
 	ld hl, wPartyMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	ld a, [wCurPartyMon]
 	call AddNTimes
 	ld e, l
 	ld d, h
 	ld hl, wStringBuffer2
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call CopyBytes
 	ld hl, NameRaterFinishedText
 
@@ -113,12 +113,12 @@ CheckIfMonIsYourOT:
 IsNewNameEmpty:
 ; Checks to see if the nickname loaded in wStringBuffer2 is empty.  If so, return carry.
 	ld hl, wStringBuffer2
-	ld c, MON_NAME_LENGTH - 1
+	ld c, NAME_LENGTH - 1
 .loop
 	ld a, [hli]
 	cp '@'
 	jr z, .terminator
-	cp ' '
+	cp '　'
 	jr nz, .nonspace
 	dec c
 	jr nz, .loop
@@ -134,7 +134,7 @@ IsNewNameEmpty:
 CompareNewToOld:
 ; Compares the nickname in wStringBuffer2 to the previous nickname.  If they are the same, return carry.
 	ld hl, wPartyMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	ld a, [wCurPartyMon]
 	call AddNTimes
 	push hl
@@ -174,46 +174,80 @@ GetNicknameLength:
 	ret z
 	inc c
 	ld a, c
-	cp MON_NAME_LENGTH - 1
+	cp NAME_LENGTH - 1
 	jr nz, .loop
 	ret
 
 NameRaterHelloText:
-	text_far _NameRaterHelloText
-	text_end
+	text "はい　はい！"
+	line "わたしは　せいめい　はんだんし"
+	cont "いうなれば　なまえの　うらないです"
+
+	para "はい　あなたの　#の"
+	line "ニックネーム　うらなって　あげるよ"
+	done
 
 NameRaterWhichMonText:
-	text_far _NameRaterWhichMonText
-	text_end
+	text "どの　#の"
+	line "ニックネームを　うらなうかね？"
+	prompt
 
 NameRaterBetterNameText:
-	text_far _NameRaterBetterNameText
-	text_end
+	text "うーむ　@"
+	text_ram wStringBuffer1
+	text "か<⋯>"
+	line "なかなか"
+	cont "いい　ニックネームを　つけたね"
+
+	para "でもねー"
+	line "もう　すこしだけ　いい　なまえ"
+
+	para "わたし<GA>つけて　あげようか？"
+	line "どうかな？"
+	done
 
 NameRaterWhatNameText:
-	text_far _NameRaterWhatNameText
-	text_end
+	text "そうか　では"
+	line "どんな　ニックネームに　しようかな"
+	prompt
 
 NameRaterFinishedText:
-	text_far _NameRaterFinishedText
-	text_end
+	text "まえより　いい　なまえ　じゃないか"
+	line "よかったな！"
+	done
 
 NameRaterComeAgainText:
-	text_far _NameRaterComeAgainText
-	text_end
+	text "そうか"
+	line "わかった　また　きなさいよ"
+	done
 
 NameRaterPerfectNameText:
-	text_far _NameRaterPerfectNameText
-	text_end
+	text "うむ　@"
+	text_ram wStringBuffer1
+	text "か！"
+	line "これは　すばらしい　ニックネームだ"
+	cont "けちの　つけようもない！"
+
+	para "これからも　@"
+	text_ram wStringBuffer1
+	text "を"
+	line "かわいがって　あげなさいよ！"
+	done
 
 NameRaterEggText:
-	text_far _NameRaterEggText
-	text_end
+	text "おいおい⋯⋯"
+	line "それは　タマゴじゃないか"
+	done
 
 NameRaterSameNameText:
-	text_far _NameRaterSameNameText
-	text_end
+	text "まえと　おなじように　みえるが"
+	line "こっちの　ほう<GA>だんぜん　いいぞ！"
+	cont "よかったな！"
+	done
 
 NameRaterNamedText:
-	text_far _NameRaterNamedText
-	text_end
+	text "よし　これから"
+	line "この　#は　@"
+	text_ram wStringBuffer1
+	text "だ！"
+	prompt

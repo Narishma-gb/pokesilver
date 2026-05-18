@@ -101,16 +101,16 @@ CheckAnyOtherAliveMonsForTrade:
 	ret
 
 PlaceTradePartnerNamesAndParty:
-	hlcoord 2, 0
+	hlcoord 3, 1
 	ld de, wPlayerName
 	call PlaceString
-	hlcoord 2, 8
+	hlcoord 13, 1
 	ld de, wOTPlayerName
 	call PlaceString
-	hlcoord 7, 1
+	hlcoord 3, 3
 	ld de, wPartySpecies
 	call .PlaceSpeciesNames
-	hlcoord 7, 9
+	hlcoord 13, 3
 	ld de, wOTPartySpecies
 .PlaceSpeciesNames:
 	ld c, 0
@@ -131,7 +131,7 @@ PlaceTradePartnerNamesAndParty:
 	pop de
 	inc de
 	pop hl
-	ld bc, SCREEN_WIDTH
+	ld bc, 2 * SCREEN_WIDTH
 	add hl, bc
 	pop bc
 	inc c
