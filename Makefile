@@ -241,7 +241,7 @@ pokesilver11_debug_p.gb: RGBFIXFLAGS += -t POKEMON_SLV -i AAXJ
 include gfx/lz.mk
 
 %.lz: %
-	tools/lzcomp $(LZFLAGS) -- $< $@
+	tools/lzcompress $(LZFLAGS) -- $< $@
 
 
 ### Pokemon and trainer sprite rules
