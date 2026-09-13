@@ -100,6 +100,7 @@ Gen2ToGen1LinkComms:
 
 	ld hl, wOTPartyData
 	call Link_FindFirstNonControlCharacter_SkipZero
+IF DEF(_10_06) || DEF(_REV0)
 	push hl
 	ld bc, NAME_LENGTH
 	add hl, bc
@@ -109,7 +110,7 @@ Gen2ToGen1LinkComms:
 	jp z, ExitLinkCommunications
 	cp $7
 	jp nc, ExitLinkCommunications
-
+ENDC
 	ld de, wLinkData
 	ld bc, NAME_LENGTH + (1 + PARTY_LENGTH + 1) + (REDMON_STRUCT_LENGTH + NAME_LENGTH * 2) * PARTY_LENGTH + 3
 	call Link_CopyOTData

@@ -1,4 +1,4 @@
-BattleCommand_Teleport:
+BattleCommand_Teleport::
 	ld a, [wBattleType]
 	cp BATTLETYPE_FORCESHINY
 	jr z, .failed

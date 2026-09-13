@@ -1,4 +1,4 @@
-BattleCommand_MirrorCoat:
+BattleCommand_MirrorCoat::
 	ld a, 1
 	ld [wAttackMissed], a
 

@@ -2215,12 +2215,12 @@ Script_endall:
 	ret
 
 Script_halloffame:
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	ld hl, wGameTimerPaused
 	res GAME_TIMER_COUNTING_F, [hl]
 ENDC
 	farcall HallOfFame
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	ld hl, wGameTimerPaused
 	set GAME_TIMER_COUNTING_F, [hl]
 ENDC

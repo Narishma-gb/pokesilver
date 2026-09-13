@@ -13,15 +13,19 @@ SweetScentFromMenu:
 	waitbutton
 	callasm SweetScentEncounter
 	iffalse SweetScentNothing
+IF DEF(_10_06) || DEF(_REV0)
 	checkflag ENGINE_BUG_CONTEST_TIMER
 	iftrue .BugCatchingContest
+ENDC
 	randomwildmon
 	startbattle
 	reloadmapafterbattle
 	end
 
+IF DEF(_10_06) || DEF(_REV0)
 .BugCatchingContest:
 	farsjump BugCatchingContestBattleScript
+ENDC
 
 SweetScentNothing:
 	writetext SweetScentNothingText

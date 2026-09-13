@@ -223,7 +223,7 @@ Intro_GetMonFrontpic:
 	call FarDecompress
 	ret
 
-GetTrainerPic:
+GetTrainerPic::
 	ld a, [wTrainerClass]
 	and a
 	ret z

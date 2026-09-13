@@ -3,8 +3,10 @@ ElmPhoneCalleeScript:
 	ifequal SPECIALCALL_POKERUS, .pokerus
 	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
 	iftrue .discovery
+IF DEF(_10_06) || DEF(_REV0)
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iffalse .next
+ENDC
 	checkevent EVENT_TOGEPI_HATCHED
 	iftrue .egghatched
 .next

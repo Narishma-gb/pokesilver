@@ -1,4 +1,4 @@
-BattleCommand_BatonPass:
+BattleCommand_BatonPass::
 	ldh a, [hBattleTurn]
 	and a
 	jp nz, .Enemy

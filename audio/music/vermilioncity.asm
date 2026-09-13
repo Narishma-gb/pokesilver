@@ -245,9 +245,16 @@ Music_VermilionCity_Ch3:
 .mainloop:
 	note_type 12, 2, 2
 	sound_call .sub1
+IF DEF(_09_30)
+	octave 4
+ELIF DEF(_10_06) || DEF(_REV0)
 	octave 5
+ENDC
 	note A_, 6
 	volume_envelope 2, 4
+IF DEF(_09_30)
+	octave 5
+ENDC
 	note E_, 1
 	note G#, 1
 	sound_call .sub1

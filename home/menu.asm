@@ -491,7 +491,7 @@ DrawVariableLengthMenuBox::
 	call MenuBox
 	ret
 
-MenuWriteText::
+MenuWriteText:
 	xor a
 	ldh [hBGMapMode], a
 	call GetMenuIndexSet ; sort out the text

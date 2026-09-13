@@ -1,4 +1,4 @@
-SelectMonFromParty:
+SelectMonFromParty::
 	call DisableSpriteUpdates
 	xor a
 	ld [wPartyMenuActionText], a
@@ -11,7 +11,7 @@ SelectMonFromParty:
 	call ReturnToMapWithSpeechTextbox
 	ret
 
-SelectTradeOrDayCareMon:
+SelectTradeOrDayCareMon::
 	ld a, b
 	ld [wPartyMenuActionText], a
 	call DisableSpriteUpdates

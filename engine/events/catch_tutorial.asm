@@ -97,7 +97,12 @@ CatchTutorial::
 	db NO_INPUT,  $ff
 	db NO_INPUT,  $ff
 	db NO_INPUT,  $ff
+IF DEF(_09_30)
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $e0
+ELIF DEF(_10_06) || DEF(_REV0)
 	db NO_INPUT,  $c0
+ENDC
 	db PAD_A,     $00
 	db NO_INPUT,  $ff
 	db NO_INPUT,  $ff
@@ -147,6 +152,12 @@ CatchTutorial::
 	db NO_INPUT,  $ff
 	db NO_INPUT,  $ff
 	db NO_INPUT,  $ff
+IF DEF(_09_30)
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $ff
+	db NO_INPUT,  $50
+ELIF DEF(_10_06) || DEF(_REV0)
 	db NO_INPUT,  $a0
+ENDC
 	db PAD_A,     $00
 	db -1 ; end

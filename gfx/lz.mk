@@ -6,7 +6,7 @@ gfx/battle_anims/%.lz: LZFLAGS += --odd-alternate --align 4
 
 gfx/battle/dude.2bpp.lz: LZFLAGS += --align 4
 
-gfx/diploma/diploma.2bpp.lz: LZFLAGS += --odd-alternate --align 4
+gfx/diploma/diploma%.2bpp.lz: LZFLAGS += --odd-alternate --align 4
 
 gfx/memory_game/memory_game.2bpp.lz: LZFLAGS += --odd-alternate --align 4
 

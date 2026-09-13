@@ -429,7 +429,7 @@ WrongNumber:
 	line "すいません　まちがえました<⋯>"
 	done
 
-Script_ReceivePhoneCall:
+Script_ReceivePhoneCall::
 	reanchormap
 	callasm RingTwice_StartCall
 	memcall wCallerContact + PHONE_CONTACT_SCRIPT2_BANK

@@ -211,6 +211,7 @@ AI_TryItem:
 	inc a
 	ld [wEnemyGoesFirst], a
 
+IF DEF(_10_06) || DEF(_REV0)
 	ld hl, wEnemySubStatus3
 	res SUBSTATUS_BIDE, [hl]
 
@@ -221,6 +222,7 @@ AI_TryItem:
 
 	ld hl, wEnemySubStatus4
 	res SUBSTATUS_RAGE, [hl]
+ENDC
 
 	scf
 	ret

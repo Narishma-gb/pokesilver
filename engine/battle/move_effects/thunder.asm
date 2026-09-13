@@ -1,4 +1,4 @@
-BattleCommand_ThunderAccuracy:
+BattleCommand_ThunderAccuracy::
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVarAddr
 	inc hl

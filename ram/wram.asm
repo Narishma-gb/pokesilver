@@ -11,7 +11,7 @@ wChannel{d:n}:: channel_struct wChannel{d:n}
 endr
 
 NEXTU
-IF DEF(_PROTO) ; SRAM overflow
+IF DEF(_09_30) || DEF(_10_06) ; SRAM overflow
 	ds 12
 sBackupChecksum:: dw
 sBackupCheckValue2:: db
@@ -137,7 +137,7 @@ wPrinterOpcode:: db
 wPrevDexEntry:: db
 wDisableTextAcceleration:: db
 
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 wPCItemsCursor:: db
 wPCItemsScrollPosition:: db
 ENDC
@@ -1263,7 +1263,7 @@ wcebd:: db
 
 	ds 30
 
-IF DEF(_DEBUG)
+IF DEF(_DEBUG) || DEF(_09_30)
 NEXTU
 wDebugToolgearBuffer:: ds TILEMAP_WIDTH * 2
 
@@ -1730,7 +1730,7 @@ wLastPocket:: db
 
 wPartyMenuCursor:: db
 wItemsPocketCursor:: db
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 wPCItemsCursor::
 ENDC
 wKeyItemsPocketCursor:: db
@@ -1740,7 +1740,7 @@ wTMHMPocketCursor:: db
 	ds 1
 
 wItemsPocketScrollPosition:: db
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 wPCItemsScrollPosition::
 ENDC
 wKeyItemsPocketScrollPosition:: db
@@ -2386,7 +2386,7 @@ wVariableSprites:: ds $100 - SPRITE_VARS
 wUnusedReanchorBGMapFlags:: db
 	ds 2
 wTimeOfDayPal:: db
-IF DEF(_DEBUG)
+IF DEF(_DEBUG) || DEF(_09_30)
 wd55c:: db
 	ds 3
 ELSE

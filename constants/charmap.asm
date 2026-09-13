@@ -355,7 +355,7 @@ popc
 
 ; Debug charmap, for Toolgear (see engine/debug/toolgear.asm)
 ; gfx/debug/weekday_kanji.png
-IF DEF(_DEBUG)
+IF DEF(_DEBUG) || DEF(_09_30)
 pushc
 	newcharmap toolgear
 	charmap "０", $66

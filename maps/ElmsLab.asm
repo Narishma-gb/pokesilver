@@ -87,8 +87,10 @@ ElmEggHatchedScript:
 	sjump ElmCheckGotEggAgain
 
 ElmCheckTogepiEgg:
+IF DEF(_10_06) || DEF(_REV0)
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iffalse ElmCheckGotEggAgain
+ENDC
 	checkevent EVENT_TOGEPI_HATCHED
 	iftrue ElmEggHatchedScript
 ElmCheckGotEggAgain:

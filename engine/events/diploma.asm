@@ -87,7 +87,11 @@ PrintDiplomaPage2:
 	db "プレイじかん@"
 
 DiplomaGFX:
-INCBIN "gfx/diploma/diploma.2bpp.lz"
+IF DEF(_09_30)
+INCBIN "gfx/diploma/diploma_0930.2bpp.lz"
+ELIF DEF(_10_06) || DEF(_REV0)
+INCBIN "gfx/diploma/diploma_final.2bpp.lz"
+ENDC
 
 DiplomaPage1Tilemap:
 INCBIN "gfx/diploma/page1.tilemap"

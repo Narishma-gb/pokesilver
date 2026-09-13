@@ -1895,9 +1895,9 @@ BattleAnim_Screech:
 BattleAnim_ConfuseRay:
 	anim_1gfx BATTLE_ANIM_GFX_SPEED
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_BGPALS_INVERTED, $0, $2, $0
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_BGPALS_INVERTED, $0, $4, $0
 ENDC
 	anim_obj BATTLE_ANIM_OBJ_CONFUSE_RAY, 64, 88, $0
@@ -2035,7 +2035,11 @@ BattleAnim_Dig:
 	anim_ret
 
 .hit
+IF DEF(_09_30)
+	anim_sound 0, 0, SFX_MEGA_PUNCH
+ELIF DEF(_10_06) || DEF(_REV0)
 	anim_sound 0, 1, SFX_MEGA_PUNCH
+ENDC
 	anim_obj BATTLE_ANIM_OBJ_HIT_YFIX, 136, 56, $0
 	anim_wait 32
 .fail
@@ -2667,9 +2671,9 @@ BattleAnim_Withdraw:
 BattleAnim_Psybeam:
 	anim_1gfx BATTLE_ANIM_GFX_PSYCHIC
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_BGPALS_INVERTED, $0, $2, $0
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_BGPALS_INVERTED, $0, $4, $0
 ENDC
 .loop
@@ -2799,7 +2803,11 @@ BattleAnim_Smokescreen:
 BattleAnim_Strength:
 	anim_2gfx BATTLE_ANIM_GFX_ROCKS, BATTLE_ANIM_GFX_HIT
 	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_Y, $10, $1, $20
+IF DEF(_09_30)
+	anim_sound 0, 1, SFX_STRENGTH
+ELIF DEF(_10_06) || DEF(_REV0)
 	anim_sound 0, 0, SFX_STRENGTH
+ENDC
 	anim_obj BATTLE_ANIM_OBJ_STRENGTH, 64, 104, $1
 	anim_wait 128
 	anim_incobj 1
@@ -2878,7 +2886,11 @@ BattleAnim_DefenseCurl:
 BattleAnim_SeismicToss:
 	anim_2gfx BATTLE_ANIM_GFX_GLOBE, BATTLE_ANIM_GFX_HIT
 	anim_bgeffect BATTLE_BG_EFFECT_SHAKE_SCREEN_Y, $10, $1, $20
+IF DEF(_09_30)
+	anim_sound 0, 1, SFX_STRENGTH
+ELIF DEF(_10_06) || DEF(_REV0)
 	anim_sound 0, 0, SFX_STRENGTH
+ENDC
 	anim_obj BATTLE_ANIM_OBJ_SEISMIC_TOSS, 64, 104, $1
 	anim_wait 128
 	anim_incobj 1
@@ -3430,7 +3442,11 @@ BattleAnim_ScaryFace:
 
 BattleAnim_FaintAttack:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
+IF DEF(_09_30)
+	anim_sound 0, 1, SFX_CURSE
+ELIF DEF(_10_06) || DEF(_REV0)
 	anim_sound 0, 0, SFX_CURSE
+ENDC
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_WHITE_WAIT_FADE_BACK, $0, BG_EFFECT_USER, $80
 	anim_wait 96
@@ -3860,7 +3876,11 @@ BattleAnim_FuryCutter:
 BattleAnim_SteelWing:
 	anim_1gfx BATTLE_ANIM_GFX_REFLECT
 	anim_obp0 $0
+IF DEF(_09_30)
+	anim_sound 0, 1, SFX_RAGE
+ELIF DEF(_10_06) || DEF(_REV0)
 	anim_sound 0, 0, SFX_RAGE
+ENDC
 	anim_call BattleAnim_TargetObj_1Row
 	anim_call BattleAnimSub_Metallic
 	anim_call BattleAnim_ShowMon_0
@@ -4196,7 +4216,11 @@ BattleAnim_SweetScent:
 BattleAnim_IronTail:
 	anim_1gfx BATTLE_ANIM_GFX_REFLECT
 	anim_obp0 $0
+IF DEF(_09_30)
+	anim_sound 0, 1, SFX_RAGE
+ELIF DEF(_10_06) || DEF(_REV0)
 	anim_sound 0, 0, SFX_RAGE
+ENDC
 	anim_call BattleAnim_TargetObj_1Row
 	anim_call BattleAnimSub_Metallic
 	anim_wait 4
@@ -4214,7 +4238,11 @@ BattleAnim_IronTail:
 BattleAnim_MetalClaw:
 	anim_1gfx BATTLE_ANIM_GFX_REFLECT
 	anim_obp0 $0
+IF DEF(_09_30)
+	anim_sound 0, 1, SFX_RAGE
+ELIF DEF(_10_06) || DEF(_REV0)
 	anim_sound 0, 0, SFX_RAGE
+ENDC
 	anim_call BattleAnim_TargetObj_1Row
 	anim_call BattleAnimSub_Metallic
 	anim_call BattleAnim_ShowMon_0

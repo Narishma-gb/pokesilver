@@ -12,12 +12,14 @@ BattleCommand_Protect:
 	jp StdBattleTextbox
 
 ProtectChance:
+IF DEF(_10_06) || DEF(_REV0)
 	ld de, wPlayerProtectCount
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .got_count
 	ld de, wEnemyProtectCount
 .got_count
+ENDC
 
 	call CheckOpponentWentFirst
 	jr nz, .failed
@@ -28,6 +30,15 @@ ProtectChance:
 	call GetBattleVar
 	bit SUBSTATUS_SUBSTITUTE, a
 	jr nz, .failed
+
+IF DEF(_09_30)
+	ld de, wPlayerProtectCount
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_count
+	ld de, wEnemyProtectCount
+.got_count
+ENDC
 
 ; Halve the chance of a successful Protect for each consecutive use.
 

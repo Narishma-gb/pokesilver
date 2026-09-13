@@ -472,7 +472,11 @@ Text_TemporaryStagingInLinkRoom: ; unreferenced
 	done
 
 Text_CantLinkToThePast:
+IF DEF(_09_30)
+	text "こちらで<WA>１との"
+ELIF DEF(_10_06) || DEF(_REV0)
 	text "こちらで<WA>かことの"
+ENDC
 	line "つうしん<WA>できません"
 	prompt
 

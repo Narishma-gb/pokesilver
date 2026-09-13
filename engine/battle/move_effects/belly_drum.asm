@@ -1,12 +1,12 @@
-BattleCommand_BellyDrum:
+BattleCommand_BellyDrum::
 ; BUG: Belly Drum sharply boosts Attack even with under 50% HP (see docs/bugs_and_glitches.md)
 	call BattleCommand_AttackUp2
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	callfar GetHalfHP
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	callfar GetHalfMaxHP
 ENDC
 	callfar CheckUserHasEnoughHP

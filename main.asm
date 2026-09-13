@@ -241,7 +241,7 @@ INCLUDE "engine/events/field_moves.asm"
 INCLUDE "engine/events/magnet_train.asm"
 INCLUDE "engine/sprite_anims/core.asm"
 INCLUDE "engine/gfx/mon_icons.asm"
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 INCLUDE "engine/movie/init_hof_credits.asm"
 ENDC
 

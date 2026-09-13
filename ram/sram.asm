@@ -145,7 +145,7 @@ UNION
 	boxes 3
 
 NEXTU
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 
 	ds 9
 sBrokenBackupGameData::
@@ -163,7 +163,7 @@ ENDU
 
 SECTION "Backup Save", SRAM
 
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 
 	ds $100
 ENDC
@@ -177,7 +177,7 @@ sBackupCurMapData::  ds wCurMapDataEnd - wCurMapData
 sBackupPokemonData:: ds wPokemonDataEnd - wPokemonData
 sBackupGameDataEnd::
 
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 
 	ds $81
 sBackupChecksum:: dw

@@ -1110,8 +1110,13 @@ HyperBeam:
 
 Rage:
 	checkobedience
+IF DEF(_09_30)
+	doturn
+	usedmovetext
+ELIF DEF(_10_06) || DEF(_REV0)
 	usedmovetext
 	doturn
+ENDC
 	critical
 	damagestats
 	damagecalc
@@ -1215,8 +1220,13 @@ Fly:
 
 TrapTarget:
 	checkobedience
+IF DEF(_09_30)
+	doturn
+	usedmovetext
+ELIF DEF(_10_06) || DEF(_REV0)
 	usedmovetext
 	doturn
+ENDC
 	checkhit
 	critical
 	damagestats
@@ -1538,10 +1548,10 @@ Endure:
 Rollout:
 	checkrollout
 	checkobedience
-IF DEF(_PROTO)
+IF DEF(_10_06)
 	usedmovetext
 	doturn
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_09_30) ||  DEF(_REV0)
 	doturn
 	usedmovetext
 ENDC
@@ -1582,8 +1592,13 @@ Swagger:
 
 FuryCutter:
 	checkobedience
+IF DEF(_09_30)
+	doturn
+	usedmovetext
+ELIF DEF(_10_06) || DEF(_REV0)
 	usedmovetext
 	doturn
+ENDC
 	critical
 	damagestats
 	damagecalc
@@ -1798,6 +1813,9 @@ HiddenPower:
 	usedmovetext
 	doturn
 	critical
+IF DEF(_09_30)
+	damagestats
+ENDC
 	hiddenpower
 	damagecalc
 	stab

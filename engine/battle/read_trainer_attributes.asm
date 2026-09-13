@@ -44,7 +44,7 @@ GetOTName:
 	pop de
 	ret
 
-GetTrainerAttributes:
+GetTrainerAttributes::
 	ld a, [wTrainerClass]
 	ld c, a
 	call GetOTName

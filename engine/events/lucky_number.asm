@@ -7,6 +7,14 @@ CheckForLuckyNumberWinners:
 	ret z
 	ld d, a
 	ld hl, wPartyMon1ID
+IF DEF(_09_30)
+.PartyLoop:
+	call .CompareLuckyNumberToMonID
+	ld bc, PARTYMON_STRUCT_LENGTH
+	add hl, bc
+	dec d
+	jr nz, .PartyLoop
+ELIF DEF(_10_06) || DEF(_REV0)
 	ld bc, wPartySpecies
 .PartyLoop:
 	ld a, [bc]
@@ -19,6 +27,7 @@ CheckForLuckyNumberWinners:
 	pop bc
 	dec d
 	jr nz, .PartyLoop
+ENDC
 	ld a, BANK(sBox)
 	call OpenSRAM
 	ld a, [sBoxCount]
@@ -26,16 +35,30 @@ CheckForLuckyNumberWinners:
 	jr z, .SkipOpenBox
 	ld d, a
 	ld hl, sBoxMon1ID
+IF DEF(_09_30)
+.OpenBoxLoop:
+	call .CompareLuckyNumberToMonID
+	jr nc, .SkipOpenBoxMon
+	ld a, TRUE
+	ld [wTempByteValue], a
+
+.SkipOpenBoxMon:
+	ld bc, BOXMON_STRUCT_LENGTH
+	add hl, bc
+	dec d
+	jr nz, .OpenBoxLoop
+
+ELIF DEF(_10_06) || DEF(_REV0)
 	ld bc, sBoxSpecies
 .OpenBoxLoop:
 	ld a, [bc]
 	inc bc
 	cp EGG
-IF DEF(_PROTO)
-	call z, .SkipOpenBoxMon
-ELIF DEF(_REV0) || DEF(_REV1)
-	jr z, .SkipOpenBoxMon
-ENDC
+	IF DEF(_10_06)
+		call z, .SkipOpenBoxMon
+	ELIF DEF(_REV0)
+		jr z, .SkipOpenBoxMon
+	ENDC
 	call .CompareLuckyNumberToMonID
 	jr nc, .SkipOpenBoxMon
 	ld a, TRUE
@@ -48,15 +71,18 @@ ENDC
 	pop bc
 	dec d
 	jr nz, .OpenBoxLoop
+ENDC
 
 .SkipOpenBox:
 	call CloseSRAM
 	ld c, $0
 .BoxesLoop:
+IF DEF(_10_06) || DEF(_REV0)
 	ld a, [wCurBox]
 	and $f
 	cp c
 	jr z, .SkipBox
+ENDC
 	ld hl, .BoxBankAddresses
 	ld b, 0
 	add hl, bc
@@ -71,17 +97,21 @@ ENDC
 	and a
 	jr z, .SkipBox ; no mons in this box
 	push bc
+IF DEF(_10_06) || DEF(_REV0)
 	ld b, h
 	ld c, l
 	inc bc
+ENDC
 	ld de, sBoxMon1ID - sBox
 	add hl, de
 	ld d, a
 .BoxNLoop:
+IF DEF(_10_06) || DEF(_REV0)
 	ld a, [bc]
 	inc bc
 	cp EGG
 	jr z, .SkipBoxMon
+ENDC
 
 	call .CompareLuckyNumberToMonID ; sets wScriptVar and wCurPartySpecies appropriately
 	jr nc, .SkipBoxMon
@@ -89,10 +119,16 @@ ENDC
 	ld [wTempByteValue], a
 
 .SkipBoxMon:
+IF DEF(_09_30)
+	ld bc, BOXMON_STRUCT_LENGTH
+	add hl, bc
+
+ELIF DEF(_10_06) || DEF(_REV0)
 	push bc
 	ld bc, BOXMON_STRUCT_LENGTH
 	add hl, bc
 	pop bc
+ENDC
 	dec d
 	jr nz, .BoxNLoop
 	pop bc
@@ -123,7 +159,9 @@ ENDC
 	jp PrintText
 
 .CompareLuckyNumberToMonID:
+IF DEF(_10_06) || DEF(_REV0)
 	push bc
+ENDC
 	push de
 	push hl
 	ld d, h
@@ -184,13 +222,17 @@ ENDC
 	pop bc
 	ld a, b
 	ld [wCurPartySpecies], a
+IF DEF(_10_06) || DEF(_REV0)
 	pop bc
+ENDC
 	scf
 	ret
 
 .nomatch
 	pop bc
+IF DEF(_10_06) || DEF(_REV0)
 	pop bc
+ENDC
 	and a
 	ret
 

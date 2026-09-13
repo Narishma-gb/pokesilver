@@ -24,7 +24,7 @@ FarmerMScript_SellMilk:
 	checkitem MOOMOO_MILK
 	iftrue FarmerMScript_Milking
 	writetext FarmerMText_BuyMilk
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	special PlaceMoneyTopRight
 ENDC
 	yesorno
@@ -34,7 +34,7 @@ ENDC
 	giveitem MOOMOO_MILK
 	iffalse FarmerMScript_NoRoom
 	takemoney YOUR_MONEY, ROUTE39FARMHOUSE_MILK_PRICE
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	special PlaceMoneyTopRight
 ENDC
 	waitsfx

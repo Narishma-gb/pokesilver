@@ -430,7 +430,7 @@ TossTMHM:
 	jr c, .nope
 	ld [hl], a
 	ld [wItemQuantity], a
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	jr nz, .yup
 ENDC
 	ld a, [wTMHMPocketScrollPosition]

@@ -1,6 +1,9 @@
 HiddenPowerDamage:
 ; Override Hidden Power's type and power based on the user's DVs.
 
+IF DEF(_09_30)
+	push bc
+ENDC
 	ld hl, wBattleMonDVs
 	ldh a, [hBattleTurn]
 	and a
@@ -98,6 +101,9 @@ HiddenPowerDamage:
 	pop af
 	ld [hl], a
 
+IF DEF(_09_30)
+	pop bc
+ELIF DEF(_10_06) || DEF(_REV0)
 ; Get the rest of the damage formula variables
 ; based on the new type, but keep base power.
 	ld a, d
@@ -105,4 +111,5 @@ HiddenPowerDamage:
 	farcall BattleCommand_DamageStats ; damagestats
 	pop af
 	ld d, a
+ENDC
 	ret

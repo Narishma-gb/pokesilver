@@ -61,14 +61,18 @@ DayCareManScript_Outside:
 	readvar VAR_FACING
 	ifequal RIGHT, .walk_around_player
 	applymovement ROUTE34_GRAMPS, Route34MovementData_DayCareManWalksBackInside
+IF DEF(_10_06) || DEF(_REV0)
 	playsound SFX_ENTER_DOOR
+ENDC
 	disappear ROUTE34_GRAMPS
 .end_fail
 	end
 
 .walk_around_player
 	applymovement ROUTE34_GRAMPS, Route34MovementData_DayCareManWalksBackInside_WalkAroundPlayer
+IF DEF(_10_06) || DEF(_REV0)
 	playsound SFX_ENTER_DOOR
+ENDC
 	disappear ROUTE34_GRAMPS
 	end
 

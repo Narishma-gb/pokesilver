@@ -1,4 +1,4 @@
-PokemonPalettes:
+PokemonPalettes::
 ; entries correspond to Pokémon species, two apiece
 
 ; Each normal.gbcpal is generated from the corresponding .png, and

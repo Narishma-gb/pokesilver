@@ -7,9 +7,9 @@
 	db 45 ; catch rate
 	db 106 ; base exp
 	db NO_ITEM, NO_ITEM ; items
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	db GENDER_F50 ; gender ratio
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	db GENDER_F25 ; gender ratio
 ENDC
 	db 100 ; unknown 1

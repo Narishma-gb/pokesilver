@@ -241,7 +241,11 @@ Text_Route31ReadingMail:
 	text "な<NI>なに<⋯>"
 
 	para "「くらやみ<NO>ほらあな　からは"
+IF DEF(_09_30)
+	line "べつ<NO>みち<NI>つうじているよ」"
+ELIF DEF(_10_06) || DEF(_REV0)
 	line "べつ<NO>みち<NI>つづいているよ」"
+ENDC
 	cont "だ<TTE>"
 
 	para "わざわざ　ありがとう！"

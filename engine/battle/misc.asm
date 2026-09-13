@@ -1,4 +1,4 @@
-_DisappearUser:
+_DisappearUser::
 	xor a
 	ldh [hBGMapMode], a
 	ldh a, [hBattleTurn]
@@ -12,11 +12,11 @@ _DisappearUser:
 	call ClearBox
 	jr FinishAppearDisappearUser
 
-_AppearUserRaiseSub:
+_AppearUserRaiseSub::
 	farcall BattleCommand_RaiseSubNoAnim
 	jr AppearUser
 
-_AppearUserLowerSub:
+_AppearUserLowerSub::
 	farcall BattleCommand_LowerSubNoAnim
 
 AppearUser:

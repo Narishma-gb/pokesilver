@@ -918,7 +918,7 @@ GetDecorationName_c_de:
 	call GetDecorationName
 	ret
 
-DecorationFlagAction_c:
+DecorationFlagAction_c::
 	ld a, c
 	jp DecorationFlagAction
 

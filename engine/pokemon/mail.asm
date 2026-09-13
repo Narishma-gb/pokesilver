@@ -444,7 +444,7 @@ MailboxPC:
 	ld hl, wNumItems
 	call ReceiveItem
 	jr c, .put_in_bag
-IF DEF (_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	ld hl, wNumItems
 	call TossItem
 ENDC

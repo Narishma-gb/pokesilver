@@ -347,9 +347,9 @@ HandleBerserkGene:
 	call GetBattleVarAddr
 	push af
 	set SUBSTATUS_CONFUSED, [hl]
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	farcall BattleCommand_AttackUp2
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVarAddr
 	push hl
@@ -561,7 +561,11 @@ CheckPlayerLockedIn:
 
 ParsePlayerAction:
 	call CheckPlayerLockedIn
+IF DEF(_09_30)
+	jr c, .locked_in
+ELIF DEF(_10_06) || DEF(_REV0)
 	jp c, .locked_in
+ENDC
 	ld hl, wPlayerSubStatus5
 	bit SUBSTATUS_ENCORED, [hl]
 	jr z, .not_encored
@@ -570,14 +574,23 @@ ParsePlayerAction:
 	jr .encored
 
 .not_encored
+IF DEF(_10_06) || DEF(_REV0)
 	ld a, [wBattlePlayerAction]
 	cp BATTLEPLAYERACTION_SWITCH
 	jr z, .reset_rage
 	and a
 	jr nz, .reset_bide
+ENDC
 	ld a, [wPlayerSubStatus3]
 	and 1 << SUBSTATUS_BIDE
 	jr nz, .locked_in
+IF DEF(_09_30)
+	ld a, [wBattlePlayerAction]
+	cp BATTLEPLAYERACTION_SWITCH
+	jr z, .reset_rage
+	and a
+	jr nz, .locked_in
+ENDC
 	xor a
 	ld [wMoveSelectionMenuType], a
 	assert POUND == 1
@@ -628,9 +641,11 @@ ParsePlayerAction:
 	ld [wPlayerProtectCount], a
 	jr .continue_protect
 
+IF DEF(_10_06) || DEF(_REV0)
 .reset_bide
 	ld hl, wPlayerSubStatus3
 	res SUBSTATUS_BIDE, [hl]
+ENDC
 
 .locked_in
 	xor a
@@ -2331,7 +2346,7 @@ WinTrainerBattle:
 	and a
 	call nz, DoubleReward
 	call CheckMaxedOutMomMoney
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	push af
 ENDC
 	ld a, FALSE
@@ -2365,9 +2380,9 @@ ENDC
 .done
 	call DoubleReward
 	call DoubleReward
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	call CheckMaxedOutMomMoney
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	pop af
 ENDC
 	jr nc, .KeepItAll
@@ -2405,7 +2420,7 @@ ENDC
 	pop bc
 	ret
 
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 INCLUDE "engine/battle/add_battle_money.asm"
 ENDC
 
@@ -2439,7 +2454,7 @@ CheckMaxedOutMomMoney:
 	sbc HIGH(MAX_MONEY >> 8)
 	ret
 
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 INCLUDE "engine/battle/add_battle_money.asm"
 ENDC
 
@@ -4175,12 +4190,12 @@ UseHeldStatusHealingItem:
 	ld hl, CalcPlayerStats
 
 .got_pointer
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	call SwitchTurnCore
 ENDC
 	ld a, BANK(CalcPlayerStats) ; aka BANK(CalcEnemyStats)
 	rst FarCall
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	call SwitchTurnCore
 ENDC
 	call ItemRecoveryAnim
@@ -4362,7 +4377,7 @@ DrawPlayerHUD:
 	; HP bar
 	hlcoord 10, 9
 	ld b, 1
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	xor a ; PARTYMON
 	ld [wMonType], a
 ENDC
@@ -4923,7 +4938,7 @@ TryPlayerSwitch:
 	jp z, BattleMenuPKMN_Loop
 	ld a, [wCurBattleMon]
 	ld [wLastPlayerMon], a
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	ld a, [wCurPartyMon]
 	ld [wCurBattleMon], a
 ENDC
@@ -4936,7 +4951,7 @@ ENDC
 	call CloseWindow
 	call GetMemSGBLayout
 	call SetDefaultBGPAndOBP
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	ld a, [wCurPartyMon]
 	ld [wCurBattleMon], a
 ENDC
@@ -8154,7 +8169,7 @@ CheckPayDay:
 .okay
 	ld hl, wPayDayMoney + 2
 	ld de, wMoney + 2
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	ld c, 3
 	and a
 .loop
@@ -8165,7 +8180,7 @@ IF DEF(_PROTO)
 	dec hl
 	dec c
 	jr nz, .loop
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	call AddBattleMoneyToAccount
 ENDC
 	ld hl, BattleText_PlayerPickedUpPayDayMoney
@@ -8537,7 +8552,7 @@ AddLastLinkBattleToLinkRecord:
 	ld bc, (sLinkBattleRecord1Draws - sLinkBattleRecord1) + 1
 .okay
 	add hl, bc
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	call .CheckOverflow
 	ret nc
 ENDC
@@ -8545,7 +8560,7 @@ ENDC
 	ret nz
 	dec hl
 	inc [hl]
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	ret nz
 	ld a, $ff
 	ld [hli], a
@@ -8553,7 +8568,7 @@ IF DEF(_PROTO)
 ENDC
 	ret
 
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 .CheckOverflow:
 	dec hl
 	ld a, [hl]

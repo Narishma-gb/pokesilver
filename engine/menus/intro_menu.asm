@@ -911,7 +911,7 @@ DEF NUM_TITLESCREENOPTIONS EQU const_value
 IntroSequence:
 	callfar SplashScreen
 	jr c, StartTitleScreen
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	ld a, [wBetaTitleSequenceOpeningType]
 	and a
 	jr z, .dummy
@@ -1131,8 +1131,10 @@ DeleteSaveData:
 	call GetMemSGBLayout
 	call LoadStandardFont
 	call LoadFontsExtra
+IF DEF(_10_06) || DEF(_REV0)
 	ld de, MUSIC_MAIN_MENU
 	call PlayMusic
+ENDC
 	ld hl, .ClearAllSaveDataText
 	call PrintText
 	ld hl, .NoYesMenuHeader

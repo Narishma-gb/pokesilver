@@ -26,9 +26,9 @@ BattleCommand_HealBell:
 	ld hl, BellChimedText
 	call StdBattleTextbox
 
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	call CalcPlayerStats
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	ldh a, [hBattleTurn]
 	and a
 	jp z, CalcPlayerStats

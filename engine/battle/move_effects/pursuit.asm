@@ -1,4 +1,4 @@
-BattleCommand_Pursuit:
+BattleCommand_Pursuit::
 ; Double damage if the opponent is switching.
 
 	ld hl, wEnemyIsSwitching

@@ -866,7 +866,7 @@ RetrieveBreedmon:
 	ld e, l
 	ld hl, MON_EXP + 2
 	add hl, bc
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	push bc
 ENDC
 	ld b, TRUE
@@ -886,7 +886,7 @@ ENDC
 	dec a
 	ld [wCurPartyMon], a
 	farcall HealPartyMon
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	ld a, [wCurPartyLevel]
 	ld d, a
 	callfar CalcExpAtLevel
@@ -1219,7 +1219,7 @@ GiveEgg::
 	and a
 	ret
 
-RemoveMonFromPartyOrBox:
+RemoveMonFromPartyOrBox::
 	ld hl, wPartyCount
 
 	ld a, [wPokemonWithdrawDepositParameter]
@@ -1370,7 +1370,7 @@ RemoveMonFromPartyOrBox:
 .close_sram
 	jp CloseSRAM
 
-ComputeNPCTrademonStats:
+ComputeNPCTrademonStats::
 	ld a, MON_LEVEL
 	call GetPartyParamLocation
 	ld a, [hl]
@@ -1730,9 +1730,16 @@ GivePoke::
 	ld hl, wPartyMon1ID
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
+IF DEF(_09_30)
+	call Random
+	ld [hli], a
+	call Random
+	ld [hl], a
+ELIF DEF(_10_06) || DEF(_REV0)
 	ld a, HIGH(RANDY_OT_ID)
 	ld [hli], a
 	ld [hl], LOW(RANDY_OT_ID)
+ENDC
 	jr .skip_nickname
 
 .send_to_box

@@ -253,7 +253,7 @@ MoveDescriptions::
 	dw WhirlpoolDescription
 	dw BeatUpDescription
 	assert_table_length NUM_ATTACKS
-IF DEF(_REV0) || DEF(_REV1)
+IF DEF(_REV0)
 	dw MoveFCDescription
 	dw MoveFDDescription
 	dw MoveFEDescription
@@ -303,9 +303,9 @@ IcePunchDescription:
 
 ThunderpunchDescription:
 	db   "でんげきをこめた　パンチで　<KOUGEKI>"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	next "てき<WO>マヒさせることがある@"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	next "てき<WO>まひさせることがある@"
 ENDC
 
@@ -407,9 +407,9 @@ TackleDescription:
 
 BodySlamDescription:
 	db   "からだごと　たおれこんで　<KOUGEKI>"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	next "てき<WO>マヒさせることがある@"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	next "てき<WO>まひさせることがある@"
 ENDC
 
@@ -518,7 +518,11 @@ PsybeamDescription:
 	next "てき<WO>こんらんさせることがある@"
 
 BubblebeamDescription:
+IF DEF(_09_30)
+	db   "みず<WO>いきおいよく　はっしゃする"
+ELIF DEF(_10_06) || DEF(_REV0)
 	db   "あわ<WO>いきおいよく　はっしゃする"
+ENDC
 	next "てき<NO>すばやさ<WO>さげることがある@"
 
 AuroraBeamDescription:
@@ -530,7 +534,11 @@ HyperBeamDescription:
 	next "つぎのターン　うごけなくな<TTE>しまう@"
 
 PeckDescription:
+IF DEF(_09_30)
+	db   "ながい　くちばし<WO>つか<TTE>"
+ELIF DEF(_10_06) || DEF(_REV0)
 	db   "くちばしなど<WO>つか<TTE>"
+ENDC
 	next "てき<WO>つついて　<KOUGEKI>@"
 
 DrillPeckDescription:
@@ -587,9 +595,9 @@ PoisonpowderDescription:
 
 StunSporeDescription:
 	db   "しびれる　こな<WO>ふりまき"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	next "てき<WO>マヒさせてしまう@"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	next "てき<WO>まひさせてしまう@"
 ENDC
 
@@ -615,33 +623,33 @@ FireSpinDescription:
 
 ThundershockDescription:
 	db   "でんげき<WO>あびせて　<KOUGEKI>"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	next "てき<WO>マヒさせることがある@"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	next "てき<WO>まひさせることがある@"
 ENDC
 
 ThunderboltDescription:
 	db   "つよいでんげき<WO>あびせて　<KOUGEKI>"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	next "てき<WO>マヒさせることがある@"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	next "てき<WO>まひさせることがある@"
 ENDC
 
 ThunderWaveDescription:
 	db   "よわいでんげき<WO>てき<NI>ぶつけて"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	next "マヒさせてしまう@"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	next "まひさせてしまう@"
 ENDC
 
 ThunderDescription:
 	db   "てき<NI>むか<TTE>　かみなり<WO>おとす"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	next "マヒさせることがある@"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	next "まひさせることがある@"
 ENDC
 
@@ -783,9 +791,9 @@ EggBombDescription:
 
 LickDescription:
 	db   "ながいしたで　なめまわして　<KOUGEKI>"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	next "てき<WO>マヒさせることがある@"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	next "てき<WO>まひさせることがある@"
 ENDC
 
@@ -847,14 +855,18 @@ HiJumpKickDescription:
 
 GlareDescription:
 	db   "おなか<NO>もようで　てき<WO>いかくし"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	next "おびえさせて　マヒさせてしまう@"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	next "おびえさせて　まひさせてしまう@"
 ENDC
 
 DreamEaterDescription:
+IF DEF(_09_30)
+	db   "てき<NI>あたえた　ダメージの"
+ELIF DEF(_10_06) || DEF(_REV0)
 	db   "ねているてき<NI>あたえた　ダメージの"
+ENDC
 	next "はんぶん　たいりょく<WO>かいふくする@"
 
 PoisonGasDescription:
@@ -1070,9 +1082,9 @@ SpikesDescription:
 
 ZapCannonDescription:
 	db   "あたりにくい<GA>ダメージ<WA>おおきい"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	next "あたれば　かならず　マヒさせる@"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	next "あたれば　かならず　まひさせる@"
 ENDC
 
@@ -1142,9 +1154,9 @@ MilkDrinkDescription:
 
 SparkDescription:
 	db   "でんき<WO>まと<TTE>　とっしんする"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	next "てき<WO>マヒさせることがある@"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	next "てき<WO>まひさせることがある@"
 ENDC
 
@@ -1153,7 +1165,11 @@ FuryCutterDescription:
 	next "いりょく<GA>ぞうだいしていく@"
 
 SteelWingDescription:
+IF DEF(_09_30)
+	db   "つばさ<WO>おおきく　ひろげて"
+ELIF DEF(_10_06) || DEF(_REV0)
 	db   "かたいつばさ<WO>おおきく　ひろげて"
+ENDC
 	next "そのまま　てき<NI>たいあたりする@"
 
 MeanLookDescription:
@@ -1173,7 +1189,11 @@ HealBellDescription:
 	next "すべて<NO>じょうたい<WO>かいふくする@"
 
 ReturnDescription:
+IF DEF(_09_30)
+	db   "よくしてくれる　かいぬし<NO>ために"
+ELIF DEF(_10_06) || DEF(_REV0)
 	db   "よくしてくれる　トレーナー<NO>ために"
+ENDC
 	next "ぜんりょくで　てき<WO><KOUGEKI>@"
 
 PresentDescription:
@@ -1221,8 +1241,13 @@ EncoreDescription:
 	next "２ー６かい　れんぞくで　ださせる@"
 
 PursuitDescription:
+IF DEF(_09_30)
+	db   "てき<GA>にげるとき<NI>つかうと"
+	next "だいダメージ<WO>あたえることができる@"
+ELIF DEF(_10_06) || DEF(_REV0)
 	db   "あいて<GA>こうかんするときに"
 	next "つかうと　だいダメージ<WO>あたえる@"
+ENDC
 
 RapidSpinDescription:
 	db   "からだ<WO>はやく　かいてんさせて"
@@ -1301,8 +1326,11 @@ ShadowBallDescription:
 	next "とくしゅぼうぎょ<WO>さげることがある@"
 
 FutureSightDescription:
+IF DEF(_10_06) || DEF(_REV0)
 	db   "せいしんりょく<WO>たかめて"
-	next "２ターンご<NI>てき<WO><KOUGEKI>する@"
+	next ""
+ENDC
+	db   "２ターンご<NI>てき<WO><KOUGEKI>する@"
 
 RockSmashDescription:
 	db   "いわ<WO>くだく　いきおいで　<KOUGEKI>"

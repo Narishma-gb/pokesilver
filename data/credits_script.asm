@@ -193,14 +193,14 @@ CreditsScript:
 
 	db CREDITS_WAIT, 12
 	db CREDITS_WAIT, 2
-	
+
 	db       SPECIAL_THANKS, 0
 	db      TAKAHIRO_HARADA, 1
 	db         SATORU_IWATA, 2
 
 	db CREDITS_WAIT, 12
 	db CREDITS_WAIT, 2
-	
+
 	db       SPECIAL_THANKS, 0
 	db      HIROYUKI_ZINNAI, 1
 	db      KUNIMI_KAWAMURA, 2

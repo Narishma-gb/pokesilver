@@ -1,4 +1,4 @@
-LoadMysteryGiftBackgroundGFX:
+LoadMysteryGiftBackgroundGFX::
 	ld hl, MysteryGiftBackgroundGFX
 	ld de, vTiles2 tile $20
 	ld a, BANK(MysteryGiftBackgroundGFX)
@@ -16,7 +16,7 @@ LoadMysteryGiftBackgroundGFX:
 	jr nz, .loop
 	ret
 
-LoadMysteryGiftGFX2:
+LoadMysteryGiftGFX2::
 	ld hl, MysteryGiftGFX2
 	ld de, vTiles2 tile $2f
 	ld a, BANK(MysteryGiftGFX2)

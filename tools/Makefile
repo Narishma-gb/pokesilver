@@ -7,7 +7,6 @@ tools := \
 	gbcpal \
 	gfx \
 	lzcompress \
-	make_patch \
 	png_dimensions \
 	scan_includes
 

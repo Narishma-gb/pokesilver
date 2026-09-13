@@ -1,6 +1,10 @@
 SECTION "Map Scripts 1", ROMX
 
+IF DEF(_09_30)
+INCLUDE "maps/Route16.asm"
+ELIF DEF(_10_06) || DEF(_REV0)
 INCLUDE "maps/SilverCaveOutside.asm"
+ENDC
 INCLUDE "maps/GoldenrodGym.asm"
 INCLUDE "maps/GoldenrodBikeShop.asm"
 INCLUDE "maps/GoldenrodHappinessRater.asm"
@@ -34,9 +38,9 @@ INCLUDE "maps/Route29Route46Gate.asm"
 
 SECTION "Map Scripts 2", ROMX
 
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 INCLUDE "maps/Route3.asm"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 INCLUDE "maps/Route4.asm"
 ENDC
 INCLUDE "maps/GoldenrodUnderground.asm"
@@ -377,7 +381,9 @@ INCLUDE "maps/Route42.asm"
 INCLUDE "maps/PewterCity.asm"
 INCLUDE "maps/ViridianCity.asm"
 INCLUDE "maps/Route19.asm"
+IF DEF(_10_06) || DEF(_REV0)
 INCLUDE "maps/Route16.asm"
+ENDC
 INCLUDE "maps/CeladonCity.asm"
 INCLUDE "maps/Route15.asm"
 INCLUDE "maps/Route13.asm"
@@ -386,6 +392,9 @@ INCLUDE "maps/CeruleanCity.asm"
 INCLUDE "maps/Route9.asm"
 INCLUDE "maps/Route24.asm"
 INCLUDE "maps/Route8.asm"
+IF DEF(_09_30)
+INCLUDE "maps/Route23.asm"
+ENDC
 INCLUDE "maps/CinnabarPokecenter1F.asm"
 INCLUDE "maps/CinnabarPokecenter2FBeta.asm"
 INCLUDE "maps/Route19FuchsiaGate.asm"
@@ -394,6 +403,9 @@ INCLUDE "maps/SeafoamGym.asm"
 
 SECTION "Map Scripts 12", ROMX
 
+IF DEF(_09_30)
+INCLUDE "maps/SilverCaveOutside.asm"
+ENDC
 INCLUDE "maps/Route28.asm"
 INCLUDE "maps/Route33.asm"
 INCLUDE "maps/Route46.asm"
@@ -411,13 +423,15 @@ INCLUDE "maps/Route14.asm"
 INCLUDE "maps/Route12.asm"
 INCLUDE "maps/LavenderTown.asm"
 INCLUDE "maps/Route5.asm"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 INCLUDE "maps/Route4.asm"
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 INCLUDE "maps/Route3.asm"
 ENDC
 INCLUDE "maps/Route10South.asm"
+IF DEF(_10_06) || DEF(_REV0)
 INCLUDE "maps/Route23.asm"
+ENDC
 INCLUDE "maps/SilverCavePokecenter1F.asm"
 INCLUDE "maps/Route28SteelWingHouse.asm"
 

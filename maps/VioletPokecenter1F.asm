@@ -29,7 +29,9 @@ VioletPokecenter1F_ElmsAideScript:
 	scall .AideGivesEgg
 	setevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	clearevent EVENT_ELMS_AIDE_IN_LAB
+IF DEF(_10_06) || DEF(_REV0)
 	clearevent EVENT_TOGEPI_HATCHED
+ENDC
 	setmapscene ROUTE_32, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
 	writetext VioletPokecenterElmsAideGiveEggText
 	waitbutton

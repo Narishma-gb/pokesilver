@@ -95,8 +95,13 @@ ItemNames::
 	li "みどぼんぐり"
 	li "きよめのおふだ"
 	li "しんぴのしずく"
+IF DEF(_09_30)
+	li "しろぼんぐり"
+	li "まがったスプーン"
+ELIF DEF(_10_06) || DEF(_REV0)
 	li "まがったスプーン"
 	li "しろぼんぐり"
+ENDC
 	li "くろおび"
 	li "くろぼんぐり"
 	li "カビチュウ"
@@ -258,9 +263,9 @@ ItemNames::
 	li "カビチュウ"
 	li "カビチュウ"
 	li "カビチュウ"
-IF DEF(_PROTO)
+IF DEF(_09_30) || DEF(_10_06)
 	assert_list_length $100 -1
-ELIF DEF(_REV0) || DEF(_REV1)
+ELIF DEF(_REV0)
 	li "？"
 	assert_list_length $100
 ENDC

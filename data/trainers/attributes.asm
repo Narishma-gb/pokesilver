@@ -346,7 +346,11 @@ TrainerClassAttributes:
 
 ; Boarder
 	db NO_ITEM, NO_ITEM ; items
+IF DEF(_09_30)
+	db 3 ; base reward
+ELIF DEF(_10_06) || DEF(_REV0)
 	db 18 ; base reward
+ENDC
 	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 

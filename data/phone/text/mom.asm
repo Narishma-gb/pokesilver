@@ -109,8 +109,12 @@ MomPhoneNoPokedexText:
 	text "もしもし⋯"
 
 	para "あら　<PLAYER>"
+IF DEF(_09_30)
+	line "おつかい　たのまれたんだ<TTE>？"
+ELIF DEF(_10_06) || DEF(_REV0)
 	line "ウツギはかせから"
 	cont "ようじを　たのまれたんだ<TTE>？"
+ENDC
 	cont "がんば<TTE>ね！"
 	done
 
@@ -118,7 +122,11 @@ MomPhoneNoGymQuestText:
 	text "もしもし⋯"
 
 	para "あら　<PLAYER>"
+IF DEF(_09_30)
+	line "おつかい　すんだのなら"
+ELIF DEF(_10_06) || DEF(_REV0)
 	line "ようじが　すんだのなら"
+ENDC
 	cont "あそんでないで　かえ<TTE>くるのよ"
 	done
 

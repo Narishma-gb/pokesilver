@@ -1,4 +1,4 @@
-BattleCommand_GetMagnitude:
+BattleCommand_GetMagnitude::
 	push bc
 	call BattleRandom
 	ld b, a

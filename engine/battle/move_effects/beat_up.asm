@@ -1,4 +1,4 @@
-BattleCommand_BeatUp:
+BattleCommand_BeatUp::
 	call ResetDamage
 	ldh a, [hBattleTurn]
 	and a
@@ -190,7 +190,7 @@ BattleCommand_BeatUp:
 	ld b, buildopponentrage_command
 	jp SkipToBattleCommand
 
-BattleCommand_BeatUpFailText:
+BattleCommand_BeatUpFailText::
 ; BUG: Beat Up may trigger King's Rock even if it failed (see docs/bugs_and_glitches.md)
 	ld a, [wBeatUpHitAtLeastOnce]
 	and a

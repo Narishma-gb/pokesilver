@@ -501,12 +501,14 @@ NoPPLeftText:
 	line "なかっ<TA!>"
 	prompt
 
+IF DEF(_10_06) || DEF(_REV0)
 HasNoPPLeftText:
 	text "<USER><WA>ポイントぎれで"
 	line "@"
 	text_ram wStringBuffer2
 	text "<GA>だせない！"
 	prompt
+ENDC
 
 WentToSleepText:
 	text "<USER>は"

@@ -420,9 +420,11 @@ Paragraph::
 	jp NextChar
 
 _ContText::
+IF DEF(_10_06) || DEF(_REV0)
 	ld a, [wLinkMode]
 	cp LINK_COLOSSEUM
 	jr z, .communication
+ENDC
 	call LoadBlinkingCursor
 
 .communication

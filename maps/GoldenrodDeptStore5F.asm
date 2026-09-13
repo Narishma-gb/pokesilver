@@ -59,8 +59,10 @@ GoldenrodDeptStore5FClerkScript:
 GoldenrodDeptStore5FReceptionistScript:
 	faceplayer
 	opentext
+IF DEF(_10_06) || DEF(_REV0)
 	readvar VAR_WEEKDAY
 	ifnotequal SUNDAY, .EventIsOver
+ENDC
 	checkflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
 	iftrue .EventIsOver
 	special GetFirstPokemonHappiness
