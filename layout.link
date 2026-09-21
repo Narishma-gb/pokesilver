@@ -27,221 +27,222 @@ ROM0
 	"joypad"
 	org $0100
 	"Header"
-	org $0150
-	"Home"
+; 	org $0150
+; 	"Home"
 	; "Garbage 0"
-ROMX $01
-	"bank1"
-	; "Garbage 1"
-ROMX $02
-	"bank2"
-ROMX $03
-	"bank3"
-	; "Garbage 3"
-ROMX $04
-	"bank4"
-	; "Garbage 4"
-ROMX $05
-	"bank5"
-	; "Garbage 5"
-ROMX $06
-	"Tileset Data 1"
-ROMX $07
-	"Roofs"
-	"Tileset Data 2"
-	"Extra Songs 1"
-ROMX $08
-	"Clock Reset"
-	"Tileset Data 3"
-	"Catch Tutorial"
-	"Egg Moves"
-ROMX $09
-	"bank9"
-	; "Garbage 9"
-ROMX $0a
-	"bankA"
-ROMX $0b
-	"bankB"
-	; "Garbage 11"
-ROMX $0c
-	"Tileset Data 4"
-ROMX $0d
-	"Effect Commands"
-ROMX $0e
-	"Enemy Trainers"
-ROMX $0f
-	"Battle Core"
-	; "Garbage 15"
-ROMX $10
-	"bank10"
-	"Evolutions and Attacks"
-ROMX $11
-	"bank11"
-	"Pokedex Entries"
-	"Pokemon Mail"
-ROMX $12
-	org $4000
-	"Pic Pointers"
-	"Pics 1"
-ROMX $13
-	"Map Scripts 1"
-ROMX $14
-	"bank14"
-	"Egg Pic"
-ROMX $15
-	"Pics 2"
-ROMX $16
-	"Pics 3"
-ROMX $17
-	"Pics 4"
-ROMX $18
-	"Pics 5"
-ROMX $19
-	"Pics 6"
-ROMX $1a
-	"Pics 7"
-ROMX $1b
-	"Pics 8"
-ROMX $1c
-	"Pics 9"
-ROMX $1d
-	"Pics 10"
-ROMX $1e
-	"Pics 11"
-ROMX $1f
-	org $4000
-	"Unown Pic Pointers"
-	"Pics 12"
-ROMX $20
-	"Trainer Pic Pointers"
-	"Pics 13"
-ROMX $21
-	"bank21"
-	"Credits"
-ROMX $22
-	"Map Scripts 2"
-ROMX $23
-	"bank23"
-ROMX $24
-	"bank24"
-ROMX $25
-	"Maps"
-	"Events"
-	; "Garbage 37"
-ROMX $26
-	"Map Scripts 3"
-ROMX $27
-	"Map Scripts 4"
-ROMX $28
-	"Map Scripts 5"
-ROMX $29
-	"Map Scripts 6"
-ROMX $2a
-	"Map Blocks 1"
-ROMX $2b
-	"Map Blocks 2"
-ROMX $2c
-	"Map Scripts 7"
-ROMX $2d
-	"Map Scripts 8"
-ROMX $2e
-	"Pics 14"
-	org $6300
-	"bank2E"
-ROMX $2f
-	"Map Scripts 9"
-ROMX $30
-	"Sprites 1"
-ROMX $31
-	"Sprites 2"
-	org $7a40
-	"bank31"
-ROMX $32
-	"bank32"
-	"The End"
-ROMX $33
-	"Move Animations"
-	"Extra Songs 2"
-ROMX $34
-	"Map Scripts 10"
-ROMX $35
-	"Map Scripts 11"
-ROMX $36
-	"Standard Scripts"
-	"Phone Scripts"
-	"Map Scripts 12"
-ROMX $37
-	"Map Blocks 3"
-	"Tileset Data 5"
-ROMX $38
-	"bank38"
-ROMX $39
-	"Copyright"
-	"Title Screen"
-	"Options"
-	"Font Inversed"
-	"Intro"
-ROMX $3a
-	"Audio"
-	"Songs 1"
-ROMX $3b
-	"Songs 2"
-ROMX $3c
-	"Songs 3"
-	"Sound Effects"
-	"Cries"
-ROMX $3d
-	"Songs 4"
-ROMX $3e
-	"bank3E"
-	"Shrink Pics"
-	"bank3E_2"
-	; "Garbage 62"
-ROMX $3f
-	"bank3F"
-	; "Garbage 63"
-WRAM0
-	"Audio RAM"
-	"WRAM"
-	align 8
-	"GBC Palettes"
-	align 8
-	"Sprites"
-	"Tilemap"
-	"Miscellaneous"
-	"Unused Map Buffer"
-	align 8
-	"Overworld Map"
-	"Video"
-WRAMX 1
-	"WRAM 1"
-	"Game Data"
-	"Party"
-	"Stack"
+; ROMX $01
+; 	"bank1"
+; 	; "Garbage 1"
+; ROMX $02
+; 	"bank2"
+; ROMX $03
+; 	"bank3"
+; 	; "Garbage 3"
+; ROMX $04
+; 	"bank4"
+; 	; "Garbage 4"
+; ROMX $05
+; 	"bank5"
+; 	; "Garbage 5"
+; ROMX $06
+; 	"Tileset Data 1"
+; ROMX $07
+; 	"Roofs"
+; 	"Tileset Data 2"
+; 	"Extra Songs 1"
+; ROMX $08
+; 	"Clock Reset"
+; 	"Tileset Data 3"
+; 	"Catch Tutorial"
+; 	"Egg Moves"
+; ROMX $09
+; 	"bank9"
+; 	; "Garbage 9"
+; ROMX $0a
+; 	"bankA"
+; ROMX $0b
+; 	"bankB"
+; 	; "Garbage 11"
+; ROMX $0c
+; 	"Tileset Data 4"
+; ROMX $0d
+; 	"Effect Commands"
+; ROMX $0e
+; 	"Enemy Trainers"
+; ROMX $0f
+; 	"Battle Core"
+; 	; "Garbage 15"
+; ROMX $10
+; 	"bank10"
+; 	"Evolutions and Attacks"
+; ROMX $11
+; 	"bank11"
+; 	"Pokedex Entries"
+; 	"Pokemon Mail"
+; ROMX $12
+; 	org $4000
+; 	"Pic Pointers"
+; 	"Pics 1"
+; ROMX $13
+; 	"Map Scripts 1"
+; ROMX $14
+; 	"bank14"
+; 	"Egg Pic"
+; ROMX $15
+; 	"Pics 2"
+; ROMX $16
+; 	"Pics 3"
+; ROMX $17
+; 	"Pics 4"
+; ROMX $18
+; 	"Pics 5"
+; ROMX $19
+; 	"Pics 6"
+; ROMX $1a
+; 	"Pics 7"
+; ROMX $1b
+; 	"Pics 8"
+; ROMX $1c
+; 	"Pics 9"
+; ROMX $1d
+; 	"Pics 10"
+; ROMX $1e
+; 	"Pics 11"
+; ROMX $1f
+; 	org $4000
+; 	"Unown Pic Pointers"
+; 	"Pics 12"
+; ROMX $20
+; 	"Trainer Pic Pointers"
+; 	"Pics 13"
+; ROMX $21
+; 	"bank21"
+; 	"Credits"
+; ROMX $22
+; 	"Map Scripts 2"
+; ROMX $23
+; 	"bank23"
+; ROMX $24
+; 	"bank24"
+; ROMX $25
+; 	"Maps"
+; 	"Events"
+; 	; "Garbage 37"
+; ROMX $26
+; 	"Map Scripts 3"
+; ROMX $27
+; 	"Map Scripts 4"
+; ROMX $28
+; 	"Map Scripts 5"
+; ROMX $29
+; 	"Map Scripts 6"
+; ROMX $2a
+; 	"Map Blocks 1"
+; ROMX $2b
+; 	"Map Blocks 2"
+; ROMX $2c
+; 	"Map Scripts 7"
+; ROMX $2d
+; 	"Map Scripts 8"
+; ROMX $2e
+; 	"Pics 14"
+; 	org $6300
+; 	"bank2E"
+; ROMX $2f
+; 	"Map Scripts 9"
+; ROMX $30
+; 	"Sprites 1"
+; ROMX $31
+; 	"Sprites 2"
+; 	org $7a40
+; 	"bank31"
+; ROMX $32
+; 	"bank32"
+; 	"The End"
+; ROMX $33
+; 	"Move Animations"
+; 	"Extra Songs 2"
+; ROMX $34
+; 	"Map Scripts 10"
+; ROMX $35
+; 	"Map Scripts 11"
+; ROMX $36
+; 	"Standard Scripts"
+; 	"Phone Scripts"
+; 	"Map Scripts 12"
+; ROMX $37
+; 	"Map Blocks 3"
+; 	"Tileset Data 5"
+; ROMX $38
+; 	"bank38"
+; ROMX $39
+; 	"Copyright"
+; 	"Title Screen"
+; 	"Options"
+; 	"Font Inversed"
+; 	"Intro"
+; ROMX $3a
+; 	"Audio"
+; 	"Songs 1"
+; ROMX $3b
+; 	"Songs 2"
+; ROMX $3c
+; 	"Songs 3"
+; 	"Sound Effects"
+; 	"Cries"
+; ROMX $3d
+; 	"Songs 4"
+; ROMX $3e
+; 	"bank3E"
+; 	"Shrink Pics"
+; 	"bank3E_2"
+; 	; "Garbage 62"
+; ROMX $3f
+; 	"bank3F"
+; 	; "Garbage 63"
+; WRAM0
+; 	"Audio RAM"
+; 	"WRAM"
+; 	align 8
+; 	"GBC Palettes"
+; 	align 8
+; 	"Sprites"
+; 	"Tilemap"
+; 	"Miscellaneous"
+; 	"Unused Map Buffer"
+; 	align 8
+; 	"Overworld Map"
+; 	"Video"
+; WRAMX 1
+; 	"WRAM 1"
+; 	"Game Data"
+; 	"Party"
+; 	"Stack"
 VRAM $00
 	"VRAM0"
 VRAM $01
 	"VRAM1"
-SRAM $00
-	"Scratch"
-	org $a600
-	"SRAM Bank 0"
-	org $b800
-	"SRAM Window Stack"
-SRAM $01
-	"Save"
-	org $ad10
-	"Active Box"
-	org $b260
-	"Link Battle Data"
-	org $b2b0
-	"SRAM Hall of Fame"
-SRAM $02
-	"Boxes 1-6"
-SRAM $03
-	"Boxes 7-9"
-	org $b200
-	"Backup Save"
+; SRAM $00
+; 	"Scratch"
+; 	org $a600
+; 	"SRAM Bank 0"
+; 	org $b800
+; 	"SRAM Window Stack"
+; SRAM $01
+; 	"Save"
+; 	org $ad10
+; 	"Active Box"
+; 	org $b260
+; 	"Link Battle Data"
+; 	org $b2b0
+; 	"SRAM Hall of Fame"
+; SRAM $02
+; 	"Boxes 1-6"
+; SRAM $03
+; 	"Boxes 7-9"
+; 	org $b200
+; 	"Backup Save"
 HRAM
-	"OAM DMA"
+; 	"OAM DMA"
+	org $ff8a
 	"HRAM"

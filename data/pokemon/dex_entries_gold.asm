@@ -1,3 +1,4 @@
+/*
 SECTION "Pokedex Entries", ROMX
 
 INCLUDE "data/pokemon/dex_entry_pointers.asm"
@@ -256,3 +257,4 @@ TyranitarPokedexEntry:  INCLUDE "data/pokemon/dex_entries/gold/tyranitar.asm"
 LugiaPokedexEntry:      INCLUDE "data/pokemon/dex_entries/gold/lugia.asm"
 HoOhPokedexEntry:       INCLUDE "data/pokemon/dex_entries/gold/ho_oh.asm"
 CelebiPokedexEntry:     INCLUDE "data/pokemon/dex_entries/gold/celebi.asm"
+*/
