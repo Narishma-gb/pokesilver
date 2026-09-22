@@ -163,8 +163,10 @@ VBlank_Cutscene::
 	ldh [rSCX], a
 	ldh a, [hSCY]
 	ldh [rSCY], a
-	call UpdatePals
+	call UpdatePalsIfCGB
 	jr c, .done
+	ld a, [wOBP1]
+	ldh [rOBP1], a
 
 	call UpdateBGMap
 	call Serve2bppRequest
@@ -175,20 +177,13 @@ VBlank_Cutscene::
 	xor a
 	ld [wVBlankOccurred], a
 
-	; get requested ints
-	ldh a, [rIF]
-	ld b, a
 	; discard requested ints
 	xor a
 	ldh [rIF], a
 	; enable lcd stat
 	ld a, IE_STAT
 	ldh [rIE], a
-	; rerequest serial int if applicable (still disabled)
 	; request lcd stat
-	ld a, b
-	and IF_SERIAL
-	or IF_STAT
 	ldh [rIF], a
 
 	ei
@@ -199,36 +194,12 @@ VBlank_Cutscene::
 	rst Bankswitch
 
 	di
-	; get requested ints
-	ldh a, [rIF]
-	ld b, a
 	; discard requested ints
 	xor a
 	ldh [rIF], a
 	; enable ints
 	ld a, IE_DEFAULT
 	ldh [rIE], a
-	; restore requested ints
-	ld a, b
-	ldh [rIF], a
-	ret
-
-UpdatePals::
-; update pals for either dmg or cgb
-
-	ldh a, [hCGB]
-	and a
-	jp nz, UpdateCGBPals
-
-	; update gb pals
-	ld a, [wBGP]
-	ldh [rBGP], a
-	ld a, [wOBP0]
-	ldh [rOBP0], a
-	ld a, [wOBP1]
-	ldh [rOBP1], a
-
-	and a
 	ret
 
 VBlank_Serial::
@@ -324,6 +295,81 @@ VBlank_SoundOnly::
 
 	xor a
 	ld [wVBlankOccurred], a
+	ret
+
+VBlank_NormalDuplicate: ; unreferenced
+; an almost perfect duplicate of VBlank_Normal
+
+	ld hl, hVBlankCounter
+	inc [hl]
+
+	ldh a, [rDIV]
+	ld b, a
+	ldh a, [hRandomAdd]
+	adc b
+	ldh [hRandomAdd], a
+	ld b, a
+	ldh a, [hRandomSub]
+	sbc b
+	ldh [hRandomSub], a
+
+	ldh a, [hROMBank]
+	ld [wROMBankBackup], a
+
+	ldh a, [hSCX]
+	ldh [rSCX], a
+	ldh a, [hSCY]
+	ldh [rSCY], a
+
+	ldh a, [hWY]
+	ldh [rWY], a
+	ldh a, [hWX]
+	ldh [rWX], a
+
+	call UpdateBGMapBuffer
+	jr c, .done
+	call UpdatePalsIfCGB
+	jr c, .done
+	call UpdateBGMap
+	call Serve2bppRequest
+	call Serve1bppRequest
+	call FillBGMap0WithBlack
+.done
+
+	ldh a, [hOAMUpdate]
+	and a
+	jr nz, .done_oam
+	call hTransferShadowOAM
+.done_oam
+
+	xor a
+	ld [wVBlankOccurred], a
+
+	ld a, [wOverworldDelay]
+	and a
+	jr z, .ok
+	dec a
+	ld [wOverworldDelay], a
+.ok
+
+	ld a, [wTextDelayFrames]
+	and a
+	jr z, .ok2
+	dec a
+	ld [wTextDelayFrames], a
+.ok2
+
+	call UpdateJoypad
+
+	ld a, BANK(_UpdateSound)
+	rst Bankswitch
+	call _UpdateSound
+	ld a, [wROMBankBackup]
+	rst Bankswitch
+
+	ldh a, [hSeconds]
+	ldh [hUnusedBackup], a
+
 	ret
 
 VBlank_Unused::

@@ -111,7 +111,6 @@ _PlayMonCry::
 	push bc
 
 	call GetCryIndex
-	jr c, .done
 
 	ld e, c
 	ld d, b
@@ -128,7 +127,6 @@ LoadCry::
 ; Load cry bc.
 
 	call GetCryIndex
-	ret c
 
 	ldh a, [hROMBank]
 	push af
@@ -156,23 +154,12 @@ endr
 
 	pop af
 	rst Bankswitch
-	and a
 	ret
 
 GetCryIndex::
-	and a
-	jr z, .no
-	cp NUM_POKEMON + 1
-	jr nc, .no
-
 	dec a
 	ld c, a
 	ld b, 0
-	and a
-	ret
-
-.no
-	scf
 	ret
 
 PrintLevel::

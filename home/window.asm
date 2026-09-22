@@ -72,19 +72,15 @@ HDMATransferTilemapAndAttrmap_Menu::
 	ret
 
 SafeUpdateSprites::
+	call UpdateSprites
+
 	ldh a, [hOAMUpdate]
 	push af
 	ldh a, [hBGMapMode]
 	push af
 	xor a
+	ldh [hOAMUpdate], a
 	ldh [hBGMapMode], a
-	ld a, $1
-	ldh [hOAMUpdate], a
-
-	call UpdateSprites
-
-	xor a
-	ldh [hOAMUpdate], a
 	call DelayFrame
 	pop af
 	ldh [hBGMapMode], a

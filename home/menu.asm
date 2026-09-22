@@ -492,18 +492,10 @@ DrawVariableLengthMenuBox::
 	ret
 
 MenuWriteText::
-	xor a
-	ldh [hBGMapMode], a
 	call GetMenuIndexSet ; sort out the text
 	call RunMenuItemPrintingFunction ; actually write it
-	call SafeUpdateSprites
-	ldh a, [hOAMUpdate]
-	push af
-	ld a, $1
-	ldh [hOAMUpdate], a
+	call UpdateSprites
 	call ApplyTilemap
-	pop af
-	ldh [hOAMUpdate], a
 	ret
 
 AutomaticGetMenuBottomCoord::
@@ -795,59 +787,10 @@ _2DMenu::
 	ld a, [wMenuCursorPosition]
 	ret
 
-IF DEF(_DEBUG)
-Function1e76::
-	ld hl, wUnusedReanchorBGMapFlags
-	set 2, [hl]
-	ret
-
-Function1e7c::
-	ld hl, wUnusedReanchorBGMapFlags
-	set 0, [hl]
-	ret
-
-Function1e82::
-	ld hl, wUnusedReanchorBGMapFlags
-	res 0, [hl]
-	ret
-
-Function1e88:
-	farcall Functionfb44a
-	ret
-ENDC
-
 ResetBGWindow::
 	xor a
 	ldh [hBGMapMode], a
-IF DEF(_DEBUG)
-	ld hl, wUnusedReanchorBGMapFlags
-	bit 0, [hl]
-	jr nz, .DrawToolgear
-ENDC
 	ld a, $90
 	ldh [rWY], a
 	ldh [hWY], a
 	ret
-
-IF DEF(_DEBUG)
-.DrawToolgear
-	res 7, [hl]
-	call Function1e88
-	hlbgcoord 0, 0, wDebugToolgearBuffer
-	ld a, '─'
-	ld bc, SCREEN_WIDTH
-	call ByteFill
-	hlbgcoord 0, 1, wDebugToolgearBuffer
-	ld a, '　'
-	ld bc, SCREEN_WIDTH
-	call ByteFill
-	farcall Debug_UpdateToolgear
-	hlbgcoord 0, 0, vBGMap1
-	ld bc, 2 * TILEMAP_WIDTH / TILE_SIZE
-	ld de, wDebugToolgearBuffer
-	call Get2bpp
-	ld a, $80
-	ldh [rWY], a
-	ldh [hWY], a
-	ret
-ENDC

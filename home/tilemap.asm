@@ -70,23 +70,18 @@ CopyTilemapAtOnce::
 
 .wait
 	ldh a, [rLY]
-	cp $80 - 1
+	cp $60
 	jr c, .wait
 
 	di
 	ld a, BANK(vBGMap2)
 	ldh [rVBK], a
-	hlcoord 0, 0, wAttrmap
-	call .CopyBGMapViaStack
+	decoord 0, 0, wAttrmap
+	call .CopyBGMap
 	ld a, BANK(vBGMap0)
 	ldh [rVBK], a
-	hlcoord 0, 0
-	call .CopyBGMapViaStack
-
-.wait2
-	ldh a, [rLY]
-	cp $80 - 1
-	jr c, .wait2
+	decoord 0, 0
+	call .CopyBGMap
 	ei
 
 	pop af
@@ -95,45 +90,34 @@ CopyTilemapAtOnce::
 	ldh [hBGMapMode], a
 	ret
 
-.CopyBGMapViaStack:
-; Copy all tiles to vBGMap
-	ld [hSPBuffer], sp
-	ld sp, hl
+.CopyBGMap:
 	ldh a, [hBGMapAddress + 1]
 	ld h, a
 	ld l, 0
 	ld a, SCREEN_HEIGHT
-	ldh [hTilesPerCycle], a
+
+.row
+	push af
+	ld c, SCREEN_WIDTH
 	ld b, STAT_BUSY
-	ld c, LOW(rSTAT)
 
-.loop
-rept SCREEN_WIDTH / 2
-	pop de
 ; wait until PPU v/hblank mode
-.loop\@
-	ldh a, [c]
+.loop
+	ldh a, [rSTAT]
 	and b
-	jr nz, .loop\@
-; load vBGMap
-	ld [hl], e
-	inc l
-	ld [hl], d
-	inc l
-endr
-
-	ld de, TILEMAP_WIDTH - SCREEN_WIDTH
-	add hl, de
-	ldh a, [hTilesPerCycle]
-	dec a
-	ldh [hTilesPerCycle], a
 	jr nz, .loop
 
-	ldh a, [hSPBuffer]
-	ld l, a
-	ldh a, [hSPBuffer + 1]
-	ld h, a
-	ld sp, hl
+	ld a, [de]
+	inc de
+	ld [hli], a
+	dec c
+	jr nz, .loop
+
+	ld bc, TILEMAP_WIDTH - SCREEN_WIDTH
+	add hl, bc
+	pop af
+	dec a
+	jr nz, .row
 	ret
 
 SetDefaultBGPAndOBP::
@@ -202,20 +186,16 @@ GetSGBLayout::
 
 SetHPPal::
 ; Set palette for hp bar pixel length e at hl.
-	call GetHPPal
-	ld [hl], d
-	ret
-
-GetHPPal::
-; Get palette for hp bar pixel length e in d.
-	ld d, HP_GREEN
 	ld a, e
 	cp (HP_BAR_LENGTH_PX * 50 / 100) ; 24
-	ret nc
+	ld d, HP_GREEN
+	jr nc, .set
+	cp (HP_BAR_LENGTH_PX * 21 / 100) ; 10
 	assert HP_GREEN + 1 == HP_YELLOW
 	inc d
-	cp (HP_BAR_LENGTH_PX * 21 / 100) ; 10
-	ret nc
+	jr nc, .set
 	assert HP_YELLOW + 1 == HP_RED
 	inc d
+.set
+	ld [hl], d
 	ret

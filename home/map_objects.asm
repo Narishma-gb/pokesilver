@@ -188,17 +188,6 @@ CheckWaterfallTile::
 	cp COLL_CURRENT_DOWN
 	ret
 
-CheckStandingOnEntrance::
-	ld a, [wPlayerTileCollision]
-	cp COLL_DOOR
-	ret z
-	cp COLL_DOOR_79
-	ret z
-	cp COLL_STAIRCASE
-	ret z
-	cp COLL_CAVE
-	ret
-
 GetMapObject::
 ; Return the location of map object a in bc.
 	ld hl, wMapObjects

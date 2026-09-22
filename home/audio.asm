@@ -95,37 +95,6 @@ PlayMusic::
 	pop hl
 	ret
 
-PlayMusic2::
-; Stop playing music, then play music de.
-
-	push hl
-	push de
-	push bc
-	push af
-
-	ldh a, [hROMBank]
-	push af
-	ld a, BANK(_PlayMusic)
-	ldh [hROMBank], a
-	ld [rROMB], a
-
-	push de
-	ld de, MUSIC_NONE
-	call _PlayMusic
-	call DelayFrame
-	pop de
-	call _PlayMusic
-
-	pop af
-	ldh [hROMBank], a
-	ld [rROMB], a
-
-	pop af
-	pop bc
-	pop de
-	pop hl
-	ret
-
 PlayCry::
 ; Play cry de.
 
@@ -398,14 +367,7 @@ SpecialMapMusic::
 	ld a, [wPlayerState]
 	cp PLAYER_SURF
 	jr z, .surf
-	cp PLAYER_SURF_PIKA
-	jr z, .surf
 
-	ld a, [wStatusFlags2]
-	bit STATUSFLAGS2_BUG_CONTEST_TIMER_F, a
-	jr nz, .contest
-
-.no
 	and a
 	ret
 
@@ -416,21 +378,6 @@ SpecialMapMusic::
 
 .surf
 	ld de, MUSIC_SURF
-	scf
-	ret
-
-.contest
-	ld a, [wMapGroup]
-	cp GROUP_ROUTE_35_NATIONAL_PARK_GATE
-	jr nz, .no
-	ld a, [wMapNumber]
-	cp MAP_ROUTE_35_NATIONAL_PARK_GATE
-	jr z, .ranking
-	cp MAP_ROUTE_36_NATIONAL_PARK_GATE
-	jr nz, .no
-
-.ranking
-	ld de, MUSIC_BUG_CATCHING_CONTEST_RANKING
 	scf
 	ret
 

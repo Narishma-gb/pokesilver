@@ -24,8 +24,6 @@ Serial::
 	cp USING_INTERNAL_CLOCK
 	jr z, .player2
 
-	ld a, SC_EXTERNAL
-	ldh [rSC], a
 	ld a, SC_START | SC_EXTERNAL
 	ldh [rSC], a
 	jr .player2
@@ -36,12 +34,6 @@ Serial::
 
 .establish_connection
 	ldh a, [rSB]
-	cp USING_EXTERNAL_CLOCK
-	jr z, .player1
-	cp USING_INTERNAL_CLOCK
-	jr nz, .player2
-
-.player1
 	ldh [hSerialReceive], a
 	ldh [hSerialConnectionStatus], a
 	cp USING_INTERNAL_CLOCK
@@ -57,8 +49,6 @@ Serial::
 	bit 7, a ; wait until rDIV has incremented from 3 to $80 or more
 	jr nz, .delay_loop
 
-	ld a, SC_EXTERNAL
-	ldh [rSC], a
 	ld a, SC_START | SC_EXTERNAL
 	ldh [rSC], a
 	jr .player2
@@ -126,8 +116,6 @@ Serial_ExchangeByte::
 	ldh a, [hSerialConnectionStatus]
 	cp USING_INTERNAL_CLOCK
 	jr nz, .not_player_2
-	ld a, SC_INTERNAL
-	ldh [rSC], a
 	ld a, SC_START | SC_INTERNAL
 	ldh [rSC], a
 .not_player_2
@@ -276,13 +264,7 @@ Serial_PlaceWaitingTextAndSyncAndExchangeNybble::
 	call WaitLinkTransfer
 	jp SafeLoadTempTilemapToTilemap
 
-Serial_SyncAndExchangeNybble:: ; unreferenced
-	call LoadTilemapToTempTilemap
-	callfar PlaceWaitingText
-	jp WaitLinkTransfer ; pointless
-
 WaitLinkTransfer::
-	vc_hook Wireless_WaitLinkTransfer
 	ld a, $ff
 	ld [wOtherPlayerLinkAction], a
 .loop
@@ -310,26 +292,14 @@ WaitLinkTransfer::
 	inc a
 	jr z, .loop
 
-	vc_patch Wireless_net_delay_3
-if DEF(_GOLD_VC) || DEF(_SILVER_VC)
-	ld b, 26
-else
 	ld b, 10
-endc
-	vc_patch_end
 .receive
 	call DelayFrame
 	call LinkTransfer
 	dec b
 	jr nz, .receive
 
-	vc_patch Wireless_net_delay_4
-if DEF(_GOLD_VC) || DEF(_SILVER_VC)
-	ld b, 26
-else
 	ld b, 10
-endc
-	vc_patch_end
 .acknowledge
 	call DelayFrame
 	call LinkDataReceived
@@ -338,21 +308,15 @@ endc
 
 	ld a, [wOtherPlayerLinkAction]
 	ld [wOtherPlayerLinkMode], a
-	vc_hook Wireless_WaitLinkTransfer_ret
 	ret
 
 LinkTransfer::
 	push bc
 	ld b, SERIAL_TIMECAPSULE
 	ld a, [wLinkMode]
-	cp LINK_TIMECAPSULE
-	jr z, .got_high_nybble
-	ld b, SERIAL_TIMECAPSULE
-	jr c, .got_high_nybble
 	cp LINK_TRADECENTER
+	jr c, .got_high_nybble
 	ld b, SERIAL_TRADECENTER
-	jr z, .got_high_nybble
-	ld b, SERIAL_BATTLE
 
 .got_high_nybble
 	call .Receive
@@ -362,8 +326,6 @@ LinkTransfer::
 	ldh a, [hSerialConnectionStatus]
 	cp USING_INTERNAL_CLOCK
 	jr nz, .player_1
-	ld a, SC_INTERNAL
-	ldh [rSC], a
 	ld a, SC_START | SC_INTERNAL
 	ldh [rSC], a
 
@@ -392,8 +354,6 @@ LinkDataReceived::
 	ldh a, [hSerialConnectionStatus]
 	cp USING_INTERNAL_CLOCK
 	ret nz
-	ld a, SC_INTERNAL
-	ldh [rSC], a
 	ld a, SC_START | SC_INTERNAL
 	ldh [rSC], a
 	ret
@@ -407,8 +367,6 @@ SetBitsForTimeCapsuleRequestIfNotLinked:: ; unreferenced
 	ldh [rSB], a
 	xor a
 	ldh [hSerialReceive], a
-	ld a, SC_EXTERNAL
-	ldh [rSC], a
 	ld a, SC_START | SC_EXTERNAL
 	ldh [rSC], a
 	ret

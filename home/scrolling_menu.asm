@@ -39,23 +39,3 @@ InitScrollingMenu::
 	call Coord2Tile
 	pop bc
 	jp Textbox
-
-JoyTextDelay_ForcehJoyDown::
-	call DelayFrame
-
-	ldh a, [hInMenu]
-	push af
-	ld a, $1
-	ldh [hInMenu], a
-	call JoyTextDelay
-	pop af
-	ldh [hInMenu], a
-
-	ldh a, [hJoyLast]
-	and PAD_CTRL_PAD
-	ld c, a
-	ldh a, [hJoyPressed]
-	and PAD_BUTTONS
-	or c
-	ld c, a
-	ret

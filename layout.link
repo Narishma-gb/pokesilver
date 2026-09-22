@@ -27,9 +27,8 @@ ROM0
 	"joypad"
 	org $0100
 	"Header"
-; 	org $0150
-; 	"Home"
-	; "Garbage 0"
+	org $0150
+	"Home"
 ; ROMX $01
 ; 	"bank1"
 ; 	; "Garbage 1"
@@ -200,48 +199,48 @@ ROM0
 ; ROMX $3f
 ; 	"bank3F"
 ; 	; "Garbage 63"
-; WRAM0
-; 	"Audio RAM"
-; 	"WRAM"
-; 	align 8
-; 	"GBC Palettes"
-; 	align 8
-; 	"Sprites"
-; 	"Tilemap"
-; 	"Miscellaneous"
-; 	"Unused Map Buffer"
-; 	align 8
-; 	"Overworld Map"
-; 	"Video"
-; WRAMX 1
-; 	"WRAM 1"
-; 	"Game Data"
-; 	"Party"
-; 	"Stack"
+WRAM0
+	"Audio RAM"
+	"WRAM"
+	align 8
+	"GBC Palettes"
+	align 8
+	"Sprites"
+	"Tilemap"
+	"Miscellaneous"
+	"Unused Map Buffer"
+	align 8
+	"Overworld Map"
+	"Video"
+WRAMX 1
+	"WRAM 1"
+	"Game Data"
+	"Party"
+	"Stack"
 VRAM $00
 	"VRAM0"
 VRAM $01
 	"VRAM1"
-; SRAM $00
-; 	"Scratch"
-; 	org $a600
-; 	"SRAM Bank 0"
-; 	org $b800
-; 	"SRAM Window Stack"
-; SRAM $01
-; 	"Save"
-; 	org $ad10
-; 	"Active Box"
-; 	org $b260
-; 	"Link Battle Data"
-; 	org $b2b0
-; 	"SRAM Hall of Fame"
-; SRAM $02
-; 	"Boxes 1-6"
-; SRAM $03
-; 	"Boxes 7-9"
-; 	org $b200
-; 	"Backup Save"
+SRAM $00
+	"Scratch"
+	org $a600
+	"SRAM Bank 0"
+	org $b800
+	"SRAM Window Stack"
+SRAM $01
+	"Save"
+	org $ad10
+	"Active Box"
+	org $b260
+	"Link Battle Data"
+	org $b2b0
+	"SRAM Hall of Fame"
+SRAM $02
+	"Boxes 1-6"
+SRAM $03
+	"Boxes 7-9"
+	org $b200
+	"Backup Save"
 HRAM
 ; 	"OAM DMA"
 	org $ff8a

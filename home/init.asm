@@ -31,7 +31,6 @@ Init::
 	xor a
 	ldh [rIF], a
 	ldh [rIE], a
-	ldh [rRP], a
 	ldh [rSCX], a
 	ldh [rSCY], a
 	ldh [rSB], a
@@ -47,11 +46,6 @@ Init::
 
 	ld a, %100 ; Start timer at 4096Hz
 	ldh [rTAC], a
-
-.wait
-	ldh a, [rLY]
-	cp LY_VBLANK + 1
-	jr nz, .wait
 
 	xor a
 	ldh [rLCDC], a

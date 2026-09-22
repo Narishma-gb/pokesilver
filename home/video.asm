@@ -180,11 +180,6 @@ DEF THIRD_HEIGHT EQU SCREEN_HEIGHT / 3
 ; Rows of tiles in a third
 	ld a, THIRD_HEIGHT
 
-IF DEF(_DEBUG)
-; used by Function15ef to update a single row
-.a_rows
-ENDC
-
 ; Discrepancy between wTilemap and BGMap
 	ld bc, TILEMAP_WIDTH - (SCREEN_WIDTH - 1)
 
@@ -366,25 +361,6 @@ EnableSpriteDisplay:: ; unreferenced
 	ld hl, rLCDC
 	set B_LCDC_OBJS, [hl]
 	ret
-
-IF DEF(_DEBUG)
-Function15ef::
-	ld a, [wUnusedReanchorBGMapFlags]
-	bit 0, a
-	ret z
-	bit 7, a
-	ret nz
-	bit 2, a
-	res 2, a
-	ret z
-	ld [wUnusedReanchorBGMapFlags], a
-	ld [hSPBuffer], sp
-	hlbgcoord 0, 1, wDebugToolgearBuffer
-	ld sp, hl
-	hlbgcoord 0, 1, vBGMap1
-	ld a, 1
-	jp UpdateBGMap.a_rows
-ENDC
 
 FillBGMap0WithBlack::
 	nop

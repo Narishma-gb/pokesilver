@@ -209,7 +209,6 @@ ENDM
 	dict '<TM>',      PlaceTM
 	dict '<TRAINER>', PlaceTrainer
 	dict '<KOUGEKI>', PlaceKougeki
-	dict '<TA!>',     PlaceTa
 	dict '<CONT>',    ContText
 	dict '<⋯>',      PlaceSixDots
 	dict '<DONE>',    DoneText
@@ -217,9 +216,6 @@ ENDM
 	dict '<GA>',      PlaceGa
 	dict '<WA>',      PlaceWa
 	dict '<NO>',      PlaceNo
-	dict '<WO>',      PlaceWo
-	dict '<TTE>',     PlaceTte
-	dict '<NI>',      PlaceNi
 	dict '<DEXEND>',  PlaceDexEnd
 	dict '<TARGET>',  PlaceMoveTargetsName
 	dict '<USER>',    PlaceMoveUsersName
@@ -289,14 +285,10 @@ PlacePC:      print_name PCCharText
 PlaceRocket:  print_name RocketCharText
 PlacePokemon: print_name PokemonCharText
 PlaceKougeki: print_name KougekiCharText
-PlaceTa:      print_name TaCharText
 PlaceSixDots: print_name SixDotsCharText
 PlaceGa:      print_name GaCharText
 PlaceWa:      print_name WaCharText
 PlaceNo:      print_name NoCharText
-PlaceWo:      print_name WoCharText
-PlaceNi:      print_name NiCharText
-PlaceTte:     print_name TteCharText
 PlaceRoute:   print_name RouteCharText
 PlaceWatashi: print_name WatashiCharText
 PlaceKokoWa:  print_name KokoWaCharText
@@ -336,8 +328,10 @@ PlaceEnemysName::
 	ld a, [wTrainerClass]
 	cp RIVAL1
 	jr z, .rival
-	cp RIVAL2
-	jr z, .rival
+	cp CAL
+	jr z, .linkbattle
+	cp RED
+	jr z, .linkbattle
 
 	ld de, wOTClassName
 	call PlaceString
@@ -372,15 +366,11 @@ PCCharText::      db "パソコン@"
 RocketCharText::  db "ロケットだん@"
 PokemonCharText:: db "ポケモン@"
 KougekiCharText:: db "こうげき@"
-TaCharText::      db "た！@"
 SixDotsCharText:: db "⋯⋯@"
 EnemyText::       db "てきの　@"
 GaCharText::      db "が　@"
 WaCharText::      db "は　@"
 NoCharText::      db "の　@"
-WoCharText::      db "を　@"
-NiCharText::      db "に　@"
-TteCharText::     db "って@"
 RouteCharText::   db "ばん　どうろ@"
 WatashiCharText:: db "わたし@"
 KokoWaCharText::  db "ここは　@"
@@ -400,13 +390,7 @@ LineChar::
 
 Paragraph::
 	push de
-
-	ld a, [wLinkMode]
-	cp LINK_COLOSSEUM
-	jr z, .linkbattle
 	call LoadBlinkingCursor
-
-.linkbattle
 	call Text_WaitBGMap
 	call PromptButton
 	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY - 1
@@ -420,14 +404,8 @@ Paragraph::
 	jp NextChar
 
 _ContText::
-	ld a, [wLinkMode]
-	cp LINK_COLOSSEUM
-	jr z, .communication
 	call LoadBlinkingCursor
-
-.communication
 	call Text_WaitBGMap
-
 	push de
 	call PromptButton
 	pop de
@@ -470,9 +448,6 @@ PromptText::
 .ok
 	call Text_WaitBGMap
 	call PromptButton
-	ld a, [wLinkMode]
-	cp LINK_COLOSSEUM
-	jr z, DoneText
 	call UnloadBlinkingCursor
 
 DoneText::

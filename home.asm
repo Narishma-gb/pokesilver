@@ -2,7 +2,7 @@ SECTION "NULL", ROM0
 NULL::
 
 INCLUDE "home/header.asm"
-/*
+
 SECTION "Home", ROM0
 
 INCLUDE "home/vblank.asm"
@@ -57,4 +57,3 @@ INCLUDE "home/print_bcd.asm"
 INCLUDE "home/battle.asm"
 INCLUDE "home/sprite_anims.asm"
 INCLUDE "home/audio.asm"
-*/

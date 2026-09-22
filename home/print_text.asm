@@ -49,11 +49,6 @@ PrintLetterDelay::
 .checkjoypad
 	call GetJoypad
 
-; input override
-	ld a, [wDisableTextAcceleration]
-	and a
-	jr nz, .wait
-
 ; Wait one frame if holding A or B.
 	ldh a, [hJoyDown]
 	bit B_PAD_A, a

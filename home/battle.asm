@@ -5,15 +5,11 @@ GetPartyParamLocation::
 	ld c, a
 	ld b, 0
 	add hl, bc
+	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wCurPartyMon]
-	call GetPartyLocation
+	call AddNTimes
 	pop bc
 	ret
-
-GetPartyLocation::
-; Add the length of a PartyMon struct to hl a times.
-	ld bc, PARTYMON_STRUCT_LENGTH
-	jp AddNTimes
 
 GetDexNumber:: ; unreferenced
 ; Probably used in gen 1 to convert index number to dex number
@@ -32,58 +28,6 @@ GetDexNumber:: ; unreferenced
 	ld b, l
 	ld c, h
 	pop hl
-	ret
-
-UserPartyAttr::
-	push af
-	ldh a, [hBattleTurn]
-	and a
-	jr nz, .ot
-	pop af
-	jr BattlePartyAttr
-.ot
-	pop af
-	jr OTPartyAttr
-
-OpponentPartyAttr::
-	push af
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .ot
-	pop af
-	jr BattlePartyAttr
-.ot
-	pop af
-	jr OTPartyAttr
-
-BattlePartyAttr::
-; Get attribute a from the party struct of the active battle mon.
-	push bc
-	ld c, a
-	ld b, 0
-	ld hl, wPartyMons
-	add hl, bc
-	ld a, [wCurBattleMon]
-	call GetPartyLocation
-	pop bc
-	ret
-
-OTPartyAttr::
-; Get attribute a from the party struct of the active enemy mon.
-	push bc
-	ld c, a
-	ld b, 0
-	ld hl, wOTPartyMon1Species
-	add hl, bc
-	ld a, [wCurOTMon]
-	call GetPartyLocation
-	pop bc
-	ret
-
-ResetDamage::
-	xor a
-	ld [wCurDamage], a
-	ld [wCurDamage + 1], a
 	ret
 
 SetPlayerTurn::
@@ -115,7 +59,8 @@ UpdateBattleMonInParty::
 
 UpdateBattleMon::
 	ld hl, wPartyMon1Level
-	call GetPartyLocation
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
 
 	ld d, h
 	ld e, l
@@ -133,7 +78,8 @@ UpdateEnemyMonInParty::
 
 	ld a, [wCurOTMon]
 	ld hl, wOTPartyMon1Level
-	call GetPartyLocation
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
 
 	ld d, h
 	ld e, l

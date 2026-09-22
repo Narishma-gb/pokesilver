@@ -8,6 +8,7 @@ roms_h := \
 
 rom_obj := \
 	home.o \
+	overdump.o \
 	ram.o \
 	wip.o
 # 	audio.o \

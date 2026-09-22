@@ -246,7 +246,7 @@ LoadMapTimeOfDay::
 	ld [wBGMapAnchor], a
 	ldh [hSCY], a
 	ldh [hSCX], a
-	farcall ApplyBGMapAnchorToObjects
+	call ApplyBGMapAnchorToObjects
 
 	ld a, '■'
 	ld bc, vBGMap1 - vBGMap0
@@ -311,7 +311,8 @@ RefreshMapSprites::
 	jr nz, .skip
 	ld hl, wStateFlags
 	set SPRITE_UPDATES_DISABLED_F, [hl]
-	call SafeUpdateSprites
+	call UpdateSprites
+	call DelayFrame
 .skip
 	xor a
 	ld [wPlayerSpriteSetupFlags], a
@@ -670,19 +671,6 @@ EnterMapWarp::
 	call GetAnyMapEnvironment
 	call CheckIndoorMap
 	ret nz
-
-; MOUNT_MOON_SQUARE and TIN_TOWER_ROOF are outdoor maps within indoor maps.
-; Dig and Escape Rope should not take you to them.
-	ld a, [wPrevMapGroup]
-	cp GROUP_MOUNT_MOON_SQUARE
-	jr nz, .not_mt_moon_square_or_tin_tower_roof
-	assert GROUP_MOUNT_MOON_SQUARE == GROUP_TIN_TOWER_ROOF
-	ld a, [wPrevMapNumber]
-	cp MAP_MOUNT_MOON_SQUARE
-	ret z
-	cp MAP_TIN_TOWER_ROOF
-	ret z
-.not_mt_moon_square_or_tin_tower_roof
 
 	ld a, [wPrevWarp]
 	ld [wDigWarpNumber], a
@@ -1346,11 +1334,6 @@ CallScript::
 	ld a, h
 	ld [wScriptPos + 1], a
 
-IF DEF(_DEBUG)
-	call CheckScriptPointer
-	jp c, HandleInvalidScript
-ENDC
-
 	ld a, PLAYEREVENT_MAPSCRIPT
 	ld [wScriptRunning], a
 
@@ -1364,48 +1347,6 @@ CallMapScript::
 	ret nz
 	call GetMapScriptsBank
 	jr CallScript
-
-IF DEF(_DEBUG)
-HandleInvalidScript::
-	ld a, BANK(.script)
-	ld [wScriptBank], a
-	ld a, LOW(.script)
-	ld [wScriptPos], a
-	ld a, HIGH(.script)
-	ld [wScriptPos + 1], a
-
-	ld a, PLAYEREVENT_MAPSCRIPT
-	ld [wScriptRunning], a
-
-	scf
-	ret
-
-.script
-	jumptext .text_invalid
-
-.text_invalid
-	text "イベントが　おかしい！"
-	prompt
-
-; set carry if the script pointer at hl is invalid
-; valid addresses are in ROM, WRAM, SRAM
-CheckScriptPointer:
-	ld a, h
-	cp HIGH(vTiles0)
-	jr c, .valid
-	cp HIGH(sScratch)
-	jr c, .invalid
-	cp $e0 ; start of Echo RAM
-	jr nc, .invalid
-
-.valid
-	xor a
-	ret
-
-.invalid
-	scf
-	ret
-ENDC
 
 RunMapCallback::
 ; Will run the first callback found with execution index equal to a.
@@ -2599,9 +2540,6 @@ GetMapMusic::
 	push bc
 	ld de, MAP_MUSIC
 	call GetMapField
-	ld a, c
-	cp MUSIC_MAHOGANY_MART
-	jr z, .mahoganymart
 	bit RADIO_TOWER_MUSIC_F, c
 	jr nz, .radiotower
 	ld e, c
@@ -2624,17 +2562,6 @@ GetMapMusic::
 	and RADIO_TOWER_MUSIC - 1
 	ld e, a
 	ld d, 0
-	jr .done
-
-.mahoganymart
-	ld a, [wStatusFlags2]
-	bit STATUSFLAGS2_ROCKETS_IN_MAHOGANY_F, a
-	jr z, .clearedmahogany
-	ld de, MUSIC_ROCKET_HIDEOUT
-	jr .done
-
-.clearedmahogany
-	ld de, MUSIC_CHERRYGROVE_CITY
 	jr .done
 
 GetMapTimeOfDay::

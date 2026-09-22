@@ -7,7 +7,7 @@ IsInJohto::
 	ld c, a
 	call GetWorldMapLocation
 
-	cp LANDMARK_FAST_SHIP
+	cp LANDMARK_ROUTE_28
 	jr z, .Johto
 
 	cp LANDMARK_SPECIAL
