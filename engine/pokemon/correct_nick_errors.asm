@@ -68,7 +68,5 @@ CorrectNickErrors::
 	db 'ド' + 1,   'バ'
 	db 'ボ' + 1,   'が'
 	db 'ど' + 1,   'ば'
-	db 'ぼ' + 1,   'パ'
-	db 'ぽ' + 1,   '<TRAINER>'
-	db '<ROCKET>', '　'
+	db 'ぽ' + 1,   '　'
 	db -1 ; end

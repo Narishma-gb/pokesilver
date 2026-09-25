@@ -19,5 +19,4 @@ HappinessChanges:
 	db  -5,  -5, -10 ; Used Heal Powder or Energypowder (bitter)
 	db -10, -10, -15 ; Used Energy Root (bitter)
 	db -15, -15, -20 ; Used Revival Herb (bitter)
-	db  +3,  +3,  +1 ; Grooming
 	assert_table_length NUM_HAPPINESS_CHANGES

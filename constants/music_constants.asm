@@ -35,7 +35,7 @@
 	const MUSIC_RIVAL_ENCOUNTER              ; 1f
 	const MUSIC_RIVAL_AFTER                  ; 20
 	const MUSIC_SURF                         ; 21
-/*	const MUSIC_EVOLUTION                    ; 22
+	const MUSIC_EVOLUTION                    ; 22
 	const MUSIC_NATIONAL_PARK                ; 23
 	const MUSIC_CREDITS                      ; 24
 	const MUSIC_AZALEA_TOWN                  ; 25
@@ -88,7 +88,7 @@
 	const MUSIC_MAIN_MENU                    ; 54
 	const MUSIC_RUINS_OF_ALPH_INTERIOR       ; 55
 	const MUSIC_ROCKET_OVERTURE              ; 56
-	const MUSIC_DANCING_HALL                 ; 57
+/*	const MUSIC_DANCING_HALL                 ; 57
 	const MUSIC_BUG_CATCHING_CONTEST_RANKING ; 58
 	const MUSIC_BUG_CATCHING_CONTEST         ; 59
 	const MUSIC_LAKE_OF_RAGE_ROCKET_RADIO    ; 5a

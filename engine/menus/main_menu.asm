@@ -16,12 +16,8 @@ MainMenu:
 	call PlayMusic
 	call DelayFrame
 	ld de, MUSIC_MAIN_MENU
-	ld a, e
-	ld [wMapMusic], a
 	call PlayMusic
 .loop
-	xor a
-	ld [wDisableTextAcceleration], a
 	call ClearTilemapEtc
 	ld b, SCGB_DIPLOMA
 	call GetSGBLayout
@@ -29,7 +25,9 @@ MainMenu:
 	res GAME_TIMER_COUNTING_F, [hl]
 	call MainMenu_GetWhichMenu
 	ld [wWhichIndexSet], a
-	call MainMenu_PrintCurrentTimeAndDay
+	nop
+	nop
+	nop
 	ld hl, .MenuHeader
 	call LoadMenuHeader
 	call MainMenuJoypadLoop
@@ -96,9 +94,9 @@ MainMenuItems:
 	db -1
 
 MainMenu_GetWhichMenu:
-	nop
-	nop
-	nop
+	ld a, MAINMENU_NEW_GAME
+	ret
+	; dummied out
 	ld a, [wSaveFileExists]
 	and a
 	jr nz, .next
@@ -123,7 +121,9 @@ MainMenu_GetWhichMenu:
 MainMenuJoypadLoop:
 	call SetUpMenu
 .loop
-	call MainMenu_PrintCurrentTimeAndDay
+	nop
+	nop
+	nop
 	call GetScrollingMenuJoypad
 	ld a, [wMenuJoypad]
 	cp PAD_B
@@ -145,18 +145,18 @@ MainMenu_PrintCurrentTimeAndDay:
 	ld a, [wSaveFileExists]
 	and a
 	ret z
+	call .PlaceBox
 	xor a
 	ldh [hBGMapMode], a
-	call .PlaceBox
 	ld hl, wOptions
 	ld a, [hl]
 	push af
 	set NO_TEXT_SCROLL, [hl]
 	call .PlaceTime
-	pop af
-	ld [wOptions], a
 	ld a, $1
 	ldh [hBGMapMode], a
+	pop af
+	ld [wOptions], a
 	ret
 
 .PlaceBox:

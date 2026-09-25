@@ -14,20 +14,12 @@ GiveShuckle:
 	predef TryAddMonToParty
 	jr nc, .NotGiven
 
-; Holding a Berry.
-	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wPartyCount]
 	dec a
-	push af
-	push bc
-	ld hl, wPartyMon1Item
-	call AddNTimes
-	ld [hl], BERRY
-	pop bc
-	pop af
 
 ; OT ID.
 	ld hl, wPartyMon1ID
+	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
 	ld a, HIGH(MANIA_OT_ID)
 	ld [hli], a

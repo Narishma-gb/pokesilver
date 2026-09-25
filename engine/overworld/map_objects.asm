@@ -2135,9 +2135,6 @@ CopyTempObjectData:
 	ret
 
 UpdateAllObjectsFrozen::
-	ld a, [wStateFlags]
-	bit SPRITE_UPDATES_DISABLED_F, a
-	ret z
 	ld bc, wObjectStructs
 	xor a
 .loop
@@ -2158,6 +2155,9 @@ UpdateAllObjectsFrozen::
 
 RespawnPlayerAndOpponent:
 ; called at battle start
+	ldh a, [hLastTalked]
+	cp $ff
+	jr z, UpdateAllObjectsFrozen
 	call HideAllObjects
 	ld a, PLAYER
 	call RespawnObject
@@ -2180,13 +2180,16 @@ RespawnObject:
 	add hl, bc
 	ld a, [hl]
 	cp -1
-	ret z
+	jr z, .done
 	cp NUM_OBJECT_STRUCTS
-	ret nc
+	jr nc, .done
 	call GetObjectStruct
 	call DoesObjectHaveASprite
 	ret z
 	call UpdateRespawnedObjectFrozen
+	ret
+
+.done
 	ret
 
 HideAllObjects:
@@ -2254,13 +2257,11 @@ CheckObjectOnScreen:
 	ld hl, OBJECT_MAP_Y
 	add hl, bc
 	ld e, [hl]
-	inc d
-	inc e
 	ld a, [wXCoord]
 	cp d
 	jr z, .equal_x
 	jr nc, .nope
-	add MAPOBJECT_SCREEN_WIDTH - 1
+	add MAPOBJECT_SCREEN_WIDTH - 3
 	cp d
 	jr c, .nope
 .equal_x
@@ -2268,7 +2269,7 @@ CheckObjectOnScreen:
 	cp e
 	jr z, .equal_y
 	jr nc, .nope
-	add MAPOBJECT_SCREEN_HEIGHT - 1
+	add MAPOBJECT_SCREEN_HEIGHT - 3
 	cp e
 	jr c, .nope
 .equal_y
@@ -2290,27 +2291,22 @@ CheckObjectCoveredByTextbox:
 	add hl, bc
 	add [hl]
 	add d
-	cp $f0
-	jr nc, .ok1
-	cp SCREEN_WIDTH_PX
-	jp nc, .nope
-.ok1
+	cp $a0
+	jr nc, .nope
 ; Account for objects currently moving left/right.
 	and %00000111
 	ld d, 2
 	cp TILE_WIDTH / 2
-	jr c, .ok2
+	jr c, .ok
 	ld d, 3
-.ok2
+.ok
+	ld a, d
+	ldh [hCurSpriteXPixel], a
 ; Convert pixels to tiles.
 	ld a, [hl]
 	srl a
 	srl a
 	srl a
-	cp SCREEN_WIDTH
-	jr c, .ok3
-	sub TILEMAP_WIDTH
-.ok3
 	ldh [hCurSpriteXCoord], a
 
 ; Check whether the object fits in the screen height.
@@ -2323,78 +2319,51 @@ CheckObjectCoveredByTextbox:
 	add hl, bc
 	add [hl]
 	add e
-	cp $f0
-	jr nc, .ok4
-	cp SCREEN_HEIGHT_PX
+	cp $90
 	jr nc, .nope
-.ok4
 ; Account for objects currently moving up/down.
 	and %00000111
 	ld e, 2
 	cp TILE_WIDTH / 2
-	jr c, .ok5
+	jr c, .ok2
 	ld e, 3
-.ok5
+.ok2
 ; Convert pixels to tiles.
 	ld a, [hl]
 	srl a
 	srl a
 	srl a
-	cp SCREEN_HEIGHT
-	jr c, .ok6
-	sub TILEMAP_HEIGHT
-.ok6
 	ldh [hCurSpriteYCoord], a
 
-; Account for big objects that are twice as wide and high.
-	ld hl, OBJECT_PALETTE
-	add hl, bc
-	bit BIG_OBJECT_F, [hl]
-	jr z, .ok7
-	ld a, d
-	add 2
-	ld d, a
-	ld a, e
-	add 2
-	ld e, a
-.ok7
-	ld a, d
-	ldh [hCurSpriteXPixel], a
-
+	ldh a, [hCurSpriteXCoord]
+	ld c, a
+	ldh a, [hCurSpriteYCoord]
+	ld b, a
+	call Coord2Tile
+	ld bc, SCREEN_WIDTH
 .loop
+	push hl
 	ldh a, [hCurSpriteXPixel]
 	ld d, a
-	ldh a, [hCurSpriteYCoord]
-	add e
-	dec a
-	cp SCREEN_HEIGHT
-	jr nc, .ok9
-	ld b, a
-.next
-	ldh a, [hCurSpriteXCoord]
-	add d
-	dec a
-	cp SCREEN_WIDTH
-	jr nc, .ok8
-	ld c, a
-	push bc
-	call Coord2Tile
-	pop bc
+
 ; NPCs disappear if standing on tile $60-$ff,
 ; since those IDs are for text characters and textbox frames.
-	ld a, [hl]
+.next
+	ld a, [hli]
 	cp FIRST_REGULAR_TEXT_CHAR
-	jr nc, .nope
-.ok8
+	jr nc, .nope2
 	dec d
 	jr nz, .next
-.ok9
+	pop hl
+	add hl, bc
 	dec e
 	jr nz, .loop
 
 	and a
 	ret
 
+.nope2
+	pop hl
 .nope
 	scf
 	ret
@@ -2442,7 +2411,6 @@ RefreshPlayerSprite::
 	call TryResetPlayerAction
 	farcall CheckWarpFacingDown
 	call c, SpawnInFacingDown
-	call SpawnInCustomFacing
 	ret
 
 TryResetPlayerAction:
@@ -2457,16 +2425,6 @@ TryResetPlayerAction:
 	ld a, OBJECT_ACTION_00
 	ld [wPlayerAction], a
 	ret
-
-SpawnInCustomFacing:
-	ld hl, wPlayerSpriteSetupFlags
-	bit PLAYERSPRITESETUP_CUSTOM_FACING_F, [hl]
-	ret z
-	ld a, [wPlayerSpriteSetupFlags]
-	and PLAYERSPRITESETUP_FACING_MASK
-	add a
-	add a
-	jr _ContinueSpawnFacing
 
 SpawnInFacingDown:
 	ld a, DOWN
@@ -2883,8 +2841,6 @@ InitSprites:
 	ld a, [hl]
 	cp STANDING
 	jp z, .done
-	cp NUM_FACINGS
-	jp nc, .done
 	ld l, a
 	ld h, 0
 	add hl, hl

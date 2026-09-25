@@ -109,8 +109,8 @@ ItemEffects:
 	dw NoEffect            ; GRN_APRICORN
 	dw NoEffect            ; CLEANSE_TAG
 	dw NoEffect            ; MYSTIC_WATER
-	dw NoEffect            ; TWISTEDSPOON
 	dw NoEffect            ; WHT_APRICORN
+	dw NoEffect            ; TWISTEDSPOON
 	dw NoEffect            ; BLACKBELT_I
 	dw NoEffect            ; BLK_APRICORN
 	dw NoEffect            ; ITEM_64

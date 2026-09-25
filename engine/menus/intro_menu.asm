@@ -13,38 +13,6 @@ NewGame:
 	ldh [hMapEntryMethod], a
 	jp FinishContinueFunction
 
-IF DEF(_DEBUG)
-Function5c3e:
-	ld hl, wDebugFlags
-	set DEBUG_FIELD_F, [hl]
-	call ResetWRAM
-	farcall Functionfc3a6
-	call ClearTilemapEtc
-	call InitializeWorld
-
-	ld a, SPAWN_HOME
-	ld [wDefaultSpawnpoint], a
-
-	ld a, MAPSETUP_WARP
-	ldh [hMapEntryMethod], a
-	jp FinishContinueFunction
-
-Function5c5e:
-	ld hl, wDebugFlags
-	set DEBUG_FIELD_F, [hl]
-	call ResetWRAM
-	farcall Functionfc3a6
-	call ClearTilemapEtc
-	call InitializeWorld
-
-	ld a, SPAWN_DEBUG
-	ld [wDefaultSpawnpoint], a
-
-	ld a, MAPSETUP_WARP
-	ldh [hMapEntryMethod], a
-	jp FinishContinueFunction
-ENDC
-
 ResetWRAM:
 	xor a
 	ldh [hBGMapMode], a
@@ -112,16 +80,6 @@ _ResetWRAM:
 	ld [wRoamMon1MapNumber], a
 	ld [wRoamMon2MapNumber], a
 	ld [wRoamMon3MapNumber], a
-
-	ld a, BANK(sMysteryGiftItem) ; aka BANK(sMysteryGiftUnlocked)
-	call OpenSRAM
-	ld hl, sMysteryGiftItem
-	xor a
-	ld [hli], a
-	assert sMysteryGiftItem + 1 == sMysteryGiftUnlocked
-	dec a ; -1
-	ld [hl], a
-	call CloseSRAM
 
 	call LoadOrRegenerateLuckyIDNumber
 	call InitializeMagikarpHouse
@@ -283,45 +241,31 @@ Continue:
 	jr .FailToLoad
 
 .Check2Pass:
-	ld a, $8
-	ld [wMusicFade], a
-	ld a, LOW(MUSIC_NONE)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_NONE)
-	ld [wMusicFadeID + 1], a
 	call ClearBGPalettes
 	call CloseWindow
 	call ClearTilemap
-	ld c, 20
+	ld c, 10
 	call DelayFrames
 	farcall JumpRoamMons
 	farcall CopyMysteryGiftReceivedDecorationsToPC
 	farcall ClockContinue
 	ld a, [wSpawnAfterChampion]
-	cp SPAWN_LANCE
-	jr z, .SpawnAfterE4
+	and a
+	jr nz, .PostCreditsSpawn
 	ld a, MAPSETUP_CONTINUE
 	ldh [hMapEntryMethod], a
 	jp FinishContinueFunction
 
-.FailToLoad:
-	ret
-
-.SpawnAfterE4:
-	ld a, SPAWN_NEW_BARK
-	ld [wDefaultSpawnpoint], a
-	call PostCreditsSpawn
-	jp FinishContinueFunction
-
-SpawnAfterRed:
-	ld a, SPAWN_MT_SILVER
-	ld [wDefaultSpawnpoint], a
-
-PostCreditsSpawn:
+.PostCreditsSpawn:
 	xor a
 	ld [wSpawnAfterChampion], a
+	ld a, SPAWN_NEW_BARK
+	ld [wDefaultSpawnpoint], a
 	ld a, MAPSETUP_WARP
 	ldh [hMapEntryMethod], a
+	jp FinishContinueFunction
+
+.FailToLoad:
 	ret
 
 ConfirmContinue:
@@ -337,14 +281,6 @@ ConfirmContinue:
 	ret
 
 .PressA:
-IF DEF(_DEBUG)
-	ld hl, wDebugFlags
-	res DEBUG_FIELD_F, [hl]
-	ldh a, [hJoyDown]
-	bit B_PAD_SELECT, a
-	ret z
-	set DEBUG_FIELD_F, [hl]
-ENDC
 	ret
 
 Continue_CheckRTC_RestartClock:
@@ -362,22 +298,6 @@ Continue_CheckRTC_RestartClock:
 	xor a
 	ret
 
-FinishContinueFunction:
-.loop
-	xor a
-	ld [wDontPlayMapMusicOnReload], a
-	ld hl, wGameTimerPaused
-	set GAME_TIMER_COUNTING_F, [hl]
-	farcall OverworldLoop
-	ld a, [wSpawnAfterChampion]
-	cp SPAWN_RED
-	jr z, .AfterRed
-	jp Reset
-
-.AfterRed:
-	call SpawnAfterRed
-	jr .loop
-
 DisplaySaveInfoOnContinue:
 	call CheckRTCStatus
 	and RTC_RESET
@@ -390,6 +310,15 @@ DisplaySaveInfoOnContinue:
 	lb de, 5, 8
 	call DisplayNormalContinueData
 	ret
+
+FinishContinueFunction:
+.loop
+	xor a
+	ld [wDontPlayMapMusicOnReload], a
+	ld hl, wGameTimerPaused
+	set GAME_TIMER_COUNTING_F, [hl]
+	farcall OverworldLoop
+	jp Reset
 
 DisplayNormalContinueData:
 	call Continue_LoadMenuHeader
@@ -483,7 +412,7 @@ Continue_UnknownGameTime:
 Continue_DisplayBadgeCount:
 	push hl
 	ld hl, wJohtoBadges
-	ld b, 2
+	ld b, 1
 	call CountSetBits
 	pop hl
 	ld de, wNumSetBits
@@ -903,14 +832,15 @@ Intro_PlaceChrisSprite:
 	const TITLESCREENOPTION_MAIN_MENU
 	const TITLESCREENOPTION_DELETE_SAVE_DATA
 	const TITLESCREENOPTION_RESTART
-IF DEF(_DEBUG)
-	const TITLESCREENOPTION_DEBUG
-ENDC
 DEF NUM_TITLESCREENOPTIONS EQU const_value
 
 IntroSequence:
 	callfar SplashScreen
 	jr c, StartTitleScreen
+	ld a, [wBetaTitleSequenceOpeningType]
+	and a
+	jr z, .dummy
+.dummy
 	callfar GoldSilverIntro
 
 	; fallthrough
@@ -949,11 +879,7 @@ StartTitleScreen:
 	dw MainMenu
 	dw DeleteSaveData
 	dw IntroSequence
-IF DEF(_DEBUG)
-	dw DebugMenu
-ELSE
 	dw IntroSequence
-ENDC
 
 INCLUDE "engine/movie/title.asm"
 
@@ -1021,7 +947,7 @@ TitleScreenTimer:
 IF DEF(_GOLD)
 	ld de, 84 * 60 + 16
 ELIF DEF(_SILVER)
-	ld de, 73 * 60 + 36
+	ld de, 84 * 60 + 16
 ENDC
 	ld [hl], e
 	inc hl
@@ -1051,11 +977,6 @@ TitleScreenMain:
 	cp  PAD_UP + PAD_B + PAD_SELECT
 	jr z, .delete_save_data
 
-IF DEF(_DEBUG)
-	ld a, [hl]
-	and PAD_SELECT
-	jr nz, .asm_6677
-ENDC
 ; Press Start or A to start the game.
 	ld a, [hl]
 	and PAD_START | PAD_A
@@ -1065,14 +986,6 @@ ENDC
 .incave
 	ld a, TITLESCREENOPTION_MAIN_MENU
 	jr .done
-
-IF DEF(_DEBUG)
-.asm_6677
-	ld a, TITLESCREENOPTION_DEBUG
-	jr .done
-
-	ret ; unreferenced
-ENDC
 
 .delete_save_data
 	ld a, TITLESCREENOPTION_DELETE_SAVE_DATA
@@ -1124,8 +1037,6 @@ DeleteSaveData:
 	call GetMemSGBLayout
 	call LoadStandardFont
 	call LoadFontsExtra
-	ld de, MUSIC_MAIN_MENU
-	call PlayMusic
 	ld hl, .ClearAllSaveDataText
 	call PrintText
 	ld hl, .NoYesMenuHeader

@@ -199,7 +199,7 @@ SpriteMovementData::
 	db DOWN ; facing
 	db OBJECT_ACTION_STAND ; action
 	db WONT_DELETE | FIXED_FACING | SLIDING | MOVE_ANYWHERE ; flags1
-	db USE_OBP1 ; flags2
+	db 0 ; flags2
 	db 0 ; palette flags
 
 ; SPRITEMOVEDATA_STRENGTH_BOULDER

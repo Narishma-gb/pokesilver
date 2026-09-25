@@ -143,3 +143,141 @@ Overdump2_TerminateExpBarSound:
 	ldh [rAUD1HIGH], a
 	ret
 ENDC
+
+
+IF DEF(_GOLD)
+	def bank_01_overdump equ $7efb
+ELIF DEF(_SILVER)
+	def bank_01_overdump equ $7ec0
+ENDC
+
+SECTION "Bank 01 Overdump", ROMX[bank_01_overdump], BANK[1]
+
+; partial overdump of ReturnShuckie
+	db HIGH(wScriptVar)
+	ret
+
+Overdump_OlderHaircutBrother:
+	ld hl, Overdump_HappinessData_OlderHaircutBrother
+	jr Overdump_HaircutOrGrooming
+
+Overdump_YoungerHaircutBrother:
+	ld hl, Overdump_HappinessData_YoungerHaircutBrother
+	; fallthrough
+
+Overdump_HaircutOrGrooming:
+	push hl
+	farcall SelectMonFromParty
+	pop hl
+	jr c, .nope
+	ld a, [wCurPartySpecies]
+	cp EGG
+	jr z, .egg
+	push hl
+	call $39bb ; GetCurNickname
+	ld hl, wStringBuffer1
+	ld de, wStringBuffer3
+	ld bc, NAME_LENGTH
+	call $3104 ; CopyBytes
+	pop hl
+	call $308c ; Random
+.loop
+	sub [hl]
+	jr c, .ok
+	inc hl
+	inc hl
+	inc hl
+	jr .loop
+
+.ok
+	inc hl
+	ld a, [hli]
+	ld [wScriptVar], a
+	ld c, [hl]
+IF DEF(_GOLD)
+	call $7cdc ; ChangeHappiness
+ELIF DEF(_SILVER)
+	call $7ca1 ; ChangeHappiness
+ENDC
+	ret
+
+.nope
+	xor a
+	ld [wScriptVar], a
+	ret
+
+.egg
+	ld a, 1
+	ld [wScriptVar], a
+	ret
+
+Overdump_HappinessData_OlderHaircutBrother:
+	db 30 percent,     2, HAPPINESS_OLDERCUT1
+	db 50 percent + 1, 3, HAPPINESS_OLDERCUT2
+	db -1,             4, HAPPINESS_OLDERCUT3
+
+Overdump_HappinessData_YoungerHaircutBrother:
+	db 60 percent + 1, 2, HAPPINESS_YOUNGCUT1
+	db 30 percent,     3, HAPPINESS_YOUNGCUT2
+	db -1,             4, HAPPINESS_YOUNGCUT3
+
+IF DEF(_SILVER)
+; another partial overdump of OlderHaircutBrother
+	jr Overdump2_HaircutOrGrooming
+
+Overdump2_YoungerHaircutBrother:
+	ld hl, Overdump2_HappinessData_YoungerHaircutBrother
+	; fallthrough
+
+Overdump2_HaircutOrGrooming:
+	push hl
+	farcall SelectMonFromParty
+	pop hl
+	jr c, .nope
+	ld a, [wCurPartySpecies]
+	cp EGG
+	jr z, .egg
+	push hl
+	call $39bb ; GetCurNickname
+	ld hl, wStringBuffer1
+	ld de, wStringBuffer3
+	ld bc, NAME_LENGTH
+	call $3104 ; CopyBytes
+	pop hl
+	call $308c ; Random
+.loop
+	sub [hl]
+	jr c, .ok
+	inc hl
+	inc hl
+	inc hl
+	jr .loop
+
+.ok
+	inc hl
+	ld a, [hli]
+	ld [wScriptVar], a
+	ld c, [hl]
+	call $7cfa ; ChangeHappiness
+	ret
+
+.nope
+	xor a
+	ld [wScriptVar], a
+	ret
+
+.egg
+	ld a, 1
+	ld [wScriptVar], a
+	ret
+
+Overdump2_HappinessData_OlderHaircutBrother:
+	db 30 percent,     2, HAPPINESS_OLDERCUT1
+	db 50 percent + 1, 3, HAPPINESS_OLDERCUT2
+	db -1,             4, HAPPINESS_OLDERCUT3
+
+Overdump2_HappinessData_YoungerHaircutBrother:
+	db 60 percent + 1, 2, HAPPINESS_YOUNGCUT1
+	db 30 percent,     3, HAPPINESS_YOUNGCUT2
+	db -1,             4, HAPPINESS_YOUNGCUT3
+ENDC

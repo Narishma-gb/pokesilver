@@ -7,7 +7,3 @@ HappinessData_YoungerHaircutBrother:
 	db 60 percent + 1, 2, HAPPINESS_YOUNGCUT1 ; 60% chance
 	db 30 percent,     3, HAPPINESS_YOUNGCUT2 ; 30% chance
 	db -1,             4, HAPPINESS_YOUNGCUT3 ; 10% chance
-
-HappinessData_DaisysGrooming:
-; BUG: Daisy's grooming doesn't always increase happiness (see docs/bugs_and_glitches.md)
-	db -1,             2, HAPPINESS_GROOMING ; 99.6% chance

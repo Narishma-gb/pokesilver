@@ -24,9 +24,4 @@ PlaceWaitingText::
 	db "つうしんたいきちゅう！@"
 
 DebugMenu:
-IF DEF(_DEBUG)
-	farcall _DebugMenu
-	jp StartTitleScreen
-ELSE
 	ret
-ENDC

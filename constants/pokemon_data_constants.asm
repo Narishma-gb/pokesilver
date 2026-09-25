@@ -197,7 +197,6 @@ DEF NUM_TREEMON_SETS EQU const_value
 	const HAPPINESS_BITTERPOWDER      ; 0f
 	const HAPPINESS_ENERGYROOT        ; 10
 	const HAPPINESS_REVIVALHERB       ; 11
-	const HAPPINESS_GROOMING          ; 12
 DEF NUM_HAPPINESS_CHANGES EQU const_value - 1
 
 ; significant happiness values

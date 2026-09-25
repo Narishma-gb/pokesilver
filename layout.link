@@ -29,9 +29,8 @@ ROM0
 	"Header"
 	org $0150
 	"Home"
-; ROMX $01
-; 	"bank1"
-; 	; "Garbage 1"
+ROMX $01
+	"bank1"
 ; ROMX $02
 ; 	"bank2"
 ; ROMX $03
@@ -242,6 +241,6 @@ SRAM $03
 	org $b200
 	"Backup Save"
 HRAM
-; 	"OAM DMA"
+	"OAM DMA"
 	org $ff8a
 	"HRAM"

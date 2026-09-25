@@ -5,15 +5,9 @@ ReanchorBGMap_NoOAMUpdate::
 
 	ld a, $1
 	ldh [hOAMUpdate], a
-	ldh a, [hBGMapMode]
-	push af
-	xor a
-	ldh [hBGMapMode], a
 
 	call .ReanchorBGMap
 
-	pop af
-	ldh [hBGMapMode], a
 	pop af
 	ldh [hOAMUpdate], a
 	ret
@@ -30,7 +24,7 @@ ReanchorBGMap_NoOAMUpdate::
 	call LoadOverworldTilemapAndAttrmapPals
 	ld a, HIGH(vBGMap1)
 	call .LoadBGMapAddrIntoHRAM
-	call HDMATransferTilemapAndAttrmap_Menu
+	call CGBOnly_CopyTilemapAtOnce
 	xor a
 	ldh [hBGMapMode], a
 	ldh [hWY], a
@@ -58,10 +52,6 @@ ReanchorBGMap_NoOAMUpdate::
 	push af
 	xor a
 	ldh [hBGMapMode], a
-	ldh a, [hOAMUpdate]
-	push af
-	ld a, 1
-	ldh [hOAMUpdate], a
 	ld a, 3
 	ldh [hBlackOutBGMapThird], a
 .wait_loop
@@ -69,8 +59,6 @@ ReanchorBGMap_NoOAMUpdate::
 	ldh a, [hBlackOutBGMapThird]
 	and a
 	jr nz, .wait_loop
-	pop af
-	ldh [hOAMUpdate], a
 	pop af
 	ldh [hBGMapMode], a
 	ret

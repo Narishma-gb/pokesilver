@@ -101,8 +101,8 @@
 	const GRN_APRICORN ; 5d
 	const CLEANSE_TAG  ; 5e
 	const MYSTIC_WATER ; 5f
-	const TWISTEDSPOON ; 60
-	const WHT_APRICORN ; 61
+	const WHT_APRICORN ; 60
+	const TWISTEDSPOON ; 61
 	const BLACKBELT_I  ; 62
 	const BLK_APRICORN ; 63
 	const ITEM_64      ; 64

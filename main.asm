@@ -6,6 +6,7 @@ INCLUDE "engine/overworld/map_objects.asm"
 INCLUDE "engine/menus/main_menu.asm"
 INCLUDE "engine/menus/intro_menu.asm"
 INCLUDE "engine/overworld/init_map.asm"
+INCLUDE "engine/dumps/bank01.asm"
 INCLUDE "engine/pokemon/learn.asm"
 INCLUDE "engine/pokemon/correct_nick_errors.asm"
 INCLUDE "engine/math/math.asm"
@@ -16,7 +17,7 @@ INCLUDE "engine/events/happiness_egg.asm"
 INCLUDE "engine/events/shuckle.asm"
 INCLUDE "engine/events/haircut.asm"
 
-
+/*
 SECTION "bank2", ROMX
 
 INCLUDE "engine/tilesets/map_palettes.asm"
@@ -361,3 +362,4 @@ INCLUDE "data/phone/text/bill.asm"
 INCLUDE "data/phone/text/elm.asm"
 INCLUDE "data/phone/text/trainers.asm"
 INCLUDE "data/phone/text/bike_shop.asm"
+*/

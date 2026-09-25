@@ -34,7 +34,6 @@ Facings:
 	dw FacingGrass1
 	dw FacingGrass2
 	assert_table_length NUM_FACINGS
-	dw 0 ; end
 
 ; Tables used as a reference to transform OAM data.
 
@@ -125,7 +124,7 @@ FacingFishDown: ; fishing down
 	db  0,  8, 0, $01
 	db  8,  0, RELATIVE_ATTRIBUTES, $02
 	db  8,  8, RELATIVE_ATTRIBUTES, $03
-	db 16,  0, ABSOLUTE_TILE_ID, $fc
+	db 16,  4, ABSOLUTE_TILE_ID, $fc
 
 FacingFishUp: ; fishing up
 	db 5 ; #
@@ -133,7 +132,7 @@ FacingFishUp: ; fishing up
 	db  0,  8, 0, $05
 	db  8,  0, RELATIVE_ATTRIBUTES, $06
 	db  8,  8, RELATIVE_ATTRIBUTES, $07
-	db -8,  0, ABSOLUTE_TILE_ID, $fc
+	db -8,  4, ABSOLUTE_TILE_ID, $fc
 
 FacingFishLeft: ; fishing left
 	db 5 ; #
@@ -141,7 +140,7 @@ FacingFishLeft: ; fishing left
 	db  0,  8, 0, $09
 	db  8,  0, RELATIVE_ATTRIBUTES, $0a
 	db  8,  8, RELATIVE_ATTRIBUTES, $0b
-	db  5, -8, ABSOLUTE_TILE_ID | OAM_XFLIP, $fd
+	db  4, -8, ABSOLUTE_TILE_ID, $fd
 
 FacingFishRight: ; fishing right
 	db 5 ; #
@@ -149,7 +148,7 @@ FacingFishRight: ; fishing right
 	db  0,  0, OAM_XFLIP, $09
 	db  8,  8, RELATIVE_ATTRIBUTES | OAM_XFLIP, $0a
 	db  8,  0, RELATIVE_ATTRIBUTES | OAM_XFLIP, $0b
-	db  5, 16, ABSOLUTE_TILE_ID, $fd
+	db  4, 16, ABSOLUTE_TILE_ID | OAM_XFLIP, $fd
 
 FacingEmote: ; emote
 	db 4 ; #
