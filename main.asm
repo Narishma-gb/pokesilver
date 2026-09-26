@@ -17,7 +17,7 @@ INCLUDE "engine/events/happiness_egg.asm"
 INCLUDE "engine/events/shuckle.asm"
 INCLUDE "engine/events/haircut.asm"
 
-/*
+
 SECTION "bank2", ROMX
 
 INCLUDE "engine/tilesets/map_palettes.asm"
@@ -27,7 +27,7 @@ INCLUDE "engine/math/sine.asm"
 INCLUDE "engine/predef.asm"
 INCLUDE "engine/gfx/color.asm"
 
-
+/*
 SECTION "bank3", ROMX
 
 INCLUDE "engine/events/checktime.asm"

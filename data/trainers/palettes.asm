@@ -7,6 +7,7 @@ TrainerPalettes:
 	table_width COLOR_SIZE * 2
 
 PlayerPalette: ; Chris uses the same colors as Cal
+/*
 INCBIN "gfx/trainers/cal.gbcpal", middle_colors
 INCBIN "gfx/trainers/falkner.gbcpal", middle_colors
 INCBIN "gfx/trainers/whitney.gbcpal", middle_colors
@@ -74,5 +75,10 @@ INCBIN "gfx/trainers/red.gbcpal", middle_colors
 INCBIN "gfx/trainers/blue.gbcpal", middle_colors
 INCBIN "gfx/trainers/officer.gbcpal", middle_colors
 INCBIN "gfx/trainers/grunt_f.gbcpal", middle_colors
-
+*/
+IF DEF(_GOLD)
+	INCBIN "baserom_sw99_g.bin", $b45c, $10c
+ELIF DEF(_SILVER)
+	INCBIN "baserom_sw99_s.bin", $b45c, $10c
+ENDC
 	assert_table_length NUM_TRAINER_CLASSES + 1

@@ -60,8 +60,7 @@ CGBLayoutJumptable:
 	dw _CGB_PlayerOrMonFrontpicPals
 	dw _CGB_TradeTube
 	dw _CGB_TrainerOrMonFrontpicPals
-	dw _CGB_MysteryGift
-	dw _CGB_Unused1E
+	dw _CGB_Unused1D
 	assert_table_length NUM_SCGB_LAYOUTS
 
 _CGB_BattleGrayscale:
@@ -778,7 +777,7 @@ _CGB_PlayerOrMonFrontpicPals:
 	call ApplyPals
 	ret
 
-_CGB_Unused1E:
+_CGB_Unused1D:
 	ld de, wBGPals1
 	ld a, [wCurPartySpecies]
 	call GetMonPalettePointer
@@ -811,16 +810,3 @@ _CGB_TrainerOrMonFrontpicPals:
 	call ApplyAttrmap
 	call ApplyPals
 	ret
-
-_CGB_MysteryGift:
-	ld hl, .MysteryGiftPalette
-	ld de, wBGPals1
-	ld bc, 1 palettes
-	call CopyBytes
-	call ApplyPals
-	call WipeAttrmap
-	call ApplyAttrmap
-	ret
-
-.MysteryGiftPalette:
-INCLUDE "gfx/mystery_gift/mystery_gift.pal"

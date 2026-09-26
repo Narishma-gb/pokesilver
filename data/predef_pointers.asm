@@ -78,4 +78,4 @@ PredefPointers::
 	add_predef CheckTypeMatchup
 	add_predef ConvertMon_1to2
 	add_predef NewPokedexEntry
-	dbw -1, DummyEndPredef ; pointless
+	add_predef Predef42

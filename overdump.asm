@@ -281,3 +281,12 @@ Overdump2_HappinessData_YoungerHaircutBrother:
 	db 30 percent,     3, HAPPINESS_YOUNGCUT2
 	db -1,             4, HAPPINESS_YOUNGCUT3
 ENDC
+
+
+SECTION "Bank 02 Overdump", ROMX[$7b5d], BANK[2]
+
+; partial overdump of SlotMachinePals
+	RGB 31, 31, 31
+	RGB 31, 31, 31
+	RGB 00, 00, 00
+	RGB 00, 00, 00

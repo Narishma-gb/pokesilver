@@ -14,7 +14,7 @@ PokemonPalettes:
 ; 000 shiny
 	RGB 30, 22, 17
 	RGB 16, 14, 19
-
+/*
 INCBIN "gfx/pokemon/bulbasaur/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/bulbasaur/shiny.pal"
 INCBIN "gfx/pokemon/ivysaur/normal.gbcpal", middle_colors
@@ -531,13 +531,19 @@ INCBIN "gfx/pokemon/egg/egg.gbcpal", middle_colors ; not normal.gbcpal
 INCLUDE "gfx/pokemon/egg/shiny.pal"
 
 	assert_table_length EGG + 1
+*/
+IF DEF(_GOLD)
+	INCBIN "baserom_sw99_g.bin", $ac64, $7e8
+ELIF DEF(_SILVER)
+	INCBIN "baserom_sw99_s.bin", $ac64, $7e8
+ENDC
 
 ; 254
-	RGB 30, 26, 11
-	RGB 23, 16, 00
+	RGB 21, 21, 21
+	RGB 08, 11, 11
 ; 254 shiny
-	RGB 30, 26, 11
-	RGB 23, 16, 00
+	RGB 21, 21, 21
+	RGB 08, 11, 11
 
 ; 255
 	RGB 23, 23, 23

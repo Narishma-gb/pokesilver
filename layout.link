@@ -31,8 +31,8 @@ ROM0
 	"Home"
 ROMX $01
 	"bank1"
-; ROMX $02
-; 	"bank2"
+ROMX $02
+	"bank2"
 ; ROMX $03
 ; 	"bank3"
 ; 	; "Garbage 3"

@@ -108,8 +108,6 @@ InitPartyMenuPalettes:
 	jp CopyBytes
 
 .cgb
-	ld hl, PalPacket_PartyMenu + 1
-	call CopyFourPalettes
 	call InitPartyMenuOBPals
 	call WipeAttrmap
 	ret
@@ -359,12 +357,13 @@ LoadStatsScreenPals:
 	ret
 
 LoadMailPalettes:
-	ld l, e
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	add hl, hl
-	ld de, .MailPals
+	ld d, 0
+	ld hl, .MailPals
+	add hl, de
+	add hl, de
+	add hl, de
+	add hl, de
+	add hl, de
 	add hl, de
 	call CheckCGB
 	jr nz, .cgb
@@ -392,7 +391,7 @@ LoadMailPalettes:
 
 .cgb
 	ld de, wBGPals1
-	ld bc, 1 palettes
+	ld bc, 3 * COLOR_SIZE
 	call CopyBytes
 	call ApplyPals
 	call WipeAttrmap
@@ -761,7 +760,6 @@ _PushSGBPals:
 
 InitSGBBorder:
 	call CheckCGB
-	vc_hook Unknown_network_reset
 	ret nz
 
 ; SGB/DMG only
@@ -807,38 +805,29 @@ InitCGBPals::
 	call ByteFill
 	ld a, BANK(vTiles0)
 	ldh [rVBK], a
+	ld hl, DiplomaPalettes
 	ld a, BGPI_AUTOINC
 	ldh [rBGPI], a
-	ld c, 4 * TILE_WIDTH
+	ld c, 8 palettes
 .bgpals_loop
-	ld a, LOW(PALRGB_WHITE)
-	ldh [rBGPD], a
-	ld a, HIGH(PALRGB_WHITE)
+	ld a, [hli]
 	ldh [rBGPD], a
 	dec c
 	jr nz, .bgpals_loop
 	ld a, OBPI_AUTOINC
 	ldh [rOBPI], a
-	ld c, 4 * TILE_WIDTH
+	ld c, 8 palettes
 .obpals_loop
-	ld a, LOW(PALRGB_WHITE)
-	ldh [rOBPD], a
-	ld a, HIGH(PALRGB_WHITE)
+	ld a, [hli]
 	ldh [rOBPD], a
 	dec c
 	jr nz, .obpals_loop
-	ld hl, wBGPals1
-	call .LoadWhitePals
-	ld hl, wBGPals2
-.LoadWhitePals:
-	ld c, 4 * 16
-.loop
-	ld a, LOW(PALRGB_WHITE)
-	ld [hli], a
-	ld a, HIGH(PALRGB_WHITE)
-	ld [hli], a
-	dec c
-	jr nz, .loop
+	ld hl, DiplomaPalettes
+	ld de, wBGPals1
+	ld bc, 16 palettes
+	call CopyBytes
+	ld a, $1
+	ldh [hCGBPalUpdate], a
 	ret
 
 _InitSGBBorderPals:
